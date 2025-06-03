@@ -1,0 +1,43 @@
+
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.carbon_footprint:2.0.0#> .
+@prefix cx: <urn:samm:io.catenax.pcf:7.0.0#> .
+@prefix ext-information: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
+@prefix ext-shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+
+:cityTown a samm:Property ;
+   samm:characteristic samm-c:Text .
+
+:zipCode a samm:Property ;
+   samm:characteristic samm-c:Text .
+
+:houseNumber a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABH957#003> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "1a" .
+
+:country a samm:Property ;
+   samm:preferredName "country"@en ;
+   samm:description "Country where the product is transmitted."@en ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "Mycountry" .
+
+:street a samm:Property ;
+   samm:see <urn:irdi:0173-1%2302-ABH95623003> ;
+   samm:characteristic samm-c:Text .
+
+:ContactInformation a samm:Entity ;
+   samm:description "Contains information on how to contact the manufacturer or an authorised service provider, e.g. when a maintenance service is required."@en ;
+   samm:see <urn:irdi:0173-1#02-AAQ837#005> ;
+   samm:properties ( [ samm:property :street; samm:optional true; samm:payloadName "Street" ] [ samm:property :houseNumber; samm:optional true; samm:payloadName "HouseNumber" ] [ samm:property :zipCode; samm:payloadName "ZipCode" ] [ samm:property :cityTown; samm:payloadName "CityTown" ] [ samm:property :country; samm:payloadName "Country" ] ) .
+
+:SimplifiedContactAddress a samm:Characteristic ;
+   samm:dataType :ContactInformation .

@@ -1,0 +1,23 @@
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.carbon_footprint:2.0.0#> .
+@prefix cx: <urn:samm:io.catenax.pcf:7.0.0#> .
+@prefix ext-information: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
+@prefix ext-shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+
+
+:PactCharacteristic a samm:Characteristic ;
+  samm:dataType :pactEntity .
+
+
+:pactEntity a samm:Entity ;
+   samm:preferredName "Product (Carbon) Footprint"@en ;
+   samm:description "A Product (Carbon) Footprint represents the carbon footprint of a product with values as specified in the Catena-X PCF Rulebook (Version 3.0.0) in accordance with the WBCSD (World Business Council for Sustainable Development) Pathfinder framework and the technical specifications for PCF Data Exchange (Version 2.0.0) from the WBCSD/ PACT initiative."@en ;
+   samm:see <https://wbcsd.github.io/tr/2023/data-exchange-protocol-20230221/> ;
+   samm:properties ( [ samm:property cx:id; samm:payloadName "id" ] [ samm:property cx:specVersion; samm:payloadName "specVersion" ] [ samm:property cx:partialFullPcf; samm:payloadName "partialFullPcf" ] [ samm:property cx:precedingPfIds; samm:optional true; samm:payloadName "precedingPfIds" ] [ samm:property cx:version; samm:payloadName "version" ] [ samm:property cx:created; samm:payloadName "created" ] [ samm:property cx:status; samm:payloadName "extWBCSD_pfStatus" ] [ samm:property cx:validityPeriodStart; samm:optional true; samm:payloadName "validityPeriodStart" ] [ samm:property cx:validityPeriodEnd; samm:optional true; samm:payloadName "validityPeriodEnd" ] [ samm:property cx:comment; samm:optional true; samm:payloadName "comment" ] [ samm:property cx:companyName; samm:payloadName "companyName" ] [ samm:property cx:companyIds; samm:payloadName "companyIds" ] [ samm:property cx:productDescription; samm:optional true; samm:payloadName "productDescription" ] [ samm:property cx:productIds; samm:payloadName "productIds" ] [ samm:property cx:productCategoryCpc; samm:payloadName "extWBCSD_productCodeCpc" ] [ samm:property cx:productNameCompany; samm:payloadName "productName" ] [ samm:property cx:pcf; samm:payloadName "pcf" ] [ samm:property cx:pcfLegalStatement; samm:optional true; samm:payloadName "pcfLegalStatement" ] ) .
