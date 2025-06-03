@@ -1,0 +1,85 @@
+{
+  "contactInformations" : [ {
+    "POBox" : {
+      "en" : "Example multi language string"
+    },
+    "Company" : [ {
+      "en" : "Example multi language string"
+    } ],
+    "Email" : {
+      "EmailAddress" : "email@muster-ag.de",
+      "PublicKey" : [ {
+        "en" : "Example multi language string"
+      } ],
+      "TypeOfEmailAddress" : "0173-1%2307-AAS754%23001",
+      "TypeOfPublicKey" : {
+        "en" : "Example multi language string"
+      }
+    },
+    "NameOfContact" : {
+      "en" : "Example multi language string"
+    },
+    "ZipCode" : [ {
+      "en" : "Example multi language string"
+    } ],
+    "FirstName" : {
+      "en" : "Example multi language string"
+    },
+    "Title" : {
+      "en" : "Example multi language string"
+    },
+    "Languages" : [ "en" ],
+    "AcademicTitle" : {
+      "en" : "Example multi language string"
+    },
+    "IPCommunicationChannels" : [ {
+      "TypeOfCommunication" : "RYtGKbgicZaHCBRQDSx",
+      "availableTime" : [ {
+        "en" : "Example multi language string"
+      } ],
+      "AddressOfAdditionalLink" : "JxkyvRnL"
+    } ],
+    "RoleOfContactPerson" : "eOMtThyhVNLWUZNRcBaQKxI",
+    "TimeZone" : "-12:00",
+    "Department" : [ {
+      "en" : "Example multi language string"
+    } ],
+    "Phone" : {
+      "TelephoneNumber" : [ {
+        "en" : "Example multi language string"
+      } ],
+      "TYpeOfTelephone" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
+      "AvailableTime" : [ {
+        "en" : "Example multi language string"
+      } ]
+    },
+    "NationalCode" : [ {
+      "en" : "Example multi language string"
+    } ],
+    "FurtherDetailsOfContact" : {
+      "en" : "Example multi language string"
+    },
+    "AddressOfAdditionalLink" : "VLhpfQGTMDYpsBZxvfBoeygjb",
+    "Street" : [ {
+      "en" : "Example multi language string"
+    } ],
+    "StateCounty" : [ {
+      "en" : "Example multi language string"
+    } ],
+    "Fax" : {
+      "TypeOfFaxNumber" : "1",
+      "FaxNumber" : [ {
+        "en" : "Example multi language string"
+      } ]
+    },
+    "CityTown" : [ {
+      "en" : "Example multi language string"
+    } ],
+    "ZipCodeOfPOBox" : [ {
+      "en" : "Example multi language string"
+    } ],
+    "MiddleNames" : {
+      "en" : "Example multi language string"
+    }
+  } ]
+}
