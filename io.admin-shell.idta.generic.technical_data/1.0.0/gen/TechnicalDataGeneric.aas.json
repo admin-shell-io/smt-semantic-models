@@ -1,0 +1,981 @@
+{
+  "assetAdministrationShells" : [ {
+    "modelType" : "AssetAdministrationShell",
+    "assetInformation" : {
+      "assetKind" : "Type"
+    },
+    "submodels" : [ {
+      "keys" : [ {
+        "type" : "Submodel",
+        "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#TechnicalData/submodel"
+      } ],
+      "type" : "ModelReference"
+    } ],
+    "administration" : { },
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#TechnicalData",
+    "description" : [ {
+      "language" : "en",
+      "text" : "defaultAdminShell"
+    } ],
+    "idShort" : "defaultAdminShell"
+  } ],
+  "conceptDescriptions" : [ {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Technical data of the asset and associated product classificatons."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "TechnicalData"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "TechnicalData"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#TechnicalData",
+    "category" : "APPLICATION_CLASS",
+    "description" : [ {
+      "language" : "en",
+      "text" : "Technical data of the asset and associated product classificatons."
+    } ],
+    "idShort" : "TechnicalData"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Further information on the product, the validity of the information provided and this data record."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "furtherInformation"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "furtherInformation"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#furtherInformation",
+    "idShort" : "furtherInformation"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Technical and product properties. Individual Characteristics that describe the product and its technical properties."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "technicalProperties"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "technicalProperties"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#technicalProperties",
+    "idShort" : "technicalProperties"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Common name of the classification system.\nNote: Examples for common names for classification systems are \"ECLASS\" or \"IEC CDD\"."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "product classification system"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "productClassificationSystem"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#productClassificationSystem",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "product classification system"
+    } ],
+    "idShort" : "productClassificationSystem"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Common version identifier of the used classification system, in order to distinguish different version of the property dictionary.\nNote: Casing is to be ignored."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "classification system version"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "classificationSystemVersion"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#classificationSystemVersion",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "classification system version"
+    } ],
+    "idShort" : "classificationSystemVersion"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Class of the associated product or industrial equipment in the classification system. According to the notation of the system.\nNote: Ideally, the Property/valueId is used to reference the IRI/ IRDI of the product class."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "product class ID"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "productClassId"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#productClassId",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "product class ID"
+    } ],
+    "idShort" : "productClassId"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Product classifications by association with product classes in common classification systems."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "product classifications"
+        }, {
+          "language" : "de",
+          "text" : "Produkt-Klassifikationen"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "productClassifications"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#productClassifications",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "product classifications"
+    }, {
+      "language" : "de",
+      "text" : "Produkt-Klassifikationen"
+    } ],
+    "idShort" : "productClassifications"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "de",
+          "text" : "Name des Herstellers."
+        }, {
+          "language" : "en",
+          "text" : "Legally valid designation of the natural or judicial person which is directly responsible for the design, production, packaging and labeling of a product in respect to its being brought into circulation."
+        } ],
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "Herstellername"
+        }, {
+          "language" : "en",
+          "text" : "manufacturer name"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "manufacturerName"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerName",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "Herstellername"
+    }, {
+      "language" : "en",
+      "text" : "manufacturer name"
+    } ],
+    "idShort" : "manufacturerName"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "de",
+          "text" : "Das Firmenlogo des Produkts."
+        }, {
+          "language" : "en",
+          "text" : "A graphic mark used to represent a company, an organisation or a product."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "company logo"
+        }, {
+          "language" : "de",
+          "text" : "Firmenlogo"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "manufacturerLogo"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerLogo",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "company logo"
+    }, {
+      "language" : "de",
+      "text" : "Firmenlogo"
+    } ],
+    "idShort" : "manufacturerLogo"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "de",
+          "text" : "Bezeichnung des Produkts."
+        }, {
+          "language" : "en",
+          "text" : "Short description of the product (short text), third or lowest level of a 3 level manufacturer specific product hierarchy."
+        } ],
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "Produktbezeichnung"
+        }, {
+          "language" : "en",
+          "text" : "manufacturer product designation"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "manufacturerProductDesignation"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerProductDesignation",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "Produktbezeichnung"
+    }, {
+      "language" : "en",
+      "text" : "manufacturer product designation"
+    } ],
+    "idShort" : "manufacturerProductDesignation"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Unique product identifier of the manufacturer Note: The manufacturer article number is represented as a string, although often a numerical ID."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "article number of the product"
+        }, {
+          "language" : "de",
+          "text" : "Artikelnummer des Produkts"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "manufacturerArticleNumber"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerArticleNumber",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "article number of the product"
+    }, {
+      "language" : "de",
+      "text" : "Artikelnummer des Produkts"
+    } ],
+    "idShort" : "manufacturerArticleNumber"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "de",
+          "text" : "Eindeutige Zahlen- und Buchstabenkombination um das Produkt eindeutig für die Bestellung zu identifizieren."
+        }, {
+          "language" : "en",
+          "text" : "Unique combination of numbers and letters used to identify the device for ordering."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "order code for the product"
+        }, {
+          "language" : "de",
+          "text" : "Bestellcode des Produkts"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "manufacturerOrderCode"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerOrderCode",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "order code for the product"
+    }, {
+      "language" : "de",
+      "text" : "Bestellcode des Produkts"
+    } ],
+    "idShort" : "manufacturerOrderCode"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Path and name of the file (with file extension).\n\nThe path can be absolute or relative."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "resourceValue"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "resourceValue"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#resourceValue",
+    "idShort" : "resourceValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Content type of the content of the file."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "contentType"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "contentType"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#contentType",
+    "idShort" : "contentType"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Image files for associated product provided in common format (.png, .jpg)."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "product images"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "productImages"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#productImages",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "product images"
+    } ],
+    "idShort" : "productImages"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "General information, for example ordering and manufacturer information."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "general information"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "generalInformation"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#generalInformation",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "general information"
+    } ],
+    "idShort" : "generalInformation"
+  } ],
+  "submodels" : [ {
+    "modelType" : "Submodel",
+    "kind" : "Template",
+    "semanticId" : {
+      "keys" : [ {
+        "type" : "GlobalReference",
+        "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#TechnicalData"
+      } ],
+      "type" : "ExternalReference"
+    },
+    "supplementalSemanticIds" : [ {
+      "keys" : [ {
+        "type" : "GlobalReference",
+        "value" : "https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2"
+      } ],
+      "type" : "ExternalReference"
+    } ],
+    "administration" : { },
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#TechnicalData/submodel",
+    "description" : [ {
+      "language" : "en",
+      "text" : "Technical data of the asset and associated product classificatons."
+    } ],
+    "idShort" : "TechnicalData",
+    "submodelElements" : [ {
+      "modelType" : "SubmodelElementCollection",
+      "supplementalSemanticIds" : [ {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1"
+        } ],
+        "type" : "ExternalReference"
+      } ],
+      "description" : [ {
+        "language" : "en",
+        "text" : "Further information on the product, the validity of the information provided and this data record."
+      } ],
+      "idShort" : "furtherInformation"
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "supplementalSemanticIds" : [ {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/ZVEI/TechnicalData/TechnicalProperties/1/1"
+        } ],
+        "type" : "ExternalReference"
+      } ],
+      "description" : [ {
+        "language" : "en",
+        "text" : "Technical and product properties. Individual Characteristics that describe the product and its technical properties."
+      } ],
+      "idShort" : "technicalProperties"
+    }, {
+      "modelType" : "SubmodelElementList",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#ProductClassificationSet"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "supplementalSemanticIds" : [ {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/ZVEI/TechnicalData/ProductClassifications/1/1"
+        } ],
+        "type" : "ExternalReference"
+      } ],
+      "description" : [ {
+        "language" : "en",
+        "text" : "Product classifications by association with product classes in common classification systems."
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "product classifications"
+      }, {
+        "language" : "de",
+        "text" : "Produkt-Klassifikationen"
+      } ],
+      "idShort" : "productClassifications",
+      "orderRelevant" : false,
+      "typeValueListElement" : "SubmodelElementCollection",
+      "value" : [ {
+        "modelType" : "SubmodelElementCollection",
+        "supplementalSemanticIds" : [ {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://api.eclass-cdp.com/0173-1-02-ABI502-003/0173-1-01-AHF581-003"
+          } ],
+          "type" : "ExternalReference"
+        }, {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "0173-1#02-ABI502#003/0173-1#01-AHF581#003"
+          } ],
+          "type" : "ExternalReference"
+        } ],
+        "description" : [ {
+          "language" : "en",
+          "text" : "Product classifications by association with product classes in common classification systems."
+        } ],
+        "displayName" : [ {
+          "language" : "en",
+          "text" : "product classifications"
+        }, {
+          "language" : "de",
+          "text" : "Produkt-Klassifikationen"
+        } ],
+        "idShort" : "productClassifications",
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#productClassificationSystem"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/ZVEI/TechnicalData/ProductClassificationSystem/1/1"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:string",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "product classification system"
+          } ],
+          "idShort" : "productClassificationSystem"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#classificationSystemVersion"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/ZVEI/TechnicalData/ClassificationSystemVersion/1/1"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:string",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "classification system version"
+          } ],
+          "idShort" : "classificationSystemVersion"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#productClassId"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/ZVEI/TechnicalData/ProductClassId/1/1"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:string",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "product class ID"
+          } ],
+          "idShort" : "productClassId"
+        } ]
+      } ]
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "supplementalSemanticIds" : [ {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/ZVEI/TechnicalData/GeneralInformation/1/1"
+        } ],
+        "type" : "ExternalReference"
+      } ],
+      "description" : [ {
+        "language" : "en",
+        "text" : "General information, for example ordering and manufacturer information."
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "general information"
+      } ],
+      "idShort" : "generalInformation",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerName"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "supplementalSemanticIds" : [ {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "0173-1%2302-AAO677%23002"
+          } ],
+          "type" : "ExternalReference"
+        } ],
+        "valueType" : "xs:string",
+        "displayName" : [ {
+          "language" : "de",
+          "text" : "Herstellername"
+        }, {
+          "language" : "en",
+          "text" : "manufacturer name"
+        } ],
+        "idShort" : "manufacturerName"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerLogo"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "supplementalSemanticIds" : [ {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/ZVEI/TechnicalData/ManufacturerLogo/1/1"
+          } ],
+          "type" : "ExternalReference"
+        } ],
+        "valueType" : "xs:anyURI",
+        "displayName" : [ {
+          "language" : "en",
+          "text" : "company logo"
+        }, {
+          "language" : "de",
+          "text" : "Firmenlogo"
+        } ],
+        "idShort" : "manufacturerLogo"
+      }, {
+        "modelType" : "MultiLanguageProperty",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerProductDesignation"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "supplementalSemanticIds" : [ {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "0173-1%2302-AAW338%23001"
+          } ],
+          "type" : "ExternalReference"
+        } ],
+        "description" : [ {
+          "language" : "de",
+          "text" : "Bezeichnung des Produkts."
+        }, {
+          "language" : "en",
+          "text" : "Short description of the product (short text), third or lowest level of a 3 level manufacturer specific product hierarchy."
+        } ],
+        "displayName" : [ {
+          "language" : "de",
+          "text" : "Produktbezeichnung"
+        }, {
+          "language" : "en",
+          "text" : "manufacturer product designation"
+        } ],
+        "idShort" : "manufacturerProductDesignation"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerArticleNumber"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "supplementalSemanticIds" : [ {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "0173-1%2302-AAO676%23003"
+          } ],
+          "type" : "ExternalReference"
+        } ],
+        "valueType" : "xs:string",
+        "displayName" : [ {
+          "language" : "en",
+          "text" : "article number of the product"
+        }, {
+          "language" : "de",
+          "text" : "Artikelnummer des Produkts"
+        } ],
+        "idShort" : "manufacturerArticleNumber"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerOrderCode"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "supplementalSemanticIds" : [ {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "0173-1%2302-AAO227%23002"
+          } ],
+          "type" : "ExternalReference"
+        } ],
+        "valueType" : "xs:string",
+        "displayName" : [ {
+          "language" : "en",
+          "text" : "order code for the product"
+        }, {
+          "language" : "de",
+          "text" : "Bestellcode des Produkts"
+        } ],
+        "idShort" : "manufacturerOrderCode"
+      }, {
+        "modelType" : "SubmodelElementList",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#ProductImageSet"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "supplementalSemanticIds" : [ {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/ZVEI/TechnicalData/ProductImages/1/1"
+          } ],
+          "type" : "ExternalReference"
+        } ],
+        "description" : [ {
+          "language" : "en",
+          "text" : "Image files for associated product provided in common format (.png, .jpg)."
+        } ],
+        "displayName" : [ {
+          "language" : "en",
+          "text" : "product images"
+        } ],
+        "idShort" : "productImages",
+        "orderRelevant" : false,
+        "typeValueListElement" : "SubmodelElementCollection",
+        "value" : [ {
+          "modelType" : "SubmodelElementCollection",
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/aas/3/1/File"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "Image files for associated product provided in common format (.png, .jpg)."
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "product images"
+          } ],
+          "idShort" : "productImages",
+          "value" : [ {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#resourceValue"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:anyURI",
+            "idShort" : "resourceValue"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#contentType"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:string",
+            "idShort" : "contentType"
+          } ]
+        } ]
+      } ]
+    } ]
+  } ]
+}

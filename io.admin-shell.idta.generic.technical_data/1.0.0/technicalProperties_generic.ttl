@@ -1,0 +1,24 @@
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#> .
+@prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+
+:technicalProperties a samm:Property ;
+   samm:description "Technical and product properties. Individual Characteristics that describe the product and its technical properties."@en ;
+   samm:see <https://admin-shell.io/ZVEI/TechnicalData/TechnicalProperties/1/1> ;
+   samm:characteristic :TechnicalPropertiesCharacteristic .
+
+:TechnicalPropertiesCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :TechnicalPropertiesEntity .
+
+:TechnicalPropertiesEntity a samm:Entity ;
+   samm:properties ( ) .
+
+
+
+
