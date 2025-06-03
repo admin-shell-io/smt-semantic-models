@@ -1,0 +1,29 @@
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+
+:resourceValue a samm:Property ;
+   samm:description "Path and name of the file (with file extension).\n\nThe path can be absolute or relative."@en ;
+   samm:characteristic samm-c:ResourcePath ;
+   samm:exampleValue "https://example.com/SafetyInstructions.pdf"^^xsd:anyURI .
+
+:contentType a samm:Property ;
+   samm:description "Content type of the content of the file."@en ;
+   samm:characteristic samm-c:MimeType ;
+   samm:exampleValue "application/pdf" .
+
+:FileWithContentType a samm:Characteristic ;
+   samm:dataType :ResourceWithContentType .
+
+:ResourceWithContentType a samm:Entity ;
+   samm:preferredName "Datei mit Content Type"@de ;
+   samm:preferredName "file with content type"@en ;
+   samm:description "A file is a data element that represents an address to a file (a locator). The value is a URI that can represent an absolute or relative path."@en ;
+   samm:see <https://admin-shell.io/aas/3/1/File> ;
+   samm:properties ( [ samm:property :resourceValue; samm:payloadName "value" ] :contentType ) .
+

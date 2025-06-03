@@ -1,0 +1,84 @@
+
+
+
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+
+:expiryDate a samm:Property ;
+   samm:preferredName "Ablaufdatum"@de ;
+   samm:preferredName "expiry date"@en ;
+   samm:description "Datum zu welchem die Kennzeichnung abläuft."@de ;
+   samm:description "Date, at which the specified certificate expires. Note: format by lexical representation: CCYY-MM-DD. Note: to be specified to the day."@en ;
+   samm:see <urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/ExpiryDate> ;
+   samm:characteristic :Date ;
+   samm:exampleValue "2022-01-01"^^xsd:date .
+
+:Date a samm:Characteristic ;
+   samm:description "Date in format CCYY-MM-DD."@en ;
+   samm:dataType xsd:date .
+
+:markingName a samm:Property ;
+   samm:preferredName "marking IRDI"@en ;
+   samm:preferredName "Kennzeichnungsname (IRDI)"@de ;
+   samm:description "Common name of the marking."@en ;
+   samm:description "IRDI der Kennzeichnung."@de ;
+   samm:see <urn:irdi:0112/2///61987%23ABA231%23009> ;
+   samm:see <urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/MarkingName> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "0173-1%2307-DAA603%23004" .
+
+:markingFile a samm:Property ;
+   samm:preferredName "marking file"@en ;
+   samm:preferredName "Kennzeichnungsbild"@de ;
+   samm:description "Conformity symbol of the marking."@en ;
+   samm:description "Das Symbol für Konformität der Kennzeichnung."@de ;
+   samm:see <urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/MarkingFile> ;
+   samm:characteristic :FileWithContentType .
+
+:issueDate a samm:Property ;
+   samm:preferredName "Ausstelldatum"@de ;
+   samm:preferredName "issue date"@en ;
+   samm:description "Datum zu welchem die Kennzeichnung ausgestellt wurde."@de ;
+   samm:description "Date, at which the specified certificate is issued. Note: format by lexical representation: CCYY-MM-DD. Note: to be specified to the day."@en ;
+   samm:see <urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/IssueDate> ;
+   samm:characteristic :Date ;
+   samm:exampleValue "2022-01-01"^^xsd:date .
+
+:markingAdditionalText a samm:Property ;
+   samm:preferredName "additional text"@en ;
+   samm:preferredName "zusätzlicher Text"@de ;
+   samm:description "Zusätzlicher sprechender Text für die Kennzeichnung."@de ;
+   samm:description "Where applicable, additional information on the marking in plain text, e.g. the ID-number of the notified body involved in the conformity process."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABI192%23003> ;
+   samm:see <urn:irdi:0112/2///61987%23ABB146%23007> ;
+   samm:see <urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/MarkingAdditionalText> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "0044" .
+
+:designationOfCertificateOrApproval a samm:Property ;
+   samm:preferredName "designation of Certificate or Approval."@en ;
+   samm:description "Alphanumeric character sequence identifying a certificate or approval."@en ;
+   samm:see <urn:irdi:0112/2///61987%23ABH783%23003> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "KEMA99IECE X1105/128" .
+
+:MarkingsEntity a samm:Entity ;
+   samm:preferredName "single marking information. Note: CE marking is declared as mandatory according to the Blue Guide of the EU-Commission"@en ;
+   samm:preferredName "Kennzeichnung"@de ;
+   samm:see <urn:irdi:0112/2///61360_7%23AAS009%23001> ;
+   samm:properties ( [ samm:property :markingName; samm:payloadName "MarkingName" ] [ samm:property :designationOfCertificateOrApproval; samm:optional true ] [ samm:property :issueDate; samm:optional true; samm:payloadName "IssueDate" ] [ samm:property :expiryDate; samm:optional true; samm:payloadName "ExpiryDate" ] [ samm:property :markingFile; samm:payloadName "MarkingFile" ] [ samm:property :markingAdditionalText; samm:optional true; samm:payloadName "MarkingAdditionalText" ] ) .
+
+:Markings a samm-c:Set ;
+   samm:preferredName "markings"@en ;
+   samm:preferredName "Kennzeichnungen"@de ;
+   samm:description "Note: CE marking is declared as mandatory according to EU Blue Guide."@en ;
+   samm:see <urn:irdi:0112/2///61360_7%23AAS006%23001> ;
+   samm:dataType :MarkingsEntity .
+
