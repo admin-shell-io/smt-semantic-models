@@ -1,0 +1,184 @@
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
+@prefix contactInformation: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+
+:Nameplate a samm:Aspect ;
+   samm:preferredName "nameplate"@en ;
+   samm:preferredName "Typenschild"@de ;
+   samm:description "Contains the nameplate information attached to the product."@en ;
+   samm:description "Enthält die Information zum Typenschild des Produkts."@de ;
+   samm:properties ( [ samm:property :uriOfTheProduct; samm:payloadName "URIOfTheProduct" ] [ samm:property :manufacturerName; samm:payloadName "ManufacturerName" ] [ samm:property :manufacturerProductDesignation; samm:payloadName "ManufacturerProductDesignation" ] [ samm:property :manufacturerProductFamily; samm:optional true; samm:payloadName "ManufacturerProductFamily" ] [ samm:property :manufacturerProductType; samm:optional true; samm:payloadName "ManufacturerProductType" ] [ samm:property :orderCodeOfManufacturer; samm:payloadName "OrderCodeOfManufacturer" ] [ samm:property :productArticleNumberOfManufacturer; samm:optional true; samm:payloadName "ProductArticleNumberOfManufacturer" ] [ samm:property :addressInformation; samm:payloadName "AddressInformation" ] [ samm:property :serialNumber; samm:optional true; samm:payloadName "SerialNumber" ] [ samm:property :yearOfConstruction; samm:payloadName "YearOfConstruction" ] [ samm:property :dateOfManufacture; samm:optional true; samm:payloadName "DateOfManufacture" ] [ samm:property :logoCompany; samm:optional true; samm:payloadName "LogoCompany" ] [ samm:property :hardwareVersion; samm:optional true; samm:payloadName "HardwareVersion" ] [ samm:property :firmwareVersion; samm:optional true; samm:payloadName "FirmwareVersion" ] [ samm:property :softwareVersion; samm:optional true; samm:payloadName "SoftwareVersion" ] [ samm:property :markings; samm:optional true; samm:payloadName "Markings" ] [ samm:property :manufacturerProductRoot; samm:optional true; samm:payloadName "ManufacturerProductRoot" ] [ samm:property :countryOfOrigin; samm:optional true; samm:payloadName "CountryOfOrigin" ] [ samm:property :uniqueFacilityIdentifier; samm:optional true ] ) ;
+   samm:operations ( ) ;
+   samm:events ( ) ;
+   samm:see <https://admin-shell.io/idta/nameplate/3/0/Nameplate> .
+
+:uriOfTheProduct a samm:Property ;
+   samm:preferredName "URI des Produkts"@de ;
+   samm:preferredName "URI of the product"@en ;
+   samm:description "Unique global identification of the product using an universal resource identifier (URI)."@en ;
+   samm:description "Global eindeutige Identifikation des Produkts."@de ;
+   samm:see <urn:irdi:0112/2///61987%23ABN590%23002> ;
+   samm:see <urn:irdi:0173-1%2302-ABH173%23003> ;
+   samm:characteristic :Uri ;
+   samm:exampleValue "https://dc-qr.com/?m=R123456789"^^xsd:anyURI .
+
+:manufacturerName a samm:Property ;
+   samm:preferredName "manufacturer name"@en ;
+   samm:preferredName "Herstellername"@de ;
+   samm:description "Legally valid designation of the natural or judicial person which is directly responsible for the design, production, packaging and labeling of a product in respect to its being brought into circulation."@en ;
+   samm:description "Name des Herstellers."@de ;
+   samm:see <urn:irdi:0112/2///61987%23ABA565%23009> ;
+   samm:see <urn:irdi:0173-1%2302-AAO677%23004> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:manufacturerProductDesignation a samm:Property ;
+   samm:preferredName "Produktbezeichnung"@de ;
+   samm:preferredName "manufacturer product designation"@en ;
+   samm:description "Short description of the product (short text), third or lowest level of a 3 level manufacturer specific product hierarchy."@en ;
+   samm:description "Bezeichnung des Produkts."@de ;
+   samm:see <urn:irdi:0112/2///61987%23ABA567%23009> ;
+   samm:see <urn:irdi:0173-1%2302-AAW338%23003> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:manufacturerProductRoot a samm:Property ;
+   samm:preferredName "manufacturer Product Root"@en ;
+   samm:description "Top level of a 3 level manufacturer specific product hierarchy."@en ;
+   samm:see <urn:irdi:0112/2///61360_7%23AAS011%23001> ;
+   samm:see <urn:irdi:0173-1%2302-AAU732%23003> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:manufacturerProductFamily a samm:Property ;
+   samm:preferredName "manufacturer product family"@en ;
+   samm:preferredName "Produktfamilie"@de ;
+   samm:description "Produktfamilie des Produkts."@de ;
+   samm:description "2nd level of a 3 level manufacturer specific product hierarchy."@en ;
+   samm:see <urn:irdi:0112/2///61987%23ABP464%23002> ;
+   samm:see <urn:irdi:0173-1%2302-AAU731%23003> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:manufacturerProductType a samm:Property ;
+   samm:preferredName "Produktausprägungen"@de ;
+   samm:preferredName "manufacturer product type"@en ;
+   samm:description "Ausprägung für das Produkt, um unterschiedliche Einzelprodukte einer Produktfamilie zu unterscheiden."@de ;
+   samm:description "Characteristic to differentiate between different products of a product family or special variants."@en ;
+   samm:see <urn:irdi:0112/2///61987%23ABA300%23008> ;
+   samm:see <urn:irdi:0173-1%2302-AAO057%23004> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:orderCodeOfManufacturer a samm:Property ;
+   samm:preferredName "Bestellcode des Produkts"@de ;
+   samm:preferredName "order code for the product"@en ;
+   samm:description "Eindeutige Zahlen- und Buchstabenkombination um das Produkt eindeutig für die Bestellung zu identifizieren."@de ;
+   samm:description "Unique combination of numbers and letters used to identify the device for ordering."@en ;
+   samm:see <urn:irdi:0112/2///61987%23ABA950%23008> ;
+   samm:see <urn:irdi:0173-1%2302-AAO227%23004> ;
+   samm:characteristic samm-c:Text .
+
+:productArticleNumberOfManufacturer a samm:Property ;
+   samm:preferredName "Artikelnummer des Produkts"@de ;
+   samm:preferredName "product article number"@en ;
+   samm:description "Eindeutige Artikelnummer des Herstellers."@de ;
+   samm:description "Unique product identifier of the manufacturer."@en ;
+   samm:see <urn:irdi:0112/2///61987%23ABA581%23007> ;
+   samm:see <urn:irdi:0173-1%2302-AAO676%23005> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:serialNumber a samm:Property ;
+   samm:preferredName "Seriennummer"@de ;
+   samm:preferredName "serial number"@en ;
+   samm:description "Die Seriennummer des Produkts."@de ;
+   samm:description "Unique combination of numbers and letters used to identify the device once it has been manufactured."@en ;
+   samm:see <urn:irdi:0112/2///61987%23ABA951%23009> ;
+   samm:see <urn:irdi:0173-1%2302-AAM556%23004> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "A12345-X75EN" .
+
+:yearOfConstruction a samm:Property ;
+   samm:preferredName "year of construction"@en ;
+   samm:preferredName "Konstruktionsjahr"@de ;
+   samm:description "Year in which the manufacturing process is completed."@en ;
+   samm:description "Das Jahr, in dem das Produkt fertig gestellt wurde."@de ;
+   samm:see <urn:irdi:0112/2///61987%23ABP000%23002> ;
+   samm:see <urn:irdi:0173-1%2302-AAP906%23003> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "2009" .
+
+:dateOfManufacture a samm:Property ;
+   samm:preferredName "date of manufacture"@en ;
+   samm:preferredName "Herstelldatum"@de ;
+   samm:description "Date when an item was manufactured-"@en ;
+   samm:description "Datum, zu dem das Produkt hergestellt wurde."@de ;
+   samm:see <urn:irdi:0112/2///61987%23ABB757%23007> ;
+   samm:see <urn:irdi:0173-1%2302-AAR972%23004> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "2009-01-01" .
+
+:hardwareVersion a samm:Property ;
+   samm:preferredName "hardware version"@en ;
+   samm:preferredName "Hardwareversion"@de ;
+   samm:description "Version of the hardware supplied with the device."@en ;
+   samm:description "Version der Hardware."@de ;
+   samm:see <urn:irdi:0112/2///61987%23ABA926%23008> ;
+   samm:see <urn:irdi:0173-1%2302-AAN270%23004> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "AS1" .
+
+:firmwareVersion a samm:Property ;
+   samm:preferredName "firmware version"@en ;
+   samm:preferredName "Firmwareversion"@de ;
+   samm:description "Version of the firmware supplied with the device."@en ;
+   samm:description "Version der Firmware."@de ;
+   samm:see <urn:irdi:0112/2///61987%23ABA302%23006> ;
+   samm:see <urn:irdi:0173-1%2302-AAM985%23004> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "FS1" .
+
+:softwareVersion a samm:Property ;
+   samm:preferredName "software version"@en ;
+   samm:preferredName "Softwareversion"@de ;
+   samm:description "Version of the software used by the device."@en ;
+   samm:description "Version der Software."@de ;
+   samm:see <urn:irdi:0112/2///61987%23ABA601%23008> ;
+   samm:see <urn:irdi:0173-1%2302-AAM737%23004> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "SF1" .
+
+:markings a samm:Property ;
+   samm:preferredName "markings"@en ;
+   samm:preferredName "Kennzeichnungen"@de ;
+   samm:description "Produktkennzeichnungen"@de ;
+   samm:description "Markings of the product. Note: CE marking is declared as mandatory according to EU Blue Guide."@en ;
+   samm:characteristic shared:Markings .
+
+:countryOfOrigin a samm:Property ;
+   samm:preferredName "country of Origin"@en ;
+   samm:description "Country where the product was manufactured. Note: Country codes defined accord. to DIN EN ISO 3166-1 alpha-2 codes."@en ;
+   samm:see <urn:irdi:0112/2///61987%23ABP462%23001> ;
+   samm:see <urn:irdi:0173-1%2302-AAO259%23007> ;
+   samm:characteristic samm-c:Text .
+
+:uniqueFacilityIdentifier a samm:Property ;
+   samm:preferredName "unique Identifier of a facility"@en ;
+   samm:description "Unique string of characters for the identification of locations or buildings involved in a product’s value chain or used by actors involved in a product’s value chain."@en ;
+   samm:see <https://adminshell.io/idta/nameplate/3/0/UniqueFacilityIdentifier> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "987654321" .
+
+:logoCompany a samm:Property ;
+   samm:preferredName "Firmenlogo"@de ;
+   samm:preferredName "company logo"@en ;
+   samm:description "Das Firmenlogo des Produkts."@de ;
+   samm:description "A graphic mark used to represent a company, an organisation or a product."@en ;
+   samm:characteristic samm-c:ResourcePath .
+
+:Uri a samm:Characteristic ;
+   samm:dataType xsd:anyURI .
+
