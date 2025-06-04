@@ -5,7 +5,8 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <urn:samm:io.admin-shell.idta.carbon_footprint:2.0.0#> .
+@prefix : <urn:samm:io.admin-shell.idta.carbon_footprint.pact:1.0.0#> .
+@prefix pcf: <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#> .
 @prefix cx: <urn:samm:io.catenax.pcf:7.0.0#> .
 @prefix ext-information: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
 @prefix ext-shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
@@ -13,10 +14,10 @@
 
 
 :PactCharacteristic a samm:Characteristic ;
-  samm:dataType :pactEntity .
+  samm:dataType :PactEntity .
 
 
-:pactEntity a samm:Entity ;
+:PactEntity a samm:Entity ;
    samm:preferredName "Product (Carbon) Footprint"@en ;
    samm:description "A Product (Carbon) Footprint represents the carbon footprint of a product with values as specified in the Catena-X PCF Rulebook (Version 3.0.0) in accordance with the WBCSD (World Business Council for Sustainable Development) Pathfinder framework and the technical specifications for PCF Data Exchange (Version 2.0.0) from the WBCSD/ PACT initiative."@en ;
    samm:see <https://wbcsd.github.io/tr/2023/data-exchange-protocol-20230221/> ;
