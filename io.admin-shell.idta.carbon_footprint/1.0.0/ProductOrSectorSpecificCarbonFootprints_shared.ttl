@@ -67,13 +67,7 @@
   samm:see <https://admin-shell.io/idta/CarbonFootprint/ExternalPcfApi/1/0> ;
   samm:properties: ( [ samm:property :pcfApiEndpoint; samm:payloadName "PcfApiEndpoint" ] [ samm:property :pcfApiQuery; samm:payloadName "PcfApiQuery" ]) .
  
-:productOrSectorSpecificPcfInformation a samm:Property ;
-   samm:preferredName "PCF information"@en ;
-   samm:preferredName "PCF-Information"@de ;
-   samm:description "A section in which further content is listed according to the calculation method for the Product Carbon Footprint."@en ;
-   samm:description "Ein Abschnitt, in dem weitere Inhalte entsprechend der Berechnungsmethode zum Product Carbon Footprint aufgeführt werden."@de ;
-   samm:see <https://admin-shell.io/idta/CarbonFootprint/PcfInformation/1/0> ;
-  samm:characteristic :ProductOrSectorSpecificPcfInformationCharacteristic .
+
 	 
 :LifeCylceCharacteristic a samm-c:Set ;
    samm:dataType xsd:string .
