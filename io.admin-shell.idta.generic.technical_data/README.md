@@ -9,6 +9,18 @@ Namespace: urn:samm:io.admin-shell.idta.generic.technical_data
 The folder "gen" for each version contains sammple JSON files generated for the aspect model(s)
 The folder "input" contains source files like .aasx or the submodel template specification itself
 
+# How to derive specific technical data
+
+* define new namespace, for example <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> 
+* add new samm:see for semantic ID technical data was derived from if available
+* copy TechnicalData.ttl and add tech: as prefix for  <urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#> 
+* add prefix: tech to generalInformation and productClassifications, if some of the optional parts are not needed, remove them. For example: samm:properties: ( tech:generalInformation [ samm:property tech:productClassifications; samm:optional true ]  :technicalProperties )
+* remove :generalInformation and GeneralInformationCharacteristic  from TechnicalData.tll file
+* copy file technicalProperties_generic.ttl and rename it to technicalProperties_shared.ttl
+* add properties to TechnicalPropertiesEntity in technicalProperties_shared.ttl
+
+
+
 # Changelog
 All notable changes to this model will be documented in this section.
 
@@ -16,7 +28,7 @@ All notable changes to this model will be documented in this section.
 
 Contained Files:
 
-* TechnicalData.ttl: the aspect model for the SMT : the _see_ attribute needs to be extended to include the ID of the concrete technical data SMT derived from this generic SMT
+* TechnicalData.ttl: the aspect model for the SMT 
 
 * furtherInformation_generic.ttl : this file needs to be substituted when deriving a concrete techncial data SMT from this generic SMT
 * technicalProperties_generic.ttl : this file needs to be substituted when deriving a concrete techncial data SMT from this generic SMT
