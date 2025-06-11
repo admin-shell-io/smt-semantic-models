@@ -30,7 +30,7 @@
    samm:preferredName "impact assessment method / calculation method"@de ;
    samm:description "Standard, method for determining the greenhouse gas emissions of a product. Multiple standards can be listed in case these standards are all applied to the respective PCF calculation."@en ;
    samm:description "Norm, Standard, Verfahren zur Ermittlung der Treibhausgas-Emissionen eines Produkts. Mehrere Standards können aufgeführt werden wenn sie sich auf dieselbe PCF-Berechnung beziehen."@de ;
-   samm:see <0173-1%2302-ABG854%23003> ;
+   samm:see <urn:irdi:-1%2302-ABG854%23003> ;
    samm:characteristic :PcfCalculationMethodSet ;
    samm:exampleValue "sector specific calculation method" .
 
