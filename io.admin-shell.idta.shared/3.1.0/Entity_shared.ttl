@@ -1,0 +1,43 @@
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+
+
+:specificAssetIds a samm:Property ;
+   samm:preferredName "specific asset ID"@en ;
+   samm:see <https://admin-shell.io/aas/3/1/SpecificAssetId> ;
+   samm:characteristic :SpecificAssetIdSet .
+
+:SpecificAssetIdSet a samm-c:Set ;
+   samm:dataType :SpecificAssetId .
+
+:AasEntityCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :AasEntityType .
+
+:EntityType a samm-c:Enumeration ;
+   samm:see <https://admin-shell.io/aas/3/1/EntityType> ;
+   samm:dataType xsd:string ;
+   samm-c:values ( "SelfManagedEntity" "CoManagedEntity" ) .
+
+:globalAssetId a samm:Property ;
+   samm:preferredName "global asset ID"@en ;
+   samm:description "Globally unique identifier of an asset."@en ;
+   samm:see <https://admin-shell.io/aas/3/1/Entity/globalAssetId> ;
+   samm:characteristic samm-c:Text .
+
+:AasEntityType a samm:Entity ;
+   samm:see <https://admin-shell.io/aas/3/1/Entity> ;
+   samm:description "A predefined submodel element subtype of the Asset Administration Shell used to model entities."@en ;
+   samm:properties ( :specificAssetIds :globalAssetId :entityType ) .
+
+:entityType a samm:Property ;
+   samm:preferredName "entity type"@en ;
+   samm:see <https://admin-shell.io/aas/3/1/Entity/entityType> ;
+   samm:characteristic :EntityType ;
+   samm:exampleValue "SelfManagedEntity" .
+
