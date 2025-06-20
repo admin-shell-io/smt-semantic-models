@@ -423,6 +423,89 @@
       "dataSpecificationContent" : {
         "modelType" : "DataSpecificationIec61360",
         "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "first"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "first"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#first",
+    "idShort" : "first"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "second"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "second"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#second",
+    "idShort" : "second"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "RelationshipElement conformant to AAS."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "RelationshipElement"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "valueOnly4RelationshipElement"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4RelationshipElement",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "RelationshipElement"
+    } ],
+    "idShort" : "valueOnly4RelationshipElement"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
         "definition" : [ {
           "language" : "en",
           "text" : "The unique ID of the (external) subject the specific asset ID value belongs to or has meaning to."
@@ -871,6 +954,126 @@
         },
         "valueType" : "xs:string",
         "idShort" : "type"
+      } ]
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "description" : [ {
+        "language" : "en",
+        "text" : "RelationshipElement conformant to AAS."
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "RelationshipElement"
+      } ],
+      "idShort" : "valueOnly4RelationshipElement",
+      "value" : [ {
+        "modelType" : "SubmodelElementCollection",
+        "idShort" : "first",
+        "value" : [ {
+          "modelType" : "SubmodelElementList",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SetOfKeys"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "idShort" : "keys",
+          "orderRelevant" : false,
+          "typeValueListElement" : "SubmodelElementCollection",
+          "value" : [ {
+            "modelType" : "SubmodelElementCollection",
+            "idShort" : "keys",
+            "value" : [ {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#key"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "valueType" : "xs:string",
+              "idShort" : "key"
+            }, {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keyValue"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "valueType" : "xs:string",
+              "idShort" : "keyValue"
+            } ]
+          } ]
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#type"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "idShort" : "type"
+        } ]
+      }, {
+        "modelType" : "SubmodelElementCollection",
+        "idShort" : "second",
+        "value" : [ {
+          "modelType" : "SubmodelElementList",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SetOfKeys"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "idShort" : "keys",
+          "orderRelevant" : false,
+          "typeValueListElement" : "SubmodelElementCollection",
+          "value" : [ {
+            "modelType" : "SubmodelElementCollection",
+            "idShort" : "keys",
+            "value" : [ {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#key"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "valueType" : "xs:string",
+              "idShort" : "key"
+            }, {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keyValue"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "valueType" : "xs:string",
+              "idShort" : "keyValue"
+            } ]
+          } ]
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#type"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "idShort" : "type"
+        } ]
       } ]
     }, {
       "modelType" : "SubmodelElementCollection",

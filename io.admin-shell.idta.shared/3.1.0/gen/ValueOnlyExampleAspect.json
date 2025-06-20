@@ -29,6 +29,22 @@
     "entityType" : "SelfManagedEntity",
     "globalAssetId" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa"
   },
+  "valueOnly4RelationshipElement" : {
+    "first" : {
+      "type" : "ModelReference",
+      "keys" : [ {
+        "value" : "id1234",
+        "key" : "Submodel"
+      } ]
+    },
+    "second" : {
+      "type" : "ModelReference",
+      "keys" : [ {
+        "value" : "id1234",
+        "key" : "Submodel"
+      } ]
+    }
+  },
   "valueOnly4MultiLanguageProperty" : [ {
     "en" : "Example multi language string"
   } ]

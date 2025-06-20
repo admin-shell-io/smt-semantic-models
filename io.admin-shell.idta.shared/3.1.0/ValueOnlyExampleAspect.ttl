@@ -12,7 +12,7 @@
    samm:preferredName "Value-Only Examples"@en ;
    samm:description "Beispiel-Aspekt, der Charakteristiken für Submodel-Elemente testet."@de ;
    samm:description "Example Aspect with characteristics for Value-Only serialization of Submodel Elements."@en ;
-   samm:properties ( :valueOnly4MultiLanguageProperty :valueOnly4File :valueOnly4Blob :valueOnly4Reference :example4Entity  ) ;
+   samm:properties ( :valueOnly4MultiLanguageProperty :valueOnly4File :valueOnly4Blob :valueOnly4Reference :valueOnly4RelationshipElement :example4Entity  ) ;
    samm:operations ( ) ;
    samm:events ( ) .
 
@@ -34,6 +34,11 @@
    samm:preferredName "Reference"@en ;
    samm:description "Reference conformant to AAS."@en ;
    samm:characteristic :ReferenceType .
+   
+:valueOnly4RelationshipElement a samm:Property ;
+   samm:preferredName "RelationshipElement"@en ;
+   samm:description "RelationshipElement conformant to AAS."@en ;
+   samm:characteristic :RelationshipType .
 
 :example4Entity a samm:Property ;
    samm:characteristic :AasEntityCharacteristic .
