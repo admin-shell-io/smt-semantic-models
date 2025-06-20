@@ -1,0 +1,39 @@
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+
+:ValueOnlyExampleAspect a samm:Aspect ;
+   samm:preferredName "Value-Only Beispiele"@de ;
+   samm:preferredName "Value-Only Examples"@en ;
+   samm:description "Beispiel-Aspekt, der Charakteristiken für Submodel-Elemente testet."@de ;
+   samm:description "Example Aspect with characteristics for Value-Only serialization of Submodel Elements."@en ;
+   samm:properties ( :valueOnly4MultiLanguageProperty :valueOnly4File :valueOnly4Blob :valueOnly4Reference :example4Entity  ) ;
+   samm:operations ( ) ;
+   samm:events ( ) .
+
+:valueOnly4MultiLanguageProperty a samm:Property ;
+   samm:preferredName "multi language text"@de ;
+   samm:preferredName "mehrsprachiger Text"@en ;
+   samm:see <urn:irdi:0173-1#02-ABJ219#002> ;
+   samm:characteristic :MultiLanguageTexts .
+
+:valueOnly4File a samm:Property ;
+   samm:preferredName "File"@en ;
+   samm:characteristic :FileWithContentType .
+
+:valueOnly4Blob a samm:Property ;
+   samm:preferredName "Blob"@en ;
+   samm:characteristic :BlobWithContentType .
+
+:valueOnly4Reference a samm:Property ;
+   samm:preferredName "Reference"@en ;
+   samm:description "Reference conformant to AAS."@en ;
+   samm:characteristic :ReferenceType .
+
+:example4Entity a samm:Property ;
+   samm:characteristic :AasEntityCharacteristic .
