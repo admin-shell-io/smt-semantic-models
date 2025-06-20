@@ -20,7 +20,7 @@
 @prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#> .
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
-@prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+
 
 :technicalProperties a samm:Property ;
    samm:description "Technical and product properties. Individual Characteristics that describe the product and its technical properties."@en ;
@@ -75,7 +75,9 @@
    samm:preferredName "mass of the entire battery in kilograms"@en ;
    samm:description "Mass of the entire battery in kilograms. Voluntary: if the battery is defined on pack or module level: also weight of the modules and/or cells."@en ;
    samm:characteristic :MassCharacteristic ;
-   samm:exampleValue "1007"^^xsd:double . 
+
+
+
 
 :length a samm:Property ;
    samm:see <urn:irdi:0173-1#02-BAA018#007> ;
