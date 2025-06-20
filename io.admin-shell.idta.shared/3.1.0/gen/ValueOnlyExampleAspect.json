@@ -1,0 +1,35 @@
+{
+  "valueOnly4File" : {
+    "value" : "https://example.com/SafetyInstructions.pdf",
+    "contentType" : "application/pdf"
+  },
+  "valueOnly4Reference" : {
+    "type" : "ModelReference",
+    "keys" : [ {
+      "value" : "id1234",
+      "key" : "Submodel"
+    } ]
+  },
+  "valueOnly4Blob" : {
+    "value" : "SGVsbG8sIFdvcmxkIQ==",
+    "contentType" : "application/pdf"
+  },
+  "example4Entity" : {
+    "specificAssetIds" : [ {
+      "name" : "SerialNumber",
+      "value" : "eOMtThyhVNLWUZNRcBaQKxI",
+      "externalSubjectId" : {
+        "type" : "ModelReference",
+        "keys" : [ {
+          "value" : "id1234",
+          "key" : "Submodel"
+        } ]
+      }
+    } ],
+    "entityType" : "SelfManagedEntity",
+    "globalAssetId" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa"
+  },
+  "valueOnly4MultiLanguageProperty" : [ {
+    "en" : "Example multi language string"
+  } ]
+}
