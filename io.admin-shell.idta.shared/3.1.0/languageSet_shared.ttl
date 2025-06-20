@@ -1,0 +1,17 @@
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+
+:languages a samm:Property ;
+   samm:see <urn:irdi:0173-1%2302-AAN468%23008> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-AAN468-008> ;
+   samm:characteristic :LanguageSet ;
+   samm:exampleValue "en" .
+
+:LanguageSet a samm-c:Set ;
+   samm:dataType xsd:string .
