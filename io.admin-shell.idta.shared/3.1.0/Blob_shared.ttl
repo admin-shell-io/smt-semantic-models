@@ -1,0 +1,32 @@
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+
+
+   
+:blobValue a samm:Property ;
+   samm:preferredName "blob"@en ;
+   samm:description "The blob source code."@en ;
+   samm:see <https://admin-shell.io/aas/3/1/Blob/value> ;
+   samm:characteristic :BlobType ;
+   samm:exampleValue "SGVsbG8sIFdvcmxkIQ=="^^xsd:base64Binary .
+
+:BlobType a samm:Characteristic ;
+   samm:see <https://admin-shell.io/aas/3/0/BlobType> ;
+   samm:dataType xsd:base64Binary .
+
+:BlobWithContentType a samm:Characteristic ;
+   samm:dataType :BlobWithContentTypeEntity .
+   
+:BlobWithContentTypeEntity a samm:Entity ;
+   samm:preferredName "Blob mit Content Type"@de ;
+   samm:preferredName "blob with content type"@en ;
+   samm:description "A Blob is a data element representing a file that is contained in the value attribute with its source code."@en ;
+   samm:see <https://admin-shell.io/aas/3/1/Blob> ;
+   samm:properties ( [ samm:property :blobValue; samm:optional true; samm:payloadName "value" ] :contentType ) .
+   
