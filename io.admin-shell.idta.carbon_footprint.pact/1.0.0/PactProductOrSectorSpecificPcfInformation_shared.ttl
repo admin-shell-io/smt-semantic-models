@@ -5,14 +5,14 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <urn:samm:io.admin-shell.idta.carbon_footprint:2.0.0#> .
+@prefix : <urn:samm:io.admin-shell.idta.carbon_footprint.pact:1.0.0#> .
+@prefix pcf: <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#> .
 @prefix cx: <urn:samm:io.catenax.pcf:7.0.0#> .
+@prefix ext-information: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
 @prefix ext-shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
 
-:ProductOrSectorSpecificPcfInformationChacateristic a samm:Characteristic ;
-   samm:dataType  :ProductOrSectorSpecificPcfInformationEntity .
+:ProductOrSectorSpecificPcfInformationCharacteristic a samm-c:SingleEntity ;
+   samm:dataType  :PactEntity .
    
-:ProductOrSectorSpecificPcfInformationEntity a samm:Entity ;
-  samm:properties () .
 
