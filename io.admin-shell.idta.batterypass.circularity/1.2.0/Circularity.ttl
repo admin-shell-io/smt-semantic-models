@@ -1,0 +1,37 @@
+######################################################################
+# namesapce: urn:samm:io.admin-shell.idta.material_composition:1.2.0
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by-nc/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#
+# namespace: urn:samm:io.BatteryPass.Circularity:1.2.0
+# Copyright (c) 2025 Circulor GmbH on behalf of the Battery Pass Consortium
+#
+# The referenced work is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by-nc/4.0/.
+#
+# SPDX-License-Identifier: CC-BY-NC-4.0
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.circularity:1.2.0#> .
+@prefix bp: <urn:samm:io.BatteryPass.Circularity:1.2.0#> .
+
+:Circularity a samm:Aspect ;
+   samm:description "Dismantling information (including at least: exploded diagrams of the battery system/pack showing the location of battery cells; disassembly sequences; type and number of fastening techniques to be unlocked; tools required for disassembly; warnings if risk of damaging parts exists; amount of cells used and layout); part numbers for components and contact details of sources for replacement spares; safety measures (Annex XIII (2b-d)); usable extinguishing agent (Annex VI, Part A(9))."@en ;
+   samm:properties ( bp:dismantlingAndRemovalInformation bp:sparePartSources bp:recycledContent bp:safetyMeasures bp:endOfLifeInformation bp:renewableContent ) ;
+   samm:operations ( ) ;
+   samm:events ( ) .
+

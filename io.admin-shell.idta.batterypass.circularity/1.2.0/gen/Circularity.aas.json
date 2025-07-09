@@ -1,0 +1,1408 @@
+{
+  "assetAdministrationShells" : [ {
+    "modelType" : "AssetAdministrationShell",
+    "assetInformation" : {
+      "assetKind" : "Type"
+    },
+    "submodels" : [ {
+      "keys" : [ {
+        "type" : "Submodel",
+        "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#Circularity/submodel"
+      } ],
+      "type" : "ModelReference"
+    } ],
+    "administration" : { },
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#Circularity",
+    "description" : [ {
+      "language" : "en",
+      "text" : "defaultAdminShell"
+    } ],
+    "idShort" : "defaultAdminShell"
+  } ],
+  "conceptDescriptions" : [ {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Dismantling information (including at least: exploded diagrams of the battery system/pack showing the location of battery cells; disassembly sequences; type and number of fastening techniques to be unlocked; tools required for disassembly; warnings if risk of damaging parts exists; amount of cells used and layout); part numbers for components and contact details of sources for replacement spares; safety measures (Annex XIII (2b-d)); usable extinguishing agent (Annex VI, Part A(9)). 2024 Circulor (for and on behalf of the Battery Pass Consortium). This work is licensed under a Creative Commons License Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Readers may reproduce material for their own publications, as long as it is not sold commercially and is given appropriate attribution."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Circularity"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "Circularity"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#Circularity",
+    "category" : "APPLICATION_CLASS",
+    "description" : [ {
+      "language" : "en",
+      "text" : "Dismantling information (including at least: exploded diagrams of the battery system/pack showing the location of battery cells; disassembly sequences; type and number of fastening techniques to be unlocked; tools required for disassembly; warnings if risk of damaging parts exists; amount of cells used and layout); part numbers for components and contact details of sources for replacement spares; safety measures (Annex XIII (2b-d)); usable extinguishing agent (Annex VI, Part A(9)). 2024 Circulor (for and on behalf of the Battery Pass Consortium). This work is licensed under a Creative Commons License Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Readers may reproduce material for their own publications, as long as it is not sold commercially and is given appropriate attribution."
+    } ],
+    "idShort" : "Circularity"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Describes type for document e.g. Dismantling manual"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "documentType"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "documentType"
+        } ],
+        "valueList" : {
+          "valueReferencePairs" : [ {
+            "value" : "BillOfMaterial",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#Documenttype:_BillOfMaterial25938575"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "Model3D",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#Documenttype:_Model3Dae07ca6b"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "DismantlingManual",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#Documenttype:_DismantlingManualed9e323a"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "RemovalManual",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#Documenttype:_RemovalManual16b5f239"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "OtherManual",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#Documenttype:_OtherManualb453faa5"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "Drawing",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#Documenttype:_Drawing39de4731"
+              } ],
+              "type" : "ModelReference"
+            }
+          } ]
+        }
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#documentType",
+    "idShort" : "documentType"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Defines internet media typ to determin how to interpret the documentURL"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "mimeType"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "mimeType"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#mimeType",
+    "idShort" : "mimeType"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Link to document"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "documentURL"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "documentURL"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#documentURL",
+    "idShort" : "documentURL"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Dismantling and Removal information, including at least:- Exploded diagrams of the battery system/pack showing the location of battery cells- Disassembly sequences- Type and number of fastening techniques to be unlocked- Tools required for disassembly- Warnings if risk of damaging parts exists- Amount of cells used and layout. BR Annex XIII (2c)\n\nDIN DKE Spec 99100 chapter reference: 6.6.1.2"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "dismantlingAndRemovalInformation"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "dismantlingAndRemovalInformation"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#dismantlingAndRemovalInformation",
+    "idShort" : "dismantlingAndRemovalInformation"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Name of Supplier"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "nameOfSupplier"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "nameOfSupplier"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#nameOfSupplier",
+    "idShort" : "nameOfSupplier"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "addressCountry"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "addressCountry"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#addressCountry",
+    "idShort" : "addressCountry"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "PostalCode"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "postalCode"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#postalCode",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "PostalCode"
+    } ],
+    "idShort" : "postalCode"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "streetAddress"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "streetAddress"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#streetAddress",
+    "idShort" : "streetAddress"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Postal address of supplier for spare parts."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "addressOfSupplier"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "addressOfSupplier"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#addressOfSupplier",
+    "idShort" : "addressOfSupplier"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "E-mail address of supplier for spare parts."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "emailAddressOfSupplier"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "emailAddressOfSupplier"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#emailAddressOfSupplier",
+    "idShort" : "emailAddressOfSupplier"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Web address of supplier for spare parts."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "supplierWebAddress"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "supplierWebAddress"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#supplierWebAddress",
+    "idShort" : "supplierWebAddress"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "PartName"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "partName"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#partName",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "PartName"
+    } ],
+    "idShort" : "partName"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Part Number of Component"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "partNumber"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "partNumber"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#partNumber",
+    "idShort" : "partNumber"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Components available at supplier"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "components"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "components"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#components",
+    "idShort" : "components"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Contact details of sources for replacement spares. Postal address, including name and brand names, postal code and place, street and number, country, telephone, if any. BR Annex XIII (2b)\n\nDIN DKE Spec 99100 chapter reference: 6.6.1.3"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "sparePartSources"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "sparePartSources"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#sparePartSources",
+    "idShort" : "sparePartSources"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Recycled material share from pre-consumer waste (manufacturing waste, excluding run-around scrap) of the active material."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "preConsumerShare"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "preConsumerShare"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#preConsumerShare",
+    "idShort" : "preConsumerShare"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "RecycledMaterial"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "recycledMaterial"
+        } ],
+        "valueList" : {
+          "valueReferencePairs" : [ {
+            "value" : "Cobalt",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#RecycledMaterial:_Cobalt9eae7576"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "Nickel",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#RecycledMaterial:_Nickel17af1c2d"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "Lithium",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#RecycledMaterial:_Lithiumb422ec11"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "Lead",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#RecycledMaterial:_Lead64597828"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "Cobalt",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#RecycledMaterial:_Cobalt9eae7576"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "Nickel",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#RecycledMaterial:_Nickel17af1c2d"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "Lithium",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#RecycledMaterial:_Lithiumb422ec11"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "Lead",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#RecycledMaterial:_Lead64597828"
+              } ],
+              "type" : "ModelReference"
+            }
+          } ]
+        }
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#recycledMaterial",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "RecycledMaterial"
+    } ],
+    "idShort" : "recycledMaterial"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Recycled material share from post-consumer waste (end-of-life scrap) of the active material."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "postConsumerShare"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "postConsumerShare"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#postConsumerShare",
+    "idShort" : "postConsumerShare"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Share of material recovered from waste present in active materials for each battery model per year and per manufacturing plant.\n\nDIN DKE Spec 99100 chapter reference:  6.6.2.3 - 6.6.2.10"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "recycledContent"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "recycledContent"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#recycledContent",
+    "idShort" : "recycledContent"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "- Safety measures. - Necessary safety instructions to handle waste batteries, including in relation to the risks associated with, and the handling of, batteries containing lithium."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "safetyInstructions"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "safetyInstructions"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#safetyInstructions",
+    "idShort" : "safetyInstructions"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Usable extinguishing agents refering to classes of extinguishers (A, B, C, D, K).EUBR: Annex XIII (1a) ? Annex VI Part A (9)"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "extinguishingAgent"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "extinguishingAgent"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#extinguishingAgent",
+    "idShort" : "extinguishingAgent"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Safety measures and instructions should also take past negative and extreme events as well as the separate data attributes ?battery status? and ?battery composition/chemistry? into account.\n\nDIN DKE Spec 99100 chapter reference: 6.6.1.5"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "SafetyMeasures"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "safetyMeasures"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#safetyMeasures",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "SafetyMeasures"
+    } ],
+    "idShort" : "safetyMeasures"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Prevention and management of waste batteries: Point (a) of Article 60(1): Information on the role of end-users in contributing to waste prevention, including by information on good practices and recommendations concerning the use of batteries aiming at extending their use phase and the possibilities of re-use, preparing for re-use, preparing for repurpose, repurposing and remanufacturing"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "wastePrevention"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "wastePrevention"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#wastePrevention",
+    "idShort" : "wastePrevention"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Prevention and management of waste batteries: Point (b) of Article 60(1): Information on the role of end-users in contributing to the separate collection of waste batteries in accordance with their obligations under Article 51 so as to allow their treatment"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "separateCollection"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "separateCollection"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#separateCollection",
+    "idShort" : "separateCollection"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Prevention and management of waste batteries: Point (c) of Article 60(1): information on the separate collection, the take back, the collection points and preparing for re-use, preparing for repurposing, and recycling operations available for waste batteries"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "informationOnCollection"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "informationOnCollection"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#informationOnCollection",
+    "idShort" : "informationOnCollection"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Producer or producer responsibility organisations shall make information available to distributors and end-users on: the role of end-users in contributing to waste prevention, including by information on good practices and recommendations concerning the use of batteries aiming at extending their use phase and the possibilities of re-use, preparing for re-use, preparing for repurpose, repurposing and remanufacturing.\n\nDIN DKE Spec 99100 chapter reference: 6.6.3.2 - 6.6.3.4"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "EndOfLifeInformation"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "endOfLifeInformation"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#endOfLifeInformation",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "EndOfLifeInformation"
+    } ],
+    "idShort" : "endOfLifeInformation"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Share of renewable material content. A renewable material is a material made of natural resources that can be replenished. \n\nDIN DKE Spec 99100 chapter reference: 6.6.2.11"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "RenewableContent"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "renewableContent"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#renewableContent",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "RenewableContent"
+    } ],
+    "idShort" : "renewableContent"
+  } ],
+  "submodels" : [ {
+    "modelType" : "Submodel",
+    "kind" : "Template",
+    "semanticId" : {
+      "keys" : [ {
+        "type" : "GlobalReference",
+        "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#Circularity"
+      } ],
+      "type" : "ExternalReference"
+    },
+    "administration" : { },
+    "id" : "urn:samm:io.BatteryPass.Circularity:1.2.0#Circularity/submodel",
+    "description" : [ {
+      "language" : "en",
+      "text" : "Dismantling information (including at least: exploded diagrams of the battery system/pack showing the location of battery cells; disassembly sequences; type and number of fastening techniques to be unlocked; tools required for disassembly; warnings if risk of damaging parts exists; amount of cells used and layout); part numbers for components and contact details of sources for replacement spares; safety measures (Annex XIII (2b-d)); usable extinguishing agent (Annex VI, Part A(9)). 2024 Circulor (for and on behalf of the Battery Pass Consortium). This work is licensed under a Creative Commons License Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Readers may reproduce material for their own publications, as long as it is not sold commercially and is given appropriate attribution."
+    } ],
+    "idShort" : "Circularity",
+    "submodelElements" : [ {
+      "modelType" : "SubmodelElementList",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#DocumentationList"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "description" : [ {
+        "language" : "en",
+        "text" : "Dismantling and Removal information, including at least:- Exploded diagrams of the battery system/pack showing the location of battery cells- Disassembly sequences- Type and number of fastening techniques to be unlocked- Tools required for disassembly- Warnings if risk of damaging parts exists- Amount of cells used and layout. BR Annex XIII (2c)\n\nDIN DKE Spec 99100 chapter reference: 6.6.1.2"
+      } ],
+      "idShort" : "dismantlingAndRemovalInformation",
+      "orderRelevant" : false,
+      "typeValueListElement" : "SubmodelElementCollection",
+      "value" : [ {
+        "modelType" : "SubmodelElementCollection",
+        "description" : [ {
+          "language" : "en",
+          "text" : "Dismantling and Removal information, including at least:- Exploded diagrams of the battery system/pack showing the location of battery cells- Disassembly sequences- Type and number of fastening techniques to be unlocked- Tools required for disassembly- Warnings if risk of damaging parts exists- Amount of cells used and layout. BR Annex XIII (2c)\n\nDIN DKE Spec 99100 chapter reference: 6.6.1.2"
+        } ],
+        "idShort" : "dismantlingAndRemovalInformation",
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#documentType"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "idShort" : "documentType"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#mimeType"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "idShort" : "mimeType"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#documentURL"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:anyURI",
+          "idShort" : "documentURL"
+        } ]
+      } ]
+    }, {
+      "modelType" : "SubmodelElementList",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#SparePartSourcesList"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "description" : [ {
+        "language" : "en",
+        "text" : "Contact details of sources for replacement spares. Postal address, including name and brand names, postal code and place, street and number, country, telephone, if any. BR Annex XIII (2b)\n\nDIN DKE Spec 99100 chapter reference: 6.6.1.3"
+      } ],
+      "idShort" : "sparePartSources",
+      "orderRelevant" : false,
+      "typeValueListElement" : "SubmodelElementCollection",
+      "value" : [ {
+        "modelType" : "SubmodelElementCollection",
+        "description" : [ {
+          "language" : "en",
+          "text" : "Contact details of sources for replacement spares. Postal address, including name and brand names, postal code and place, street and number, country, telephone, if any. BR Annex XIII (2b)\n\nDIN DKE Spec 99100 chapter reference: 6.6.1.3"
+        } ],
+        "idShort" : "sparePartSources",
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#nameOfSupplier"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "idShort" : "nameOfSupplier"
+        }, {
+          "modelType" : "SubmodelElementCollection",
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://schema.org/PostalAddress"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "Postal address of supplier for spare parts."
+          } ],
+          "idShort" : "addressOfSupplier",
+          "value" : [ {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#addressCountry"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://schema.org/addressCountry"
+              } ],
+              "type" : "ExternalReference"
+            } ],
+            "valueType" : "xs:string",
+            "idShort" : "addressCountry"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#postalCode"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://schema.org/postalCode"
+              } ],
+              "type" : "ExternalReference"
+            } ],
+            "valueType" : "xs:string",
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "PostalCode"
+            } ],
+            "idShort" : "postalCode"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#streetAddress"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://schema.org/streetAddress"
+              } ],
+              "type" : "ExternalReference"
+            } ],
+            "valueType" : "xs:string",
+            "idShort" : "streetAddress"
+          } ]
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#emailAddressOfSupplier"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "idShort" : "emailAddressOfSupplier"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#supplierWebAddress"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:anyURI",
+          "idShort" : "supplierWebAddress"
+        }, {
+          "modelType" : "SubmodelElementList",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#ComponentList"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "description" : [ {
+            "language" : "en",
+            "text" : "Components available at supplier"
+          } ],
+          "idShort" : "components",
+          "orderRelevant" : false,
+          "typeValueListElement" : "SubmodelElementCollection",
+          "value" : [ {
+            "modelType" : "SubmodelElementCollection",
+            "description" : [ {
+              "language" : "en",
+              "text" : "Components available at supplier"
+            } ],
+            "idShort" : "components",
+            "value" : [ {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#partName"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "valueType" : "xs:string",
+              "displayName" : [ {
+                "language" : "en",
+                "text" : "PartName"
+              } ],
+              "idShort" : "partName"
+            }, {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#partNumber"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "valueType" : "xs:string",
+              "idShort" : "partNumber"
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "modelType" : "SubmodelElementList",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#RecycledContentList"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "description" : [ {
+        "language" : "en",
+        "text" : "Share of material recovered from waste present in active materials for each battery model per year and per manufacturing plant.\n\nDIN DKE Spec 99100 chapter reference:  6.6.2.3 - 6.6.2.10"
+      } ],
+      "idShort" : "recycledContent",
+      "orderRelevant" : false,
+      "typeValueListElement" : "SubmodelElementCollection",
+      "value" : [ {
+        "modelType" : "SubmodelElementCollection",
+        "description" : [ {
+          "language" : "en",
+          "text" : "Share of material recovered from waste present in active materials for each battery model per year and per manufacturing plant.\n\nDIN DKE Spec 99100 chapter reference:  6.6.2.3 - 6.6.2.10"
+        } ],
+        "idShort" : "recycledContent",
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#preConsumerShare"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:float",
+          "idShort" : "preConsumerShare"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#recycledMaterial"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "RecycledMaterial"
+          } ],
+          "idShort" : "recycledMaterial"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#postConsumerShare"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:float",
+          "idShort" : "postConsumerShare"
+        } ]
+      } ]
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "description" : [ {
+        "language" : "en",
+        "text" : "Safety measures and instructions should also take past negative and extreme events as well as the separate data attributes ?battery status? and ?battery composition/chemistry? into account.\n\nDIN DKE Spec 99100 chapter reference: 6.6.1.5"
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "SafetyMeasures"
+      } ],
+      "idShort" : "safetyMeasures",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#safetyInstructions"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:anyURI",
+        "idShort" : "safetyInstructions"
+      }, {
+        "modelType" : "SubmodelElementList",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#ExtinguishingAgentsList"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "description" : [ {
+          "language" : "en",
+          "text" : "Usable extinguishing agents refering to classes of extinguishers (A, B, C, D, K).EUBR: Annex XIII (1a) ? Annex VI Part A (9)"
+        } ],
+        "idShort" : "extinguishingAgent",
+        "orderRelevant" : false,
+        "typeValueListElement" : "SubmodelElementCollection",
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#extinguishingAgent"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "idShort" : "extinguishingAgent"
+        } ]
+      } ]
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "description" : [ {
+        "language" : "en",
+        "text" : "Producer or producer responsibility organisations shall make information available to distributors and end-users on: the role of end-users in contributing to waste prevention, including by information on good practices and recommendations concerning the use of batteries aiming at extending their use phase and the possibilities of re-use, preparing for re-use, preparing for repurpose, repurposing and remanufacturing.\n\nDIN DKE Spec 99100 chapter reference: 6.6.3.2 - 6.6.3.4"
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "EndOfLifeInformation"
+      } ],
+      "idShort" : "endOfLifeInformation",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#wastePrevention"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:anyURI",
+        "idShort" : "wastePrevention"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#separateCollection"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:anyURI",
+        "idShort" : "separateCollection"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#informationOnCollection"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:anyURI",
+        "idShort" : "informationOnCollection"
+      } ]
+    }, {
+      "modelType" : "Property",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.BatteryPass.Circularity:1.2.0#renewableContent"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "valueType" : "xs:float",
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "RenewableContent"
+      } ],
+      "idShort" : "renewableContent"
+    } ]
+  } ]
+}
