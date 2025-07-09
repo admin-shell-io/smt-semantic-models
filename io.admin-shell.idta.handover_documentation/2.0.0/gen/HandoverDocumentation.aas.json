@@ -1558,7 +1558,7 @@
         "supplementalSemanticIds" : [ {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "file:///C:/__git/bosch-semantic-stack.rbs-aspect-models/src/main/resources/aspects/cli/0173-1%2302-ABI500%23003/0173-1%2301-AHF579%23003"
+            "value" : "file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI500%23003/0173-1%2301-AHF579%23003"
           } ],
           "type" : "ExternalReference"
         }, {
@@ -1592,13 +1592,13 @@
           "supplementalSemanticIds" : [ {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "https://api.eclass-cdp.com/0173-1-02-ABI501-003"
+              "value" : "file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI501%23003"
             } ],
             "type" : "ExternalReference"
           }, {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "file:///C:/__git/bosch-semantic-stack.rbs-aspect-models/src/main/resources/aspects/cli/0173-1%2302-ABI501%23003"
+              "value" : "https://api.eclass-cdp.com/0173-1-02-ABI501-003"
             } ],
             "type" : "ExternalReference"
           } ],
@@ -1756,13 +1756,13 @@
           "supplementalSemanticIds" : [ {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "file:///C:/__git/bosch-semantic-stack.rbs-aspect-models/src/main/resources/aspects/cli/0173-1%2302-ABI502%23003"
+              "value" : "https://api.eclass-cdp.com/0173-1-02-ABI502-003"
             } ],
             "type" : "ExternalReference"
           }, {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "https://api.eclass-cdp.com/0173-1-02-ABI502-003"
+              "value" : "file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI502%23003"
             } ],
             "type" : "ExternalReference"
           } ],
@@ -1926,13 +1926,13 @@
           "supplementalSemanticIds" : [ {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "https://api.eclass-cdp.com/0173-1-02-ABI503-003"
+              "value" : "file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI503%23003"
             } ],
             "type" : "ExternalReference"
           }, {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "file:///C:/__git/bosch-semantic-stack.rbs-aspect-models/src/main/resources/aspects/cli/0173-1%2302-ABI503%23003"
+              "value" : "https://api.eclass-cdp.com/0173-1-02-ABI503-003"
             } ],
             "type" : "ExternalReference"
           } ],

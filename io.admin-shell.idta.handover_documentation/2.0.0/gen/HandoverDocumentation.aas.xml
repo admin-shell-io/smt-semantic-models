@@ -156,7 +156,7 @@
                   <aas:keys>
                     <aas:key>
                       <aas:type>GlobalReference</aas:type>
-                      <aas:value>file:///C:/__git/bosch-semantic-stack.rbs-aspect-models/src/main/resources/aspects/cli/0173-1%2302-ABI500%23003/0173-1%2301-AHF579%23003</aas:value>
+                      <aas:value>file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI500%23003/0173-1%2301-AHF579%23003</aas:value>
                     </aas:key>
                   </aas:keys>
                 </aas:reference>
@@ -208,7 +208,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI501-003</aas:value>
+                          <aas:value>file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI501%23003</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -217,7 +217,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>file:///C:/__git/bosch-semantic-stack.rbs-aspect-models/src/main/resources/aspects/cli/0173-1%2302-ABI501%23003</aas:value>
+                          <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI501-003</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -439,7 +439,7 @@ Constraint: at least one classification according to VDI 2770 shall be provided.
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>file:///C:/__git/bosch-semantic-stack.rbs-aspect-models/src/main/resources/aspects/cli/0173-1%2302-ABI502%23003</aas:value>
+                          <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI502-003</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -448,7 +448,7 @@ Constraint: at least one classification according to VDI 2770 shall be provided.
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI502-003</aas:value>
+                          <aas:value>file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI502%23003</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -680,7 +680,7 @@ Note: at the time of handover, this collection shall include at least one Docume
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI503-003</aas:value>
+                          <aas:value>file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI503%23003</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -689,7 +689,7 @@ Note: at the time of handover, this collection shall include at least one Docume
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>file:///C:/__git/bosch-semantic-stack.rbs-aspect-models/src/main/resources/aspects/cli/0173-1%2302-ABI503%23003</aas:value>
+                          <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI503-003</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
