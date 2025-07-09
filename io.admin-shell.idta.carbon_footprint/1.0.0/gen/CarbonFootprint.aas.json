@@ -305,11 +305,11 @@
         "dataType" : "STRING",
         "definition" : [ {
           "language" : "en",
-          "text" : "Content type of the content of the file."
+          "text" : "Content type of the content of the file or blob."
         } ],
         "preferredName" : [ {
           "language" : "en",
-          "text" : "contentType"
+          "text" : "content type"
         } ],
         "shortName" : [ {
           "language" : "en",
@@ -318,6 +318,10 @@
       }
     } ],
     "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#contentType",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "content type"
+    } ],
     "idShort" : "contentType"
   }, {
     "modelType" : "ConceptDescription",
@@ -2057,7 +2061,7 @@
           "supplementalSemanticIds" : [ {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "-1%2302-ABG855%23003"
+              "value" : "file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABG855%23003"
             } ],
             "type" : "ExternalReference"
           } ],
@@ -2082,7 +2086,7 @@
           "supplementalSemanticIds" : [ {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "-1%2302-ABG856%23003"
+              "value" : "file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABG856%23003"
             } ],
             "type" : "ExternalReference"
           } ],
@@ -2107,7 +2111,7 @@
           "supplementalSemanticIds" : [ {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "-1%2302-ABG857%23003"
+              "value" : "file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABG857%23003"
             } ],
             "type" : "ExternalReference"
           } ],
@@ -2132,7 +2136,7 @@
           "supplementalSemanticIds" : [ {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "-1%2302-ABG858%23003"
+              "value" : "file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABG858%23003"
             } ],
             "type" : "ExternalReference"
           } ],
@@ -2216,7 +2220,24 @@
               } ],
               "type" : "ExternalReference"
             },
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/aas/3/1/Blob/contentType"
+              } ],
+              "type" : "ExternalReference"
+            }, {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/aas/3/1/File/contentType"
+              } ],
+              "type" : "ExternalReference"
+            } ],
             "valueType" : "xs:string",
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "content type"
+            } ],
             "idShort" : "contentType"
           } ]
         }, {
@@ -2230,7 +2251,7 @@
           }, {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "-1%2301-AHF575%23003"
+              "value" : "file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2301-AHF575%23003"
             } ],
             "type" : "ExternalReference"
           } ],
@@ -3214,7 +3235,7 @@
           "supplementalSemanticIds" : [ {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "-1%2302-ABG854%23003"
+              "value" : "file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABG854%23003"
             } ],
             "type" : "ExternalReference"
           } ],
