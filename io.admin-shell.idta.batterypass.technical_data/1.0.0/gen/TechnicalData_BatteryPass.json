@@ -1,0 +1,55 @@
+{
+  "technicalProperties" : {
+    "TemperatureRangeIdleState_UpperBoundary" : -19.0,
+    "originalPowerCapability" : [ {
+      "atSoC" : -3.2575986E38,
+      "powerCapabilityAt" : -1.4607971E38
+    } ],
+    "ratedEnergy" : 2.6932817E38,
+    "expectedLifetime" : -23806,
+    "ratedMaximumPower" : -1.7976931348623157E308,
+    "capacityThresholdForExhaustion" : -1.7976931348623157E308,
+    "lifetimeReferenceTest" : "ftp://ftp.is.co.za/rfc/rfc1808.txt",
+    "Mass" : -1.7976931348623157E308,
+    "Resistance" : { },
+    "ratedCapacity" : -1.815467E38,
+    "Length" : 2000.0,
+    "TemperatureRangeIdleState_LowerBoundary" : 49.0,
+    "Efficiency" : { },
+    "Capacity" : { },
+    "BatteryCategory" : "EV",
+    "Voltage" : {
+      "MaxVoltage" : 6.0,
+      "NominalVoltage" : 4.3,
+      "MinVoltage" : 2.04
+    },
+    "initialSelfDischarge" : -1.7976931348623157E308,
+    "roundtripEfficiency" : 1.0971632E38,
+    "initialInternalResistance" : [ {
+      "ohmicResistance" : -1.7976931348623157E308,
+      "batteryComponent" : "pack"
+    } ],
+    "cRate" : -3.2434262E38,
+    "cRateLifeCycleTest" : -8.619897E37,
+    "powerCapabilityRatio" : -3.3209981E38,
+    "expectedNumberOfCycles" : 7063901970676054475
+  },
+  "generalInformation" : {
+    "ManufacturerOrderCode" : "JxkyvRnL",
+    "ManufacturerLogo" : "telnet://192.0.2.16:80/",
+    "ManufacturerArticleNumber" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
+    "ManufacturerName" : "eOMtThyhVNLWUZNRcBaQKxI",
+    "ProductImages" : [ {
+      "value" : "https://example.com/SafetyInstructions.pdf",
+      "contentType" : "application/pdf"
+    } ],
+    "ManufacturerProductDesignation" : [ {
+      "en" : "Example multi language string"
+    } ]
+  },
+  "productClassifications" : [ {
+    "ProductClassificationSystem" : "ECLASS",
+    "ClassificationSystemVersion" : "9.0 (BASIC)",
+    "ProductClassId" : "27-01-88-77"
+  } ]
+}
