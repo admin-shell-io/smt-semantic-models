@@ -26,7 +26,7 @@ Contained Files:
 
 Dependencies:
 
-* urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0# 
+* urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0# 
 * urn:samm:io.admin-shell.idta.nameplate:3.0.0#  
 * urn:samm:io.admin-shell.idta.shared:3.1.0#
 
