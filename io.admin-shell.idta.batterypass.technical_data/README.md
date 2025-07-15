@@ -8,7 +8,7 @@ Namespace: urn:samm:io.admin-shell.idta.batterypass.technical_data
 
 # General
 
-The folder "gen" for each version contains sammple JSON files generated for the aspect model(s)
+The folder "gen" for each version contains sample JSON files generated for the aspect model(s)
 
 
 # Changelog
