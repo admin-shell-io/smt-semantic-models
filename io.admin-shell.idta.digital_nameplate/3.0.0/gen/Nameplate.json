@@ -1,0 +1,125 @@
+{
+  "ProductArticleNumberOfManufacturer" : [ {
+    "en" : "Example multi language string"
+  } ],
+  "uniqueFacilityIdentifier" : "987654321",
+  "ManufacturerName" : [ {
+    "en" : "Example multi language string"
+  } ],
+  "AddressInformation" : {
+    "POBox" : {
+      "en" : "Example multi language string"
+    },
+    "Company" : [ {
+      "en" : "Example multi language string"
+    } ],
+    "Email" : {
+      "EmailAddress" : "email@muster-ag.de",
+      "PublicKey" : [ {
+        "en" : "Example multi language string"
+      } ],
+      "TypeOfEmailAddress" : "0173-1%2307-AAS754%23001",
+      "TypeOfPublicKey" : {
+        "en" : "Example multi language string"
+      }
+    },
+    "NameOfContact" : {
+      "en" : "Example multi language string"
+    },
+    "ZipCode" : [ {
+      "en" : "Example multi language string"
+    } ],
+    "FirstName" : {
+      "en" : "Example multi language string"
+    },
+    "Title" : {
+      "en" : "Example multi language string"
+    },
+    "Languages" : [ "en" ],
+    "AcademicTitle" : {
+      "en" : "Example multi language string"
+    },
+    "IPCommunicationChannels" : [ {
+      "TypeOfCommunication" : "VLhpfQGTMDYpsBZxvfBoeygjb",
+      "availableTime" : [ {
+        "en" : "Example multi language string"
+      } ],
+      "AddressOfAdditionalLink" : "RYtGKbgicZaHCBRQDSx"
+    } ],
+    "RoleOfContactPerson" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
+    "TimeZone" : "-12:00",
+    "Department" : [ {
+      "en" : "Example multi language string"
+    } ],
+    "Phone" : {
+      "TelephoneNumber" : [ {
+        "en" : "Example multi language string"
+      } ],
+      "TYpeOfTelephone" : "JxkyvRnL",
+      "AvailableTime" : [ {
+        "en" : "Example multi language string"
+      } ]
+    },
+    "NationalCode" : [ {
+      "en" : "Example multi language string"
+    } ],
+    "FurtherDetailsOfContact" : {
+      "en" : "Example multi language string"
+    },
+    "AddressOfAdditionalLink" : "UMaAIKKIkknjWEXJUfPxxQHeWKEJ",
+    "Street" : [ {
+      "en" : "Example multi language string"
+    } ],
+    "StateCounty" : [ {
+      "en" : "Example multi language string"
+    } ],
+    "Fax" : {
+      "TypeOfFaxNumber" : "1",
+      "FaxNumber" : [ {
+        "en" : "Example multi language string"
+      } ]
+    },
+    "CityTown" : [ {
+      "en" : "Example multi language string"
+    } ],
+    "ZipCodeOfPOBox" : [ {
+      "en" : "Example multi language string"
+    } ],
+    "MiddleNames" : {
+      "en" : "Example multi language string"
+    }
+  },
+  "OrderCodeOfManufacturer" : "eOMtThyhVNLWUZNRcBaQKxI",
+  "CountryOfOrigin" : "dpHYZGhtgdntugzvvKAXLhM",
+  "YearOfConstruction" : "2009",
+  "Markings" : [ {
+    "MarkingName" : "0173-1%2307-DAA603%23004",
+    "IssueDate" : "2022-01-01",
+    "ExpiryDate" : "2022-01-01",
+    "designationOfCertificateOrApproval" : "KEMA99IECE X1105/128",
+    "MarkingFile" : {
+      "value" : "https://example.com/SafetyInstructions.pdf",
+      "contentType" : "application/pdf"
+    },
+    "MarkingAdditionalText" : "0044"
+  } ],
+  "ManufacturerProductType" : [ {
+    "en" : "Example multi language string"
+  } ],
+  "HardwareVersion" : "AS1",
+  "FirmwareVersion" : "FS1",
+  "ManufacturerProductFamily" : [ {
+    "en" : "Example multi language string"
+  } ],
+  "SoftwareVersion" : "SF1",
+  "ManufacturerProductRoot" : [ {
+    "en" : "Example multi language string"
+  } ],
+  "SerialNumber" : "A12345-X75EN",
+  "URIOfTheProduct" : "https://dc-qr.com/?m=R123456789",
+  "ManufacturerProductDesignation" : [ {
+    "en" : "Example multi language string"
+  } ],
+  "LogoCompany" : "telnet://192.0.2.16:80/",
+  "DateOfManufacture" : "2009-01-01"
+}

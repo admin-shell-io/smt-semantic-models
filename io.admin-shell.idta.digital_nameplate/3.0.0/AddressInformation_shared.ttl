@@ -1,0 +1,43 @@
+######################################################################
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by-nc/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
+@prefix contactInformation: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+
+
+:addressInformation a samm:Property ;
+   samm:preferredName "Addresse des Herstellers"@de ;
+   samm:preferredName "adress of the manufacturer"@en ;
+   samm:description "Adress-Information des Herstellers."@de ;
+   samm:description "Address information of the manufacturer."@en ;
+   samm:see <https://adminshell.io/zvei/nameplate/1/0/ContactInformations/AddressInformation> ;
+   samm:see <https://admin-shell.io/smt-dropin/smt-dropin-use/1/0> ;
+   samm:see <urn:irdi:0112/2///61360_7#AAS002#001> ;
+   samm:see <urn:irdi:0173-1#02-AAQ837#008/0173-1#01-ADR448#008> ;
+   samm:characteristic :AddressInformationCharacteristic .
+
+:AddressInformationCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :AdressInformation .
+
+:AdressInformation a samm:Entity ;
+   samm:description "Contains information on how to contact the manufacturer or an authorised service provider, e.g. when a maintenance service is required."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAQ837%23005> ;
+   samm:properties ( [ samm:property contactInformation:roleOfContactPerson; samm:optional true; samm:payloadName "RoleOfContactPerson" ] [ samm:property contactInformation:nationalCode; samm:payloadName "NationalCode" ] [ samm:property shared:languages; samm:optional true; samm:payloadName "Languages" ] [ samm:property contactInformation:timeZone; samm:optional true; samm:payloadName "TimeZone" ]  [ samm:property contactInformation:cityTown; samm:payloadName "CityTown" ] [ samm:property contactInformation:company; samm:optional true; samm:payloadName "Company" ]    [ samm:property contactInformation:department; samm:optional true; samm:payloadName "Department" ] [ samm:property contactInformation:phone; samm:optional true; samm:payloadName "Phone" ] [ samm:property contactInformation:fax; samm:optional true; samm:payloadName "Fax" ] [ samm:property contactInformation:email; samm:optional true; samm:payloadName "Email" ] [ samm:property contactInformation:iPCommunicationChannels; samm:optional true; samm:payloadName "IPCommunicationChannels" ]  [ samm:property contactInformation:street; samm:payloadName "Street" ] [ samm:property contactInformation:zipCode; samm:payloadName "ZipCode" ] [ samm:property contactInformation:poBox; samm:optional true; samm:payloadName "POBox" ] [ samm:property contactInformation:zipCodeOfPoBox; samm:optional true; samm:payloadName "ZipCodeOfPOBox" ]  [ samm:property contactInformation:stateCounty; samm:optional true; samm:payloadName "StateCounty" ] [ samm:property contactInformation:nameOfContact; samm:optional true; samm:payloadName "NameOfContact" ] [ samm:property contactInformation:firstName; samm:optional true; samm:payloadName "FirstName" ] [ samm:property contactInformation:middleNames; samm:optional true; samm:payloadName "MiddleNames" ] [ samm:property contactInformation:title; samm:optional true; samm:payloadName "Title" ] [ samm:property contactInformation:academicTitle; samm:optional true; samm:payloadName "AcademicTitle" ] [ samm:property contactInformation:furtherDetailsOfContact; samm:optional true; samm:payloadName "FurtherDetailsOfContact" ] [ samm:property contactInformation:addressOfAdditionalLink; samm:optional true; samm:payloadName "AddressOfAdditionalLink" ]) .
+

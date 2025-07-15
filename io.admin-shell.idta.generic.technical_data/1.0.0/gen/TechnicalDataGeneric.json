@@ -1,0 +1,22 @@
+{
+  "furtherInformation" : { },
+  "technicalProperties" : { },
+  "productClassifications" : [ {
+    "ProductClassificationSystem" : "ECLASS",
+    "ClassificationSystemVersion" : "9.0 (BASIC)",
+    "ProductClassId" : "27-01-88-77"
+  } ],
+  "generalInformation" : {
+    "ManufacturerOrderCode" : "JxkyvRnL",
+    "ManufacturerLogo" : "telnet://192.0.2.16:80/",
+    "ManufacturerArticleNumber" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
+    "ManufacturerName" : "eOMtThyhVNLWUZNRcBaQKxI",
+    "ProductImages" : [ {
+      "value" : "https://example.com/SafetyInstructions.pdf",
+      "contentType" : "application/pdf"
+    } ],
+    "ManufacturerProductDesignation" : [ {
+      "en" : "Example multi language string"
+    } ]
+  }
+}

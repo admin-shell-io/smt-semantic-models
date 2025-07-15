@@ -1,0 +1,1020 @@
+{
+  "assetAdministrationShells" : [ {
+    "modelType" : "AssetAdministrationShell",
+    "assetInformation" : {
+      "assetKind" : "Type"
+    },
+    "submodels" : [ {
+      "keys" : [ {
+        "type" : "Submodel",
+        "value" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.2.0#MaterialComposition/submodel"
+      } ],
+      "type" : "ModelReference"
+    } ],
+    "administration" : { },
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.2.0#MaterialComposition",
+    "description" : [ {
+      "language" : "en",
+      "text" : "defaultAdminShell"
+    } ],
+    "idShort" : "defaultAdminShell"
+  } ],
+  "conceptDescriptions" : [ {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Mandatory data: Battery chemistry; critical raw materials; materials used in the cathode, anode, and \nelectrolyte; hazardous substances; impact of substances on the environment and on human health or \nsafety."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "material composition"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "MaterialComposition"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.2.0#MaterialComposition",
+    "category" : "APPLICATION_CLASS",
+    "description" : [ {
+      "language" : "en",
+      "text" : "Mandatory data: Battery chemistry; critical raw materials; materials used in the cathode, anode, and \nelectrolyte; hazardous substances; impact of substances on the environment and on human health or \nsafety."
+    } ],
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "material composition"
+    } ],
+    "idShort" : "MaterialComposition"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "shortName"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "shortName"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#shortName",
+    "idShort" : "shortName"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "clearName"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "clearName"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#clearName",
+    "idShort" : "clearName"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Composition of a product in general terms by specifying the cathode and anode active material as well as electrolyte.\n\nDIN DKE Spec 99100 chapter reference: 6.5.2"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "ProductChemistry"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "batteryChemistry"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#batteryChemistry",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "ProductChemistry"
+    } ],
+    "idShort" : "batteryChemistry"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Name"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "componentName"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#componentName",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Name"
+    } ],
+    "idShort" : "componentName"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "SubstanceId"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "componentId"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#componentId",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "SubstanceId"
+    } ],
+    "idShort" : "componentId"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Battery component that relates to the material"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Location"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "batteryMaterialLocation"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#batteryMaterialLocation",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Location"
+    } ],
+    "idShort" : "batteryMaterialLocation"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "CAS Number "
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Identifier"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "batteryMaterialIdentifier"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#batteryMaterialIdentifier",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Identifier"
+    } ],
+    "idShort" : "batteryMaterialIdentifier"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Clear name of Material"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Name"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "batteryMaterialName"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#batteryMaterialName",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Name"
+    } ],
+    "idShort" : "batteryMaterialName"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Weight of component material"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Weight"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "batteryMaterialMass"
+        } ],
+        "unit" : "gram"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#batteryMaterialMass",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Weight"
+    } ],
+    "idShort" : "batteryMaterialMass"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "BOOLEAN",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The battery passport must contain information on the critical raw materials present in the battery.\n\nThe information on the critical raw materials must also be provided on the battery label.\nPer Annex VI, Part A(10), critical raw materials must be reported if present in the battery in a concentration of more than 0,1 % weight by weight. "
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "isCriticalRawMaterial"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "isCriticalRawMaterial"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#isCriticalRawMaterial",
+    "idShort" : "isCriticalRawMaterial"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "\"Component materials used\" (No. 17.a-c): Naming the materials (as a composition of substances) in cathode, anode, electrolyte according to public standards, including specification of the corresponding component (i.e., cathode, anode, or electrolyte). We suggest a reporting threshold of 0.1 % weight by weight.\n\nDIN DKE Spec 99100 chapter reference: 6.5.3-6.5.4"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "BatteryMaterials"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "batteryMaterials"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#batteryMaterials",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "BatteryMaterials"
+    } ],
+    "idShort" : "batteryMaterials"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Battery Regulation narrows reporting to substances falling under defined hazard classes and categories of the CLP regulation."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Class"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "hazardousSubstanceClass"
+        } ],
+        "valueList" : {
+          "valueReferencePairs" : [ {
+            "value" : "AcuteToxicity",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#HazardousSubstanceClassChrateristicEnum:_AcuteToxicity90bfce19"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "SkinCorrosionOrIrritation",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#HazardousSubstanceClassChrateristicEnum:_SkinCorrosionOrIrritationf87a46ce"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "EyeDamageOrIrritation",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#HazardousSubstanceClassChrateristicEnum:_EyeDamageOrIrritation3b92bbc2"
+              } ],
+              "type" : "ModelReference"
+            }
+          } ]
+        }
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceClass",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Class"
+    } ],
+    "idShort" : "hazardousSubstanceClass"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Clear name of hazardous substance"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Name"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "hazardousSubstanceName"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceName",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Name"
+    } ],
+    "idShort" : "hazardousSubstanceName"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Concentration of hazardous substance"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Concentration"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "hazardousSubstanceConcentration"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceConcentration",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Concentration"
+    } ],
+    "idShort" : "hazardousSubstanceConcentration"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Impact statements based on, e.g., REACH or GHS for all hazard classes applicable to substances in the battery."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Impact"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "hazardousSubstanceImpact"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceImpact",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Impact"
+    } ],
+    "idShort" : "hazardousSubstanceImpact"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Hazardous substances (No. 19-23): Location on a (sub-)component-level of all hazardous substances (as ?any substance that poses a threat to human health and the environment?). Suggested via a unique identifier or nomenclature."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Location"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "hazardousSubstanceLocation"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceLocation",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Location"
+    } ],
+    "idShort" : "hazardousSubstanceLocation"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "CAS identifier of hazardous substance"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Identifier"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "hazardousSubstanceIdentifier"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceIdentifier",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Identifier"
+    } ],
+    "idShort" : "hazardousSubstanceIdentifier"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "\"Hazardous substances\" (No 20.a-e): Name (agreed substance nomenclature, e.g. IUPAC or chemical name) all hazardous substance (as ?any substance that poses a threat to human health and the environment?). Suggested above 0.1 % weight by weight within each (sub-)component.\n\nDIN DKE Spec 99100 chapter reference: 6.5.4 - 6.5.6"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "HazardousSubstances"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "hazardousSubstances"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstances",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "HazardousSubstances"
+    } ],
+    "idShort" : "hazardousSubstances"
+  } ],
+  "submodels" : [ {
+    "modelType" : "Submodel",
+    "kind" : "Template",
+    "semanticId" : {
+      "keys" : [ {
+        "type" : "GlobalReference",
+        "value" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.2.0#MaterialComposition"
+      } ],
+      "type" : "ExternalReference"
+    },
+    "administration" : { },
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.2.0#MaterialComposition/submodel",
+    "description" : [ {
+      "language" : "en",
+      "text" : "Mandatory data: Battery chemistry; critical raw materials; materials used in the cathode, anode, and \nelectrolyte; hazardous substances; impact of substances on the environment and on human health or \nsafety."
+    } ],
+    "idShort" : "MaterialComposition",
+    "submodelElements" : [ {
+      "modelType" : "SubmodelElementCollection",
+      "description" : [ {
+        "language" : "en",
+        "text" : "Composition of a product in general terms by specifying the cathode and anode active material as well as electrolyte.\n\nDIN DKE Spec 99100 chapter reference: 6.5.2"
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "ProductChemistry"
+      } ],
+      "idShort" : "batteryChemistry",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#shortName"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:string",
+        "idShort" : "shortName"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#clearName"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:string",
+        "idShort" : "clearName"
+      } ]
+    }, {
+      "modelType" : "SubmodelElementList",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#BatteryMaterialList"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "description" : [ {
+        "language" : "en",
+        "text" : "\"Component materials used\" (No. 17.a-c): Naming the materials (as a composition of substances) in cathode, anode, electrolyte according to public standards, including specification of the corresponding component (i.e., cathode, anode, or electrolyte). We suggest a reporting threshold of 0.1 % weight by weight.\n\nDIN DKE Spec 99100 chapter reference: 6.5.3-6.5.4"
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "BatteryMaterials"
+      } ],
+      "idShort" : "batteryMaterials",
+      "orderRelevant" : false,
+      "typeValueListElement" : "SubmodelElementCollection",
+      "value" : [ {
+        "modelType" : "SubmodelElementCollection",
+        "description" : [ {
+          "language" : "en",
+          "text" : "\"Component materials used\" (No. 17.a-c): Naming the materials (as a composition of substances) in cathode, anode, electrolyte according to public standards, including specification of the corresponding component (i.e., cathode, anode, or electrolyte). We suggest a reporting threshold of 0.1 % weight by weight.\n\nDIN DKE Spec 99100 chapter reference: 6.5.3-6.5.4"
+        } ],
+        "displayName" : [ {
+          "language" : "en",
+          "text" : "BatteryMaterials"
+        } ],
+        "idShort" : "batteryMaterials",
+        "value" : [ {
+          "modelType" : "SubmodelElementCollection",
+          "description" : [ {
+            "language" : "en",
+            "text" : "Battery component that relates to the material"
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "Location"
+          } ],
+          "idShort" : "batteryMaterialLocation",
+          "value" : [ {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#componentName"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:string",
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "Name"
+            } ],
+            "idShort" : "componentName"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#componentId"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:string",
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "SubstanceId"
+            } ],
+            "idShort" : "componentId"
+          } ]
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#batteryMaterialIdentifier"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "Identifier"
+          } ],
+          "idShort" : "batteryMaterialIdentifier"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#batteryMaterialName"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "Name"
+          } ],
+          "idShort" : "batteryMaterialName"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#batteryMaterialMass"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:float",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "Weight"
+          } ],
+          "idShort" : "batteryMaterialMass"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#isCriticalRawMaterial"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:boolean",
+          "idShort" : "isCriticalRawMaterial"
+        } ]
+      } ]
+    }, {
+      "modelType" : "SubmodelElementList",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#HazardousSubstancesList"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "description" : [ {
+        "language" : "en",
+        "text" : "\"Hazardous substances\" (No 20.a-e): Name (agreed substance nomenclature, e.g. IUPAC or chemical name) all hazardous substance (as ?any substance that poses a threat to human health and the environment?). Suggested above 0.1 % weight by weight within each (sub-)component.\n\nDIN DKE Spec 99100 chapter reference: 6.5.4 - 6.5.6"
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "HazardousSubstances"
+      } ],
+      "idShort" : "hazardousSubstances",
+      "orderRelevant" : false,
+      "typeValueListElement" : "SubmodelElementCollection",
+      "value" : [ {
+        "modelType" : "SubmodelElementCollection",
+        "description" : [ {
+          "language" : "en",
+          "text" : "\"Hazardous substances\" (No 20.a-e): Name (agreed substance nomenclature, e.g. IUPAC or chemical name) all hazardous substance (as ?any substance that poses a threat to human health and the environment?). Suggested above 0.1 % weight by weight within each (sub-)component.\n\nDIN DKE Spec 99100 chapter reference: 6.5.4 - 6.5.6"
+        } ],
+        "displayName" : [ {
+          "language" : "en",
+          "text" : "HazardousSubstances"
+        } ],
+        "idShort" : "hazardousSubstances",
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceClass"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "Class"
+          } ],
+          "idShort" : "hazardousSubstanceClass"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceName"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "Name"
+          } ],
+          "idShort" : "hazardousSubstanceName"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceConcentration"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:double",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "Concentration"
+          } ],
+          "idShort" : "hazardousSubstanceConcentration"
+        }, {
+          "modelType" : "SubmodelElementList",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#ImpactList"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "description" : [ {
+            "language" : "en",
+            "text" : "Impact statements based on, e.g., REACH or GHS for all hazard classes applicable to substances in the battery."
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "Impact"
+          } ],
+          "idShort" : "hazardousSubstanceImpact",
+          "orderRelevant" : false,
+          "typeValueListElement" : "SubmodelElementCollection",
+          "value" : [ {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceImpact"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:string",
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "Impact"
+            } ],
+            "idShort" : "hazardousSubstanceImpact"
+          } ]
+        }, {
+          "modelType" : "SubmodelElementCollection",
+          "description" : [ {
+            "language" : "en",
+            "text" : "Hazardous substances (No. 19-23): Location on a (sub-)component-level of all hazardous substances (as ?any substance that poses a threat to human health and the environment?). Suggested via a unique identifier or nomenclature."
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "Location"
+          } ],
+          "idShort" : "hazardousSubstanceLocation",
+          "value" : [ {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#componentName"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:string",
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "Name"
+            } ],
+            "idShort" : "componentName"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#componentId"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:string",
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "SubstanceId"
+            } ],
+            "idShort" : "componentId"
+          } ]
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceIdentifier"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://www.cas.org/cas-data/cas-registry"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:string",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "Identifier"
+          } ],
+          "idShort" : "hazardousSubstanceIdentifier"
+        } ]
+      } ]
+    } ]
+  } ]
+}

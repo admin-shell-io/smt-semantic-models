@@ -1,0 +1,959 @@
+{
+  "assetAdministrationShells" : [ {
+    "modelType" : "AssetAdministrationShell",
+    "assetInformation" : {
+      "assetKind" : "Type"
+    },
+    "submodels" : [ {
+      "keys" : [ {
+        "type" : "Submodel",
+        "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ValueOnlyExampleAspect/submodel"
+      } ],
+      "type" : "ModelReference"
+    } ],
+    "administration" : { },
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ValueOnlyExampleAspect",
+    "description" : [ {
+      "language" : "en",
+      "text" : "defaultAdminShell"
+    } ],
+    "idShort" : "defaultAdminShell"
+  } ],
+  "conceptDescriptions" : [ {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Example Aspect with characteristics for Value-Only serialization of Submodel Elements."
+        }, {
+          "language" : "de",
+          "text" : "Beispiel-Aspekt, der Charakteristiken für Submodel-Elemente testet."
+        } ],
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "Value-Only Beispiele"
+        }, {
+          "language" : "en",
+          "text" : "Value-Only Examples"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "ValueOnlyExampleAspect"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ValueOnlyExampleAspect",
+    "category" : "APPLICATION_CLASS",
+    "description" : [ {
+      "language" : "en",
+      "text" : "Example Aspect with characteristics for Value-Only serialization of Submodel Elements."
+    }, {
+      "language" : "de",
+      "text" : "Beispiel-Aspekt, der Charakteristiken für Submodel-Elemente testet."
+    } ],
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "Value-Only Beispiele"
+    }, {
+      "language" : "en",
+      "text" : "Value-Only Examples"
+    } ],
+    "idShort" : "ValueOnlyExampleAspect"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "multi language text"
+        }, {
+          "language" : "en",
+          "text" : "mehrsprachiger Text"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "valueOnly4MultiLanguageProperty"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4MultiLanguageProperty",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "multi language text"
+    }, {
+      "language" : "en",
+      "text" : "mehrsprachiger Text"
+    } ],
+    "idShort" : "valueOnly4MultiLanguageProperty"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Path and name of the file (with file extension).\n\nThe path can be absolute or relative."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "resourceValue"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "resourceValue"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#resourceValue",
+    "idShort" : "resourceValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Content type of the content of the file."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "contentType"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "contentType"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#contentType",
+    "idShort" : "contentType"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Digital copy of this document"
+        }, {
+          "language" : "de",
+          "text" : "Digital Kopie dieses Dokuments"
+        } ],
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "digitale Datei"
+        }, {
+          "language" : "en",
+          "text" : "digital file"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "valueOnly4File"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4File",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "digitale Datei"
+    }, {
+      "language" : "en",
+      "text" : "digital file"
+    } ],
+    "idShort" : "valueOnly4File"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "key"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "key"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#key",
+    "idShort" : "key"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "keyValue"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "keyValue"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keyValue",
+    "idShort" : "keyValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "keys"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "keys"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keys",
+    "idShort" : "keys"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "type"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "type"
+        } ],
+        "valueList" : {
+          "valueReferencePairs" : [ {
+            "value" : "ModelReference",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyReferenceTypesEnum:_ModelReferencec39fcf3b"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "ExternalReference",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyReferenceTypesEnum:_ExternalReferencedf5750a7"
+              } ],
+              "type" : "ModelReference"
+            }
+          } ]
+        }
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#type",
+    "idShort" : "type"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Reference conformant to AAS."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Reference"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "valueOnly4Reference"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4Reference",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Reference"
+    } ],
+    "idShort" : "valueOnly4Reference"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The unique ID of the (external) subject the specific asset ID value belongs to or has meaning to."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "external subject ID"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "externalSubjectId"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#externalSubjectId",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "external subject ID"
+    } ],
+    "idShort" : "externalSubjectId"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The value of the specific asset identifier with the corresponding name."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "value"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "specificAssetIdValue"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#specificAssetIdValue",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "value"
+    } ],
+    "idShort" : "specificAssetIdValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Name of the asset identifier."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "name"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "specificAssetIdName"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#specificAssetIdName",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "name"
+    } ],
+    "idShort" : "specificAssetIdName"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "specific asset ID"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "specificAssetIds"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#specificAssetIds",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "specific asset ID"
+    } ],
+    "idShort" : "specificAssetIds"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Globally unique identifier of an asset."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "global asset ID"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "globalAssetId"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#globalAssetId",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "global asset ID"
+    } ],
+    "idShort" : "globalAssetId"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "entity type"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "entityType"
+        } ],
+        "valueList" : {
+          "valueReferencePairs" : [ {
+            "value" : "SelfManagedEntity",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#EntityType:_SelfManagedEntity3d75be6a"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "CoManagedEntity",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#EntityType:_CoManagedEntity6ad452f3"
+              } ],
+              "type" : "ModelReference"
+            }
+          } ]
+        }
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#entityType",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "entity type"
+    } ],
+    "idShort" : "entityType"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "example4Entity"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "example4Entity"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#example4Entity",
+    "idShort" : "example4Entity"
+  } ],
+  "submodels" : [ {
+    "modelType" : "Submodel",
+    "kind" : "Template",
+    "semanticId" : {
+      "keys" : [ {
+        "type" : "GlobalReference",
+        "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ValueOnlyExampleAspect"
+      } ],
+      "type" : "ExternalReference"
+    },
+    "administration" : { },
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ValueOnlyExampleAspect/submodel",
+    "description" : [ {
+      "language" : "en",
+      "text" : "Example Aspect with characteristics for Value-Only serialization of Submodel Elements."
+    }, {
+      "language" : "de",
+      "text" : "Beispiel-Aspekt, der Charakteristiken für Submodel-Elemente testet."
+    } ],
+    "idShort" : "ValueOnlyExampleAspect",
+    "submodelElements" : [ {
+      "modelType" : "MultiLanguageProperty",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4MultiLanguageProperty"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "supplementalSemanticIds" : [ {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "0173-1#02-ABJ219#002"
+        } ],
+        "type" : "ExternalReference"
+      } ],
+      "displayName" : [ {
+        "language" : "de",
+        "text" : "multi language text"
+      }, {
+        "language" : "en",
+        "text" : "mehrsprachiger Text"
+      } ],
+      "idShort" : "valueOnly4MultiLanguageProperty"
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "supplementalSemanticIds" : [ {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/aas/3/1/File"
+        } ],
+        "type" : "ExternalReference"
+      } ],
+      "description" : [ {
+        "language" : "en",
+        "text" : "Digital copy of this document"
+      }, {
+        "language" : "de",
+        "text" : "Digital Kopie dieses Dokuments"
+      } ],
+      "displayName" : [ {
+        "language" : "de",
+        "text" : "digitale Datei"
+      }, {
+        "language" : "en",
+        "text" : "digital file"
+      } ],
+      "idShort" : "valueOnly4File",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#resourceValue"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:anyURI",
+        "idShort" : "resourceValue"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#contentType"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:string",
+        "idShort" : "contentType"
+      } ]
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "description" : [ {
+        "language" : "en",
+        "text" : "Reference conformant to AAS."
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "Reference"
+      } ],
+      "idShort" : "valueOnly4Reference",
+      "value" : [ {
+        "modelType" : "SubmodelElementList",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SetOfKeys"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "idShort" : "keys",
+        "orderRelevant" : false,
+        "typeValueListElement" : "SubmodelElementCollection",
+        "value" : [ {
+          "modelType" : "SubmodelElementCollection",
+          "idShort" : "keys",
+          "value" : [ {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#key"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:string",
+            "idShort" : "key"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keyValue"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:string",
+            "idShort" : "keyValue"
+          } ]
+        } ]
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#type"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:string",
+        "idShort" : "type"
+      } ]
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "supplementalSemanticIds" : [ {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/aas/3/1/Entity"
+        } ],
+        "type" : "ExternalReference"
+      } ],
+      "idShort" : "example4Entity",
+      "value" : [ {
+        "modelType" : "SubmodelElementList",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SpecificAssetIdSet"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "supplementalSemanticIds" : [ {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/aas/3/1/SpecificAssetId"
+          } ],
+          "type" : "ExternalReference"
+        } ],
+        "displayName" : [ {
+          "language" : "en",
+          "text" : "specific asset ID"
+        } ],
+        "idShort" : "specificAssetIds",
+        "orderRelevant" : false,
+        "typeValueListElement" : "SubmodelElementCollection",
+        "value" : [ {
+          "modelType" : "SubmodelElementCollection",
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/aas/3/1/SpecificAssetId"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "specific asset ID"
+          } ],
+          "idShort" : "specificAssetIds",
+          "value" : [ {
+            "modelType" : "SubmodelElementCollection",
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/aas/3/1/SpecificAssetId/externalSubjectId"
+              } ],
+              "type" : "ExternalReference"
+            } ],
+            "description" : [ {
+              "language" : "en",
+              "text" : "The unique ID of the (external) subject the specific asset ID value belongs to or has meaning to."
+            } ],
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "external subject ID"
+            } ],
+            "idShort" : "externalSubjectId",
+            "value" : [ {
+              "modelType" : "SubmodelElementList",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SetOfKeys"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "idShort" : "keys",
+              "orderRelevant" : false,
+              "typeValueListElement" : "SubmodelElementCollection",
+              "value" : [ {
+                "modelType" : "SubmodelElementCollection",
+                "idShort" : "keys",
+                "value" : [ {
+                  "modelType" : "Property",
+                  "semanticId" : {
+                    "keys" : [ {
+                      "type" : "GlobalReference",
+                      "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#key"
+                    } ],
+                    "type" : "ExternalReference"
+                  },
+                  "valueType" : "xs:string",
+                  "idShort" : "key"
+                }, {
+                  "modelType" : "Property",
+                  "semanticId" : {
+                    "keys" : [ {
+                      "type" : "GlobalReference",
+                      "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keyValue"
+                    } ],
+                    "type" : "ExternalReference"
+                  },
+                  "valueType" : "xs:string",
+                  "idShort" : "keyValue"
+                } ]
+              } ]
+            }, {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#type"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "valueType" : "xs:string",
+              "idShort" : "type"
+            } ]
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#specificAssetIdValue"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/aas/3/1/SpecificAssetId/value"
+              } ],
+              "type" : "ExternalReference"
+            } ],
+            "valueType" : "xs:string",
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "value"
+            } ],
+            "idShort" : "specificAssetIdValue"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#specificAssetIdName"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/aas/3/1/SpecificAssetId/name"
+              } ],
+              "type" : "ExternalReference"
+            } ],
+            "valueType" : "xs:string",
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "name"
+            } ],
+            "idShort" : "specificAssetIdName"
+          } ]
+        } ]
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#globalAssetId"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "supplementalSemanticIds" : [ {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/aas/3/1/Entity/globalAssetId"
+          } ],
+          "type" : "ExternalReference"
+        } ],
+        "valueType" : "xs:string",
+        "displayName" : [ {
+          "language" : "en",
+          "text" : "global asset ID"
+        } ],
+        "idShort" : "globalAssetId"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#entityType"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "supplementalSemanticIds" : [ {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/aas/3/1/Entity/entityType"
+          } ],
+          "type" : "ExternalReference"
+        } ],
+        "valueType" : "xs:string",
+        "displayName" : [ {
+          "language" : "en",
+          "text" : "entity type"
+        } ],
+        "idShort" : "entityType"
+      } ]
+    } ]
+  } ]
+}

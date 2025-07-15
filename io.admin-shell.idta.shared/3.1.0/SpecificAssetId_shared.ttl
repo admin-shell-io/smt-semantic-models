@@ -1,0 +1,37 @@
+
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+
+:externalSubjectId a samm:Property ;
+   samm:preferredName "external subject ID"@en ;
+   samm:description "The unique ID of the (external) subject the specific asset ID value belongs to or has meaning to."@en ;
+   samm:see <https://admin-shell.io/aas/3/1/SpecificAssetId/externalSubjectId> ;
+   samm:characteristic :ReferenceType .
+
+:specificAssetIdName a samm:Property ;
+   samm:preferredName "name"@en ;
+   samm:description "Name of the asset identifier."@en ;
+   samm:see <https://admin-shell.io/aas/3/1/SpecificAssetId/name> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "SerialNumber" .
+
+:SpecificAssetId a samm:Entity ;
+   samm:preferredName "specific asset ID"@en ;
+   samm:description "A specific asset ID describes a generic supplementary identifying attribute of the asset. The specific asset ID is not necessarily globally unique."@en ;
+   samm:see <https://admin-shell.io/aas/3/1/SpecificAssetId> ;
+   samm:properties ( [ samm:property :externalSubjectId; samm:optional true ] [ samm:property :specificAssetIdValue; samm:payloadName "value" ] [ samm:property :specificAssetIdName; samm:payloadName "name" ] ) .
+
+:specificAssetIdValue a samm:Property ;
+   samm:preferredName "value"@en ;
+   samm:description "The value of the specific asset identifier with the corresponding name."@en ;
+   samm:see <https://admin-shell.io/aas/3/1/SpecificAssetId/value> ;
+   samm:characteristic samm-c:Text .
+

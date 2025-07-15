@@ -1,0 +1,65 @@
+######################################################################
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by-nc/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+
+:GeneralInformationEntity a samm:Entity ;
+   samm:see <https://admin-shell.io/ZVEI/TechnicalData/GeneralInformation/1/1> ;
+   samm:properties ( [ samm:property :manufacturerName; samm:payloadName "ManufacturerName" ] [ samm:property :manufacturerLogo; samm:optional true; samm:payloadName "ManufacturerLogo" ] [ samm:property :manufacturerProductDesignation; samm:payloadName "ManufacturerProductDesignation" ] [ samm:property :manufacturerArticleNumber; samm:payloadName "ManufacturerArticleNumber" ]  [ samm:property :manufacturerOrderCode; samm:payloadName "ManufacturerOrderCode" ] [ samm:property :productImages; samm:optional true; samm:payloadName "ProductImages" ] ) .
+   
+:manufacturerName a samm:Property ;
+   samm:preferredName "manufacturer name"@en ;
+   samm:preferredName "Herstellername"@de ;
+   samm:description "Legally valid designation of the natural or judicial person which is directly responsible for the design, production, packaging and labeling of a product in respect to its being brought into circulation."@en ;
+   samm:description "Name des Herstellers."@de ;
+   samm:see <urn:irdi:0173-1%2302-AAO677%23002> ;
+   samm:characteristic samm-c:Text .
+   
+:manufacturerLogo a samm:Property ;
+   samm:preferredName "Firmenlogo"@de ;
+   samm:preferredName "company logo"@en ;
+   samm:description "Das Firmenlogo des Produkts."@de ;
+   samm:description "A graphic mark used to represent a company, an organisation or a product."@en ;
+   samm:see <https://admin-shell.io/ZVEI/TechnicalData/ManufacturerLogo/1/1> ;
+   samm:characteristic samm-c:ResourcePath .
+   
+:manufacturerProductDesignation a samm:Property ;
+   samm:preferredName "Produktbezeichnung"@de ;
+   samm:preferredName "manufacturer product designation"@en ;
+   samm:description "Short description of the product (short text), third or lowest level of a 3 level manufacturer specific product hierarchy."@en ;
+   samm:description "Bezeichnung des Produkts."@de ;
+   samm:see <urn:irdi:0173-1%2302-AAW338%23001> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:manufacturerArticleNumber a samm:Property ;
+   samm:preferredName "Artikelnummer des Produkts"@de ;
+   samm:preferredName "article number of the product"@en ;
+   samm:description "Unique product identifier of the manufacturer Note: The manufacturer article number is represented as a string, although often a numerical ID."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAO676%23003> ;
+   samm:characteristic samm-c:Text .
+
+:manufacturerOrderCode a samm:Property ;
+   samm:preferredName "Bestellcode des Produkts"@de ;
+   samm:preferredName "order code for the product"@en ;
+   samm:description "Eindeutige Zahlen- und Buchstabenkombination um das Produkt eindeutig für die Bestellung zu identifizieren."@de ;
+   samm:description "Unique combination of numbers and letters used to identify the device for ordering."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAO227%23002> ;
+   samm:characteristic samm-c:Text .
+   
+

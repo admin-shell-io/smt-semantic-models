@@ -1,0 +1,54 @@
+######################################################################
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by-nc/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.carbon_footprint.pact:1.0.0#> .
+@prefix pcf: <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#> .
+@prefix cx: <urn:samm:io.catenax.pcf:7.0.0#> .
+@prefix ext-shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix contact: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
+@prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+
+  
+:ProductOrSectorSpecificCarbonFootprintEntity a samm:Entity ;
+   samm:preferredName "product or sector specific carbon footprint"@en ;
+   samm:description "Product Carbon Footprint, which is determined in accordance with sector or product group-specific rules or guidelines and covers the life cycle or parts of a product life cycle."@en ;
+   samm:see <https://admin-shell.io/idta/CarbonFootprint/ProductOrSectorSpecificCarbonFootprint/1/0> ;
+   samm:properties ( [ samm:property pcf:productOrSectorSpecificPcfCalculationMethods; samm:payloadName "PcfCalculationMethods" ] [ samm:property pcf:productOrSectorSpecificRule; samm:payloadName "ProductOrSectorSpecificRule" ] [ samm:property pcf:externalPcfApi; samm:optional true; samm:payloadName "ExternalPcfApi" ] [ samm:property :productOrSectorSpecificPcfInformation; samm:optional true; samm:payloadName "PcfInformation" ] ) .
+   
+
+:productOrSectorSpecificPcfInformation a samm:Property ;
+   samm:preferredName "PCF information"@en ;
+   samm:preferredName "PCF-Information"@de ;
+   samm:description "A section in which further content is listed according to the calculation method for the Product Carbon Footprint."@en ;
+   samm:description "Ein Abschnitt, in dem weitere Inhalte entsprechend der Berechnungsmethode zum Product Carbon Footprint aufgeführt werden."@de ;
+   samm:see <https://admin-shell.io/idta/CarbonFootprint/PcfInformation/1/0> ;
+  samm:characteristic :ProductOrSectorSpecificPcfInformationCharacteristic .
+
+:ProductOrSectorSpecificPcfInformationCharacteristic a samm-c:SingleEntity ;
+   samm:dataType  :PactEntity .
+   
+:productOrSectorSpecificCarbonFootprints a samm:Property ;
+   samm:preferredName "product or sector specific carbon footprints"@en ;
+   samm:description "Product carbon footprints, which are determined in accordance with sector or product group-specific rules or guidelines and cover the life cycle or parts of a product life cycle."@en ;
+   samm:see <https://admin-shell.io/idta/CarbonFootprint/ProductOrSectorSpecificCarbonFootprint/1/0> ;
+   samm:characteristic :ProductOrSectorSpecificCarbonFootprintSet .
+
+:ProductCarbonFootprintSet a samm-c:Set ;
+   samm:dataType pcf:ProductCarbonFootprintEntity .
+
+:ProductOrSectorSpecificCarbonFootprintSet a samm-c:Set ;
+   samm:dataType :ProductOrSectorSpecificCarbonFootprintEntity .

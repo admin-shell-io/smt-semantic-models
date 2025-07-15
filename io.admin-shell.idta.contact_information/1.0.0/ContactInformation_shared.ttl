@@ -1,0 +1,285 @@
+######################################################################
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by-nc/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+
+
+
+:ContactInformation a samm:Entity ;
+   samm:description "Contains information on how to contact the manufacturer or an authorised service provider, e.g. when a maintenance service is required."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAQ837%23005> ;
+   samm:properties ( [ samm:property :roleOfContactPerson; samm:optional true; samm:payloadName "RoleOfContactPerson" ] [ samm:property :nationalCode; samm:optional true; samm:payloadName "NationalCode" ] [ samm:property shared:languages; samm:optional true; samm:payloadName "Languages" ] [ samm:property :timeZone; samm:optional true; samm:payloadName "TimeZone" ]  [ samm:property :cityTown; samm:optional true; samm:payloadName "CityTown" ] [ samm:property :company; samm:optional true; samm:payloadName "Company" ]    [ samm:property :department; samm:optional true; samm:payloadName "Department" ] [ samm:property :phone; samm:optional true; samm:payloadName "Phone" ] [ samm:property :fax; samm:optional true; samm:payloadName "Fax" ] [ samm:property :email; samm:optional true; samm:payloadName "Email" ] [ samm:property :iPCommunicationChannels; samm:optional true; samm:payloadName "IPCommunicationChannels" ]  [ samm:property :street; samm:optional true; samm:payloadName "Street" ] [ samm:property :zipCode; samm:optional true; samm:payloadName "ZipCode" ] [ samm:property :poBox; samm:optional true; samm:payloadName "POBox" ] [ samm:property :zipCodeOfPoBox; samm:optional true; samm:payloadName "ZipCodeOfPOBox" ]  [ samm:property :stateCounty; samm:optional true; samm:payloadName "StateCounty" ] [ samm:property :nameOfContact; samm:optional true; samm:payloadName "NameOfContact" ] [ samm:property :firstName; samm:optional true; samm:payloadName "FirstName" ] [ samm:property :middleNames; samm:optional true; samm:payloadName "MiddleNames" ] [ samm:property :title; samm:optional true; samm:payloadName "Title" ] [ samm:property :academicTitle; samm:optional true; samm:payloadName "AcademicTitle" ] [ samm:property :furtherDetailsOfContact; samm:optional true; samm:payloadName "FurtherDetailsOfContact" ] [ samm:property :addressOfAdditionalLink; samm:optional true; samm:payloadName "AddressOfAdditionalLink" ]) .
+
+
+:typeOfCommunication a samm:Property ;
+   samm:preferredName "type of communication"@en ;
+   samm:description "Characterization of an IP-based communication channel."@en ;
+   samm:see <https://admin-shell.io/zvei/nameplate/1/0/ContactInformations/ContactInformation/IPCommunication/TypeOfCommunication> ;
+   samm:characteristic samm-c:Text .
+
+:PhoneEntity a samm:Entity ;
+   samm:description "Phone number including type."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAQ833%23005> ;
+   samm:properties ( [ samm:property :telephoneNumber; samm:payloadName "TelephoneNumber" ] [ samm:property :typeOfTelephone; samm:optional true; samm:payloadName "TYpeOfTelephone" ] [ samm:property :availableTime; samm:optional true; samm:payloadName "AvailableTime" ] ) .
+
+:addressOfAdditionalLink a samm:Property ;
+   samm:preferredName "address of additional link"@en ;
+   samm:description "Web site address where information about the product or contact is given."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAQ326%23002> ;
+   samm:characteristic samm-c:Text .
+
+:addressOfAdditionalLinkOfIpCommunicationChannel a samm:Property ;
+   samm:preferredName "address of additional link"@en ;
+   samm:description "Web site address where information about the product or contact is given."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAQ326%23002> ;
+   samm:characteristic samm-c:Text .
+
+:timeZone a samm:Property ;
+   samm:preferredName "time zone"@en ;
+   samm:description "Offsets from Coordinated Universal Time (UTC)\nNote: notation accord. to ISO 8601\nNote: for time in UTC the zone designator “Z” is to be used."@en ;
+   samm:characteristic samm-c:Text ;
+   samm:see <https://admin-shell.io/zvei/nameplate/1/0/ContactInformations/ContactInformation/TimeZone> ;
+   samm:exampleValue "-12:00" .
+
+:PhoneCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :PhoneEntity .
+
+:company a samm:Property ;
+   samm:preferredName "company"@en ;
+   samm:description "Name of the company."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAW001%23001> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:zipCode a samm:Property ;
+   samm:preferredName "ZIP code"@en ;
+   samm:description "ZIP code of address."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAO129%23002> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:poBox a samm:Property ;
+   samm:preferredName "P.O. box"@en ;
+   samm:description "P.O. box number."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAO130%23002> ;
+   samm:characteristic samm-c:MultiLanguageText .
+
+:contactInformation a samm:Property ;
+   samm:preferredName "Kontaktinformationen des Herstellers"@de ;
+   samm:preferredName "the contact information of the manufacturer"@en ;
+   samm:description "Adress-Information des Herstellers."@de ;
+   samm:description "Address information of the manufacturer."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAQ832%23005> ;
+   samm:characteristic :ContactInformationCharacteristic .
+
+:EmailCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :EmailEntity .
+
+:IpCommunicationChannelSet a samm-c:Set ;
+   samm:dataType :IpCommunicationChannelEntity .
+
+:ContactInformationCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :ContactInformation .
+
+:availableTime a samm:Property ;
+   samm:preferredName "available time"@en ;
+   samm:description "Specification of the available time window."@en ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:roleOfContactPerson a samm:Property ;
+   samm:preferredName "Rolle der Kontaktperson"@de ;
+   samm:preferredName "role of contact person"@en ;
+   samm:description "Function of a contact person in a process\nenumeration: 0173-1%2307-AAS927%23001 (administrativ contact), 0173-1%2307-AAS928%23001 (commercial contact), 0173-1%2307-AAS929%23001 (other contact), 0173-1%2307-AAS930%23001 (hazardous goods contact), 0173-1%2307-AAS931%23001 (technical contact)\nNote: the above mentioned ECLASS enumeration should be declared as “open” for further addition."@en ;
+   samm:characteristic samm-c:Text .
+
+:firstName a samm:Property ;
+   samm:preferredName "first name"@en ;
+   samm:description "First name of a contact person."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAO206%23002> ;
+   samm:characteristic samm-c:MultiLanguageText .
+
+:zipCodeOfPoBox a samm:Property ;
+   samm:preferredName "Postleitzahl"@de ;
+   samm:preferredName "ZIP code"@en ;
+   samm:description "ZIP code of address."@en ;
+   samm:description "Postleitzahl."@de ;
+   samm:see <urn:irdi:0173-1%2302-AAO129%23002> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:faxNumber a samm:Property ;
+   samm:preferredName "fax number"@en ;
+   samm:description "Complete telephone number to be called to reach a business partner's fax machine."@en ;
+   samm:see <urn:idi:0173-1%2302-AAO195%23002> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:stateCounty a samm:Property ;
+   samm:preferredName "state/county"@en ;
+   samm:preferredName "Bundesland/Region"@de ;
+   samm:description "Federal state, a part of a state."@en ;
+   samm:description "Bundesland/Region"@de ;
+   samm:see <urn:irdi:0173-1%2302-AAO133%23002> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:fax a samm:Property ;
+   samm:preferredName "Fax"@de ;
+   samm:preferredName "fax"@en ;
+   samm:see <urn:irdi:0173-1%2302-AAQ834%23005> ;
+   samm:characteristic :FaxCharacteristic .
+
+:FaxEntity a samm:Entity ;
+   samm:properties ( [ samm:property :faxNumber; samm:payloadName "FaxNumber" ] [ samm:property :typeOfFaxNumber; samm:optional true; samm:payloadName "TypeOfFaxNumber" ] ) .
+
+:department a samm:Property ;
+   samm:preferredName "department"@en ;
+   samm:description "Administrative section within an organisation where a business partner is located."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAO127%23003> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+
+:phone a samm:Property ;
+   samm:description "Phone number including type."@en ;
+   samm:characteristic :PhoneCharacteristic .
+
+:emailAddress a samm:Property ;
+   samm:preferredName "email address"@en ;
+   samm:description "Electronic mail address of a business partner."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAO198%23002> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "email@muster-ag.de" .
+
+:cityTown a samm:Property ;
+   samm:preferredName "City"@en ;
+   samm:preferredName "Ort"@de ;
+   samm:description "Town or city."@en ;
+   samm:description "Ort."@de ;
+   samm:see <urn:irdi:0173-1%2302-AAO132%23002> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:furtherDetailsOfContact a samm:Property ;
+   samm:description "Additional information of the contact person."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAO210%23002> ;
+   samm:characteristic samm-c:MultiLanguageText .
+
+:availableTimeIpCommunicationChannel a samm:Property ;
+   samm:preferredName "available time"@en ;
+   samm:description "Specification of the available time windows."@en ;
+   samm:see <https://admin-shell.io/zvei/nameplate/1/0/ContactInformations/ContactInformation/AvailableTime/> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:EmailEntity a samm:Entity ;
+   samm:description "E-mail address and encryption method."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAQ836%23005> ;
+   samm:properties ( [ samm:property :emailAddress; samm:payloadName "EmailAddress" ] [ samm:property :publicKey; samm:optional true; samm:payloadName "PublicKey" ] [ samm:property :typeOfEmailAddress; samm:optional true; samm:payloadName "TypeOfEmailAddress" ] [ samm:property :typeOfPublicKey; samm:optional true; samm:payloadName "TypeOfPublicKey" ] ) .
+
+:email a samm:Property ;
+   samm:preferredName "Email"@de ;
+   samm:preferredName "email"@en ;
+   samm:description "E-mail address and encryption method."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAQ836%23005> ;
+   samm:characteristic :EmailCharacteristic .
+
+:typeOfPublicKey a samm:Property ;
+   samm:preferredName "type of public key"@en ;
+   samm:description "Characterization of a public key according to its encryption process."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAO201%23002> ;
+   samm:characteristic samm-c:MultiLanguageText .
+
+:typeOfTelephone a samm:Property ;
+   samm:description "Characterization of a telephone according to its location or usage.\nenumeration: 0173-1%2307-AAS754%23001 (office), 0173-1%2307-AAS755%23001 (office mobile), 0173-1%2307-AAS756%23001 (secretary), 0173-1%2307-AAS757%23001 (substitute), 0173-1%2307-AAS758%23001 (home), 0173-1%2307-AAS759%23001 (private mobile)."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAO137%23003> ;
+   samm:characteristic samm-c:Text .
+
+:nameOfContact a samm:Property ;
+   samm:preferredName "name of contact"@en ;
+   samm:characteristic samm-c:MultiLanguageText .
+
+:telephoneNumber a samm:Property ;
+   samm:preferredName "Telefonnummer"@de ;
+   samm:preferredName "telephone number"@en ;
+   samm:description "Complete telephone number to be called to reach a business partner."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAO136%23002> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:FaxCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :FaxEntity .
+
+:publicKey a samm:Property ;
+   samm:preferredName "public key"@en ;
+   samm:description "Public part of an unsymmetrical key pair to sign or encrypt text or messages."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAO200%23002> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:iPCommunicationChannels a samm:Property ;
+   samm:preferredName "IP communication channel"@en ;
+   samm:description "IP-based communication channels, e.g. chat or video call."@en ;
+   samm:see <https://admin-shell.io/zvei/nameplate/1/0/ContactInformations/ContactInformation/IPCommunication> ;
+   samm:characteristic :IpCommunicationChannelSet .
+
+:title a samm:Property ;
+   samm:preferredName "title"@en ;
+   samm:description "Common, formal, religious, or other title preceding a contact person's name."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAO208%23003> ;
+   samm:characteristic samm-c:MultiLanguageText .
+
+:IpCommunicationChannelEntity a samm:Entity ;
+   samm:preferredName "IP Communication Channel"@en ;
+   samm:description "IP-based communication channels, e.g. chat or video call."@en ;
+   samm:properties ( [ samm:property :addressOfAdditionalLinkOfIpCommunicationChannel; samm:payloadName "AddressOfAdditionalLink" ] [ samm:property :typeOfCommunication; samm:optional true; samm:payloadName "TypeOfCommunication" ] [ samm:property :availableTimeIpCommunicationChannel; samm:optional true; samm:payloadName "availableTime" ] ) .
+
+:middleNames a samm:Property ;
+   samm:preferredName "middle names"@en ;
+   samm:description "Middle names of contact person."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAO207%23002> ;
+   samm:characteristic samm-c:MultiLanguageText .
+
+:nationalCode a samm:Property ;
+   samm:preferredName "Länderkürzel"@de ;
+   samm:preferredName "National code"@en ;
+   samm:description "Code of a country (Country codes defined accord. to DIN EN ISO 3166-1)."@en ;
+   samm:description "Länderkürzel."@de ;
+   samm:see <urn:irdi:0173-1%2302-AAO134%23002> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:typeOfFaxNumber a samm:Property ;
+   samm:preferredName "type of fax number"@en ;
+   samm:description "Characterization of the fax according its location or usage\nenumeration: 0173-1%2307-AAS754%23001 (office), 0173-1%2307-AAS756%23001 (secretary), 0173-1%2307-AAS758%23001 (home)."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAO196%23003> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "1" .
+
+:typeOfEmailAddress a samm:Property ;
+   samm:preferredName "type of email address"@en ;
+   samm:description "Characterization of an e-mail address according to its location or usage\nenumeration: 0173-1%2307-AAS754%23001 (office), 0173-1%2307-AAS756%23001 (secretary), 0173-1%2307-AAS757%23001 (substitute), 0173-1%2307-AAS758%23001 (home)."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAO199%23003> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "0173-1%2307-AAS754%23001" .
+
+:street a samm:Property ;
+   samm:preferredName "street"@en ;
+   samm:preferredName "Straße"@de ;
+   samm:description "Street name and house number."@en ;
+   samm:description "Straße und Nummer."@de ;
+   samm:see <urn:irdi:0173-1%2302-AAO128%23002> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:academicTitle a samm:Property ;
+   samm:preferredName "academic title"@en ;
+   samm:description "Academic title preceding a contact person's name."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAO209%23003> ;
+   samm:characteristic samm-c:MultiLanguageText .
+

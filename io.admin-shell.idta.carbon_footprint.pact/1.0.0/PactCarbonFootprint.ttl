@@ -1,0 +1,34 @@
+######################################################################
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by-nc/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.carbon_footprint.pact:1.0.0#> .
+@prefix pcf: <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#> .
+@prefix cx: <urn:samm:io.catenax.pcf:7.0.0#> .
+@prefix ext-shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix contact: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
+@prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+
+:PactCarbonFootprint a samm:Aspect ;
+   samm:preferredName "Carbon Footprint"@en ;
+   samm:preferredName "C02 Footprint"@de ;
+   samm:description "Provides the means to access the Carbon Footprint of the asset."@en ;
+   samm:see <https://admin-shell.io/idta/SubmodelTemplate/CarbonFootprint/1/0> ;
+   samm:see <https://admin-shell.io/idta/SubmodelTemplate/CarbonFootprint/1/0> ;
+   samm:see <https://admin-shell.io/IDTA-02023-1-0> ;
+   samm:properties ( [ samm:property pcf:productCarbonFootprints; samm:payloadName "ProductCarbonFootprints" ] [ samm:property :productOrSectorSpecificCarbonFootprints; samm:optional true; samm:payloadName "ProductOrSectorSpecificCarbonFootprints" ] ) ;
+   samm:operations ( ) ;
+   samm:events ( ) .

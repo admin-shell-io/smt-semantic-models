@@ -1,0 +1,292 @@
+######################################################################
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by-nc/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+
+:HandoverDocumentation a samm:Aspect ;
+   samm:preferredName "handover documentation"@en ;
+   samm:preferredName "Übergabe-Dokumentation"@de ;
+   samm:description "Handover Documentation defines a set meta data for the handover of documentation from the manufacturer to the operator for industrial equipment."@en ;
+   samm:description "Enthält alle wichtigen Dokumente für den Kunden."@de ;
+   samm:see <urn:irdi:0173-1%2301-AHF578%23003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-01-AHF578-003> ;
+   samm:properties ( [ samm:property :documents; samm:payloadName "Documents" ] [ samm:property :entities; samm:optional true; samm:payloadName "Entities" ] ) ;
+   samm:operations ( ) ;
+   samm:events ( ) .
+
+:documents a samm:Property ;
+   samm:preferredName "documents"@en ;
+   samm:preferredName "Dokumente"@de ;
+   samm:description "A set of relevant documents to hand over to customers for documentation purposes."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABI500%23003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABI500-003> ;
+   samm:characteristic :DocumentSet .
+
+:entities a samm:Property ;
+   samm:preferredName "entities for documentation"@en ;
+   samm:preferredName "Einheiten für Dokumentation"@de ;
+   samm:description "States that the described Entity is an important entity for documentation of the superordinate Asset of the Asset Administration Shell.\nNote: typically, such Entities are well-identified sub-parts of the Asset, such as supplier parts delivered to the manufacturer of the Asset.\nNote: these Entities are the target of the 'DocumentedEntity'-ReferenceElements of the particular Documents contained in this Submodel. This mechanism substitutes the ObjectId-provision of VDI 2770 (see section 2.2).\nNote: if the described Entity has an own Asset Administration Shell, the SelfManaged-flag and AssetId-reference of the Entity shall be set accordingly."@en ;
+   samm:see <https://admin-shell.io/vdi/2770/1/0/EntitiesForDocumentation> ;
+   samm:characteristic :EntitySet .
+
+:DocumentSet a samm-c:Set ;
+   samm:see <https://admin-shell.io/vdi/2770/1/0/EntityForDocumentation> ;
+   samm:dataType :DocumentEntity .
+
+:EntitySet a samm-c:Set ;
+   samm:description "Set of entities representing an asset."@en ;
+   samm:dataType shared:AasEntityType .
+
+:DocumentEntity a samm:Entity ;
+   samm:properties ( [ samm:property :documentIds; samm:payloadName "DocumentIds" ] [ samm:property :documentClassifications; samm:payloadName "DocumentClassifications" ] [ samm:property :documentVersions; samm:optional true; samm:payloadName "DocumentVersions" ] ) ;
+   samm:description "A single handover document."@en ;
+   samm:see <0173-1%2302-ABI500%23003/0173-1%2301-AHF579%23003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABI500-003/0173-1-01-AHF579-003> .
+   
+:documentIds a samm:Property ;
+   samm:preferredName "document IDs"@en ;
+   samm:preferredName "Dokumentennummern"@de ;
+   samm:description "Set of document identifiers for the Document. One ID in this collection should be used as a preferred ID (see isPrimary)."@en ;
+   samm:description "Menge von Dokumentennummern."@de ;
+   samm:see <0173-1%2302-ABI501%23003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABI501-003> ;
+   samm:characteristic :DocumentIdSet .
+
+:documentClassifications a samm:Property ;
+   samm:preferredName "document classifications"@en ;
+   samm:preferredName "Dokumenten-Klassifikationen"@de ;
+   samm:description "Set of information for describing the classification of the Document according to ClassificationSystems.\nConstraint: at least one classification according to VDI 2770 shall be provided."@en ;
+   samm:description "Liste der Klassifikationen der Dokumente."@de ;
+   samm:see <0173-1%2302-ABI502%23003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABI502-003> ;
+   samm:characteristic :DocumentClassificationSet .
+
+:documentVersions a samm:Property ;
+   samm:preferredName "document versions"@en ;
+   samm:preferredName "Dokumenten-Versionen"@de ;
+   samm:description "Information elements of individual VDI 2770 DocumentVersion entities.\nNote: at the time of handover, this collection shall include at least one DocumentVersion."@en ;
+   samm:description "Liste der Dokument-Versionen."@de ;
+   samm:see <0173-1%2302-ABI503%23003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABI503-003> ;
+   samm:characteristic :DocumentVersion .
+
+:DocumentIdSet a samm-c:Set ;
+   samm:preferredName "specification of Document IDs"@en ;
+   samm:preferredName "Spezifikation von Dokumentennummern"@de ;
+   samm:description "Set of the IDs of the documents."@en ;
+   samm:description "Menge von Dokumentennummern."@de ;
+   samm:dataType :DocumentIdEntity .
+
+:DocumentClassificationSet a samm-c:Set ;
+   samm:dataType :DocumentClassificationEntity .
+
+:DocumentVersion a samm-c:Set ;
+   samm:dataType :DocumentVersionEntity .
+
+:ReferenceSet a samm-c:Set ;
+   samm:preferredName "set of references"@en ;
+   samm:dataType shared:ReferenceEntity .
+
+:DocumentIdEntity a samm:Entity ;
+   samm:preferredName "Dokumentennummer Entity"@de ;
+   samm:preferredName "document ID entity"@en ;
+   samm:description "Spezifikation einer Dokumentennummer."@de ;
+   samm:description "Specification of a document ID."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABI500%23003/0173-1%2301-AHF579%23003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABI501-003/0173-1-01-AHF580-003> ;
+   samm:properties ( [ samm:property :documentDomainId; samm:payloadName "DocumentDomainId" ] [ samm:property :documentIdentifier; samm:payloadName "DocumentIdentifier" ] [ samm:property :documentIsPrimary; samm:optional true; samm:payloadName "DocumentIsPrimary" ] ) .
+
+:DocumentClassificationEntity a samm:Entity ;
+   samm:preferredName "Dokumenten-Klassifikation Entity"@de ;
+   samm:preferredName "document classification entity"@en ;
+   samm:see <urn:irdi:0173-1%2302-ABI502%23003/0173-1%2301-AHF581%23003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABI502-003/0173-1-01-AHF581-003> ;
+   samm:properties ( [ samm:property :classId; samm:payloadName "ClassId" ] [ samm:property :className; samm:payloadName "ClassName" ] [ samm:property :classificationSystem; samm:payloadName "ClassificationSystem" ] ) .
+
+:DocumentVersionEntity a samm:Entity ;
+   samm:preferredName "Dokumenten-Version Entity"@de ;
+   samm:preferredName "document version entity"@en ;
+   samm:see <urn:irdi:0173-1%2302-ABI502%23003/0173-1%2301-AHF581%23003> ;
+   samm:properties ( [ samm:property shared:languages; samm:payloadName "Languages" ] [ samm:property :version; samm:payloadName "Version" ] [ samm:property :title; samm:payloadName "Title" ] [ samm:property :subtitle; samm:optional true; samm:payloadName "SubTitle" ] [ samm:property :description; samm:payloadName "Description" ] [ samm:property :keywords; samm:payloadName "KeyWords" ] [ samm:property :statusSetDate; samm:payloadName "StatusSetDate" ] [ samm:property :statusValue; samm:payloadName "StatusValue" ]  [ samm:property :organizationName; samm:payloadName "OrganizationShortName" ] [ samm:property :organizationOfficialName; samm:payloadName "OrganizationOfficialName" ] [ samm:property :refersToEntities; samm:optional true; samm:payloadName "RefersToEntities" ] [ samm:property :basedOnReferences; samm:optional true; samm:payloadName "BasedOnReferences" ] [ samm:property :translationOfEntities; samm:optional true; samm:payloadName "TranslationOfEntities" ]  [ samm:property :digitalFiles; samm:payloadName "DigitalFiles" ] [ samm:property :previewFile; samm:optional true; samm:payloadName "PreviewFile" ] ) ;
+   samm:see <urn:irdi:0173-1%2302-ABI503%23003/0173-1%2301-AHF582%23003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABI503-003/0173-1-01-AHF582-003> .
+
+:documentDomainId a samm:Property ;
+   samm:preferredName "document domain ID"@en ;
+   samm:preferredName "Dokument-Domänen-ID"@de ;
+   samm:description "Identification of the domain in which the given DocumentId is unique. The domain ID can e.g., be the name or acronym of the providing organisation."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABH994%23003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABH994-003> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "1213455566" .
+
+:documentIdentifier a samm:Property ;
+   samm:preferredName "Dokumentennummer"@de ;
+   samm:preferredName "document identifier (ID)"@en ;
+   samm:description "Alphanumerische Zeichenfolge, die ein Dokument eindeutig identifiziert."@de ;
+   samm:description "Alphanumeric character sequence uniquely identifying a document."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAO099%23004> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-AAO099-004> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "XF90-884" .
+
+:documentIsPrimary a samm:Property ;
+   samm:preferredName "document is primary"@en ;
+   samm:preferredName "Dokument ist primär"@de ;
+   samm:description "Flag indicating that a DocumentId within a collection of at least two DocumentId`s is the 'primary' identifier for the document. This is the preferred ID of the document (commonly from the point of view of the owner of the asset)."@en ;
+   samm:description "Flag, das angibt, dass eine DocumentId innerhalb einer Sammlung von mindestens zwei DocumentIds die 'primäre' Kennung für das Dokument ist. Dies ist die bevorzugte ID des Dokuments (üblicherweise aus Sicht des Eigentümers des Assets)."@de ;
+   samm:see <urn:irdi:0173-1%2302-ABH995%23003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABH995-003> ;
+   samm:characteristic samm-c:Boolean ;
+   samm:exampleValue true .
+
+:classId a samm:Property ;
+   samm:preferredName "Klassenidentifikator"@de ;
+   samm:preferredName "class identifier"@en ;
+   samm:description "Eindeutige ID der Dokumentenklasse innerhalb eines Klassifikationsystems."@de ;
+   samm:description "Unique ID of the document class within a classficationsystem."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABH996%23003> ;
+   samm:characteristic samm-c:Text ;
+   samm:see <urn:irdi:0173-1%2302-ABH996%23003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABH996-003> ;
+   samm:exampleValue "03-02" .
+
+:className a samm:Property ;
+   samm:preferredName "Klassifikations-Name"@de ;
+   samm:preferredName "classification name"@en ;
+   samm:description "Dokumententyp."@de ;
+   samm:description "Type of document."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABJ219%23002> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABJ219-002> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:classificationSystem a samm:Property ;
+   samm:preferredName "Klassifikationssystem"@de ;
+   samm:preferredName "classification system"@en ;
+   samm:description "Charakterisierung eines Dokuments bezüglich des Zwecks oder der Information, die es beinhaltet."@de ;
+   samm:description "Classification of a document according to its purpose or the information it contains."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABH997%23003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABH997-003> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "VDI2770 Blatt 1:2020" .
+
+
+:version a samm:Property ;
+   samm:preferredName "Dokumentenversion"@de ;
+   samm:preferredName "document version"@en ;
+   samm:description "Eindeutige Version dieses Dokuments."@de ;
+   samm:description "Identifier of the version of this document."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAP003%23005> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-AAP003-005> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "V1.2" .
+
+:title a samm:Property ;
+   samm:preferredName "Titel"@de ;
+   samm:preferredName "title"@en ;
+   samm:description "Titel dieses Dokuments."@de ;
+   samm:description "Title of this document."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABG940%23003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABG940-003> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:description a samm:Property ;
+   samm:preferredName "Dokumentenbeschreibung"@de ;
+   samm:preferredName "summary"@en ;
+   samm:description "Klartext, der den Inhalt des Dokuments kennzeichnet."@de ;
+   samm:description "Plain text characterizing the content of the document."@en ;
+   samm:see <urn:irdi:0173-1%2302-AAN466%23004> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-AAN466-004> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:keywords a samm:Property ;
+   samm:preferredName "Stichworte"@de ;
+   samm:preferredName "keywords"@en ;
+   samm:description "Stichworte, die dieses Dokument beschreiben."@de ;
+   samm:description "Keywords that describe this document."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABH999%23003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABH999-003> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:statusValue a samm:Property ;
+   samm:preferredName "Status"@de ;
+   samm:preferredName "status"@en ;
+   samm:description "Jede Dokumentversion repräsentiert einen Zeitpunkt im Dokumentlebenszyklus. Dieser Statuswert bezieht sich auf die Meilensteine im Dokumentenlebenszyklus. Für die Anwendung dieser Richtlinie sollten die folgenden zwei Werte verwendet werden: InReview (in Überprüfung), Released (freigegeben)."@de ;
+   samm:description "Each document version represents a point in time in the document life cycle. This status value refers to the milestones in the document life cycle. The following two values should be used for the application of this guideline: InReview (under review), Released (released)."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABI001%23003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABI001-003> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "Released" .
+
+:statusSetDate a samm:Property ;
+   samm:preferredName "Datum der Einstellung des Dokumentenstatus"@de ;
+   samm:preferredName "document status set date"@en ;
+   samm:description "Datum, an dem der Dokumentenstatus gesetzt wurde."@de ;
+   samm:description "Date when the document status was set."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABI000%23003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABI000-003> ;
+   samm:characteristic samm-c:Timestamp ;
+   samm:exampleValue "2020-02-06"^^xsd:dateTime .
+
+:digitalFiles a samm:Property ;
+   samm:preferredName "digital files"@en ;
+   samm:description "MIME-Type, file name and file contents\n\nConstraint: at least one PDF/A file type shall be provided.\nNote: each DigitalFile represents the same content or Document version, but can be provided in different technical formats (PDF, PDFA, html, etc.) or by a link."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABK126%23002> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABK126-002> ;
+   samm:characteristic :FileSet .
+
+:previewFile a samm:Property ;
+   samm:preferredName "Vorschaudatei"@de ;
+   samm:preferredName "preview file"@en ;
+   samm:description "Liefert ein Vorschaubild der DocumentVersion, z.B. erste Seite, in einem gängigen Bildformat und niedriger Auflösung."@de ;
+   samm:description "Provides a preview image of the Document Version, e.g. first page, in a commonly used image format and low resolution."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABK127%23002> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABK127-002> ;
+   samm:characteristic shared:FileWithContentType .
+
+:basedOnReferences a samm:Property ;
+   samm:preferredName "based on references"@en ;
+   samm:description "Forms a based on-relationship to another document or document version. Typically states, that the content of the document bases on another document (e.g. specification requirements). Both have a strong relationship\n\nConstraint: reference targets a  'Document' or a 'DocumentVersion'."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABK289%23002> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABK289-002> ;
+   samm:characteristic :ReferenceSet .
+
+:translationOfEntities a samm:Property ;
+   samm:description "Forms a translation of-relationship to another document or document version. Both have a strong relationship\n\nConstraint: the (language-independent) content must be identical in both Documents or DocumentVersions.\n\nConstraint: reference targets a 'Document' or a 'DocumentVersion'."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABK290%23002> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABK290-002> ;
+   samm:characteristic :ReferenceSet .
+
+:refersToEntities a samm:Property ;
+   samm:description "Forms a generic refers to-relationship to another document or document version. They have a loose relationship\n\nConstraint: reference targets a 'Document' or a 'DocumentVersion'."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABK288%23002> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABK288-002> ;
+   samm:characteristic :ReferenceSet .
+
+:subtitle a samm:Property ;
+   samm:preferredName "Untertitel"@de ;
+   samm:preferredName "subtitle"@en ;
+   samm:description "Denotes the focus of the document and has a referential or communicative function, which is to refer to the content, subject matter or theme of the document\nConstraint: for each language-dependent Title, a Summary and at least one KeyWord shall exist for the given language."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABH998%23003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABH998-003> ;
+   samm:characteristic shared:MultiLanguageTexts .
+
+:FileSet a samm-c:Set ;
+   samm-c:elementCharacteristic shared:FileWithContentType .
+
