@@ -34,7 +34,7 @@
    [ samm:property :productArticleNumberOfManufacturer; samm:optional true; samm:payloadName "ProductArticleNumberOfManufacturer" ] 
    [ samm:property :addressInformation; samm:payloadName "AddressInformation" ] 
    [ samm:property :serialNumber; samm:optional true; samm:payloadName "SerialNumber" ] 
-   [ samm:property :yearOfConstruction; samm:payloadName "YearOfConstruction" ] 
+   [ samm:property :yearOfConstruction; samm:optional true; samm:payloadName "YearOfConstruction" ] 
    [ samm:property :dateOfManufacture; samm:optional true; samm:payloadName "DateOfManufacture" ] 
    [ samm:property :logoCompany; samm:optional true; samm:payloadName "LogoCompany" ] 
    [ samm:property :hardwareVersion; samm:optional true; samm:payloadName "HardwareVersion" ] 
