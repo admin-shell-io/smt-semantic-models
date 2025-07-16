@@ -1,10 +1,23 @@
 # Scope
 
-This namespace is reserved for the Submodel Template Specification (SMT) [IDTA-020xx Technical Data for Batteries](https://industrialdigitaltwin.org/wp-content/uploads/2022/10/IDTA-02003-1-2_Submodel_TechnicalData.pdf)
+This namespace is reserved for the Submodel Template Specification (SMT)  IDTA-02035-4 Digital Battery Passport - Part 4: Technical Data 
 
 This SMT is derived from IDTA-02003-1-2 Generic Technical Data 1.2 
 
 Namespace: urn:samm:io.admin-shell.idta.batterypass.technical_data
+
+
+The battery passport consists of the following 7 parts:
+•	Digital Battery Passport - Part 1: Digital Nameplate (IDTA-02035-1)
+•	Digital Battery Passport - Part 2: Handover Documentation (IDTA-02035-2)
+•	Digital Battery Passport - Part 3: Product Carbon Footprint  (IDTA-02035-3)
+•	Digital Battery Passport - Part 4: Technical Data (IDTA-02035-4) 
+•	Digital Battery Passport - Part 5: Product Condition  (IDTA-02035-5)
+•	Digital Battery Passport - Part 6: Material Compostion  (IDTA-02035-6)
+•	Digital Battery Passport - Part 7: Circularity  (IDTA-02035-7)
+
+Source GitHub IDTA: https://github.com/admin-shell-io/submodel-templates 
+Source Content Hub of the IDTA: [IDTA-02035-4 V1.2]()
 
 # General
 
@@ -20,16 +33,23 @@ Contained Files:
 
 * TechnicalData.ttl: the aspect model for the SMT 
 * technicalProperties_shared.ttl
+* technicalProperties_capacity.ttl
+* technicalProperties_efficiency.ttl
+* technicalProperties_resistance.ttl
+* technicalProperties_voltage.ttl
 
 
 
 
-Dependencies:
+# Dependencies:
 
-* urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0# 
-* urn:samm:io.admin-shell.idta.nameplate:3.0.0#  
-* urn:samm:io.admin-shell.idta.shared:3.1.0#
+@prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
+@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.0#> .
+@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 
+# Known Deviations
 
 In the following only deviations are documented:
 
