@@ -1,5 +1,5 @@
 ######################################################################
-# namespace: urn:samm:io.admin-shell.idta.batterypass.product_condition:1.2.0
+# namespace: io.admin-shell.idta.batterypass
 # Copyright (c) 2025 Bosch Connected Industry
 # Copyright (c) 2025 Industrial Digital Twin Association
 # This work  is made available under the terms of the
@@ -8,7 +8,7 @@
 # https://creativecommons.org/licenses/by-nc/4.0/.
 # SPDX-License-Identifier: CC-BY-4.0
 #
-# namespace: urn:samm:io.BatteryPass.Performance:1.2.0
+# namespace: io.BatteryPass
 # Copyright (c) 2025 Circulor GmbH on behalf of the Battery Pass Consortium
 #
 # The referenced work is made available under the terms of the
@@ -27,6 +27,7 @@
 # which is available at
 # https://creativecommons.org/licenses/by-nc/4.0/.
 # SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
 #######################################################################
 
 @prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .

@@ -1,4 +1,25 @@
 ######################################################################
+# namespace: io.admin-shell.idta.batterypass
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by-nc/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#
+# namespace: io.BatteryPass
+# Copyright (c) 2025 Circulor GmbH on behalf of the Battery Pass Consortium
+#
+# The referenced work is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by-nc/4.0/.
+#
+# SPDX-License-Identifier: CC-BY-NC-4.0
+#######################################################################
+
+######################################################################
 # Copyright (c) 2025 Bosch Connected Industry
 # Copyright (c) 2025 Industrial Digital Twin Association
 # This work  is made available under the terms of the
@@ -19,7 +40,8 @@
 @prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#> .
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
-
+@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.0#> .
+@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 
 :TechnicalData a samm:Aspect ;
    samm:description "Technical data of the asset and associated product classificatons."@en ;

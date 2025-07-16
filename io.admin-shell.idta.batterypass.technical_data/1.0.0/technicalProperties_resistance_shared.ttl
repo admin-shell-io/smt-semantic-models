@@ -8,7 +8,7 @@
 # https://creativecommons.org/licenses/by-nc/4.0/.
 # SPDX-License-Identifier: CC-BY-4.0
 #
-# namespace: urn:samm:io.BatteryPass.Performance:1.2.0
+# namespace: urn:samm:io.BatteryPass
 # Copyright (c) 2025 Circulor GmbH on behalf of the Battery Pass Consortium
 #
 # The referenced work is made available under the terms of the
