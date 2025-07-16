@@ -24,7 +24,26 @@
    samm:preferredName "Typenschild"@de ;
    samm:description "Contains the nameplate information attached to the product."@en ;
    samm:description "Enthält die Information zum Typenschild des Produkts."@de ;
-   samm:properties ( [ samm:property :uriOfTheProduct; samm:payloadName "URIOfTheProduct" ] [ samm:property :manufacturerName; samm:payloadName "ManufacturerName" ] [ samm:property :manufacturerProductDesignation; samm:payloadName "ManufacturerProductDesignation" ] [ samm:property :manufacturerProductFamily; samm:optional true; samm:payloadName "ManufacturerProductFamily" ] [ samm:property :manufacturerProductType; samm:optional true; samm:payloadName "ManufacturerProductType" ] [ samm:property :orderCodeOfManufacturer; samm:payloadName "OrderCodeOfManufacturer" ] [ samm:property :productArticleNumberOfManufacturer; samm:optional true; samm:payloadName "ProductArticleNumberOfManufacturer" ] [ samm:property :addressInformation; samm:payloadName "AddressInformation" ] [ samm:property :serialNumber; samm:optional true; samm:payloadName "SerialNumber" ] [ samm:property :yearOfConstruction; samm:payloadName "YearOfConstruction" ] [ samm:property :dateOfManufacture; samm:optional true; samm:payloadName "DateOfManufacture" ] [ samm:property :logoCompany; samm:optional true; samm:payloadName "LogoCompany" ] [ samm:property :hardwareVersion; samm:optional true; samm:payloadName "HardwareVersion" ] [ samm:property :firmwareVersion; samm:optional true; samm:payloadName "FirmwareVersion" ] [ samm:property :softwareVersion; samm:optional true; samm:payloadName "SoftwareVersion" ] [ samm:property :markings; samm:optional true; samm:payloadName "Markings" ] [ samm:property :manufacturerProductRoot; samm:optional true; samm:payloadName "ManufacturerProductRoot" ] [ samm:property :countryOfOrigin; samm:optional true; samm:payloadName "CountryOfOrigin" ] [ samm:property :uniqueFacilityIdentifier; samm:optional true ] ) ;
+      samm:properties ( 
+   [ samm:property :uriOfTheProduct; samm:payloadName "URIOfTheProduct" ] 
+   [ samm:property :manufacturerName; samm:payloadName "ManufacturerName" ] 
+   [ samm:property :manufacturerProductDesignation; samm:payloadName "ManufacturerProductDesignation" ] 
+   [ samm:property :manufacturerProductFamily; samm:optional true; samm:payloadName "ManufacturerProductFamily" ] 
+   [ samm:property :manufacturerProductType; samm:optional true; samm:payloadName "ManufacturerProductType" ] 
+   [ samm:property :orderCodeOfManufacturer; samm:payloadName "OrderCodeOfManufacturer" ] 
+   [ samm:property :productArticleNumberOfManufacturer; samm:optional true; samm:payloadName "ProductArticleNumberOfManufacturer" ] 
+   [ samm:property :addressInformation; samm:payloadName "AddressInformation" ] 
+   [ samm:property :serialNumber; samm:optional true; samm:payloadName "SerialNumber" ] 
+   [ samm:property :yearOfConstruction; samm:payloadName "YearOfConstruction" ] 
+   [ samm:property :dateOfManufacture; samm:optional true; samm:payloadName "DateOfManufacture" ] 
+   [ samm:property :logoCompany; samm:optional true; samm:payloadName "LogoCompany" ] 
+   [ samm:property :hardwareVersion; samm:optional true; samm:payloadName "HardwareVersion" ] 
+   [ samm:property :firmwareVersion; samm:optional true; samm:payloadName "FirmwareVersion" ] 
+   [ samm:property :softwareVersion; samm:optional true; samm:payloadName "SoftwareVersion" ] 
+   [ samm:property :markings; samm:optional true; samm:payloadName "Markings" ] 
+   [ samm:property :manufacturerProductRoot; samm:optional true; samm:payloadName "ManufacturerProductRoot" ] 
+   [ samm:property :countryOfOrigin; samm:optional true; samm:payloadName "CountryOfOrigin" ] 
+   [ samm:property :uniqueFacilityIdentifier; samm:optional true ] ) ;
    samm:operations ( ) ;
    samm:events ( ) ;
    samm:see <https://admin-shell.io/idta/nameplate/3/0/Nameplate> .
