@@ -43,14 +43,38 @@
 @prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.0#> .
 @prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 
-:TechnicalData a samm:Aspect ;
-   samm:description "Technical data of the asset and associated product classificatons."@en ;
-   samm:see <https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2> ;
-   samm:properties ( tech:generalInformation [ samm:property tech:productClassifications; samm:optional true ]  :technicalProperties ) ;
-   samm:operations ( ) ;
-   samm:events ( ) .
+:resistance a samm:Property ;
+   samm:see <https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1> ;
+   samm:characteristic :ResistanceCharacteristic .
+   
+:ResistanceCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :ResistanceEntity .
+   
 
-
-
-
+:ResistanceEntity a samm:Entity ;
+  samm:properties ( 
+  [ samm:property :initialInternalResistanceOnBatteryCellLevel; samm:payloadName "InitialInternalResistanceOnBatteryCellLevel" ] 
+  [ samm:property :initialInternalResistanceOnBatteryPackLevel; samm:payloadName "InitialInternalResistanceOnBatteryPackLevel" ] 
+  [ samm:property :initialInternalResistanceOnBatteryModuleLevel; samm:payloadName "InitialInternalResistanceOnBatteryModuleLevel" ] 
+  ) .
+  
+:initialInternalResistanceOnBatteryCellLevel a samm:Property ;
+  samm:description "Internal battery cell and pack resistance / Internal resistance (in Ohm)."@en ;
+  samm:characteristic :InternalResistance ;
+  samm:exampleValue "67"^^xsd:double .
+  
+:initialInternalResistanceOnBatteryPackLevel a samm:Property ;
+  samm:description "Initial (Pre-Use) internal resistance on battery pack level."@en ;
+  samm:characteristic :InternalResistance ;
+  samm:exampleValue "23"^^xsd:double .
+  
+:initialInternalResistanceOnBatteryModuleLevel a samm:Property ;
+  samm:see <urn:irdi:0173-1#02-ABL832#001> ;
+  samm:description "Initial internal resistance means the absolute beginning value of the quotient of the voltage drop between the terminals by the electric current increase in the battery circuit during a current pulse."@en ;
+  samm:characteristic :InternalResistance ;
+  samm:exampleValue "10"^^xsd:double .
+  
+:InternalResistance a samm-c:Measurement ;
+   samm:dataType xsd:double ;
+   samm-c:unit unit:ohm .
 

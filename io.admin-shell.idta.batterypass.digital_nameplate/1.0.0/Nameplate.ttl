@@ -1,0 +1,50 @@
+######################################################################
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by-nc/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
+@prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
+@prefix contactInformation: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+
+:Nameplate a samm:Aspect ;
+   samm:preferredName "nameplate for battery passport"@en ;
+   samm:preferredName "Typenschild für den Batteriepass"@de ;
+   samm:description "Contains the nameplate information attached to the product within the Battery Product Passport."@en ;
+   samm:description "Enthält die Information zum Typenschild des Produkts im Digitalen Batteriepass."@de ;
+   samm:properties ( 
+   [ samm:property nameplate:uriOfTheProduct; samm:payloadName "URIOfTheProduct" ] 
+   [ samm:property nameplate:manufacturerName; samm:payloadName "ManufacturerName" ] 
+   [ samm:property nameplate:manufacturerProductDesignation; samm:payloadName "ManufacturerProductDesignation" ] 
+   [ samm:property nameplate:manufacturerProductFamily; samm:optional true; samm:payloadName "ManufacturerProductFamily" ] 
+   [ samm:property nameplate:manufacturerProductType; samm:optional true; samm:payloadName "ManufacturerProductType" ] 
+   [ samm:property nameplate:orderCodeOfManufacturer; samm:payloadName "OrderCodeOfManufacturer" ] 
+   [ samm:property nameplate:productArticleNumberOfManufacturer; samm:optional true; samm:payloadName "ProductArticleNumberOfManufacturer" ] 
+   [ samm:property nameplate:addressInformation; samm:payloadName "AddressInformation" ] 
+   [ samm:property nameplate:serialNumber; samm:optional true; samm:payloadName "SerialNumber" ] 
+   [ samm:property nameplate:yearOfConstruction; samm:payloadName "YearOfConstruction" ] 
+   [ samm:property nameplate:dateOfManufacture; samm:optional true; samm:payloadName "DateOfManufacture" ] 
+   [ samm:property nameplate:logoCompany; samm:optional true; samm:payloadName "LogoCompany" ] 
+   [ samm:property nameplate:hardwareVersion; samm:optional true; samm:payloadName "HardwareVersion" ] 
+   [ samm:property nameplate:firmwareVersion; samm:optional true; samm:payloadName "FirmwareVersion" ] 
+   [ samm:property nameplate:softwareVersion; samm:optional true; samm:payloadName "SoftwareVersion" ] 
+   [ samm:property nameplate:markings; samm:optional true; samm:payloadName "Markings" ] 
+   [ samm:property nameplate:manufacturerProductRoot; samm:optional true; samm:payloadName "ManufacturerProductRoot" ] 
+   [ samm:property nameplate:countryOfOrigin; samm:optional true; samm:payloadName "CountryOfOrigin" ] 
+   [ samm:property nameplate:uniqueFacilityIdentifier; samm:optional true ] ) ;
+   samm:operations ( ) ;
+   samm:events ( ) ;
+   samm:see <https://admin-shell.io/idta/nameplate/3/0/Nameplate> .

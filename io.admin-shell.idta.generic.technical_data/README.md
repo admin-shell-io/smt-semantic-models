@@ -67,7 +67,7 @@ file "TechnicalData.ttl" with the aspect. The aspect has the same name as the or
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.technical_data.example:1.0.0#> .
-@prefix generic: <urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#> .
+@prefix generic: <urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
 @prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
@@ -98,7 +98,7 @@ and a second file defining the specific technical properties for the product und
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.technical_data.example:1.0.0#> .
-@prefix generic: <urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#> .
+@prefix generic: <urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
 @prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .

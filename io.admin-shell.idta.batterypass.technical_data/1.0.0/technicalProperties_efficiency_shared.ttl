@@ -1,0 +1,123 @@
+######################################################################
+# namespace: io.admin-shell.idta.batterypass
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by-nc/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#
+# namespace: io.BatteryPass
+# Copyright (c) 2025 Circulor GmbH on behalf of the Battery Pass Consortium
+#
+# The referenced work is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by-nc/4.0/.
+#
+# SPDX-License-Identifier: CC-BY-NC-4.0
+#######################################################################
+
+######################################################################
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by-nc/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> .
+@prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
+@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.0#> .
+@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
+
+:efficiency a samm:Property ;
+   samm:see <https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1> ;
+   samm:characteristic :EfficiencyCharacteristic .
+   
+:EfficiencyCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :EfficiencyEntity .
+   
+:EfficiencyEntity a samm:Entity ;
+  samm:properties ( 
+  [ samm:property bp:originalPowerCapability; samm:payloadName "OriginalPowerCapability" ] 
+  [ samm:property :originalPowerCapabilityLimits; samm:payloadName "OriginalPowerCapabilityLimits" ] 
+  [ samm:property :maximumAllowedBatteryEnergy; samm:payloadName "MaximumAllowedBatteryEnergy" ] 
+  [ samm:property :maximumPermittedBatteryPower; samm:payloadName "MaximumPermittedBatteryPower" ] 
+  [ samm:property bp:powerCapabilityRatio; samm:payloadName "RatioMABEvsMABP" ] 
+  [ samm:property :powerCapabilityAt20Charge; samm:payloadName "PowerCapabilityAtTwentyCharge" ] 
+  [ samm:property :powerCapabilityAt80Charge; samm:payloadName "PowerCapabilityAtEightyCharge" ] 
+  [ samm:property bp:powerFade; samm:payloadName "PowerFade" ] 
+  [ samm:property bp:roundTripEfficiencyat50PerCentCycleLife; samm:payloadName "RoundTripEnergyEfficiencyAtFiftyofCycleLife" ] 
+  [ samm:property :initialRoundTripEnergyEfficiency; samm:payloadName "InitialRoundTripEnergyEfficiency" ] 
+  [ samm:property :initialSelfDischargingRate; samm:payloadName "InitialSelfDischargingRate" ] 
+  ) .
+
+
+:originalPowerCapabilityLimits a samm:Property ;
+  samm:preferredName "original power capability limits"@en ;
+  samm:description "Pre-use power capability (definition of power capability as given in Battery Regulation)."@en ;
+  samm:characteristic bp:PowerCapabilityAtSoc ;
+  samm:exampleValue "1.7976931348623157e+308"^^xsd:float .
+
+
+:maximumAllowedBatteryEnergy a samm:Property ;
+  samm:preferredName "maximum allowed battery energy"@en ;
+  samm:description "Original power capability (in Watts) and limits, with temperature range when relevant."@en ;
+  samm:characteristic bp:RatedEnergy ;
+  samm:exampleValue "1.7976931348623157e+308"^^xsd:float .
+
+
+:maximumPermittedBatteryPower a samm:Property ;
+  samm:preferredName "maximum permitted battery power"@en ;
+  samm:description "Maximum permitted power the battery is rated for, includes the data relevant for power limits."@en ;
+  samm:characteristic bp:PowerCapabilityAtSoc ;
+  samm:exampleValue "1.7976931348623157e+308"^^xsd:float .
+
+ 
+:powerCapabilityAt20Charge a samm:Property ;
+   samm:preferredName "power capability at 20% charge"@en ;
+   samm:description "PowerCapabilityFade In-use power fade, as defined in Battery Regulation. Pre-use power capability measurement at 20%."@en ;
+   samm:characteristic bp:PowerCapabilityAtSoc ;
+   samm:exampleValue "1.7976931348623157e+308"^^xsd:float .
+
+
+:powerCapabilityAt80Charge a samm:Property ;
+   samm:preferredName "power capability at 80% charge"@en ;
+   samm:description "PowerCapabilityFade In-use power fade, as defined in Battery Regulation. Pre-use power capability measurement at 80 %."@en ;
+   samm:characteristic bp:PowerCapabilityAtSoc ;
+   samm:exampleValue "1.7976931348623157e+308"^^xsd:float .
+
+:initialRoundTripEnergyEfficiency a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL833#001> ;
+   samm:preferredName "initial round trip energy efficiency"@en ;
+   samm:description "Initial round trip energy efficiency means the ratio of the net energy delivered by a battery during a discharge test to the total energy required to restore the initial State of Charge by a standard charge."@en ;
+   samm:characteristic :EnergyEfficiency ;
+   samm:exampleValue "100"^^xsd:integer .
+      
+:initialSelfDischargingRate a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL834#001> ;
+   samm:preferredName "initial self discharging rate"@en ;
+   samm:description "Initial self-discharge in % of capacity per unit of time in defined conditions (temperature range etc) as pre-use metric."@en ;
+   samm:characteristic :BatteryDischargingRate ;
+   samm:exampleValue "2"^^xsd:integer .
+
+:BatteryDischargingRate a samm-c:Measurement ;
+   samm:dataType xsd:integer ;
+   samm-c:unit unit:percent .
+
+:EnergyEfficiency a samm-c:Measurement ;
+   samm:dataType xsd:integer ;
+   samm-c:unit unit:percent .

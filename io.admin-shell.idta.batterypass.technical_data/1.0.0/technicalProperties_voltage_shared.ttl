@@ -27,7 +27,7 @@
 # which is available at
 # https://creativecommons.org/licenses/by-nc/4.0/.
 # SPDX-License-Identifier: CC-BY-4.0
-#######################################################################
+########################################################################
 
 @prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
 @prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
@@ -43,14 +43,45 @@
 @prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.0#> .
 @prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 
-:TechnicalData a samm:Aspect ;
-   samm:description "Technical data of the asset and associated product classificatons."@en ;
-   samm:see <https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2> ;
-   samm:properties ( tech:generalInformation [ samm:property tech:productClassifications; samm:optional true ]  :technicalProperties ) ;
-   samm:operations ( ) ;
-   samm:events ( ) .
+:voltage a samm:Property ;
+# semanticId not FurtherInformation, it is section, no?
+# description etc. missing in aasx
+   samm:see <https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1> ;
+   samm:characteristic :VoltageCharacteristic .
+   
+:VoltageCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :VoltageEntity .
+   
 
+:VoltageEntity a samm:Entity ;
+  samm:properties ( 
+  [ samm:property :nominalVoltage; samm:payloadName "NominalVoltage" ] 
+  [ samm:property :maximumVoltage; samm:payloadName "MaxVoltage" ] 
+  [ samm:property :minimumVoltage; samm:payloadName "MinVoltage" ] 
+  ) .
+  
+:nominalVoltage a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL588#001> ;
+   samm:preferredName "voltage - NOM"@en ;
+   samm:description "Nominal voltage the battery is rated for.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.11"@en ;
+   samm:characteristic :Voltage ;
+   samm:exampleValue "4.3"^^xsd:float .
 
+:minimumVoltage a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL587#001> ;
+   samm:preferredName "voltage - MIN"@en ;
+   samm:description "Minimum voltage the battery is rated for.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.9"@en ;
+   samm:characteristic :Voltage ;
+   samm:exampleValue "2.04"^^xsd:float .
 
+:maximumVoltage a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL589#001> ;
+   samm:preferredName "voltage - MAX"@en ;
+   samm:description "Maximum voltage the battery is rated for.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.10"@en ;
+   samm:characteristic :Voltage ;
+   samm:exampleValue "6"^^xsd:float . 
 
-
+:Voltage a samm-c:Measurement ;
+   samm:description "s"@en ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:volt .
