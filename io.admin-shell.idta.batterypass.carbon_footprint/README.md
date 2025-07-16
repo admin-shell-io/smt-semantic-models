@@ -1,0 +1,45 @@
+# Scope
+
+This namespace is reserved for the Submodel Template Specification (SMT)  IDTA-02035-3 Digital Battery Passport - Part 3: Product Carbon Footprint 
+
+This SMT is derived from IDTA-02023 Version 1.0 Carbon Footprint
+
+The battery passport consists of the following 7 parts:
+•	Digital Battery Passport - Part 1: Digital Nameplate (IDTA-02035-1)
+•	Digital Battery Passport - Part 2: Handover Documentation (IDTA-02035-2)
+•	Digital Battery Passport - Part 3: Product Carbon Footprint  (IDTA-02035-3)
+•	Digital Battery Passport - Part 4: Technical Data (IDTA-02035-4) 
+•	Digital Battery Passport - Part 5: Product Condition  (IDTA-02035-5)
+•	Digital Battery Passport - Part 6: Material Compostion  (IDTA-02035-6)
+•	Digital Battery Passport - Part 7: Circularity  (IDTA-02035-7)
+
+
+# How to add product or sector specific Carbon Footprints
+
+
+see IDTA-02023
+
+
+# Changelog
+All notable changes to this model will be documented in this section.
+
+## [1.0.0] - <add date>
+
+for changelog see  [IDTA-02035-3 V1.0, section "Version history"]()
+
+Contained Files:
+
+* CarbonFootprint.ttl
+
+
+Dependencies:
+
+@prefix pcf: <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#> .
+@prefix cx: <urn:samm:io.catenax.pcf:7.0.0#> .
+@prefix ext-shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix contact: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
+
+
+# Deviations:
+
+see IDTA-02023
