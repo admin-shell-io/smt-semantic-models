@@ -1,0 +1,2990 @@
+{
+  "assetAdministrationShells" : [ {
+    "modelType" : "AssetAdministrationShell",
+    "assetInformation" : {
+      "assetKind" : "Type"
+    },
+    "submodels" : [ {
+      "keys" : [ {
+        "type" : "Submodel",
+        "value" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#HandoverDocumentation/submodel"
+      } ],
+      "type" : "ModelReference"
+    } ],
+    "administration" : { },
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#HandoverDocumentation",
+    "description" : [ {
+      "language" : "en",
+      "text" : "defaultAdminShell"
+    } ],
+    "idShort" : "defaultAdminShell"
+  } ],
+  "conceptDescriptions" : [ {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "definition" : [ {
+          "language" : "de",
+          "text" : "Enthält alle wichtigen Dokumente für den Kunden wie vom Batteriepass gefordert."
+        }, {
+          "language" : "en",
+          "text" : "Handover Documentation defines a set meta data for the handover of documentation from the operator to the users of the Battery Passport."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "handover documentation of battery passport"
+        }, {
+          "language" : "de",
+          "text" : "Übergabe-Dokumentation des Batteriepasses"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "HandoverDocumentation"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#HandoverDocumentation",
+    "category" : "APPLICATION_CLASS",
+    "description" : [ {
+      "language" : "de",
+      "text" : "Enthält alle wichtigen Dokumente für den Kunden wie vom Batteriepass gefordert."
+    }, {
+      "language" : "en",
+      "text" : "Handover Documentation defines a set meta data for the handover of documentation from the operator to the users of the Battery Passport."
+    } ],
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "handover documentation of battery passport"
+    }, {
+      "language" : "de",
+      "text" : "Übergabe-Dokumentation des Batteriepasses"
+    } ],
+    "idShort" : "HandoverDocumentation"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Identification of the domain in which the given DocumentId is unique. The domain ID can e.g., be the name or acronym of the providing organisation."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "document domain ID"
+        }, {
+          "language" : "de",
+          "text" : "Dokument-Domänen-ID"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "documentDomainId"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentDomainId",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "document domain ID"
+    }, {
+      "language" : "de",
+      "text" : "Dokument-Domänen-ID"
+    } ],
+    "idShort" : "documentDomainId"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "de",
+          "text" : "Alphanumerische Zeichenfolge, die ein Dokument eindeutig identifiziert."
+        }, {
+          "language" : "en",
+          "text" : "Alphanumeric character sequence uniquely identifying a document."
+        } ],
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "Dokumentennummer"
+        }, {
+          "language" : "en",
+          "text" : "document identifier (ID)"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "documentIdentifier"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentIdentifier",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "Dokumentennummer"
+    }, {
+      "language" : "en",
+      "text" : "document identifier (ID)"
+    } ],
+    "idShort" : "documentIdentifier"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "BOOLEAN",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Flag indicating that a DocumentId within a collection of at least two DocumentId`s is the 'primary' identifier for the document. This is the preferred ID of the document (commonly from the point of view of the owner of the asset)."
+        }, {
+          "language" : "de",
+          "text" : "Flag, das angibt, dass eine DocumentId innerhalb einer Sammlung von mindestens zwei DocumentIds die 'primäre' Kennung für das Dokument ist. Dies ist die bevorzugte ID des Dokuments (üblicherweise aus Sicht des Eigentümers des Assets)."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "document is primary"
+        }, {
+          "language" : "de",
+          "text" : "Dokument ist primär"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "documentIsPrimary"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentIsPrimary",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "document is primary"
+    }, {
+      "language" : "de",
+      "text" : "Dokument ist primär"
+    } ],
+    "idShort" : "documentIsPrimary"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "de",
+          "text" : "Menge von Dokumentennummern."
+        }, {
+          "language" : "en",
+          "text" : "Set of document identifiers for the Document. One ID in this collection should be used as a preferred ID (see isPrimary)."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "document IDs"
+        }, {
+          "language" : "de",
+          "text" : "Dokumentennummern"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "documentIds"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentIds",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "document IDs"
+    }, {
+      "language" : "de",
+      "text" : "Dokumentennummern"
+    } ],
+    "idShort" : "documentIds"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "de",
+          "text" : "Eindeutige ID der Dokumentenklasse innerhalb eines Klassifikationsystems."
+        }, {
+          "language" : "en",
+          "text" : "Unique ID of the document class within a classficationsystem."
+        } ],
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "Klassenidentifikator"
+        }, {
+          "language" : "en",
+          "text" : "class identifier"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "classId"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#classId",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "Klassenidentifikator"
+    }, {
+      "language" : "en",
+      "text" : "class identifier"
+    } ],
+    "idShort" : "classId"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "de",
+          "text" : "Dokumententyp."
+        }, {
+          "language" : "en",
+          "text" : "Type of document."
+        } ],
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "Klassifikations-Name"
+        }, {
+          "language" : "en",
+          "text" : "classification name"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "className"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#className",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "Klassifikations-Name"
+    }, {
+      "language" : "en",
+      "text" : "classification name"
+    } ],
+    "idShort" : "className"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Classification of a document according to its purpose or the information it contains."
+        }, {
+          "language" : "de",
+          "text" : "Charakterisierung eines Dokuments bezüglich des Zwecks oder der Information, die es beinhaltet."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "classification system"
+        }, {
+          "language" : "de",
+          "text" : "Klassifikationssystem"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "classificationSystem"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#classificationSystem",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "classification system"
+    }, {
+      "language" : "de",
+      "text" : "Klassifikationssystem"
+    } ],
+    "idShort" : "classificationSystem"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "de",
+          "text" : "Liste der Klassifikationen der Dokumente."
+        }, {
+          "language" : "en",
+          "text" : "Set of information for describing the classification of the Document according to ClassificationSystems.\nConstraint: at least one classification according to VDI 2770 shall be provided."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "document classifications"
+        }, {
+          "language" : "de",
+          "text" : "Dokumenten-Klassifikationen"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "documentClassifications"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentClassifications",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "document classifications"
+    }, {
+      "language" : "de",
+      "text" : "Dokumenten-Klassifikationen"
+    } ],
+    "idShort" : "documentClassifications"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "languages"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "languages"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#languages",
+    "idShort" : "languages"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "de",
+          "text" : "Eindeutige Version dieses Dokuments."
+        }, {
+          "language" : "en",
+          "text" : "Identifier of the version of this document."
+        } ],
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "Dokumentenversion"
+        }, {
+          "language" : "en",
+          "text" : "document version"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "version"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#version",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "Dokumentenversion"
+    }, {
+      "language" : "en",
+      "text" : "document version"
+    } ],
+    "idShort" : "version"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Title of this document."
+        }, {
+          "language" : "de",
+          "text" : "Titel dieses Dokuments."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "title"
+        }, {
+          "language" : "de",
+          "text" : "Titel"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "title"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#title",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "title"
+    }, {
+      "language" : "de",
+      "text" : "Titel"
+    } ],
+    "idShort" : "title"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Denotes the focus of the document and has a referential or communicative function, which is to refer to the content, subject matter or theme of the document\nConstraint: for each language-dependent Title, a Summary and at least one KeyWord shall exist for the given language."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "subtitle"
+        }, {
+          "language" : "de",
+          "text" : "Untertitel"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "subtitle"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#subtitle",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "subtitle"
+    }, {
+      "language" : "de",
+      "text" : "Untertitel"
+    } ],
+    "idShort" : "subtitle"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Plain text characterizing the content of the document."
+        }, {
+          "language" : "de",
+          "text" : "Klartext, der den Inhalt des Dokuments kennzeichnet."
+        } ],
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "Dokumentenbeschreibung"
+        }, {
+          "language" : "en",
+          "text" : "summary"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "description"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#description",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "Dokumentenbeschreibung"
+    }, {
+      "language" : "en",
+      "text" : "summary"
+    } ],
+    "idShort" : "description"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Keywords that describe this document."
+        }, {
+          "language" : "de",
+          "text" : "Stichworte, die dieses Dokument beschreiben."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "keywords"
+        }, {
+          "language" : "de",
+          "text" : "Stichworte"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "keywords"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#keywords",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "keywords"
+    }, {
+      "language" : "de",
+      "text" : "Stichworte"
+    } ],
+    "idShort" : "keywords"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Date when the document status was set."
+        }, {
+          "language" : "de",
+          "text" : "Datum, an dem der Dokumentenstatus gesetzt wurde."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "document status set date"
+        }, {
+          "language" : "de",
+          "text" : "Datum der Einstellung des Dokumentenstatus"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "statusSetDate"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#statusSetDate",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "document status set date"
+    }, {
+      "language" : "de",
+      "text" : "Datum der Einstellung des Dokumentenstatus"
+    } ],
+    "idShort" : "statusSetDate"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "de",
+          "text" : "Jede Dokumentversion repräsentiert einen Zeitpunkt im Dokumentlebenszyklus. Dieser Statuswert bezieht sich auf die Meilensteine im Dokumentenlebenszyklus. Für die Anwendung dieser Richtlinie sollten die folgenden zwei Werte verwendet werden: InReview (in Überprüfung), Released (freigegeben)."
+        }, {
+          "language" : "en",
+          "text" : "Each document version represents a point in time in the document life cycle. This status value refers to the milestones in the document life cycle. The following two values should be used for the application of this guideline: InReview (under review), Released (released)."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "status"
+        }, {
+          "language" : "de",
+          "text" : "Status"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "statusValue"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#statusValue",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "status"
+    }, {
+      "language" : "de",
+      "text" : "Status"
+    } ],
+    "idShort" : "statusValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Organization name in short form."
+        }, {
+          "language" : "de",
+          "text" : "Organisationsname in Kurzform."
+        } ],
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "Organisationsname"
+        }, {
+          "language" : "en",
+          "text" : "organization name"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "organizationName"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#organizationName",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "Organisationsname"
+    }, {
+      "language" : "en",
+      "text" : "organization name"
+    } ],
+    "idShort" : "organizationName"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "de",
+          "text" : "Offizieller Name der Organisation."
+        }, {
+          "language" : "en",
+          "text" : "Official name of the organization."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "organization official name"
+        }, {
+          "language" : "de",
+          "text" : "Offizieller Organisationsname"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "organizationOfficialName"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#organizationOfficialName",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "organization official name"
+    }, {
+      "language" : "de",
+      "text" : "Offizieller Organisationsname"
+    } ],
+    "idShort" : "organizationOfficialName"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "key"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "key"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#key",
+    "idShort" : "key"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "keyValue"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "keyValue"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keyValue",
+    "idShort" : "keyValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "keys"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "keys"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keys",
+    "idShort" : "keys"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "type"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "type"
+        } ],
+        "valueList" : {
+          "valueReferencePairs" : [ {
+            "value" : "ModelReference",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyReferenceTypesEnum:_ModelReferencec39fcf3b"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "ExternalReference",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyReferenceTypesEnum:_ExternalReferencedf5750a7"
+              } ],
+              "type" : "ModelReference"
+            }
+          } ]
+        }
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#type",
+    "idShort" : "type"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Forms a generic refers to-relationship to another document or document version. They have a loose relationship\n\nConstraint: reference targets a 'Document' or a 'DocumentVersion'."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "refersToEntities"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "refersToEntities"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#refersToEntities",
+    "idShort" : "refersToEntities"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Forms a based on-relationship to another document or document version. Typically states, that the content of the document bases on another document (e.g. specification requirements). Both have a strong relationship\n\nConstraint: reference targets a  'Document' or a 'DocumentVersion'."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "based on references"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "basedOnReferences"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#basedOnReferences",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "based on references"
+    } ],
+    "idShort" : "basedOnReferences"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Forms a translation of-relationship to another document or document version. Both have a strong relationship\n\nConstraint: the (language-independent) content must be identical in both Documents or DocumentVersions.\n\nConstraint: reference targets a 'Document' or a 'DocumentVersion'."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "translationOfEntities"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "translationOfEntities"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#translationOfEntities",
+    "idShort" : "translationOfEntities"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Path and name of the file (with file extension).\n\nThe path can be absolute or relative."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "resourceValue"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "resourceValue"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#resourceValue",
+    "idShort" : "resourceValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Content type of the content of the file."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "contentType"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "contentType"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#contentType",
+    "idShort" : "contentType"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "MIME-Type, file name and file contents\n\nConstraint: at least one PDF/A file type shall be provided.\nNote: each DigitalFile represents the same content or Document version, but can be provided in different technical formats (PDF, PDFA, html, etc.) or by a link."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "digital files"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "digitalFiles"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#digitalFiles",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "digital files"
+    } ],
+    "idShort" : "digitalFiles"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Provides a preview image of the Document Version, e.g. first page, in a commonly used image format and low resolution."
+        }, {
+          "language" : "de",
+          "text" : "Liefert ein Vorschaubild der DocumentVersion, z.B. erste Seite, in einem gängigen Bildformat und niedriger Auflösung."
+        } ],
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "Vorschaudatei"
+        }, {
+          "language" : "en",
+          "text" : "preview file"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "previewFile"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#previewFile",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "Vorschaudatei"
+    }, {
+      "language" : "en",
+      "text" : "preview file"
+    } ],
+    "idShort" : "previewFile"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Information elements of individual VDI 2770 DocumentVersion entities.\nNote: at the time of handover, this collection shall include at least one DocumentVersion."
+        }, {
+          "language" : "de",
+          "text" : "Liste der Dokument-Versionen."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "document versions"
+        }, {
+          "language" : "de",
+          "text" : "Dokumenten-Versionen"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "documentVersions"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentVersions",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "document versions"
+    }, {
+      "language" : "de",
+      "text" : "Dokumenten-Versionen"
+    } ],
+    "idShort" : "documentVersions"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "A set of relevant documents to hand over to customers for documentation purposes."
+        } ],
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "Dokumente"
+        }, {
+          "language" : "en",
+          "text" : "documents"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "documents"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documents",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "Dokumente"
+    }, {
+      "language" : "en",
+      "text" : "documents"
+    } ],
+    "idShort" : "documents"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The unique ID of the (external) subject the specific asset ID value belongs to or has meaning to."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "external subject ID"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "externalSubjectId"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#externalSubjectId",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "external subject ID"
+    } ],
+    "idShort" : "externalSubjectId"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The value of the specific asset identifier with the corresponding name."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "value"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "specificAssetIdValue"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#specificAssetIdValue",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "value"
+    } ],
+    "idShort" : "specificAssetIdValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Name of the asset identifier."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "name"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "specificAssetIdName"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#specificAssetIdName",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "name"
+    } ],
+    "idShort" : "specificAssetIdName"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "specific asset ID"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "specificAssetIds"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#specificAssetIds",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "specific asset ID"
+    } ],
+    "idShort" : "specificAssetIds"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Globally unique identifier of an asset."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "global asset ID"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "globalAssetId"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#globalAssetId",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "global asset ID"
+    } ],
+    "idShort" : "globalAssetId"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "entity type"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "entityType"
+        } ],
+        "valueList" : {
+          "valueReferencePairs" : [ {
+            "value" : "SelfManagedEntity",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#EntityType:_SelfManagedEntity3d75be6a"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "CoManagedEntity",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#EntityType:_CoManagedEntity6ad452f3"
+              } ],
+              "type" : "ModelReference"
+            }
+          } ]
+        }
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#entityType",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "entity type"
+    } ],
+    "idShort" : "entityType"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "States that the described Entity is an important entity for documentation of the superordinate Asset of the Asset Administration Shell.\nNote: typically, such Entities are well-identified sub-parts of the Asset, such as supplier parts delivered to the manufacturer of the Asset.\nNote: these Entities are the target of the 'DocumentedEntity'-ReferenceElements of the particular Documents contained in this Submodel. This mechanism substitutes the ObjectId-provision of VDI 2770 (see section 2.2).\nNote: if the described Entity has an own Asset Administration Shell, the SelfManaged-flag and AssetId-reference of the Entity shall be set accordingly."
+        } ],
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "Einheiten für Dokumentation"
+        }, {
+          "language" : "en",
+          "text" : "entities for documentation"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "entities"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#entities",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "Einheiten für Dokumentation"
+    }, {
+      "language" : "en",
+      "text" : "entities for documentation"
+    } ],
+    "idShort" : "entities"
+  } ],
+  "submodels" : [ {
+    "modelType" : "Submodel",
+    "kind" : "Template",
+    "semanticId" : {
+      "keys" : [ {
+        "type" : "GlobalReference",
+        "value" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#HandoverDocumentation"
+      } ],
+      "type" : "ExternalReference"
+    },
+    "supplementalSemanticIds" : [ {
+      "keys" : [ {
+        "type" : "GlobalReference",
+        "value" : "https://api.eclass-cdp.com/0173-1-01-AHF578-003"
+      } ],
+      "type" : "ExternalReference"
+    }, {
+      "keys" : [ {
+        "type" : "GlobalReference",
+        "value" : "0173-1%2301-AHF578%23003"
+      } ],
+      "type" : "ExternalReference"
+    } ],
+    "administration" : { },
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#HandoverDocumentation/submodel",
+    "description" : [ {
+      "language" : "de",
+      "text" : "Enthält alle wichtigen Dokumente für den Kunden wie vom Batteriepass gefordert."
+    }, {
+      "language" : "en",
+      "text" : "Handover Documentation defines a set meta data for the handover of documentation from the operator to the users of the Battery Passport."
+    } ],
+    "idShort" : "HandoverDocumentation",
+    "submodelElements" : [ {
+      "modelType" : "SubmodelElementList",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#DocumentSet"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "supplementalSemanticIds" : [ {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://api.eclass-cdp.com/0173-1-02-ABI500-003"
+        } ],
+        "type" : "ExternalReference"
+      }, {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/vdi/2770/1/0/EntityForDocumentation"
+        } ],
+        "type" : "ExternalReference"
+      }, {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "0173-1%2302-ABI500%23003"
+        } ],
+        "type" : "ExternalReference"
+      } ],
+      "description" : [ {
+        "language" : "en",
+        "text" : "A set of relevant documents to hand over to customers for documentation purposes."
+      } ],
+      "displayName" : [ {
+        "language" : "de",
+        "text" : "Dokumente"
+      }, {
+        "language" : "en",
+        "text" : "documents"
+      } ],
+      "idShort" : "documents",
+      "orderRelevant" : false,
+      "typeValueListElement" : "SubmodelElementCollection",
+      "value" : [ {
+        "modelType" : "SubmodelElementCollection",
+        "supplementalSemanticIds" : [ {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI500%23003/0173-1%2301-AHF579%23003"
+          } ],
+          "type" : "ExternalReference"
+        }, {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://api.eclass-cdp.com/0173-1-02-ABI500-003/0173-1-01-AHF579-003"
+          } ],
+          "type" : "ExternalReference"
+        } ],
+        "description" : [ {
+          "language" : "en",
+          "text" : "A set of relevant documents to hand over to customers for documentation purposes."
+        } ],
+        "displayName" : [ {
+          "language" : "de",
+          "text" : "Dokumente"
+        }, {
+          "language" : "en",
+          "text" : "documents"
+        } ],
+        "idShort" : "documents",
+        "value" : [ {
+          "modelType" : "SubmodelElementList",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#DocumentIdSet"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI501%23003"
+            } ],
+            "type" : "ExternalReference"
+          }, {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://api.eclass-cdp.com/0173-1-02-ABI501-003"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "de",
+            "text" : "Menge von Dokumentennummern."
+          }, {
+            "language" : "en",
+            "text" : "Set of document identifiers for the Document. One ID in this collection should be used as a preferred ID (see isPrimary)."
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "document IDs"
+          }, {
+            "language" : "de",
+            "text" : "Dokumentennummern"
+          } ],
+          "idShort" : "documentIds",
+          "orderRelevant" : false,
+          "typeValueListElement" : "SubmodelElementCollection",
+          "value" : [ {
+            "modelType" : "SubmodelElementCollection",
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://api.eclass-cdp.com/0173-1-02-ABI501-003/0173-1-01-AHF580-003"
+              } ],
+              "type" : "ExternalReference"
+            }, {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "0173-1%2302-ABI500%23003/0173-1%2301-AHF579%23003"
+              } ],
+              "type" : "ExternalReference"
+            } ],
+            "description" : [ {
+              "language" : "de",
+              "text" : "Menge von Dokumentennummern."
+            }, {
+              "language" : "en",
+              "text" : "Set of document identifiers for the Document. One ID in this collection should be used as a preferred ID (see isPrimary)."
+            } ],
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "document IDs"
+            }, {
+              "language" : "de",
+              "text" : "Dokumentennummern"
+            } ],
+            "idShort" : "documentIds",
+            "value" : [ {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentDomainId"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-ABH994-003"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-ABH994%23003"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "valueType" : "xs:string",
+              "displayName" : [ {
+                "language" : "en",
+                "text" : "document domain ID"
+              }, {
+                "language" : "de",
+                "text" : "Dokument-Domänen-ID"
+              } ],
+              "idShort" : "documentDomainId"
+            }, {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentIdentifier"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-AAO099-004"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-AAO099%23004"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "valueType" : "xs:string",
+              "displayName" : [ {
+                "language" : "de",
+                "text" : "Dokumentennummer"
+              }, {
+                "language" : "en",
+                "text" : "document identifier (ID)"
+              } ],
+              "idShort" : "documentIdentifier"
+            }, {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentIsPrimary"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-ABH995%23003"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-ABH995-003"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "valueType" : "xs:boolean",
+              "displayName" : [ {
+                "language" : "en",
+                "text" : "document is primary"
+              }, {
+                "language" : "de",
+                "text" : "Dokument ist primär"
+              } ],
+              "idShort" : "documentIsPrimary"
+            } ]
+          } ]
+        }, {
+          "modelType" : "SubmodelElementList",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#DocumentClassificationSet"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://api.eclass-cdp.com/0173-1-02-ABI502-003"
+            } ],
+            "type" : "ExternalReference"
+          }, {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI502%23003"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "de",
+            "text" : "Liste der Klassifikationen der Dokumente."
+          }, {
+            "language" : "en",
+            "text" : "Set of information for describing the classification of the Document according to ClassificationSystems.\nConstraint: at least one classification according to VDI 2770 shall be provided."
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "document classifications"
+          }, {
+            "language" : "de",
+            "text" : "Dokumenten-Klassifikationen"
+          } ],
+          "idShort" : "documentClassifications",
+          "orderRelevant" : false,
+          "typeValueListElement" : "SubmodelElementCollection",
+          "value" : [ {
+            "modelType" : "SubmodelElementCollection",
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://api.eclass-cdp.com/0173-1-02-ABI502-003/0173-1-01-AHF581-003"
+              } ],
+              "type" : "ExternalReference"
+            }, {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "0173-1%2302-ABI502%23003/0173-1%2301-AHF581%23003"
+              } ],
+              "type" : "ExternalReference"
+            } ],
+            "description" : [ {
+              "language" : "de",
+              "text" : "Liste der Klassifikationen der Dokumente."
+            }, {
+              "language" : "en",
+              "text" : "Set of information for describing the classification of the Document according to ClassificationSystems.\nConstraint: at least one classification according to VDI 2770 shall be provided."
+            } ],
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "document classifications"
+            }, {
+              "language" : "de",
+              "text" : "Dokumenten-Klassifikationen"
+            } ],
+            "idShort" : "documentClassifications",
+            "value" : [ {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#classId"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-ABH996%23003"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-ABH996-003"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "valueType" : "xs:string",
+              "displayName" : [ {
+                "language" : "de",
+                "text" : "Klassenidentifikator"
+              }, {
+                "language" : "en",
+                "text" : "class identifier"
+              } ],
+              "idShort" : "classId"
+            }, {
+              "modelType" : "MultiLanguageProperty",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#className"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-ABJ219-002"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-ABJ219%23002"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "description" : [ {
+                "language" : "de",
+                "text" : "Dokumententyp."
+              }, {
+                "language" : "en",
+                "text" : "Type of document."
+              } ],
+              "displayName" : [ {
+                "language" : "de",
+                "text" : "Klassifikations-Name"
+              }, {
+                "language" : "en",
+                "text" : "classification name"
+              } ],
+              "idShort" : "className"
+            }, {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#classificationSystem"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-ABH997%23003"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-ABH997-003"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "valueType" : "xs:string",
+              "displayName" : [ {
+                "language" : "en",
+                "text" : "classification system"
+              }, {
+                "language" : "de",
+                "text" : "Klassifikationssystem"
+              } ],
+              "idShort" : "classificationSystem"
+            } ]
+          } ]
+        }, {
+          "modelType" : "SubmodelElementList",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#DocumentVersion"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI503%23003"
+            } ],
+            "type" : "ExternalReference"
+          }, {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://api.eclass-cdp.com/0173-1-02-ABI503-003"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "Information elements of individual VDI 2770 DocumentVersion entities.\nNote: at the time of handover, this collection shall include at least one DocumentVersion."
+          }, {
+            "language" : "de",
+            "text" : "Liste der Dokument-Versionen."
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "document versions"
+          }, {
+            "language" : "de",
+            "text" : "Dokumenten-Versionen"
+          } ],
+          "idShort" : "documentVersions",
+          "orderRelevant" : false,
+          "typeValueListElement" : "SubmodelElementCollection",
+          "value" : [ {
+            "modelType" : "SubmodelElementCollection",
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://api.eclass-cdp.com/0173-1-02-ABI503-003/0173-1-01-AHF582-003"
+              } ],
+              "type" : "ExternalReference"
+            }, {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "0173-1%2302-ABI502%23003/0173-1%2301-AHF581%23003"
+              } ],
+              "type" : "ExternalReference"
+            }, {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "0173-1%2302-ABI503%23003/0173-1%2301-AHF582%23003"
+              } ],
+              "type" : "ExternalReference"
+            } ],
+            "description" : [ {
+              "language" : "en",
+              "text" : "Information elements of individual VDI 2770 DocumentVersion entities.\nNote: at the time of handover, this collection shall include at least one DocumentVersion."
+            }, {
+              "language" : "de",
+              "text" : "Liste der Dokument-Versionen."
+            } ],
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "document versions"
+            }, {
+              "language" : "de",
+              "text" : "Dokumenten-Versionen"
+            } ],
+            "idShort" : "documentVersions",
+            "value" : [ {
+              "modelType" : "SubmodelElementList",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#LanguageSet"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-AAN468%23008"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-AAN468-008"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "idShort" : "languages",
+              "orderRelevant" : false,
+              "typeValueListElement" : "SubmodelElementCollection",
+              "value" : [ {
+                "modelType" : "Property",
+                "semanticId" : {
+                  "keys" : [ {
+                    "type" : "GlobalReference",
+                    "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#languages"
+                  } ],
+                  "type" : "ExternalReference"
+                },
+                "valueType" : "xs:string",
+                "idShort" : "languages"
+              } ]
+            }, {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#version"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-AAP003%23005"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-AAP003-005"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "valueType" : "xs:string",
+              "displayName" : [ {
+                "language" : "de",
+                "text" : "Dokumentenversion"
+              }, {
+                "language" : "en",
+                "text" : "document version"
+              } ],
+              "idShort" : "version"
+            }, {
+              "modelType" : "MultiLanguageProperty",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#title"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-ABG940%23003"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-ABG940-003"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "description" : [ {
+                "language" : "en",
+                "text" : "Title of this document."
+              }, {
+                "language" : "de",
+                "text" : "Titel dieses Dokuments."
+              } ],
+              "displayName" : [ {
+                "language" : "en",
+                "text" : "title"
+              }, {
+                "language" : "de",
+                "text" : "Titel"
+              } ],
+              "idShort" : "title"
+            }, {
+              "modelType" : "MultiLanguageProperty",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#subtitle"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-ABH998-003"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-ABH998%23003"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "description" : [ {
+                "language" : "en",
+                "text" : "Denotes the focus of the document and has a referential or communicative function, which is to refer to the content, subject matter or theme of the document\nConstraint: for each language-dependent Title, a Summary and at least one KeyWord shall exist for the given language."
+              } ],
+              "displayName" : [ {
+                "language" : "en",
+                "text" : "subtitle"
+              }, {
+                "language" : "de",
+                "text" : "Untertitel"
+              } ],
+              "idShort" : "subtitle"
+            }, {
+              "modelType" : "MultiLanguageProperty",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#description"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-AAN466-004"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-AAN466%23004"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "description" : [ {
+                "language" : "en",
+                "text" : "Plain text characterizing the content of the document."
+              }, {
+                "language" : "de",
+                "text" : "Klartext, der den Inhalt des Dokuments kennzeichnet."
+              } ],
+              "displayName" : [ {
+                "language" : "de",
+                "text" : "Dokumentenbeschreibung"
+              }, {
+                "language" : "en",
+                "text" : "summary"
+              } ],
+              "idShort" : "description"
+            }, {
+              "modelType" : "MultiLanguageProperty",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#keywords"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-ABH999-003"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-ABH999%23003"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "description" : [ {
+                "language" : "en",
+                "text" : "Keywords that describe this document."
+              }, {
+                "language" : "de",
+                "text" : "Stichworte, die dieses Dokument beschreiben."
+              } ],
+              "displayName" : [ {
+                "language" : "en",
+                "text" : "keywords"
+              }, {
+                "language" : "de",
+                "text" : "Stichworte"
+              } ],
+              "idShort" : "keywords"
+            }, {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#statusSetDate"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-ABI000%23003"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-ABI000-003"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "valueType" : "xs:dateTime",
+              "displayName" : [ {
+                "language" : "en",
+                "text" : "document status set date"
+              }, {
+                "language" : "de",
+                "text" : "Datum der Einstellung des Dokumentenstatus"
+              } ],
+              "idShort" : "statusSetDate"
+            }, {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#statusValue"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-ABI001%23003"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-ABI001-003"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "valueType" : "xs:string",
+              "displayName" : [ {
+                "language" : "en",
+                "text" : "status"
+              }, {
+                "language" : "de",
+                "text" : "Status"
+              } ],
+              "idShort" : "statusValue"
+            }, {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#organizationName"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-ABI002%23003"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-ABI002-003"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "valueType" : "xs:string",
+              "displayName" : [ {
+                "language" : "de",
+                "text" : "Organisationsname"
+              }, {
+                "language" : "en",
+                "text" : "organization name"
+              } ],
+              "idShort" : "organizationName"
+            }, {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#organizationOfficialName"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-ABI004%23003"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-ABI004-003"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "valueType" : "xs:string",
+              "displayName" : [ {
+                "language" : "en",
+                "text" : "organization official name"
+              }, {
+                "language" : "de",
+                "text" : "Offizieller Organisationsname"
+              } ],
+              "idShort" : "organizationOfficialName"
+            }, {
+              "modelType" : "SubmodelElementList",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#ReferenceSet"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-ABK288-002"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-ABK288%23002"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "description" : [ {
+                "language" : "en",
+                "text" : "Forms a generic refers to-relationship to another document or document version. They have a loose relationship\n\nConstraint: reference targets a 'Document' or a 'DocumentVersion'."
+              } ],
+              "idShort" : "refersToEntities",
+              "orderRelevant" : false,
+              "typeValueListElement" : "SubmodelElementCollection",
+              "value" : [ {
+                "modelType" : "SubmodelElementCollection",
+                "description" : [ {
+                  "language" : "en",
+                  "text" : "Forms a generic refers to-relationship to another document or document version. They have a loose relationship\n\nConstraint: reference targets a 'Document' or a 'DocumentVersion'."
+                } ],
+                "idShort" : "refersToEntities",
+                "value" : [ {
+                  "modelType" : "SubmodelElementList",
+                  "semanticId" : {
+                    "keys" : [ {
+                      "type" : "GlobalReference",
+                      "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SetOfKeys"
+                    } ],
+                    "type" : "ExternalReference"
+                  },
+                  "idShort" : "keys",
+                  "orderRelevant" : false,
+                  "typeValueListElement" : "SubmodelElementCollection",
+                  "value" : [ {
+                    "modelType" : "SubmodelElementCollection",
+                    "idShort" : "keys",
+                    "value" : [ {
+                      "modelType" : "Property",
+                      "semanticId" : {
+                        "keys" : [ {
+                          "type" : "GlobalReference",
+                          "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#key"
+                        } ],
+                        "type" : "ExternalReference"
+                      },
+                      "valueType" : "xs:string",
+                      "idShort" : "key"
+                    }, {
+                      "modelType" : "Property",
+                      "semanticId" : {
+                        "keys" : [ {
+                          "type" : "GlobalReference",
+                          "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keyValue"
+                        } ],
+                        "type" : "ExternalReference"
+                      },
+                      "valueType" : "xs:string",
+                      "idShort" : "keyValue"
+                    } ]
+                  } ]
+                }, {
+                  "modelType" : "Property",
+                  "semanticId" : {
+                    "keys" : [ {
+                      "type" : "GlobalReference",
+                      "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#type"
+                    } ],
+                    "type" : "ExternalReference"
+                  },
+                  "valueType" : "xs:string",
+                  "idShort" : "type"
+                } ]
+              } ]
+            }, {
+              "modelType" : "SubmodelElementList",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#ReferenceSet"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-ABK289-002"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-ABK289%23002"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "description" : [ {
+                "language" : "en",
+                "text" : "Forms a based on-relationship to another document or document version. Typically states, that the content of the document bases on another document (e.g. specification requirements). Both have a strong relationship\n\nConstraint: reference targets a  'Document' or a 'DocumentVersion'."
+              } ],
+              "displayName" : [ {
+                "language" : "en",
+                "text" : "based on references"
+              } ],
+              "idShort" : "basedOnReferences",
+              "orderRelevant" : false,
+              "typeValueListElement" : "SubmodelElementCollection",
+              "value" : [ {
+                "modelType" : "SubmodelElementCollection",
+                "description" : [ {
+                  "language" : "en",
+                  "text" : "Forms a based on-relationship to another document or document version. Typically states, that the content of the document bases on another document (e.g. specification requirements). Both have a strong relationship\n\nConstraint: reference targets a  'Document' or a 'DocumentVersion'."
+                } ],
+                "displayName" : [ {
+                  "language" : "en",
+                  "text" : "based on references"
+                } ],
+                "idShort" : "basedOnReferences",
+                "value" : [ {
+                  "modelType" : "SubmodelElementList",
+                  "semanticId" : {
+                    "keys" : [ {
+                      "type" : "GlobalReference",
+                      "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SetOfKeys"
+                    } ],
+                    "type" : "ExternalReference"
+                  },
+                  "idShort" : "keys",
+                  "orderRelevant" : false,
+                  "typeValueListElement" : "SubmodelElementCollection",
+                  "value" : [ {
+                    "modelType" : "SubmodelElementCollection",
+                    "idShort" : "keys",
+                    "value" : [ {
+                      "modelType" : "Property",
+                      "semanticId" : {
+                        "keys" : [ {
+                          "type" : "GlobalReference",
+                          "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#key"
+                        } ],
+                        "type" : "ExternalReference"
+                      },
+                      "valueType" : "xs:string",
+                      "idShort" : "key"
+                    }, {
+                      "modelType" : "Property",
+                      "semanticId" : {
+                        "keys" : [ {
+                          "type" : "GlobalReference",
+                          "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keyValue"
+                        } ],
+                        "type" : "ExternalReference"
+                      },
+                      "valueType" : "xs:string",
+                      "idShort" : "keyValue"
+                    } ]
+                  } ]
+                }, {
+                  "modelType" : "Property",
+                  "semanticId" : {
+                    "keys" : [ {
+                      "type" : "GlobalReference",
+                      "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#type"
+                    } ],
+                    "type" : "ExternalReference"
+                  },
+                  "valueType" : "xs:string",
+                  "idShort" : "type"
+                } ]
+              } ]
+            }, {
+              "modelType" : "SubmodelElementList",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#ReferenceSet"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-ABK290%23002"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-ABK290-002"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "description" : [ {
+                "language" : "en",
+                "text" : "Forms a translation of-relationship to another document or document version. Both have a strong relationship\n\nConstraint: the (language-independent) content must be identical in both Documents or DocumentVersions.\n\nConstraint: reference targets a 'Document' or a 'DocumentVersion'."
+              } ],
+              "idShort" : "translationOfEntities",
+              "orderRelevant" : false,
+              "typeValueListElement" : "SubmodelElementCollection",
+              "value" : [ {
+                "modelType" : "SubmodelElementCollection",
+                "description" : [ {
+                  "language" : "en",
+                  "text" : "Forms a translation of-relationship to another document or document version. Both have a strong relationship\n\nConstraint: the (language-independent) content must be identical in both Documents or DocumentVersions.\n\nConstraint: reference targets a 'Document' or a 'DocumentVersion'."
+                } ],
+                "idShort" : "translationOfEntities",
+                "value" : [ {
+                  "modelType" : "SubmodelElementList",
+                  "semanticId" : {
+                    "keys" : [ {
+                      "type" : "GlobalReference",
+                      "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SetOfKeys"
+                    } ],
+                    "type" : "ExternalReference"
+                  },
+                  "idShort" : "keys",
+                  "orderRelevant" : false,
+                  "typeValueListElement" : "SubmodelElementCollection",
+                  "value" : [ {
+                    "modelType" : "SubmodelElementCollection",
+                    "idShort" : "keys",
+                    "value" : [ {
+                      "modelType" : "Property",
+                      "semanticId" : {
+                        "keys" : [ {
+                          "type" : "GlobalReference",
+                          "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#key"
+                        } ],
+                        "type" : "ExternalReference"
+                      },
+                      "valueType" : "xs:string",
+                      "idShort" : "key"
+                    }, {
+                      "modelType" : "Property",
+                      "semanticId" : {
+                        "keys" : [ {
+                          "type" : "GlobalReference",
+                          "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keyValue"
+                        } ],
+                        "type" : "ExternalReference"
+                      },
+                      "valueType" : "xs:string",
+                      "idShort" : "keyValue"
+                    } ]
+                  } ]
+                }, {
+                  "modelType" : "Property",
+                  "semanticId" : {
+                    "keys" : [ {
+                      "type" : "GlobalReference",
+                      "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#type"
+                    } ],
+                    "type" : "ExternalReference"
+                  },
+                  "valueType" : "xs:string",
+                  "idShort" : "type"
+                } ]
+              } ]
+            }, {
+              "modelType" : "SubmodelElementList",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#FileSet"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-ABK126-002"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-ABK126%23002"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "description" : [ {
+                "language" : "en",
+                "text" : "MIME-Type, file name and file contents\n\nConstraint: at least one PDF/A file type shall be provided.\nNote: each DigitalFile represents the same content or Document version, but can be provided in different technical formats (PDF, PDFA, html, etc.) or by a link."
+              } ],
+              "displayName" : [ {
+                "language" : "en",
+                "text" : "digital files"
+              } ],
+              "idShort" : "digitalFiles",
+              "orderRelevant" : false,
+              "typeValueListElement" : "SubmodelElementCollection",
+              "value" : [ {
+                "modelType" : "SubmodelElementCollection",
+                "supplementalSemanticIds" : [ {
+                  "keys" : [ {
+                    "type" : "GlobalReference",
+                    "value" : "https://admin-shell.io/aas/3/1/File"
+                  } ],
+                  "type" : "ExternalReference"
+                } ],
+                "description" : [ {
+                  "language" : "en",
+                  "text" : "MIME-Type, file name and file contents\n\nConstraint: at least one PDF/A file type shall be provided.\nNote: each DigitalFile represents the same content or Document version, but can be provided in different technical formats (PDF, PDFA, html, etc.) or by a link."
+                } ],
+                "displayName" : [ {
+                  "language" : "en",
+                  "text" : "digital files"
+                } ],
+                "idShort" : "digitalFiles",
+                "value" : [ {
+                  "modelType" : "Property",
+                  "semanticId" : {
+                    "keys" : [ {
+                      "type" : "GlobalReference",
+                      "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#resourceValue"
+                    } ],
+                    "type" : "ExternalReference"
+                  },
+                  "valueType" : "xs:anyURI",
+                  "idShort" : "resourceValue"
+                }, {
+                  "modelType" : "Property",
+                  "semanticId" : {
+                    "keys" : [ {
+                      "type" : "GlobalReference",
+                      "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#contentType"
+                    } ],
+                    "type" : "ExternalReference"
+                  },
+                  "valueType" : "xs:string",
+                  "idShort" : "contentType"
+                } ]
+              } ]
+            }, {
+              "modelType" : "SubmodelElementCollection",
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-ABK127%23002"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://api.eclass-cdp.com/0173-1-02-ABK127-002"
+                } ],
+                "type" : "ExternalReference"
+              }, {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://admin-shell.io/aas/3/1/File"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "description" : [ {
+                "language" : "en",
+                "text" : "Provides a preview image of the Document Version, e.g. first page, in a commonly used image format and low resolution."
+              }, {
+                "language" : "de",
+                "text" : "Liefert ein Vorschaubild der DocumentVersion, z.B. erste Seite, in einem gängigen Bildformat und niedriger Auflösung."
+              } ],
+              "displayName" : [ {
+                "language" : "de",
+                "text" : "Vorschaudatei"
+              }, {
+                "language" : "en",
+                "text" : "preview file"
+              } ],
+              "idShort" : "previewFile",
+              "value" : [ {
+                "modelType" : "Property",
+                "semanticId" : {
+                  "keys" : [ {
+                    "type" : "GlobalReference",
+                    "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#resourceValue"
+                  } ],
+                  "type" : "ExternalReference"
+                },
+                "valueType" : "xs:anyURI",
+                "idShort" : "resourceValue"
+              }, {
+                "modelType" : "Property",
+                "semanticId" : {
+                  "keys" : [ {
+                    "type" : "GlobalReference",
+                    "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#contentType"
+                  } ],
+                  "type" : "ExternalReference"
+                },
+                "valueType" : "xs:string",
+                "idShort" : "contentType"
+              } ]
+            } ]
+          } ]
+        } ]
+      } ]
+    }, {
+      "modelType" : "SubmodelElementList",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#EntitySet"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "supplementalSemanticIds" : [ {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/vdi/2770/1/0/EntitiesForDocumentation"
+        } ],
+        "type" : "ExternalReference"
+      } ],
+      "description" : [ {
+        "language" : "en",
+        "text" : "States that the described Entity is an important entity for documentation of the superordinate Asset of the Asset Administration Shell.\nNote: typically, such Entities are well-identified sub-parts of the Asset, such as supplier parts delivered to the manufacturer of the Asset.\nNote: these Entities are the target of the 'DocumentedEntity'-ReferenceElements of the particular Documents contained in this Submodel. This mechanism substitutes the ObjectId-provision of VDI 2770 (see section 2.2).\nNote: if the described Entity has an own Asset Administration Shell, the SelfManaged-flag and AssetId-reference of the Entity shall be set accordingly."
+      } ],
+      "displayName" : [ {
+        "language" : "de",
+        "text" : "Einheiten für Dokumentation"
+      }, {
+        "language" : "en",
+        "text" : "entities for documentation"
+      } ],
+      "idShort" : "entities",
+      "orderRelevant" : false,
+      "typeValueListElement" : "SubmodelElementCollection",
+      "value" : [ {
+        "modelType" : "SubmodelElementCollection",
+        "supplementalSemanticIds" : [ {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/aas/3/1/Entity"
+          } ],
+          "type" : "ExternalReference"
+        } ],
+        "description" : [ {
+          "language" : "en",
+          "text" : "States that the described Entity is an important entity for documentation of the superordinate Asset of the Asset Administration Shell.\nNote: typically, such Entities are well-identified sub-parts of the Asset, such as supplier parts delivered to the manufacturer of the Asset.\nNote: these Entities are the target of the 'DocumentedEntity'-ReferenceElements of the particular Documents contained in this Submodel. This mechanism substitutes the ObjectId-provision of VDI 2770 (see section 2.2).\nNote: if the described Entity has an own Asset Administration Shell, the SelfManaged-flag and AssetId-reference of the Entity shall be set accordingly."
+        } ],
+        "displayName" : [ {
+          "language" : "de",
+          "text" : "Einheiten für Dokumentation"
+        }, {
+          "language" : "en",
+          "text" : "entities for documentation"
+        } ],
+        "idShort" : "entities",
+        "value" : [ {
+          "modelType" : "SubmodelElementList",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SpecificAssetIdSet"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/aas/3/1/SpecificAssetId"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "specific asset ID"
+          } ],
+          "idShort" : "specificAssetIds",
+          "orderRelevant" : false,
+          "typeValueListElement" : "SubmodelElementCollection",
+          "value" : [ {
+            "modelType" : "SubmodelElementCollection",
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/aas/3/1/SpecificAssetId"
+              } ],
+              "type" : "ExternalReference"
+            } ],
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "specific asset ID"
+            } ],
+            "idShort" : "specificAssetIds",
+            "value" : [ {
+              "modelType" : "SubmodelElementCollection",
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://admin-shell.io/aas/3/1/SpecificAssetId/externalSubjectId"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "description" : [ {
+                "language" : "en",
+                "text" : "The unique ID of the (external) subject the specific asset ID value belongs to or has meaning to."
+              } ],
+              "displayName" : [ {
+                "language" : "en",
+                "text" : "external subject ID"
+              } ],
+              "idShort" : "externalSubjectId",
+              "value" : [ {
+                "modelType" : "SubmodelElementList",
+                "semanticId" : {
+                  "keys" : [ {
+                    "type" : "GlobalReference",
+                    "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SetOfKeys"
+                  } ],
+                  "type" : "ExternalReference"
+                },
+                "idShort" : "keys",
+                "orderRelevant" : false,
+                "typeValueListElement" : "SubmodelElementCollection",
+                "value" : [ {
+                  "modelType" : "SubmodelElementCollection",
+                  "idShort" : "keys",
+                  "value" : [ {
+                    "modelType" : "Property",
+                    "semanticId" : {
+                      "keys" : [ {
+                        "type" : "GlobalReference",
+                        "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#key"
+                      } ],
+                      "type" : "ExternalReference"
+                    },
+                    "valueType" : "xs:string",
+                    "idShort" : "key"
+                  }, {
+                    "modelType" : "Property",
+                    "semanticId" : {
+                      "keys" : [ {
+                        "type" : "GlobalReference",
+                        "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keyValue"
+                      } ],
+                      "type" : "ExternalReference"
+                    },
+                    "valueType" : "xs:string",
+                    "idShort" : "keyValue"
+                  } ]
+                } ]
+              }, {
+                "modelType" : "Property",
+                "semanticId" : {
+                  "keys" : [ {
+                    "type" : "GlobalReference",
+                    "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#type"
+                  } ],
+                  "type" : "ExternalReference"
+                },
+                "valueType" : "xs:string",
+                "idShort" : "type"
+              } ]
+            }, {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#specificAssetIdValue"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://admin-shell.io/aas/3/1/SpecificAssetId/value"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "valueType" : "xs:string",
+              "displayName" : [ {
+                "language" : "en",
+                "text" : "value"
+              } ],
+              "idShort" : "specificAssetIdValue"
+            }, {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#specificAssetIdName"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://admin-shell.io/aas/3/1/SpecificAssetId/name"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "valueType" : "xs:string",
+              "displayName" : [ {
+                "language" : "en",
+                "text" : "name"
+              } ],
+              "idShort" : "specificAssetIdName"
+            } ]
+          } ]
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#globalAssetId"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/aas/3/1/Entity/globalAssetId"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:string",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "global asset ID"
+          } ],
+          "idShort" : "globalAssetId"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#entityType"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/aas/3/1/Entity/entityType"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:string",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "entity type"
+          } ],
+          "idShort" : "entityType"
+        } ]
+      } ]
+    } ]
+  } ]
+}

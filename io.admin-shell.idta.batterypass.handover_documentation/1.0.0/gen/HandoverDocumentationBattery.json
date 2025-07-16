@@ -1,0 +1,80 @@
+{
+  "Documents" : [ {
+    "DocumentIds" : [ {
+      "DocumentIdentifier" : "XF90-884",
+      "DocumentIsPrimary" : true,
+      "DocumentDomainId" : "1213455566"
+    } ],
+    "DocumentVersions" : [ {
+      "Description" : [ {
+        "en" : "Example multi language string"
+      } ],
+      "StatusSetDate" : "2020-02-06",
+      "TranslationOfEntities" : [ {
+        "type" : "ModelReference",
+        "keys" : [ {
+          "value" : "id1234",
+          "key" : "Submodel"
+        } ]
+      } ],
+      "DigitalFiles" : [ {
+        "value" : "https://example.com/SafetyInstructions.pdf",
+        "contentType" : "application/pdf"
+      } ],
+      "PreviewFile" : {
+        "value" : "https://example.com/SafetyInstructions.pdf",
+        "contentType" : "application/pdf"
+      },
+      "Title" : [ {
+        "en" : "Example multi language string"
+      } ],
+      "Languages" : [ "en" ],
+      "RefersToEntities" : [ {
+        "type" : "ModelReference",
+        "keys" : [ {
+          "value" : "id1234",
+          "key" : "Submodel"
+        } ]
+      } ],
+      "KeyWords" : [ {
+        "en" : "Example multi language string"
+      } ],
+      "OrganizationShortName" : "Example company",
+      "Version" : "V1.2",
+      "StatusValue" : "Released",
+      "SubTitle" : [ {
+        "en" : "Example multi language string"
+      } ],
+      "OrganizationOfficialName" : "Example company Ltd.",
+      "BasedOnReferences" : [ {
+        "type" : "ModelReference",
+        "keys" : [ {
+          "value" : "id1234",
+          "key" : "Submodel"
+        } ]
+      } ]
+    } ],
+    "DocumentClassifications" : [ {
+      "ClassName" : [ {
+        "en" : "Example multi language string"
+      } ],
+      "ClassId" : "03-02",
+      "ClassificationSystem" : "VDI2770 Blatt 1:2020"
+    } ]
+  } ],
+  "Entities" : [ {
+    "specificAssetIds" : [ {
+      "name" : "SerialNumber",
+      "value" : "eOMtThyhVNLWUZNRcBaQKxI",
+      "externalSubjectId" : {
+        "type" : "ModelReference",
+        "keys" : [ {
+          "value" : "id1234",
+          "key" : "Submodel"
+        } ]
+      }
+    } ],
+    "entityType" : "SelfManagedEntity",
+    "globalAssetId" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa"
+  } ]
+}
