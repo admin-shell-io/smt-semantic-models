@@ -33,7 +33,7 @@
    [ samm:property nameplate:manufacturerProductType; samm:optional true; samm:payloadName "ManufacturerProductType" ] 
    [ samm:property nameplate:orderCodeOfManufacturer; samm:payloadName "OrderCodeOfManufacturer" ] 
    [ samm:property nameplate:productArticleNumberOfManufacturer; samm:optional true; samm:payloadName "ProductArticleNumberOfManufacturer" ] 
-   [ samm:property nameplate:addressInformation; samm:payloadName "AddressInformation" ] 
+   [ samm:property nameplate:addressInformation; samm:optional true; samm:payloadName "AddressInformation" ] 
    [ samm:property nameplate:serialNumber; samm:payloadName "SerialNumber" ] 
    [ samm:property nameplate:yearOfConstruction; samm:payloadName "YearOfConstruction" ] 
    [ samm:property nameplate:dateOfManufacture; samm:optional true; samm:payloadName "DateOfManufacture" ] 
@@ -41,10 +41,10 @@
    [ samm:property nameplate:hardwareVersion; samm:optional true; samm:payloadName "HardwareVersion" ] 
    [ samm:property nameplate:firmwareVersion; samm:optional true; samm:payloadName "FirmwareVersion" ] 
    [ samm:property nameplate:softwareVersion; samm:optional true; samm:payloadName "SoftwareVersion" ] 
-   [ samm:property nameplate:markings; samm:payloadName "Markings" ] 
    [ samm:property nameplate:manufacturerProductRoot; samm:optional true; samm:payloadName "ManufacturerProductRoot" ] 
    [ samm:property nameplate:countryOfOrigin; samm:payloadName "CountryOfOrigin" ] 
    [ samm:property nameplate:uniqueFacilityIdentifier; samm:payloadName "UniqueFacilityIdentifier" ] ) ;
+   [ samm:property nameplate:markings; samm:payloadName "Markings" ] 
    samm:operations ( ) ;
    samm:events ( ) ;
    samm:see <https://admin-shell.io/idta/nameplate/3/0/Nameplate> .
