@@ -34,7 +34,15 @@ Contained Files:
 * urn:samm:io.admin-shell.idta.contact_information:3.0.0
 * urn:samm:io.admin-shell.idta.shared:3.1.0
 
-# Deviations
+# Deviations from urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0
+
+* serialNumber is mandatory
+* yearOfConstruction is mandatory
+* countryOfOrigin is mandatory
+* uniqueFacilityIdentifier is mandatory
+* markings are mandatory
+
+# Overall Deviations
 
 see IDTA-02006
 
