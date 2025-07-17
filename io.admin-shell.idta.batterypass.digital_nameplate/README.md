@@ -8,6 +8,7 @@ Namespace: urn:samm:io.admin-shell.idta.batterypass.digital_nameplate
 This SMT is derived from IDTA-02006 Digital Nameplate V3.0
 
 The battery passport consists of the following 7 parts:
+
 •	Digital Battery Passport - Part 1: Digital Nameplate (IDTA-02035-1)
 •	Digital Battery Passport - Part 2: Handover Documentation (IDTA-02035-2)
 •	Digital Battery Passport - Part 3: Product Carbon Footprint  (IDTA-02035-3)
