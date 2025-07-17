@@ -9,13 +9,13 @@ This SMT is derived from IDTA-02006 Digital Nameplate V3.0
 
 The battery passport consists of the following 7 parts:
 
-•	Digital Battery Passport - Part 1: Digital Nameplate (IDTA-02035-1)
-•	Digital Battery Passport - Part 2: Handover Documentation (IDTA-02035-2)
-•	Digital Battery Passport - Part 3: Product Carbon Footprint  (IDTA-02035-3)
-•	Digital Battery Passport - Part 4: Technical Data (IDTA-02035-4) 
-•	Digital Battery Passport - Part 5: Product Condition  (IDTA-02035-5)
-•	Digital Battery Passport - Part 6: Material Compostion  (IDTA-02035-6)
-•	Digital Battery Passport - Part 7: Circularity  (IDTA-02035-7)
+*	Digital Battery Passport - Part 1: Digital Nameplate (IDTA-02035-1)
+*	Digital Battery Passport - Part 2: Handover Documentation (IDTA-02035-2)
+*	Digital Battery Passport - Part 3: Product Carbon Footprint  (IDTA-02035-3)
+*	Digital Battery Passport - Part 4: Technical Data (IDTA-02035-4) 
+*	Digital Battery Passport - Part 5: Product Condition  (IDTA-02035-5)
+*	Digital Battery Passport - Part 6: Material Compostion  (IDTA-02035-6)
+*	Digital Battery Passport - Part 7: Circularity  (IDTA-02035-7)
 
 # Changelog
 All notable changes to this model will be documented in this section.
