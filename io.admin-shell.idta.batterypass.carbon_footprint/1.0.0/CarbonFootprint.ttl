@@ -28,6 +28,8 @@
    samm:see <https://admin-shell.io/idta/SubmodelTemplate/CarbonFootprint/1/0> ;
    samm:see <https://admin-shell.io/IDTA-02035-3/1/0> ;
    samm:see <https://admin-shell.io/IDTA-02023/1/0> ;
-   samm:properties ( [ samm:property pcf:productCarbonFootprints; samm:payloadName "ProductCarbonFootprints" ] [ samm:property pcf:productOrSectorSpecificCarbonFootprints; samm:optional true; samm:payloadName "ProductOrSectorSpecificCarbonFootprints" ] ) ;
+   samm:properties ( 
+   [ samm:property pcf:productCarbonFootprints; samm:payloadName "ProductCarbonFootprints" ] 
+   [ samm:property pcf:productOrSectorSpecificCarbonFootprints; samm:optional true; samm:payloadName "ProductOrSectorSpecificCarbonFootprints" ] ) ;
    samm:operations ( ) ;
    samm:events ( ) .
