@@ -186,45 +186,6 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.7</aas:text>
           </aas:value>
         </aas:submodelElementCollection>
         <aas:submodelElementCollection>
-          <aas:idShort>capacityFade</aas:idShort>
-          <aas:description>
-            <aas:langStringTextType>
-              <aas:language>en</aas:language>
-              <aas:text>The capacity fade is the �Decrease over time and upon usage in the amount of charge that a battery can deliver at the rated voltage, with respect to the original rated capacity� (see BattReg Annex IV (2)) as declared by the manufacturer.
-
-DIN DKE Spec 99100 chapter reference: 6.7.2.4</aas:text>
-            </aas:langStringTextType>
-          </aas:description>
-          <aas:value>
-            <aas:property>
-              <aas:idShort>capacityFadeValue</aas:idShort>
-              <aas:semanticId>
-                <aas:type>ExternalReference</aas:type>
-                <aas:keys>
-                  <aas:key>
-                    <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#capacityFadeValue</aas:value>
-                  </aas:key>
-                </aas:keys>
-              </aas:semanticId>
-              <aas:valueType>xs:float</aas:valueType>
-            </aas:property>
-            <aas:property>
-              <aas:idShort>lastUpdate</aas:idShort>
-              <aas:semanticId>
-                <aas:type>ExternalReference</aas:type>
-                <aas:keys>
-                  <aas:key>
-                    <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate</aas:value>
-                  </aas:key>
-                </aas:keys>
-              </aas:semanticId>
-              <aas:valueType>xs:dateTime</aas:valueType>
-            </aas:property>
-          </aas:value>
-        </aas:submodelElementCollection>
-        <aas:submodelElementCollection>
           <aas:idShort>remainingEnergy</aas:idShort>
           <aas:description>
             <aas:langStringTextType>
@@ -1181,83 +1142,6 @@ DIN DKE Spec 99100 chapter reference: 6.7.6.3</aas:text>
                   <aas:text>Definition based on UNECE GTR 22: The measured or on-board UBE performance at a specific point in its lifetime, expressed as a percentage of the certified usable battery energy.
 
 DIN DKE Spec 99100 chapter reference: 6.7.2.7</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>capacityFadeValue</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#capacityFadeValue</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>capacityFadeValue</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>capacityFadeValue</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:unit>percent</aas:unit>
-              <aas:dataType>REAL_MEASURE</aas:dataType>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>capacityFade</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#capacityFade</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>capacityFade</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>capacityFade</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>The capacity fade is the �Decrease over time and upon usage in the amount of charge that a battery can deliver at the rated voltage, with respect to the original rated capacity� (see BattReg Annex IV (2)) as declared by the manufacturer.
-
-DIN DKE Spec 99100 chapter reference: 6.7.2.4</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>

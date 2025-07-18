@@ -7,12 +7,12 @@
     "submodels" : [ {
       "keys" : [ {
         "type" : "Submodel",
-        "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#TechnicalData/submodel"
+        "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData/submodel"
       } ],
       "type" : "ModelReference"
     } ],
     "administration" : { },
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#TechnicalData",
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData",
     "description" : [ {
       "language" : "en",
       "text" : "defaultAdminShell"
@@ -45,7 +45,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#TechnicalData",
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData",
     "category" : "APPLICATION_CLASS",
     "description" : [ {
       "language" : "en",
@@ -79,7 +79,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#furtherInformation",
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#furtherInformation",
     "idShort" : "furtherInformation"
   }, {
     "modelType" : "ConceptDescription",
@@ -108,7 +108,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#technicalProperties",
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#technicalProperties",
     "idShort" : "technicalProperties"
   }, {
     "modelType" : "ConceptDescription",
@@ -137,7 +137,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#productClassificationSystem",
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassificationSystem",
     "displayName" : [ {
       "language" : "en",
       "text" : "product classification system"
@@ -170,7 +170,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#classificationSystemVersion",
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#classificationSystemVersion",
     "displayName" : [ {
       "language" : "en",
       "text" : "classification system version"
@@ -203,7 +203,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#productClassId",
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassId",
     "displayName" : [ {
       "language" : "en",
       "text" : "product class ID"
@@ -239,7 +239,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#productClassifications",
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassifications",
     "displayName" : [ {
       "language" : "en",
       "text" : "product classifications"
@@ -281,7 +281,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerName",
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerName",
     "displayName" : [ {
       "language" : "de",
       "text" : "Herstellername"
@@ -323,7 +323,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerLogo",
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerLogo",
     "displayName" : [ {
       "language" : "en",
       "text" : "company logo"
@@ -365,7 +365,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerProductDesignation",
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerProductDesignation",
     "displayName" : [ {
       "language" : "de",
       "text" : "Produktbezeichnung"
@@ -404,7 +404,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerArticleNumber",
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerArticleNumber",
     "displayName" : [ {
       "language" : "en",
       "text" : "article number of the product"
@@ -446,7 +446,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerOrderCode",
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerOrderCode",
     "displayName" : [ {
       "language" : "en",
       "text" : "order code for the product"
@@ -540,7 +540,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#productImages",
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productImages",
     "displayName" : [ {
       "language" : "en",
       "text" : "product images"
@@ -573,7 +573,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#generalInformation",
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#generalInformation",
     "displayName" : [ {
       "language" : "en",
       "text" : "general information"
@@ -586,7 +586,7 @@
     "semanticId" : {
       "keys" : [ {
         "type" : "GlobalReference",
-        "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#TechnicalData"
+        "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData"
       } ],
       "type" : "ExternalReference"
     },
@@ -598,7 +598,7 @@
       "type" : "ExternalReference"
     } ],
     "administration" : { },
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#TechnicalData/submodel",
+    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData/submodel",
     "description" : [ {
       "language" : "en",
       "text" : "Technical data of the asset and associated product classificatons."
@@ -637,7 +637,7 @@
       "semanticId" : {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#ProductClassificationSet"
+          "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#ProductClassificationSet"
         } ],
         "type" : "ExternalReference"
       },
@@ -694,7 +694,7 @@
           "semanticId" : {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#productClassificationSystem"
+              "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassificationSystem"
             } ],
             "type" : "ExternalReference"
           },
@@ -716,7 +716,7 @@
           "semanticId" : {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#classificationSystemVersion"
+              "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#classificationSystemVersion"
             } ],
             "type" : "ExternalReference"
           },
@@ -738,7 +738,7 @@
           "semanticId" : {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#productClassId"
+              "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassId"
             } ],
             "type" : "ExternalReference"
           },
@@ -780,7 +780,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerName"
+            "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerName"
           } ],
           "type" : "ExternalReference"
         },
@@ -805,7 +805,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerLogo"
+            "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerLogo"
           } ],
           "type" : "ExternalReference"
         },
@@ -830,7 +830,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerProductDesignation"
+            "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerProductDesignation"
           } ],
           "type" : "ExternalReference"
         },
@@ -861,7 +861,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerArticleNumber"
+            "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerArticleNumber"
           } ],
           "type" : "ExternalReference"
         },
@@ -886,7 +886,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerOrderCode"
+            "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerOrderCode"
           } ],
           "type" : "ExternalReference"
         },
@@ -911,7 +911,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#ProductImageSet"
+            "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#ProductImageSet"
           } ],
           "type" : "ExternalReference"
         },

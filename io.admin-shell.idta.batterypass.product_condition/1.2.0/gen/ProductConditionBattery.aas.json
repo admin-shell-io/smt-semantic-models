@@ -299,61 +299,6 @@
         "dataType" : "REAL_MEASURE",
         "preferredName" : [ {
           "language" : "en",
-          "text" : "capacityFadeValue"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "capacityFadeValue"
-        } ],
-        "unit" : "percent"
-      }
-    } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#capacityFadeValue",
-    "idShort" : "capacityFadeValue"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "en",
-          "text" : "The capacity fade is the �Decrease over time and upon usage in the amount of charge that a battery can deliver at the rated voltage, with respect to the original rated capacity� (see BattReg Annex IV (2)) as declared by the manufacturer.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.4"
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "capacityFade"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "capacityFade"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#capacityFade",
-    "idShort" : "capacityFade"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "REAL_MEASURE",
-        "preferredName" : [ {
-          "language" : "en",
           "text" : "remainingEnergyalue"
         } ],
         "shortName" : [ {
@@ -1318,36 +1263,6 @@
         },
         "valueType" : "xs:float",
         "idShort" : "stateOfCertifiedEnergyValue"
-      }, {
-        "modelType" : "Property",
-        "semanticId" : {
-          "keys" : [ {
-            "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
-          } ],
-          "type" : "ExternalReference"
-        },
-        "valueType" : "xs:dateTime",
-        "idShort" : "lastUpdate"
-      } ]
-    }, {
-      "modelType" : "SubmodelElementCollection",
-      "description" : [ {
-        "language" : "en",
-        "text" : "The capacity fade is the �Decrease over time and upon usage in the amount of charge that a battery can deliver at the rated voltage, with respect to the original rated capacity� (see BattReg Annex IV (2)) as declared by the manufacturer.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.4"
-      } ],
-      "idShort" : "capacityFade",
-      "value" : [ {
-        "modelType" : "Property",
-        "semanticId" : {
-          "keys" : [ {
-            "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#capacityFadeValue"
-          } ],
-          "type" : "ExternalReference"
-        },
-        "valueType" : "xs:float",
-        "idShort" : "capacityFadeValue"
       }, {
         "modelType" : "Property",
         "semanticId" : {

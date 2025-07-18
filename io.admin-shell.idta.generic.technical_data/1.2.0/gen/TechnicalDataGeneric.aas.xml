@@ -10,7 +10,7 @@
         </aas:langStringTextType>
       </aas:description>
       <aas:administration/>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#TechnicalData</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData</aas:id>
       <aas:assetInformation>
         <aas:assetKind>Type</aas:assetKind>
       </aas:assetInformation>
@@ -20,7 +20,7 @@
           <aas:keys>
             <aas:key>
               <aas:type>Submodel</aas:type>
-              <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#TechnicalData/submodel</aas:value>
+              <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData/submodel</aas:value>
             </aas:key>
           </aas:keys>
         </aas:reference>
@@ -37,14 +37,14 @@
         </aas:langStringTextType>
       </aas:description>
       <aas:administration/>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#TechnicalData/submodel</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData/submodel</aas:id>
       <aas:kind>Template</aas:kind>
       <aas:semanticId>
         <aas:type>ExternalReference</aas:type>
         <aas:keys>
           <aas:key>
             <aas:type>GlobalReference</aas:type>
-            <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#TechnicalData</aas:value>
+            <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData</aas:value>
           </aas:key>
         </aas:keys>
       </aas:semanticId>
@@ -123,7 +123,7 @@
             <aas:keys>
               <aas:key>
                 <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#ProductClassificationSet</aas:value>
+                <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#ProductClassificationSet</aas:value>
               </aas:key>
             </aas:keys>
           </aas:semanticId>
@@ -193,7 +193,7 @@
                     <aas:keys>
                       <aas:key>
                         <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#productClassificationSystem</aas:value>
+                        <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassificationSystem</aas:value>
                       </aas:key>
                     </aas:keys>
                   </aas:semanticId>
@@ -223,7 +223,7 @@
                     <aas:keys>
                       <aas:key>
                         <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#classificationSystemVersion</aas:value>
+                        <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#classificationSystemVersion</aas:value>
                       </aas:key>
                     </aas:keys>
                   </aas:semanticId>
@@ -253,7 +253,7 @@
                     <aas:keys>
                       <aas:key>
                         <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#productClassId</aas:value>
+                        <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassId</aas:value>
                       </aas:key>
                     </aas:keys>
                   </aas:semanticId>
@@ -317,7 +317,7 @@
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerName</aas:value>
+                    <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerName</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -351,7 +351,7 @@
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerLogo</aas:value>
+                    <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerLogo</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -395,7 +395,7 @@
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerProductDesignation</aas:value>
+                    <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerProductDesignation</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -428,7 +428,7 @@
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerArticleNumber</aas:value>
+                    <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerArticleNumber</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -462,7 +462,7 @@
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerOrderCode</aas:value>
+                    <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerOrderCode</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -498,7 +498,7 @@
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#ProductImageSet</aas:value>
+                    <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#ProductImageSet</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -587,7 +587,7 @@
           <aas:text>Technical data of the asset and associated product classificatons.</aas:text>
         </aas:langStringTextType>
       </aas:description>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#TechnicalData</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -626,7 +626,7 @@
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>furtherInformation</aas:idShort>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#furtherInformation</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#furtherInformation</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -666,7 +666,7 @@
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>technicalProperties</aas:idShort>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#technicalProperties</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#technicalProperties</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -712,7 +712,7 @@
           <aas:text>product classification system</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#productClassificationSystem</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassificationSystem</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -759,7 +759,7 @@ Note: Examples for common names for classification systems are "ECLASS" or "IEC 
           <aas:text>classification system version</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#classificationSystemVersion</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#classificationSystemVersion</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -806,7 +806,7 @@ Note: Casing is to be ignored.</aas:text>
           <aas:text>product class ID</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#productClassId</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassId</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -857,7 +857,7 @@ Note: Ideally, the Property/valueId is used to reference the IRI/ IRDI of the pr
           <aas:text>Produkt-Klassifikationen</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#productClassifications</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassifications</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -911,7 +911,7 @@ Note: Ideally, the Property/valueId is used to reference the IRI/ IRDI of the pr
           <aas:text>manufacturer name</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerName</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerName</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -969,7 +969,7 @@ Note: Ideally, the Property/valueId is used to reference the IRI/ IRDI of the pr
           <aas:text>Firmenlogo</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerLogo</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerLogo</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1027,7 +1027,7 @@ Note: Ideally, the Property/valueId is used to reference the IRI/ IRDI of the pr
           <aas:text>manufacturer product designation</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerProductDesignation</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerProductDesignation</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1085,7 +1085,7 @@ Note: Ideally, the Property/valueId is used to reference the IRI/ IRDI of the pr
           <aas:text>Artikelnummer des Produkts</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerArticleNumber</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerArticleNumber</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1139,7 +1139,7 @@ Note: Ideally, the Property/valueId is used to reference the IRI/ IRDI of the pr
           <aas:text>Bestellcode des Produkts</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#manufacturerOrderCode</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerOrderCode</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1275,7 +1275,7 @@ The path can be absolute or relative.</aas:text>
           <aas:text>product images</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#productImages</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productImages</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1321,7 +1321,7 @@ The path can be absolute or relative.</aas:text>
           <aas:text>general information</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.0.0#generalInformation</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#generalInformation</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>

@@ -10,7 +10,7 @@
         </aas:langStringTextType>
       </aas:description>
       <aas:administration/>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.material_composition:1.2.0#MaterialComposition</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#MaterialComposition</aas:id>
       <aas:assetInformation>
         <aas:assetKind>Type</aas:assetKind>
       </aas:assetInformation>
@@ -20,7 +20,7 @@
           <aas:keys>
             <aas:key>
               <aas:type>Submodel</aas:type>
-              <aas:value>urn:samm:io.admin-shell.idta.batterypass.material_composition:1.2.0#MaterialComposition/submodel</aas:value>
+              <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#MaterialComposition/submodel</aas:value>
             </aas:key>
           </aas:keys>
         </aas:reference>
@@ -35,18 +35,20 @@
           <aas:language>en</aas:language>
           <aas:text>Mandatory data: Battery chemistry; critical raw materials; materials used in the cathode, anode, and 
 electrolyte; hazardous substances; impact of substances on the environment and on human health or 
-safety.</aas:text>
+safety
+
+Copyright ? 2024 Circulor (for and on behalf of the Battery Pass Consortium). This work is li-censed under a Creative Commons License Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Readers may reproduce material for their own publications, as long as it is not sold com-mercially and is given appropriate attribution.</aas:text>
         </aas:langStringTextType>
       </aas:description>
       <aas:administration/>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.material_composition:1.2.0#MaterialComposition/submodel</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#MaterialComposition/submodel</aas:id>
       <aas:kind>Template</aas:kind>
       <aas:semanticId>
         <aas:type>ExternalReference</aas:type>
         <aas:keys>
           <aas:key>
             <aas:type>GlobalReference</aas:type>
-            <aas:value>urn:samm:io.admin-shell.idta.batterypass.material_composition:1.2.0#MaterialComposition</aas:value>
+            <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#MaterialComposition</aas:value>
           </aas:key>
         </aas:keys>
       </aas:semanticId>
@@ -518,7 +520,7 @@ DIN DKE Spec 99100 chapter reference: 6.5.4 - 6.5.6</aas:text>
       <aas:displayName>
         <aas:langStringNameType>
           <aas:language>en</aas:language>
-          <aas:text>material composition</aas:text>
+          <aas:text>MaterialComposition</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
       <aas:description>
@@ -526,10 +528,12 @@ DIN DKE Spec 99100 chapter reference: 6.5.4 - 6.5.6</aas:text>
           <aas:language>en</aas:language>
           <aas:text>Mandatory data: Battery chemistry; critical raw materials; materials used in the cathode, anode, and 
 electrolyte; hazardous substances; impact of substances on the environment and on human health or 
-safety.</aas:text>
+safety
+
+Copyright ? 2024 Circulor (for and on behalf of the Battery Pass Consortium). This work is li-censed under a Creative Commons License Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Readers may reproduce material for their own publications, as long as it is not sold com-mercially and is given appropriate attribution.</aas:text>
         </aas:langStringTextType>
       </aas:description>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.material_composition:1.2.0#MaterialComposition</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#MaterialComposition</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -546,7 +550,7 @@ safety.</aas:text>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>material composition</aas:text>
+                  <aas:text>MaterialComposition</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
@@ -560,7 +564,9 @@ safety.</aas:text>
                   <aas:language>en</aas:language>
                   <aas:text>Mandatory data: Battery chemistry; critical raw materials; materials used in the cathode, anode, and 
 electrolyte; hazardous substances; impact of substances on the environment and on human health or 
-safety.</aas:text>
+safety
+
+Copyright ? 2024 Circulor (for and on behalf of the Battery Pass Consortium). This work is li-censed under a Creative Commons License Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Readers may reproduce material for their own publications, as long as it is not sold com-mercially and is given appropriate attribution.</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>

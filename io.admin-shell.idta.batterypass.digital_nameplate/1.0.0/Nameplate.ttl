@@ -43,8 +43,9 @@
    [ samm:property nameplate:softwareVersion; samm:optional true; samm:payloadName "SoftwareVersion" ] 
    [ samm:property nameplate:manufacturerProductRoot; samm:optional true; samm:payloadName "ManufacturerProductRoot" ] 
    [ samm:property nameplate:countryOfOrigin; samm:payloadName "CountryOfOrigin" ] 
-   [ samm:property nameplate:uniqueFacilityIdentifier; samm:payloadName "UniqueFacilityIdentifier" ] ) ;
+   [ samm:property nameplate:uniqueFacilityIdentifier; samm:payloadName "UniqueFacilityIdentifier" ] 
    [ samm:property nameplate:markings; samm:optional true; samm:payloadName "Markings" ] 
+   );
    samm:operations ( ) ;
    samm:events ( ) ;
    samm:see <https://admin-shell.io/idta/nameplate/3/0/Nameplate> .
