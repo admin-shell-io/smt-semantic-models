@@ -237,7 +237,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABG855%23003</aas:value>
+                          <aas:value>0173-1%2302-ABG855%23003</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -271,7 +271,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABG856%23003</aas:value>
+                          <aas:value>0173-1%2302-ABG856%23003</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -305,7 +305,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABG857%23003</aas:value>
+                          <aas:value>0173-1%2302-ABG857%23003</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -345,7 +345,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABG858%23003</aas:value>
+                          <aas:value>0173-1%2302-ABG858%23003</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -432,12 +432,6 @@
                     </aas:property>
                     <aas:property>
                       <aas:idShort>contentType</aas:idShort>
-                      <aas:displayName>
-                        <aas:langStringNameType>
-                          <aas:language>en</aas:language>
-                          <aas:text>content type</aas:text>
-                        </aas:langStringNameType>
-                      </aas:displayName>
                       <aas:semanticId>
                         <aas:type>ExternalReference</aas:type>
                         <aas:keys>
@@ -447,26 +441,6 @@
                           </aas:key>
                         </aas:keys>
                       </aas:semanticId>
-                      <aas:supplementalSemanticIds>
-                        <aas:reference>
-                          <aas:type>ExternalReference</aas:type>
-                          <aas:keys>
-                            <aas:key>
-                              <aas:type>GlobalReference</aas:type>
-                              <aas:value>https://admin-shell.io/aas/3/1/Blob/contentType</aas:value>
-                            </aas:key>
-                          </aas:keys>
-                        </aas:reference>
-                        <aas:reference>
-                          <aas:type>ExternalReference</aas:type>
-                          <aas:keys>
-                            <aas:key>
-                              <aas:type>GlobalReference</aas:type>
-                              <aas:value>https://admin-shell.io/aas/3/1/File/contentType</aas:value>
-                            </aas:key>
-                          </aas:keys>
-                        </aas:reference>
-                      </aas:supplementalSemanticIds>
                       <aas:valueType>xs:string</aas:valueType>
                     </aas:property>
                   </aas:value>
@@ -504,7 +478,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2301-AHF575%23003</aas:value>
+                          <aas:value>0173-1%2301-AHF575%23003</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -1871,7 +1845,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABG854%23003</aas:value>
+                          <aas:value>0173-1%2302-ABG854%23003</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -2393,12 +2367,6 @@ The path can be absolute or relative.</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>contentType</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>content type</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
       <aas:id>urn:samm:io.admin-shell.idta.shared:3.1.0#contentType</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
@@ -2416,7 +2384,7 @@ The path can be absolute or relative.</aas:text>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>content type</aas:text>
+                  <aas:text>contentType</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
@@ -2429,7 +2397,7 @@ The path can be absolute or relative.</aas:text>
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>Content type of the content of the file or blob.</aas:text>
+                  <aas:text>Content type of the content of the file.</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>
