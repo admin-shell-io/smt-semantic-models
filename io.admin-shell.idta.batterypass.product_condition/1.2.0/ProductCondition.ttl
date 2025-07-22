@@ -42,7 +42,6 @@
         [ samm:property bp:negativeEvents; samm:payloadName "NegativeEvents" ]
         [ samm:property bp:temperatureInformation; samm:payloadName "TemperatureInformation" ]
         [ samm:property bp:remainingPowerCapability; samm:payloadName "RemainingPowerCapability" ]
-        [ samm:property bp:powerFade; samm:payloadName "PowerFade" ]
         [ samm:property bp:roundTripEfficiencyFade; samm:payloadName "RoundTripEfficiencyFade" ]
         [ samm:property bp:evolutionOfSelfDischarge; samm:payloadName "EvolutionOfSelfDischarge" ]
         [ samm:property bp:currentSelfDischargingRate; samm:payloadName "CurrentSelfDischargingRate" ]
