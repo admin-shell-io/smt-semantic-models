@@ -28,11 +28,13 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.2.0#> .
 @prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.0#> .
+@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductCondition:1.2.0#> .
 
 :ProductCondition a samm:Aspect ;
    samm:preferredName "product condition"@en ;
    samm:description "Covers all battery lifetime relevant properties."@en ;
    samm:properties ( 
+		[ samm:property bpg:batteryStatus; samm:payloadName "BatteryStatus" ] 
         [ samm:property bp:energyThroughput; samm:optional true; samm:payloadName "EnergyThroughput" ]
         [ samm:property bp:capacityThroughput; samm:optional true; samm:payloadName "CapacityThroughput" ]
 		[ samm:property bp:numberOfFullCycles ; samm:payloadName "´NumberOfFullCycles " ]
@@ -49,5 +51,48 @@
         [ samm:property bp:roundTripEfficiencyat50PerCentCycleLife; samm:payloadName "RoundTripEfficiencyat50PerCentCycleLife" ]
         [ samm:property bp:remainingRoundTripEnergyEfficiency; samm:optional true; samm:payloadName "RemainingRoundTripEnergyEfficiency" ]
         [ samm:property bp:stateOfCharge; samm:payloadName "StateOfCharge" ]) ;
+		[ samm:property :temperatureCondition; samm:optional true; samm:payloadName "TemperatureCondition" ]) ;
    samm:operations ( ) ;
    samm:events ( ) .
+
+:temperatureCondition a samm:Property ;
+   samm:preferredName "Temperature Condition"@en ;
+   samm:description "property for battery temperature "@en ;
+   samm:characteristic :TemperatureConditionCharacteristic .
+
+:TemperatureConditionCharacteristic a samm:Characteristic ;
+   samm:preferredName "TemperatureConditionCharacteristic"@en ;
+   samm:description "Temperature Condition details for battery"@en ;
+   samm:dataType :TemperatureConditionEntity .
+   
+:TemperatureConditionEntity a samm:Entity ;
+   samm:preferredName "temperature condition"@en ;
+   samm:description "Information on temperature threshold values."@en ;
+   samm:properties ( :timeSpentInExtremeTemperaturesAboveBoundary :timeSpentinExtremeTemperaturesBelowBoundary :timeSpentChargingDuringExtremeTemperaturesAboveBoundary :timeSpentChargingDuringExtremeTemperaturesBelowBoundary ) .
+
+:timeSpentChargingDuringExtremeTemperaturesBelowBoundary a samm:Property ;
+   samm:preferredName "Time Spent Charging During Extreme Temperatures Below Boundary"@en ;
+   samm:description "Aggregated time spent charging below the given lower boundary of temperature."@en ;
+   samm:characteristic :TimeMeasurement .
+   
+:timeSpentChargingDuringExtremeTemperaturesAboveBoundary a samm:Property ;
+   samm:preferredName "Time Spent Charging During Extreme Temperatures Above Boundary"@en ;
+   samm:description "Aggregated time spent charging above the given upper boundary of temperature."@en ;
+   samm:characteristic :TimeMeasurement .
+   
+:timeSpentInExtremeTemperaturesAboveBoundary a samm:Property ;
+   samm:preferredName "Time Spent In Extreme Temperatures Above Boundary"@en ;
+   samm:description "Aggregated time spent above the given upper boundary of temperature."@en ;
+   samm:characteristic :TimeMeasurement .
+   
+:timeSpentinExtremeTemperaturesBelowBoundary a samm:Property ;
+   samm:preferredName "Time Spent In Extreme Temperatures Below Boundary"@en ;
+   samm:description "Aggregated time spent below the given lower boundary of temperature."@en ;
+   samm:characteristic :TimeMeasurement .
+   
+
+:TimeMeasurement a samm-c:Measurement ;
+   samm:preferredName "time measurement"@en ;
+   samm:description "Measurement of time in minutes."@en ;
+   samm:dataType xsd:decimal ;
+   samm-c:unit unit:minuteUnitOfTime .
