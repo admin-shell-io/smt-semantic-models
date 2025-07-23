@@ -28,7 +28,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.2.0#> .
 @prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.0#> .
-@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductCondition:1.2.0#> .
+@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
+@prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
 
 :ProductCondition a samm:Aspect ;
    samm:preferredName "product condition"@en ;
@@ -50,49 +51,51 @@
         [ samm:property bp:internalResistanceIncrease; samm:payloadName "InternalResistanceIncrease" ]
         [ samm:property bp:roundTripEfficiencyat50PerCentCycleLife; samm:payloadName "RoundTripEfficiencyat50PerCentCycleLife" ]
         [ samm:property bp:remainingRoundTripEnergyEfficiency; samm:optional true; samm:payloadName "RemainingRoundTripEnergyEfficiency" ]
-        [ samm:property bp:stateOfCharge; samm:payloadName "StateOfCharge" ]) ;
-		[ samm:property :temperatureCondition; samm:optional true; samm:payloadName "TemperatureCondition" ]) ;
+        [ samm:property bp:stateOfCharge; samm:payloadName "StateOfCharge" ]
+		) ;
    samm:operations ( ) ;
    samm:events ( ) .
+   
+### Negative Events
 
-:temperatureCondition a samm:Property ;
-   samm:preferredName "Temperature Condition"@en ;
-   samm:description "property for battery temperature "@en ;
-   samm:characteristic :TemperatureConditionCharacteristic .
+:negativeEvents a samm:Property ;
+   samm:preferredName "negative events"@en ;
+   samm:description "Information on accidents."@en ;
+   samm:characteristic :NegativeEventsCharacteristic .
 
-:TemperatureConditionCharacteristic a samm:Characteristic ;
-   samm:preferredName "TemperatureConditionCharacteristic"@en ;
-   samm:description "Temperature Condition details for battery"@en ;
-   samm:dataType :TemperatureConditionEntity .
-   
-:TemperatureConditionEntity a samm:Entity ;
-   samm:preferredName "temperature condition"@en ;
-   samm:description "Information on temperature threshold values."@en ;
-   samm:properties ( :timeSpentInExtremeTemperaturesAboveBoundary :timeSpentinExtremeTemperaturesBelowBoundary :timeSpentChargingDuringExtremeTemperaturesAboveBoundary :timeSpentChargingDuringExtremeTemperaturesBelowBoundary ) .
+:NegativeEventsCharacteristic a samm:Characteristic ;
+   samm:preferredName "negative events Characteristic"@en ;
+   samm:description "Negative Events document details."@en ;
+   samm:dataType :NegativeEventsEntity .
 
-:timeSpentChargingDuringExtremeTemperaturesBelowBoundary a samm:Property ;
-   samm:preferredName "Time Spent Charging During Extreme Temperatures Below Boundary"@en ;
-   samm:description "Aggregated time spent charging below the given lower boundary of temperature."@en ;
-   samm:characteristic :TimeMeasurement .
+:NegativeEventsEntity a samm:Entity ;
+   samm:preferredName "negative events Entity"@en ;
+   samm:description "Negative Events Entity provides the information of no of accidents and deep discharge, over discharge events."@en ;
+   samm:properties ( :informationOnAccidents [ samm:property :noOfDeepDischargeEvents; samm:optional true ] [ samm:property :noOfOverchargeEvents; samm:optional true ] ) .
    
-:timeSpentChargingDuringExtremeTemperaturesAboveBoundary a samm:Property ;
-   samm:preferredName "Time Spent Charging During Extreme Temperatures Above Boundary"@en ;
-   samm:description "Aggregated time spent charging above the given upper boundary of temperature."@en ;
-   samm:characteristic :TimeMeasurement .
-   
-:timeSpentInExtremeTemperaturesAboveBoundary a samm:Property ;
-   samm:preferredName "Time Spent In Extreme Temperatures Above Boundary"@en ;
-   samm:description "Aggregated time spent above the given upper boundary of temperature."@en ;
-   samm:characteristic :TimeMeasurement .
-   
-:timeSpentinExtremeTemperaturesBelowBoundary a samm:Property ;
-   samm:preferredName "Time Spent In Extreme Temperatures Below Boundary"@en ;
-   samm:description "Aggregated time spent below the given lower boundary of temperature."@en ;
-   samm:characteristic :TimeMeasurement .
-   
+:noOfDeepDischargeEvents a samm:Property ;
+   samm:preferredName "number of deep discharge events"@en ;
+   samm:description "Document for number of deep discharge events."@en ;
+   samm:characteristic :NumberOfDeepDischargeEventsCharacteristic ;
+   samm:exampleValue "3"^^xsd:int .
 
-:TimeMeasurement a samm-c:Measurement ;
-   samm:preferredName "time measurement"@en ;
-   samm:description "Measurement of time in minutes."@en ;
-   samm:dataType xsd:decimal ;
-   samm-c:unit unit:minuteUnitOfTime .
+:noOfOverchargeEvents a samm:Property ;
+   samm:preferredName "number of overcharge events"@en ;
+   samm:description "Document for number of overcharge events."@en ;
+   samm:characteristic :NumberOfOverchargeEventsCharacteristic ;
+   samm:exampleValue "3"^^xsd:int .
+   
+:informationOnAccidents a samm:Property ;
+   samm:preferredName "information on accidents"@en ;
+   samm:description "Reference to document of Information on accidents."@en ;
+   samm:characteristic docu:DocumentSet .
+   
+:NumberOfDeepDischargeEventsCharacteristic a samm:Characteristic ;
+   samm:preferredName "number of deep discharge events"@en ;
+   samm:description "Number of deep discharge events."@en ;
+   samm:dataType xsd:int .
+   
+:NumberOfOverchargeEventsCharacteristic a samm:Characteristic ;
+   samm:preferredName "number of overcharge events"@en ;
+   samm:description "Number of overcharge events."@en ;
+   samm:dataType xsd:int .
