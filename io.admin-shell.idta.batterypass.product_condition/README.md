@@ -23,7 +23,7 @@ Source Content Hub of the IDTA: [IDTA-02035-5 V1.2]()
 # Changelog
 All notable changes to this model will be documented in this section.
 
-## [1.2.0] - <add date>
+## [1.0.0] - <add date>
 
 for changelog see  [IDTA-02035-5 V1.2, section "Version history"]()
 
@@ -37,5 +37,5 @@ Dependencies:
 
 * urn:samm:io.BatteryPass.Performance:1.2.0
 
-
-
+Deviations:
+* informationOnAccidents is modelled as a DocumentSet (reuse from SMT HandoverDocumentation), in DIN SPEC 99100 it is described as a Reference to a pdf File.  

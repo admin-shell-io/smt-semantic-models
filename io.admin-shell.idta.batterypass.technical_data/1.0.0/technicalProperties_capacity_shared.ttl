@@ -56,9 +56,10 @@
 
 :BatteryCapacityEntity a samm:Entity ;
   samm:properties ( 
-     [ samm:property  bp:ratedEnergy; samm:payloadName "CertifiedUsableBatteryEnergy" ]  
+     [ samm:property bp:ratedEnergy; samm:payloadName "CertifiedUsableBatteryEnergy" ]  
 	 [ samm:property bp:ratedCapacity; samm:payloadName "RatedCapacity" ] 
-	 [ samm:property  bp:capacityThresholdForExhaustion; samm:payloadName "CapacityThresholdForExhaustion" ] 
+	 [ samm:property bp:capacityThresholdForExhaustion; samm:payloadName "CapacityThresholdForExhaustion" ] 
+	 [ samm:property bp:capacityFade; samm:payloadName "CapacityFade" ]
 	 )
   
   

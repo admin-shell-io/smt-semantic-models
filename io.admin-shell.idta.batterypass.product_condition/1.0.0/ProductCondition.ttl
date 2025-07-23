@@ -1,0 +1,101 @@
+######################################################################
+# namespace: urn:samm:io.admin-shell.idta.batterypass.product_condition:1.2.0
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by-nc/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#
+# namespace: urn:samm:io.BatteryPass.Performance:1.2.0
+# Copyright (c) 2025 Circulor GmbH on behalf of the Battery Pass Consortium
+#
+# The referenced work is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by-nc/4.0/.
+#
+# SPDX-License-Identifier: CC-BY-NC-4.0
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#> .
+@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.0#> .
+@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
+@prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
+
+:ProductCondition a samm:Aspect ;
+   samm:preferredName "product condition"@en ;
+   samm:description "Covers all battery lifetime relevant properties."@en ;
+   samm:properties ( 
+		[ samm:property bpg:batteryStatus; samm:payloadName "BatteryStatus" ] 
+        [ samm:property bp:energyThroughput; samm:optional true; samm:payloadName "EnergyThroughput" ]
+        [ samm:property bp:capacityThroughput; samm:optional true; samm:payloadName "CapacityThroughput" ]
+		[ samm:property bp:numberOfFullCycles ; samm:payloadName "´NumberOfFullCycles " ]
+        [ samm:property bp:stateOfCertifiedEnergy; samm:optional true;  samm:payloadName "StateOfCertifiedEnergy" ]
+        [ samm:property bp:remainingEnergy; samm:optional true; samm:payloadName "RemainingEnergy" ]
+        [ samm:property bp:remainingCapacity; samm:optional true; samm:payloadName "RemainingCapacity" ]
+        [ samm:property bp:negativeEvents; samm:optional true; samm:payloadName "NegativeEvents" ]
+        [ samm:property bp:temperatureInformation; samm:payloadName "TemperatureInformation" ]
+        [ samm:property bp:remainingPowerCapability; samm:optional true; samm:payloadName "RemainingPowerCapability" ]
+        [ samm:property bp:roundTripEfficiencyFade; samm:payloadName "RoundTripEfficiencyFade" ]
+        [ samm:property bp:evolutionOfSelfDischarge; samm:optional true; samm:payloadName "EvolutionOfSelfDischarge" ]
+        [ samm:property bp:currentSelfDischargingRate; samm:optional true;  samm:payloadName "CurrentSelfDischargingRate" ]
+        [ samm:property bp:internalResistanceIncrease; samm:payloadName "InternalResistanceIncrease" ]
+        [ samm:property bp:roundTripEfficiencyat50PerCentCycleLife; samm:payloadName "RoundTripEfficiencyat50PerCentCycleLife" ]
+        [ samm:property bp:remainingRoundTripEnergyEfficiency; samm:optional true; samm:payloadName "RemainingRoundTripEnergyEfficiency" ]
+        [ samm:property bp:stateOfCharge; samm:payloadName "StateOfCharge" ]
+		) ;
+   samm:operations ( ) ;
+   samm:events ( ) .
+   
+### Negative Events
+
+:negativeEvents a samm:Property ;
+   samm:preferredName "negative events"@en ;
+   samm:description "Information on accidents."@en ;
+   samm:characteristic :NegativeEventsCharacteristic .
+
+:NegativeEventsCharacteristic a samm:Characteristic ;
+   samm:preferredName "negative events Characteristic"@en ;
+   samm:description "Negative Events document details."@en ;
+   samm:dataType :NegativeEventsEntity .
+
+:NegativeEventsEntity a samm:Entity ;
+   samm:preferredName "negative events Entity"@en ;
+   samm:description "Negative Events Entity provides the information of no of accidents and deep discharge, over discharge events."@en ;
+   samm:properties ( :informationOnAccidents [ samm:property :noOfDeepDischargeEvents; samm:optional true ] [ samm:property :noOfOverchargeEvents; samm:optional true ] ) .
+   
+:noOfDeepDischargeEvents a samm:Property ;
+   samm:preferredName "number of deep discharge events"@en ;
+   samm:description "Document for number of deep discharge events."@en ;
+   samm:characteristic :NumberOfDeepDischargeEventsCharacteristic ;
+   samm:exampleValue "3"^^xsd:int .
+
+:noOfOverchargeEvents a samm:Property ;
+   samm:preferredName "number of overcharge events"@en ;
+   samm:description "Document for number of overcharge events."@en ;
+   samm:characteristic :NumberOfOverchargeEventsCharacteristic ;
+   samm:exampleValue "3"^^xsd:int .
+   
+:informationOnAccidents a samm:Property ;
+   samm:preferredName "information on accidents"@en ;
+   samm:description "Reference to document of Information on accidents."@en ;
+   samm:characteristic docu:DocumentSet .
+   
+:NumberOfDeepDischargeEventsCharacteristic a samm:Characteristic ;
+   samm:preferredName "number of deep discharge events"@en ;
+   samm:description "Number of deep discharge events."@en ;
+   samm:dataType xsd:int .
+   
+:NumberOfOverchargeEventsCharacteristic a samm:Characteristic ;
+   samm:preferredName "number of overcharge events"@en ;
+   samm:description "Number of overcharge events."@en ;
+   samm:dataType xsd:int .
