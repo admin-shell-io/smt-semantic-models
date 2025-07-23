@@ -37,7 +37,7 @@ Dependencies:
 * 
 
 # Deviations:
-- preferred names in English typcially starting with small letter
+- preferred names in English typically starting with small letter
 - description starting with capital letter and ending with "."
 - if description contains AAS specific wording like "Submodel" etc. this is omitted
 - In Contact Information Street is defined as street names and house number, in Pcf there are two separate properties. Neverthelesse the street property from Contact Information was used. In Contact Information it has IRDI urn:irdi:0173-1#02-AAO128#002. In Pcf it has IRDI 0173-1#02-ABH956#003.
