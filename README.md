@@ -24,87 +24,32 @@ When defining and reusing elements from other aspect models, the following repos
 
 # Generator used
 
+The following CLI was used for
+* validating the aspect models
+* for generating the different files in folder "gen"
+
+  ** *.aas.json JSON format for AAS
+  ** *.aas.xml  XML format for AAS
+  ** *.aasx  aasx format for AAS
+  ** *.html  hmtl documentation of the Aspect Model
+  ** *.json  example payload in [Value-Only format](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1/mappings/mappings.html#value-only-serialization-in-json)
+
 [samm-cli - Semantic Aspect Meta Model Command Line Tool](https://github.com/eclipse-esmf/esmf-sdk)
+
 Version: 2.10.3
+
 Build date: 2025-05-08T14:47:57Z
+
 Git commit: 192116d12a1a4c9df4e03758a6b56dfa80132cf3
+
 
 # Known Issues generation of aasx from aspect model
 
 Known Issues wehen generating an aasx from aspect model:
 
 - payload names are not considered when generating idShort
-- SubmodelElement File is realized as SMC with two properties
 - no template qualifiers with type "Cardinality" or any other qualifiers are generated
 - the idShort of the Element within a SML has the idShort of the list, not of the element
 - no mapping to SubmodelElement "File", instead mapping to SMC with two properties "resourceValue" and "contentType"
 - Concept Descriptions: For enumerations no valueList is created for its values (example :HazardousSubstanceClassChrateristicEnum in MaterialComposition)
 
-
-# Open Questions
-
-* PowerCapabilityFade was removed from Technical Data? It belonged to Capacity before
-
-
-# Deviations from manually edited aasx of WG
-
-* Open Questions:
-
-  * How to deal with different requirements for different battery categories: mandatory, recommended and optional?
-
-* ProductCondition
-  * batteryStatus missing
-  * "lastUpdate" property for the properties that change over time
-* Nameplate 3.0 should be used, not 2.0
-	* Nameplate: it is AddressInformation and not ContactInformation
-	* Nameplate: logoCompany is missing
-	* Naemplate/Markings: explosionSafeties not  contained in V3.0 any longer
-	* Nameplate/ContactInformation: is a dropin and contains much more properties
-	
-* TODOs for BatteryPass reused
-
-    * remainingEnergy: property name should be remainingEnergyValue and not remainingEnergyvalue
-	* why is evolutionOfSelfDischarge a SMC with just one Property evolutionOfSelfDischargeEntityValue? "lastValue" missing?
-	* names of lists like "internalResistanceIncrease" or remainingPowerCapability
-    * no "lastUpdate" for batteryStatus
-    * no "lastUpdate" for energyThroughput
-	* no "lastUpdate" for roundTripEfficencyFade
-	* no "lastUpdate" for roundTripEfficiencyat50PerCentCycleLife 
-	* naming roundTripEfficiencyat50PerCentCycleLife should be roundTripEfficiencyAt50PercentCycleLife
-	* Circularity/safetyMeasures is a Link to a pdf, here it is a SMC with a SML of extinguishingAgents... Extinguishing agent are mentioned in DIN SPEC 99100 but as Symbols/Labels and documentation for conformity
-	* Circularity/endOfLifeInformation not part of DIN SPEC 991100 ?
-	* Circularity/renewable Content not part of DIN SPEC 991100 ?
-	
-	* Circulariy/sparePartSources provided both: the part numbers and the adresses, might be splitted or the other way around: start with part number and address (but thenn address may be redundant).
-	
-* Circularity
-
-	* dismantlinAndRemovalInformation mdoelled as a DocumentSet from Handover Documentation? (it is a SML with SMC with properties documentType, mimeType and documentURL" - we probably need to extend the numbers (or map it to existing ones) of supported document types in Handover Documentation:
-	     ** dismantling information(DIN SPEC 99100 speaks of two documents for dismantling and removal)
-		 ** removal information (DIN SPEC 99100 speaks of two documents for dismantling and removal)
-		 ** safety measures
-		 ** Information of due diligence report in the Battery Passport
-		 EU declaration of conformity
-		 Results of test reports proving compliance
-		 Web link to public carbon footprint study
-		 Information of due diligence report in the Battery Passport
-		 Information on the role of end-users in contributing to waste prevention
-		 Information on the role of end-users in contributing to the separate collection of waste batteries
-		 Information on battery collection, preparation for second life and on treatment at end of life
-		 
-		 
-* license information not put to description but to README
-
-* formatting in case of lists in descriptions etc.: rework needed
-
-* DIN SPEC 99100: why is Part Numbers for components an URL?
-* Circularity/sparePartSources might be using contactInformation for Postal Addresses
-* do we have a SMT for spare parts?
-
-* TO BE DECIDED:
-  DocumentSet per aspect, for Circularity etc. - or really in ONE aspect Handover Documentation?
-  
-* unit in SAMM - define a "real" unit?
-		:kilogramperkilowatthour a samm:Unit ;
-		   samm:commonCode "kg CO2e/kWh" ;
-		   samm:symbol "CO2e/kWh" .
