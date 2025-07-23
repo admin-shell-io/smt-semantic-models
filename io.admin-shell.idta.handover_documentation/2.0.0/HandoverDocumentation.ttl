@@ -26,7 +26,9 @@
    samm:description "Enthält alle wichtigen Dokumente für den Kunden."@de ;
    samm:see <urn:irdi:0173-1%2301-AHF578%23003> ;
    samm:see <https://api.eclass-cdp.com/0173-1-01-AHF578-003> ;
-   samm:properties ( [ samm:property :documents; samm:payloadName "Documents" ] [ samm:property :entities; samm:optional true; samm:payloadName "Entities" ] ) ;
+   samm:properties ( 
+      [ samm:property :documents; samm:payloadName "Documents" ] 
+	  [ samm:property :entities; samm:optional true; samm:payloadName "Entities" ] ) ;
    samm:operations ( ) ;
    samm:events ( ) .
 
@@ -54,7 +56,11 @@
    samm:dataType shared:AasEntityType .
 
 :DocumentEntity a samm:Entity ;
-   samm:properties ( [ samm:property :documentIds; samm:payloadName "DocumentIds" ] [ samm:property :documentClassifications; samm:payloadName "DocumentClassifications" ] [ samm:property :documentVersions; samm:optional true; samm:payloadName "DocumentVersions" ] ) ;
+   samm:properties ( 
+     [ samm:property :documentIds; samm:payloadName "DocumentIds" ] 
+	 [ samm:property :documentClassifications; samm:payloadName "DocumentClassifications" ] 
+	 [ samm:property :documentVersions; samm:optional true; samm:payloadName "DocumentVersions" ] 
+	 ) ;
    samm:description "A single handover document."@en ;
    samm:see <0173-1%2302-ABI500%23003/0173-1%2301-AHF579%23003> ;
    samm:see <https://api.eclass-cdp.com/0173-1-02-ABI500-003/0173-1-01-AHF579-003> .
@@ -110,20 +116,42 @@
    samm:description "Specification of a document ID."@en ;
    samm:see <urn:irdi:0173-1%2302-ABI500%23003/0173-1%2301-AHF579%23003> ;
    samm:see <https://api.eclass-cdp.com/0173-1-02-ABI501-003/0173-1-01-AHF580-003> ;
-   samm:properties ( [ samm:property :documentDomainId; samm:payloadName "DocumentDomainId" ] [ samm:property :documentIdentifier; samm:payloadName "DocumentIdentifier" ] [ samm:property :documentIsPrimary; samm:optional true; samm:payloadName "DocumentIsPrimary" ] ) .
+   samm:properties ( 
+      [ samm:property :documentDomainId; samm:payloadName "DocumentDomainId" ] 
+	  [ samm:property :documentIdentifier; samm:payloadName "DocumentIdentifier" ] 
+	  [ samm:property :documentIsPrimary; samm:optional true; samm:payloadName "DocumentIsPrimary" ] 
+	  ) .
 
 :DocumentClassificationEntity a samm:Entity ;
    samm:preferredName "Dokumenten-Klassifikation Entity"@de ;
    samm:preferredName "document classification entity"@en ;
    samm:see <urn:irdi:0173-1%2302-ABI502%23003/0173-1%2301-AHF581%23003> ;
    samm:see <https://api.eclass-cdp.com/0173-1-02-ABI502-003/0173-1-01-AHF581-003> ;
-   samm:properties ( [ samm:property :classId; samm:payloadName "ClassId" ] [ samm:property :className; samm:payloadName "ClassName" ] [ samm:property :classificationSystem; samm:payloadName "ClassificationSystem" ] ) .
+   samm:properties ( 
+     [ samm:property :classId; samm:payloadName "ClassId" ]
+	 [ samm:property :className; samm:payloadName "ClassName" ]
+	 [ samm:property :classificationSystem; samm:payloadName "ClassificationSystem" ] ) .
 
 :DocumentVersionEntity a samm:Entity ;
    samm:preferredName "Dokumenten-Version Entity"@de ;
    samm:preferredName "document version entity"@en ;
    samm:see <urn:irdi:0173-1%2302-ABI502%23003/0173-1%2301-AHF581%23003> ;
-   samm:properties ( [ samm:property shared:languages; samm:payloadName "Languages" ] [ samm:property :version; samm:payloadName "Version" ] [ samm:property :title; samm:payloadName "Title" ] [ samm:property :subtitle; samm:optional true; samm:payloadName "SubTitle" ] [ samm:property :description; samm:payloadName "Description" ] [ samm:property :keywords; samm:payloadName "KeyWords" ] [ samm:property :statusSetDate; samm:payloadName "StatusSetDate" ] [ samm:property :statusValue; samm:payloadName "StatusValue" ]  [ samm:property :organizationName; samm:payloadName "OrganizationShortName" ] [ samm:property :organizationOfficialName; samm:payloadName "OrganizationOfficialName" ] [ samm:property :refersToEntities; samm:optional true; samm:payloadName "RefersToEntities" ] [ samm:property :basedOnReferences; samm:optional true; samm:payloadName "BasedOnReferences" ] [ samm:property :translationOfEntities; samm:optional true; samm:payloadName "TranslationOfEntities" ]  [ samm:property :digitalFiles; samm:payloadName "DigitalFiles" ] [ samm:property :previewFile; samm:optional true; samm:payloadName "PreviewFile" ] ) ;
+   samm:properties ( 
+     [ samm:property shared:languages; samm:payloadName "Languages" ] 
+	 [ samm:property :version; samm:payloadName "Version" ] 
+	 [ samm:property :title; samm:payloadName "Title" ]
+	 [ samm:property :subtitle; samm:optional true; samm:payloadName "SubTitle" ] 
+	 [ samm:property :description; samm:payloadName "Description" ]
+	 [ samm:property :keywords; samm:payloadName "KeyWords" ] 
+	 [ samm:property :statusSetDate; samm:payloadName "StatusSetDate" ] 
+	 [ samm:property :statusValue; samm:payloadName "StatusValue" ] 
+	 [ samm:property :organizationName; samm:payloadName "OrganizationShortName" ] 
+	 [ samm:property :organizationOfficialName; samm:payloadName "OrganizationOfficialName" ] 
+	 [ samm:property :refersToEntities; samm:optional true; samm:payloadName "RefersToEntities" ]
+	 [ samm:property :basedOnReferences; samm:optional true; samm:payloadName "BasedOnReferences" ]
+	 [ samm:property :translationOfEntities; samm:optional true; samm:payloadName "TranslationOfEntities" ]
+	 [ samm:property :digitalFiles; samm:payloadName "DigitalFiles" ]
+	 [ samm:property :previewFile; samm:optional true; samm:payloadName "PreviewFile" ] ) ;
    samm:see <urn:irdi:0173-1%2302-ABI503%23003/0173-1%2301-AHF582%23003> ;
    samm:see <https://api.eclass-cdp.com/0173-1-02-ABI503-003/0173-1-01-AHF582-003> .
 
