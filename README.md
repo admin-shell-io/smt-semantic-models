@@ -33,8 +33,32 @@ Known Issues wehen generating an aasx from aspect model:
 - SubmodelElement File is realized as SMC with two properties
 - no template qualifiers with type "Cardinality" or any other qualifiers are generated
 - the idShort of the Element within a SML has the idShort of the list, not of the element
+- no mapping to SubmodelElement "File", instead mapping to SMC with two properties "resourceValue" and "contentType"
 
 
 # Open Questions
 
-* PowerCapabilityFade was removed from Technical Data? If belonged to Capacity before
+* PowerCapabilityFade was removed from Technical Data? It belonged to Capacity before
+
+
+# Deviations from manually edited aasx of WG
+
+* ProductCondition
+  * batteryStatus missing
+  * "lastUpdate" property for the properties that change over time
+* Nameplate 3.0 should be used, not 2.0
+	* Nameplate: it is AddressInformation and not ContactInformation
+	* Nameplate: logoCompany is missing
+	* Naemplate/Markings: explosionSafeties not  contained in V3.0 any longer
+	* Nameplate/ContactInformation: is a dropin and contains much more properties
+	
+* TODOs for BatteryPass reused
+
+    * remainingEnergy: property name should be remainingEnergyValue and not remainingEnergyvalue
+	* why is evolutionOfSelfDischarge a SMC with just one Property evolutionOfSelfDischargeEntityValue?
+	* names of lists like "internalResistanceIncrease" or remainingPowerCapability
+    * no "lastUpdate" for batteryStatus
+    * no "lastUpdate" for energyThroughput
+	* no "lastUpdate" for roundTripEfficencyFade
+	* no "lastUpdate" for roundTripEfficiencyat50PerCentCycleLife 
+	* naming roundTripEfficiencyat50PerCentCycleLife should be roundTripEfficiencyAt50PercentCycleLife

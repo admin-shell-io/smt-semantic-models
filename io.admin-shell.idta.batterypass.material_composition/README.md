@@ -11,7 +11,7 @@ The battery passport consists of the following 7 parts:
 *	Digital Battery Passport - Part 3: Product Carbon Footprint  (IDTA-02035-3)
 *	Digital Battery Passport - Part 4: Technical Data (IDTA-02035-4) 
 *	Digital Battery Passport - Part 5: Product Condition  (IDTA-02035-5)
-*	Digital Battery Passport - Part 6: Material Compostion  (IDTA-02035-6)
+*	Digital Battery Passport - Part 6: Material Composition  (IDTA-02035-6)
 *	Digital Battery Passport - Part 7: Circularity  (IDTA-02035-7)
 
 This model is using the models of the BatteryPass Consortium: https://github.com/batterypass/BatteryPassDataModel/tree/main/BatteryPass/io.BatteryPass.MaterialComposition

@@ -43,4 +43,4 @@ NONE
 
 In the following only deviations from IDTA-01001-3-1 are documented:
 
-NONE
+- Markings/MarkingAdditionalText has cardinality 0..* but is a Property: for Marking only one Property MarkingAdditionalText is forseen. No cardinality ZeroToMany
