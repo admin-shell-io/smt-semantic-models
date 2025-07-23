@@ -1,4 +1,4 @@
-00,0000000000000######################################################################
+######################################################################
 # namespace: io.admin-shell.idta.batterypass
 # Copyright (c) 2025 Bosch Connected Industry
 # Copyright (c) 2025 Industrial Digital Twin Association
