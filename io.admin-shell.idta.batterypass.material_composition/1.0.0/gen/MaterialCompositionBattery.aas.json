@@ -7,12 +7,12 @@
     "submodels" : [ {
       "keys" : [ {
         "type" : "Submodel",
-        "value" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.2.0#MaterialComposition/submodel"
+        "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#MaterialComposition/submodel"
       } ],
       "type" : "ModelReference"
     } ],
     "administration" : { },
-    "id" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.2.0#MaterialComposition",
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#MaterialComposition",
     "description" : [ {
       "language" : "en",
       "text" : "defaultAdminShell"
@@ -33,11 +33,11 @@
         "modelType" : "DataSpecificationIec61360",
         "definition" : [ {
           "language" : "en",
-          "text" : "Mandatory data: Battery chemistry; critical raw materials; materials used in the cathode, anode, and \nelectrolyte; hazardous substances; impact of substances on the environment and on human health or \nsafety."
+          "text" : "Mandatory data: Battery chemistry; critical raw materials; materials used in the cathode, anode, and \nelectrolyte; hazardous substances; impact of substances on the environment and on human health or \nsafety\n\nCopyright ? 2024 Circulor (for and on behalf of the Battery Pass Consortium). This work is li-censed under a Creative Commons License Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Readers may reproduce material for their own publications, as long as it is not sold com-mercially and is given appropriate attribution."
         } ],
         "preferredName" : [ {
           "language" : "en",
-          "text" : "material composition"
+          "text" : "MaterialComposition"
         } ],
         "shortName" : [ {
           "language" : "en",
@@ -45,15 +45,15 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.2.0#MaterialComposition",
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#MaterialComposition",
     "category" : "APPLICATION_CLASS",
     "description" : [ {
       "language" : "en",
-      "text" : "Mandatory data: Battery chemistry; critical raw materials; materials used in the cathode, anode, and \nelectrolyte; hazardous substances; impact of substances on the environment and on human health or \nsafety."
+      "text" : "Mandatory data: Battery chemistry; critical raw materials; materials used in the cathode, anode, and \nelectrolyte; hazardous substances; impact of substances on the environment and on human health or \nsafety\n\nCopyright ? 2024 Circulor (for and on behalf of the Battery Pass Consortium). This work is li-censed under a Creative Commons License Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Readers may reproduce material for their own publications, as long as it is not sold com-mercially and is given appropriate attribution."
     } ],
     "displayName" : [ {
       "language" : "en",
-      "text" : "material composition"
+      "text" : "MaterialComposition"
     } ],
     "idShort" : "MaterialComposition"
   }, {
@@ -661,15 +661,15 @@
     "semanticId" : {
       "keys" : [ {
         "type" : "GlobalReference",
-        "value" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.2.0#MaterialComposition"
+        "value" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#MaterialComposition"
       } ],
       "type" : "ExternalReference"
     },
     "administration" : { },
-    "id" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.2.0#MaterialComposition/submodel",
+    "id" : "urn:samm:io.BatteryPass.MaterialComposition:1.2.0#MaterialComposition/submodel",
     "description" : [ {
       "language" : "en",
-      "text" : "Mandatory data: Battery chemistry; critical raw materials; materials used in the cathode, anode, and \nelectrolyte; hazardous substances; impact of substances on the environment and on human health or \nsafety."
+      "text" : "Mandatory data: Battery chemistry; critical raw materials; materials used in the cathode, anode, and \nelectrolyte; hazardous substances; impact of substances on the environment and on human health or \nsafety\n\nCopyright ? 2024 Circulor (for and on behalf of the Battery Pass Consortium). This work is li-censed under a Creative Commons License Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Readers may reproduce material for their own publications, as long as it is not sold com-mercially and is given appropriate attribution."
     } ],
     "idShort" : "MaterialComposition",
     "submodelElements" : [ {
