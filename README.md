@@ -33,3 +33,8 @@ Known Issues wehen generating an aasx from aspect model:
 - SubmodelElement File is realized as SMC with two properties
 - no template qualifiers with type "Cardinality" or any other qualifiers are generated
 - the idShort of the Element within a SML has the idShort of the list, not of the element
+
+
+# Open Questions
+
+* PowerCapabilityFade was removed from Technical Data? If belonged to Capacity before
