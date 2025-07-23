@@ -18,3 +18,18 @@ When defining and reusing elements from other aspect models, the following repos
 * [BatteryPass aspect models](https://github.com/batterypass/BatteryPassDataModel), their namespaces start with *io.BatteryPass* - however, please note that these aspect models have licence **CC BY-NC 4.0**.
 
 
+# Generator used
+
+[samm-cli - Semantic Aspect Meta Model Command Line Tool](https://github.com/eclipse-esmf/esmf-sdk)
+Version: 2.10.3
+Build date: 2025-05-08T14:47:57Z
+Git commit: 192116d12a1a4c9df4e03758a6b56dfa80132cf3
+
+# Known Issues generation of aasx from aspect model
+
+Known Issues wehen generating an aasx from aspect model:
+
+- payload names are not considered when generating idShort
+- SubmodelElement File is realized as SMC with two properties
+- no template qualifiers with type "Cardinality" or any other qualifiers are generated
+- the idShort of the Element within a SML has the idShort of the list, not of the element
