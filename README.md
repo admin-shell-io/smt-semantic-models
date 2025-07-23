@@ -1,3 +1,7 @@
+Despite great efforts to ensure the accuracy, reliability and precision of technical and non-technical information, the IDTA cannot give any explicit or implicit assurance or warranty in respect of the accuracy of the provided aspect models for BatteryPass. 
+Users of this document are hereby made aware that the IDTA cannot be held liable for any damage or loss. 
+The application of these aspect models does not release users from the bility for their own actions and is applied at their own risk.
+
 # Semantic Models
 
 This repository is for aspect models that are used as semantic definition in [Submodel Templates](https://github.com/admin-shell-io/submodel-templates).
@@ -34,6 +38,7 @@ Known Issues wehen generating an aasx from aspect model:
 - no template qualifiers with type "Cardinality" or any other qualifiers are generated
 - the idShort of the Element within a SML has the idShort of the list, not of the element
 - no mapping to SubmodelElement "File", instead mapping to SMC with two properties "resourceValue" and "contentType"
+- Concept Descriptions: For enumerations no valueList is created for its values (example :HazardousSubstanceClassChrateristicEnum in MaterialComposition)
 
 
 # Open Questions
@@ -42,6 +47,10 @@ Known Issues wehen generating an aasx from aspect model:
 
 
 # Deviations from manually edited aasx of WG
+
+* Open Questions:
+
+  * How to deal with different requirements for different battery categories: mandatory, recommended and optional?
 
 * ProductCondition
   * batteryStatus missing
@@ -55,10 +64,47 @@ Known Issues wehen generating an aasx from aspect model:
 * TODOs for BatteryPass reused
 
     * remainingEnergy: property name should be remainingEnergyValue and not remainingEnergyvalue
-	* why is evolutionOfSelfDischarge a SMC with just one Property evolutionOfSelfDischargeEntityValue?
+	* why is evolutionOfSelfDischarge a SMC with just one Property evolutionOfSelfDischargeEntityValue? "lastValue" missing?
 	* names of lists like "internalResistanceIncrease" or remainingPowerCapability
     * no "lastUpdate" for batteryStatus
     * no "lastUpdate" for energyThroughput
 	* no "lastUpdate" for roundTripEfficencyFade
 	* no "lastUpdate" for roundTripEfficiencyat50PerCentCycleLife 
 	* naming roundTripEfficiencyat50PerCentCycleLife should be roundTripEfficiencyAt50PercentCycleLife
+	* Circularity/safetyMeasures is a Link to a pdf, here it is a SMC with a SML of extinguishingAgents... Extinguishing agent are mentioned in DIN SPEC 99100 but as Symbols/Labels and documentation for conformity
+	* Circularity/endOfLifeInformation not part of DIN SPEC 991100 ?
+	* Circularity/renewable Content not part of DIN SPEC 991100 ?
+	
+	* Circulariy/sparePartSources provided both: the part numbers and the adresses, might be splitted or the other way around: start with part number and address (but thenn address may be redundant).
+	
+* Circularity
+
+	* dismantlinAndRemovalInformation mdoelled as a DocumentSet from Handover Documentation? (it is a SML with SMC with properties documentType, mimeType and documentURL" - we probably need to extend the numbers (or map it to existing ones) of supported document types in Handover Documentation:
+	     ** dismantling information(DIN SPEC 99100 speaks of two documents for dismantling and removal)
+		 ** removal information (DIN SPEC 99100 speaks of two documents for dismantling and removal)
+		 ** safety measures
+		 ** Information of due diligence report in the Battery Passport
+		 EU declaration of conformity
+		 Results of test reports proving compliance
+		 Web link to public carbon footprint study
+		 Information of due diligence report in the Battery Passport
+		 Information on the role of end-users in contributing to waste prevention
+		 Information on the role of end-users in contributing to the separate collection of waste batteries
+		 Information on battery collection, preparation for second life and on treatment at end of life
+		 
+		 
+* license information not put to description but to README
+
+* formatting in case of lists in descriptions etc.: rework needed
+
+* DIN SPEC 99100: why is Part Numbers for components an URL?
+* Circularity/sparePartSources might be using contactInformation for Postal Addresses
+* do we have a SMT for spare parts?
+
+* TO BE DECIDED:
+  DocumentSet per aspect, for Circularity etc. - or really in ONE aspect Handover Documentation?
+  
+* unit in SAMM - define a "real" unit?
+		:kilogramperkilowatthour a samm:Unit ;
+		   samm:commonCode "kg CO2e/kWh" ;
+		   samm:symbol "CO2e/kWh" .
