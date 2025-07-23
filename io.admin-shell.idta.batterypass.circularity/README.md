@@ -30,7 +30,7 @@ with license CC BY-NC 4.0.
 # Changelog
 All notable changes to this model will be documented in this section.
 
-## [1.2.0] - <add date>
+## [1.0.0] - <add date>
 
 for changelog see  [IDTA-020xx V1.2, section "Version history"]()
 
