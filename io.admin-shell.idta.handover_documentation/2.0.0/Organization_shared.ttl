@@ -18,8 +18,8 @@
 @prefix : <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
 
 :organizationOfficialName a samm:Property ;
-   samm:preferredName "Offizieller Organisationsname"@de ;
-   samm:preferredName "organization official name"@en ;
+   samm:preferredName "offizieller Organisationsname"@de ;
+   samm:preferredName "official name of organization"@en ;
    samm:description "Offizieller Name der Organisation."@de ;
    samm:description "Official name of the organization."@en ;
    samm:see <urn:irdi:0173-1%2302-ABI004%23003> ;

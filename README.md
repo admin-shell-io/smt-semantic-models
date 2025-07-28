@@ -1,3 +1,7 @@
+Despite great efforts to ensure the accuracy, reliability and precision of technical and non-technical information, the IDTA cannot give any explicit or implicit assurance or warranty in respect of the accuracy of the provided aspect models for BatteryPass. 
+Users of this document are hereby made aware that the IDTA cannot be held liable for any damage or loss. 
+The application of these aspect models does not release users from the bility for their own actions and is applied at their own risk.
+
 # Semantic Models
 
 This repository is for aspect models that are used as semantic definition in [Submodel Templates](https://github.com/admin-shell-io/submodel-templates).
@@ -20,45 +24,32 @@ When defining and reusing elements from other aspect models, the following repos
 
 # Generator used
 
+The following CLI was used for
+* validating the aspect models
+* for generating the different files in folder "gen"
+
+  ** *.aas.json JSON format for AAS
+  ** *.aas.xml  XML format for AAS
+  ** *.aasx  aasx format for AAS
+  ** *.html  hmtl documentation of the Aspect Model
+  ** *.json  example payload in [Value-Only format](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1/mappings/mappings.html#value-only-serialization-in-json)
+
 [samm-cli - Semantic Aspect Meta Model Command Line Tool](https://github.com/eclipse-esmf/esmf-sdk)
+
 Version: 2.10.3
+
 Build date: 2025-05-08T14:47:57Z
+
 Git commit: 192116d12a1a4c9df4e03758a6b56dfa80132cf3
+
 
 # Known Issues generation of aasx from aspect model
 
 Known Issues wehen generating an aasx from aspect model:
 
 - payload names are not considered when generating idShort
-- SubmodelElement File is realized as SMC with two properties
 - no template qualifiers with type "Cardinality" or any other qualifiers are generated
 - the idShort of the Element within a SML has the idShort of the list, not of the element
 - no mapping to SubmodelElement "File", instead mapping to SMC with two properties "resourceValue" and "contentType"
+- Concept Descriptions: For enumerations no valueList is created for its values (example :HazardousSubstanceClassChrateristicEnum in MaterialComposition)
 
-
-# Open Questions
-
-* PowerCapabilityFade was removed from Technical Data? It belonged to Capacity before
-
-
-# Deviations from manually edited aasx of WG
-
-* ProductCondition
-  * batteryStatus missing
-  * "lastUpdate" property for the properties that change over time
-* Nameplate 3.0 should be used, not 2.0
-	* Nameplate: it is AddressInformation and not ContactInformation
-	* Nameplate: logoCompany is missing
-	* Naemplate/Markings: explosionSafeties not  contained in V3.0 any longer
-	* Nameplate/ContactInformation: is a dropin and contains much more properties
-	
-* TODOs for BatteryPass reused
-
-    * remainingEnergy: property name should be remainingEnergyValue and not remainingEnergyvalue
-	* why is evolutionOfSelfDischarge a SMC with just one Property evolutionOfSelfDischargeEntityValue?
-	* names of lists like "internalResistanceIncrease" or remainingPowerCapability
-    * no "lastUpdate" for batteryStatus
-    * no "lastUpdate" for energyThroughput
-	* no "lastUpdate" for roundTripEfficencyFade
-	* no "lastUpdate" for roundTripEfficiencyat50PerCentCycleLife 
-	* naming roundTripEfficiencyat50PerCentCycleLife should be roundTripEfficiencyAt50PercentCycleLife
