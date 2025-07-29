@@ -89,14 +89,14 @@
  
 :powerCapabilityAt20Charge a samm:Property ;
    samm:preferredName "power capability at 20% charge"@en ;
-   samm:description "PowerCapabilityFade In-use power fade, as defined in Battery Regulation. Pre-use power capability measurement at 20%."@en ;
+   samm:description "In-use power fade, as defined in Battery Regulation. Pre-use power capability measurement at 20%."@en ;
    samm:characteristic bp:PowerCapabilityAtSoc ;
    samm:exampleValue "1.7976931348623157e+308"^^xsd:float .
 
 
 :powerCapabilityAt80Charge a samm:Property ;
    samm:preferredName "power capability at 80% charge"@en ;
-   samm:description "PowerCapabilityFade In-use power fade, as defined in Battery Regulation. Pre-use power capability measurement at 80 %."@en ;
+   samm:description "In-use power fade, as defined in Battery Regulation. Pre-use power capability measurement at 80 %."@en ;
    samm:characteristic bp:PowerCapabilityAtSoc ;
    samm:exampleValue "1.7976931348623157e+308"^^xsd:float .
 
