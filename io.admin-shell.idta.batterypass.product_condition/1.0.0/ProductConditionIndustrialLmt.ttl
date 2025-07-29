@@ -31,26 +31,26 @@
 @prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 @prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
 
-:ProductCondition a samm:Aspect ;
-   samm:preferredName "product condition"@en ;
-   samm:description "Covers all battery lifetime relevant properties."@en ;
+:ProductConditionIndustrialLmt a samm:Aspect ;
+   samm:preferredName "condition of stationary battery energy story system (BESS) or light means of transport (LMT) battery"@en ;
+   samm:description "Covers all battery lifetime relevant properties of a stationary battery energy storage system (BESS) or light means of transport (LMT) using a Battery Management System (BMS) conformant to DIN DKE SPEC 99100."@en ;
    samm:properties ( 
 		[ samm:property bpg:batteryStatus; samm:payloadName "BatteryStatus" ] 
-        [ samm:property bp:energyThroughput; samm:optional true; samm:payloadName "EnergyThroughput" ]
-        [ samm:property bp:capacityThroughput; samm:optional true; samm:payloadName "CapacityThroughput" ]
+        [ samm:property bp:energyThroughput;  samm:payloadName "EnergyThroughput" ]
+        [ samm:property bp:capacityThroughput; samm:payloadName "CapacityThroughput" ]
 		[ samm:property bp:numberOfFullCycles ; samm:payloadName "NumberOfFullCycles" ]
         [ samm:property bp:stateOfCertifiedEnergy; samm:optional true;  samm:payloadName "StateOfCertifiedEnergy" ]
         [ samm:property bp:remainingEnergy; samm:optional true; samm:payloadName "RemainingEnergy" ]
-        [ samm:property bp:remainingCapacity; samm:optional true; samm:payloadName "RemainingCapacity" ]
-        [ samm:property bp:negativeEvents; samm:optional true; samm:payloadName "NegativeEvents" ]
-        [ samm:property bp:temperatureInformation; samm:optional true; samm:payloadName "TemperatureInformation" ]
+        [ samm:property bp:remainingCapacity; samm:payloadName "RemainingCapacity" ]
+        [ samm:property bp:negativeEvents; samm:payloadName "NegativeEvents" ]
+        [ samm:property bp:temperatureInformation; samm:payloadName "TemperatureInformation" ]
         [ samm:property bp:remainingPowerCapability; samm:optional true; samm:payloadName "RemainingPowerCapability" ]
         [ samm:property bp:roundTripEfficiencyFade; samm:payloadName "RoundTripEfficiencyFade" ]
-        [ samm:property bp:evolutionOfSelfDischarge; samm:optional true; samm:payloadName "EvolutionOfSelfDischarge" ]
+        [ samm:property bp:evolutionOfSelfDischarge; samm:payloadName "EvolutionOfSelfDischarge" ]
         [ samm:property bp:currentSelfDischargingRate; samm:optional true;  samm:payloadName "CurrentSelfDischargingRate" ]
         [ samm:property bp:internalResistanceIncrease; samm:payloadName "InternalResistanceIncrease" ]
         [ samm:property bp:roundTripEfficiencyat50PerCentCycleLife; samm:payloadName "RoundTripEfficiencyat50PerCentCycleLife" ]
-        [ samm:property bp:remainingRoundTripEnergyEfficiency; samm:optional true; samm:payloadName "RemainingRoundTripEnergyEfficiency" ]
+        [ samm:property bp:remainingRoundTripEnergyEfficiency; samm:payloadName "RemainingRoundTripEnergyEfficiency" ]
         [ samm:property bp:stateOfCharge; samm:payloadName "StateOfCharge" ]
 		) ;
    samm:operations ( ) ;
