@@ -1,3 +1,5 @@
+# Legal Note
+
 Despite great efforts to ensure the accuracy, reliability and precision of technical and non-technical information, the IDTA cannot give any explicit or implicit assurance or warranty in respect of the accuracy of the provided aspect models for BatteryPass. 
 Users of this document are hereby made aware that the IDTA cannot be held liable for any damage or loss. 
 The application of these aspect models does not release users from the bility for their own actions and is applied at their own risk.
@@ -43,7 +45,7 @@ Build date: 2025-05-08T14:47:57Z
 Git commit: 192116d12a1a4c9df4e03758a6b56dfa80132cf3
 
 
-# Known Issues generation of aasx from aspect model
+# Known issues for generation of aasx from aspect model
 
 Known Issues wehen generating an aasx from aspect model:
 
