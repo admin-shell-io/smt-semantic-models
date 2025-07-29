@@ -1,7 +1,7 @@
 
 # Open Questions
 
-* PowerCapabilityFade was removed from Technical Data? It belonged to Capacity before
+
 
 
 ## Deviations from manually edited aasx of WG
