@@ -53,5 +53,6 @@ Known Issues wehen generating an aasx from aspect model:
 - no template qualifiers with type "Cardinality" or any other qualifiers are generated
 - the idShort of the Element within a SML has the idShort of the list, not of the element
 - no mapping to SubmodelElement "File", instead mapping to SMC with two properties "resourceValue" and "contentType"
+- no example values generated, neither as "value" nor template qualifier "SMT/ExampleValue"
 - Concept Descriptions: For enumerations no valueList is created for its values (example :HazardousSubstanceClassChrateristicEnum in MaterialComposition)
 
