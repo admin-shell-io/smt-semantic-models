@@ -18,6 +18,7 @@
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
 @prefix contactInformation: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
+@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
 
 :Nameplate a samm:Aspect ;
@@ -26,6 +27,7 @@
    samm:description "Contains the nameplate information attached to the product within the Battery Product Passport."@en ;
    samm:description "Enthält die Information zum Typenschild des Produkts im Digitalen Batteriepass."@de ;
    samm:properties ( 
+   [ samm:property bpg:batteryStatus; samm:payloadName "BatteryStatus" ] 
    [ samm:property nameplate:uriOfTheProduct; samm:payloadName "URIOfTheProduct" ] 
    [ samm:property nameplate:manufacturerName; samm:payloadName "ManufacturerName" ] 
    [ samm:property nameplate:manufacturerProductDesignation; samm:payloadName "ManufacturerProductDesignation" ] 

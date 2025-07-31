@@ -28,14 +28,12 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#> .
 @prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.0#> .
-@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 @prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
 
 :ProductConditionIndustrialLmt a samm:Aspect ;
    samm:preferredName "condition of stationary battery energy story system (BESS) or light means of transport (LMT) battery"@en ;
    samm:description "Covers all battery lifetime relevant properties of a stationary battery energy storage system (BESS) or light means of transport (LMT) using a Battery Management System (BMS) conformant to DIN DKE SPEC 99100."@en ;
    samm:properties ( 
-		[ samm:property bpg:batteryStatus; samm:payloadName "BatteryStatus" ] 
         [ samm:property bp:energyThroughput;  samm:payloadName "EnergyThroughput" ]
         [ samm:property bp:capacityThroughput; samm:payloadName "CapacityThroughput" ]
 		[ samm:property bp:numberOfFullCycles ; samm:payloadName "NumberOfFullCycles" ]
