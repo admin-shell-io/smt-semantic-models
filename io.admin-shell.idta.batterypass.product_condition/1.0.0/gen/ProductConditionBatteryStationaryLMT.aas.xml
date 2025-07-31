@@ -10,7 +10,7 @@
         </aas:langStringTextType>
       </aas:description>
       <aas:administration/>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductConditionIndustrialLmt</aas:id>
       <aas:assetInformation>
         <aas:assetKind>Type</aas:assetKind>
       </aas:assetInformation>
@@ -20,7 +20,7 @@
           <aas:keys>
             <aas:key>
               <aas:type>Submodel</aas:type>
-              <aas:value>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition/submodel</aas:value>
+              <aas:value>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductConditionIndustrialLmt/submodel</aas:value>
             </aas:key>
           </aas:keys>
         </aas:reference>
@@ -29,22 +29,22 @@
   </aas:assetAdministrationShells>
   <aas:submodels>
     <aas:submodel>
-      <aas:idShort>ProductCondition</aas:idShort>
+      <aas:idShort>ProductConditionIndustrialLmt</aas:idShort>
       <aas:description>
         <aas:langStringTextType>
           <aas:language>en</aas:language>
-          <aas:text>Covers all battery lifetime relevant properties.</aas:text>
+          <aas:text>Covers all battery lifetime relevant properties of a stationary battery energy storage system (BESS) or light means of transport (LMT) using a Battery Management System (BMS) conformant to DIN DKE SPEC 99100.</aas:text>
         </aas:langStringTextType>
       </aas:description>
       <aas:administration/>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition/submodel</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductConditionIndustrialLmt/submodel</aas:id>
       <aas:kind>Template</aas:kind>
       <aas:semanticId>
         <aas:type>ExternalReference</aas:type>
         <aas:keys>
           <aas:key>
             <aas:type>GlobalReference</aas:type>
-            <aas:value>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition</aas:value>
+            <aas:value>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductConditionIndustrialLmt</aas:value>
           </aas:key>
         </aas:keys>
       </aas:semanticId>
@@ -766,20 +766,20 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.8</aas:text>
   <aas:conceptDescriptions>
     <aas:conceptDescription>
       <aas:category>APPLICATION_CLASS</aas:category>
-      <aas:idShort>ProductCondition</aas:idShort>
+      <aas:idShort>ProductConditionIndustrialLmt</aas:idShort>
       <aas:displayName>
         <aas:langStringNameType>
           <aas:language>en</aas:language>
-          <aas:text>product condition</aas:text>
+          <aas:text>condition of stationary battery energy story system (BESS) or light means of transport (LMT) battery</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
       <aas:description>
         <aas:langStringTextType>
           <aas:language>en</aas:language>
-          <aas:text>Covers all battery lifetime relevant properties.</aas:text>
+          <aas:text>Covers all battery lifetime relevant properties of a stationary battery energy storage system (BESS) or light means of transport (LMT) using a Battery Management System (BMS) conformant to DIN DKE SPEC 99100.</aas:text>
         </aas:langStringTextType>
       </aas:description>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductConditionIndustrialLmt</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -796,19 +796,19 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.8</aas:text>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>product condition</aas:text>
+                  <aas:text>condition of stationary battery energy story system (BESS) or light means of transport (LMT) battery</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>ProductCondition</aas:text>
+                  <aas:text>ProductConditionIndustrialLmt</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>Covers all battery lifetime relevant properties.</aas:text>
+                  <aas:text>Covers all battery lifetime relevant properties of a stationary battery energy storage system (BESS) or light means of transport (LMT) using a Battery Management System (BMS) conformant to DIN DKE SPEC 99100.</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>

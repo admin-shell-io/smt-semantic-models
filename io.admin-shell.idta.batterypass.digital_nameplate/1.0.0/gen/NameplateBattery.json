@@ -39,13 +39,13 @@
       "en" : "Example multi language string"
     },
     "IPCommunicationChannels" : [ {
-      "TypeOfCommunication" : "VLhpfQGTMDYpsBZxvfBoeygjb",
+      "TypeOfCommunication" : "RYtGKbgicZaHCBRQDSx",
       "availableTime" : [ {
         "en" : "Example multi language string"
       } ],
-      "AddressOfAdditionalLink" : "RYtGKbgicZaHCBRQDSx"
+      "AddressOfAdditionalLink" : "JxkyvRnL"
     } ],
-    "RoleOfContactPerson" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
+    "RoleOfContactPerson" : "eOMtThyhVNLWUZNRcBaQKxI",
     "TimeZone" : "-12:00",
     "Department" : [ {
       "en" : "Example multi language string"
@@ -54,7 +54,7 @@
       "TelephoneNumber" : [ {
         "en" : "Example multi language string"
       } ],
-      "TYpeOfTelephone" : "JxkyvRnL",
+      "TYpeOfTelephone" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
       "AvailableTime" : [ {
         "en" : "Example multi language string"
       } ]
@@ -65,7 +65,7 @@
     "FurtherDetailsOfContact" : {
       "en" : "Example multi language string"
     },
-    "AddressOfAdditionalLink" : "UMaAIKKIkknjWEXJUfPxxQHeWKEJ",
+    "AddressOfAdditionalLink" : "VLhpfQGTMDYpsBZxvfBoeygjb",
     "Street" : [ {
       "en" : "Example multi language string"
     } ],
@@ -88,7 +88,7 @@
       "en" : "Example multi language string"
     }
   },
-  "OrderCodeOfManufacturer" : "eOMtThyhVNLWUZNRcBaQKxI",
+  "OrderCodeOfManufacturer" : "UMaAIKKIkknjWEXJUfPxxQHeWKEJ",
   "CountryOfOrigin" : "dpHYZGhtgdntugzvvKAXLhM",
   "YearOfConstruction" : "2009",
   "Markings" : [ {
@@ -110,16 +110,16 @@
   "ManufacturerProductFamily" : [ {
     "en" : "Example multi language string"
   } ],
-  "SoftwareVersion" : "SF1",
+  "CompanyLogo" : "telnet://192.0.2.16:80/",
   "ManufacturerProductRoot" : [ {
     "en" : "Example multi language string"
   } ],
+  "SoftwareVersion" : "SF1",
   "SerialNumber" : "A12345-X75EN",
   "URIOfTheProduct" : "https://dc-qr.com/?m=R123456789",
   "ManufacturerProductDesignation" : [ {
     "en" : "Example multi language string"
   } ],
   "UniqueFacilityIdentifier" : "987654321",
-  "LogoCompany" : "telnet://192.0.2.16:80/",
   "DateOfManufacture" : "2009-01-01"
 }

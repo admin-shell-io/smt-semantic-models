@@ -7,12 +7,12 @@
     "submodels" : [ {
       "keys" : [ {
         "type" : "Submodel",
-        "value" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition/submodel"
+        "value" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductConditionIndustrialLmt/submodel"
       } ],
       "type" : "ModelReference"
     } ],
     "administration" : { },
-    "id" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition",
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductConditionIndustrialLmt",
     "description" : [ {
       "language" : "en",
       "text" : "defaultAdminShell"
@@ -33,29 +33,29 @@
         "modelType" : "DataSpecificationIec61360",
         "definition" : [ {
           "language" : "en",
-          "text" : "Covers all battery lifetime relevant properties."
+          "text" : "Covers all battery lifetime relevant properties of a stationary battery energy storage system (BESS) or light means of transport (LMT) using a Battery Management System (BMS) conformant to DIN DKE SPEC 99100."
         } ],
         "preferredName" : [ {
           "language" : "en",
-          "text" : "product condition"
+          "text" : "condition of stationary battery energy story system (BESS) or light means of transport (LMT) battery"
         } ],
         "shortName" : [ {
           "language" : "en",
-          "text" : "ProductCondition"
+          "text" : "ProductConditionIndustrialLmt"
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition",
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductConditionIndustrialLmt",
     "category" : "APPLICATION_CLASS",
     "description" : [ {
       "language" : "en",
-      "text" : "Covers all battery lifetime relevant properties."
+      "text" : "Covers all battery lifetime relevant properties of a stationary battery energy storage system (BESS) or light means of transport (LMT) using a Battery Management System (BMS) conformant to DIN DKE SPEC 99100."
     } ],
     "displayName" : [ {
       "language" : "en",
-      "text" : "product condition"
+      "text" : "condition of stationary battery energy story system (BESS) or light means of transport (LMT) battery"
     } ],
-    "idShort" : "ProductCondition"
+    "idShort" : "ProductConditionIndustrialLmt"
   }, {
     "modelType" : "ConceptDescription",
     "embeddedDataSpecifications" : [ {
@@ -1129,17 +1129,17 @@
     "semanticId" : {
       "keys" : [ {
         "type" : "GlobalReference",
-        "value" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition"
+        "value" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductConditionIndustrialLmt"
       } ],
       "type" : "ExternalReference"
     },
     "administration" : { },
-    "id" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition/submodel",
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductConditionIndustrialLmt/submodel",
     "description" : [ {
       "language" : "en",
-      "text" : "Covers all battery lifetime relevant properties."
+      "text" : "Covers all battery lifetime relevant properties of a stationary battery energy storage system (BESS) or light means of transport (LMT) using a Battery Management System (BMS) conformant to DIN DKE SPEC 99100."
     } ],
-    "idShort" : "ProductCondition",
+    "idShort" : "ProductConditionIndustrialLmt",
     "submodelElements" : [ {
       "modelType" : "Property",
       "semanticId" : {
