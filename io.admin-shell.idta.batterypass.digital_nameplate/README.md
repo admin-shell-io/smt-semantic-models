@@ -33,6 +33,7 @@ Contained Files:
 * urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0
 * urn:samm:io.admin-shell.idta.contact_information:3.0.0
 * urn:samm:io.admin-shell.idta.shared:3.1.0
+* urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0
 
 # Deviations from urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0
 
