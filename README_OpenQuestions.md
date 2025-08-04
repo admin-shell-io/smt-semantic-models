@@ -11,7 +11,7 @@
   * How to deal with different requirements for different battery categories: mandatory, recommended and optional?
 
 * ProductCondition
-  * batteryStatus missing
+  * batteryStatus added but has no updateDate: should it be added?
   * "lastUpdate" property for the properties that change over time
 * Nameplate 3.0 should be used, not 2.0
 	* Nameplate: it is AddressInformation and not ContactInformation
