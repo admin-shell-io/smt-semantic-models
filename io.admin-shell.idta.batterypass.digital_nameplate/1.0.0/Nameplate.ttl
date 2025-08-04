@@ -1,11 +1,22 @@
 ######################################################################
+# namespace: urn:samm:io.admin-shell.idta.batterypass.product_condition:1.2.0
 # Copyright (c) 2025 Bosch Connected Industry
 # Copyright (c) 2025 Industrial Digital Twin Association
 # This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#
+# namespace: urn:samm:io.BatteryPass
+# Copyright (c) 2025 Circulor GmbH on behalf of the Battery Pass Consortium
+#
+# The referenced work is made available under the terms of the
 # Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
 # which is available at
 # https://creativecommons.org/licenses/by-nc/4.0/.
-# SPDX-License-Identifier: CC-BY-4.0
+#
+# SPDX-License-Identifier: CC-BY-NC-4.0
 #######################################################################
 
 @prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
@@ -18,6 +29,7 @@
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
 @prefix contactInformation: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
+@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
 
 :Nameplate a samm:Aspect ;
@@ -26,25 +38,16 @@
    samm:description "Contains the nameplate information attached to the product within the Battery Product Passport."@en ;
    samm:description "Enthält die Information zum Typenschild des Produkts im Digitalen Batteriepass."@de ;
    samm:properties ( 
+   [ samm:property bpg:batteryStatus; samm:payloadName "BatteryStatus" ] 
    [ samm:property nameplate:uriOfTheProduct; samm:payloadName "URIOfTheProduct" ] 
    [ samm:property nameplate:manufacturerName; samm:payloadName "ManufacturerName" ] 
-   [ samm:property nameplate:manufacturerProductDesignation; samm:payloadName "ManufacturerProductDesignation" ] 
-   [ samm:property nameplate:addressInformation; samm:optional true; samm:payloadName "AddressInformation" ] 
-   [ samm:property nameplate:manufacturerProductRoot; samm:optional true; samm:payloadName "ManufacturerProductRoot" ]
-   [ samm:property nameplate:manufacturerProductFamily; samm:optional true; samm:payloadName "ManufacturerProductFamily" ] 
-   [ samm:property nameplate:manufacturerProductType; samm:optional true; samm:payloadName "ManufacturerProductType" ] 
-   [ samm:property nameplate:orderCodeOfManufacturer; samm:payloadName "OrderCodeOfManufacturer" ] 
-   [ samm:property nameplate:productArticleNumberOfManufacturer; samm:optional true; samm:payloadName "ProductArticleNumberOfManufacturer" ] 
+   [ samm:property nameplate:manufacturerProductDesignation; samm:optional true; samm:payloadName "ManufacturerProductDesignation" ] 
+   [ samm:property nameplate:addressInformation; samm:payloadName "AddressInformation" ] 
+   [ samm:property nameplate:orderCodeOfManufacturer; samm:optional true; samm:payloadName "OrderCodeOfManufacturer" ] 
    [ samm:property nameplate:serialNumber; samm:payloadName "SerialNumber" ] 
-   [ samm:property nameplate:yearOfConstruction; samm:payloadName "YearOfConstruction" ] 
-   [ samm:property nameplate:dateOfManufacture; samm:optional true; samm:payloadName "DateOfManufacture" ] 
-   [ samm:property nameplate:hardwareVersion; samm:optional true; samm:payloadName "HardwareVersion" ] 
-   [ samm:property nameplate:firmwareVersion; samm:optional true; samm:payloadName "FirmwareVersion" ] 
-   [ samm:property nameplate:softwareVersion; samm:optional true; samm:payloadName "SoftwareVersion" ] 
-   [ samm:property nameplate:countryOfOrigin; samm:payloadName "CountryOfOrigin" ] 
+   [ samm:property nameplate:dateOfManufacture; samm:payloadName "DateOfManufacture" ] 
    [ samm:property nameplate:uniqueFacilityIdentifier; samm:payloadName "UniqueFacilityIdentifier" ]
-   [ samm:property nameplate:logoCompany; samm:optional true; samm:payloadName "CompanyLogo" ]   
-   [ samm:property nameplate:markings; samm:optional true; samm:payloadName "Markings" ] 
+   [ samm:property nameplate:markings; samm:payloadName "Markings" ] 
    );
    samm:operations ( ) ;
    samm:events ( ) ;

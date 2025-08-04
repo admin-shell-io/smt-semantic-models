@@ -3,12 +3,12 @@
 # Copyright (c) 2025 Bosch Connected Industry
 # Copyright (c) 2025 Industrial Digital Twin Association
 # This work  is made available under the terms of the
-# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
 # which is available at
-# https://creativecommons.org/licenses/by-nc/4.0/.
+# https://creativecommons.org/licenses/by/4.0/.
 # SPDX-License-Identifier: CC-BY-4.0
 #
-# namespace: urn:samm:io.BatteryPass.Performance:1.2.0
+# namespace: urn:samm:io.BatteryPass
 # Copyright (c) 2025 Circulor GmbH on behalf of the Battery Pass Consortium
 #
 # The referenced work is made available under the terms of the
@@ -28,14 +28,12 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#> .
 @prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.0#> .
-@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 @prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
 
 :ProductCondition a samm:Aspect ;
    samm:preferredName "product condition"@en ;
    samm:description "Covers all battery lifetime relevant properties."@en ;
    samm:properties ( 
-		[ samm:property bpg:batteryStatus; samm:payloadName "BatteryStatus" ] 
         [ samm:property bp:energyThroughput; samm:optional true; samm:payloadName "EnergyThroughput" ]
         [ samm:property bp:capacityThroughput; samm:optional true; samm:payloadName "CapacityThroughput" ]
 		[ samm:property bp:numberOfFullCycles ; samm:payloadName "NumberOfFullCycles" ]
