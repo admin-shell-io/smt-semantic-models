@@ -7,12 +7,12 @@
     "submodels" : [ {
       "keys" : [ {
         "type" : "Submodel",
-        "value" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.2.0#ProductCondition/submodel"
+        "value" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition/submodel"
       } ],
       "type" : "ModelReference"
     } ],
     "administration" : { },
-    "id" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.2.0#ProductCondition",
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition",
     "description" : [ {
       "language" : "en",
       "text" : "defaultAdminShell"
@@ -45,7 +45,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.2.0#ProductCondition",
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition",
     "category" : "APPLICATION_CLASS",
     "description" : [ {
       "language" : "en",
@@ -743,36 +743,6 @@
         "dataType" : "REAL_MEASURE",
         "definition" : [ {
           "language" : "en",
-          "text" : "�Power fade (in %) means the decrease over time and upon usage in the amount of power that a battery can deliver at the rated voltage.� (see BattReg Annex IV (4)).\n\nPower fade should be calculated using original and remaining power capability following the formula below:\nPfade(x) = (1-P(x)) / PBOL\" �100\" %\" \nwhere\nx \tis the aging parameter (e.g. storage time, number of cycles, etc.);\nP(x) \tis the power capability at aging parameter x;\nPBOL \tis the power capability at begin of life.\n\nDIN DKE Spec 99100 chapter reference: 6.7.3.4"
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "powerFade"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "powerFade"
-        } ],
-        "unit" : "percent"
-      }
-    } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#powerFade",
-    "idShort" : "powerFade"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "REAL_MEASURE",
-        "definition" : [ {
-          "language" : "en",
           "text" : "Energy round trip efficiency fade should be calculated using the initial round trip energy efficiency and remaining round trip energy efficiency following the formula below:\n\nRTEfade (x) = (1-RTE(x)) / RTEBOL  �100\" %\" \nwhere\nx \tis the aging parameter (e.g. storage time, number of cycles, etc.);\nRTE(x) \tis the round trip energy efficiency at aging parameter x;\nRTEBOL \tis the round trip energy efficiency at begin of life.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.5"
         } ],
         "preferredName" : [ {
@@ -1159,12 +1129,12 @@
     "semanticId" : {
       "keys" : [ {
         "type" : "GlobalReference",
-        "value" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.2.0#ProductCondition"
+        "value" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition"
       } ],
       "type" : "ExternalReference"
     },
     "administration" : { },
-    "id" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.2.0#ProductCondition/submodel",
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition/submodel",
     "description" : [ {
       "language" : "en",
       "text" : "Covers all battery lifetime relevant properties."
@@ -1514,17 +1484,6 @@
           "idShort" : "lastUpdate"
         } ]
       } ]
-    }, {
-      "modelType" : "Property",
-      "semanticId" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#powerFade"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "valueType" : "xs:float",
-      "idShort" : "powerFade"
     }, {
       "modelType" : "Property",
       "semanticId" : {

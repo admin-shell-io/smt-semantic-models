@@ -10,7 +10,7 @@
         </aas:langStringTextType>
       </aas:description>
       <aas:administration/>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.2.0#ProductCondition</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition</aas:id>
       <aas:assetInformation>
         <aas:assetKind>Type</aas:assetKind>
       </aas:assetInformation>
@@ -20,7 +20,7 @@
           <aas:keys>
             <aas:key>
               <aas:type>Submodel</aas:type>
-              <aas:value>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.2.0#ProductCondition/submodel</aas:value>
+              <aas:value>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition/submodel</aas:value>
             </aas:key>
           </aas:keys>
         </aas:reference>
@@ -37,14 +37,14 @@
         </aas:langStringTextType>
       </aas:description>
       <aas:administration/>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.2.0#ProductCondition/submodel</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition/submodel</aas:id>
       <aas:kind>Template</aas:kind>
       <aas:semanticId>
         <aas:type>ExternalReference</aas:type>
         <aas:keys>
           <aas:key>
             <aas:type>GlobalReference</aas:type>
-            <aas:value>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.2.0#ProductCondition</aas:value>
+            <aas:value>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition</aas:value>
           </aas:key>
         </aas:keys>
       </aas:semanticId>
@@ -494,19 +494,6 @@ DIN DKE Spec 99100 chapter reference: 6.7.3.3</aas:text>
           </aas:value>
         </aas:submodelElementList>
         <aas:property>
-          <aas:idShort>powerFade</aas:idShort>
-          <aas:semanticId>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#powerFade</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:semanticId>
-          <aas:valueType>xs:float</aas:valueType>
-        </aas:property>
-        <aas:property>
           <aas:idShort>roundTripEfficiencyFade</aas:idShort>
           <aas:semanticId>
             <aas:type>ExternalReference</aas:type>
@@ -792,7 +779,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.8</aas:text>
           <aas:text>Covers all battery lifetime relevant properties.</aas:text>
         </aas:langStringTextType>
       </aas:description>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.2.0#ProductCondition</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1759,56 +1746,6 @@ DIN DKE Spec 99100 chapter reference: 6.7.7.5 - 8</aas:text>
 - Power capability at 80% and 20% state of charge.
 
 DIN DKE Spec 99100 chapter reference: 6.7.3.3</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>powerFade</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#powerFade</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>powerFade</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>powerFade</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:unit>percent</aas:unit>
-              <aas:dataType>REAL_MEASURE</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>�Power fade (in %) means the decrease over time and upon usage in the amount of power that a battery can deliver at the rated voltage.� (see BattReg Annex IV (4)).
-
-Power fade should be calculated using original and remaining power capability following the formula below:
-Pfade(x) = (1-P(x)) / PBOL" �100" %" 
-where
-x 	is the aging parameter (e.g. storage time, number of cycles, etc.);
-P(x) 	is the power capability at aging parameter x;
-PBOL 	is the power capability at begin of life.
-
-DIN DKE Spec 99100 chapter reference: 6.7.3.4</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>
