@@ -12,7 +12,7 @@ They are used in the so-called "Semantic driven workflow" as desribed in [HOW TO
 SPECIFICATION](https://industrialdigitaltwin.org/wp-content/uploads/2025/06/IDTA_How-to-write-a-SMT-v1.1.pdf).
 
 Here semantic models based on the [Semantic Aspect Meta Model (SAMM)](https://eclipse-esmf.github.io/samm-specification) are stored. 
-Additionally, [best practices](https://eclipse-esmf.github.io/samm-specification/snapshot/appendix/best-practices.html) as defined in the SAMM specification should be followed.
+[Best practices](https://eclipse-esmf.github.io/samm-specification/snapshot/appendix/best-practices.html) as defined in the SAMM specification should be followed.
 
 They belong to the namespaces starting with **io.admin-shell.idta**.
 
@@ -47,14 +47,14 @@ Git commit: 192116d12a1a4c9df4e03758a6b56dfa80132cf3
 
 # Known issues for generation of aasx from aspect model
 
-Known Issues wehen generating an aasx from aspect model:
+Known Issues wheen generating an aasx file from a .ttl aspect model file:
 
 - payload names are not considered when generating idShort
 - no template qualifiers with type "Cardinality" or any other qualifiers are generated
 - the idShort of the Element within a SML has the idShort of the list, not of the element
 - no mapping to SubmodelElement "File", instead mapping to SMC with two properties "resourceValue" and "contentType"
-- no example values generated, neither as "value" nor template qualifier "SMT/ExampleValue"
+- no example values generated, neither as "value" nor as qualifier using the template qualifier "SMT/ExampleValue"
 - semanticId only added for Properties but not for SMC or SML (but ConceptDescriptions are derived)
 - Concept Descriptions: For enumerations no valueList is created for its values (example :HazardousSubstanceClassChrateristicEnum in MaterialComposition)
-- Concept Descriptions: The preferred name is identical to the element name
+- Concept Descriptions: The preferred name is identical to the element name and not the samm:preferred name of the samm:property
 
