@@ -10,21 +10,20 @@
 
   * How to deal with different requirements for different battery categories: mandatory, recommended and optional?
 
-* ProductCondition
-  * batteryStatus added but has no updateDate: should it be added?
-  * "lastUpdate" property for the properties that change over time
-* Nameplate 3.0 should be used, not 2.0
+
+
 	* Nameplate: it is AddressInformation and not ContactInformation
 	* Nameplate: logoCompany is missing
-	* Naemplate/Markings: explosionSafeties not  contained in V3.0 any longer
+	* Nameplate/Markings: explosionSafeties not  contained in V3.0 any longer
 	* Nameplate/ContactInformation: is a dropin and contains much more properties
-	
+
+* ProductCondition
 ## TODOs for BatteryPass reused
+https://github.com/batterypass/BatteryPassDataModel/issues/17
 
     * remainingEnergy: property name should be remainingEnergyValue and not remainingEnergyvalue
 	* why is evolutionOfSelfDischarge a SMC with just one Property evolutionOfSelfDischargeEntityValue? "lastValue" missing?
 	* names of lists like "internalResistanceIncrease" or remainingPowerCapability
-    * no "lastUpdate" for batteryStatus
     * no "lastUpdate" for energyThroughput
 	* no "lastUpdate" for roundTripEfficencyFade
 	* no "lastUpdate" for roundTripEfficiencyat50PerCentCycleLife 
@@ -33,15 +32,15 @@
 	* Circularity/endOfLifeInformation not part of DIN SPEC 991100 ?
 	* Circularity/renewable Content not part of DIN SPEC 991100 ?
 	
-	* Circulariy/sparePartSources provided both: the part numbers and the adresses, might be splitted or the other way around: start with part number and address (but thenn address may be redundant).
+
 	
 ## Circularity
+https://github.com/batterypass/BatteryPassDataModel/issues/17
 
 	* dismantlinAndRemovalInformation mdoelled as a DocumentSet from Handover Documentation? (it is a SML with SMC with properties documentType, mimeType and documentURL" - we probably need to extend the numbers (or map it to existing ones) of supported document types in Handover Documentation:
 	     ** dismantling information(DIN SPEC 99100 speaks of two documents for dismantling and removal)
 		 ** removal information (DIN SPEC 99100 speaks of two documents for dismantling and removal)
 		 ** safety measures
-		 ** Information of due diligence report in the Battery Passport
 		 EU declaration of conformity
 		 Results of test reports proving compliance
 		 Web link to public carbon footprint study
@@ -49,6 +48,12 @@
 		 Information on the role of end-users in contributing to waste prevention
 		 Information on the role of end-users in contributing to the separate collection of waste batteries
 		 Information on battery collection, preparation for second life and on treatment at end of life
+
+## MaterialComposition
+
+https://github.com/batterypass/BatteryPassDataModel/issues/18
+* > bp:CASNumberConstraint :
+  The the exampleValue '7439-93-2 ' of the Property 'bp:batteryMaterialIdentifier' does not match the pattern '^\d{2,7}-\d{2}-\d{1}$' given in 'bp:CASNumberConstraint'.
 		 
 ## Other	
  
