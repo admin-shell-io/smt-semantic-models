@@ -7,7 +7,7 @@
     "hazardousSubstanceClass" : "AcuteToxicity",
     "hazardousSubstanceConcentration" : -1.7976931348623157E308,
     "hazardousSubstanceImpact" : [ "JxkyvRnL" ],
-    "hazardousSubstanceIdentifier" : "317719-13-1",
+    "hazardousSubstanceIdentifier" : "04116-49-3",
     "hazardousSubstanceLocation" : {
       "componentName" : "Anode",
       "componentId" : "RYtGKbgicZaHCBRQDSx"
@@ -16,7 +16,7 @@
   } ],
   "batteryMaterials" : [ {
     "batteryMaterialIdentifier" : "7439-93-2",
-    "batteryMaterialMass" : 2.1812614E38,
+    "batteryMaterialMass" : -2.7484227E38,
     "batteryMaterialName" : "Lithium",
     "batteryMaterialLocation" : {
       "componentName" : "Anode",
