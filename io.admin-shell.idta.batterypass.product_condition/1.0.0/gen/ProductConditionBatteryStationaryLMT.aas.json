@@ -1,0 +1,1682 @@
+{
+  "assetAdministrationShells" : [ {
+    "modelType" : "AssetAdministrationShell",
+    "assetInformation" : {
+      "assetKind" : "Type"
+    },
+    "submodels" : [ {
+      "keys" : [ {
+        "type" : "Submodel",
+        "value" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductConditionIndustrialLmt/submodel"
+      } ],
+      "type" : "ModelReference"
+    } ],
+    "administration" : { },
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductConditionIndustrialLmt",
+    "description" : [ {
+      "language" : "en",
+      "text" : "defaultAdminShell"
+    } ],
+    "idShort" : "defaultAdminShell"
+  } ],
+  "conceptDescriptions" : [ {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Covers all battery lifetime relevant properties of a stationary battery energy storage system (BESS) or light means of transport (LMT) using a Battery Management System (BMS) conformant to DIN DKE SPEC 99100."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "condition of stationary battery energy story system (BESS) or light means of transport (LMT) battery"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "ProductConditionIndustrialLmt"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductConditionIndustrialLmt",
+    "category" : "APPLICATION_CLASS",
+    "description" : [ {
+      "language" : "en",
+      "text" : "Covers all battery lifetime relevant properties of a stationary battery energy storage system (BESS) or light means of transport (LMT) using a Battery Management System (BMS) conformant to DIN DKE SPEC 99100."
+    } ],
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "condition of stationary battery energy story system (BESS) or light means of transport (LMT) battery"
+    } ],
+    "idShort" : "ProductConditionIndustrialLmt"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.7"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "energyThroughput"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "energyThroughput"
+        } ],
+        "unit" : "kilowattHour"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#energyThroughput",
+    "idShort" : "energyThroughput"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "capacityThroughputValue"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "capacityThroughputValue"
+        } ],
+        "unit" : "ampereHour"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#capacityThroughputValue",
+    "idShort" : "capacityThroughputValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Timestamp for dynamic data attributes show the last update time."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "lastUpdate"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "lastUpdate"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate",
+    "idShort" : "lastUpdate"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.8"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "capacityThroughput"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "capacityThroughput"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#capacityThroughput",
+    "idShort" : "capacityThroughput"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "INTEGER_MEASURE",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "numberOfFullCyclesValue"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "numberOfFullCyclesValue"
+        } ],
+        "unit" : "cycle"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#numberOfFullCyclesValue",
+    "idShort" : "numberOfFullCyclesValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Number of (full) charging and discharging cycles.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.3"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "numberOfFullCycles"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "numberOfFullCycles"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#numberOfFullCycles",
+    "idShort" : "numberOfFullCycles"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "stateOfCertifiedEnergyValue"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "stateOfCertifiedEnergyValue"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#stateOfCertifiedEnergyValue",
+    "idShort" : "stateOfCertifiedEnergyValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Definition based on UNECE GTR 22: The measured or on-board UBE performance at a specific point in its lifetime, expressed as a percentage of the certified usable battery energy.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.7"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "SOCE"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "stateOfCertifiedEnergy"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#stateOfCertifiedEnergy",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "SOCE"
+    } ],
+    "idShort" : "stateOfCertifiedEnergy"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "remainingEnergyalue"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "remainingEnergyalue"
+        } ],
+        "unit" : "kilowattHour"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingEnergyalue",
+    "idShort" : "remainingEnergyalue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Definition from UNECE GTR 22, applicable only to EVs.\nThe energy supplied by the battery from the beginning of the test procedure used for certification until the applicable break-off criterion of the test procedure used for certification is reached.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.6"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "remainingEnergy"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "remainingEnergy"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingEnergy",
+    "idShort" : "remainingEnergy"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "remainingCapacityValue"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "remainingCapacityValue"
+        } ],
+        "unit" : "kilowattHour"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingCapacityValue",
+    "idShort" : "remainingCapacityValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The in-use data attribute on capacity, corresponding with the definition of rated capacity.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.3"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "remainingCapacity"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "remainingCapacity"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingCapacity",
+    "idShort" : "remainingCapacity"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "Negative events, such as accidents. No further definition provided by regulation."
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "negativeEvent"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#negativeEvent",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "Negative events, such as accidents. No further definition provided by regulation."
+    } ],
+    "idShort" : "negativeEvent"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "negativeEvents"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "negativeEvents"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#negativeEvents",
+    "idShort" : "negativeEvents"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Cumulated time spent above the given upper boundary of temperature."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "timeExtremeHighTemp"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "timeExtremeHighTemp"
+        } ],
+        "unit" : "minuteUnitOfTime"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeHighTemp",
+    "idShort" : "timeExtremeHighTemp"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Cumulated time spent below the given lower boundary of temperature."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "timeExtremeLowTemp"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "timeExtremeLowTemp"
+        } ],
+        "unit" : "minuteUnitOfTime"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeLowTemp",
+    "idShort" : "timeExtremeLowTemp"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Cumulated time spent above the given upper boundary of temperature during Charging."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "timeExtremeHighTempCharging"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "timeExtremeHighTempCharging"
+        } ],
+        "unit" : "minuteUnitOfTime"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeHighTempCharging",
+    "idShort" : "timeExtremeHighTempCharging"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Cumulated time spent below the given lower boundary of temperature during charging."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "timeExtremeLowTempCharging"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "timeExtremeLowTempCharging"
+        } ],
+        "unit" : "minuteUnitOfTime"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeLowTempCharging",
+    "idShort" : "timeExtremeLowTempCharging"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The battery passport must include periodically recorded information on the operating environmental conditions, including temperature.\n\nDIN DKE Spec 99100 chapter reference: 6.7.7.5 - 8"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "temperatureInformation"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "temperatureInformation"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#temperatureInformation",
+    "idShort" : "temperatureInformation"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "rPCLastUpdated"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "rPCLastUpdated"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#rPCLastUpdated",
+    "idShort" : "rPCLastUpdated"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "atSoC"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "atSoC"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#atSoC",
+    "idShort" : "atSoC"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "powerCapabilityAt"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "powerCapabilityAt"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#powerCapabilityAt",
+    "idShort" : "powerCapabilityAt"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "remainingPowerCapabilityValue"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "remainingPowerCapabilityValue"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingPowerCapabilityValue",
+    "idShort" : "remainingPowerCapabilityValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "'- Original power capability (in Watts) and limits, with temperature range when relevant.\n- The amount of energy that a battery is capable to provide over a given period of time under reference conditions.\n- Power capability at 80% and 20% state of charge.\n\nDIN DKE Spec 99100 chapter reference: 6.7.3.3"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "remainingPowerCapability"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "remainingPowerCapability"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingPowerCapability",
+    "idShort" : "remainingPowerCapability"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Energy round trip efficiency fade should be calculated using the initial round trip energy efficiency and remaining round trip energy efficiency following the formula below:\n\nRTEfade (x) = (1-RTE(x)) / RTEBOL  �100\" %\" \nwhere\nx \tis the aging parameter (e.g. storage time, number of cycles, etc.);\nRTE(x) \tis the round trip energy efficiency at aging parameter x;\nRTEBOL \tis the round trip energy efficiency at begin of life.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.5"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "roundTripEfficiencyFade"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "roundTripEfficiencyFade"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#roundTripEfficiencyFade",
+    "idShort" : "roundTripEfficiencyFade"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "evolutionOfSelfDischargeEntityValue"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "evolutionOfSelfDischargeEntityValue"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#evolutionOfSelfDischargeEntityValue",
+    "idShort" : "evolutionOfSelfDischargeEntityValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "�Evolution of self-discharge rates� is the change of self-discharge over time and usage, as percentage calculated from the initial and current self-discharge rate.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.8"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "evolutionOfSelfDischarge"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "evolutionOfSelfDischarge"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#evolutionOfSelfDischarge",
+    "idShort" : "evolutionOfSelfDischarge"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "currentSelfDischargingRateEntity"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "currentSelfDischargingRateEntity"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#currentSelfDischargingRateEntity",
+    "idShort" : "currentSelfDischargingRateEntity"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The current self-discharge rate is the change of the self-discharge rate in an idle state of the battery in reference conditions (temperature etc.) at aging parameter x, e.g. after a certain amount of storage time or, number of cycles.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.7"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "currentSelfDischargingRate"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "currentSelfDischargingRate"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#currentSelfDischargingRate",
+    "idShort" : "currentSelfDischargingRate"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "internalResistanceIncreaseValue"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "internalResistanceIncreaseValue"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#internalResistanceIncreaseValue",
+    "idShort" : "internalResistanceIncreaseValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "batteryComponent"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "batteryComponent"
+        } ],
+        "valueList" : {
+          "valueReferencePairs" : [ {
+            "value" : "pack",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#BatteryComponent:_pack4862f447"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "module",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#BatteryComponent:_module120970d8"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "cell",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#BatteryComponent:_cell39d02b42"
+              } ],
+              "type" : "ModelReference"
+            }
+          } ]
+        }
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#batteryComponent",
+    "idShort" : "batteryComponent"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The internal resistance increase over time and upon usage should be defined based on the ratio of current and initial values as follows:\nRincrease(x) = (R(x)  - RBOL) / RBOL � 100 %\nwhere\nx \tis the aging parameter (e.g. storage time, number of cycles, etc.;);\nR(x)\tis the internal resistance at the aging parameter x; and\nRBOL\tis the internal resistance at begin of life.\n\nThe battery passport can include additional information about the internal resistance increase on battery cell and battery module level, if available. It should be defined and calculated analogously to the requirements on battery pack level above.\n\nDIN DKE Spec 99100 chapter reference: 6.7.5.3"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "internalResistanceIncrease"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "internalResistanceIncrease"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#internalResistanceIncrease",
+    "idShort" : "internalResistanceIncrease"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Initial round trip energy efficiency shall be measured at reference conditions that include the specification of �50 % of cycle-life�.\n\nTest methods and reference conditions should separately consider non-cycle applications and batteries with very long cycle-life.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.3\n"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "roundTripEfficiencyat50PerCentCycleLife"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "roundTripEfficiencyat50PerCentCycleLife"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#roundTripEfficiencyat50PerCentCycleLife",
+    "idShort" : "roundTripEfficiencyat50PerCentCycleLife"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "remainingRoundTripEnergyEfficiencyValue"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "remainingRoundTripEnergyEfficiencyValue"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingRoundTripEnergyEfficiencyValue",
+    "idShort" : "remainingRoundTripEnergyEfficiencyValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The battery passport shall include information, where possible, about the remaining round trip energy efficiency as information on the state of health of the battery \n\nThe update frequency of remaining round trip energy efficiency should be aligned with the update frequency of round trip energy efficiency fade and should be provided upon change of the battery status.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.4"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "remainingRoundTripEnergyEfficiency"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "remainingRoundTripEnergyEfficiency"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingRoundTripEnergyEfficiency",
+    "idShort" : "remainingRoundTripEnergyEfficiency"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "stateOfChargeValue"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "stateOfChargeValue"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#stateOfChargeValue",
+    "idShort" : "stateOfChargeValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The Battery Pass consortium proposes to change the definition to: \"available capacity in a battery expressed as a percentage of remaining capacity\" to reflect use of SoC in practice.  \n\nDIN DKE Spec 99100 chapter reference: 6.7.2.8"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "SoC"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "stateOfCharge"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#stateOfCharge",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "SoC"
+    } ],
+    "idShort" : "stateOfCharge"
+  } ],
+  "submodels" : [ {
+    "modelType" : "Submodel",
+    "kind" : "Template",
+    "semanticId" : {
+      "keys" : [ {
+        "type" : "GlobalReference",
+        "value" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductConditionIndustrialLmt"
+      } ],
+      "type" : "ExternalReference"
+    },
+    "administration" : { },
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductConditionIndustrialLmt/submodel",
+    "description" : [ {
+      "language" : "en",
+      "text" : "Covers all battery lifetime relevant properties of a stationary battery energy storage system (BESS) or light means of transport (LMT) using a Battery Management System (BMS) conformant to DIN DKE SPEC 99100."
+    } ],
+    "idShort" : "ProductConditionIndustrialLmt",
+    "submodelElements" : [ {
+      "modelType" : "Property",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#energyThroughput"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "valueType" : "xs:double",
+      "idShort" : "energyThroughput"
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "description" : [ {
+        "language" : "en",
+        "text" : "The data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.8"
+      } ],
+      "idShort" : "capacityThroughput",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#capacityThroughputValue"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:float",
+        "idShort" : "capacityThroughputValue"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:dateTime",
+        "idShort" : "lastUpdate"
+      } ]
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "description" : [ {
+        "language" : "en",
+        "text" : "Number of (full) charging and discharging cycles.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.3"
+      } ],
+      "idShort" : "numberOfFullCycles",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#numberOfFullCyclesValue"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:integer",
+        "idShort" : "numberOfFullCyclesValue"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:dateTime",
+        "idShort" : "lastUpdate"
+      } ]
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "description" : [ {
+        "language" : "en",
+        "text" : "Definition based on UNECE GTR 22: The measured or on-board UBE performance at a specific point in its lifetime, expressed as a percentage of the certified usable battery energy.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.7"
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "SOCE"
+      } ],
+      "idShort" : "stateOfCertifiedEnergy",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#stateOfCertifiedEnergyValue"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:float",
+        "idShort" : "stateOfCertifiedEnergyValue"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:dateTime",
+        "idShort" : "lastUpdate"
+      } ]
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "description" : [ {
+        "language" : "en",
+        "text" : "Definition from UNECE GTR 22, applicable only to EVs.\nThe energy supplied by the battery from the beginning of the test procedure used for certification until the applicable break-off criterion of the test procedure used for certification is reached.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.6"
+      } ],
+      "idShort" : "remainingEnergy",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingEnergyalue"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:float",
+        "idShort" : "remainingEnergyalue"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:dateTime",
+        "idShort" : "lastUpdate"
+      } ]
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "description" : [ {
+        "language" : "en",
+        "text" : "The in-use data attribute on capacity, corresponding with the definition of rated capacity.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.3"
+      } ],
+      "idShort" : "remainingCapacity",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingCapacityValue"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:float",
+        "idShort" : "remainingCapacityValue"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:dateTime",
+        "idShort" : "lastUpdate"
+      } ]
+    }, {
+      "modelType" : "SubmodelElementList",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#NegativeEvents"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "idShort" : "negativeEvents",
+      "orderRelevant" : false,
+      "typeValueListElement" : "SubmodelElementCollection",
+      "value" : [ {
+        "modelType" : "SubmodelElementCollection",
+        "idShort" : "negativeEvents",
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#negativeEvent"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "Negative events, such as accidents. No further definition provided by regulation."
+          } ],
+          "idShort" : "negativeEvent"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:dateTime",
+          "idShort" : "lastUpdate"
+        } ]
+      } ]
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "description" : [ {
+        "language" : "en",
+        "text" : "The battery passport must include periodically recorded information on the operating environmental conditions, including temperature.\n\nDIN DKE Spec 99100 chapter reference: 6.7.7.5 - 8"
+      } ],
+      "idShort" : "temperatureInformation",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeHighTemp"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:double",
+        "idShort" : "timeExtremeHighTemp"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeLowTemp"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:double",
+        "idShort" : "timeExtremeLowTemp"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeHighTempCharging"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:double",
+        "idShort" : "timeExtremeHighTempCharging"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeLowTempCharging"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:double",
+        "idShort" : "timeExtremeLowTempCharging"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:dateTime",
+        "idShort" : "lastUpdate"
+      } ]
+    }, {
+      "modelType" : "SubmodelElementList",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#RemainingPowerCapability"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "description" : [ {
+        "language" : "en",
+        "text" : "'- Original power capability (in Watts) and limits, with temperature range when relevant.\n- The amount of energy that a battery is capable to provide over a given period of time under reference conditions.\n- Power capability at 80% and 20% state of charge.\n\nDIN DKE Spec 99100 chapter reference: 6.7.3.3"
+      } ],
+      "idShort" : "remainingPowerCapability",
+      "orderRelevant" : false,
+      "typeValueListElement" : "SubmodelElementCollection",
+      "value" : [ {
+        "modelType" : "SubmodelElementCollection",
+        "description" : [ {
+          "language" : "en",
+          "text" : "'- Original power capability (in Watts) and limits, with temperature range when relevant.\n- The amount of energy that a battery is capable to provide over a given period of time under reference conditions.\n- Power capability at 80% and 20% state of charge.\n\nDIN DKE Spec 99100 chapter reference: 6.7.3.3"
+        } ],
+        "idShort" : "remainingPowerCapability",
+        "value" : [ {
+          "modelType" : "SubmodelElementCollection",
+          "idShort" : "remainingPowerCapabilityValue",
+          "value" : [ {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#rPCLastUpdated"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:dateTime",
+            "idShort" : "rPCLastUpdated"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#atSoC"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:float",
+            "idShort" : "atSoC"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#powerCapabilityAt"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:float",
+            "idShort" : "powerCapabilityAt"
+          } ]
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:dateTime",
+          "idShort" : "lastUpdate"
+        } ]
+      } ]
+    }, {
+      "modelType" : "Property",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#roundTripEfficiencyFade"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "valueType" : "xs:float",
+      "idShort" : "roundTripEfficiencyFade"
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "description" : [ {
+        "language" : "en",
+        "text" : "�Evolution of self-discharge rates� is the change of self-discharge over time and usage, as percentage calculated from the initial and current self-discharge rate.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.8"
+      } ],
+      "idShort" : "evolutionOfSelfDischarge",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#evolutionOfSelfDischargeEntityValue"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:float",
+        "idShort" : "evolutionOfSelfDischargeEntityValue"
+      } ]
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "description" : [ {
+        "language" : "en",
+        "text" : "The current self-discharge rate is the change of the self-discharge rate in an idle state of the battery in reference conditions (temperature etc.) at aging parameter x, e.g. after a certain amount of storage time or, number of cycles.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.7"
+      } ],
+      "idShort" : "currentSelfDischargingRate",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#currentSelfDischargingRateEntity"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:float",
+        "idShort" : "currentSelfDischargingRateEntity"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:dateTime",
+        "idShort" : "lastUpdate"
+      } ]
+    }, {
+      "modelType" : "SubmodelElementList",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#CurrentInternalResistanceValue"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "description" : [ {
+        "language" : "en",
+        "text" : "The internal resistance increase over time and upon usage should be defined based on the ratio of current and initial values as follows:\nRincrease(x) = (R(x)  - RBOL) / RBOL � 100 %\nwhere\nx \tis the aging parameter (e.g. storage time, number of cycles, etc.;);\nR(x)\tis the internal resistance at the aging parameter x; and\nRBOL\tis the internal resistance at begin of life.\n\nThe battery passport can include additional information about the internal resistance increase on battery cell and battery module level, if available. It should be defined and calculated analogously to the requirements on battery pack level above.\n\nDIN DKE Spec 99100 chapter reference: 6.7.5.3"
+      } ],
+      "idShort" : "internalResistanceIncrease",
+      "orderRelevant" : false,
+      "typeValueListElement" : "SubmodelElementCollection",
+      "value" : [ {
+        "modelType" : "SubmodelElementCollection",
+        "description" : [ {
+          "language" : "en",
+          "text" : "The internal resistance increase over time and upon usage should be defined based on the ratio of current and initial values as follows:\nRincrease(x) = (R(x)  - RBOL) / RBOL � 100 %\nwhere\nx \tis the aging parameter (e.g. storage time, number of cycles, etc.;);\nR(x)\tis the internal resistance at the aging parameter x; and\nRBOL\tis the internal resistance at begin of life.\n\nThe battery passport can include additional information about the internal resistance increase on battery cell and battery module level, if available. It should be defined and calculated analogously to the requirements on battery pack level above.\n\nDIN DKE Spec 99100 chapter reference: 6.7.5.3"
+        } ],
+        "idShort" : "internalResistanceIncrease",
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#internalResistanceIncreaseValue"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:float",
+          "idShort" : "internalResistanceIncreaseValue"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:dateTime",
+          "idShort" : "lastUpdate"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#batteryComponent"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:string",
+          "idShort" : "batteryComponent"
+        } ]
+      } ]
+    }, {
+      "modelType" : "Property",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#roundTripEfficiencyat50PerCentCycleLife"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "valueType" : "xs:float",
+      "idShort" : "roundTripEfficiencyat50PerCentCycleLife"
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "description" : [ {
+        "language" : "en",
+        "text" : "The battery passport shall include information, where possible, about the remaining round trip energy efficiency as information on the state of health of the battery \n\nThe update frequency of remaining round trip energy efficiency should be aligned with the update frequency of round trip energy efficiency fade and should be provided upon change of the battery status.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.4"
+      } ],
+      "idShort" : "remainingRoundTripEnergyEfficiency",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingRoundTripEnergyEfficiencyValue"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:float",
+        "idShort" : "remainingRoundTripEnergyEfficiencyValue"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:dateTime",
+        "idShort" : "lastUpdate"
+      } ]
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "description" : [ {
+        "language" : "en",
+        "text" : "The Battery Pass consortium proposes to change the definition to: \"available capacity in a battery expressed as a percentage of remaining capacity\" to reflect use of SoC in practice.  \n\nDIN DKE Spec 99100 chapter reference: 6.7.2.8"
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "SoC"
+      } ],
+      "idShort" : "stateOfCharge",
+      "value" : [ {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#stateOfChargeValue"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:float",
+        "idShort" : "stateOfChargeValue"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:dateTime",
+        "idShort" : "lastUpdate"
+      } ]
+    } ]
+  } ]
+}
