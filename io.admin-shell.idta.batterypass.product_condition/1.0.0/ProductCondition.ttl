@@ -41,7 +41,7 @@
         [ samm:property bp:remainingEnergy; samm:optional true; samm:payloadName "RemainingEnergy" ]
         [ samm:property bp:remainingCapacity; samm:payloadName "RemainingCapacity" ]
         [ samm:property bp:negativeEvents; samm:optional true; samm:payloadName "NegativeEvents" ]
-        [ samm:property bp:temperatureInformation; samm:optional true; samm:payloadName "TemperatureInformation" ]
+        [ samm:property bp:temperatureInformation; samm:payloadName "TemperatureInformation" ]
         [ samm:property bp:remainingPowerCapability; samm:optional true; samm:payloadName "RemainingPowerCapability" ]
         [ samm:property bp:evolutionOfSelfDischarge; samm:optional true; samm:payloadName "EvolutionOfSelfDischarge" ]
         [ samm:property bp:currentSelfDischargingRate; samm:optional true;  samm:payloadName "CurrentSelfDischargingRate" ]
