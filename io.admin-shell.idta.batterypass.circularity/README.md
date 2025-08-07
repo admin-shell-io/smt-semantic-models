@@ -18,13 +18,13 @@ The battery passport consists of the following 7 parts:
 *	Digital Battery Passport - Part 7: Circularity  (IDTA-02035-7)
 
 Source GitHub IDTA: https://github.com/admin-shell-io/submodel-templates 
+
 Source Content Hub of the IDTA: [IDTA-02035-7 V1.2]()
 
 # Dependencies
 
-This model is using the models of the BatteryPass Consortium: https://github.com/batterypass/BatteryPassDataModel/tree/main/BatteryPass/io.BatteryPass.Circularity
+This model is using the models of the BatteryPass Consortium: https://github.com/batterypass/BatteryPassDataModel
 with license CC BY-NC 4.0.
-
 
 
 # Changelog
@@ -39,10 +39,9 @@ Contained Files:
 * Circularity.ttl
 
 
-
 Dependencies:
 
-@prefix bp: <urn:samm:io.BatteryPass.Circularity:1.2.0#> .
+urn:samm:io.BatteryPass.Circularity:1.2.0#
 
 
 
