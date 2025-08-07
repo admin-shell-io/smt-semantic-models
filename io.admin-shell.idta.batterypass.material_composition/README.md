@@ -38,5 +38,9 @@ Dependencies:
 
 * urn:samm:io.BatteryPass.MaterialComposition:1.2.0
 
+Known Issues:
+
+* semanticId of Submodel is not correct
+
 
 

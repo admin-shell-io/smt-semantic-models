@@ -741,36 +741,6 @@
       "dataSpecificationContent" : {
         "modelType" : "DataSpecificationIec61360",
         "dataType" : "REAL_MEASURE",
-        "definition" : [ {
-          "language" : "en",
-          "text" : "Energy round trip efficiency fade should be calculated using the initial round trip energy efficiency and remaining round trip energy efficiency following the formula below:\n\nRTEfade (x) = (1-RTE(x)) / RTEBOL  �100\" %\" \nwhere\nx \tis the aging parameter (e.g. storage time, number of cycles, etc.);\nRTE(x) \tis the round trip energy efficiency at aging parameter x;\nRTEBOL \tis the round trip energy efficiency at begin of life.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.5"
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "roundTripEfficiencyFade"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "roundTripEfficiencyFade"
-        } ],
-        "unit" : "percent"
-      }
-    } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#roundTripEfficiencyFade",
-    "idShort" : "roundTripEfficiencyFade"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "REAL_MEASURE",
         "preferredName" : [ {
           "language" : "en",
           "text" : "evolutionOfSelfDischargeEntityValue"
@@ -868,146 +838,6 @@
     } ],
     "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#currentSelfDischargingRate",
     "idShort" : "currentSelfDischargingRate"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "REAL_MEASURE",
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "internalResistanceIncreaseValue"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "internalResistanceIncreaseValue"
-        } ],
-        "unit" : "percent"
-      }
-    } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#internalResistanceIncreaseValue",
-    "idShort" : "internalResistanceIncreaseValue"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "batteryComponent"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "batteryComponent"
-        } ],
-        "valueList" : {
-          "valueReferencePairs" : [ {
-            "value" : "pack",
-            "valueId" : {
-              "keys" : [ {
-                "type" : "DataElement",
-                "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#BatteryComponent:_pack4862f447"
-              } ],
-              "type" : "ModelReference"
-            }
-          }, {
-            "value" : "module",
-            "valueId" : {
-              "keys" : [ {
-                "type" : "DataElement",
-                "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#BatteryComponent:_module120970d8"
-              } ],
-              "type" : "ModelReference"
-            }
-          }, {
-            "value" : "cell",
-            "valueId" : {
-              "keys" : [ {
-                "type" : "DataElement",
-                "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#BatteryComponent:_cell39d02b42"
-              } ],
-              "type" : "ModelReference"
-            }
-          } ]
-        }
-      }
-    } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#batteryComponent",
-    "idShort" : "batteryComponent"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "en",
-          "text" : "The internal resistance increase over time and upon usage should be defined based on the ratio of current and initial values as follows:\nRincrease(x) = (R(x)  - RBOL) / RBOL � 100 %\nwhere\nx \tis the aging parameter (e.g. storage time, number of cycles, etc.;);\nR(x)\tis the internal resistance at the aging parameter x; and\nRBOL\tis the internal resistance at begin of life.\n\nThe battery passport can include additional information about the internal resistance increase on battery cell and battery module level, if available. It should be defined and calculated analogously to the requirements on battery pack level above.\n\nDIN DKE Spec 99100 chapter reference: 6.7.5.3"
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "internalResistanceIncrease"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "internalResistanceIncrease"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#internalResistanceIncrease",
-    "idShort" : "internalResistanceIncrease"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "REAL_MEASURE",
-        "definition" : [ {
-          "language" : "en",
-          "text" : "Initial round trip energy efficiency shall be measured at reference conditions that include the specification of �50 % of cycle-life�.\n\nTest methods and reference conditions should separately consider non-cycle applications and batteries with very long cycle-life.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.3\n"
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "roundTripEfficiencyat50PerCentCycleLife"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "roundTripEfficiencyat50PerCentCycleLife"
-        } ],
-        "unit" : "percent"
-      }
-    } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#roundTripEfficiencyat50PerCentCycleLife",
-    "idShort" : "roundTripEfficiencyat50PerCentCycleLife"
   }, {
     "modelType" : "ConceptDescription",
     "embeddedDataSpecifications" : [ {
@@ -1485,17 +1315,6 @@
         } ]
       } ]
     }, {
-      "modelType" : "Property",
-      "semanticId" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#roundTripEfficiencyFade"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "valueType" : "xs:float",
-      "idShort" : "roundTripEfficiencyFade"
-    }, {
       "modelType" : "SubmodelElementCollection",
       "description" : [ {
         "language" : "en",
@@ -1544,75 +1363,6 @@
         "valueType" : "xs:dateTime",
         "idShort" : "lastUpdate"
       } ]
-    }, {
-      "modelType" : "SubmodelElementList",
-      "semanticId" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#CurrentInternalResistanceValue"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "description" : [ {
-        "language" : "en",
-        "text" : "The internal resistance increase over time and upon usage should be defined based on the ratio of current and initial values as follows:\nRincrease(x) = (R(x)  - RBOL) / RBOL � 100 %\nwhere\nx \tis the aging parameter (e.g. storage time, number of cycles, etc.;);\nR(x)\tis the internal resistance at the aging parameter x; and\nRBOL\tis the internal resistance at begin of life.\n\nThe battery passport can include additional information about the internal resistance increase on battery cell and battery module level, if available. It should be defined and calculated analogously to the requirements on battery pack level above.\n\nDIN DKE Spec 99100 chapter reference: 6.7.5.3"
-      } ],
-      "idShort" : "internalResistanceIncrease",
-      "orderRelevant" : false,
-      "typeValueListElement" : "SubmodelElementCollection",
-      "value" : [ {
-        "modelType" : "SubmodelElementCollection",
-        "description" : [ {
-          "language" : "en",
-          "text" : "The internal resistance increase over time and upon usage should be defined based on the ratio of current and initial values as follows:\nRincrease(x) = (R(x)  - RBOL) / RBOL � 100 %\nwhere\nx \tis the aging parameter (e.g. storage time, number of cycles, etc.;);\nR(x)\tis the internal resistance at the aging parameter x; and\nRBOL\tis the internal resistance at begin of life.\n\nThe battery passport can include additional information about the internal resistance increase on battery cell and battery module level, if available. It should be defined and calculated analogously to the requirements on battery pack level above.\n\nDIN DKE Spec 99100 chapter reference: 6.7.5.3"
-        } ],
-        "idShort" : "internalResistanceIncrease",
-        "value" : [ {
-          "modelType" : "Property",
-          "semanticId" : {
-            "keys" : [ {
-              "type" : "GlobalReference",
-              "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#internalResistanceIncreaseValue"
-            } ],
-            "type" : "ExternalReference"
-          },
-          "valueType" : "xs:float",
-          "idShort" : "internalResistanceIncreaseValue"
-        }, {
-          "modelType" : "Property",
-          "semanticId" : {
-            "keys" : [ {
-              "type" : "GlobalReference",
-              "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
-            } ],
-            "type" : "ExternalReference"
-          },
-          "valueType" : "xs:dateTime",
-          "idShort" : "lastUpdate"
-        }, {
-          "modelType" : "Property",
-          "semanticId" : {
-            "keys" : [ {
-              "type" : "GlobalReference",
-              "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#batteryComponent"
-            } ],
-            "type" : "ExternalReference"
-          },
-          "valueType" : "xs:string",
-          "idShort" : "batteryComponent"
-        } ]
-      } ]
-    }, {
-      "modelType" : "Property",
-      "semanticId" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#roundTripEfficiencyat50PerCentCycleLife"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "valueType" : "xs:float",
-      "idShort" : "roundTripEfficiencyat50PerCentCycleLife"
     }, {
       "modelType" : "SubmodelElementCollection",
       "description" : [ {

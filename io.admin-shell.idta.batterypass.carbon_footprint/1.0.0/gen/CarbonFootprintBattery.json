@@ -1,7 +1,7 @@
 {
   "ProductCarbonFootprints" : [ {
     "QuantityOfMeasureForCalculation" : 5.0,
-    "PublicationDate" : "2025-07-23T11:16:58.787+02:00",
+    "PublicationDate" : "2025-08-07T12:49:59.890+02:00",
     "ExplanatoryStatement" : {
       "value" : "https://example.com/SafetyInstructions.pdf",
       "contentType" : "application/pdf"
@@ -89,7 +89,7 @@
         "en" : "Example multi language string"
       }
     },
-    "ExpirationDate" : "2025-07-23T11:16:58.787+02:00",
+    "ExpirationDate" : "2025-08-07T12:49:59.890+02:00",
     "PcfCo2eq" : 17.2,
     "ReferenceImpactUnitForCalculation" : "piece",
     "PcfCalculationMethods" : [ "ISO 14067" ],

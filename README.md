@@ -57,4 +57,6 @@ Known Issues wheen generating an aasx file from a .ttl aspect model file:
 - semanticId only added for Properties but not for SMC or SML (but ConceptDescriptions are derived)
 - Concept Descriptions: For enumerations no valueList is created for its values (example :HazardousSubstanceClassChrateristicEnum in MaterialComposition)
 - Concept Descriptions: The preferred name is identical to the element name and not the samm:preferred name of the samm:property
+- for some models the generated Submodel/id and Submodel/semanticId are not correct and need to be updated manually
+
 
