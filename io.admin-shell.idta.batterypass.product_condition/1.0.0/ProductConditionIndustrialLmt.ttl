@@ -46,8 +46,7 @@
         [ samm:property bp:roundTripEfficiencyFade; samm:payloadName "RoundTripEfficiencyFade" ]
         [ samm:property bp:evolutionOfSelfDischarge; samm:payloadName "EvolutionOfSelfDischarge" ]
         [ samm:property bp:currentSelfDischargingRate; samm:optional true;  samm:payloadName "CurrentSelfDischargingRate" ]
-        [ samm:property bp:internalResistanceIncrease; samm:payloadName "InternalResistanceIncrease" ]
-        [ samm:property bp:roundTripEfficiencyat50PerCentCycleLife; samm:payloadName "RoundTripEfficiencyat50PerCentCycleLife" ]
+       
         [ samm:property bp:remainingRoundTripEnergyEfficiency; samm:payloadName "RemainingRoundTripEnergyEfficiency" ]
         [ samm:property bp:stateOfCharge; samm:payloadName "StateOfCharge" ]
 		) ;
