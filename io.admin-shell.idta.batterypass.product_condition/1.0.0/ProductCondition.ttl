@@ -36,10 +36,10 @@
    samm:properties ( 
         [ samm:property bp:energyThroughput; samm:optional true; samm:payloadName "EnergyThroughput" ]
         [ samm:property bp:capacityThroughput; samm:optional true; samm:payloadName "CapacityThroughput" ]
-		[ samm:property bp:numberOfFullCycles ; samm:payloadName "NumberOfFullCycles" ]
+		[ samm:property bp:numberOfFullCycles; samm:payloadName "NumberOfFullCycles" ]
         [ samm:property bp:stateOfCertifiedEnergy; samm:payloadName "StateOfCertifiedEnergy" ]
         [ samm:property bp:remainingEnergy; samm:optional true; samm:payloadName "RemainingEnergy" ]
-        [ samm:property bp:remainingCapacity; samm:optional true; samm:payloadName "RemainingCapacity" ]
+        [ samm:property bp:remainingCapacity; samm:payloadName "RemainingCapacity" ]
         [ samm:property bp:negativeEvents; samm:optional true; samm:payloadName "NegativeEvents" ]
         [ samm:property bp:temperatureInformation; samm:optional true; samm:payloadName "TemperatureInformation" ]
         [ samm:property bp:remainingPowerCapability; samm:optional true; samm:payloadName "RemainingPowerCapability" ]
