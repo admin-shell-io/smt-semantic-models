@@ -67,8 +67,7 @@
    samm:see <https://admin-shell.io/idta/CarbonFootprint/ProductOrSectorSpecificCarbonFootprint/1/0> ;
    samm:characteristic :ProductOrSectorSpecificCarbonFootprintSet .
 
-:ProductCarbonFootprintSet a samm-c:Set ;
-   samm:dataType :ProductCarbonFootprintEntity .
+
 
 :ProductOrSectorSpecificCarbonFootprintSet a samm-c:Set ;
    samm:dataType :ProductOrSectorSpecificCarbonFootprintEntity .
