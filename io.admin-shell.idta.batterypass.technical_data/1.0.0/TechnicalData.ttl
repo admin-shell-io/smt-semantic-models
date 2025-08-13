@@ -46,7 +46,10 @@
 :TechnicalData a samm:Aspect ;
    samm:description "Technical data of the asset and associated product classificatons."@en ;
    samm:see <https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2> ;
-   samm:properties ( tech:generalInformation [ samm:property tech:productClassifications; samm:optional true ]  :technicalProperties ) ;
+   samm:properties ( 
+   	 [ samm:property tech:generalInformation; samm:payloadName "GeneralInformation" ] 
+	 [ samm:property :technicalProperties; samm:payloadName "TechnicalProperties" ] 
+	  ) ;
    samm:operations ( ) ;
    samm:events ( ) .
 
