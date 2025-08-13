@@ -7,12 +7,12 @@
     "submodels" : [ {
       "keys" : [ {
         "type" : "Submodel",
-        "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData/submodel"
+        "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#TechnicalData/submodel"
       } ],
       "type" : "ModelReference"
     } ],
     "administration" : { },
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData",
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#TechnicalData",
     "description" : [ {
       "language" : "en",
       "text" : "defaultAdminShell"
@@ -45,209 +45,13 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData",
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#TechnicalData",
     "category" : "APPLICATION_CLASS",
     "description" : [ {
       "language" : "en",
       "text" : "Technical data of the asset and associated product classificatons."
     } ],
     "idShort" : "TechnicalData"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "en",
-          "text" : "Further information on the product, the validity of the information provided and this data record."
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "furtherInformation"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "furtherInformation"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#furtherInformation",
-    "idShort" : "furtherInformation"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "en",
-          "text" : "Technical and product properties. Individual Characteristics that describe the product and its technical properties."
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "technicalProperties"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "technicalProperties"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#technicalProperties",
-    "idShort" : "technicalProperties"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "en",
-          "text" : "Common name of the classification system.\nNote: Examples for common names for classification systems are \"ECLASS\" or \"IEC CDD\"."
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "product classification system"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "productClassificationSystem"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassificationSystem",
-    "displayName" : [ {
-      "language" : "en",
-      "text" : "product classification system"
-    } ],
-    "idShort" : "productClassificationSystem"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "en",
-          "text" : "Common version identifier of the used classification system, in order to distinguish different version of the property dictionary.\nNote: Casing is to be ignored."
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "classification system version"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "classificationSystemVersion"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#classificationSystemVersion",
-    "displayName" : [ {
-      "language" : "en",
-      "text" : "classification system version"
-    } ],
-    "idShort" : "classificationSystemVersion"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "en",
-          "text" : "Class of the associated product or industrial equipment in the classification system. According to the notation of the system.\nNote: Ideally, the Property/valueId is used to reference the IRI/ IRDI of the product class."
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "product class ID"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "productClassId"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassId",
-    "displayName" : [ {
-      "language" : "en",
-      "text" : "product class ID"
-    } ],
-    "idShort" : "productClassId"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "en",
-          "text" : "Product classifications by association with product classes in common classification systems."
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "product classifications"
-        }, {
-          "language" : "de",
-          "text" : "Produkt-Klassifikationen"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "productClassifications"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassifications",
-    "displayName" : [ {
-      "language" : "en",
-      "text" : "product classifications"
-    }, {
-      "language" : "de",
-      "text" : "Produkt-Klassifikationen"
-    } ],
-    "idShort" : "productClassifications"
   }, {
     "modelType" : "ConceptDescription",
     "embeddedDataSpecifications" : [ {
@@ -561,6 +365,177 @@
         "dataType" : "STRING",
         "definition" : [ {
           "language" : "en",
+          "text" : "A battery passport must include information identifying the manufacturer."
+        } ],
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "identifier of the manfuacturer"
+        }, {
+          "language" : "en",
+          "text" : "article number of the product"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "manufacturerIdentifier"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#manufacturerIdentifier",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "identifier of the manfuacturer"
+    }, {
+      "language" : "en",
+      "text" : "article number of the product"
+    } ],
+    "idShort" : "manufacturerIdentifier"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The battery passport must include information about the period for which the commercial warranty applies.\n\nDIN DKE Spec chapter reference: 6.1.3.4"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "warrentyPeriod"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "warrentyPeriod"
+        } ],
+        "unit" : "month"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#warrentyPeriod",
+    "idShort" : "warrentyPeriod"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Categories relevant for the battery passport: LMT battery, ?electric vehicle battery, stationary or other industrial battery >2kWh.\n\nDIN DKE Spec chapter reference: 6.1.3.5"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "BatteryCategory"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "batteryCategory"
+        } ],
+        "valueList" : {
+          "valueReferencePairs" : [ {
+            "value" : "lmt",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#BatteryCategoryEnum:_lmt4ed46f76"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "ev",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#BatteryCategoryEnum:_ev67d35554"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "industrial",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#BatteryCategoryEnum:_industrial8ff09c47"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "stationary",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#BatteryCategoryEnum:_stationarye3f7fc13"
+              } ],
+              "type" : "ModelReference"
+            }
+          } ]
+        }
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#batteryCategory",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "BatteryCategory"
+    } ],
+    "idShort" : "batteryCategory"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Mass of the entire battery in kilograms. Voluntary: if the battery is defined on pack or module level: also weight of the modules and/or cells.\n\nDIN DKE Spec chapter reference: 6.1.3.6"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "batteryMass"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "batteryMass"
+        } ],
+        "unit" : "kilogram"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#batteryMass",
+    "idShort" : "batteryMass"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
           "text" : "General information, for example ordering and manufacturer information."
         } ],
         "preferredName" : [ {
@@ -573,12 +548,1115 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#generalInformation",
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#generalInformation",
     "displayName" : [ {
       "language" : "en",
       "text" : "general information"
     } ],
     "idShort" : "generalInformation"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Nominal voltage the battery is rated for.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.11"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "voltage - NOM"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "nominalVoltage"
+        } ],
+        "unit" : "volt"
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#nominalVoltage",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "voltage - NOM"
+    } ],
+    "idShort" : "nominalVoltage"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Maximum voltage the battery is rated for.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.10"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "voltage - MAX"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "maximumVoltage"
+        } ],
+        "unit" : "volt"
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#maximumVoltage",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "voltage - MAX"
+    } ],
+    "idShort" : "maximumVoltage"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Minimum voltage the battery is rated for.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.9"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "voltage - MIN"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "minimumVoltage"
+        } ],
+        "unit" : "volt"
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#minimumVoltage",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "voltage - MIN"
+    } ],
+    "idShort" : "minimumVoltage"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "�Rated capacity� is the total number of ampere-hours (Ah) that can be withdrawn from a fully charged battery under reference conditions (see BattReg Annex IV (1)).\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.2"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "ratedCapacity"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "ratedCapacity"
+        } ],
+        "unit" : "ampereHour"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#ratedCapacity",
+    "idShort" : "ratedCapacity"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "capacityFadeValue"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "capacityFadeValue"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#capacityFadeValue",
+    "idShort" : "capacityFadeValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Timestamp for dynamic data attributes show the last update time."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "lastUpdate"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "lastUpdate"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate",
+    "idShort" : "lastUpdate"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The capacity fade is the �Decrease over time and upon usage in the amount of charge that a battery can deliver at the rated voltage, with respect to the original rated capacity� (see BattReg Annex IV (2)) as declared by the manufacturer.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.4"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "capacityFade"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "capacityFade"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#capacityFade",
+    "idShort" : "capacityFade"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The certified usable battery energy is the usable battery energy according to the procedure in the UN GTR No 22 as determined during the certification of the vehicle.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.5"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "ratedEnergy"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "ratedEnergy"
+        } ],
+        "unit" : "kilowattHour"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#ratedEnergy",
+    "idShort" : "ratedEnergy"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Information on battery capacity, energy and voltage."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "capacity, energy and voltage"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "capacityEnergyVoltage"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#capacityEnergyVoltage",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "capacity, energy and voltage"
+    } ],
+    "idShort" : "capacityEnergyVoltage"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "INTEGER_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Initial round trip energy efficiency means the ratio of the net energy delivered by a battery during a discharge test to the total energy required to restore the initial State of Charge by a standard charge."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "initial round trip energy efficiency"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "initialRoundTripEnergyEfficiency"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialRoundTripEnergyEfficiency",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "initial round trip energy efficiency"
+    } ],
+    "idShort" : "initialRoundTripEnergyEfficiency"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Initial round trip energy efficiency shall be measured at reference conditions that include the specification of �50 % of cycle-life�.\n\nTest methods and reference conditions should separately consider non-cycle applications and batteries with very long cycle-life.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.3\n"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "roundTripEfficiencyat50PerCentCycleLife"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "roundTripEfficiencyat50PerCentCycleLife"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#roundTripEfficiencyat50PerCentCycleLife",
+    "idShort" : "roundTripEfficiencyat50PerCentCycleLife"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "INTEGER_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Initial self-discharge in % of capacity per unit of time in defined conditions (temperature range etc) as pre-use metric."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "initial self discharging rate"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "initialSelfDischargingRate"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialSelfDischargingRate",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "initial self discharging rate"
+    } ],
+    "idShort" : "initialSelfDischargingRate"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "roundTripEnergyEfficiency"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "roundTripEnergyEfficiency"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#roundTripEnergyEfficiency",
+    "idShort" : "roundTripEnergyEfficiency"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Internal battery cell and pack resistance / Internal resistance (in Ohm)."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "initialInternalResistanceOnBatteryCellLevel"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "initialInternalResistanceOnBatteryCellLevel"
+        } ],
+        "unit" : "ohm"
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOnBatteryCellLevel",
+    "idShort" : "initialInternalResistanceOnBatteryCellLevel"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Initial (Pre-Use) internal resistance on battery pack level."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "initialInternalResistanceOnBatteryPackLevel"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "initialInternalResistanceOnBatteryPackLevel"
+        } ],
+        "unit" : "ohm"
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOnBatteryPackLevel",
+    "idShort" : "initialInternalResistanceOnBatteryPackLevel"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Initial internal resistance means the absolute beginning value of the quotient of the voltage drop between the terminals by the electric current increase in the battery circuit during a current pulse."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "initialInternalResistanceOnBatteryModuleLevel"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "initialInternalResistanceOnBatteryModuleLevel"
+        } ],
+        "unit" : "ohm"
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOnBatteryModuleLevel",
+    "idShort" : "initialInternalResistanceOnBatteryModuleLevel"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "INTEGER_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Internal resistance increase of battery cell."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "internalResistanceIncreaseOfBatteryCell"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "internalResistanceIncreaseOfBatteryCell"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#internalResistanceIncreaseOfBatteryCell",
+    "idShort" : "internalResistanceIncreaseOfBatteryCell"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "INTEGER_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Internal resistance increase of battery pack."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "internalResistanceIncreaseOfBatteryPack"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "internalResistanceIncreaseOfBatteryPack"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#internalResistanceIncreaseOfBatteryPack",
+    "idShort" : "internalResistanceIncreaseOfBatteryPack"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "INTEGER_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Internal resistance increase of battery module."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "internalResistanceIncreaseOfBatteryModule"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "internalResistanceIncreaseOfBatteryModule"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#internalResistanceIncreaseOfBatteryModule",
+    "idShort" : "internalResistanceIncreaseOfBatteryModule"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "resistance"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "resistance"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#resistance",
+    "idShort" : "resistance"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Maximum permitted power the battery is rated for, includes the data relevant for power limits."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "maximum permitted battery power"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "maximumPermittedBatteryPower"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#maximumPermittedBatteryPower",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "maximum permitted battery power"
+    } ],
+    "idShort" : "maximumPermittedBatteryPower"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "�Power fade (in %) means the decrease over time and upon usage in the amount of power that a battery can deliver at the rated voltage.� (see BattReg Annex IV (4)).\n\nPower fade should be calculated using original and remaining power capability following the formula below:\nPfade(x) = (1-P(x)) / PBOL\" �100\" %\" \nwhere\nx \tis the aging parameter (e.g. storage time, number of cycles, etc.);\nP(x) \tis the power capability at aging parameter x;\nPBOL \tis the power capability at begin of life.\n\nDIN DKE Spec 99100 chapter reference: 6.7.3.4"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "powerFade"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "powerFade"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#powerFade",
+    "idShort" : "powerFade"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Provides information on nominal/recommended charge rate (C-rate); equal to regulation definition."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "PowerCapabilityRatio"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "powerCapabilityRatio"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#powerCapabilityRatio",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "PowerCapabilityRatio"
+    } ],
+    "idShort" : "powerCapabilityRatio"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "atSoC"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "atSoC"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#atSoC",
+    "idShort" : "atSoC"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "powerCapabilityAt"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "powerCapabilityAt"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#powerCapabilityAt",
+    "idShort" : "powerCapabilityAt"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Pre-use power capability: Definition of power capability as given in Battery Regulation. \nAnnex IV Part B, point 4 --> measurement at 80 % and 20 % SoC required. This requirement may not be implementable for remaining power capability and power fade(see below). It, thus, should be reviewed together with SoC definition.\n\nDIN DKE Spec 99100 chapter reference: 6.7.3.2\n\n"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "originalPowerCapability"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "originalPowerCapability"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#originalPowerCapability",
+    "idShort" : "originalPowerCapability"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "powerCapability"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "powerCapability"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#powerCapability",
+    "idShort" : "powerCapability"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Lower boundary of the surrounding temperature range, which the battery can safely withstand."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "temperature range idle state (lower boundary)"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "temperatureRangeIdleStateLowerBoundary"
+        } ],
+        "unit" : "degreeCelsius"
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#temperatureRangeIdleStateLowerBoundary",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "temperature range idle state (lower boundary)"
+    } ],
+    "idShort" : "temperatureRangeIdleStateLowerBoundary"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Upper boundary of the surrounding temperature range, which the battery can safely withstand."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "temperature range idle state (upper boundary)"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "temperatureRangeIdleStateUpperBoundary"
+        } ],
+        "unit" : "degreeCelsius"
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#temperatureRangeIdleStateUpperBoundary",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "temperature range idle state (upper boundary)"
+    } ],
+    "idShort" : "temperatureRangeIdleStateUpperBoundary"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "temperature"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "temperature"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#temperature",
+    "idShort" : "temperature"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "INTEGER_COUNT",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The battery passport must include information about the expected battery lifetime in calendar years.\n\nThe update interval must be upon placement on the market and upon change of the battery status.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.2"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "expectedLifetime"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "expectedLifetime"
+        } ],
+        "unit" : "year"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#expectedLifetime",
+    "idShort" : "expectedLifetime"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "INTEGER_MEASURE",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "numberOfFullCyclesValue"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "numberOfFullCyclesValue"
+        } ],
+        "unit" : "cycle"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#numberOfFullCyclesValue",
+    "idShort" : "numberOfFullCyclesValue"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Number of (full) charging and discharging cycles.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.3"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "numberOfFullCycles"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "numberOfFullCycles"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#numberOfFullCycles",
+    "idShort" : "numberOfFullCycles"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The percentage of SOCE, above which the battery is still considered operational as EV battery in its current life, as provided by the economic operator.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.9"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "capacityThresholdForExhaustion"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "capacityThresholdForExhaustion"
+        } ],
+        "unit" : "percent"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#capacityThresholdForExhaustion",
+    "idShort" : "capacityThresholdForExhaustion"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The C-rate should be provided separately for both the charge and discharge of the battery, if applicable.\n\nThe exception for non-cycle applications as mentioned in \"Expected lifetime: Number of charge-discharge cycles\" should apply to this data attribute as well.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.6"
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "cRateLifeCycleTest"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "cRateLifeCycleTest"
+        } ],
+        "unit" : "C"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#cRateLifeCycleTest",
+    "idShort" : "cRateLifeCycleTest"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "lifetime"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "lifetime"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#lifetime",
+    "idShort" : "lifetime"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Technical and product properties. Individual Characteristics that describe the product and its technical properties."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "technicalProperties"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "technicalProperties"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#technicalProperties",
+    "idShort" : "technicalProperties"
   } ],
   "submodels" : [ {
     "modelType" : "Submodel",
@@ -586,7 +1664,7 @@
     "semanticId" : {
       "keys" : [ {
         "type" : "GlobalReference",
-        "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData"
+        "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#TechnicalData"
       } ],
       "type" : "ExternalReference"
     },
@@ -598,166 +1676,13 @@
       "type" : "ExternalReference"
     } ],
     "administration" : { },
-    "id" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData/submodel",
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#TechnicalData/submodel",
     "description" : [ {
       "language" : "en",
       "text" : "Technical data of the asset and associated product classificatons."
     } ],
     "idShort" : "TechnicalData",
     "submodelElements" : [ {
-      "modelType" : "SubmodelElementCollection",
-      "supplementalSemanticIds" : [ {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1"
-        } ],
-        "type" : "ExternalReference"
-      } ],
-      "description" : [ {
-        "language" : "en",
-        "text" : "Further information on the product, the validity of the information provided and this data record."
-      } ],
-      "idShort" : "furtherInformation"
-    }, {
-      "modelType" : "SubmodelElementCollection",
-      "supplementalSemanticIds" : [ {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/ZVEI/TechnicalData/TechnicalProperties/1/1"
-        } ],
-        "type" : "ExternalReference"
-      } ],
-      "description" : [ {
-        "language" : "en",
-        "text" : "Technical and product properties. Individual Characteristics that describe the product and its technical properties."
-      } ],
-      "idShort" : "technicalProperties"
-    }, {
-      "modelType" : "SubmodelElementList",
-      "semanticId" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#ProductClassificationSet"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "supplementalSemanticIds" : [ {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/ZVEI/TechnicalData/ProductClassifications/1/1"
-        } ],
-        "type" : "ExternalReference"
-      } ],
-      "description" : [ {
-        "language" : "en",
-        "text" : "Product classifications by association with product classes in common classification systems."
-      } ],
-      "displayName" : [ {
-        "language" : "en",
-        "text" : "product classifications"
-      }, {
-        "language" : "de",
-        "text" : "Produkt-Klassifikationen"
-      } ],
-      "idShort" : "productClassifications",
-      "orderRelevant" : false,
-      "typeValueListElement" : "SubmodelElementCollection",
-      "value" : [ {
-        "modelType" : "SubmodelElementCollection",
-        "supplementalSemanticIds" : [ {
-          "keys" : [ {
-            "type" : "GlobalReference",
-            "value" : "https://api.eclass-cdp.com/0173-1-02-ABI502-003/0173-1-01-AHF581-003"
-          } ],
-          "type" : "ExternalReference"
-        }, {
-          "keys" : [ {
-            "type" : "GlobalReference",
-            "value" : "0173-1#02-ABI502#003/0173-1#01-AHF581#003"
-          } ],
-          "type" : "ExternalReference"
-        } ],
-        "description" : [ {
-          "language" : "en",
-          "text" : "Product classifications by association with product classes in common classification systems."
-        } ],
-        "displayName" : [ {
-          "language" : "en",
-          "text" : "product classifications"
-        }, {
-          "language" : "de",
-          "text" : "Produkt-Klassifikationen"
-        } ],
-        "idShort" : "productClassifications",
-        "value" : [ {
-          "modelType" : "Property",
-          "semanticId" : {
-            "keys" : [ {
-              "type" : "GlobalReference",
-              "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassificationSystem"
-            } ],
-            "type" : "ExternalReference"
-          },
-          "supplementalSemanticIds" : [ {
-            "keys" : [ {
-              "type" : "GlobalReference",
-              "value" : "https://admin-shell.io/ZVEI/TechnicalData/ProductClassificationSystem/1/1"
-            } ],
-            "type" : "ExternalReference"
-          } ],
-          "valueType" : "xs:string",
-          "displayName" : [ {
-            "language" : "en",
-            "text" : "product classification system"
-          } ],
-          "idShort" : "productClassificationSystem"
-        }, {
-          "modelType" : "Property",
-          "semanticId" : {
-            "keys" : [ {
-              "type" : "GlobalReference",
-              "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#classificationSystemVersion"
-            } ],
-            "type" : "ExternalReference"
-          },
-          "supplementalSemanticIds" : [ {
-            "keys" : [ {
-              "type" : "GlobalReference",
-              "value" : "https://admin-shell.io/ZVEI/TechnicalData/ClassificationSystemVersion/1/1"
-            } ],
-            "type" : "ExternalReference"
-          } ],
-          "valueType" : "xs:string",
-          "displayName" : [ {
-            "language" : "en",
-            "text" : "classification system version"
-          } ],
-          "idShort" : "classificationSystemVersion"
-        }, {
-          "modelType" : "Property",
-          "semanticId" : {
-            "keys" : [ {
-              "type" : "GlobalReference",
-              "value" : "urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassId"
-            } ],
-            "type" : "ExternalReference"
-          },
-          "supplementalSemanticIds" : [ {
-            "keys" : [ {
-              "type" : "GlobalReference",
-              "value" : "https://admin-shell.io/ZVEI/TechnicalData/ProductClassId/1/1"
-            } ],
-            "type" : "ExternalReference"
-          } ],
-          "valueType" : "xs:string",
-          "displayName" : [ {
-            "language" : "en",
-            "text" : "product class ID"
-          } ],
-          "idShort" : "productClassId"
-        } ]
-      } ]
-    }, {
       "modelType" : "SubmodelElementCollection",
       "supplementalSemanticIds" : [ {
         "keys" : [ {
@@ -974,6 +1899,642 @@
             "valueType" : "xs:string",
             "idShort" : "contentType"
           } ]
+        } ]
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#manufacturerIdentifier"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:string",
+        "displayName" : [ {
+          "language" : "de",
+          "text" : "identifier of the manfuacturer"
+        }, {
+          "language" : "en",
+          "text" : "article number of the product"
+        } ],
+        "idShort" : "manufacturerIdentifier"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#warrentyPeriod"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:gMonth",
+        "idShort" : "warrentyPeriod"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#batteryCategory"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:string",
+        "displayName" : [ {
+          "language" : "en",
+          "text" : "BatteryCategory"
+        } ],
+        "idShort" : "batteryCategory"
+      }, {
+        "modelType" : "Property",
+        "semanticId" : {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#batteryMass"
+          } ],
+          "type" : "ExternalReference"
+        },
+        "valueType" : "xs:float",
+        "idShort" : "batteryMass"
+      } ]
+    }, {
+      "modelType" : "SubmodelElementCollection",
+      "supplementalSemanticIds" : [ {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/ZVEI/TechnicalData/TechnicalProperties/1/1"
+        } ],
+        "type" : "ExternalReference"
+      } ],
+      "description" : [ {
+        "language" : "en",
+        "text" : "Technical and product properties. Individual Characteristics that describe the product and its technical properties."
+      } ],
+      "idShort" : "technicalProperties",
+      "value" : [ {
+        "modelType" : "SubmodelElementCollection",
+        "supplementalSemanticIds" : [ {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1"
+          } ],
+          "type" : "ExternalReference"
+        } ],
+        "description" : [ {
+          "language" : "en",
+          "text" : "Information on battery capacity, energy and voltage."
+        } ],
+        "displayName" : [ {
+          "language" : "en",
+          "text" : "capacity, energy and voltage"
+        } ],
+        "idShort" : "capacityEnergyVoltage",
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#nominalVoltage"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1#02-ABL588#001"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:float",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "voltage - NOM"
+          } ],
+          "idShort" : "nominalVoltage"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#maximumVoltage"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1#02-ABL589#001"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:float",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "voltage - MAX"
+          } ],
+          "idShort" : "maximumVoltage"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#minimumVoltage"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1#02-ABL587#001"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:float",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "voltage - MIN"
+          } ],
+          "idShort" : "minimumVoltage"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#ratedCapacity"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:float",
+          "idShort" : "ratedCapacity"
+        }, {
+          "modelType" : "SubmodelElementCollection",
+          "description" : [ {
+            "language" : "en",
+            "text" : "The capacity fade is the �Decrease over time and upon usage in the amount of charge that a battery can deliver at the rated voltage, with respect to the original rated capacity� (see BattReg Annex IV (2)) as declared by the manufacturer.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.4"
+          } ],
+          "idShort" : "capacityFade",
+          "value" : [ {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#capacityFadeValue"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:float",
+            "idShort" : "capacityFadeValue"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:dateTime",
+            "idShort" : "lastUpdate"
+          } ]
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#ratedEnergy"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:float",
+          "idShort" : "ratedEnergy"
+        } ]
+      }, {
+        "modelType" : "SubmodelElementCollection",
+        "supplementalSemanticIds" : [ {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1"
+          } ],
+          "type" : "ExternalReference"
+        } ],
+        "idShort" : "roundTripEnergyEfficiency",
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialRoundTripEnergyEfficiency"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1#02-ABL833#001"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:integer",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "initial round trip energy efficiency"
+          } ],
+          "idShort" : "initialRoundTripEnergyEfficiency"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#roundTripEfficiencyat50PerCentCycleLife"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:float",
+          "idShort" : "roundTripEfficiencyat50PerCentCycleLife"
+        }, {
+          "modelType" : "SubmodelElementCollection",
+          "description" : [ {
+            "language" : "en",
+            "text" : "The capacity fade is the �Decrease over time and upon usage in the amount of charge that a battery can deliver at the rated voltage, with respect to the original rated capacity� (see BattReg Annex IV (2)) as declared by the manufacturer.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.4"
+          } ],
+          "idShort" : "capacityFade",
+          "value" : [ {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#capacityFadeValue"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:float",
+            "idShort" : "capacityFadeValue"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:dateTime",
+            "idShort" : "lastUpdate"
+          } ]
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialSelfDischargingRate"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1#02-ABL834#001"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:integer",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "initial self discharging rate"
+          } ],
+          "idShort" : "initialSelfDischargingRate"
+        } ]
+      }, {
+        "modelType" : "SubmodelElementCollection",
+        "supplementalSemanticIds" : [ {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1"
+          } ],
+          "type" : "ExternalReference"
+        } ],
+        "idShort" : "resistance",
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOnBatteryCellLevel"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:double",
+          "idShort" : "initialInternalResistanceOnBatteryCellLevel"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOnBatteryPackLevel"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:double",
+          "idShort" : "initialInternalResistanceOnBatteryPackLevel"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOnBatteryModuleLevel"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1#02-ABL832#001"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:double",
+          "idShort" : "initialInternalResistanceOnBatteryModuleLevel"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#internalResistanceIncreaseOfBatteryCell"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1#02-ABL831#001"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:integer",
+          "idShort" : "internalResistanceIncreaseOfBatteryCell"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#internalResistanceIncreaseOfBatteryPack"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1#02-ABL831#001"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:integer",
+          "idShort" : "internalResistanceIncreaseOfBatteryPack"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#internalResistanceIncreaseOfBatteryModule"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1#02-ABL831#001"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:integer",
+          "idShort" : "internalResistanceIncreaseOfBatteryModule"
+        } ]
+      }, {
+        "modelType" : "SubmodelElementCollection",
+        "supplementalSemanticIds" : [ {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1"
+          } ],
+          "type" : "ExternalReference"
+        } ],
+        "idShort" : "powerCapability",
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#maximumPermittedBatteryPower"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:float",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "maximum permitted battery power"
+          } ],
+          "idShort" : "maximumPermittedBatteryPower"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#powerFade"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:float",
+          "idShort" : "powerFade"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#powerCapabilityRatio"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:float",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "PowerCapabilityRatio"
+          } ],
+          "idShort" : "powerCapabilityRatio"
+        }, {
+          "modelType" : "SubmodelElementList",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#OriginalPowerCapabilityAtSoC"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "description" : [ {
+            "language" : "en",
+            "text" : "Pre-use power capability: Definition of power capability as given in Battery Regulation. \nAnnex IV Part B, point 4 --> measurement at 80 % and 20 % SoC required. This requirement may not be implementable for remaining power capability and power fade(see below). It, thus, should be reviewed together with SoC definition.\n\nDIN DKE Spec 99100 chapter reference: 6.7.3.2\n\n"
+          } ],
+          "idShort" : "originalPowerCapability",
+          "orderRelevant" : false,
+          "typeValueListElement" : "SubmodelElementCollection",
+          "value" : [ {
+            "modelType" : "SubmodelElementCollection",
+            "description" : [ {
+              "language" : "en",
+              "text" : "Pre-use power capability: Definition of power capability as given in Battery Regulation. \nAnnex IV Part B, point 4 --> measurement at 80 % and 20 % SoC required. This requirement may not be implementable for remaining power capability and power fade(see below). It, thus, should be reviewed together with SoC definition.\n\nDIN DKE Spec 99100 chapter reference: 6.7.3.2\n\n"
+            } ],
+            "idShort" : "originalPowerCapability",
+            "value" : [ {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#atSoC"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "valueType" : "xs:float",
+              "idShort" : "atSoC"
+            }, {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#powerCapabilityAt"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "valueType" : "xs:float",
+              "idShort" : "powerCapabilityAt"
+            } ]
+          } ]
+        } ]
+      }, {
+        "modelType" : "SubmodelElementCollection",
+        "supplementalSemanticIds" : [ {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1"
+          } ],
+          "type" : "ExternalReference"
+        } ],
+        "idShort" : "temperature",
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#temperatureRangeIdleStateLowerBoundary"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1#02-ABL842#001"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:double",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "temperature range idle state (lower boundary)"
+          } ],
+          "idShort" : "temperatureRangeIdleStateLowerBoundary"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#temperatureRangeIdleStateUpperBoundary"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1#02-ABL871#001"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:double",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "temperature range idle state (upper boundary)"
+          } ],
+          "idShort" : "temperatureRangeIdleStateUpperBoundary"
+        } ]
+      }, {
+        "modelType" : "SubmodelElementCollection",
+        "supplementalSemanticIds" : [ {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1"
+          } ],
+          "type" : "ExternalReference"
+        } ],
+        "idShort" : "lifetime",
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#expectedLifetime"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:short",
+          "idShort" : "expectedLifetime"
+        }, {
+          "modelType" : "SubmodelElementCollection",
+          "description" : [ {
+            "language" : "en",
+            "text" : "Number of (full) charging and discharging cycles.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.3"
+          } ],
+          "idShort" : "numberOfFullCycles",
+          "value" : [ {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#numberOfFullCyclesValue"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:integer",
+            "idShort" : "numberOfFullCyclesValue"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:dateTime",
+            "idShort" : "lastUpdate"
+          } ]
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#capacityThresholdForExhaustion"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:double",
+          "idShort" : "capacityThresholdForExhaustion"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#cRateLifeCycleTest"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:float",
+          "idShort" : "cRateLifeCycleTest"
         } ]
       } ]
     } ]

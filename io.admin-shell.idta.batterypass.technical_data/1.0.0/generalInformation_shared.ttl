@@ -1,0 +1,53 @@
+######################################################################
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> .
+@prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#> .
+@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+
+:generalInformation a samm:Property ;
+   samm:preferredName "general information"@en ;
+   samm:description "General information, for example ordering and manufacturer information."@en ;
+   samm:see <https://admin-shell.io/ZVEI/TechnicalData/GeneralInformation/1/1> ;
+   samm:characteristic :GeneralInformationCharacteristic .
+
+:GeneralInformationCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :GeneralInformationEntity .
+
+:GeneralInformationEntity a samm:Entity ;
+   samm:see <https://admin-shell.io/ZVEI/TechnicalData/GeneralInformation/1/1> ;
+   samm:properties ( 
+   [ samm:property tech:manufacturerName; samm:payloadName "ManufacturerName" ] 
+   [ samm:property tech:manufacturerLogo; samm:optional true; samm:payloadName "ManufacturerLogo" ]
+   [ samm:property tech:manufacturerProductDesignation; samm:payloadName "ManufacturerProductDesignation" ] 
+   [ samm:property tech:manufacturerArticleNumber; samm:payloadName "ManufacturerArticleNumber" ] 
+   [ samm:property tech:manufacturerOrderCode; samm:payloadName "ManufacturerOrderCode" ] 
+   [ samm:property tech:productImages; samm:optional true; samm:payloadName "ProductImages" ]
+   [ samm:property :manufacturerIdentifier; samm:payloadName "ManufacturerIdentifier" ] 
+   [ samm:property bpg:warrentyPeriod; samm:payloadName "WarrantyPeriod" ] 
+   [ samm:property bpg:batteryCategory; samm:payloadName "BatteryCategory" ]  
+   [ samm:property bpg:batteryMass; samm:payloadName "BatteryMass" ]    
+   ) .
+   
+   
+   
+:manufacturerIdentifier a samm:Property ;
+   samm:preferredName "identifier of the manfuacturer"@de ;
+   samm:preferredName "article number of the product"@en ;
+   samm:description "A battery passport must include information identifying the manufacturer."@en ;
+   samm:characteristic samm-c:Text .
