@@ -68,26 +68,6 @@
   [ samm:property :capacity; samm:payloadName "Capacity" ] 
 ) .
 
-:length a samm:Property ;
-   samm:see <urn:irdi:0173-1#02-BAA018#007> ;
-   samm:preferredName "length"@en ;
-   samm:description "For objects with orientation in preferred position during use the dimension perpendicular to diameter/height/width/depth"@en ;
-   samm:characteristic :DimensionCharacteristic ;
-   samm:exampleValue "2000"^^xsd:double  . 
-
-:height a samm:Property ;
-   samm:see <urn:irdi:0173-1#02-BAA020#009> ;
-   samm:preferredName "height"@en ;
-   samm:description "For objects with orientation in preferred position during use the dimension perpendicular to height/length/depth."@en ;
-   samm:characteristic :DimensionCharacteristic ;
-   samm:exampleValue "1"^^xsd:double  . 
-
-:width a samm:Property ;
-   samm:see <urn:irdi:0173-1#02-BAF016#006> ;
-   samm:preferredName "width"@en ;
-   samm:description "For objects with orientation in preferred position during use the dimension perpendicular to height/length/depth."@en ;
-   samm:characteristic :DimensionCharacteristic ;
-   samm:exampleValue "1000"^^xsd:double  . 
 
 :temperatureRangeIdleStateUpperBoundary a samm:Property ;
    samm:see <urn:irdi:0173-1#02-ABL871#001> ;
@@ -103,6 +83,3 @@
    samm:characteristic bp:TemperatureRangeIdleState ;
    samm:exampleValue "49"^^xsd:double .
 
-:DimensionCharacteristic a samm-c:Quantifiable ;
-   samm:dataType xsd:double ;
-   samm-c:unit unit:centimetre .
