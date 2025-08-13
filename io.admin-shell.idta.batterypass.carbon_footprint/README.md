@@ -42,5 +42,6 @@ Dependencies:
 
 
 # Deviations:
+- optional ProductOrSectorSpecificCarbonFootprints from IDTA-02023 not included
 
-see IDTA-02023
+for additional deviations see IDTA-02023
