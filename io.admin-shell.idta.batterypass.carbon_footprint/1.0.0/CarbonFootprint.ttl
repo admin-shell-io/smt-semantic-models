@@ -50,6 +50,6 @@
    samm:see <https://admin-shell.io/IDTA-02023/1/0> ;
    samm:properties ( 
    [ samm:property pcf:productCarbonFootprints; samm:payloadName "ProductCarbonFootprints" ] 
-    ) ;
+   ) ;
    samm:operations ( ) ;
    samm:events ( ) .
