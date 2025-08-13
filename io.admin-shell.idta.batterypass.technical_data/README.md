@@ -24,6 +24,9 @@ Source Content Hub of the IDTA: [IDTA-02035-4 V1.2]()
 
 The folder "gen" for each version contains sample JSON files generated for the aspect model(s)
 
+Deviations from IDTA-02003-1-2
+
+- productClassifications not included
 
 # Changelog
 All notable changes to this model will be documented in this section.
@@ -50,13 +53,18 @@ Contained Files:
 @prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.0#> .
 @prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 
-# Known Deviations
+# Known Deviations (IDTA-02003-1-2)
 
 In the following only deviations are documented:
 
 ### Added
 
+to GenerationInformation:
 
+* manufacturerIdentifier
+* warrantyPeriod
+* batteryCategory
+* batteryMass
 
 		
 ### Changed
@@ -67,19 +75,21 @@ In the following only deviations are documented:
 ### Removed
 
 
+
+
 ## Deviations
 
 * IRDIs from ECLASS not added in case properties of BatteryPass were reused
 * Some descriptions deviate from those in the specification in case properties of BatteryPass were reused
 * example values not added in case properties of BatteryPass were reused
 * added: missing description for Capacity
-* added: same description for Height as for Width.
 * for nominalVoltage, MaxVoltage and MinVoltage the descriptions of BatteryPass were taken
 * in BatteryPass PowerCapabilityat20Charge or 80Charge is float and not double
 * in BatteryPass originalPowerCapabilityLimits is not existing but PowerCapabilities is float, Characteristic bp:PowerCapabilityAtSoc is used
 * ratedEnergy from BatteryPass was used as Characteristic for MaximumAllowedBatteryEnergy, but is float, in .docs it is double
 * maximumPermittedBatteryPower and originalPowerCapabilityLimits uses bp:PowerCapabilityAtSoc and thus is float and not double
 * maximumAllowedBatteryEnergy uses bp:RatedEnergy and thus float and not double
+* originalPowerCapability in aasx a Property, in BatteryPass a SML with SMC with the two properties: atSoC and powertCapabilityAt
 
 * to be checked whether the units are identical to what is defined in ECLASS
 

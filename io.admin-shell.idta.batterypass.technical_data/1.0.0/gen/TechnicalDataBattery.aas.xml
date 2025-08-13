@@ -358,202 +358,42 @@
                 </aas:submodelElementCollection>
               </aas:value>
             </aas:submodelElementList>
-          </aas:value>
-        </aas:submodelElementCollection>
-        <aas:submodelElementList>
-          <aas:idShort>productClassifications</aas:idShort>
-          <aas:displayName>
-            <aas:langStringNameType>
-              <aas:language>en</aas:language>
-              <aas:text>product classifications</aas:text>
-            </aas:langStringNameType>
-            <aas:langStringNameType>
-              <aas:language>de</aas:language>
-              <aas:text>Produkt-Klassifikationen</aas:text>
-            </aas:langStringNameType>
-          </aas:displayName>
-          <aas:description>
-            <aas:langStringTextType>
-              <aas:language>en</aas:language>
-              <aas:text>Product classifications by association with product classes in common classification systems.</aas:text>
-            </aas:langStringTextType>
-          </aas:description>
-          <aas:semanticId>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#ProductClassificationSet</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:semanticId>
-          <aas:supplementalSemanticIds>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>https://admin-shell.io/ZVEI/TechnicalData/ProductClassifications/1/1</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-          </aas:supplementalSemanticIds>
-          <aas:orderRelevant>false</aas:orderRelevant>
-          <aas:typeValueListElement>SubmodelElementCollection</aas:typeValueListElement>
-          <aas:value>
-            <aas:submodelElementCollection>
-              <aas:idShort>productClassifications</aas:idShort>
+            <aas:property>
+              <aas:idShort>manufacturerIdentifier</aas:idShort>
               <aas:displayName>
                 <aas:langStringNameType>
-                  <aas:language>en</aas:language>
-                  <aas:text>product classifications</aas:text>
+                  <aas:language>de</aas:language>
+                  <aas:text>identifier of the manfuacturer</aas:text>
                 </aas:langStringNameType>
                 <aas:langStringNameType>
-                  <aas:language>de</aas:language>
-                  <aas:text>Produkt-Klassifikationen</aas:text>
+                  <aas:language>en</aas:language>
+                  <aas:text>article number of the product</aas:text>
                 </aas:langStringNameType>
               </aas:displayName>
-              <aas:description>
-                <aas:langStringTextType>
-                  <aas:language>en</aas:language>
-                  <aas:text>Product classifications by association with product classes in common classification systems.</aas:text>
-                </aas:langStringTextType>
-              </aas:description>
-              <aas:supplementalSemanticIds>
-                <aas:reference>
-                  <aas:type>ExternalReference</aas:type>
-                  <aas:keys>
-                    <aas:key>
-                      <aas:type>GlobalReference</aas:type>
-                      <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI502-003/0173-1-01-AHF581-003</aas:value>
-                    </aas:key>
-                  </aas:keys>
-                </aas:reference>
-                <aas:reference>
-                  <aas:type>ExternalReference</aas:type>
-                  <aas:keys>
-                    <aas:key>
-                      <aas:type>GlobalReference</aas:type>
-                      <aas:value>0173-1#02-ABI502#003/0173-1#01-AHF581#003</aas:value>
-                    </aas:key>
-                  </aas:keys>
-                </aas:reference>
-              </aas:supplementalSemanticIds>
-              <aas:value>
-                <aas:property>
-                  <aas:idShort>productClassificationSystem</aas:idShort>
-                  <aas:displayName>
-                    <aas:langStringNameType>
-                      <aas:language>en</aas:language>
-                      <aas:text>product classification system</aas:text>
-                    </aas:langStringNameType>
-                  </aas:displayName>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassificationSystem</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:supplementalSemanticIds>
-                    <aas:reference>
-                      <aas:type>ExternalReference</aas:type>
-                      <aas:keys>
-                        <aas:key>
-                          <aas:type>GlobalReference</aas:type>
-                          <aas:value>https://admin-shell.io/ZVEI/TechnicalData/ProductClassificationSystem/1/1</aas:value>
-                        </aas:key>
-                      </aas:keys>
-                    </aas:reference>
-                  </aas:supplementalSemanticIds>
-                  <aas:valueType>xs:string</aas:valueType>
-                </aas:property>
-                <aas:property>
-                  <aas:idShort>classificationSystemVersion</aas:idShort>
-                  <aas:displayName>
-                    <aas:langStringNameType>
-                      <aas:language>en</aas:language>
-                      <aas:text>classification system version</aas:text>
-                    </aas:langStringNameType>
-                  </aas:displayName>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#classificationSystemVersion</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:supplementalSemanticIds>
-                    <aas:reference>
-                      <aas:type>ExternalReference</aas:type>
-                      <aas:keys>
-                        <aas:key>
-                          <aas:type>GlobalReference</aas:type>
-                          <aas:value>https://admin-shell.io/ZVEI/TechnicalData/ClassificationSystemVersion/1/1</aas:value>
-                        </aas:key>
-                      </aas:keys>
-                    </aas:reference>
-                  </aas:supplementalSemanticIds>
-                  <aas:valueType>xs:string</aas:valueType>
-                </aas:property>
-                <aas:property>
-                  <aas:idShort>productClassId</aas:idShort>
-                  <aas:displayName>
-                    <aas:langStringNameType>
-                      <aas:language>en</aas:language>
-                      <aas:text>product class ID</aas:text>
-                    </aas:langStringNameType>
-                  </aas:displayName>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassId</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:supplementalSemanticIds>
-                    <aas:reference>
-                      <aas:type>ExternalReference</aas:type>
-                      <aas:keys>
-                        <aas:key>
-                          <aas:type>GlobalReference</aas:type>
-                          <aas:value>https://admin-shell.io/ZVEI/TechnicalData/ProductClassId/1/1</aas:value>
-                        </aas:key>
-                      </aas:keys>
-                    </aas:reference>
-                  </aas:supplementalSemanticIds>
-                  <aas:valueType>xs:string</aas:valueType>
-                </aas:property>
-              </aas:value>
-            </aas:submodelElementCollection>
-          </aas:value>
-        </aas:submodelElementList>
-        <aas:submodelElementCollection>
-          <aas:idShort>technicalProperties</aas:idShort>
-          <aas:description>
-            <aas:langStringTextType>
-              <aas:language>en</aas:language>
-              <aas:text>Technical and product properties. Individual Characteristics that describe the product and its technical properties.</aas:text>
-            </aas:langStringTextType>
-          </aas:description>
-          <aas:supplementalSemanticIds>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>https://admin-shell.io/ZVEI/TechnicalData/TechnicalProperties/1/1</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-          </aas:supplementalSemanticIds>
-          <aas:value>
+              <aas:semanticId>
+                <aas:type>ExternalReference</aas:type>
+                <aas:keys>
+                  <aas:key>
+                    <aas:type>GlobalReference</aas:type>
+                    <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#manufacturerIdentifier</aas:value>
+                  </aas:key>
+                </aas:keys>
+              </aas:semanticId>
+              <aas:valueType>xs:string</aas:valueType>
+            </aas:property>
+            <aas:property>
+              <aas:idShort>warrentyPeriod</aas:idShort>
+              <aas:semanticId>
+                <aas:type>ExternalReference</aas:type>
+                <aas:keys>
+                  <aas:key>
+                    <aas:type>GlobalReference</aas:type>
+                    <aas:value>urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#warrentyPeriod</aas:value>
+                  </aas:key>
+                </aas:keys>
+              </aas:semanticId>
+              <aas:valueType>xs:gMonth</aas:valueType>
+            </aas:property>
             <aas:property>
               <aas:idShort>batteryCategory</aas:idShort>
               <aas:displayName>
@@ -586,158 +426,42 @@
               </aas:semanticId>
               <aas:valueType>xs:float</aas:valueType>
             </aas:property>
-            <aas:property>
-              <aas:idShort>length</aas:idShort>
-              <aas:displayName>
-                <aas:langStringNameType>
-                  <aas:language>en</aas:language>
-                  <aas:text>length</aas:text>
-                </aas:langStringNameType>
-              </aas:displayName>
-              <aas:semanticId>
-                <aas:type>ExternalReference</aas:type>
-                <aas:keys>
-                  <aas:key>
-                    <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#length</aas:value>
-                  </aas:key>
-                </aas:keys>
-              </aas:semanticId>
-              <aas:supplementalSemanticIds>
-                <aas:reference>
-                  <aas:type>ExternalReference</aas:type>
-                  <aas:keys>
-                    <aas:key>
-                      <aas:type>GlobalReference</aas:type>
-                      <aas:value>0173-1#02-BAA018#007</aas:value>
-                    </aas:key>
-                  </aas:keys>
-                </aas:reference>
-              </aas:supplementalSemanticIds>
-              <aas:valueType>xs:double</aas:valueType>
-            </aas:property>
-            <aas:property>
-              <aas:idShort>height</aas:idShort>
-              <aas:displayName>
-                <aas:langStringNameType>
-                  <aas:language>en</aas:language>
-                  <aas:text>height</aas:text>
-                </aas:langStringNameType>
-              </aas:displayName>
-              <aas:semanticId>
-                <aas:type>ExternalReference</aas:type>
-                <aas:keys>
-                  <aas:key>
-                    <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#height</aas:value>
-                  </aas:key>
-                </aas:keys>
-              </aas:semanticId>
-              <aas:supplementalSemanticIds>
-                <aas:reference>
-                  <aas:type>ExternalReference</aas:type>
-                  <aas:keys>
-                    <aas:key>
-                      <aas:type>GlobalReference</aas:type>
-                      <aas:value>0173-1#02-BAA020#009</aas:value>
-                    </aas:key>
-                  </aas:keys>
-                </aas:reference>
-              </aas:supplementalSemanticIds>
-              <aas:valueType>xs:double</aas:valueType>
-            </aas:property>
-            <aas:property>
-              <aas:idShort>width</aas:idShort>
-              <aas:displayName>
-                <aas:langStringNameType>
-                  <aas:language>en</aas:language>
-                  <aas:text>width</aas:text>
-                </aas:langStringNameType>
-              </aas:displayName>
-              <aas:semanticId>
-                <aas:type>ExternalReference</aas:type>
-                <aas:keys>
-                  <aas:key>
-                    <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#width</aas:value>
-                  </aas:key>
-                </aas:keys>
-              </aas:semanticId>
-              <aas:supplementalSemanticIds>
-                <aas:reference>
-                  <aas:type>ExternalReference</aas:type>
-                  <aas:keys>
-                    <aas:key>
-                      <aas:type>GlobalReference</aas:type>
-                      <aas:value>0173-1#02-BAF016#006</aas:value>
-                    </aas:key>
-                  </aas:keys>
-                </aas:reference>
-              </aas:supplementalSemanticIds>
-              <aas:valueType>xs:double</aas:valueType>
-            </aas:property>
-            <aas:property>
-              <aas:idShort>temperatureRangeIdleStateLowerBoundary</aas:idShort>
-              <aas:displayName>
-                <aas:langStringNameType>
-                  <aas:language>en</aas:language>
-                  <aas:text>temperature range idle state (lower boundary)</aas:text>
-                </aas:langStringNameType>
-              </aas:displayName>
-              <aas:semanticId>
-                <aas:type>ExternalReference</aas:type>
-                <aas:keys>
-                  <aas:key>
-                    <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#temperatureRangeIdleStateLowerBoundary</aas:value>
-                  </aas:key>
-                </aas:keys>
-              </aas:semanticId>
-              <aas:supplementalSemanticIds>
-                <aas:reference>
-                  <aas:type>ExternalReference</aas:type>
-                  <aas:keys>
-                    <aas:key>
-                      <aas:type>GlobalReference</aas:type>
-                      <aas:value>0173-1#02-ABL842#001</aas:value>
-                    </aas:key>
-                  </aas:keys>
-                </aas:reference>
-              </aas:supplementalSemanticIds>
-              <aas:valueType>xs:double</aas:valueType>
-            </aas:property>
-            <aas:property>
-              <aas:idShort>temperatureRangeIdleStateUpperBoundary</aas:idShort>
-              <aas:displayName>
-                <aas:langStringNameType>
-                  <aas:language>en</aas:language>
-                  <aas:text>temperature range idle state (upper boundary)</aas:text>
-                </aas:langStringNameType>
-              </aas:displayName>
-              <aas:semanticId>
-                <aas:type>ExternalReference</aas:type>
-                <aas:keys>
-                  <aas:key>
-                    <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#temperatureRangeIdleStateUpperBoundary</aas:value>
-                  </aas:key>
-                </aas:keys>
-              </aas:semanticId>
-              <aas:supplementalSemanticIds>
-                <aas:reference>
-                  <aas:type>ExternalReference</aas:type>
-                  <aas:keys>
-                    <aas:key>
-                      <aas:type>GlobalReference</aas:type>
-                      <aas:value>0173-1#02-ABL871#001</aas:value>
-                    </aas:key>
-                  </aas:keys>
-                </aas:reference>
-              </aas:supplementalSemanticIds>
-              <aas:valueType>xs:double</aas:valueType>
-            </aas:property>
+          </aas:value>
+        </aas:submodelElementCollection>
+        <aas:submodelElementCollection>
+          <aas:idShort>technicalProperties</aas:idShort>
+          <aas:description>
+            <aas:langStringTextType>
+              <aas:language>en</aas:language>
+              <aas:text>Technical and product properties. Individual Characteristics that describe the product and its technical properties.</aas:text>
+            </aas:langStringTextType>
+          </aas:description>
+          <aas:supplementalSemanticIds>
+            <aas:reference>
+              <aas:type>ExternalReference</aas:type>
+              <aas:keys>
+                <aas:key>
+                  <aas:type>GlobalReference</aas:type>
+                  <aas:value>https://admin-shell.io/ZVEI/TechnicalData/TechnicalProperties/1/1</aas:value>
+                </aas:key>
+              </aas:keys>
+            </aas:reference>
+          </aas:supplementalSemanticIds>
+          <aas:value>
             <aas:submodelElementCollection>
-              <aas:idShort>voltage</aas:idShort>
+              <aas:idShort>capacityEnergyVoltage</aas:idShort>
+              <aas:displayName>
+                <aas:langStringNameType>
+                  <aas:language>en</aas:language>
+                  <aas:text>capacity, energy and voltage</aas:text>
+                </aas:langStringNameType>
+              </aas:displayName>
+              <aas:description>
+                <aas:langStringTextType>
+                  <aas:language>en</aas:language>
+                  <aas:text>Information on battery capacity, energy and voltage.</aas:text>
+                </aas:langStringTextType>
+              </aas:description>
               <aas:supplementalSemanticIds>
                 <aas:reference>
                   <aas:type>ExternalReference</aas:type>
@@ -840,10 +564,75 @@
                   </aas:supplementalSemanticIds>
                   <aas:valueType>xs:float</aas:valueType>
                 </aas:property>
+                <aas:property>
+                  <aas:idShort>ratedCapacity</aas:idShort>
+                  <aas:semanticId>
+                    <aas:type>ExternalReference</aas:type>
+                    <aas:keys>
+                      <aas:key>
+                        <aas:type>GlobalReference</aas:type>
+                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#ratedCapacity</aas:value>
+                      </aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:valueType>xs:float</aas:valueType>
+                </aas:property>
+                <aas:submodelElementCollection>
+                  <aas:idShort>capacityFade</aas:idShort>
+                  <aas:description>
+                    <aas:langStringTextType>
+                      <aas:language>en</aas:language>
+                      <aas:text>The capacity fade is the �Decrease over time and upon usage in the amount of charge that a battery can deliver at the rated voltage, with respect to the original rated capacity� (see BattReg Annex IV (2)) as declared by the manufacturer.
+
+DIN DKE Spec 99100 chapter reference: 6.7.2.4</aas:text>
+                    </aas:langStringTextType>
+                  </aas:description>
+                  <aas:value>
+                    <aas:property>
+                      <aas:idShort>capacityFadeValue</aas:idShort>
+                      <aas:semanticId>
+                        <aas:type>ExternalReference</aas:type>
+                        <aas:keys>
+                          <aas:key>
+                            <aas:type>GlobalReference</aas:type>
+                            <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#capacityFadeValue</aas:value>
+                          </aas:key>
+                        </aas:keys>
+                      </aas:semanticId>
+                      <aas:valueType>xs:float</aas:valueType>
+                    </aas:property>
+                    <aas:property>
+                      <aas:idShort>lastUpdate</aas:idShort>
+                      <aas:semanticId>
+                        <aas:type>ExternalReference</aas:type>
+                        <aas:keys>
+                          <aas:key>
+                            <aas:type>GlobalReference</aas:type>
+                            <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate</aas:value>
+                          </aas:key>
+                        </aas:keys>
+                      </aas:semanticId>
+                      <aas:valueType>xs:dateTime</aas:valueType>
+                    </aas:property>
+                  </aas:value>
+                </aas:submodelElementCollection>
+                <aas:property>
+                  <aas:idShort>ratedEnergy</aas:idShort>
+                  <aas:semanticId>
+                    <aas:type>ExternalReference</aas:type>
+                    <aas:keys>
+                      <aas:key>
+                        <aas:type>GlobalReference</aas:type>
+                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#ratedEnergy</aas:value>
+                      </aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:valueType>xs:float</aas:valueType>
+                </aas:property>
               </aas:value>
             </aas:submodelElementCollection>
             <aas:submodelElementCollection>
-              <aas:idShort>efficiency</aas:idShort>
+              <aas:idShort>roundTripEnergyEfficiency</aas:idShort>
               <aas:supplementalSemanticIds>
                 <aas:reference>
                   <aas:type>ExternalReference</aas:type>
@@ -856,215 +645,6 @@
                 </aas:reference>
               </aas:supplementalSemanticIds>
               <aas:value>
-                <aas:submodelElementList>
-                  <aas:idShort>originalPowerCapability</aas:idShort>
-                  <aas:description>
-                    <aas:langStringTextType>
-                      <aas:language>en</aas:language>
-                      <aas:text>Pre-use power capability: Definition of power capability as given in Battery Regulation. 
-Annex IV Part B, point 4 --> measurement at 80 % and 20 % SoC required. This requirement may not be implementable for remaining power capability and power fade(see below). It, thus, should be reviewed together with SoC definition.
-
-DIN DKE Spec 99100 chapter reference: 6.7.3.2
-
-</aas:text>
-                    </aas:langStringTextType>
-                  </aas:description>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#OriginalPowerCapabilityAtSoC</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:orderRelevant>false</aas:orderRelevant>
-                  <aas:typeValueListElement>SubmodelElementCollection</aas:typeValueListElement>
-                  <aas:value>
-                    <aas:submodelElementCollection>
-                      <aas:idShort>originalPowerCapability</aas:idShort>
-                      <aas:description>
-                        <aas:langStringTextType>
-                          <aas:language>en</aas:language>
-                          <aas:text>Pre-use power capability: Definition of power capability as given in Battery Regulation. 
-Annex IV Part B, point 4 --> measurement at 80 % and 20 % SoC required. This requirement may not be implementable for remaining power capability and power fade(see below). It, thus, should be reviewed together with SoC definition.
-
-DIN DKE Spec 99100 chapter reference: 6.7.3.2
-
-</aas:text>
-                        </aas:langStringTextType>
-                      </aas:description>
-                      <aas:value>
-                        <aas:property>
-                          <aas:idShort>atSoC</aas:idShort>
-                          <aas:semanticId>
-                            <aas:type>ExternalReference</aas:type>
-                            <aas:keys>
-                              <aas:key>
-                                <aas:type>GlobalReference</aas:type>
-                                <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#atSoC</aas:value>
-                              </aas:key>
-                            </aas:keys>
-                          </aas:semanticId>
-                          <aas:valueType>xs:float</aas:valueType>
-                        </aas:property>
-                        <aas:property>
-                          <aas:idShort>powerCapabilityAt</aas:idShort>
-                          <aas:semanticId>
-                            <aas:type>ExternalReference</aas:type>
-                            <aas:keys>
-                              <aas:key>
-                                <aas:type>GlobalReference</aas:type>
-                                <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#powerCapabilityAt</aas:value>
-                              </aas:key>
-                            </aas:keys>
-                          </aas:semanticId>
-                          <aas:valueType>xs:float</aas:valueType>
-                        </aas:property>
-                      </aas:value>
-                    </aas:submodelElementCollection>
-                  </aas:value>
-                </aas:submodelElementList>
-                <aas:property>
-                  <aas:idShort>originalPowerCapabilityLimits</aas:idShort>
-                  <aas:displayName>
-                    <aas:langStringNameType>
-                      <aas:language>en</aas:language>
-                      <aas:text>original power capability limits</aas:text>
-                    </aas:langStringNameType>
-                  </aas:displayName>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#originalPowerCapabilityLimits</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:valueType>xs:float</aas:valueType>
-                </aas:property>
-                <aas:property>
-                  <aas:idShort>maximumAllowedBatteryEnergy</aas:idShort>
-                  <aas:displayName>
-                    <aas:langStringNameType>
-                      <aas:language>en</aas:language>
-                      <aas:text>maximum allowed battery energy</aas:text>
-                    </aas:langStringNameType>
-                  </aas:displayName>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#maximumAllowedBatteryEnergy</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:valueType>xs:float</aas:valueType>
-                </aas:property>
-                <aas:property>
-                  <aas:idShort>maximumPermittedBatteryPower</aas:idShort>
-                  <aas:displayName>
-                    <aas:langStringNameType>
-                      <aas:language>en</aas:language>
-                      <aas:text>maximum permitted battery power</aas:text>
-                    </aas:langStringNameType>
-                  </aas:displayName>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#maximumPermittedBatteryPower</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:valueType>xs:float</aas:valueType>
-                </aas:property>
-                <aas:property>
-                  <aas:idShort>powerCapabilityRatio</aas:idShort>
-                  <aas:displayName>
-                    <aas:langStringNameType>
-                      <aas:language>en</aas:language>
-                      <aas:text>PowerCapabilityRatio</aas:text>
-                    </aas:langStringNameType>
-                  </aas:displayName>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#powerCapabilityRatio</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:valueType>xs:float</aas:valueType>
-                </aas:property>
-                <aas:property>
-                  <aas:idShort>powerCapabilityAt20Charge</aas:idShort>
-                  <aas:displayName>
-                    <aas:langStringNameType>
-                      <aas:language>en</aas:language>
-                      <aas:text>power capability at 20% charge</aas:text>
-                    </aas:langStringNameType>
-                  </aas:displayName>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#powerCapabilityAt20Charge</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:valueType>xs:float</aas:valueType>
-                </aas:property>
-                <aas:property>
-                  <aas:idShort>powerCapabilityAt80Charge</aas:idShort>
-                  <aas:displayName>
-                    <aas:langStringNameType>
-                      <aas:language>en</aas:language>
-                      <aas:text>power capability at 80% charge</aas:text>
-                    </aas:langStringNameType>
-                  </aas:displayName>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#powerCapabilityAt80Charge</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:valueType>xs:float</aas:valueType>
-                </aas:property>
-                <aas:property>
-                  <aas:idShort>powerFade</aas:idShort>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#powerFade</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:valueType>xs:float</aas:valueType>
-                </aas:property>
-                <aas:property>
-                  <aas:idShort>roundTripEfficiencyat50PerCentCycleLife</aas:idShort>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#roundTripEfficiencyat50PerCentCycleLife</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:valueType>xs:float</aas:valueType>
-                </aas:property>
                 <aas:property>
                   <aas:idShort>initialRoundTripEnergyEfficiency</aas:idShort>
                   <aas:displayName>
@@ -1095,6 +675,58 @@ DIN DKE Spec 99100 chapter reference: 6.7.3.2
                   </aas:supplementalSemanticIds>
                   <aas:valueType>xs:integer</aas:valueType>
                 </aas:property>
+                <aas:property>
+                  <aas:idShort>roundTripEfficiencyat50PerCentCycleLife</aas:idShort>
+                  <aas:semanticId>
+                    <aas:type>ExternalReference</aas:type>
+                    <aas:keys>
+                      <aas:key>
+                        <aas:type>GlobalReference</aas:type>
+                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#roundTripEfficiencyat50PerCentCycleLife</aas:value>
+                      </aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:valueType>xs:float</aas:valueType>
+                </aas:property>
+                <aas:submodelElementCollection>
+                  <aas:idShort>capacityFade</aas:idShort>
+                  <aas:description>
+                    <aas:langStringTextType>
+                      <aas:language>en</aas:language>
+                      <aas:text>The capacity fade is the �Decrease over time and upon usage in the amount of charge that a battery can deliver at the rated voltage, with respect to the original rated capacity� (see BattReg Annex IV (2)) as declared by the manufacturer.
+
+DIN DKE Spec 99100 chapter reference: 6.7.2.4</aas:text>
+                    </aas:langStringTextType>
+                  </aas:description>
+                  <aas:value>
+                    <aas:property>
+                      <aas:idShort>capacityFadeValue</aas:idShort>
+                      <aas:semanticId>
+                        <aas:type>ExternalReference</aas:type>
+                        <aas:keys>
+                          <aas:key>
+                            <aas:type>GlobalReference</aas:type>
+                            <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#capacityFadeValue</aas:value>
+                          </aas:key>
+                        </aas:keys>
+                      </aas:semanticId>
+                      <aas:valueType>xs:float</aas:valueType>
+                    </aas:property>
+                    <aas:property>
+                      <aas:idShort>lastUpdate</aas:idShort>
+                      <aas:semanticId>
+                        <aas:type>ExternalReference</aas:type>
+                        <aas:keys>
+                          <aas:key>
+                            <aas:type>GlobalReference</aas:type>
+                            <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate</aas:value>
+                          </aas:key>
+                        </aas:keys>
+                      </aas:semanticId>
+                      <aas:valueType>xs:dateTime</aas:valueType>
+                    </aas:property>
+                  </aas:value>
+                </aas:submodelElementCollection>
                 <aas:property>
                   <aas:idShort>initialSelfDischargingRate</aas:idShort>
                   <aas:displayName>
@@ -1191,22 +823,82 @@ DIN DKE Spec 99100 chapter reference: 6.7.3.2
                   </aas:supplementalSemanticIds>
                   <aas:valueType>xs:double</aas:valueType>
                 </aas:property>
+                <aas:property>
+                  <aas:idShort>internalResistanceIncreaseOfBatteryCell</aas:idShort>
+                  <aas:semanticId>
+                    <aas:type>ExternalReference</aas:type>
+                    <aas:keys>
+                      <aas:key>
+                        <aas:type>GlobalReference</aas:type>
+                        <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#internalResistanceIncreaseOfBatteryCell</aas:value>
+                      </aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:supplementalSemanticIds>
+                    <aas:reference>
+                      <aas:type>ExternalReference</aas:type>
+                      <aas:keys>
+                        <aas:key>
+                          <aas:type>GlobalReference</aas:type>
+                          <aas:value>0173-1#02-ABL831#001</aas:value>
+                        </aas:key>
+                      </aas:keys>
+                    </aas:reference>
+                  </aas:supplementalSemanticIds>
+                  <aas:valueType>xs:integer</aas:valueType>
+                </aas:property>
+                <aas:property>
+                  <aas:idShort>internalResistanceIncreaseOfBatteryPack</aas:idShort>
+                  <aas:semanticId>
+                    <aas:type>ExternalReference</aas:type>
+                    <aas:keys>
+                      <aas:key>
+                        <aas:type>GlobalReference</aas:type>
+                        <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#internalResistanceIncreaseOfBatteryPack</aas:value>
+                      </aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:supplementalSemanticIds>
+                    <aas:reference>
+                      <aas:type>ExternalReference</aas:type>
+                      <aas:keys>
+                        <aas:key>
+                          <aas:type>GlobalReference</aas:type>
+                          <aas:value>0173-1#02-ABL831#001</aas:value>
+                        </aas:key>
+                      </aas:keys>
+                    </aas:reference>
+                  </aas:supplementalSemanticIds>
+                  <aas:valueType>xs:integer</aas:valueType>
+                </aas:property>
+                <aas:property>
+                  <aas:idShort>internalResistanceIncreaseOfBatteryModule</aas:idShort>
+                  <aas:semanticId>
+                    <aas:type>ExternalReference</aas:type>
+                    <aas:keys>
+                      <aas:key>
+                        <aas:type>GlobalReference</aas:type>
+                        <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#internalResistanceIncreaseOfBatteryModule</aas:value>
+                      </aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:supplementalSemanticIds>
+                    <aas:reference>
+                      <aas:type>ExternalReference</aas:type>
+                      <aas:keys>
+                        <aas:key>
+                          <aas:type>GlobalReference</aas:type>
+                          <aas:value>0173-1#02-ABL831#001</aas:value>
+                        </aas:key>
+                      </aas:keys>
+                    </aas:reference>
+                  </aas:supplementalSemanticIds>
+                  <aas:valueType>xs:integer</aas:valueType>
+                </aas:property>
               </aas:value>
             </aas:submodelElementCollection>
             <aas:submodelElementCollection>
-              <aas:idShort>capacity</aas:idShort>
-              <aas:displayName>
-                <aas:langStringNameType>
-                  <aas:language>en</aas:language>
-                  <aas:text>capacity</aas:text>
-                </aas:langStringNameType>
-              </aas:displayName>
-              <aas:description>
-                <aas:langStringTextType>
-                  <aas:language>en</aas:language>
-                  <aas:text>Information on the capacity of the battery.</aas:text>
-                </aas:langStringTextType>
-              </aas:description>
+              <aas:idShort>powerCapability</aas:idShort>
               <aas:supplementalSemanticIds>
                 <aas:reference>
                   <aas:type>ExternalReference</aas:type>
@@ -1220,31 +912,269 @@ DIN DKE Spec 99100 chapter reference: 6.7.3.2
               </aas:supplementalSemanticIds>
               <aas:value>
                 <aas:property>
-                  <aas:idShort>ratedEnergy</aas:idShort>
+                  <aas:idShort>maximumPermittedBatteryPower</aas:idShort>
+                  <aas:displayName>
+                    <aas:langStringNameType>
+                      <aas:language>en</aas:language>
+                      <aas:text>maximum permitted battery power</aas:text>
+                    </aas:langStringNameType>
+                  </aas:displayName>
                   <aas:semanticId>
                     <aas:type>ExternalReference</aas:type>
                     <aas:keys>
                       <aas:key>
                         <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#ratedEnergy</aas:value>
+                        <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#maximumPermittedBatteryPower</aas:value>
                       </aas:key>
                     </aas:keys>
                   </aas:semanticId>
                   <aas:valueType>xs:float</aas:valueType>
                 </aas:property>
                 <aas:property>
-                  <aas:idShort>ratedCapacity</aas:idShort>
+                  <aas:idShort>powerFade</aas:idShort>
                   <aas:semanticId>
                     <aas:type>ExternalReference</aas:type>
                     <aas:keys>
                       <aas:key>
                         <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#ratedCapacity</aas:value>
+                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#powerFade</aas:value>
                       </aas:key>
                     </aas:keys>
                   </aas:semanticId>
                   <aas:valueType>xs:float</aas:valueType>
                 </aas:property>
+                <aas:property>
+                  <aas:idShort>powerCapabilityRatio</aas:idShort>
+                  <aas:displayName>
+                    <aas:langStringNameType>
+                      <aas:language>en</aas:language>
+                      <aas:text>PowerCapabilityRatio</aas:text>
+                    </aas:langStringNameType>
+                  </aas:displayName>
+                  <aas:semanticId>
+                    <aas:type>ExternalReference</aas:type>
+                    <aas:keys>
+                      <aas:key>
+                        <aas:type>GlobalReference</aas:type>
+                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#powerCapabilityRatio</aas:value>
+                      </aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:valueType>xs:float</aas:valueType>
+                </aas:property>
+                <aas:submodelElementList>
+                  <aas:idShort>originalPowerCapability</aas:idShort>
+                  <aas:description>
+                    <aas:langStringTextType>
+                      <aas:language>en</aas:language>
+                      <aas:text>Pre-use power capability: Definition of power capability as given in Battery Regulation. 
+Annex IV Part B, point 4 --> measurement at 80 % and 20 % SoC required. This requirement may not be implementable for remaining power capability and power fade(see below). It, thus, should be reviewed together with SoC definition.
+
+DIN DKE Spec 99100 chapter reference: 6.7.3.2
+
+</aas:text>
+                    </aas:langStringTextType>
+                  </aas:description>
+                  <aas:semanticId>
+                    <aas:type>ExternalReference</aas:type>
+                    <aas:keys>
+                      <aas:key>
+                        <aas:type>GlobalReference</aas:type>
+                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#OriginalPowerCapabilityAtSoC</aas:value>
+                      </aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:orderRelevant>false</aas:orderRelevant>
+                  <aas:typeValueListElement>SubmodelElementCollection</aas:typeValueListElement>
+                  <aas:value>
+                    <aas:submodelElementCollection>
+                      <aas:idShort>originalPowerCapability</aas:idShort>
+                      <aas:description>
+                        <aas:langStringTextType>
+                          <aas:language>en</aas:language>
+                          <aas:text>Pre-use power capability: Definition of power capability as given in Battery Regulation. 
+Annex IV Part B, point 4 --> measurement at 80 % and 20 % SoC required. This requirement may not be implementable for remaining power capability and power fade(see below). It, thus, should be reviewed together with SoC definition.
+
+DIN DKE Spec 99100 chapter reference: 6.7.3.2
+
+</aas:text>
+                        </aas:langStringTextType>
+                      </aas:description>
+                      <aas:value>
+                        <aas:property>
+                          <aas:idShort>atSoC</aas:idShort>
+                          <aas:semanticId>
+                            <aas:type>ExternalReference</aas:type>
+                            <aas:keys>
+                              <aas:key>
+                                <aas:type>GlobalReference</aas:type>
+                                <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#atSoC</aas:value>
+                              </aas:key>
+                            </aas:keys>
+                          </aas:semanticId>
+                          <aas:valueType>xs:float</aas:valueType>
+                        </aas:property>
+                        <aas:property>
+                          <aas:idShort>powerCapabilityAt</aas:idShort>
+                          <aas:semanticId>
+                            <aas:type>ExternalReference</aas:type>
+                            <aas:keys>
+                              <aas:key>
+                                <aas:type>GlobalReference</aas:type>
+                                <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#powerCapabilityAt</aas:value>
+                              </aas:key>
+                            </aas:keys>
+                          </aas:semanticId>
+                          <aas:valueType>xs:float</aas:valueType>
+                        </aas:property>
+                      </aas:value>
+                    </aas:submodelElementCollection>
+                  </aas:value>
+                </aas:submodelElementList>
+              </aas:value>
+            </aas:submodelElementCollection>
+            <aas:submodelElementCollection>
+              <aas:idShort>temperature</aas:idShort>
+              <aas:supplementalSemanticIds>
+                <aas:reference>
+                  <aas:type>ExternalReference</aas:type>
+                  <aas:keys>
+                    <aas:key>
+                      <aas:type>GlobalReference</aas:type>
+                      <aas:value>https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1</aas:value>
+                    </aas:key>
+                  </aas:keys>
+                </aas:reference>
+              </aas:supplementalSemanticIds>
+              <aas:value>
+                <aas:property>
+                  <aas:idShort>temperatureRangeIdleStateLowerBoundary</aas:idShort>
+                  <aas:displayName>
+                    <aas:langStringNameType>
+                      <aas:language>en</aas:language>
+                      <aas:text>temperature range idle state (lower boundary)</aas:text>
+                    </aas:langStringNameType>
+                  </aas:displayName>
+                  <aas:semanticId>
+                    <aas:type>ExternalReference</aas:type>
+                    <aas:keys>
+                      <aas:key>
+                        <aas:type>GlobalReference</aas:type>
+                        <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#temperatureRangeIdleStateLowerBoundary</aas:value>
+                      </aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:supplementalSemanticIds>
+                    <aas:reference>
+                      <aas:type>ExternalReference</aas:type>
+                      <aas:keys>
+                        <aas:key>
+                          <aas:type>GlobalReference</aas:type>
+                          <aas:value>0173-1#02-ABL842#001</aas:value>
+                        </aas:key>
+                      </aas:keys>
+                    </aas:reference>
+                  </aas:supplementalSemanticIds>
+                  <aas:valueType>xs:double</aas:valueType>
+                </aas:property>
+                <aas:property>
+                  <aas:idShort>temperatureRangeIdleStateUpperBoundary</aas:idShort>
+                  <aas:displayName>
+                    <aas:langStringNameType>
+                      <aas:language>en</aas:language>
+                      <aas:text>temperature range idle state (upper boundary)</aas:text>
+                    </aas:langStringNameType>
+                  </aas:displayName>
+                  <aas:semanticId>
+                    <aas:type>ExternalReference</aas:type>
+                    <aas:keys>
+                      <aas:key>
+                        <aas:type>GlobalReference</aas:type>
+                        <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#temperatureRangeIdleStateUpperBoundary</aas:value>
+                      </aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:supplementalSemanticIds>
+                    <aas:reference>
+                      <aas:type>ExternalReference</aas:type>
+                      <aas:keys>
+                        <aas:key>
+                          <aas:type>GlobalReference</aas:type>
+                          <aas:value>0173-1#02-ABL871#001</aas:value>
+                        </aas:key>
+                      </aas:keys>
+                    </aas:reference>
+                  </aas:supplementalSemanticIds>
+                  <aas:valueType>xs:double</aas:valueType>
+                </aas:property>
+              </aas:value>
+            </aas:submodelElementCollection>
+            <aas:submodelElementCollection>
+              <aas:idShort>lifetime</aas:idShort>
+              <aas:supplementalSemanticIds>
+                <aas:reference>
+                  <aas:type>ExternalReference</aas:type>
+                  <aas:keys>
+                    <aas:key>
+                      <aas:type>GlobalReference</aas:type>
+                      <aas:value>https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1</aas:value>
+                    </aas:key>
+                  </aas:keys>
+                </aas:reference>
+              </aas:supplementalSemanticIds>
+              <aas:value>
+                <aas:property>
+                  <aas:idShort>expectedLifetime</aas:idShort>
+                  <aas:semanticId>
+                    <aas:type>ExternalReference</aas:type>
+                    <aas:keys>
+                      <aas:key>
+                        <aas:type>GlobalReference</aas:type>
+                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#expectedLifetime</aas:value>
+                      </aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:valueType>xs:short</aas:valueType>
+                </aas:property>
+                <aas:submodelElementCollection>
+                  <aas:idShort>numberOfFullCycles</aas:idShort>
+                  <aas:description>
+                    <aas:langStringTextType>
+                      <aas:language>en</aas:language>
+                      <aas:text>Number of (full) charging and discharging cycles.
+
+DIN DKE Spec 99100 chapter reference: 6.7.6.3</aas:text>
+                    </aas:langStringTextType>
+                  </aas:description>
+                  <aas:value>
+                    <aas:property>
+                      <aas:idShort>numberOfFullCyclesValue</aas:idShort>
+                      <aas:semanticId>
+                        <aas:type>ExternalReference</aas:type>
+                        <aas:keys>
+                          <aas:key>
+                            <aas:type>GlobalReference</aas:type>
+                            <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#numberOfFullCyclesValue</aas:value>
+                          </aas:key>
+                        </aas:keys>
+                      </aas:semanticId>
+                      <aas:valueType>xs:integer</aas:valueType>
+                    </aas:property>
+                    <aas:property>
+                      <aas:idShort>lastUpdate</aas:idShort>
+                      <aas:semanticId>
+                        <aas:type>ExternalReference</aas:type>
+                        <aas:keys>
+                          <aas:key>
+                            <aas:type>GlobalReference</aas:type>
+                            <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate</aas:value>
+                          </aas:key>
+                        </aas:keys>
+                      </aas:semanticId>
+                      <aas:valueType>xs:dateTime</aas:valueType>
+                    </aas:property>
+                  </aas:value>
+                </aas:submodelElementCollection>
                 <aas:property>
                   <aas:idShort>capacityThresholdForExhaustion</aas:idShort>
                   <aas:semanticId>
@@ -1252,11 +1182,24 @@ DIN DKE Spec 99100 chapter reference: 6.7.3.2
                     <aas:keys>
                       <aas:key>
                         <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#capacityThresholdForExhaustion</aas:value>
+                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#capacityThresholdForExhaustion</aas:value>
                       </aas:key>
                     </aas:keys>
                   </aas:semanticId>
                   <aas:valueType>xs:double</aas:valueType>
+                </aas:property>
+                <aas:property>
+                  <aas:idShort>cRateLifeCycleTest</aas:idShort>
+                  <aas:semanticId>
+                    <aas:type>ExternalReference</aas:type>
+                    <aas:keys>
+                      <aas:key>
+                        <aas:type>GlobalReference</aas:type>
+                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#cRateLifeCycleTest</aas:value>
+                      </aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:valueType>xs:float</aas:valueType>
                 </aas:property>
               </aas:value>
             </aas:submodelElementCollection>
@@ -1727,205 +1670,62 @@ The path can be absolute or relative.</aas:text>
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>generalInformation</aas:idShort>
+      <aas:idShort>manufacturerIdentifier</aas:idShort>
       <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>general information</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#generalInformation</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>general information</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>generalInformation</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>General information, for example ordering and manufacturer information.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>productClassificationSystem</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>product classification system</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassificationSystem</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>product classification system</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>productClassificationSystem</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Common name of the classification system.
-Note: Examples for common names for classification systems are "ECLASS" or "IEC CDD".</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>classificationSystemVersion</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>classification system version</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#classificationSystemVersion</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>classification system version</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>classificationSystemVersion</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Common version identifier of the used classification system, in order to distinguish different version of the property dictionary.
-Note: Casing is to be ignored.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>productClassId</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>product class ID</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassId</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>product class ID</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>productClassId</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Class of the associated product or industrial equipment in the classification system. According to the notation of the system.
-Note: Ideally, the Property/valueId is used to reference the IRI/ IRDI of the product class.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>productClassifications</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>product classifications</aas:text>
-        </aas:langStringNameType>
         <aas:langStringNameType>
           <aas:language>de</aas:language>
-          <aas:text>Produkt-Klassifikationen</aas:text>
+          <aas:text>identifier of the manfuacturer</aas:text>
+        </aas:langStringNameType>
+        <aas:langStringNameType>
+          <aas:language>en</aas:language>
+          <aas:text>article number of the product</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassifications</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#manufacturerIdentifier</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>de</aas:language>
+                  <aas:text>identifier of the manfuacturer</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>article number of the product</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>manufacturerIdentifier</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>A battery passport must include information identifying the manufacturer.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>warrentyPeriod</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#warrentyPeriod</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1942,24 +1742,23 @@ Note: Ideally, the Property/valueId is used to reference the IRI/ IRDI of the pr
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>product classifications</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Produkt-Klassifikationen</aas:text>
+                  <aas:text>warrentyPeriod</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>productClassifications</aas:text>
+                  <aas:text>warrentyPeriod</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
+              <aas:unit>month</aas:unit>
               <aas:dataType>STRING</aas:dataType>
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>Product classifications by association with product classes in common classification systems.</aas:text>
+                  <aas:text>The battery passport must include information about the period for which the commercial warranty applies.
+
+DIN DKE Spec chapter reference: 6.1.3.4</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>
@@ -2111,14 +1910,14 @@ DIN DKE Spec chapter reference: 6.1.3.6</aas:text>
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>length</aas:idShort>
+      <aas:idShort>generalInformation</aas:idShort>
       <aas:displayName>
         <aas:langStringNameType>
           <aas:language>en</aas:language>
-          <aas:text>length</aas:text>
+          <aas:text>general information</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#length</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#generalInformation</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -2135,209 +1934,20 @@ DIN DKE Spec chapter reference: 6.1.3.6</aas:text>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>length</aas:text>
+                  <aas:text>general information</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>length</aas:text>
+                  <aas:text>generalInformation</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
-              <aas:unit>centimetre</aas:unit>
-              <aas:dataType>REAL_MEASURE</aas:dataType>
+              <aas:dataType>STRING</aas:dataType>
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>For objects with orientation in preferred position during use the dimension perpendicular to diameter/height/width/depth</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>height</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>height</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#height</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>height</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>height</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:unit>centimetre</aas:unit>
-              <aas:dataType>REAL_MEASURE</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>For objects with orientation in preferred position during use the dimension perpendicular to height/length/depth.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>width</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>width</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#width</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>width</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>width</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:unit>centimetre</aas:unit>
-              <aas:dataType>REAL_MEASURE</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>For objects with orientation in preferred position during use the dimension perpendicular to height/length/depth.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>temperatureRangeIdleStateLowerBoundary</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>temperature range idle state (lower boundary)</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#temperatureRangeIdleStateLowerBoundary</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>temperature range idle state (lower boundary)</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>temperatureRangeIdleStateLowerBoundary</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:unit>degreeCelsius</aas:unit>
-              <aas:dataType>REAL_MEASURE</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Lower boundary of the surrounding temperature range, which the battery can safely withstand.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>temperatureRangeIdleStateUpperBoundary</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>temperature range idle state (upper boundary)</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#temperatureRangeIdleStateUpperBoundary</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>temperature range idle state (upper boundary)</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>temperatureRangeIdleStateUpperBoundary</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:unit>degreeCelsius</aas:unit>
-              <aas:dataType>REAL_MEASURE</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Upper boundary of the surrounding temperature range, which the battery can safely withstand.</aas:text>
+                  <aas:text>General information, for example ordering and manufacturer information.</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>
@@ -2493,8 +2103,8 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.9</aas:text>
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>voltage</aas:idShort>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#voltage</aas:id>
+      <aas:idShort>ratedCapacity</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#ratedCapacity</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -2511,129 +2121,23 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.9</aas:text>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>voltage</aas:text>
+                  <aas:text>ratedCapacity</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>voltage</aas:text>
+                  <aas:text>ratedCapacity</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>atSoC</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#atSoC</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>atSoC</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>atSoC</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:unit>percent</aas:unit>
+              <aas:unit>ampereHour</aas:unit>
               <aas:dataType>REAL_MEASURE</aas:dataType>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>powerCapabilityAt</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#powerCapabilityAt</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>powerCapabilityAt</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>powerCapabilityAt</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:unit>percent</aas:unit>
-              <aas:dataType>REAL_MEASURE</aas:dataType>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>originalPowerCapability</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#originalPowerCapability</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>originalPowerCapability</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>originalPowerCapability</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>Pre-use power capability: Definition of power capability as given in Battery Regulation. 
-Annex IV Part B, point 4 --> measurement at 80 % and 20 % SoC required. This requirement may not be implementable for remaining power capability and power fade(see below). It, thus, should be reviewed together with SoC definition.
+                  <aas:text>�Rated capacity� is the total number of ampere-hours (Ah) that can be withdrawn from a fully charged battery under reference conditions (see BattReg Annex IV (1)).
 
-DIN DKE Spec 99100 chapter reference: 6.7.3.2
-
-</aas:text>
+DIN DKE Spec 99100 chapter reference: 6.7.2.2</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>
@@ -2642,14 +2146,8 @@ DIN DKE Spec 99100 chapter reference: 6.7.3.2
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>originalPowerCapabilityLimits</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>original power capability limits</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#originalPowerCapabilityLimits</aas:id>
+      <aas:idShort>capacityFadeValue</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#capacityFadeValue</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -2666,21 +2164,55 @@ DIN DKE Spec 99100 chapter reference: 6.7.3.2
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>original power capability limits</aas:text>
+                  <aas:text>capacityFadeValue</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>originalPowerCapabilityLimits</aas:text>
+                  <aas:text>capacityFadeValue</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
               <aas:unit>percent</aas:unit>
               <aas:dataType>REAL_MEASURE</aas:dataType>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>lastUpdate</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>lastUpdate</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>lastUpdate</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>Pre-use power capability (definition of power capability as given in Battery Regulation).</aas:text>
+                  <aas:text>Timestamp for dynamic data attributes show the last update time.</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>
@@ -2689,14 +2221,8 @@ DIN DKE Spec 99100 chapter reference: 6.7.3.2
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>maximumAllowedBatteryEnergy</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>maximum allowed battery energy</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#maximumAllowedBatteryEnergy</aas:id>
+      <aas:idShort>capacityFade</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#capacityFade</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -2713,13 +2239,55 @@ DIN DKE Spec 99100 chapter reference: 6.7.3.2
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>maximum allowed battery energy</aas:text>
+                  <aas:text>capacityFade</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>maximumAllowedBatteryEnergy</aas:text>
+                  <aas:text>capacityFade</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>The capacity fade is the �Decrease over time and upon usage in the amount of charge that a battery can deliver at the rated voltage, with respect to the original rated capacity� (see BattReg Annex IV (2)) as declared by the manufacturer.
+
+DIN DKE Spec 99100 chapter reference: 6.7.2.4</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>ratedEnergy</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#ratedEnergy</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>ratedEnergy</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>ratedEnergy</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
               <aas:unit>kilowattHour</aas:unit>
@@ -2727,7 +2295,9 @@ DIN DKE Spec 99100 chapter reference: 6.7.3.2
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>Original power capability (in Watts) and limits, with temperature range when relevant.</aas:text>
+                  <aas:text>The certified usable battery energy is the usable battery energy according to the procedure in the UN GTR No 22 as determined during the certification of the vehicle.
+
+DIN DKE Spec 99100 chapter reference: 6.7.2.5</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>
@@ -2736,14 +2306,14 @@ DIN DKE Spec 99100 chapter reference: 6.7.3.2
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>maximumPermittedBatteryPower</aas:idShort>
+      <aas:idShort>capacityEnergyVoltage</aas:idShort>
       <aas:displayName>
         <aas:langStringNameType>
           <aas:language>en</aas:language>
-          <aas:text>maximum permitted battery power</aas:text>
+          <aas:text>capacity, energy and voltage</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#maximumPermittedBatteryPower</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#capacityEnergyVoltage</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -2760,258 +2330,20 @@ DIN DKE Spec 99100 chapter reference: 6.7.3.2
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>maximum permitted battery power</aas:text>
+                  <aas:text>capacity, energy and voltage</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>maximumPermittedBatteryPower</aas:text>
+                  <aas:text>capacityEnergyVoltage</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
-              <aas:unit>percent</aas:unit>
-              <aas:dataType>REAL_MEASURE</aas:dataType>
+              <aas:dataType>STRING</aas:dataType>
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>Maximum permitted power the battery is rated for, includes the data relevant for power limits.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>powerCapabilityRatio</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>PowerCapabilityRatio</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#powerCapabilityRatio</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>PowerCapabilityRatio</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>powerCapabilityRatio</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:unit>percent</aas:unit>
-              <aas:dataType>REAL_MEASURE</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Provides information on nominal/recommended charge rate (C-rate); equal to regulation definition.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>powerCapabilityAt20Charge</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>power capability at 20% charge</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#powerCapabilityAt20Charge</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>power capability at 20% charge</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>powerCapabilityAt20Charge</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:unit>percent</aas:unit>
-              <aas:dataType>REAL_MEASURE</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>PowerCapabilityFade In-use power fade, as defined in Battery Regulation. Pre-use power capability measurement at 20%.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>powerCapabilityAt80Charge</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>power capability at 80% charge</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#powerCapabilityAt80Charge</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>power capability at 80% charge</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>powerCapabilityAt80Charge</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:unit>percent</aas:unit>
-              <aas:dataType>REAL_MEASURE</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>PowerCapabilityFade In-use power fade, as defined in Battery Regulation. Pre-use power capability measurement at 80 %.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>powerFade</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#powerFade</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>powerFade</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>powerFade</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:unit>percent</aas:unit>
-              <aas:dataType>REAL_MEASURE</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>�Power fade (in %) means the decrease over time and upon usage in the amount of power that a battery can deliver at the rated voltage.� (see BattReg Annex IV (4)).
-
-Power fade should be calculated using original and remaining power capability following the formula below:
-Pfade(x) = (1-P(x)) / PBOL" �100" %" 
-where
-x 	is the aging parameter (e.g. storage time, number of cycles, etc.);
-P(x) 	is the power capability at aging parameter x;
-PBOL 	is the power capability at begin of life.
-
-DIN DKE Spec 99100 chapter reference: 6.7.3.4</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>roundTripEfficiencyat50PerCentCycleLife</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#roundTripEfficiencyat50PerCentCycleLife</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>roundTripEfficiencyat50PerCentCycleLife</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>roundTripEfficiencyat50PerCentCycleLife</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:unit>percent</aas:unit>
-              <aas:dataType>REAL_MEASURE</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Initial round trip energy efficiency shall be measured at reference conditions that include the specification of �50 % of cycle-life�.
-
-Test methods and reference conditions should separately consider non-cycle applications and batteries with very long cycle-life.
-
-DIN DKE Spec 99100 chapter reference: 6.7.4.3
-</aas:text>
+                  <aas:text>Information on battery capacity, energy and voltage.</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>
@@ -3067,6 +2399,52 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.3
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
+      <aas:idShort>roundTripEfficiencyat50PerCentCycleLife</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#roundTripEfficiencyat50PerCentCycleLife</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>roundTripEfficiencyat50PerCentCycleLife</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>roundTripEfficiencyat50PerCentCycleLife</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:unit>percent</aas:unit>
+              <aas:dataType>REAL_MEASURE</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Initial round trip energy efficiency shall be measured at reference conditions that include the specification of �50 % of cycle-life�.
+
+Test methods and reference conditions should separately consider non-cycle applications and batteries with very long cycle-life.
+
+DIN DKE Spec 99100 chapter reference: 6.7.4.3
+</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
       <aas:idShort>initialSelfDischargingRate</aas:idShort>
       <aas:displayName>
         <aas:langStringNameType>
@@ -3114,8 +2492,8 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.3
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>efficiency</aas:idShort>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#efficiency</aas:id>
+      <aas:idShort>roundTripEnergyEfficiency</aas:idShort>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#roundTripEnergyEfficiency</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -3132,13 +2510,13 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.3
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>efficiency</aas:text>
+                  <aas:text>roundTripEnergyEfficiency</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>efficiency</aas:text>
+                  <aas:text>roundTripEnergyEfficiency</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
               <aas:dataType>STRING</aas:dataType>
@@ -3271,6 +2649,129 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.3
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
+      <aas:idShort>internalResistanceIncreaseOfBatteryCell</aas:idShort>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#internalResistanceIncreaseOfBatteryCell</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>internalResistanceIncreaseOfBatteryCell</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>internalResistanceIncreaseOfBatteryCell</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:unit>percent</aas:unit>
+              <aas:dataType>INTEGER_MEASURE</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Internal resistance increase of battery cell.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>internalResistanceIncreaseOfBatteryPack</aas:idShort>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#internalResistanceIncreaseOfBatteryPack</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>internalResistanceIncreaseOfBatteryPack</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>internalResistanceIncreaseOfBatteryPack</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:unit>percent</aas:unit>
+              <aas:dataType>INTEGER_MEASURE</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Internal resistance increase of battery pack.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>internalResistanceIncreaseOfBatteryModule</aas:idShort>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#internalResistanceIncreaseOfBatteryModule</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>internalResistanceIncreaseOfBatteryModule</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>internalResistanceIncreaseOfBatteryModule</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:unit>percent</aas:unit>
+              <aas:dataType>INTEGER_MEASURE</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Internal resistance increase of battery module.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
       <aas:idShort>resistance</aas:idShort>
       <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#resistance</aas:id>
       <aas:embeddedDataSpecifications>
@@ -3305,8 +2806,14 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.3
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>ratedEnergy</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#ratedEnergy</aas:id>
+      <aas:idShort>maximumPermittedBatteryPower</aas:idShort>
+      <aas:displayName>
+        <aas:langStringNameType>
+          <aas:language>en</aas:language>
+          <aas:text>maximum permitted battery power</aas:text>
+        </aas:langStringNameType>
+      </aas:displayName>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#maximumPermittedBatteryPower</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -3323,23 +2830,21 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.3
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>ratedEnergy</aas:text>
+                  <aas:text>maximum permitted battery power</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>ratedEnergy</aas:text>
+                  <aas:text>maximumPermittedBatteryPower</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
-              <aas:unit>kilowattHour</aas:unit>
+              <aas:unit>percent</aas:unit>
               <aas:dataType>REAL_MEASURE</aas:dataType>
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>The certified usable battery energy is the usable battery energy according to the procedure in the UN GTR No 22 as determined during the certification of the vehicle.
-
-DIN DKE Spec 99100 chapter reference: 6.7.2.5</aas:text>
+                  <aas:text>Maximum permitted power the battery is rated for, includes the data relevant for power limits.</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>
@@ -3348,8 +2853,8 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.5</aas:text>
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>ratedCapacity</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#ratedCapacity</aas:id>
+      <aas:idShort>powerFade</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#powerFade</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -3366,23 +2871,476 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.5</aas:text>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>ratedCapacity</aas:text>
+                  <aas:text>powerFade</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>ratedCapacity</aas:text>
+                  <aas:text>powerFade</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
-              <aas:unit>ampereHour</aas:unit>
+              <aas:unit>percent</aas:unit>
               <aas:dataType>REAL_MEASURE</aas:dataType>
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>�Rated capacity� is the total number of ampere-hours (Ah) that can be withdrawn from a fully charged battery under reference conditions (see BattReg Annex IV (1)).
+                  <aas:text>�Power fade (in %) means the decrease over time and upon usage in the amount of power that a battery can deliver at the rated voltage.� (see BattReg Annex IV (4)).
 
-DIN DKE Spec 99100 chapter reference: 6.7.2.2</aas:text>
+Power fade should be calculated using original and remaining power capability following the formula below:
+Pfade(x) = (1-P(x)) / PBOL" �100" %" 
+where
+x 	is the aging parameter (e.g. storage time, number of cycles, etc.);
+P(x) 	is the power capability at aging parameter x;
+PBOL 	is the power capability at begin of life.
+
+DIN DKE Spec 99100 chapter reference: 6.7.3.4</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>powerCapabilityRatio</aas:idShort>
+      <aas:displayName>
+        <aas:langStringNameType>
+          <aas:language>en</aas:language>
+          <aas:text>PowerCapabilityRatio</aas:text>
+        </aas:langStringNameType>
+      </aas:displayName>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#powerCapabilityRatio</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>PowerCapabilityRatio</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>powerCapabilityRatio</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:unit>percent</aas:unit>
+              <aas:dataType>REAL_MEASURE</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Provides information on nominal/recommended charge rate (C-rate); equal to regulation definition.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>atSoC</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#atSoC</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>atSoC</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>atSoC</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:unit>percent</aas:unit>
+              <aas:dataType>REAL_MEASURE</aas:dataType>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>powerCapabilityAt</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#powerCapabilityAt</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>powerCapabilityAt</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>powerCapabilityAt</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:unit>percent</aas:unit>
+              <aas:dataType>REAL_MEASURE</aas:dataType>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>originalPowerCapability</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#originalPowerCapability</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>originalPowerCapability</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>originalPowerCapability</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Pre-use power capability: Definition of power capability as given in Battery Regulation. 
+Annex IV Part B, point 4 --> measurement at 80 % and 20 % SoC required. This requirement may not be implementable for remaining power capability and power fade(see below). It, thus, should be reviewed together with SoC definition.
+
+DIN DKE Spec 99100 chapter reference: 6.7.3.2
+
+</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>powerCapability</aas:idShort>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#powerCapability</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>powerCapability</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>powerCapability</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>temperatureRangeIdleStateLowerBoundary</aas:idShort>
+      <aas:displayName>
+        <aas:langStringNameType>
+          <aas:language>en</aas:language>
+          <aas:text>temperature range idle state (lower boundary)</aas:text>
+        </aas:langStringNameType>
+      </aas:displayName>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#temperatureRangeIdleStateLowerBoundary</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>temperature range idle state (lower boundary)</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>temperatureRangeIdleStateLowerBoundary</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:unit>degreeCelsius</aas:unit>
+              <aas:dataType>REAL_MEASURE</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Lower boundary of the surrounding temperature range, which the battery can safely withstand.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>temperatureRangeIdleStateUpperBoundary</aas:idShort>
+      <aas:displayName>
+        <aas:langStringNameType>
+          <aas:language>en</aas:language>
+          <aas:text>temperature range idle state (upper boundary)</aas:text>
+        </aas:langStringNameType>
+      </aas:displayName>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#temperatureRangeIdleStateUpperBoundary</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>temperature range idle state (upper boundary)</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>temperatureRangeIdleStateUpperBoundary</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:unit>degreeCelsius</aas:unit>
+              <aas:dataType>REAL_MEASURE</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Upper boundary of the surrounding temperature range, which the battery can safely withstand.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>temperature</aas:idShort>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#temperature</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>temperature</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>temperature</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>expectedLifetime</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#expectedLifetime</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>expectedLifetime</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>expectedLifetime</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:unit>year</aas:unit>
+              <aas:dataType>INTEGER_COUNT</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>The battery passport must include information about the expected battery lifetime in calendar years.
+
+The update interval must be upon placement on the market and upon change of the battery status.
+
+DIN DKE Spec 99100 chapter reference: 6.7.6.2</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>numberOfFullCyclesValue</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#numberOfFullCyclesValue</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>numberOfFullCyclesValue</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>numberOfFullCyclesValue</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:unit>cycle</aas:unit>
+              <aas:dataType>INTEGER_MEASURE</aas:dataType>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>numberOfFullCycles</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#numberOfFullCycles</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>numberOfFullCycles</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>numberOfFullCycles</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Number of (full) charging and discharging cycles.
+
+DIN DKE Spec 99100 chapter reference: 6.7.6.3</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>
@@ -3392,7 +3350,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.2</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>capacityThresholdForExhaustion</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#capacityThresholdForExhaustion</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#capacityThresholdForExhaustion</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -3434,14 +3392,8 @@ DIN DKE Spec 99100 chapter reference: 6.7.6.9</aas:text>
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>capacity</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>capacity</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#capacity</aas:id>
+      <aas:idShort>cRateLifeCycleTest</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#cRateLifeCycleTest</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -3458,22 +3410,61 @@ DIN DKE Spec 99100 chapter reference: 6.7.6.9</aas:text>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>capacity</aas:text>
+                  <aas:text>cRateLifeCycleTest</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>capacity</aas:text>
+                  <aas:text>cRateLifeCycleTest</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
+              <aas:unit>C</aas:unit>
+              <aas:dataType>REAL_MEASURE</aas:dataType>
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>Information on the capacity of the battery.</aas:text>
+                  <aas:text>The C-rate should be provided separately for both the charge and discharge of the battery, if applicable.
+
+The exception for non-cycle applications as mentioned in "Expected lifetime: Number of charge-discharge cycles" should apply to this data attribute as well.
+
+DIN DKE Spec 99100 chapter reference: 6.7.6.6</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>lifetime</aas:idShort>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#lifetime</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>lifetime</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>lifetime</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
             </aas:dataSpecificationIec61360>
           </aas:dataSpecificationContent>
         </aas:embeddedDataSpecification>

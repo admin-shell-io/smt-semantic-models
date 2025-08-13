@@ -40,7 +40,7 @@
 @prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#> .
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
-@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.0#> .
+@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.1#> .
 @prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 
 
@@ -55,28 +55,113 @@
 
 :TechnicalPropertiesEntity a samm:Entity ;
   samm:properties (  
-  [ samm:property bpg:batteryCategory; samm:payloadName "BatteryCategory" ]  
-  [ samm:property bpg:batteryMass; samm:payloadName "Weight" ] 
+    [ samm:property :capacityEnergyVoltage; samm:payloadName "CapacityEnergyVoltage" ] 
+    [ samm:property :roundTripEnergyEfficiency; samm:payloadName "RoundTripEnergyEfficiency" ] 
+	[ samm:property :resistance; samm:payloadName "Resistance" ] 
+    [ samm:property :powerCapability; samm:payloadName "PowerCapability" ] 
+	[ samm:property :temperature; samm:payloadName "Temperature" ] 
+    [ samm:property :lifetime; samm:payloadName "Lifetime" ]
+   ) .
+
+:capacityEnergyVoltage a samm:Property ;
+  samm:preferredName "capacity, energy and voltage"@en ;
+  samm:description "Information on battery capacity, energy and voltage."@en ;
+  samm:see <https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1> ;
+  samm:characteristic :CapacityEnergyVoltageCharacteristic .
+
+:CapacityEnergyVoltageCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :CapacityEnergyVoltageEntity .
+
+:CapacityEnergyVoltageEntity a samm:Entity ;
+  samm:properties ( 
+     [ samm:property :nominalVoltage; samm:payloadName "NominalVoltage" ] 
+     [ samm:property :maximumVoltage; samm:payloadName "MaxVoltage" ] 
+     [ samm:property :minimumVoltage; samm:payloadName "MinVoltage" ]
+	 [ samm:property bp:ratedCapacity; samm:payloadName "RatedCapacity" ] 
+	 [ samm:property bp:capacityFade; samm:optional true; samm:payloadName "CapacityFade" ]
+	 [ samm:property bp:ratedEnergy; samm:optional true; samm:payloadName "CertifiedUsableBatteryEnergy" ] 
+	 ) .
+
+
+
+:roundTripEnergyEfficiency a samm:Property ;
+   samm:see <https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1> ;
+   samm:characteristic :RoundTripEnergyEfficiencyCharacteristic .
+   
+:RoundTripEnergyEfficiencyCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :RoundTripEnergyEfficiencyEntity .
+
+:RoundTripEnergyEfficiencyEntity a samm:Entity ;
+  samm:properties ( 
+  [ samm:property :initialRoundTripEnergyEfficiency; samm:payloadName "InitialRoundTripEnergyEfficiency" ] 
+  [ samm:property bp:roundTripEfficiencyat50PerCentCycleLife; samm:payloadName "RoundTripEnergyEfficiencyAtFiftyofCycleLife" ]
+  [ samm:property bp:capacityFade; samm:optional true; samm:payloadName "EnergyRoundTripEfficiencyFade" ]   
+  [ samm:property :initialSelfDischargingRate; samm:optional true; samm:payloadName "InitialSelfDischargingRate" ] 
+  ) .
+   
+ 
+:resistance a samm:Property ;
+   samm:see <https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1> ;
+   samm:characteristic :ResistanceCharacteristic .
+   
+:ResistanceCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :ResistanceEntity .
+   
+
+:ResistanceEntity a samm:Entity ;
+  samm:properties ( 
+  [ samm:property :initialInternalResistanceOnBatteryCellLevel; samm:payloadName "InitialInternalResistanceOnBatteryCellLevel" ] 
+  [ samm:property :initialInternalResistanceOnBatteryPackLevel; samm:payloadName "InitialInternalResistanceOnBatteryPackLevel" ] 
+  [ samm:property :initialInternalResistanceOnBatteryModuleLevel; samm:optional true; samm:payloadName "InitialInternalResistanceOnBatteryModuleLevel" ] 
+  [ samm:property :internalResistanceIncreaseOfBatteryCell; samm:optional true; samm:payloadName "InitialInternalResistanceOfCellLevel" ] 
+  [ samm:property :internalResistanceIncreaseOfBatteryPack; samm:payloadName "InitialInternalResistanceOfPackLevel" ] 
+  [ samm:property :internalResistanceIncreaseOfBatteryModule; samm:optional true; samm:payloadName "InitialInternalResistanceOfModuleLevel" ] 
+  ) .
+  
+  
+:powerCapability a samm:Property ;
+   samm:see <https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1> ;
+   samm:characteristic :PowerCapabilityCharacteristic .
+   
+:PowerCapabilityCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :PowerCapabilityEntity .
+   
+
+:PowerCapabilityEntity a samm:Entity ;
+  samm:properties ( 
+    [ samm:property :maximumPermittedBatteryPower; samm:payloadName "MaximumPermittedBatteryPower" ] 
+    [ samm:property bp:powerFade; samm:payloadName "PowerFade" ] 
+	[ samm:property bp:powerCapabilityRatio; samm:payloadName "RatioNorminalBatteryPowerAndBatteryEnergy" ]
+	[ samm:property bp:originalPowerCapability; samm:payloadName "OriginalPowerCapability" ] 
+  ) .
+  
+  
+:temperature a samm:Property ;
+   samm:see <https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1> ;
+   samm:characteristic :TemperatureCharacteristic .
+   
+:TemperatureCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :TemperatureEntity .
+   
+
+:TemperatureEntity a samm:Entity ;
+  samm:properties ( 
   [ samm:property :temperatureRangeIdleStateLowerBoundary; samm:payloadName "TemperatureRangeIdleState_LowerBoundary" ]  
   [ samm:property :temperatureRangeIdleStateUpperBoundary; samm:payloadName "TemperatureRangeIdleState_UpperBoundary" ] 
-  [ samm:property :voltage; samm:payloadName "Voltage" ] 
-  [ samm:property :efficiency; samm:payloadName "Efficiency" ] 
-  [ samm:property :resistance; samm:payloadName "Resistance" ] 
-  [ samm:property :capacity; samm:payloadName "Capacity" ] 
-) .
+  ) .
+  
+:lifetime a samm:Property ;
+   samm:see <https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1> ;
+   samm:characteristic :LifetimeCharacteristic .
+   
+:LifetimeCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :LifetimeEntity .
+   
 
-
-:temperatureRangeIdleStateUpperBoundary a samm:Property ;
-   samm:see <urn:irdi:0173-1#02-ABL871#001> ;
-   samm:preferredName "temperature range idle state (upper boundary)"@en ;
-   samm:description "Upper boundary of the surrounding temperature range, which the battery can safely withstand."@en ;
-   samm:characteristic bp:TemperatureRangeIdleState ;
-   samm:exampleValue "-19"^^xsd:double .
-
-:temperatureRangeIdleStateLowerBoundary a samm:Property ;
-   samm:see <urn:irdi:0173-1#02-ABL842#001> ;
-   samm:preferredName "temperature range idle state (lower boundary)"@en ;
-   samm:description "Lower boundary of the surrounding temperature range, which the battery can safely withstand."@en ;
-   samm:characteristic bp:TemperatureRangeIdleState ;
-   samm:exampleValue "49"^^xsd:double .
-
+:LifetimeEntity a samm:Entity ;
+  samm:properties ( 
+      [ samm:property bp:expectedLifetime; samm:payloadName "ExpectedLifetimeInCalendarYears " ] 
+      [ samm:property bp:numberOfFullCycles; samm:payloadName "NumberOfChargeDischargeCycles" ] 
+      [ samm:property bp:capacityThresholdForExhaustion; samm:payloadName "CapacityThresholdExhaustion" ] 
+      [ samm:property bp:cRateLifeCycleTest; samm:payloadName "CrateOfRelevantCycleLifeTest" ] 
+  ) .

@@ -43,27 +43,25 @@
 @prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.0#> .
 @prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 
-:efficiency a samm:Property ;
-   samm:see <https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1> ;
-   samm:characteristic :EfficiencyCharacteristic .
-   
-:EfficiencyCharacteristic a samm-c:SingleEntity ;
-   samm:dataType :EfficiencyEntity .
-   
-:EfficiencyEntity a samm:Entity ;
-  samm:properties ( 
-  [ samm:property bp:originalPowerCapability; samm:payloadName "OriginalPowerCapability" ] 
-  [ samm:property :originalPowerCapabilityLimits; samm:payloadName "OriginalPowerCapabilityLimits" ] 
-  [ samm:property :maximumAllowedBatteryEnergy; samm:payloadName "MaximumAllowedBatteryEnergy" ] 
-  [ samm:property :maximumPermittedBatteryPower; samm:payloadName "MaximumPermittedBatteryPower" ] 
-  [ samm:property bp:powerCapabilityRatio; samm:payloadName "RatioMABEvsMABP" ] 
-  [ samm:property :powerCapabilityAt20Charge; samm:payloadName "PowerCapabilityAtTwentyCharge" ] 
-  [ samm:property :powerCapabilityAt80Charge; samm:payloadName "PowerCapabilityAtEightyCharge" ] 
-  [ samm:property bp:powerFade; samm:payloadName "PowerFade" ] 
-  [ samm:property bp:roundTripEfficiencyat50PerCentCycleLife; samm:payloadName "RoundTripEnergyEfficiencyAtFiftyofCycleLife" ] 
-  [ samm:property :initialRoundTripEnergyEfficiency; samm:payloadName "InitialRoundTripEnergyEfficiency" ] 
-  [ samm:property :initialSelfDischargingRate; samm:payloadName "InitialSelfDischargingRate" ] 
-  ) .
+
+
+
+:temperatureRangeIdleStateUpperBoundary a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL871#001> ;
+   samm:preferredName "temperature range idle state (upper boundary)"@en ;
+   samm:description "Upper boundary of the surrounding temperature range, which the battery can safely withstand."@en ;
+   samm:characteristic bp:TemperatureRangeIdleState ;
+   samm:exampleValue "-19"^^xsd:double .
+
+:temperatureRangeIdleStateLowerBoundary a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL842#001> ;
+   samm:preferredName "temperature range idle state (lower boundary)"@en ;
+   samm:description "Lower boundary of the surrounding temperature range, which the battery can safely withstand."@en ;
+   samm:characteristic bp:TemperatureRangeIdleState ;
+   samm:exampleValue "49"^^xsd:double .
+
+
+
 
 
 :originalPowerCapabilityLimits a samm:Property ;
@@ -121,3 +119,75 @@
 :EnergyEfficiency a samm-c:Measurement ;
    samm:dataType xsd:integer ;
    samm-c:unit unit:percent .
+
+
+  
+:initialInternalResistanceOnBatteryCellLevel a samm:Property ;
+  samm:description "Internal battery cell and pack resistance / Internal resistance (in Ohm)."@en ;
+  samm:characteristic :InternalResistance ;
+  samm:exampleValue "67"^^xsd:double .
+  
+:initialInternalResistanceOnBatteryPackLevel a samm:Property ;
+  samm:description "Initial (Pre-Use) internal resistance on battery pack level."@en ;
+  samm:characteristic :InternalResistance ;
+  samm:exampleValue "23"^^xsd:double .
+  
+:initialInternalResistanceOnBatteryModuleLevel a samm:Property ;
+  samm:see <urn:irdi:0173-1#02-ABL832#001> ;
+  samm:description "Initial internal resistance means the absolute beginning value of the quotient of the voltage drop between the terminals by the electric current increase in the battery circuit during a current pulse."@en ;
+  samm:characteristic :InternalResistance ;
+  samm:exampleValue "10"^^xsd:double .
+  
+:InternalResistance a samm-c:Measurement ;
+   samm:dataType xsd:double ;
+   samm-c:unit unit:ohm .
+
+:internalResistanceIncreaseOfBatteryCell a samm:Property ;
+  samm:see <urn:irdi:0173-1#02-ABL831#001> ;
+  samm:description "Internal resistance increase of battery cell."@en ;
+  samm:characteristic :ResistanceIncrease ;
+  samm:exampleValue "10"^^xsd:integer .
+  
+:internalResistanceIncreaseOfBatteryPack a samm:Property ;
+  samm:see <urn:irdi:0173-1#02-ABL831#001> ;
+  samm:description "Internal resistance increase of battery pack."@en ;
+  samm:characteristic :ResistanceIncrease ;
+  samm:exampleValue "10"^^xsd:integer .
+  
+:internalResistanceIncreaseOfBatteryModule a samm:Property ;
+  samm:see <urn:irdi:0173-1#02-ABL831#001> ;
+  samm:description "Internal resistance increase of battery module."@en ;
+  samm:characteristic :ResistanceIncrease ;
+  samm:exampleValue "10"^^xsd:integer .
+
+:ResistanceIncrease a samm-c:Measurement ;
+   samm:dataType xsd:integer ;
+   samm-c:unit unit:percent .
+
+
+  
+:nominalVoltage a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL588#001> ;
+   samm:preferredName "voltage - NOM"@en ;
+   samm:description "Nominal voltage the battery is rated for.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.11"@en ;
+   samm:characteristic :Voltage ;
+   samm:exampleValue "4.3"^^xsd:float .
+
+:minimumVoltage a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL587#001> ;
+   samm:preferredName "voltage - MIN"@en ;
+   samm:description "Minimum voltage the battery is rated for.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.9"@en ;
+   samm:characteristic :Voltage ;
+   samm:exampleValue "2.04"^^xsd:float .
+
+:maximumVoltage a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL589#001> ;
+   samm:preferredName "voltage - MAX"@en ;
+   samm:description "Maximum voltage the battery is rated for.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.10"@en ;
+   samm:characteristic :Voltage ;
+   samm:exampleValue "6"^^xsd:float . 
+
+:Voltage a samm-c:Measurement ;
+   samm:description "s"@en ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:volt .
