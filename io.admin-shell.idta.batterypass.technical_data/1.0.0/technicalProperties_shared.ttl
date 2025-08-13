@@ -57,9 +57,6 @@
   samm:properties (  
   [ samm:property bpg:batteryCategory; samm:payloadName "BatteryCategory" ]  
   [ samm:property bpg:batteryMass; samm:payloadName "Weight" ] 
-  [ samm:property :length; samm:payloadName "Length" ] 
-  [ samm:property :height; samm:payloadName "Height" ] 
-  [ samm:property :width; samm:payloadName "Width" ] 
   [ samm:property :temperatureRangeIdleStateLowerBoundary; samm:payloadName "TemperatureRangeIdleState_LowerBoundary" ]  
   [ samm:property :temperatureRangeIdleStateUpperBoundary; samm:payloadName "TemperatureRangeIdleState_UpperBoundary" ] 
   [ samm:property :voltage; samm:payloadName "Voltage" ] 
