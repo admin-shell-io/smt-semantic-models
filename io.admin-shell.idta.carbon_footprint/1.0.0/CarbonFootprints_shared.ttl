@@ -55,7 +55,17 @@
    samm:preferredName "carbon footprint of a product"@en ;
    samm:description "Balance of greenhouse gas emissions along the entire life cycle of a product in a defined application and in relation to a defined unit of use."@en ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/ProductCarbonFootprint/1/0> ;
-   samm:properties ( [ samm:property :pcfCalculationMethods; samm:payloadName "PcfCalculationMethods" ] [ samm:property :pcf2CoEq; samm:payloadName "PcfCo2eq" ] [ samm:property :referenceImpactUnitForCalculation; samm:payloadName "ReferenceImpactUnitForCalculation" ] [ samm:property :quantityOfMeasureForCalculation; samm:payloadName "QuantityOfMeasureForCalculation" ]     [ samm:property :lifeCyclePhases; samm:payloadName "LifeCyclePhases" ]  [ samm:property :explanatoryStatement; samm:optional true; samm:payloadName "ExplanatoryStatement" ][ samm:property :goodsHandoverAddress; samm:optional true; samm:payloadName "GoodsHandoverAddress" ]    [ samm:property :publicationDate; samm:payloadName "PublicationDate" ] [ samm:property :expirationDate; samm:optional true; samm:payloadName "ExpirationDate" ]  ) .
+   samm:properties ( 
+   [ samm:property :pcfCalculationMethods; samm:payloadName "PcfCalculationMethods" ] 
+   [ samm:property :pcf2CoEq; samm:payloadName "PcfCo2eq" ] 
+   [ samm:property :referenceImpactUnitForCalculation; samm:payloadName "ReferenceImpactUnitForCalculation" ] 
+   [ samm:property :quantityOfMeasureForCalculation; samm:payloadName "QuantityOfMeasureForCalculation" ]
+   [ samm:property :lifeCyclePhases; samm:payloadName "LifeCyclePhases" ]  
+   [ samm:property :explanatoryStatement; samm:optional true; samm:payloadName "ExplanatoryStatement" ]
+   [ samm:property :goodsHandoverAddress; samm:optional true; samm:payloadName "GoodsHandoverAddress" ]
+   [ samm:property :publicationDate; samm:payloadName "PublicationDate" ]
+   [ samm:property :expirationDate; samm:optional true; samm:payloadName "ExpirationDate" ] 
+   ) .
 
 :expirationDate a samm:Property ;
    samm:preferredName "expiration date"@en ;
