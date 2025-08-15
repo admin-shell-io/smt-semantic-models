@@ -81,7 +81,14 @@
    samm:preferredName "single marking information. Note: CE marking is declared as mandatory according to the Blue Guide of the EU-Commission"@en ;
    samm:preferredName "Kennzeichnung"@de ;
    samm:see <urn:irdi:0112/2///61360_7%23AAS009%23001> ;
-   samm:properties ( [ samm:property :markingName; samm:payloadName "MarkingName" ] [ samm:property :designationOfCertificateOrApproval; samm:optional true ] [ samm:property :issueDate; samm:optional true; samm:payloadName "IssueDate" ] [ samm:property :expiryDate; samm:optional true; samm:payloadName "ExpiryDate" ] [ samm:property :markingFile; samm:payloadName "MarkingFile" ] [ samm:property :markingAdditionalText; samm:optional true; samm:payloadName "MarkingAdditionalText" ] ) .
+   samm:properties ( 
+   [ samm:property :markingName; samm:payloadName "MarkingName" ] 
+   [ samm:property :designationOfCertificateOrApproval; samm:optional true; samm:payloadName "DesignationOfCertificateOrApproval" ] 
+   [ samm:property :issueDate; samm:optional true; samm:payloadName "IssueDate" ] 
+   [ samm:property :expiryDate; samm:optional true; samm:payloadName "ExpiryDate" ] 
+   [ samm:property :markingFile; samm:payloadName "MarkingFile" ]
+   [ samm:property :markingAdditionalText; samm:optional true; samm:payloadName "MarkingAdditionalText" ]
+   ) .
 
 :Markings a samm-c:Set ;
    samm:preferredName "markings"@en ;
