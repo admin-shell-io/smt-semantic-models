@@ -33,6 +33,7 @@
 @prefix tech: <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> 
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
 
+
 :BatteryNameplate a samm:Aspect ;
    samm:preferredName "nameplate for battery passport"@en ;
    samm:preferredName "Typenschild für den Batteriepass"@de ;
@@ -46,7 +47,7 @@
    [ samm:property nameplate:dateOfManufacture; samm:payloadName "DateOfManufacture" ] 
    [ samm:property nameplate:uniqueFacilityIdentifier; samm:payloadName "UniqueFacilityIdentifier" ]
    [ samm:property bpg:batteryStatus; samm:payloadName "BatteryStatus" ]
-   [ samm:property :operatorIdentifier; samm:payloadName "OperatorIdentifier" ] 
+   [ samm:property :operatorIdentifier; samm:optional true; samm:payloadName "OperatorIdentifier" ] 
    [ samm:property tech:manufacturerIdentifier; samm:payloadName "ManufacturerIdentifier" ] 
    [ samm:property nameplate:markings; samm:payloadName "Markings" ] 
    );

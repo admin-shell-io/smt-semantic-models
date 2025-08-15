@@ -94,7 +94,7 @@
     "MarkingName" : "0173-1%2307-DAA603%23004",
     "IssueDate" : "2022-01-01",
     "ExpiryDate" : "2022-01-01",
-    "designationOfCertificateOrApproval" : "KEMA99IECE X1105/128",
+    "DesignationOfCertificateOrApproval" : "KEMA99IECE X1105/128",
     "MarkingFile" : {
       "value" : "https://example.com/SafetyInstructions.pdf",
       "contentType" : "application/pdf"
