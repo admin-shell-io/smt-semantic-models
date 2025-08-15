@@ -37,11 +37,38 @@ Contained Files:
 
 # Deviations from urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0
 
+The following optional attributes are mandatory:
+
 * serialNumber is mandatory
-* yearOfConstruction is mandatory
-* countryOfOrigin is mandatory
+* dateOfManufacture is mandatory
 * uniqueFacilityIdentifier is mandatory
 * markings are mandatory
+
+The following mandatory attributes are not included:
+
+* manufacturerProductDesignation
+* orderCodeOfManufacturer
+
+The followign optional attributes are not included:
+
+* manufacturerProductDesignation
+* manufacturerProductRoot
+* manufacturerProductFamily
+* manufacturerProductType
+* productArticleNumberOfManufacturer
+* yearOfConstruction
+* HardwareVersion
+* FirmwareVersion
+* SoftwareVersion
+* countryOfOrigin
+* companyLogo
+* assetSpecificProperties
+
+
+The following attributes are new:
+
+* operatorIdentifier
+* manufacturerIdentifier
 
 # Overall Deviations
 

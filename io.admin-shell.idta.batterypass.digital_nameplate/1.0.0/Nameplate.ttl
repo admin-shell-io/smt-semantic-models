@@ -30,25 +30,32 @@
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
 @prefix contactInformation: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
 @prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
+@prefix tech: <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> 
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
 
-:Nameplate a samm:Aspect ;
+:BatteryNameplate a samm:Aspect ;
    samm:preferredName "nameplate for battery passport"@en ;
    samm:preferredName "Typenschild für den Batteriepass"@de ;
    samm:description "Contains the nameplate information attached to the product within the Battery Product Passport."@en ;
    samm:description "Enthält die Information zum Typenschild des Produkts im Digitalen Batteriepass."@de ;
    samm:properties ( 
-   [ samm:property bpg:batteryStatus; samm:payloadName "BatteryStatus" ] 
    [ samm:property nameplate:uriOfTheProduct; samm:payloadName "URIOfTheProduct" ] 
    [ samm:property nameplate:manufacturerName; samm:payloadName "ManufacturerName" ] 
-   [ samm:property nameplate:manufacturerProductDesignation; samm:optional true; samm:payloadName "ManufacturerProductDesignation" ] 
    [ samm:property nameplate:addressInformation; samm:payloadName "AddressInformation" ] 
-   [ samm:property nameplate:orderCodeOfManufacturer; samm:optional true; samm:payloadName "OrderCodeOfManufacturer" ] 
    [ samm:property nameplate:serialNumber; samm:payloadName "SerialNumber" ] 
    [ samm:property nameplate:dateOfManufacture; samm:payloadName "DateOfManufacture" ] 
    [ samm:property nameplate:uniqueFacilityIdentifier; samm:payloadName "UniqueFacilityIdentifier" ]
+   [ samm:property bpg:batteryStatus; samm:payloadName "BatteryStatus" ]
+   [ samm:property :operatorIdentifier; samm:payloadName "OperatorIdentifier" ] 
+   [ samm:property tech:manufacturerIdentifier; samm:payloadName "ManufacturerIdentifier" ] 
    [ samm:property nameplate:markings; samm:payloadName "Markings" ] 
    );
    samm:operations ( ) ;
    samm:events ( ) ;
    samm:see <https://admin-shell.io/idta/nameplate/3/0/Nameplate> .
+
+
+:operatorIdentifier a samm:Property ;
+   samm:preferredName "identifier of the operator"@en ;
+   samm:description "The unique operator identifier should comply with ISO/IEC 15459 1:2014, ISO/IEC 15459 2:2015, ISO/IEC 15459 3:2014, ISO/IEC 15459 4:2014, ISO/IEC 15459 5:2014, ISO/IEC 15459 6:2014, or their equivalent until referenced harmonised standards are listed in the OJEU."@en ;
+   samm:characteristic samm-c:Text .
