@@ -10,7 +10,7 @@
         </aas:langStringTextType>
       </aas:description>
       <aas:administration/>
-      <aas:id>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#Nameplate</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryNameplate</aas:id>
       <aas:assetInformation>
         <aas:assetKind>Type</aas:assetKind>
       </aas:assetInformation>
@@ -20,7 +20,7 @@
           <aas:keys>
             <aas:key>
               <aas:type>Submodel</aas:type>
-              <aas:value>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#Nameplate/submodel</aas:value>
+              <aas:value>urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryNameplate/submodel</aas:value>
             </aas:key>
           </aas:keys>
         </aas:reference>
@@ -29,26 +29,26 @@
   </aas:assetAdministrationShells>
   <aas:submodels>
     <aas:submodel>
-      <aas:idShort>Nameplate</aas:idShort>
+      <aas:idShort>BatteryNameplate</aas:idShort>
       <aas:description>
         <aas:langStringTextType>
           <aas:language>de</aas:language>
-          <aas:text>Enthält die Information zum Typenschild des Produkts.</aas:text>
+          <aas:text>Enthält die Information zum Typenschild des Produkts im Digitalen Batteriepass.</aas:text>
         </aas:langStringTextType>
         <aas:langStringTextType>
           <aas:language>en</aas:language>
-          <aas:text>Contains the nameplate information attached to the product.</aas:text>
+          <aas:text>Contains the nameplate information attached to the product within the Battery Product Passport.</aas:text>
         </aas:langStringTextType>
       </aas:description>
       <aas:administration/>
-      <aas:id>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#Nameplate/submodel</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryNameplate/submodel</aas:id>
       <aas:kind>Template</aas:kind>
       <aas:semanticId>
         <aas:type>ExternalReference</aas:type>
         <aas:keys>
           <aas:key>
             <aas:type>GlobalReference</aas:type>
-            <aas:value>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#Nameplate</aas:value>
+            <aas:value>urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryNameplate</aas:value>
           </aas:key>
         </aas:keys>
       </aas:semanticId>
@@ -154,58 +154,6 @@
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
                   <aas:value>0173-1%2302-AAO677%23004</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-          </aas:supplementalSemanticIds>
-        </aas:multiLanguageProperty>
-        <aas:multiLanguageProperty>
-          <aas:idShort>manufacturerProductDesignation</aas:idShort>
-          <aas:displayName>
-            <aas:langStringNameType>
-              <aas:language>de</aas:language>
-              <aas:text>Produktbezeichnung</aas:text>
-            </aas:langStringNameType>
-            <aas:langStringNameType>
-              <aas:language>en</aas:language>
-              <aas:text>manufacturer product designation</aas:text>
-            </aas:langStringNameType>
-          </aas:displayName>
-          <aas:description>
-            <aas:langStringTextType>
-              <aas:language>de</aas:language>
-              <aas:text>Bezeichnung des Produkts.</aas:text>
-            </aas:langStringTextType>
-            <aas:langStringTextType>
-              <aas:language>en</aas:language>
-              <aas:text>Short description of the product (short text), third or lowest level of a 3 level manufacturer specific product hierarchy.</aas:text>
-            </aas:langStringTextType>
-          </aas:description>
-          <aas:semanticId>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerProductDesignation</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:semanticId>
-          <aas:supplementalSemanticIds>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0112/2///61987%23ABA567%23009</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0173-1%2302-AAW338%23003</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -1470,249 +1418,6 @@
             </aas:property>
           </aas:value>
         </aas:submodelElementCollection>
-        <aas:multiLanguageProperty>
-          <aas:idShort>manufacturerProductRoot</aas:idShort>
-          <aas:displayName>
-            <aas:langStringNameType>
-              <aas:language>en</aas:language>
-              <aas:text>manufacturer Product Root</aas:text>
-            </aas:langStringNameType>
-          </aas:displayName>
-          <aas:description>
-            <aas:langStringTextType>
-              <aas:language>en</aas:language>
-              <aas:text>Top level of a 3 level manufacturer specific product hierarchy.</aas:text>
-            </aas:langStringTextType>
-          </aas:description>
-          <aas:semanticId>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerProductRoot</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:semanticId>
-          <aas:supplementalSemanticIds>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0112/2///61360_7%23AAS011%23001</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0173-1%2302-AAU732%23003</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-          </aas:supplementalSemanticIds>
-        </aas:multiLanguageProperty>
-        <aas:multiLanguageProperty>
-          <aas:idShort>manufacturerProductFamily</aas:idShort>
-          <aas:displayName>
-            <aas:langStringNameType>
-              <aas:language>en</aas:language>
-              <aas:text>manufacturer product family</aas:text>
-            </aas:langStringNameType>
-            <aas:langStringNameType>
-              <aas:language>de</aas:language>
-              <aas:text>Produktfamilie</aas:text>
-            </aas:langStringNameType>
-          </aas:displayName>
-          <aas:description>
-            <aas:langStringTextType>
-              <aas:language>en</aas:language>
-              <aas:text>2nd level of a 3 level manufacturer specific product hierarchy.</aas:text>
-            </aas:langStringTextType>
-            <aas:langStringTextType>
-              <aas:language>de</aas:language>
-              <aas:text>Produktfamilie des Produkts.</aas:text>
-            </aas:langStringTextType>
-          </aas:description>
-          <aas:semanticId>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerProductFamily</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:semanticId>
-          <aas:supplementalSemanticIds>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0173-1%2302-AAU731%23003</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0112/2///61987%23ABP464%23002</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-          </aas:supplementalSemanticIds>
-        </aas:multiLanguageProperty>
-        <aas:multiLanguageProperty>
-          <aas:idShort>manufacturerProductType</aas:idShort>
-          <aas:displayName>
-            <aas:langStringNameType>
-              <aas:language>en</aas:language>
-              <aas:text>manufacturer product type</aas:text>
-            </aas:langStringNameType>
-            <aas:langStringNameType>
-              <aas:language>de</aas:language>
-              <aas:text>Produktausprägungen</aas:text>
-            </aas:langStringNameType>
-          </aas:displayName>
-          <aas:description>
-            <aas:langStringTextType>
-              <aas:language>en</aas:language>
-              <aas:text>Characteristic to differentiate between different products of a product family or special variants.</aas:text>
-            </aas:langStringTextType>
-            <aas:langStringTextType>
-              <aas:language>de</aas:language>
-              <aas:text>Ausprägung für das Produkt, um unterschiedliche Einzelprodukte einer Produktfamilie zu unterscheiden.</aas:text>
-            </aas:langStringTextType>
-          </aas:description>
-          <aas:semanticId>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerProductType</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:semanticId>
-          <aas:supplementalSemanticIds>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0112/2///61987%23ABA300%23008</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0173-1%2302-AAO057%23004</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-          </aas:supplementalSemanticIds>
-        </aas:multiLanguageProperty>
-        <aas:property>
-          <aas:idShort>orderCodeOfManufacturer</aas:idShort>
-          <aas:displayName>
-            <aas:langStringNameType>
-              <aas:language>en</aas:language>
-              <aas:text>order code for the product</aas:text>
-            </aas:langStringNameType>
-            <aas:langStringNameType>
-              <aas:language>de</aas:language>
-              <aas:text>Bestellcode des Produkts</aas:text>
-            </aas:langStringNameType>
-          </aas:displayName>
-          <aas:semanticId>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#orderCodeOfManufacturer</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:semanticId>
-          <aas:supplementalSemanticIds>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0112/2///61987%23ABA950%23008</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0173-1%2302-AAO227%23004</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-          </aas:supplementalSemanticIds>
-          <aas:valueType>xs:string</aas:valueType>
-        </aas:property>
-        <aas:multiLanguageProperty>
-          <aas:idShort>productArticleNumberOfManufacturer</aas:idShort>
-          <aas:displayName>
-            <aas:langStringNameType>
-              <aas:language>en</aas:language>
-              <aas:text>product article number</aas:text>
-            </aas:langStringNameType>
-            <aas:langStringNameType>
-              <aas:language>de</aas:language>
-              <aas:text>Artikelnummer des Produkts</aas:text>
-            </aas:langStringNameType>
-          </aas:displayName>
-          <aas:description>
-            <aas:langStringTextType>
-              <aas:language>en</aas:language>
-              <aas:text>Unique product identifier of the manufacturer.</aas:text>
-            </aas:langStringTextType>
-            <aas:langStringTextType>
-              <aas:language>de</aas:language>
-              <aas:text>Eindeutige Artikelnummer des Herstellers.</aas:text>
-            </aas:langStringTextType>
-          </aas:description>
-          <aas:semanticId>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#productArticleNumberOfManufacturer</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:semanticId>
-          <aas:supplementalSemanticIds>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0112/2///61987%23ABA581%23007</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0173-1%2302-AAO676%23005</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-          </aas:supplementalSemanticIds>
-        </aas:multiLanguageProperty>
         <aas:property>
           <aas:idShort>serialNumber</aas:idShort>
           <aas:displayName>
@@ -1750,49 +1455,6 @@
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
                   <aas:value>0112/2///61987%23ABA951%23009</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-          </aas:supplementalSemanticIds>
-          <aas:valueType>xs:string</aas:valueType>
-        </aas:property>
-        <aas:property>
-          <aas:idShort>yearOfConstruction</aas:idShort>
-          <aas:displayName>
-            <aas:langStringNameType>
-              <aas:language>en</aas:language>
-              <aas:text>year of construction</aas:text>
-            </aas:langStringNameType>
-            <aas:langStringNameType>
-              <aas:language>de</aas:language>
-              <aas:text>Konstruktionsjahr</aas:text>
-            </aas:langStringNameType>
-          </aas:displayName>
-          <aas:semanticId>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#yearOfConstruction</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:semanticId>
-          <aas:supplementalSemanticIds>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0173-1%2302-AAP906%23003</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0112/2///61987%23ABP000%23002</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -1843,174 +1505,6 @@
           <aas:valueType>xs:string</aas:valueType>
         </aas:property>
         <aas:property>
-          <aas:idShort>hardwareVersion</aas:idShort>
-          <aas:displayName>
-            <aas:langStringNameType>
-              <aas:language>de</aas:language>
-              <aas:text>Hardwareversion</aas:text>
-            </aas:langStringNameType>
-            <aas:langStringNameType>
-              <aas:language>en</aas:language>
-              <aas:text>hardware version</aas:text>
-            </aas:langStringNameType>
-          </aas:displayName>
-          <aas:semanticId>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#hardwareVersion</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:semanticId>
-          <aas:supplementalSemanticIds>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0112/2///61987%23ABA926%23008</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0173-1%2302-AAN270%23004</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-          </aas:supplementalSemanticIds>
-          <aas:valueType>xs:string</aas:valueType>
-        </aas:property>
-        <aas:property>
-          <aas:idShort>firmwareVersion</aas:idShort>
-          <aas:displayName>
-            <aas:langStringNameType>
-              <aas:language>en</aas:language>
-              <aas:text>firmware version</aas:text>
-            </aas:langStringNameType>
-            <aas:langStringNameType>
-              <aas:language>de</aas:language>
-              <aas:text>Firmwareversion</aas:text>
-            </aas:langStringNameType>
-          </aas:displayName>
-          <aas:semanticId>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#firmwareVersion</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:semanticId>
-          <aas:supplementalSemanticIds>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0112/2///61987%23ABA302%23006</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0173-1%2302-AAM985%23004</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-          </aas:supplementalSemanticIds>
-          <aas:valueType>xs:string</aas:valueType>
-        </aas:property>
-        <aas:property>
-          <aas:idShort>softwareVersion</aas:idShort>
-          <aas:displayName>
-            <aas:langStringNameType>
-              <aas:language>de</aas:language>
-              <aas:text>Softwareversion</aas:text>
-            </aas:langStringNameType>
-            <aas:langStringNameType>
-              <aas:language>en</aas:language>
-              <aas:text>software version</aas:text>
-            </aas:langStringNameType>
-          </aas:displayName>
-          <aas:semanticId>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#softwareVersion</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:semanticId>
-          <aas:supplementalSemanticIds>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0173-1%2302-AAM737%23004</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0112/2///61987%23ABA601%23008</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-          </aas:supplementalSemanticIds>
-          <aas:valueType>xs:string</aas:valueType>
-        </aas:property>
-        <aas:property>
-          <aas:idShort>countryOfOrigin</aas:idShort>
-          <aas:displayName>
-            <aas:langStringNameType>
-              <aas:language>en</aas:language>
-              <aas:text>country of Origin</aas:text>
-            </aas:langStringNameType>
-          </aas:displayName>
-          <aas:semanticId>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#countryOfOrigin</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:semanticId>
-          <aas:supplementalSemanticIds>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0112/2///61987%23ABP462%23001</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>0173-1%2302-AAO259%23007</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-          </aas:supplementalSemanticIds>
-          <aas:valueType>xs:string</aas:valueType>
-        </aas:property>
-        <aas:property>
           <aas:idShort>uniqueFacilityIdentifier</aas:idShort>
           <aas:displayName>
             <aas:langStringNameType>
@@ -2041,15 +1535,11 @@
           <aas:valueType>xs:string</aas:valueType>
         </aas:property>
         <aas:property>
-          <aas:idShort>logoCompany</aas:idShort>
+          <aas:idShort>batteryStatus</aas:idShort>
           <aas:displayName>
             <aas:langStringNameType>
               <aas:language>en</aas:language>
-              <aas:text>company logo</aas:text>
-            </aas:langStringNameType>
-            <aas:langStringNameType>
-              <aas:language>de</aas:language>
-              <aas:text>Firmenlogo</aas:text>
+              <aas:text>BatteryStatus</aas:text>
             </aas:langStringNameType>
           </aas:displayName>
           <aas:semanticId>
@@ -2057,11 +1547,53 @@
             <aas:keys>
               <aas:key>
                 <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#logoCompany</aas:value>
+                <aas:value>urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#batteryStatus</aas:value>
               </aas:key>
             </aas:keys>
           </aas:semanticId>
-          <aas:valueType>xs:anyURI</aas:valueType>
+          <aas:valueType>xs:string</aas:valueType>
+        </aas:property>
+        <aas:property>
+          <aas:idShort>operatorIdentifier</aas:idShort>
+          <aas:displayName>
+            <aas:langStringNameType>
+              <aas:language>en</aas:language>
+              <aas:text>identifier of the operator</aas:text>
+            </aas:langStringNameType>
+          </aas:displayName>
+          <aas:semanticId>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#operatorIdentifier</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:semanticId>
+          <aas:valueType>xs:string</aas:valueType>
+        </aas:property>
+        <aas:property>
+          <aas:idShort>manufacturerIdentifier</aas:idShort>
+          <aas:displayName>
+            <aas:langStringNameType>
+              <aas:language>de</aas:language>
+              <aas:text>identifier of the manfuacturer</aas:text>
+            </aas:langStringNameType>
+            <aas:langStringNameType>
+              <aas:language>en</aas:language>
+              <aas:text>article number of the product</aas:text>
+            </aas:langStringNameType>
+          </aas:displayName>
+          <aas:semanticId>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#manufacturerIdentifier</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:semanticId>
+          <aas:valueType>xs:string</aas:valueType>
         </aas:property>
         <aas:submodelElementList>
           <aas:idShort>markings</aas:idShort>
@@ -2416,28 +1948,28 @@
   <aas:conceptDescriptions>
     <aas:conceptDescription>
       <aas:category>APPLICATION_CLASS</aas:category>
-      <aas:idShort>Nameplate</aas:idShort>
+      <aas:idShort>BatteryNameplate</aas:idShort>
       <aas:displayName>
         <aas:langStringNameType>
-          <aas:language>de</aas:language>
-          <aas:text>Typenschild</aas:text>
+          <aas:language>en</aas:language>
+          <aas:text>nameplate for battery passport</aas:text>
         </aas:langStringNameType>
         <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>nameplate</aas:text>
+          <aas:language>de</aas:language>
+          <aas:text>Typenschild für den Batteriepass</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
       <aas:description>
         <aas:langStringTextType>
           <aas:language>de</aas:language>
-          <aas:text>Enthält die Information zum Typenschild des Produkts.</aas:text>
+          <aas:text>Enthält die Information zum Typenschild des Produkts im Digitalen Batteriepass.</aas:text>
         </aas:langStringTextType>
         <aas:langStringTextType>
           <aas:language>en</aas:language>
-          <aas:text>Contains the nameplate information attached to the product.</aas:text>
+          <aas:text>Contains the nameplate information attached to the product within the Battery Product Passport.</aas:text>
         </aas:langStringTextType>
       </aas:description>
-      <aas:id>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#Nameplate</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryNameplate</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -2453,28 +1985,28 @@
             <aas:dataSpecificationIec61360>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Typenschild</aas:text>
+                  <aas:language>en</aas:language>
+                  <aas:text>nameplate for battery passport</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
                 <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>nameplate</aas:text>
+                  <aas:language>de</aas:language>
+                  <aas:text>Typenschild für den Batteriepass</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>Nameplate</aas:text>
+                  <aas:text>BatteryNameplate</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>de</aas:language>
-                  <aas:text>Enthält die Information zum Typenschild des Produkts.</aas:text>
+                  <aas:text>Enthält die Information zum Typenschild des Produkts im Digitalen Batteriepass.</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>Contains the nameplate information attached to the product.</aas:text>
+                  <aas:text>Contains the nameplate information attached to the product within the Battery Product Passport.</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>
@@ -2591,64 +2123,6 @@
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
                   <aas:text>Legally valid designation of the natural or judicial person which is directly responsible for the design, production, packaging and labeling of a product in respect to its being brought into circulation.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>manufacturerProductDesignation</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>de</aas:language>
-          <aas:text>Produktbezeichnung</aas:text>
-        </aas:langStringNameType>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>manufacturer product designation</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerProductDesignation</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Produktbezeichnung</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>manufacturer product designation</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>manufacturerProductDesignation</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Bezeichnung des Produkts.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Short description of the product (short text), third or lowest level of a 3 level manufacturer specific product hierarchy.</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>
@@ -4382,284 +3856,6 @@ enumeration: 0173-1%2307-AAS754%23001 (office), 0173-1%2307-AAS756%23001 (secret
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>manufacturerProductRoot</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>manufacturer Product Root</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerProductRoot</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>manufacturer Product Root</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>manufacturerProductRoot</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Top level of a 3 level manufacturer specific product hierarchy.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>manufacturerProductFamily</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>manufacturer product family</aas:text>
-        </aas:langStringNameType>
-        <aas:langStringNameType>
-          <aas:language>de</aas:language>
-          <aas:text>Produktfamilie</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerProductFamily</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>manufacturer product family</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Produktfamilie</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>manufacturerProductFamily</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>2nd level of a 3 level manufacturer specific product hierarchy.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Produktfamilie des Produkts.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>manufacturerProductType</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>manufacturer product type</aas:text>
-        </aas:langStringNameType>
-        <aas:langStringNameType>
-          <aas:language>de</aas:language>
-          <aas:text>Produktausprägungen</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerProductType</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>manufacturer product type</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Produktausprägungen</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>manufacturerProductType</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Characteristic to differentiate between different products of a product family or special variants.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Ausprägung für das Produkt, um unterschiedliche Einzelprodukte einer Produktfamilie zu unterscheiden.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>orderCodeOfManufacturer</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>order code for the product</aas:text>
-        </aas:langStringNameType>
-        <aas:langStringNameType>
-          <aas:language>de</aas:language>
-          <aas:text>Bestellcode des Produkts</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#orderCodeOfManufacturer</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>order code for the product</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Bestellcode des Produkts</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>orderCodeOfManufacturer</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Eindeutige Zahlen- und Buchstabenkombination um das Produkt eindeutig für die Bestellung zu identifizieren.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Unique combination of numbers and letters used to identify the device for ordering.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>productArticleNumberOfManufacturer</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>product article number</aas:text>
-        </aas:langStringNameType>
-        <aas:langStringNameType>
-          <aas:language>de</aas:language>
-          <aas:text>Artikelnummer des Produkts</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#productArticleNumberOfManufacturer</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>product article number</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Artikelnummer des Produkts</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>productArticleNumberOfManufacturer</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Unique product identifier of the manufacturer.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Eindeutige Artikelnummer des Herstellers.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
       <aas:idShort>serialNumber</aas:idShort>
       <aas:displayName>
         <aas:langStringNameType>
@@ -4710,64 +3906,6 @@ enumeration: 0173-1%2307-AAS754%23001 (office), 0173-1%2307-AAS756%23001 (secret
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>de</aas:language>
                   <aas:text>Die Seriennummer des Produkts.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>yearOfConstruction</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>year of construction</aas:text>
-        </aas:langStringNameType>
-        <aas:langStringNameType>
-          <aas:language>de</aas:language>
-          <aas:text>Konstruktionsjahr</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#yearOfConstruction</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>year of construction</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Konstruktionsjahr</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>yearOfConstruction</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Year in which the manufacturing process is completed.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Das Jahr, in dem das Produkt fertig gestellt wurde.</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>
@@ -4834,226 +3972,6 @@ enumeration: 0173-1%2307-AAS754%23001 (office), 0173-1%2307-AAS756%23001 (secret
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>hardwareVersion</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>de</aas:language>
-          <aas:text>Hardwareversion</aas:text>
-        </aas:langStringNameType>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>hardware version</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#hardwareVersion</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Hardwareversion</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>hardware version</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>hardwareVersion</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Version der Hardware.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Version of the hardware supplied with the device.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>firmwareVersion</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>firmware version</aas:text>
-        </aas:langStringNameType>
-        <aas:langStringNameType>
-          <aas:language>de</aas:language>
-          <aas:text>Firmwareversion</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#firmwareVersion</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>firmware version</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Firmwareversion</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>firmwareVersion</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Version der Firmware.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Version of the firmware supplied with the device.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>softwareVersion</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>de</aas:language>
-          <aas:text>Softwareversion</aas:text>
-        </aas:langStringNameType>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>software version</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#softwareVersion</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Softwareversion</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>software version</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>softwareVersion</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Version der Software.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Version of the software used by the device.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>countryOfOrigin</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>country of Origin</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#countryOfOrigin</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>country of Origin</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>countryOfOrigin</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Country where the product was manufactured. Note: Country codes defined accord. to DIN EN ISO 3166-1 alpha-2 codes.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
       <aas:idShort>uniqueFacilityIdentifier</aas:idShort>
       <aas:displayName>
         <aas:langStringNameType>
@@ -5100,18 +4018,14 @@ enumeration: 0173-1%2307-AAS754%23001 (office), 0173-1%2307-AAS756%23001 (secret
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>logoCompany</aas:idShort>
+      <aas:idShort>batteryStatus</aas:idShort>
       <aas:displayName>
         <aas:langStringNameType>
           <aas:language>en</aas:language>
-          <aas:text>company logo</aas:text>
-        </aas:langStringNameType>
-        <aas:langStringNameType>
-          <aas:language>de</aas:language>
-          <aas:text>Firmenlogo</aas:text>
+          <aas:text>BatteryStatus</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#logoCompany</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#batteryStatus</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -5128,28 +4042,186 @@ enumeration: 0173-1%2307-AAS754%23001 (office), 0173-1%2307-AAS756%23001 (secret
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>company logo</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Firmenlogo</aas:text>
+                  <aas:text>BatteryStatus</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>logoCompany</aas:text>
+                  <aas:text>batteryStatus</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
               <aas:dataType>STRING</aas:dataType>
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Das Firmenlogo des Produkts.</aas:text>
+                  <aas:language>en</aas:language>
+                  <aas:text>Lifecycle status of the battery. Status defined from a list, with the options suggested as follows: 'original', 'repurposed', 'reused', 'remanufactured', 'waste'.
+
+DIN DKE Spec chapter reference: 6.1.3.7</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+              <aas:valueList>
+                <aas:valueReferencePairs>
+                  <aas:valueReferencePair>
+                    <aas:value>Original</aas:value>
+                    <aas:valueId>
+                      <aas:type>ModelReference</aas:type>
+                      <aas:keys>
+                        <aas:key>
+                          <aas:type>DataElement</aas:type>
+                          <aas:value>urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#BatteryStatusEnumeration:_Original88d759ea</aas:value>
+                        </aas:key>
+                      </aas:keys>
+                    </aas:valueId>
+                  </aas:valueReferencePair>
+                  <aas:valueReferencePair>
+                    <aas:value>Repurposed</aas:value>
+                    <aas:valueId>
+                      <aas:type>ModelReference</aas:type>
+                      <aas:keys>
+                        <aas:key>
+                          <aas:type>DataElement</aas:type>
+                          <aas:value>urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#BatteryStatusEnumeration:_Repurposed22156a21</aas:value>
+                        </aas:key>
+                      </aas:keys>
+                    </aas:valueId>
+                  </aas:valueReferencePair>
+                  <aas:valueReferencePair>
+                    <aas:value>Reused</aas:value>
+                    <aas:valueId>
+                      <aas:type>ModelReference</aas:type>
+                      <aas:keys>
+                        <aas:key>
+                          <aas:type>DataElement</aas:type>
+                          <aas:value>urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#BatteryStatusEnumeration:_Reused495fdd96</aas:value>
+                        </aas:key>
+                      </aas:keys>
+                    </aas:valueId>
+                  </aas:valueReferencePair>
+                  <aas:valueReferencePair>
+                    <aas:value>Remanufactured</aas:value>
+                    <aas:valueId>
+                      <aas:type>ModelReference</aas:type>
+                      <aas:keys>
+                        <aas:key>
+                          <aas:type>DataElement</aas:type>
+                          <aas:value>urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#BatteryStatusEnumeration:_Remanufacturedafed45ef</aas:value>
+                        </aas:key>
+                      </aas:keys>
+                    </aas:valueId>
+                  </aas:valueReferencePair>
+                  <aas:valueReferencePair>
+                    <aas:value>Waste</aas:value>
+                    <aas:valueId>
+                      <aas:type>ModelReference</aas:type>
+                      <aas:keys>
+                        <aas:key>
+                          <aas:type>DataElement</aas:type>
+                          <aas:value>urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#BatteryStatusEnumeration:_Wastef734f9b7</aas:value>
+                        </aas:key>
+                      </aas:keys>
+                    </aas:valueId>
+                  </aas:valueReferencePair>
+                </aas:valueReferencePairs>
+              </aas:valueList>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>operatorIdentifier</aas:idShort>
+      <aas:displayName>
+        <aas:langStringNameType>
+          <aas:language>en</aas:language>
+          <aas:text>identifier of the operator</aas:text>
+        </aas:langStringNameType>
+      </aas:displayName>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#operatorIdentifier</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>identifier of the operator</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>operatorIdentifier</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+              <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>A graphic mark used to represent a company, an organisation or a product.</aas:text>
+                  <aas:text>The unique operator identifier should comply with ISO/IEC 15459 1:2014, ISO/IEC 15459 2:2015, ISO/IEC 15459 3:2014, ISO/IEC 15459 4:2014, ISO/IEC 15459 5:2014, ISO/IEC 15459 6:2014, or their equivalent until referenced harmonised standards are listed in the OJEU.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>manufacturerIdentifier</aas:idShort>
+      <aas:displayName>
+        <aas:langStringNameType>
+          <aas:language>de</aas:language>
+          <aas:text>identifier of the manfuacturer</aas:text>
+        </aas:langStringNameType>
+        <aas:langStringNameType>
+          <aas:language>en</aas:language>
+          <aas:text>article number of the product</aas:text>
+        </aas:langStringNameType>
+      </aas:displayName>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#manufacturerIdentifier</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>de</aas:language>
+                  <aas:text>identifier of the manfuacturer</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>article number of the product</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>manufacturerIdentifier</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>A battery passport must include information identifying the manufacturer.</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>

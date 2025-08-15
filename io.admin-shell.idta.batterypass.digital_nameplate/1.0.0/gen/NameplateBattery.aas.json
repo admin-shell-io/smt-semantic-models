@@ -7,12 +7,12 @@
     "submodels" : [ {
       "keys" : [ {
         "type" : "Submodel",
-        "value" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#Nameplate/submodel"
+        "value" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryNameplate/submodel"
       } ],
       "type" : "ModelReference"
     } ],
     "administration" : { },
-    "id" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#Nameplate",
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryNameplate",
     "description" : [ {
       "language" : "en",
       "text" : "defaultAdminShell"
@@ -33,41 +33,41 @@
         "modelType" : "DataSpecificationIec61360",
         "definition" : [ {
           "language" : "de",
-          "text" : "Enthält die Information zum Typenschild des Produkts."
+          "text" : "Enthält die Information zum Typenschild des Produkts im Digitalen Batteriepass."
         }, {
           "language" : "en",
-          "text" : "Contains the nameplate information attached to the product."
+          "text" : "Contains the nameplate information attached to the product within the Battery Product Passport."
         } ],
         "preferredName" : [ {
-          "language" : "de",
-          "text" : "Typenschild"
-        }, {
           "language" : "en",
-          "text" : "nameplate"
+          "text" : "nameplate for battery passport"
+        }, {
+          "language" : "de",
+          "text" : "Typenschild für den Batteriepass"
         } ],
         "shortName" : [ {
           "language" : "en",
-          "text" : "Nameplate"
+          "text" : "BatteryNameplate"
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#Nameplate",
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryNameplate",
     "category" : "APPLICATION_CLASS",
     "description" : [ {
       "language" : "de",
-      "text" : "Enthält die Information zum Typenschild des Produkts."
+      "text" : "Enthält die Information zum Typenschild des Produkts im Digitalen Batteriepass."
     }, {
       "language" : "en",
-      "text" : "Contains the nameplate information attached to the product."
+      "text" : "Contains the nameplate information attached to the product within the Battery Product Passport."
     } ],
     "displayName" : [ {
-      "language" : "de",
-      "text" : "Typenschild"
-    }, {
       "language" : "en",
-      "text" : "nameplate"
+      "text" : "nameplate for battery passport"
+    }, {
+      "language" : "de",
+      "text" : "Typenschild für den Batteriepass"
     } ],
-    "idShort" : "Nameplate"
+    "idShort" : "BatteryNameplate"
   }, {
     "modelType" : "ConceptDescription",
     "embeddedDataSpecifications" : [ {
@@ -152,48 +152,6 @@
       "text" : "manufacturer name"
     } ],
     "idShort" : "manufacturerName"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "de",
-          "text" : "Bezeichnung des Produkts."
-        }, {
-          "language" : "en",
-          "text" : "Short description of the product (short text), third or lowest level of a 3 level manufacturer specific product hierarchy."
-        } ],
-        "preferredName" : [ {
-          "language" : "de",
-          "text" : "Produktbezeichnung"
-        }, {
-          "language" : "en",
-          "text" : "manufacturer product designation"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "manufacturerProductDesignation"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerProductDesignation",
-    "displayName" : [ {
-      "language" : "de",
-      "text" : "Produktbezeichnung"
-    }, {
-      "language" : "en",
-      "text" : "manufacturer product designation"
-    } ],
-    "idShort" : "manufacturerProductDesignation"
   }, {
     "modelType" : "ConceptDescription",
     "embeddedDataSpecifications" : [ {
@@ -1447,207 +1405,6 @@
         "dataType" : "STRING",
         "definition" : [ {
           "language" : "en",
-          "text" : "Top level of a 3 level manufacturer specific product hierarchy."
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "manufacturer Product Root"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "manufacturerProductRoot"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerProductRoot",
-    "displayName" : [ {
-      "language" : "en",
-      "text" : "manufacturer Product Root"
-    } ],
-    "idShort" : "manufacturerProductRoot"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "en",
-          "text" : "2nd level of a 3 level manufacturer specific product hierarchy."
-        }, {
-          "language" : "de",
-          "text" : "Produktfamilie des Produkts."
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "manufacturer product family"
-        }, {
-          "language" : "de",
-          "text" : "Produktfamilie"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "manufacturerProductFamily"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerProductFamily",
-    "displayName" : [ {
-      "language" : "en",
-      "text" : "manufacturer product family"
-    }, {
-      "language" : "de",
-      "text" : "Produktfamilie"
-    } ],
-    "idShort" : "manufacturerProductFamily"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "en",
-          "text" : "Characteristic to differentiate between different products of a product family or special variants."
-        }, {
-          "language" : "de",
-          "text" : "Ausprägung für das Produkt, um unterschiedliche Einzelprodukte einer Produktfamilie zu unterscheiden."
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "manufacturer product type"
-        }, {
-          "language" : "de",
-          "text" : "Produktausprägungen"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "manufacturerProductType"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerProductType",
-    "displayName" : [ {
-      "language" : "en",
-      "text" : "manufacturer product type"
-    }, {
-      "language" : "de",
-      "text" : "Produktausprägungen"
-    } ],
-    "idShort" : "manufacturerProductType"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "de",
-          "text" : "Eindeutige Zahlen- und Buchstabenkombination um das Produkt eindeutig für die Bestellung zu identifizieren."
-        }, {
-          "language" : "en",
-          "text" : "Unique combination of numbers and letters used to identify the device for ordering."
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "order code for the product"
-        }, {
-          "language" : "de",
-          "text" : "Bestellcode des Produkts"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "orderCodeOfManufacturer"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#orderCodeOfManufacturer",
-    "displayName" : [ {
-      "language" : "en",
-      "text" : "order code for the product"
-    }, {
-      "language" : "de",
-      "text" : "Bestellcode des Produkts"
-    } ],
-    "idShort" : "orderCodeOfManufacturer"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "en",
-          "text" : "Unique product identifier of the manufacturer."
-        }, {
-          "language" : "de",
-          "text" : "Eindeutige Artikelnummer des Herstellers."
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "product article number"
-        }, {
-          "language" : "de",
-          "text" : "Artikelnummer des Produkts"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "productArticleNumberOfManufacturer"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#productArticleNumberOfManufacturer",
-    "displayName" : [ {
-      "language" : "en",
-      "text" : "product article number"
-    }, {
-      "language" : "de",
-      "text" : "Artikelnummer des Produkts"
-    } ],
-    "idShort" : "productArticleNumberOfManufacturer"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "en",
           "text" : "Unique combination of numbers and letters used to identify the device once it has been manufactured."
         }, {
           "language" : "de",
@@ -1675,48 +1432,6 @@
       "text" : "serial number"
     } ],
     "idShort" : "serialNumber"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "en",
-          "text" : "Year in which the manufacturing process is completed."
-        }, {
-          "language" : "de",
-          "text" : "Das Jahr, in dem das Produkt fertig gestellt wurde."
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "year of construction"
-        }, {
-          "language" : "de",
-          "text" : "Konstruktionsjahr"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "yearOfConstruction"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#yearOfConstruction",
-    "displayName" : [ {
-      "language" : "en",
-      "text" : "year of construction"
-    }, {
-      "language" : "de",
-      "text" : "Konstruktionsjahr"
-    } ],
-    "idShort" : "yearOfConstruction"
   }, {
     "modelType" : "ConceptDescription",
     "embeddedDataSpecifications" : [ {
@@ -1773,165 +1488,6 @@
         "modelType" : "DataSpecificationIec61360",
         "dataType" : "STRING",
         "definition" : [ {
-          "language" : "de",
-          "text" : "Version der Hardware."
-        }, {
-          "language" : "en",
-          "text" : "Version of the hardware supplied with the device."
-        } ],
-        "preferredName" : [ {
-          "language" : "de",
-          "text" : "Hardwareversion"
-        }, {
-          "language" : "en",
-          "text" : "hardware version"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "hardwareVersion"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#hardwareVersion",
-    "displayName" : [ {
-      "language" : "de",
-      "text" : "Hardwareversion"
-    }, {
-      "language" : "en",
-      "text" : "hardware version"
-    } ],
-    "idShort" : "hardwareVersion"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "de",
-          "text" : "Version der Firmware."
-        }, {
-          "language" : "en",
-          "text" : "Version of the firmware supplied with the device."
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "firmware version"
-        }, {
-          "language" : "de",
-          "text" : "Firmwareversion"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "firmwareVersion"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#firmwareVersion",
-    "displayName" : [ {
-      "language" : "en",
-      "text" : "firmware version"
-    }, {
-      "language" : "de",
-      "text" : "Firmwareversion"
-    } ],
-    "idShort" : "firmwareVersion"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "de",
-          "text" : "Version der Software."
-        }, {
-          "language" : "en",
-          "text" : "Version of the software used by the device."
-        } ],
-        "preferredName" : [ {
-          "language" : "de",
-          "text" : "Softwareversion"
-        }, {
-          "language" : "en",
-          "text" : "software version"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "softwareVersion"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#softwareVersion",
-    "displayName" : [ {
-      "language" : "de",
-      "text" : "Softwareversion"
-    }, {
-      "language" : "en",
-      "text" : "software version"
-    } ],
-    "idShort" : "softwareVersion"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "en",
-          "text" : "Country where the product was manufactured. Note: Country codes defined accord. to DIN EN ISO 3166-1 alpha-2 codes."
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "country of Origin"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "countryOfOrigin"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#countryOfOrigin",
-    "displayName" : [ {
-      "language" : "en",
-      "text" : "country of Origin"
-    } ],
-    "idShort" : "countryOfOrigin"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
           "language" : "en",
           "text" : "Unique string of characters for the identification of locations or buildings involved in a product’s value chain or used by actors involved in a product’s value chain."
         } ],
@@ -1965,34 +1521,145 @@
         "modelType" : "DataSpecificationIec61360",
         "dataType" : "STRING",
         "definition" : [ {
-          "language" : "de",
-          "text" : "Das Firmenlogo des Produkts."
-        }, {
           "language" : "en",
-          "text" : "A graphic mark used to represent a company, an organisation or a product."
+          "text" : "Lifecycle status of the battery. Status defined from a list, with the options suggested as follows: 'original', 'repurposed', 'reused', 'remanufactured', 'waste'.\n\nDIN DKE Spec chapter reference: 6.1.3.7"
         } ],
         "preferredName" : [ {
           "language" : "en",
-          "text" : "company logo"
-        }, {
-          "language" : "de",
-          "text" : "Firmenlogo"
+          "text" : "BatteryStatus"
         } ],
         "shortName" : [ {
           "language" : "en",
-          "text" : "logoCompany"
+          "text" : "batteryStatus"
+        } ],
+        "valueList" : {
+          "valueReferencePairs" : [ {
+            "value" : "Original",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#BatteryStatusEnumeration:_Original88d759ea"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "Repurposed",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#BatteryStatusEnumeration:_Repurposed22156a21"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "Reused",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#BatteryStatusEnumeration:_Reused495fdd96"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "Remanufactured",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#BatteryStatusEnumeration:_Remanufacturedafed45ef"
+              } ],
+              "type" : "ModelReference"
+            }
+          }, {
+            "value" : "Waste",
+            "valueId" : {
+              "keys" : [ {
+                "type" : "DataElement",
+                "value" : "urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#BatteryStatusEnumeration:_Wastef734f9b7"
+              } ],
+              "type" : "ModelReference"
+            }
+          } ]
+        }
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#batteryStatus",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "BatteryStatus"
+    } ],
+    "idShort" : "batteryStatus"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The unique operator identifier should comply with ISO/IEC 15459 1:2014, ISO/IEC 15459 2:2015, ISO/IEC 15459 3:2014, ISO/IEC 15459 4:2014, ISO/IEC 15459 5:2014, ISO/IEC 15459 6:2014, or their equivalent until referenced harmonised standards are listed in the OJEU."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "identifier of the operator"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "operatorIdentifier"
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#logoCompany",
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#operatorIdentifier",
     "displayName" : [ {
       "language" : "en",
-      "text" : "company logo"
-    }, {
-      "language" : "de",
-      "text" : "Firmenlogo"
+      "text" : "identifier of the operator"
     } ],
-    "idShort" : "logoCompany"
+    "idShort" : "operatorIdentifier"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "A battery passport must include information identifying the manufacturer."
+        } ],
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "identifier of the manfuacturer"
+        }, {
+          "language" : "en",
+          "text" : "article number of the product"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "manufacturerIdentifier"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#manufacturerIdentifier",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "identifier of the manfuacturer"
+    }, {
+      "language" : "en",
+      "text" : "article number of the product"
+    } ],
+    "idShort" : "manufacturerIdentifier"
   }, {
     "modelType" : "ConceptDescription",
     "embeddedDataSpecifications" : [ {
@@ -2343,7 +2010,7 @@
     "semanticId" : {
       "keys" : [ {
         "type" : "GlobalReference",
-        "value" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#Nameplate"
+        "value" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryNameplate"
       } ],
       "type" : "ExternalReference"
     },
@@ -2355,15 +2022,15 @@
       "type" : "ExternalReference"
     } ],
     "administration" : { },
-    "id" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#Nameplate/submodel",
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryNameplate/submodel",
     "description" : [ {
       "language" : "de",
-      "text" : "Enthält die Information zum Typenschild des Produkts."
+      "text" : "Enthält die Information zum Typenschild des Produkts im Digitalen Batteriepass."
     }, {
       "language" : "en",
-      "text" : "Contains the nameplate information attached to the product."
+      "text" : "Contains the nameplate information attached to the product within the Battery Product Passport."
     } ],
-    "idShort" : "Nameplate",
+    "idShort" : "BatteryNameplate",
     "submodelElements" : [ {
       "modelType" : "Property",
       "semanticId" : {
@@ -2432,43 +2099,6 @@
         "text" : "manufacturer name"
       } ],
       "idShort" : "manufacturerName"
-    }, {
-      "modelType" : "MultiLanguageProperty",
-      "semanticId" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerProductDesignation"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "supplementalSemanticIds" : [ {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0112/2///61987%23ABA567%23009"
-        } ],
-        "type" : "ExternalReference"
-      }, {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0173-1%2302-AAW338%23003"
-        } ],
-        "type" : "ExternalReference"
-      } ],
-      "description" : [ {
-        "language" : "de",
-        "text" : "Bezeichnung des Produkts."
-      }, {
-        "language" : "en",
-        "text" : "Short description of the product (short text), third or lowest level of a 3 level manufacturer specific product hierarchy."
-      } ],
-      "displayName" : [ {
-        "language" : "de",
-        "text" : "Produktbezeichnung"
-      }, {
-        "language" : "en",
-        "text" : "manufacturer product designation"
-      } ],
-      "idShort" : "manufacturerProductDesignation"
     }, {
       "modelType" : "SubmodelElementCollection",
       "supplementalSemanticIds" : [ {
@@ -3377,179 +3007,6 @@
         "idShort" : "addressOfAdditionalLink"
       } ]
     }, {
-      "modelType" : "MultiLanguageProperty",
-      "semanticId" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerProductRoot"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "supplementalSemanticIds" : [ {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0112/2///61360_7%23AAS011%23001"
-        } ],
-        "type" : "ExternalReference"
-      }, {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0173-1%2302-AAU732%23003"
-        } ],
-        "type" : "ExternalReference"
-      } ],
-      "description" : [ {
-        "language" : "en",
-        "text" : "Top level of a 3 level manufacturer specific product hierarchy."
-      } ],
-      "displayName" : [ {
-        "language" : "en",
-        "text" : "manufacturer Product Root"
-      } ],
-      "idShort" : "manufacturerProductRoot"
-    }, {
-      "modelType" : "MultiLanguageProperty",
-      "semanticId" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerProductFamily"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "supplementalSemanticIds" : [ {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0173-1%2302-AAU731%23003"
-        } ],
-        "type" : "ExternalReference"
-      }, {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0112/2///61987%23ABP464%23002"
-        } ],
-        "type" : "ExternalReference"
-      } ],
-      "description" : [ {
-        "language" : "en",
-        "text" : "2nd level of a 3 level manufacturer specific product hierarchy."
-      }, {
-        "language" : "de",
-        "text" : "Produktfamilie des Produkts."
-      } ],
-      "displayName" : [ {
-        "language" : "en",
-        "text" : "manufacturer product family"
-      }, {
-        "language" : "de",
-        "text" : "Produktfamilie"
-      } ],
-      "idShort" : "manufacturerProductFamily"
-    }, {
-      "modelType" : "MultiLanguageProperty",
-      "semanticId" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerProductType"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "supplementalSemanticIds" : [ {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0112/2///61987%23ABA300%23008"
-        } ],
-        "type" : "ExternalReference"
-      }, {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0173-1%2302-AAO057%23004"
-        } ],
-        "type" : "ExternalReference"
-      } ],
-      "description" : [ {
-        "language" : "en",
-        "text" : "Characteristic to differentiate between different products of a product family or special variants."
-      }, {
-        "language" : "de",
-        "text" : "Ausprägung für das Produkt, um unterschiedliche Einzelprodukte einer Produktfamilie zu unterscheiden."
-      } ],
-      "displayName" : [ {
-        "language" : "en",
-        "text" : "manufacturer product type"
-      }, {
-        "language" : "de",
-        "text" : "Produktausprägungen"
-      } ],
-      "idShort" : "manufacturerProductType"
-    }, {
-      "modelType" : "Property",
-      "semanticId" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#orderCodeOfManufacturer"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "supplementalSemanticIds" : [ {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0112/2///61987%23ABA950%23008"
-        } ],
-        "type" : "ExternalReference"
-      }, {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0173-1%2302-AAO227%23004"
-        } ],
-        "type" : "ExternalReference"
-      } ],
-      "valueType" : "xs:string",
-      "displayName" : [ {
-        "language" : "en",
-        "text" : "order code for the product"
-      }, {
-        "language" : "de",
-        "text" : "Bestellcode des Produkts"
-      } ],
-      "idShort" : "orderCodeOfManufacturer"
-    }, {
-      "modelType" : "MultiLanguageProperty",
-      "semanticId" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#productArticleNumberOfManufacturer"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "supplementalSemanticIds" : [ {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0112/2///61987%23ABA581%23007"
-        } ],
-        "type" : "ExternalReference"
-      }, {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0173-1%2302-AAO676%23005"
-        } ],
-        "type" : "ExternalReference"
-      } ],
-      "description" : [ {
-        "language" : "en",
-        "text" : "Unique product identifier of the manufacturer."
-      }, {
-        "language" : "de",
-        "text" : "Eindeutige Artikelnummer des Herstellers."
-      } ],
-      "displayName" : [ {
-        "language" : "en",
-        "text" : "product article number"
-      }, {
-        "language" : "de",
-        "text" : "Artikelnummer des Produkts"
-      } ],
-      "idShort" : "productArticleNumberOfManufacturer"
-    }, {
       "modelType" : "Property",
       "semanticId" : {
         "keys" : [ {
@@ -3580,37 +3037,6 @@
         "text" : "serial number"
       } ],
       "idShort" : "serialNumber"
-    }, {
-      "modelType" : "Property",
-      "semanticId" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#yearOfConstruction"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "supplementalSemanticIds" : [ {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0173-1%2302-AAP906%23003"
-        } ],
-        "type" : "ExternalReference"
-      }, {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0112/2///61987%23ABP000%23002"
-        } ],
-        "type" : "ExternalReference"
-      } ],
-      "valueType" : "xs:string",
-      "displayName" : [ {
-        "language" : "en",
-        "text" : "year of construction"
-      }, {
-        "language" : "de",
-        "text" : "Konstruktionsjahr"
-      } ],
-      "idShort" : "yearOfConstruction"
     }, {
       "modelType" : "Property",
       "semanticId" : {
@@ -3647,127 +3073,6 @@
       "semanticId" : {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#hardwareVersion"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "supplementalSemanticIds" : [ {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0112/2///61987%23ABA926%23008"
-        } ],
-        "type" : "ExternalReference"
-      }, {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0173-1%2302-AAN270%23004"
-        } ],
-        "type" : "ExternalReference"
-      } ],
-      "valueType" : "xs:string",
-      "displayName" : [ {
-        "language" : "de",
-        "text" : "Hardwareversion"
-      }, {
-        "language" : "en",
-        "text" : "hardware version"
-      } ],
-      "idShort" : "hardwareVersion"
-    }, {
-      "modelType" : "Property",
-      "semanticId" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#firmwareVersion"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "supplementalSemanticIds" : [ {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0112/2///61987%23ABA302%23006"
-        } ],
-        "type" : "ExternalReference"
-      }, {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0173-1%2302-AAM985%23004"
-        } ],
-        "type" : "ExternalReference"
-      } ],
-      "valueType" : "xs:string",
-      "displayName" : [ {
-        "language" : "en",
-        "text" : "firmware version"
-      }, {
-        "language" : "de",
-        "text" : "Firmwareversion"
-      } ],
-      "idShort" : "firmwareVersion"
-    }, {
-      "modelType" : "Property",
-      "semanticId" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#softwareVersion"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "supplementalSemanticIds" : [ {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0173-1%2302-AAM737%23004"
-        } ],
-        "type" : "ExternalReference"
-      }, {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0112/2///61987%23ABA601%23008"
-        } ],
-        "type" : "ExternalReference"
-      } ],
-      "valueType" : "xs:string",
-      "displayName" : [ {
-        "language" : "de",
-        "text" : "Softwareversion"
-      }, {
-        "language" : "en",
-        "text" : "software version"
-      } ],
-      "idShort" : "softwareVersion"
-    }, {
-      "modelType" : "Property",
-      "semanticId" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#countryOfOrigin"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "supplementalSemanticIds" : [ {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0112/2///61987%23ABP462%23001"
-        } ],
-        "type" : "ExternalReference"
-      }, {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "0173-1%2302-AAO259%23007"
-        } ],
-        "type" : "ExternalReference"
-      } ],
-      "valueType" : "xs:string",
-      "displayName" : [ {
-        "language" : "en",
-        "text" : "country of Origin"
-      } ],
-      "idShort" : "countryOfOrigin"
-    }, {
-      "modelType" : "Property",
-      "semanticId" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
           "value" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#uniqueFacilityIdentifier"
         } ],
         "type" : "ExternalReference"
@@ -3790,19 +3095,49 @@
       "semanticId" : {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#logoCompany"
+          "value" : "urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#batteryStatus"
         } ],
         "type" : "ExternalReference"
       },
-      "valueType" : "xs:anyURI",
+      "valueType" : "xs:string",
       "displayName" : [ {
         "language" : "en",
-        "text" : "company logo"
-      }, {
-        "language" : "de",
-        "text" : "Firmenlogo"
+        "text" : "BatteryStatus"
       } ],
-      "idShort" : "logoCompany"
+      "idShort" : "batteryStatus"
+    }, {
+      "modelType" : "Property",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#operatorIdentifier"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "valueType" : "xs:string",
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "identifier of the operator"
+      } ],
+      "idShort" : "operatorIdentifier"
+    }, {
+      "modelType" : "Property",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#manufacturerIdentifier"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "valueType" : "xs:string",
+      "displayName" : [ {
+        "language" : "de",
+        "text" : "identifier of the manfuacturer"
+      }, {
+        "language" : "en",
+        "text" : "article number of the product"
+      } ],
+      "idShort" : "manufacturerIdentifier"
     }, {
       "modelType" : "SubmodelElementList",
       "semanticId" : {

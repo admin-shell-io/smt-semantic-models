@@ -31,6 +31,7 @@ https://github.com/batterypass/BatteryPassDataModel/issues/17
 	* Circularity/safetyMeasures is a Link to a pdf, here it is a SMC with a SML of extinguishingAgents... Extinguishing agent are mentioned in DIN SPEC 99100 but as Symbols/Labels and documentation for conformity
 	* Circularity/endOfLifeInformation not part of DIN SPEC 991100 ?
 	* Circularity/renewable Content not part of DIN SPEC 991100 ?
+	* Two Alternatives to model NegativeEvents, see ProductCondition_shared.ttl or solution of BatteryPass?
 	
 
 	
