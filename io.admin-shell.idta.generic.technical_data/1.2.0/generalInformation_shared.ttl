@@ -44,8 +44,7 @@
    samm:description "Das Firmenlogo des Produkts."@de ;
    samm:description "A graphic mark used to represent a company, an organisation or a product."@en ;
    samm:see <https://admin-shell.io/ZVEI/TechnicalData/ManufacturerLogo/1/1> ;
-   samm:characteristic samm-c:ResourcePath ;
-   samm:exampleValue "https://example.com/logo" .
+   samm:characteristic samm-c:ResourcePath .
    
 :manufacturerProductDesignation a samm:Property ;
    samm:preferredName "Produktbezeichnung"@de ;
