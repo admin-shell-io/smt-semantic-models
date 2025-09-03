@@ -42,7 +42,7 @@
 
 :CarbonFootprint a samm:Aspect ;
    samm:preferredName "Carbon Footprint"@en ;
-   samm:preferredName "C02 Footprint"@de ;
+   samm:preferredName "C02 Fußabdruck"@de ;
    samm:description "Provides the means to access the Carbon Footprint of the asset."@en ;
    samm:see <https://admin-shell.io/idta/SubmodelTemplate/CarbonFootprint/1/0> ;
    samm:see <https://admin-shell.io/IDTA-02023-1-0> ;
