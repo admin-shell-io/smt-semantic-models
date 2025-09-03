@@ -47,7 +47,6 @@
    
    
 :manufacturerIdentifier a samm:Property ;
-   samm:preferredName "identifier of the manfuacturer"@de ;
-   samm:preferredName "article number of the product"@en ;
+   samm:preferredName "identifier of the manfuacturer"@en ;
    samm:description "A battery passport must include information identifying the manufacturer."@en ;
    samm:characteristic samm-c:Text .
