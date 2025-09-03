@@ -101,7 +101,7 @@
    samm:preferredName "P.O. box"@en ;
    samm:description "P.O. box number."@en ;
    samm:see <urn:irdi:0173-1%2302-AAO130%23002> ;
-   samm:characteristic samm-c:MultiLanguageText .
+   samm:characteristic shared:MultiLanguageTexts .
 
 :contactInformation a samm:Property ;
    samm:preferredName "Kontaktinformationen des Herstellers"@de ;
@@ -135,7 +135,7 @@
    samm:preferredName "first name"@en ;
    samm:description "First name of a contact person."@en ;
    samm:see <urn:irdi:0173-1%2302-AAO206%23002> ;
-   samm:characteristic samm-c:MultiLanguageText .
+   samm:characteristic shared:MultiLanguageTexts .
 
 :zipCodeOfPoBox a samm:Property ;
    samm:preferredName "Postleitzahl"@de ;
@@ -197,7 +197,7 @@
 :furtherDetailsOfContact a samm:Property ;
    samm:description "Additional information of the contact person."@en ;
    samm:see <urn:irdi:0173-1%2302-AAO210%23002> ;
-   samm:characteristic samm-c:MultiLanguageText .
+   samm:characteristic shared:MultiLanguageText .
 
 :availableTimeIpCommunicationChannel a samm:Property ;
    samm:preferredName "available time"@en ;
@@ -221,7 +221,7 @@
    samm:preferredName "type of public key"@en ;
    samm:description "Characterization of a public key according to its encryption process."@en ;
    samm:see <urn:irdi:0173-1%2302-AAO201%23002> ;
-   samm:characteristic samm-c:MultiLanguageText .
+   samm:characteristic shared:MultiLanguageText .
 
 :typeOfTelephone a samm:Property ;
    samm:description "Characterization of a telephone according to its location or usage.\nenumeration: 0173-1%2307-AAS754%23001 (office), 0173-1%2307-AAS755%23001 (office mobile), 0173-1%2307-AAS756%23001 (secretary), 0173-1%2307-AAS757%23001 (substitute), 0173-1%2307-AAS758%23001 (home), 0173-1%2307-AAS759%23001 (private mobile)."@en ;
@@ -230,7 +230,7 @@
 
 :nameOfContact a samm:Property ;
    samm:preferredName "name of contact"@en ;
-   samm:characteristic samm-c:MultiLanguageText .
+   samm:characteristic shared:MultiLanguageText .
 
 :telephoneNumber a samm:Property ;
    samm:preferredName "Telefonnummer"@de ;
@@ -258,7 +258,7 @@
    samm:preferredName "title"@en ;
    samm:description "Common, formal, religious, or other title preceding a contact person's name."@en ;
    samm:see <urn:irdi:0173-1%2302-AAO208%23003> ;
-   samm:characteristic samm-c:MultiLanguageText .
+   samm:characteristic shared:MultiLanguageText .
 
 :IpCommunicationChannelEntity a samm:Entity ;
    samm:preferredName "IP Communication Channel"@en ;
@@ -269,7 +269,7 @@
    samm:preferredName "middle names"@en ;
    samm:description "Middle names of contact person."@en ;
    samm:see <urn:irdi:0173-1%2302-AAO207%23002> ;
-   samm:characteristic samm-c:MultiLanguageText .
+   samm:characteristic shared:MultiLanguageText .
 
 :nationalCode a samm:Property ;
    samm:preferredName "Länderkürzel"@de ;
@@ -305,5 +305,5 @@
    samm:preferredName "academic title"@en ;
    samm:description "Academic title preceding a contact person's name."@en ;
    samm:see <urn:irdi:0173-1%2302-AAO209%23003> ;
-   samm:characteristic samm-c:MultiLanguageText .
+   samm:characteristic shared:MultiLanguageText .
 
