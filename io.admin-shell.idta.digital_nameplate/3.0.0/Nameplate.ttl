@@ -69,10 +69,10 @@
    samm:characteristic shared:MultiLanguageTexts .
 
 :manufacturerProductDesignation a samm:Property ;
-   samm:preferredName "Produktbezeichnung"@de ;
+   samm:preferredName "Herstellerproduktbezeichnung"@de ;
    samm:preferredName "manufacturer product designation"@en ;
    samm:description "Short description of the product (short text), third or lowest level of a 3 level manufacturer specific product hierarchy."@en ;
-   samm:description "Bezeichnung des Produkts."@de ;
+   samm:description "Kurze Beschreibung des Produktes (Kurztext)."@de ;
    samm:see <urn:irdi:0112/2///61987%23ABA567%23009> ;
    samm:see <urn:irdi:0173-1%2302-AAW338%23003> ;
    samm:characteristic shared:MultiLanguageTexts .
