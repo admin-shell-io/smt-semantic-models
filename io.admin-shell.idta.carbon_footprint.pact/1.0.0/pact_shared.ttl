@@ -49,4 +49,23 @@
    samm:preferredName "Product (Carbon) Footprint"@en ;
    samm:description "A Product (Carbon) Footprint represents the carbon footprint of a product with values as specified in the Catena-X PCF Rulebook (Version 3.0.0) in accordance with the WBCSD (World Business Council for Sustainable Development) Pathfinder framework and the technical specifications for PCF Data Exchange (Version 2.0.0) from the WBCSD/ PACT initiative."@en ;
    samm:see <https://wbcsd.github.io/tr/2023/data-exchange-protocol-20230221/> ;
-   samm:properties ( [ samm:property cx:id; samm:payloadName "id" ] [ samm:property cx:specVersion; samm:payloadName "specVersion" ] [ samm:property cx:partialFullPcf; samm:payloadName "partialFullPcf" ] [ samm:property cx:precedingPfIds; samm:optional true; samm:payloadName "precedingPfIds" ] [ samm:property cx:version; samm:payloadName "version" ] [ samm:property cx:created; samm:payloadName "created" ] [ samm:property cx:status; samm:payloadName "extWBCSD_pfStatus" ] [ samm:property cx:validityPeriodStart; samm:optional true; samm:payloadName "validityPeriodStart" ] [ samm:property cx:validityPeriodEnd; samm:optional true; samm:payloadName "validityPeriodEnd" ] [ samm:property cx:comment; samm:optional true; samm:payloadName "comment" ] [ samm:property cx:companyName; samm:payloadName "companyName" ] [ samm:property cx:companyIds; samm:payloadName "companyIds" ] [ samm:property cx:productDescription; samm:optional true; samm:payloadName "productDescription" ] [ samm:property cx:productIds; samm:payloadName "productIds" ] [ samm:property cx:productCategoryCpc; samm:payloadName "extWBCSD_productCodeCpc" ] [ samm:property cx:productNameCompany; samm:payloadName "productName" ] [ samm:property cx:pcf; samm:payloadName "pcf" ] [ samm:property cx:pcfLegalStatement; samm:optional true; samm:payloadName "pcfLegalStatement" ] ) .
+   samm:properties ( 
+   [ samm:property cx:id; samm:payloadName "id" ] 
+   [ samm:property cx:specVersion; samm:payloadName "specVersion" ] 
+   [ samm:property cx:partialFullPcf; samm:payloadName "partialFullPcf" ] 
+   [ samm:property cx:precedingPfIds; samm:optional true; samm:payloadName "precedingPfIds" ] 
+   [ samm:property cx:version; samm:payloadName "version" ] 
+   [ samm:property cx:created; samm:payloadName "created" ] 
+   [ samm:property cx:status; samm:payloadName "extWBCSD_pfStatus" ] 
+   [ samm:property cx:validityPeriodStart; samm:optional true; samm:payloadName "validityPeriodStart" ] 
+   [ samm:property cx:validityPeriodEnd; samm:optional true; samm:payloadName "validityPeriodEnd" ] 
+   [ samm:property cx:comment; samm:optional true; samm:payloadName "comment" ]
+   [ samm:property cx:companyName; samm:payloadName "companyName" ]
+   [ samm:property cx:companyIds; samm:payloadName "companyIds" ]
+   [ samm:property cx:productDescription; samm:optional true; samm:payloadName "productDescription" ]
+   [ samm:property cx:productIds; samm:payloadName "productIds" ]
+   [ samm:property cx:productCategoryCpc; samm:payloadName "extWBCSD_productCodeCpc" ]
+   [ samm:property cx:productNameCompany; samm:payloadName "productName" ]
+   [ samm:property cx:pcf; samm:payloadName "pcf" ]
+   [ samm:property cx:pcfLegalStatement; samm:optional true; samm:payloadName "pcfLegalStatement" ] 
+   ) .

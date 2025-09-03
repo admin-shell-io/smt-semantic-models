@@ -42,11 +42,13 @@
 
 :PactCarbonFootprint a samm:Aspect ;
    samm:preferredName "Carbon Footprint"@en ;
-   samm:preferredName "C02 Footprint"@de ;
-   samm:description "Provides the means to access the Carbon Footprint of the asset."@en ;
+   samm:preferredName "C02 Fußabdruck"@de ;
+   samm:description "Provides the means to access the Carbon Footprint of the asset. It supports to provide the Carbon Footprint conformant to the specification of the Partnership for Carbon Transparency (PACT)."@en ;
    samm:see <https://admin-shell.io/idta/SubmodelTemplate/CarbonFootprint/1/0> ;
    samm:see <https://admin-shell.io/idta/SubmodelTemplate/CarbonFootprint/1/0> ;
    samm:see <https://admin-shell.io/IDTA-02023-1-0> ;
-   samm:properties ( [ samm:property pcf:productCarbonFootprints; samm:payloadName "ProductCarbonFootprints" ] [ samm:property :productOrSectorSpecificCarbonFootprints; samm:optional true; samm:payloadName "ProductOrSectorSpecificCarbonFootprints" ] ) ;
+   samm:properties ( 
+   [ samm:property pcf:productCarbonFootprints; samm:payloadName "ProductCarbonFootprints" ] 
+   [ samm:property :productOrSectorSpecificCarbonFootprints; samm:optional true; samm:payloadName "ProductOrSectorSpecificCarbonFootprints" ] ) ;
    samm:operations ( ) ;
    samm:events ( ) .
