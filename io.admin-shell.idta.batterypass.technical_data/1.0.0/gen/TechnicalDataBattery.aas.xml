@@ -362,12 +362,8 @@
               <aas:idShort>manufacturerIdentifier</aas:idShort>
               <aas:displayName>
                 <aas:langStringNameType>
-                  <aas:language>de</aas:language>
-                  <aas:text>identifier of the manfuacturer</aas:text>
-                </aas:langStringNameType>
-                <aas:langStringNameType>
                   <aas:language>en</aas:language>
-                  <aas:text>article number of the product</aas:text>
+                  <aas:text>identifier of the manfuacturer</aas:text>
                 </aas:langStringNameType>
               </aas:displayName>
               <aas:semanticId>
@@ -1673,12 +1669,8 @@ The path can be absolute or relative.</aas:text>
       <aas:idShort>manufacturerIdentifier</aas:idShort>
       <aas:displayName>
         <aas:langStringNameType>
-          <aas:language>de</aas:language>
-          <aas:text>identifier of the manfuacturer</aas:text>
-        </aas:langStringNameType>
-        <aas:langStringNameType>
           <aas:language>en</aas:language>
-          <aas:text>article number of the product</aas:text>
+          <aas:text>identifier of the manfuacturer</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
       <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#manufacturerIdentifier</aas:id>
@@ -1697,12 +1689,8 @@ The path can be absolute or relative.</aas:text>
             <aas:dataSpecificationIec61360>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>identifier of the manfuacturer</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-                <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>article number of the product</aas:text>
+                  <aas:text>identifier of the manfuacturer</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>

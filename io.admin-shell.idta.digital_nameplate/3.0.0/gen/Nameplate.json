@@ -6,9 +6,9 @@
     "en" : "Example multi language string"
   } ],
   "AddressInformation" : {
-    "POBox" : {
+    "POBox" : [ {
       "en" : "Example multi language string"
-    },
+    } ],
     "Company" : [ {
       "en" : "Example multi language string"
     } ],
@@ -18,34 +18,34 @@
         "en" : "Example multi language string"
       } ],
       "TypeOfEmailAddress" : "0173-1%2307-AAS754%23001",
-      "TypeOfPublicKey" : {
+      "TypeOfPublicKey" : [ {
         "en" : "Example multi language string"
-      }
+      } ]
     },
-    "NameOfContact" : {
+    "NameOfContact" : [ {
       "en" : "Example multi language string"
-    },
+    } ],
     "ZipCode" : [ {
       "en" : "Example multi language string"
     } ],
-    "FirstName" : {
+    "FirstName" : [ {
       "en" : "Example multi language string"
-    },
-    "Title" : {
+    } ],
+    "Title" : [ {
       "en" : "Example multi language string"
-    },
+    } ],
     "Languages" : [ "en" ],
-    "AcademicTitle" : {
+    "AcademicTitle" : [ {
       "en" : "Example multi language string"
-    },
+    } ],
     "IPCommunicationChannels" : [ {
-      "TypeOfCommunication" : "VLhpfQGTMDYpsBZxvfBoeygjb",
+      "TypeOfCommunication" : "Chat",
       "availableTime" : [ {
         "en" : "Example multi language string"
       } ],
-      "AddressOfAdditionalLink" : "RYtGKbgicZaHCBRQDSx"
+      "AddressOfAdditionalLink" : "eOMtThyhVNLWUZNRcBaQKxI"
     } ],
-    "RoleOfContactPerson" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
+    "RoleOfContactPerson" : "0173-1%2307-AAS931%23001",
     "TimeZone" : "-12:00",
     "Department" : [ {
       "en" : "Example multi language string"
@@ -54,7 +54,7 @@
       "TelephoneNumber" : [ {
         "en" : "Example multi language string"
       } ],
-      "TYpeOfTelephone" : "JxkyvRnL",
+      "TYpeOfTelephone" : "0173-1#07-AAS755#001",
       "AvailableTime" : [ {
         "en" : "Example multi language string"
       } ]
@@ -62,10 +62,10 @@
     "NationalCode" : [ {
       "en" : "Example multi language string"
     } ],
-    "FurtherDetailsOfContact" : {
+    "FurtherDetailsOfContact" : [ {
       "en" : "Example multi language string"
-    },
-    "AddressOfAdditionalLink" : "UMaAIKKIkknjWEXJUfPxxQHeWKEJ",
+    } ],
+    "AddressOfAdditionalLink" : "https://example.com/information/product/1224/contact",
     "Street" : [ {
       "en" : "Example multi language string"
     } ],
@@ -73,7 +73,7 @@
       "en" : "Example multi language string"
     } ],
     "Fax" : {
-      "TypeOfFaxNumber" : "1",
+      "TypeOfFaxNumber" : "0173-1%2307-AAS754%23001",
       "FaxNumber" : [ {
         "en" : "Example multi language string"
       } ]
@@ -84,18 +84,18 @@
     "ZipCodeOfPOBox" : [ {
       "en" : "Example multi language string"
     } ],
-    "MiddleNames" : {
+    "MiddleNames" : [ {
       "en" : "Example multi language string"
-    }
+    } ]
   },
-  "OrderCodeOfManufacturer" : "eOMtThyhVNLWUZNRcBaQKxI",
-  "CountryOfOrigin" : "dpHYZGhtgdntugzvvKAXLhM",
+  "OrderCodeOfManufacturer" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
+  "CountryOfOrigin" : "JxkyvRnL",
   "YearOfConstruction" : "2009",
   "Markings" : [ {
     "MarkingName" : "0173-1%2307-DAA603%23004",
     "IssueDate" : "2022-01-01",
     "ExpiryDate" : "2022-01-01",
-    "designationOfCertificateOrApproval" : "KEMA99IECE X1105/128",
+    "DesignationOfCertificateOrApproval" : "KEMA99IECE X1105/128",
     "MarkingFile" : {
       "value" : "https://example.com/SafetyInstructions.pdf",
       "contentType" : "application/pdf"
@@ -110,16 +110,16 @@
   "ManufacturerProductFamily" : [ {
     "en" : "Example multi language string"
   } ],
-  "SoftwareVersion" : "SF1",
+  "CompanyLogo" : "https://example.com/logo.png",
   "ManufacturerProductRoot" : [ {
     "en" : "Example multi language string"
   } ],
+  "SoftwareVersion" : "SF1",
   "SerialNumber" : "A12345-X75EN",
   "URIOfTheProduct" : "https://dc-qr.com/?m=R123456789",
   "ManufacturerProductDesignation" : [ {
     "en" : "Example multi language string"
   } ],
   "UniqueFacilityIdentifier" : "987654321",
-  "LogoCompany" : "telnet://192.0.2.16:80/",
-  "DateOfManufacture" : "2009-01-01"
+  "DateOfManufacture" : "2022-01-01"
 }

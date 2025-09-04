@@ -4,11 +4,11 @@
   } ],
   "SerialNumber" : "A12345-X75EN",
   "BatteryStatus" : "Original",
-  "OperatorIdentifier" : "UMaAIKKIkknjWEXJUfPxxQHeWKEJ",
+  "OperatorIdentifier" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
   "AddressInformation" : {
-    "POBox" : {
+    "POBox" : [ {
       "en" : "Example multi language string"
-    },
+    } ],
     "Company" : [ {
       "en" : "Example multi language string"
     } ],
@@ -18,34 +18,34 @@
         "en" : "Example multi language string"
       } ],
       "TypeOfEmailAddress" : "0173-1%2307-AAS754%23001",
-      "TypeOfPublicKey" : {
+      "TypeOfPublicKey" : [ {
         "en" : "Example multi language string"
-      }
+      } ]
     },
-    "NameOfContact" : {
+    "NameOfContact" : [ {
       "en" : "Example multi language string"
-    },
+    } ],
     "ZipCode" : [ {
       "en" : "Example multi language string"
     } ],
-    "FirstName" : {
+    "FirstName" : [ {
       "en" : "Example multi language string"
-    },
-    "Title" : {
+    } ],
+    "Title" : [ {
       "en" : "Example multi language string"
-    },
+    } ],
     "Languages" : [ "en" ],
-    "AcademicTitle" : {
+    "AcademicTitle" : [ {
       "en" : "Example multi language string"
-    },
+    } ],
     "IPCommunicationChannels" : [ {
-      "TypeOfCommunication" : "RYtGKbgicZaHCBRQDSx",
+      "TypeOfCommunication" : "Chat",
       "availableTime" : [ {
         "en" : "Example multi language string"
       } ],
-      "AddressOfAdditionalLink" : "JxkyvRnL"
+      "AddressOfAdditionalLink" : "eOMtThyhVNLWUZNRcBaQKxI"
     } ],
-    "RoleOfContactPerson" : "eOMtThyhVNLWUZNRcBaQKxI",
+    "RoleOfContactPerson" : "0173-1%2307-AAS931%23001",
     "TimeZone" : "-12:00",
     "Department" : [ {
       "en" : "Example multi language string"
@@ -54,7 +54,7 @@
       "TelephoneNumber" : [ {
         "en" : "Example multi language string"
       } ],
-      "TYpeOfTelephone" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
+      "TYpeOfTelephone" : "0173-1#07-AAS755#001",
       "AvailableTime" : [ {
         "en" : "Example multi language string"
       } ]
@@ -62,10 +62,10 @@
     "NationalCode" : [ {
       "en" : "Example multi language string"
     } ],
-    "FurtherDetailsOfContact" : {
+    "FurtherDetailsOfContact" : [ {
       "en" : "Example multi language string"
-    },
-    "AddressOfAdditionalLink" : "VLhpfQGTMDYpsBZxvfBoeygjb",
+    } ],
+    "AddressOfAdditionalLink" : "https://example.com/information/product/1224/contact",
     "Street" : [ {
       "en" : "Example multi language string"
     } ],
@@ -73,7 +73,7 @@
       "en" : "Example multi language string"
     } ],
     "Fax" : {
-      "TypeOfFaxNumber" : "1",
+      "TypeOfFaxNumber" : "0173-1%2307-AAS754%23001",
       "FaxNumber" : [ {
         "en" : "Example multi language string"
       } ]
@@ -84,9 +84,9 @@
     "ZipCodeOfPOBox" : [ {
       "en" : "Example multi language string"
     } ],
-    "MiddleNames" : {
+    "MiddleNames" : [ {
       "en" : "Example multi language string"
-    }
+    } ]
   },
   "URIOfTheProduct" : "https://dc-qr.com/?m=R123456789",
   "UniqueFacilityIdentifier" : "987654321",
@@ -101,6 +101,6 @@
     },
     "MarkingAdditionalText" : "0044"
   } ],
-  "DateOfManufacture" : "2009-01-01",
-  "ManufacturerIdentifier" : "dpHYZGhtgdntugzvvKAXLhM"
+  "DateOfManufacture" : "2022-01-01",
+  "ManufacturerIdentifier" : "JxkyvRnL"
 }

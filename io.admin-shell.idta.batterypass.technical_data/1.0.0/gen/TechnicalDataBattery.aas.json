@@ -368,11 +368,8 @@
           "text" : "A battery passport must include information identifying the manufacturer."
         } ],
         "preferredName" : [ {
-          "language" : "de",
-          "text" : "identifier of the manfuacturer"
-        }, {
           "language" : "en",
-          "text" : "article number of the product"
+          "text" : "identifier of the manfuacturer"
         } ],
         "shortName" : [ {
           "language" : "en",
@@ -382,11 +379,8 @@
     } ],
     "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#manufacturerIdentifier",
     "displayName" : [ {
-      "language" : "de",
-      "text" : "identifier of the manfuacturer"
-    }, {
       "language" : "en",
-      "text" : "article number of the product"
+      "text" : "identifier of the manfuacturer"
     } ],
     "idShort" : "manufacturerIdentifier"
   }, {
@@ -1911,11 +1905,8 @@
         },
         "valueType" : "xs:string",
         "displayName" : [ {
-          "language" : "de",
-          "text" : "identifier of the manfuacturer"
-        }, {
           "language" : "en",
-          "text" : "article number of the product"
+          "text" : "identifier of the manfuacturer"
         } ],
         "idShort" : "manufacturerIdentifier"
       }, {

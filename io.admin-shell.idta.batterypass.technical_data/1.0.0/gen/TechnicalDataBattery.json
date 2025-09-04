@@ -9,22 +9,22 @@
       "InitialInternalResistanceOnBatteryCellLevel" : 67.0
     },
     "PowerCapability" : {
-      "RatioNorminalBatteryPowerAndBatteryEnergy" : 1.6034981E38,
-      "PowerFade" : -5.1794926E37,
+      "RatioNorminalBatteryPowerAndBatteryEnergy" : -2.0879798E38,
+      "PowerFade" : -1.9312823E36,
       "MaximumPermittedBatteryPower" : "Infinity",
       "OriginalPowerCapability" : [ {
-        "atSoC" : 5.4551173E37,
-        "powerCapabilityAt" : -2.5278957E38
+        "atSoC" : 1.3504347E38,
+        "powerCapabilityAt" : 2.6414806E38
       } ]
     },
     "CapacityEnergyVoltage" : {
-      "CertifiedUsableBatteryEnergy" : 5.638039E37,
+      "CertifiedUsableBatteryEnergy" : -8.941769E37,
       "CapacityFade" : {
-        "capacityFadeValue" : 6.6495834E37,
-        "lastUpdate" : "2025-08-13T13:49:55.020+02:00"
+        "capacityFadeValue" : 2.1985962E38,
+        "lastUpdate" : "2025-09-04T17:38:46.341+02:00"
       },
       "NominalVoltage" : 4.3,
-      "RatedCapacity" : -7.862965E37,
+      "RatedCapacity" : -1.5655274E38,
       "MaxVoltage" : 6.0,
       "MinVoltage" : 2.04
     },
@@ -34,19 +34,19 @@
     },
     "Lifetime" : {
       "CapacityThresholdExhaustion" : -1.7976931348623157E308,
-      "CrateOfRelevantCycleLifeTest" : 3.3639113E38,
+      "CrateOfRelevantCycleLifeTest" : -6.9008495E37,
       "NumberOfChargeDischargeCycles" : {
         "numberOfFullCyclesValue" : -179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
-        "lastUpdate" : "2025-08-13T13:49:55.020+02:00"
+        "lastUpdate" : "2025-09-04T17:38:46.341+02:00"
       },
-      "ExpectedLifetimeInCalendarYears " : -21501
+      "ExpectedLifetimeInCalendarYears " : -24418
     },
     "RoundTripEnergyEfficiency" : {
       "InitialRoundTripEnergyEfficiency" : 100,
-      "RoundTripEnergyEfficiencyAtFiftyofCycleLife" : 1.1848581E38,
+      "RoundTripEnergyEfficiencyAtFiftyofCycleLife" : 2.2693013E38,
       "EnergyRoundTripEfficiencyFade" : {
-        "capacityFadeValue" : 2.882326E38,
-        "lastUpdate" : "2025-08-13T13:49:55.020+02:00"
+        "capacityFadeValue" : 9.7599665E36,
+        "lastUpdate" : "2025-09-04T17:38:46.341+02:00"
       },
       "InitialSelfDischargingRate" : 2
     }
@@ -65,7 +65,7 @@
     } ],
     "ManufacturerOrderCode" : "JxkyvRnL",
     "ManufacturerArticleNumber" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
-    "WarrantyPeriod" : "--08",
+    "WarrantyPeriod" : "--09",
     "ManufacturerIdentifier" : "RYtGKbgicZaHCBRQDSx"
   }
 }

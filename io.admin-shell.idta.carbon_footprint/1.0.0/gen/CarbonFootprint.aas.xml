@@ -1998,7 +1998,7 @@
         </aas:langStringNameType>
         <aas:langStringNameType>
           <aas:language>de</aas:language>
-          <aas:text>C02 Footprint</aas:text>
+          <aas:text>C02 Fußabdruck</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
       <aas:description>
@@ -2028,7 +2028,7 @@
                 </aas:langStringPreferredNameTypeIec61360>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>de</aas:language>
-                  <aas:text>C02 Footprint</aas:text>
+                  <aas:text>C02 Fußabdruck</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>

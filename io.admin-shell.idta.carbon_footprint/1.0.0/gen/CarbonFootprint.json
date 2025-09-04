@@ -1,15 +1,15 @@
 {
   "ProductCarbonFootprints" : [ {
     "QuantityOfMeasureForCalculation" : 5.0,
-    "PublicationDate" : "2025-07-18T11:58:10.430+02:00",
+    "PublicationDate" : "2025-09-03T18:08:40.587+02:00",
     "ExplanatoryStatement" : {
       "value" : "https://example.com/SafetyInstructions.pdf",
       "contentType" : "application/pdf"
     },
     "GoodsHandoverAddress" : {
-      "POBox" : {
+      "POBox" : [ {
         "en" : "Example multi language string"
-      },
+      } ],
       "Company" : [ {
         "en" : "Example multi language string"
       } ],
@@ -19,34 +19,34 @@
           "en" : "Example multi language string"
         } ],
         "TypeOfEmailAddress" : "0173-1%2307-AAS754%23001",
-        "TypeOfPublicKey" : {
+        "TypeOfPublicKey" : [ {
           "en" : "Example multi language string"
-        }
+        } ]
       },
-      "NameOfContact" : {
+      "NameOfContact" : [ {
         "en" : "Example multi language string"
-      },
+      } ],
       "ZipCode" : [ {
         "en" : "Example multi language string"
       } ],
-      "FirstName" : {
+      "FirstName" : [ {
         "en" : "Example multi language string"
-      },
-      "Title" : {
+      } ],
+      "Title" : [ {
         "en" : "Example multi language string"
-      },
+      } ],
       "Languages" : [ "en" ],
-      "AcademicTitle" : {
+      "AcademicTitle" : [ {
         "en" : "Example multi language string"
-      },
+      } ],
       "IPCommunicationChannels" : [ {
-        "TypeOfCommunication" : "RYtGKbgicZaHCBRQDSx",
+        "TypeOfCommunication" : "Chat",
         "availableTime" : [ {
           "en" : "Example multi language string"
         } ],
-        "AddressOfAdditionalLink" : "JxkyvRnL"
+        "AddressOfAdditionalLink" : "eOMtThyhVNLWUZNRcBaQKxI"
       } ],
-      "RoleOfContactPerson" : "eOMtThyhVNLWUZNRcBaQKxI",
+      "RoleOfContactPerson" : "0173-1%2307-AAS931%23001",
       "TimeZone" : "-12:00",
       "Department" : [ {
         "en" : "Example multi language string"
@@ -55,7 +55,7 @@
         "TelephoneNumber" : [ {
           "en" : "Example multi language string"
         } ],
-        "TYpeOfTelephone" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
+        "TYpeOfTelephone" : "0173-1#07-AAS755#001",
         "AvailableTime" : [ {
           "en" : "Example multi language string"
         } ]
@@ -63,10 +63,10 @@
       "NationalCode" : [ {
         "en" : "Example multi language string"
       } ],
-      "FurtherDetailsOfContact" : {
+      "FurtherDetailsOfContact" : [ {
         "en" : "Example multi language string"
-      },
-      "AddressOfAdditionalLink" : "VLhpfQGTMDYpsBZxvfBoeygjb",
+      } ],
+      "AddressOfAdditionalLink" : "https://example.com/information/product/1224/contact",
       "Street" : [ {
         "en" : "Example multi language string"
       } ],
@@ -74,7 +74,7 @@
         "en" : "Example multi language string"
       } ],
       "Fax" : {
-        "TypeOfFaxNumber" : "1",
+        "TypeOfFaxNumber" : "0173-1%2307-AAS754%23001",
         "FaxNumber" : [ {
           "en" : "Example multi language string"
         } ]
@@ -85,11 +85,11 @@
       "ZipCodeOfPOBox" : [ {
         "en" : "Example multi language string"
       } ],
-      "MiddleNames" : {
+      "MiddleNames" : [ {
         "en" : "Example multi language string"
-      }
+      } ]
     },
-    "ExpirationDate" : "2025-07-18T11:58:10.430+02:00",
+    "ExpirationDate" : "2025-09-03T18:08:40.587+02:00",
     "PcfCo2eq" : 17.2,
     "ReferenceImpactUnitForCalculation" : "piece",
     "PcfCalculationMethods" : [ "ISO 14067" ],

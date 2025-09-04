@@ -40,7 +40,7 @@
           "text" : "Carbon Footprint"
         }, {
           "language" : "de",
-          "text" : "C02 Footprint"
+          "text" : "C02 Fußabdruck"
         } ],
         "shortName" : [ {
           "language" : "en",
@@ -59,7 +59,7 @@
       "text" : "Carbon Footprint"
     }, {
       "language" : "de",
-      "text" : "C02 Footprint"
+      "text" : "C02 Fußabdruck"
     } ],
     "idShort" : "CarbonFootprint"
   }, {
