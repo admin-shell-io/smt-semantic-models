@@ -147,8 +147,8 @@
    samm:description "Datum, zu dem das Produkt hergestellt wurde."@de ;
    samm:see <urn:irdi:0112/2///61987%23ABB757%23007> ;
    samm:see <urn:irdi:0173-1%2302-AAR972%23004> ;
-   samm:characteristic samm-c:Text ;
-   samm:exampleValue "2009-01-01" .
+   samm:characteristic :Date ;
+   samm:exampleValue "2022-01-01"^^xsd:date .
 
 :hardwareVersion a samm:Property ;
    samm:preferredName "hardware version"@en ;
@@ -206,8 +206,11 @@
    samm:preferredName "company logo"@en ;
    samm:description "Das Firmenlogo des Produkts."@de ;
    samm:description "A graphic mark used to represent a company, an organisation or a product."@en ;
+   samm:exampleValue "https://example.com/logo.png"^^xsd:anyURI ;
    samm:characteristic samm-c:ResourcePath .
 
 :Uri a samm:Characteristic ;
    samm:dataType xsd:anyURI .
 
+:Date a samm:Characteristic ;
+   samm:dataType xsd:date .
