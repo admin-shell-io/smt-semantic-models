@@ -1,9 +1,7 @@
 {
-  "ProductArticleNumberOfManufacturer" : [ {
-    "en" : "Example multi language string"
-  } ],
+  "ProductArticleNumberOfManufacturer" : "FM11-ABC22-123456",
   "ManufacturerName" : [ {
-    "en" : "Example multi language string"
+    "de" : "Muster AG"
   } ],
   "AddressInformation" : {
     "POBox" : [ {
@@ -88,8 +86,8 @@
       "en" : "Example multi language string"
     } ]
   },
-  "OrderCodeOfManufacturer" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
-  "CountryOfOrigin" : "JxkyvRnL",
+  "OrderCodeOfManufacturer" : "FMABC1234",
+  "CountryOfOrigin" : "DE",
   "YearOfConstruction" : "2009",
   "Markings" : [ {
     "MarkingName" : "0173-1%2307-DAA603%23004",
@@ -102,23 +100,21 @@
     },
     "MarkingAdditionalText" : "0044"
   } ],
-  "ManufacturerProductType" : [ {
-    "en" : "Example multi language string"
-  } ],
+  "ManufacturerProductType" : "FM-ABC-1234",
   "HardwareVersion" : "AS1",
   "FirmwareVersion" : "FS1",
   "ManufacturerProductFamily" : [ {
-    "en" : "Example multi language string"
+    "en" : "Type ABC"
   } ],
   "CompanyLogo" : "https://example.com/logo.png",
   "ManufacturerProductRoot" : [ {
-    "en" : "Example multi language string"
+    "en" : "flow meter"
   } ],
   "SoftwareVersion" : "SF1",
   "SerialNumber" : "A12345-X75EN",
   "URIOfTheProduct" : "https://dc-qr.com/?m=R123456789",
   "ManufacturerProductDesignation" : [ {
-    "en" : "Example multi language string"
+    "en" : "ABC-123"
   } ],
   "UniqueFacilityIdentifier" : "987654321",
   "DateOfManufacture" : "2022-01-01"

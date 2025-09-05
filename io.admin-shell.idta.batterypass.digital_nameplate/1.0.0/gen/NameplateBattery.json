@@ -1,6 +1,6 @@
 {
   "ManufacturerName" : [ {
-    "en" : "Example multi language string"
+    "de" : "Muster AG"
   } ],
   "SerialNumber" : "A12345-X75EN",
   "BatteryStatus" : "Original",

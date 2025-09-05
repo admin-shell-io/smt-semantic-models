@@ -3445,7 +3445,7 @@
       } ],
       "idShort" : "manufacturerProductFamily"
     }, {
-      "modelType" : "MultiLanguageProperty",
+      "modelType" : "Property",
       "semanticId" : {
         "keys" : [ {
           "type" : "GlobalReference",
@@ -3466,13 +3466,7 @@
         } ],
         "type" : "ExternalReference"
       } ],
-      "description" : [ {
-        "language" : "en",
-        "text" : "Characteristic to differentiate between different products of a product family or special variants."
-      }, {
-        "language" : "de",
-        "text" : "Ausprägung für das Produkt, um unterschiedliche Einzelprodukte einer Produktfamilie zu unterscheiden."
-      } ],
+      "valueType" : "xs:string",
       "displayName" : [ {
         "language" : "en",
         "text" : "manufacturer product type"
@@ -3513,7 +3507,7 @@
       } ],
       "idShort" : "orderCodeOfManufacturer"
     }, {
-      "modelType" : "MultiLanguageProperty",
+      "modelType" : "Property",
       "semanticId" : {
         "keys" : [ {
           "type" : "GlobalReference",
@@ -3534,13 +3528,7 @@
         } ],
         "type" : "ExternalReference"
       } ],
-      "description" : [ {
-        "language" : "en",
-        "text" : "Unique product identifier of the manufacturer."
-      }, {
-        "language" : "de",
-        "text" : "Eindeutige Artikelnummer des Herstellers."
-      } ],
+      "valueType" : "xs:string",
       "displayName" : [ {
         "language" : "en",
         "text" : "product article number"

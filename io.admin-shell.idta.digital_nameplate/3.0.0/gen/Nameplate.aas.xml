@@ -1566,7 +1566,7 @@
             </aas:reference>
           </aas:supplementalSemanticIds>
         </aas:multiLanguageProperty>
-        <aas:multiLanguageProperty>
+        <aas:property>
           <aas:idShort>manufacturerProductType</aas:idShort>
           <aas:displayName>
             <aas:langStringNameType>
@@ -1578,16 +1578,6 @@
               <aas:text>Produktausprägungen</aas:text>
             </aas:langStringNameType>
           </aas:displayName>
-          <aas:description>
-            <aas:langStringTextType>
-              <aas:language>en</aas:language>
-              <aas:text>Characteristic to differentiate between different products of a product family or special variants.</aas:text>
-            </aas:langStringTextType>
-            <aas:langStringTextType>
-              <aas:language>de</aas:language>
-              <aas:text>Ausprägung für das Produkt, um unterschiedliche Einzelprodukte einer Produktfamilie zu unterscheiden.</aas:text>
-            </aas:langStringTextType>
-          </aas:description>
           <aas:semanticId>
             <aas:type>ExternalReference</aas:type>
             <aas:keys>
@@ -1617,7 +1607,8 @@
               </aas:keys>
             </aas:reference>
           </aas:supplementalSemanticIds>
-        </aas:multiLanguageProperty>
+          <aas:valueType>xs:string</aas:valueType>
+        </aas:property>
         <aas:property>
           <aas:idShort>orderCodeOfManufacturer</aas:idShort>
           <aas:displayName>
@@ -1661,7 +1652,7 @@
           </aas:supplementalSemanticIds>
           <aas:valueType>xs:string</aas:valueType>
         </aas:property>
-        <aas:multiLanguageProperty>
+        <aas:property>
           <aas:idShort>productArticleNumberOfManufacturer</aas:idShort>
           <aas:displayName>
             <aas:langStringNameType>
@@ -1673,16 +1664,6 @@
               <aas:text>Artikelnummer des Produkts</aas:text>
             </aas:langStringNameType>
           </aas:displayName>
-          <aas:description>
-            <aas:langStringTextType>
-              <aas:language>en</aas:language>
-              <aas:text>Unique product identifier of the manufacturer.</aas:text>
-            </aas:langStringTextType>
-            <aas:langStringTextType>
-              <aas:language>de</aas:language>
-              <aas:text>Eindeutige Artikelnummer des Herstellers.</aas:text>
-            </aas:langStringTextType>
-          </aas:description>
           <aas:semanticId>
             <aas:type>ExternalReference</aas:type>
             <aas:keys>
@@ -1712,7 +1693,8 @@
               </aas:keys>
             </aas:reference>
           </aas:supplementalSemanticIds>
-        </aas:multiLanguageProperty>
+          <aas:valueType>xs:string</aas:valueType>
+        </aas:property>
         <aas:property>
           <aas:idShort>serialNumber</aas:idShort>
           <aas:displayName>
