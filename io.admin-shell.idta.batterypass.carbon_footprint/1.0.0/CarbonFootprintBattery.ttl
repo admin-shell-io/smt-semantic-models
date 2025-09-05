@@ -41,7 +41,7 @@
 @prefix ext-shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix contact: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
 
-:CarbonFootprint a samm:Aspect ;
+:CarbonFootprintBattery a samm:Aspect ;
    samm:preferredName "Carbon Footprint for Battery Passport"@en ;
    samm:preferredName "C02 Footprint für den Batteriepass"@de ;
    samm:description "Provides the means to access the Carbon Footprint of the asset in the context of a Battery Passport."@en ;
