@@ -65,7 +65,8 @@
    samm:properties ( 
    [ samm:property :telephoneNumber; samm:payloadName "TelephoneNumber" ]
    [ samm:property :typeOfTelephone; samm:optional true; samm:payloadName "TYpeOfTelephone" ]
-   [ samm:property :availableTime; samm:optional true; samm:payloadName "AvailableTime" ] ) .
+   [ samm:property :availableTime; samm:optional true; samm:payloadName "AvailableTime" ] 
+   ) .
 
 :addressOfAdditionalLink a samm:Property ;
    samm:preferredName "address of additional link"@en ;
@@ -161,6 +162,7 @@
    samm:preferredName "fax number"@en ;
    samm:description "Complete telephone number to be called to reach a business partner's fax machine."@en ;
    samm:see <urn:idi:0173-1%2302-AAO195%23002> ;
+   samm:exampleValue "+491234567890"@de ;
    samm:characteristic shared:MultiLanguageTexts .
 
 :stateCounty a samm:Property ;
@@ -181,7 +183,8 @@
 :FaxEntity a samm:Entity ;
    samm:properties ( 
    [ samm:property :faxNumber; samm:payloadName "FaxNumber" ] 
-   [ samm:property :typeOfFaxNumber; samm:optional true; samm:payloadName "TypeOfFaxNumber" ] ) .
+   [ samm:property :typeOfFaxNumber; samm:optional true; samm:payloadName "TypeOfFaxNumber" ] 
+   ) .
 
 :department a samm:Property ;
    samm:preferredName "department"@en ;
@@ -231,7 +234,8 @@
    [ samm:property :emailAddress; samm:payloadName "EmailAddress" ] 
    [ samm:property :publicKey; samm:optional true; samm:payloadName "PublicKey" ] 
    [ samm:property :typeOfEmailAddress; samm:optional true; samm:payloadName "TypeOfEmailAddress" ]
-   [ samm:property :typeOfPublicKey; samm:optional true; samm:payloadName "TypeOfPublicKey" ] ) .
+   [ samm:property :typeOfPublicKey; samm:optional true; samm:payloadName "TypeOfPublicKey" ] 
+   ) .
 
 :email a samm:Property ;
    samm:preferredName "Email"@de ;
@@ -245,6 +249,7 @@
    samm:preferredName "type of public key"@en ;
    samm:description "Characterization of a public key according to its encryption process."@en ;
    samm:see <urn:irdi:0173-1%2302-AAO201%23002> ;
+   samm:exampleValue "RSA"@en ;
    samm:characteristic shared:MultiLanguageTexts .
 
 :typeOfTelephone a samm:Property ;
@@ -273,6 +278,7 @@
    samm:preferredName "public key"@en ;
    samm:description "Public part of an unsymmetrical key pair to sign or encrypt text or messages."@en ;
    samm:see <urn:irdi:0173-1%2302-AAO200%23002> ;
+   samm:exampleValue "0x07"@en ;
    samm:characteristic shared:MultiLanguageTexts .
 
 :iPCommunicationChannels a samm:Property ;
@@ -294,7 +300,8 @@
    samm:properties ( 
    [ samm:property :addressOfAdditionalLinkOfIpCommunicationChannel; samm:payloadName "AddressOfAdditionalLink" ]
    [ samm:property :typeOfCommunication; samm:optional true; samm:payloadName "TypeOfCommunication" ]
-   [ samm:property :availableTimeIpCommunicationChannel; samm:optional true; samm:payloadName "availableTime" ] ) .
+   [ samm:property :availableTimeIpCommunicationChannel; samm:optional true; samm:payloadName "availableTime" ] 
+   ) .
 
 :middleNames a samm:Property ;
    samm:preferredName "middle names"@en ;
@@ -332,7 +339,7 @@
    samm:description "Street name and house number."@en ;
    samm:description "Straße und Nummer."@de ;
    samm:see <urn:irdi:0173-1%2302-AAO128%23002> ;
-   samm:exampleValue "Musterstraße 1"@de ;
+   samm:exampleValue "Musterstrasse 1"@de ;
    samm:characteristic shared:MultiLanguageTexts .
 
 :academicTitle a samm:Property ;
