@@ -161,7 +161,7 @@
 :LifetimeEntity a samm:Entity ;
   samm:properties ( 
       [ samm:property bp:expectedLifetime; samm:payloadName "ExpectedLifetimeInCalendarYears " ] 
-      [ samm:property bp:numberOfFullCycles; samm:payloadName "NumberOfChargeDischargeCycles" ] 
+	  [ samm:property bp:expectedNumberOfCycles; samm:payloadName "NumberOfChargeDischargeCycles" ] 
       [ samm:property bp:capacityThresholdForExhaustion; samm:payloadName "CapacityThresholdExhaustion" ] 
       [ samm:property bp:cRateLifeCycleTest; samm:payloadName "CrateOfRelevantCycleLifeTest" ] 
   ) .
