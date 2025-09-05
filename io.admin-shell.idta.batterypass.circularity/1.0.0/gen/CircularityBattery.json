@@ -1,14 +1,14 @@
 {
-  "renewableContent" : -2.2312437E38,
+  "renewableContent" : -4.8256715E37,
   "dismantlingAndRemovalInformation" : [ {
     "documentType" : "BillOfMaterial",
     "mimeType" : "eOMtThyhVNLWUZNRcBaQKxI",
     "documentURL" : "telnet://192.0.2.16:80/"
   } ],
   "recycledContent" : [ {
-    "preConsumerShare" : 36.479477,
+    "preConsumerShare" : 22.713968,
     "recycledMaterial" : "Cobalt",
-    "postConsumerShare" : 92.669266
+    "postConsumerShare" : 51.627686
   } ],
   "endOfLifeInformation" : {
     "separateCollection" : "ftp://ftp.is.co.za/rfc/rfc1808.txt",
@@ -26,7 +26,7 @@
       "partNumber" : "JxkyvRnL"
     } ],
     "supplierWebAddress" : "ftp://ftp.is.co.za/rfc/rfc1808.txt",
-    "emailAddressOfSupplier" : "w.--..---....wwww--.--www.--ww.-w-w.w-w--w.w.w-w.-w.-.ww.-..--..-w--w-ww..ww-ww-.---w.w-ww..--@.w--?SwKQBKyQnCgibLARrhmEZasmXJUKHjqAwmWXlDKCcbJtAuUOYRUovbLIUekneoEAixugmUjASGAuqLatOkYPPlcArJTlIwbr",
+    "emailAddressOfSupplier" : ".-wwww.-.w.--.w.-.ww.-..--w.-.-w-w.-w-.-..www-.ww-w.-wwww.www..w-w-.w-ww.ww..w.w-..--..@ww...w.w--.w.-w..wwmlmwaWeNxDvOxtUTRGPOJNrXHwMqBwlRNsWJAaYtkHnKTKnhxHSnGedCpTyeYHjzmJaHmOsIuSnLVjYQJFHONxLjTsStqzF",
     "addressOfSupplier" : {
       "addressCountry" : "Germany",
       "streetAddress" : "Street 1",
