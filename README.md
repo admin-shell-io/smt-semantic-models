@@ -42,11 +42,13 @@ The following [CLI - Semantic Aspect Meta Model Command Line Tool](https://eclip
   * *.json  example payload in [Value-Only format](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1/mappings/mappings.html#value-only-serialization-in-json)
 
 
-Version: 2.10.3
+samm-cli - Semantic Aspect Meta Model Command Line Tool
 
-Build date: 2025-05-08T14:47:57Z
+Version: 2.11.1
 
-Git commit: 192116d12a1a4c9df4e03758a6b56dfa80132cf3
+Build date: 2025-07-09 10:57:19
+
+Git commit: 12e6bf900ae63a8ee993da3e0cbc08cf36ee5c50
 
 
 # Known issues for generation of aasx from aspect model
