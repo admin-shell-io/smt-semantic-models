@@ -66,6 +66,7 @@
    samm:description "Name des Herstellers."@de ;
    samm:see <urn:irdi:0112/2///61987%23ABA565%23009> ;
    samm:see <urn:irdi:0173-1%2302-AAO677%23004> ;
+   samm:exampleValue "Muster AG"@de ;
    samm:characteristic shared:MultiLanguageTexts .
 
 :manufacturerProductDesignation a samm:Property ;
@@ -75,6 +76,7 @@
    samm:description "Kurze Beschreibung des Produktes (Kurztext)."@de ;
    samm:see <urn:irdi:0112/2///61987%23ABA567%23009> ;
    samm:see <urn:irdi:0173-1%2302-AAW338%23003> ;
+   samm:exampleValue "ABC-123"@en ;
    samm:characteristic shared:MultiLanguageTexts .
 
 :manufacturerProductRoot a samm:Property ;
@@ -82,6 +84,7 @@
    samm:description "Top level of a 3 level manufacturer specific product hierarchy."@en ;
    samm:see <urn:irdi:0112/2///61360_7%23AAS011%23001> ;
    samm:see <urn:irdi:0173-1%2302-AAU732%23003> ;
+   samm:exampleValue "flow meter"@en ;
    samm:characteristic shared:MultiLanguageTexts .
 
 :manufacturerProductFamily a samm:Property ;
@@ -91,6 +94,7 @@
    samm:description "2nd level of a 3 level manufacturer specific product hierarchy."@en ;
    samm:see <urn:irdi:0112/2///61987%23ABP464%23002> ;
    samm:see <urn:irdi:0173-1%2302-AAU731%23003> ;
+   samm:exampleValue "Type ABC"@en ;
    samm:characteristic shared:MultiLanguageTexts .
 
 :manufacturerProductType a samm:Property ;
@@ -100,7 +104,8 @@
    samm:description "Characteristic to differentiate between different products of a product family or special variants."@en ;
    samm:see <urn:irdi:0112/2///61987%23ABA300%23008> ;
    samm:see <urn:irdi:0173-1%2302-AAO057%23004> ;
-   samm:characteristic shared:MultiLanguageTexts .
+   samm:exampleValue "FM-ABC-1234" ;
+   samm:characteristic samm-c:Text .
 
 :orderCodeOfManufacturer a samm:Property ;
    samm:preferredName "Bestellcode des Produkts"@de ;
@@ -109,6 +114,7 @@
    samm:description "Unique combination of numbers and letters used to identify the device for ordering."@en ;
    samm:see <urn:irdi:0112/2///61987%23ABA950%23008> ;
    samm:see <urn:irdi:0173-1%2302-AAO227%23004> ;
+   samm:exampleValue "FMABC1234" ;
    samm:characteristic samm-c:Text .
 
 :productArticleNumberOfManufacturer a samm:Property ;
@@ -118,7 +124,8 @@
    samm:description "Unique product identifier of the manufacturer."@en ;
    samm:see <urn:irdi:0112/2///61987%23ABA581%23007> ;
    samm:see <urn:irdi:0173-1%2302-AAO676%23005> ;
-   samm:characteristic shared:MultiLanguageTexts .
+   samm:exampleValue "FM11-ABC22-123456" ;
+   samm:characteristic samm-c:Text .
 
 :serialNumber a samm:Property ;
    samm:preferredName "Seriennummer"@de ;
@@ -192,6 +199,7 @@
    samm:description "Country where the product was manufactured. Note: Country codes defined accord. to DIN EN ISO 3166-1 alpha-2 codes."@en ;
    samm:see <urn:irdi:0112/2///61987%23ABP462%23001> ;
    samm:see <urn:irdi:0173-1%2302-AAO259%23007> ;
+   samm:exampleValue "DE" ;
    samm:characteristic samm-c:Text .
 
 :uniqueFacilityIdentifier a samm:Property ;
