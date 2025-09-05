@@ -25,6 +25,7 @@ In the following only deviations from IDTA-02006-3-0 are documented:
 
 * added preferred names. Attention: they are not yet aligned with the names as defined in the IEC CDD dictionary or ECLASS
 * added some German descriptions and preferred names
+* added missing example values
 		
 ### Changed
 
