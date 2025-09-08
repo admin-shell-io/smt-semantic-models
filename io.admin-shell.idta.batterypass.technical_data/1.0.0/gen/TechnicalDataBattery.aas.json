@@ -369,7 +369,7 @@
         } ],
         "preferredName" : [ {
           "language" : "en",
-          "text" : "identifier of the manfuacturer"
+          "text" : "identifier of the manufacturer"
         } ],
         "shortName" : [ {
           "language" : "en",
@@ -380,7 +380,7 @@
     "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#manufacturerIdentifier",
     "displayName" : [ {
       "language" : "en",
-      "text" : "identifier of the manfuacturer"
+      "text" : "identifier of the manufacturer"
     } ],
     "idShort" : "manufacturerIdentifier"
   }, {
@@ -1906,7 +1906,7 @@
         "valueType" : "xs:string",
         "displayName" : [ {
           "language" : "en",
-          "text" : "identifier of the manfuacturer"
+          "text" : "identifier of the manufacturer"
         } ],
         "idShort" : "manufacturerIdentifier"
       }, {
