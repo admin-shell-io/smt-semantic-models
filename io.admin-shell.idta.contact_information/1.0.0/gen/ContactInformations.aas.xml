@@ -197,7 +197,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>0173-1%2302-AAN468%23008</aas:value>
+                          <aas:value>https://api.eclass-cdp.com/0173-1-02-AAN468-008</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -206,7 +206,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>https://api.eclass-cdp.com/0173-1-02-AAN468-008</aas:value>
+                          <aas:value>0173-1%2302-AAN468%23008</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>

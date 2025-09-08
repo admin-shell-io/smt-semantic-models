@@ -173,11 +173,11 @@
           "text" : "Kurze Beschreibung des Produktes (Kurztext)."
         } ],
         "preferredName" : [ {
-          "language" : "de",
-          "text" : "Herstellerproduktbezeichnung"
-        }, {
           "language" : "en",
           "text" : "manufacturer product designation"
+        }, {
+          "language" : "de",
+          "text" : "Herstellerproduktbezeichnung"
         } ],
         "shortName" : [ {
           "language" : "en",
@@ -187,11 +187,11 @@
     } ],
     "id" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerProductDesignation",
     "displayName" : [ {
-      "language" : "de",
-      "text" : "Herstellerproduktbezeichnung"
-    }, {
       "language" : "en",
       "text" : "manufacturer product designation"
+    }, {
+      "language" : "de",
+      "text" : "Herstellerproduktbezeichnung"
     } ],
     "idShort" : "manufacturerProductDesignation"
   }, {
@@ -2407,13 +2407,13 @@
       "supplementalSemanticIds" : [ {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "0112/2///61987%23ABA565%23009"
+          "value" : "0173-1%2302-AAO677%23004"
         } ],
         "type" : "ExternalReference"
       }, {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "0173-1%2302-AAO677%23004"
+          "value" : "0112/2///61987%23ABA565%23009"
         } ],
         "type" : "ExternalReference"
       } ],
@@ -2462,11 +2462,11 @@
         "text" : "Kurze Beschreibung des Produktes (Kurztext)."
       } ],
       "displayName" : [ {
-        "language" : "de",
-        "text" : "Herstellerproduktbezeichnung"
-      }, {
         "language" : "en",
         "text" : "manufacturer product designation"
+      }, {
+        "language" : "de",
+        "text" : "Herstellerproduktbezeichnung"
       } ],
       "idShort" : "manufacturerProductDesignation"
     }, {
@@ -2474,7 +2474,19 @@
       "supplementalSemanticIds" : [ {
         "keys" : [ {
           "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/smt-dropin/smt-dropin-use/1/0"
+        } ],
+        "type" : "ExternalReference"
+      }, {
+        "keys" : [ {
+          "type" : "GlobalReference",
           "value" : "0112/2///61360_7#AAS002#001"
+        } ],
+        "type" : "ExternalReference"
+      }, {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://adminshell.io/zvei/nameplate/1/0/ContactInformations/AddressInformation"
         } ],
         "type" : "ExternalReference"
       }, {
@@ -2487,18 +2499,6 @@
         "keys" : [ {
           "type" : "GlobalReference",
           "value" : "0173-1%2302-AAQ837%23005"
-        } ],
-        "type" : "ExternalReference"
-      }, {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://adminshell.io/zvei/nameplate/1/0/ContactInformations/AddressInformation"
-        } ],
-        "type" : "ExternalReference"
-      }, {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/smt-dropin/smt-dropin-use/1/0"
         } ],
         "type" : "ExternalReference"
       } ],
@@ -2578,13 +2578,13 @@
         "supplementalSemanticIds" : [ {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "0173-1%2302-AAN468%23008"
+            "value" : "https://api.eclass-cdp.com/0173-1-02-AAN468-008"
           } ],
           "type" : "ExternalReference"
         }, {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "https://api.eclass-cdp.com/0173-1-02-AAN468-008"
+            "value" : "0173-1%2302-AAN468%23008"
           } ],
           "type" : "ExternalReference"
         } ],
@@ -3419,13 +3419,13 @@
       "supplementalSemanticIds" : [ {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "0173-1%2302-AAU731%23003"
+          "value" : "0112/2///61987%23ABP464%23002"
         } ],
         "type" : "ExternalReference"
       }, {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "0112/2///61987%23ABP464%23002"
+          "value" : "0173-1%2302-AAU731%23003"
         } ],
         "type" : "ExternalReference"
       } ],
@@ -3456,13 +3456,13 @@
       "supplementalSemanticIds" : [ {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "0112/2///61987%23ABA300%23008"
+          "value" : "0173-1%2302-AAO057%23004"
         } ],
         "type" : "ExternalReference"
       }, {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "0173-1%2302-AAO057%23004"
+          "value" : "0112/2///61987%23ABA300%23008"
         } ],
         "type" : "ExternalReference"
       } ],
@@ -3487,13 +3487,13 @@
       "supplementalSemanticIds" : [ {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "0112/2///61987%23ABA950%23008"
+          "value" : "0173-1%2302-AAO227%23004"
         } ],
         "type" : "ExternalReference"
       }, {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "0173-1%2302-AAO227%23004"
+          "value" : "0112/2///61987%23ABA950%23008"
         } ],
         "type" : "ExternalReference"
       } ],
@@ -3518,13 +3518,13 @@
       "supplementalSemanticIds" : [ {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "0112/2///61987%23ABA581%23007"
+          "value" : "0173-1%2302-AAO676%23005"
         } ],
         "type" : "ExternalReference"
       }, {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "0173-1%2302-AAO676%23005"
+          "value" : "0112/2///61987%23ABA581%23007"
         } ],
         "type" : "ExternalReference"
       } ],
@@ -3549,13 +3549,13 @@
       "supplementalSemanticIds" : [ {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "0173-1%2302-AAM556%23004"
+          "value" : "0112/2///61987%23ABA951%23009"
         } ],
         "type" : "ExternalReference"
       }, {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "0112/2///61987%23ABA951%23009"
+          "value" : "0173-1%2302-AAM556%23004"
         } ],
         "type" : "ExternalReference"
       } ],
@@ -3580,13 +3580,13 @@
       "supplementalSemanticIds" : [ {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "0173-1%2302-AAP906%23003"
+          "value" : "0112/2///61987%23ABP000%23002"
         } ],
         "type" : "ExternalReference"
       }, {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "0112/2///61987%23ABP000%23002"
+          "value" : "0173-1%2302-AAP906%23003"
         } ],
         "type" : "ExternalReference"
       } ],
@@ -3611,13 +3611,13 @@
       "supplementalSemanticIds" : [ {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "0173-1%2302-AAR972%23004"
+          "value" : "0112/2///61987%23ABB757%23007"
         } ],
         "type" : "ExternalReference"
       }, {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "0112/2///61987%23ABB757%23007"
+          "value" : "0173-1%2302-AAR972%23004"
         } ],
         "type" : "ExternalReference"
       } ],
@@ -3860,13 +3860,13 @@
           "supplementalSemanticIds" : [ {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "0112/2///61987%23ABA231%23009"
+              "value" : "urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/MarkingName"
             } ],
             "type" : "ExternalReference"
           }, {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/MarkingName"
+              "value" : "0112/2///61987%23ABA231%23009"
             } ],
             "type" : "ExternalReference"
           } ],
@@ -3956,13 +3956,13 @@
           "supplementalSemanticIds" : [ {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "https://admin-shell.io/aas/3/1/File"
+              "value" : "urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/MarkingFile"
             } ],
             "type" : "ExternalReference"
           }, {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/MarkingFile"
+              "value" : "https://admin-shell.io/aas/3/1/File"
             } ],
             "type" : "ExternalReference"
           } ],
@@ -4016,6 +4016,12 @@
           "supplementalSemanticIds" : [ {
             "keys" : [ {
               "type" : "GlobalReference",
+              "value" : "0112/2///61987%23ABB146%23007"
+            } ],
+            "type" : "ExternalReference"
+          }, {
+            "keys" : [ {
+              "type" : "GlobalReference",
               "value" : "0173-1%2302-ABI192%23003"
             } ],
             "type" : "ExternalReference"
@@ -4023,12 +4029,6 @@
             "keys" : [ {
               "type" : "GlobalReference",
               "value" : "urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/MarkingAdditionalText"
-            } ],
-            "type" : "ExternalReference"
-          }, {
-            "keys" : [ {
-              "type" : "GlobalReference",
-              "value" : "0112/2///61987%23ABB146%23007"
             } ],
             "type" : "ExternalReference"
           } ],

@@ -369,7 +369,7 @@
         } ],
         "preferredName" : [ {
           "language" : "en",
-          "text" : "identifier of the manfuacturer"
+          "text" : "identifier of the manufacturer"
         } ],
         "shortName" : [ {
           "language" : "en",
@@ -380,7 +380,7 @@
     "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#manufacturerIdentifier",
     "displayName" : [ {
       "language" : "en",
-      "text" : "identifier of the manfuacturer"
+      "text" : "identifier of the manufacturer"
     } ],
     "idShort" : "manufacturerIdentifier"
   }, {
@@ -1494,49 +1494,28 @@
       },
       "dataSpecificationContent" : {
         "modelType" : "DataSpecificationIec61360",
-        "dataType" : "INTEGER_MEASURE",
+        "dataType" : "INTEGER_COUNT",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Expected battery lifetime expressed in cycles.\nThe exception for non-cycle applications in Article 10 appears sensible, but is not included in the Annex XIII provision.\nThe data attribute is defined by measurement conditions of the cycle-life test such as the C-Rate (see below) and the depth of discharge in the cycle-life test\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.3"
+        } ],
         "preferredName" : [ {
           "language" : "en",
-          "text" : "numberOfFullCyclesValue"
+          "text" : "ExpectedNumberOfCycles"
         } ],
         "shortName" : [ {
           "language" : "en",
-          "text" : "numberOfFullCyclesValue"
+          "text" : "expectedNumberOfCycles"
         } ],
         "unit" : "cycle"
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#numberOfFullCyclesValue",
-    "idShort" : "numberOfFullCyclesValue"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "en",
-          "text" : "Number of (full) charging and discharging cycles.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.3"
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "numberOfFullCycles"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "numberOfFullCycles"
-        } ]
-      }
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#expectedNumberOfCycles",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "ExpectedNumberOfCycles"
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#numberOfFullCycles",
-    "idShort" : "numberOfFullCycles"
+    "idShort" : "expectedNumberOfCycles"
   }, {
     "modelType" : "ConceptDescription",
     "embeddedDataSpecifications" : [ {
@@ -1906,7 +1885,7 @@
         "valueType" : "xs:string",
         "displayName" : [ {
           "language" : "en",
-          "text" : "identifier of the manfuacturer"
+          "text" : "identifier of the manufacturer"
         } ],
         "idShort" : "manufacturerIdentifier"
       }, {
@@ -2475,35 +2454,20 @@
           "valueType" : "xs:short",
           "idShort" : "expectedLifetime"
         }, {
-          "modelType" : "SubmodelElementCollection",
-          "description" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#expectedNumberOfCycles"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "valueType" : "xs:long",
+          "displayName" : [ {
             "language" : "en",
-            "text" : "Number of (full) charging and discharging cycles.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.3"
+            "text" : "ExpectedNumberOfCycles"
           } ],
-          "idShort" : "numberOfFullCycles",
-          "value" : [ {
-            "modelType" : "Property",
-            "semanticId" : {
-              "keys" : [ {
-                "type" : "GlobalReference",
-                "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#numberOfFullCyclesValue"
-              } ],
-              "type" : "ExternalReference"
-            },
-            "valueType" : "xs:integer",
-            "idShort" : "numberOfFullCyclesValue"
-          }, {
-            "modelType" : "Property",
-            "semanticId" : {
-              "keys" : [ {
-                "type" : "GlobalReference",
-                "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate"
-              } ],
-              "type" : "ExternalReference"
-            },
-            "valueType" : "xs:dateTime",
-            "idShort" : "lastUpdate"
-          } ]
+          "idShort" : "expectedNumberOfCycles"
         }, {
           "modelType" : "Property",
           "semanticId" : {

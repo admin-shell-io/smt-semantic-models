@@ -106,7 +106,7 @@
               <aas:keys>
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
-                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI500-003</aas:value>
+                  <aas:value>https://admin-shell.io/vdi/2770/1/0/EntityForDocumentation</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -115,7 +115,7 @@
               <aas:keys>
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
-                  <aas:value>https://admin-shell.io/vdi/2770/1/0/EntityForDocumentation</aas:value>
+                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI500-003</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -156,7 +156,7 @@
                   <aas:keys>
                     <aas:key>
                       <aas:type>GlobalReference</aas:type>
-                      <aas:value>file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI500%23003/0173-1%2301-AHF579%23003</aas:value>
+                      <aas:value>file:///C:/Users/bsb2si/OneDrive%20-%20Bosch%20Group/__localWorkCloud/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI500%23003/0173-1%2301-AHF579%23003</aas:value>
                     </aas:key>
                   </aas:keys>
                 </aas:reference>
@@ -208,7 +208,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI501%23003</aas:value>
+                          <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI501-003</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -217,7 +217,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI501-003</aas:value>
+                          <aas:value>file:///C:/Users/bsb2si/OneDrive%20-%20Bosch%20Group/__localWorkCloud/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI501%23003</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -272,12 +272,12 @@
                           <aas:idShort>documentDomainId</aas:idShort>
                           <aas:displayName>
                             <aas:langStringNameType>
-                              <aas:language>en</aas:language>
-                              <aas:text>document domain ID</aas:text>
-                            </aas:langStringNameType>
-                            <aas:langStringNameType>
                               <aas:language>de</aas:language>
                               <aas:text>Dokument-Domänen-ID</aas:text>
+                            </aas:langStringNameType>
+                            <aas:langStringNameType>
+                              <aas:language>en</aas:language>
+                              <aas:text>document domain ID</aas:text>
                             </aas:langStringNameType>
                           </aas:displayName>
                           <aas:semanticId>
@@ -381,7 +381,7 @@
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>0173-1%2302-ABH995%23003</aas:value>
+                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABH995-003</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -390,7 +390,7 @@
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABH995-003</aas:value>
+                                  <aas:value>0173-1%2302-ABH995%23003</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -439,7 +439,7 @@ Constraint: at least one classification according to VDI 2770 shall be provided.
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI502-003</aas:value>
+                          <aas:value>file:///C:/Users/bsb2si/OneDrive%20-%20Bosch%20Group/__localWorkCloud/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI502%23003</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -448,7 +448,7 @@ Constraint: at least one classification according to VDI 2770 shall be provided.
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI502%23003</aas:value>
+                          <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI502-003</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -527,7 +527,7 @@ Constraint: at least one classification according to VDI 2770 shall be provided.
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>0173-1%2302-ABH996%23003</aas:value>
+                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABH996-003</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -536,7 +536,7 @@ Constraint: at least one classification according to VDI 2770 shall be provided.
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABH996-003</aas:value>
+                                  <aas:value>0173-1%2302-ABH996%23003</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -680,7 +680,7 @@ Note: at the time of handover, this collection shall include at least one Docume
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>file:///C:/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI503%23003</aas:value>
+                          <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI503-003</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -689,7 +689,7 @@ Note: at the time of handover, this collection shall include at least one Docume
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI503-003</aas:value>
+                          <aas:value>file:///C:/Users/bsb2si/OneDrive%20-%20Bosch%20Group/__localWorkCloud/__git/admin-shell-io.smt-semantic-models/cli/0173-1%2302-ABI503%23003</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -767,7 +767,7 @@ Note: at the time of handover, this collection shall include at least one Docume
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>0173-1%2302-AAN468%23008</aas:value>
+                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-AAN468-008</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -776,7 +776,7 @@ Note: at the time of handover, this collection shall include at least one Docume
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-AAN468-008</aas:value>
+                                  <aas:value>0173-1%2302-AAN468%23008</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -826,7 +826,7 @@ Note: at the time of handover, this collection shall include at least one Docume
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>0173-1%2302-AAP003%23005</aas:value>
+                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-AAP003-005</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -835,7 +835,7 @@ Note: at the time of handover, this collection shall include at least one Docume
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-AAP003-005</aas:value>
+                                  <aas:value>0173-1%2302-AAP003%23005</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -879,7 +879,7 @@ Note: at the time of handover, this collection shall include at least one Docume
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>0173-1%2302-ABG940%23003</aas:value>
+                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABG940-003</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -888,7 +888,7 @@ Note: at the time of handover, this collection shall include at least one Docume
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABG940-003</aas:value>
+                                  <aas:value>0173-1%2302-ABG940%23003</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -928,7 +928,7 @@ Constraint: for each language-dependent Title, a Summary and at least one KeyWor
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABH998-003</aas:value>
+                                  <aas:value>0173-1%2302-ABH998%23003</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -937,7 +937,7 @@ Constraint: for each language-dependent Title, a Summary and at least one KeyWor
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>0173-1%2302-ABH998%23003</aas:value>
+                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABH998-003</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -980,7 +980,7 @@ Constraint: for each language-dependent Title, a Summary and at least one KeyWor
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-AAN466-004</aas:value>
+                                  <aas:value>0173-1%2302-AAN466%23004</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -989,7 +989,7 @@ Constraint: for each language-dependent Title, a Summary and at least one KeyWor
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>0173-1%2302-AAN466%23004</aas:value>
+                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-AAN466-004</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -1032,7 +1032,7 @@ Constraint: for each language-dependent Title, a Summary and at least one KeyWor
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABH999-003</aas:value>
+                                  <aas:value>0173-1%2302-ABH999%23003</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -1041,7 +1041,7 @@ Constraint: for each language-dependent Title, a Summary and at least one KeyWor
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>0173-1%2302-ABH999%23003</aas:value>
+                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABH999-003</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -1074,7 +1074,7 @@ Constraint: for each language-dependent Title, a Summary and at least one KeyWor
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>0173-1%2302-ABI000%23003</aas:value>
+                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI000-003</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -1083,7 +1083,7 @@ Constraint: for each language-dependent Title, a Summary and at least one KeyWor
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI000-003</aas:value>
+                                  <aas:value>0173-1%2302-ABI000%23003</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -1117,7 +1117,7 @@ Constraint: for each language-dependent Title, a Summary and at least one KeyWor
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>0173-1%2302-ABI001%23003</aas:value>
+                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI001-003</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -1126,7 +1126,7 @@ Constraint: for each language-dependent Title, a Summary and at least one KeyWor
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI001-003</aas:value>
+                                  <aas:value>0173-1%2302-ABI001%23003</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -1180,12 +1180,12 @@ Constraint: for each language-dependent Title, a Summary and at least one KeyWor
                           <aas:idShort>organizationOfficialName</aas:idShort>
                           <aas:displayName>
                             <aas:langStringNameType>
-                              <aas:language>en</aas:language>
-                              <aas:text>organization official name</aas:text>
+                              <aas:language>de</aas:language>
+                              <aas:text>offizieller Organisationsname</aas:text>
                             </aas:langStringNameType>
                             <aas:langStringNameType>
-                              <aas:language>de</aas:language>
-                              <aas:text>Offizieller Organisationsname</aas:text>
+                              <aas:language>en</aas:language>
+                              <aas:text>official name of organization</aas:text>
                             </aas:langStringNameType>
                           </aas:displayName>
                           <aas:semanticId>
@@ -1203,7 +1203,7 @@ Constraint: for each language-dependent Title, a Summary and at least one KeyWor
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>0173-1%2302-ABI004%23003</aas:value>
+                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI004-003</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -1212,7 +1212,7 @@ Constraint: for each language-dependent Title, a Summary and at least one KeyWor
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI004-003</aas:value>
+                                  <aas:value>0173-1%2302-ABI004%23003</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -1244,7 +1244,7 @@ Constraint: reference targets a 'Document' or a 'DocumentVersion'.</aas:text>
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABK288-002</aas:value>
+                                  <aas:value>0173-1%2302-ABK288%23002</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -1253,7 +1253,7 @@ Constraint: reference targets a 'Document' or a 'DocumentVersion'.</aas:text>
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>0173-1%2302-ABK288%23002</aas:value>
+                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABK288-002</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -1492,7 +1492,7 @@ Constraint: reference targets a 'Document' or a 'DocumentVersion'.</aas:text>
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>0173-1%2302-ABK290%23002</aas:value>
+                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABK290-002</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -1501,7 +1501,7 @@ Constraint: reference targets a 'Document' or a 'DocumentVersion'.</aas:text>
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>https://api.eclass-cdp.com/0173-1-02-ABK290-002</aas:value>
+                                  <aas:value>0173-1%2302-ABK290%23002</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -1722,15 +1722,6 @@ Note: each DigitalFile represents the same content or Document version, but can 
                               <aas:keys>
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
-                                  <aas:value>0173-1%2302-ABK127%23002</aas:value>
-                                </aas:key>
-                              </aas:keys>
-                            </aas:reference>
-                            <aas:reference>
-                              <aas:type>ExternalReference</aas:type>
-                              <aas:keys>
-                                <aas:key>
-                                  <aas:type>GlobalReference</aas:type>
                                   <aas:value>https://api.eclass-cdp.com/0173-1-02-ABK127-002</aas:value>
                                 </aas:key>
                               </aas:keys>
@@ -1741,6 +1732,15 @@ Note: each DigitalFile represents the same content or Document version, but can 
                                 <aas:key>
                                   <aas:type>GlobalReference</aas:type>
                                   <aas:value>https://admin-shell.io/aas/3/1/File</aas:value>
+                                </aas:key>
+                              </aas:keys>
+                            </aas:reference>
+                            <aas:reference>
+                              <aas:type>ExternalReference</aas:type>
+                              <aas:keys>
+                                <aas:key>
+                                  <aas:type>GlobalReference</aas:type>
+                                  <aas:value>0173-1%2302-ABK127%23002</aas:value>
                                 </aas:key>
                               </aas:keys>
                             </aas:reference>
@@ -2202,12 +2202,12 @@ Note: if the described Entity has an own Asset Administration Shell, the SelfMan
       <aas:idShort>documentDomainId</aas:idShort>
       <aas:displayName>
         <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>document domain ID</aas:text>
-        </aas:langStringNameType>
-        <aas:langStringNameType>
           <aas:language>de</aas:language>
           <aas:text>Dokument-Domänen-ID</aas:text>
+        </aas:langStringNameType>
+        <aas:langStringNameType>
+          <aas:language>en</aas:language>
+          <aas:text>document domain ID</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
       <aas:id>urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentDomainId</aas:id>
@@ -2226,12 +2226,12 @@ Note: if the described Entity has an own Asset Administration Shell, the SelfMan
             <aas:dataSpecificationIec61360>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>document domain ID</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-                <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>de</aas:language>
                   <aas:text>Dokument-Domänen-ID</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>document domain ID</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
@@ -3158,12 +3158,12 @@ Constraint: for each language-dependent Title, a Summary and at least one KeyWor
       <aas:idShort>organizationOfficialName</aas:idShort>
       <aas:displayName>
         <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>organization official name</aas:text>
+          <aas:language>de</aas:language>
+          <aas:text>offizieller Organisationsname</aas:text>
         </aas:langStringNameType>
         <aas:langStringNameType>
-          <aas:language>de</aas:language>
-          <aas:text>Offizieller Organisationsname</aas:text>
+          <aas:language>en</aas:language>
+          <aas:text>official name of organization</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
       <aas:id>urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#organizationOfficialName</aas:id>
@@ -3182,12 +3182,12 @@ Constraint: for each language-dependent Title, a Summary and at least one KeyWor
             <aas:dataSpecificationIec61360>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>organization official name</aas:text>
+                  <aas:language>de</aas:language>
+                  <aas:text>offizieller Organisationsname</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
                 <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Offizieller Organisationsname</aas:text>
+                  <aas:language>en</aas:language>
+                  <aas:text>official name of organization</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>

@@ -1,58 +1,58 @@
 {
   "StateOfCharge" : {
-    "stateOfChargeValue" : -2.616115E38,
-    "lastUpdate" : "2025-08-08T17:32:40.643+02:00"
+    "stateOfChargeValue" : 1.8396707E38,
+    "lastUpdate" : "2025-09-08T09:47:36.874+02:00"
   },
   "RemainingCapacity" : {
-    "remainingCapacityValue" : 1.2101952E38,
-    "lastUpdate" : "2025-08-08T17:32:40.643+02:00"
+    "remainingCapacityValue" : -1.8075462E38,
+    "lastUpdate" : "2025-09-08T09:47:36.874+02:00"
   },
-  "RoundTripEfficiencyFade" : -1.9585876E37,
+  "RoundTripEfficiencyFade" : -3.2075667E37,
   "NegativeEvents" : [ {
     "negativeEvent" : "eOMtThyhVNLWUZNRcBaQKxI",
-    "lastUpdate" : "2025-08-08T17:32:40.643+02:00"
+    "lastUpdate" : "2025-09-08T09:47:36.874+02:00"
   } ],
   "TemperatureInformation" : {
     "timeExtremeHighTemp" : -1.7976931348623157E308,
     "timeExtremeLowTempCharging" : -1.7976931348623157E308,
     "timeExtremeHighTempCharging" : -1.7976931348623157E308,
     "timeExtremeLowTemp" : -1.7976931348623157E308,
-    "lastUpdate" : "2025-08-08T17:32:40.643+02:00"
+    "lastUpdate" : "2025-09-08T09:47:36.874+02:00"
   },
   "CurrentSelfDischargingRate" : {
-    "currentSelfDischargingRateEntity" : -3.0822565E38,
-    "lastUpdate" : "2025-08-08T17:32:40.643+02:00"
+    "currentSelfDischargingRateEntity" : 2.6576569E38,
+    "lastUpdate" : "2025-09-08T09:47:36.874+02:00"
   },
   "RemainingEnergy" : {
-    "remainingEnergyalue" : -2.8853592E38,
-    "lastUpdate" : "2025-08-08T17:32:40.643+02:00"
+    "remainingEnergyalue" : -2.8652228E38,
+    "lastUpdate" : "2025-09-08T09:47:36.874+02:00"
   },
   "EnergyThroughput" : -1.7976931348623157E308,
   "StateOfCertifiedEnergy" : {
-    "stateOfCertifiedEnergyValue" : 1.5092429E38,
-    "lastUpdate" : "2025-08-08T17:32:40.643+02:00"
+    "stateOfCertifiedEnergyValue" : -2.7398816E38,
+    "lastUpdate" : "2025-09-08T09:47:36.874+02:00"
   },
   "EvolutionOfSelfDischarge" : {
-    "evolutionOfSelfDischargeEntityValue" : -6.658399E37
+    "evolutionOfSelfDischargeEntityValue" : -1.6558476E38
   },
   "RemainingRoundTripEnergyEfficiency" : {
-    "remainingRoundTripEnergyEfficiencyValue" : 2.0407025E38,
-    "lastUpdate" : "2025-08-08T17:32:40.643+02:00"
+    "remainingRoundTripEnergyEfficiencyValue" : 6.2068235E37,
+    "lastUpdate" : "2025-09-08T09:47:36.874+02:00"
   },
   "CapacityThroughput" : {
-    "capacityThroughputValue" : 1.7496252E38,
-    "lastUpdate" : "2025-08-08T17:32:40.643+02:00"
+    "capacityThroughputValue" : -7.5309413E37,
+    "lastUpdate" : "2025-09-08T09:47:36.874+02:00"
   },
   "RemainingPowerCapability" : [ {
     "remainingPowerCapabilityValue" : {
-      "atSoC" : -2.1560013E38,
-      "powerCapabilityAt" : 1.392432E38,
-      "rPCLastUpdated" : "2025-08-08T17:32:40.643+02:00"
+      "atSoC" : -6.857227E37,
+      "powerCapabilityAt" : -1.410061E38,
+      "rPCLastUpdated" : "2025-09-08T09:47:36.874+02:00"
     },
-    "lastUpdate" : "2025-08-08T17:32:40.643+02:00"
+    "lastUpdate" : "2025-09-08T09:47:36.874+02:00"
   } ],
   "NumberOfFullCycles" : {
     "numberOfFullCyclesValue" : -179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
-    "lastUpdate" : "2025-08-08T17:32:40.643+02:00"
+    "lastUpdate" : "2025-09-08T09:47:36.874+02:00"
   }
 }

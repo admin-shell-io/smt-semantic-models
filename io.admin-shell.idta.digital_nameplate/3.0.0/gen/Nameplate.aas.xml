@@ -144,7 +144,7 @@
               <aas:keys>
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
-                  <aas:value>0112/2///61987%23ABA565%23009</aas:value>
+                  <aas:value>0173-1%2302-AAO677%23004</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -153,7 +153,7 @@
               <aas:keys>
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
-                  <aas:value>0173-1%2302-AAO677%23004</aas:value>
+                  <aas:value>0112/2///61987%23ABA565%23009</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -163,12 +163,12 @@
           <aas:idShort>manufacturerProductDesignation</aas:idShort>
           <aas:displayName>
             <aas:langStringNameType>
-              <aas:language>de</aas:language>
-              <aas:text>Herstellerproduktbezeichnung</aas:text>
-            </aas:langStringNameType>
-            <aas:langStringNameType>
               <aas:language>en</aas:language>
               <aas:text>manufacturer product designation</aas:text>
+            </aas:langStringNameType>
+            <aas:langStringNameType>
+              <aas:language>de</aas:language>
+              <aas:text>Herstellerproduktbezeichnung</aas:text>
             </aas:langStringNameType>
           </aas:displayName>
           <aas:description>
@@ -239,7 +239,25 @@
               <aas:keys>
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
+                  <aas:value>https://admin-shell.io/smt-dropin/smt-dropin-use/1/0</aas:value>
+                </aas:key>
+              </aas:keys>
+            </aas:reference>
+            <aas:reference>
+              <aas:type>ExternalReference</aas:type>
+              <aas:keys>
+                <aas:key>
+                  <aas:type>GlobalReference</aas:type>
                   <aas:value>0112/2///61360_7#AAS002#001</aas:value>
+                </aas:key>
+              </aas:keys>
+            </aas:reference>
+            <aas:reference>
+              <aas:type>ExternalReference</aas:type>
+              <aas:keys>
+                <aas:key>
+                  <aas:type>GlobalReference</aas:type>
+                  <aas:value>https://adminshell.io/zvei/nameplate/1/0/ContactInformations/AddressInformation</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -258,24 +276,6 @@
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
                   <aas:value>0173-1%2302-AAQ837%23005</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>https://adminshell.io/zvei/nameplate/1/0/ContactInformations/AddressInformation</aas:value>
-                </aas:key>
-              </aas:keys>
-            </aas:reference>
-            <aas:reference>
-              <aas:type>ExternalReference</aas:type>
-              <aas:keys>
-                <aas:key>
-                  <aas:type>GlobalReference</aas:type>
-                  <aas:value>https://admin-shell.io/smt-dropin/smt-dropin-use/1/0</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -364,7 +364,7 @@
                   <aas:keys>
                     <aas:key>
                       <aas:type>GlobalReference</aas:type>
-                      <aas:value>0173-1%2302-AAN468%23008</aas:value>
+                      <aas:value>https://api.eclass-cdp.com/0173-1-02-AAN468-008</aas:value>
                     </aas:key>
                   </aas:keys>
                 </aas:reference>
@@ -373,7 +373,7 @@
                   <aas:keys>
                     <aas:key>
                       <aas:type>GlobalReference</aas:type>
-                      <aas:value>https://api.eclass-cdp.com/0173-1-02-AAN468-008</aas:value>
+                      <aas:value>0173-1%2302-AAN468%23008</aas:value>
                     </aas:key>
                   </aas:keys>
                 </aas:reference>
@@ -1551,7 +1551,7 @@
               <aas:keys>
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
-                  <aas:value>0173-1%2302-AAU731%23003</aas:value>
+                  <aas:value>0112/2///61987%23ABP464%23002</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -1560,7 +1560,7 @@
               <aas:keys>
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
-                  <aas:value>0112/2///61987%23ABP464%23002</aas:value>
+                  <aas:value>0173-1%2302-AAU731%23003</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -1593,7 +1593,7 @@
               <aas:keys>
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
-                  <aas:value>0112/2///61987%23ABA300%23008</aas:value>
+                  <aas:value>0173-1%2302-AAO057%23004</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -1602,7 +1602,7 @@
               <aas:keys>
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
-                  <aas:value>0173-1%2302-AAO057%23004</aas:value>
+                  <aas:value>0112/2///61987%23ABA300%23008</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -1636,7 +1636,7 @@
               <aas:keys>
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
-                  <aas:value>0112/2///61987%23ABA950%23008</aas:value>
+                  <aas:value>0173-1%2302-AAO227%23004</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -1645,7 +1645,7 @@
               <aas:keys>
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
-                  <aas:value>0173-1%2302-AAO227%23004</aas:value>
+                  <aas:value>0112/2///61987%23ABA950%23008</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -1679,7 +1679,7 @@
               <aas:keys>
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
-                  <aas:value>0112/2///61987%23ABA581%23007</aas:value>
+                  <aas:value>0173-1%2302-AAO676%23005</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -1688,7 +1688,7 @@
               <aas:keys>
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
-                  <aas:value>0173-1%2302-AAO676%23005</aas:value>
+                  <aas:value>0112/2///61987%23ABA581%23007</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -1722,7 +1722,7 @@
               <aas:keys>
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
-                  <aas:value>0173-1%2302-AAM556%23004</aas:value>
+                  <aas:value>0112/2///61987%23ABA951%23009</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -1731,7 +1731,7 @@
               <aas:keys>
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
-                  <aas:value>0112/2///61987%23ABA951%23009</aas:value>
+                  <aas:value>0173-1%2302-AAM556%23004</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -1765,7 +1765,7 @@
               <aas:keys>
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
-                  <aas:value>0173-1%2302-AAP906%23003</aas:value>
+                  <aas:value>0112/2///61987%23ABP000%23002</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -1774,7 +1774,7 @@
               <aas:keys>
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
-                  <aas:value>0112/2///61987%23ABP000%23002</aas:value>
+                  <aas:value>0173-1%2302-AAP906%23003</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -1808,7 +1808,7 @@
               <aas:keys>
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
-                  <aas:value>0173-1%2302-AAR972%23004</aas:value>
+                  <aas:value>0112/2///61987%23ABB757%23007</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -1817,7 +1817,7 @@
               <aas:keys>
                 <aas:key>
                   <aas:type>GlobalReference</aas:type>
-                  <aas:value>0112/2///61987%23ABB757%23007</aas:value>
+                  <aas:value>0173-1%2302-AAR972%23004</aas:value>
                 </aas:key>
               </aas:keys>
             </aas:reference>
@@ -2151,7 +2151,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>0112/2///61987%23ABA231%23009</aas:value>
+                          <aas:value>urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/MarkingName</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -2160,7 +2160,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/MarkingName</aas:value>
+                          <aas:value>0112/2///61987%23ABA231%23009</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -2293,7 +2293,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>https://admin-shell.io/aas/3/1/File</aas:value>
+                          <aas:value>urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/MarkingFile</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -2302,7 +2302,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/MarkingFile</aas:value>
+                          <aas:value>https://admin-shell.io/aas/3/1/File</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -2363,6 +2363,15 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
+                          <aas:value>0112/2///61987%23ABB146%23007</aas:value>
+                        </aas:key>
+                      </aas:keys>
+                    </aas:reference>
+                    <aas:reference>
+                      <aas:type>ExternalReference</aas:type>
+                      <aas:keys>
+                        <aas:key>
+                          <aas:type>GlobalReference</aas:type>
                           <aas:value>0173-1%2302-ABI192%23003</aas:value>
                         </aas:key>
                       </aas:keys>
@@ -2373,15 +2382,6 @@
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
                           <aas:value>urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/MarkingAdditionalText</aas:value>
-                        </aas:key>
-                      </aas:keys>
-                    </aas:reference>
-                    <aas:reference>
-                      <aas:type>ExternalReference</aas:type>
-                      <aas:keys>
-                        <aas:key>
-                          <aas:type>GlobalReference</aas:type>
-                          <aas:value>0112/2///61987%23ABB146%23007</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -2584,12 +2584,12 @@
       <aas:idShort>manufacturerProductDesignation</aas:idShort>
       <aas:displayName>
         <aas:langStringNameType>
-          <aas:language>de</aas:language>
-          <aas:text>Herstellerproduktbezeichnung</aas:text>
-        </aas:langStringNameType>
-        <aas:langStringNameType>
           <aas:language>en</aas:language>
           <aas:text>manufacturer product designation</aas:text>
+        </aas:langStringNameType>
+        <aas:langStringNameType>
+          <aas:language>de</aas:language>
+          <aas:text>Herstellerproduktbezeichnung</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
       <aas:id>urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerProductDesignation</aas:id>
@@ -2608,12 +2608,12 @@
             <aas:dataSpecificationIec61360>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>de</aas:language>
-                  <aas:text>Herstellerproduktbezeichnung</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-                <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
                   <aas:text>manufacturer product designation</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>de</aas:language>
+                  <aas:text>Herstellerproduktbezeichnung</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>

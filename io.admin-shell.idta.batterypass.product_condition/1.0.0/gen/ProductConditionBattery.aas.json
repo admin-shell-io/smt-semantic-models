@@ -69,19 +69,49 @@
       "dataSpecificationContent" : {
         "modelType" : "DataSpecificationIec61360",
         "dataType" : "REAL_MEASURE",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "The data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.7"
+        } ],
         "preferredName" : [ {
           "language" : "en",
-          "text" : "energyThroughputValue"
+          "text" : "energyThroughput"
         } ],
         "shortName" : [ {
           "language" : "en",
-          "text" : "energyThroughputValue"
+          "text" : "energyThroughput"
         } ],
         "unit" : "kilowattHour"
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#energyThroughputValue",
-    "idShort" : "energyThroughputValue"
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#energyThroughput",
+    "idShort" : "energyThroughput"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "REAL_MEASURE",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "capacityThroughputValue"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "capacityThroughputValue"
+        } ],
+        "unit" : "ampereHour"
+      }
+    } ],
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#capacityThroughputValue",
+    "idShort" : "capacityThroughputValue"
   }, {
     "modelType" : "ConceptDescription",
     "embeddedDataSpecifications" : [ {
@@ -109,63 +139,8 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate",
     "idShort" : "lastUpdate"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "STRING",
-        "definition" : [ {
-          "language" : "en",
-          "text" : "The data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.7"
-        } ],
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "energyThroughput"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "energyThroughput"
-        } ]
-      }
-    } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#energyThroughput",
-    "idShort" : "energyThroughput"
-  }, {
-    "modelType" : "ConceptDescription",
-    "embeddedDataSpecifications" : [ {
-      "dataSpecification" : {
-        "keys" : [ {
-          "type" : "GlobalReference",
-          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
-        } ],
-        "type" : "ExternalReference"
-      },
-      "dataSpecificationContent" : {
-        "modelType" : "DataSpecificationIec61360",
-        "dataType" : "REAL_MEASURE",
-        "preferredName" : [ {
-          "language" : "en",
-          "text" : "capacityThroughputValue"
-        } ],
-        "shortName" : [ {
-          "language" : "en",
-          "text" : "capacityThroughputValue"
-        } ],
-        "unit" : "ampereHour"
-      }
-    } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#capacityThroughputValue",
-    "idShort" : "capacityThroughputValue"
   }, {
     "modelType" : "ConceptDescription",
     "embeddedDataSpecifications" : [ {
@@ -193,7 +168,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#capacityThroughput",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#capacityThroughput",
     "idShort" : "capacityThroughput"
   }, {
     "modelType" : "ConceptDescription",
@@ -219,7 +194,7 @@
         "unit" : "cycle"
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#numberOfFullCyclesValue",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#numberOfFullCyclesValue",
     "idShort" : "numberOfFullCyclesValue"
   }, {
     "modelType" : "ConceptDescription",
@@ -248,7 +223,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#numberOfFullCycles",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#numberOfFullCycles",
     "idShort" : "numberOfFullCycles"
   }, {
     "modelType" : "ConceptDescription",
@@ -274,7 +249,7 @@
         "unit" : "percent"
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#stateOfCertifiedEnergyValue",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#stateOfCertifiedEnergyValue",
     "idShort" : "stateOfCertifiedEnergyValue"
   }, {
     "modelType" : "ConceptDescription",
@@ -303,7 +278,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#stateOfCertifiedEnergy",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#stateOfCertifiedEnergy",
     "displayName" : [ {
       "language" : "en",
       "text" : "SOCE"
@@ -324,17 +299,17 @@
         "dataType" : "REAL_MEASURE",
         "preferredName" : [ {
           "language" : "en",
-          "text" : "remainingEnergyValue"
+          "text" : "remainingEnergyalue"
         } ],
         "shortName" : [ {
           "language" : "en",
-          "text" : "remainingEnergyValue"
+          "text" : "remainingEnergyalue"
         } ],
         "unit" : "kilowattHour"
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#remainingEnergyValue",
-    "idShort" : "remainingEnergyValue"
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingEnergyalue",
+    "idShort" : "remainingEnergyalue"
   }, {
     "modelType" : "ConceptDescription",
     "embeddedDataSpecifications" : [ {
@@ -362,7 +337,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#remainingEnergy",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingEnergy",
     "idShort" : "remainingEnergy"
   }, {
     "modelType" : "ConceptDescription",
@@ -388,7 +363,7 @@
         "unit" : "kilowattHour"
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#remainingCapacityValue",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingCapacityValue",
     "idShort" : "remainingCapacityValue"
   }, {
     "modelType" : "ConceptDescription",
@@ -417,7 +392,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#remainingCapacity",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingCapacity",
     "idShort" : "remainingCapacity"
   }, {
     "modelType" : "ConceptDescription",
@@ -442,7 +417,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#negativeEvent",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#negativeEvent",
     "displayName" : [ {
       "language" : "en",
       "text" : "Negative events, such as accidents. No further definition provided by regulation."
@@ -471,7 +446,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#negativeEvents",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#negativeEvents",
     "idShort" : "negativeEvents"
   }, {
     "modelType" : "ConceptDescription",
@@ -501,7 +476,7 @@
         "unit" : "minuteUnitOfTime"
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#timeExtremeHighTemp",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeHighTemp",
     "idShort" : "timeExtremeHighTemp"
   }, {
     "modelType" : "ConceptDescription",
@@ -531,7 +506,7 @@
         "unit" : "minuteUnitOfTime"
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#timeExtremeLowTemp",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeLowTemp",
     "idShort" : "timeExtremeLowTemp"
   }, {
     "modelType" : "ConceptDescription",
@@ -561,7 +536,7 @@
         "unit" : "minuteUnitOfTime"
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#timeExtremeHighTempCharging",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeHighTempCharging",
     "idShort" : "timeExtremeHighTempCharging"
   }, {
     "modelType" : "ConceptDescription",
@@ -591,7 +566,7 @@
         "unit" : "minuteUnitOfTime"
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#timeExtremeLowTempCharging",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeLowTempCharging",
     "idShort" : "timeExtremeLowTempCharging"
   }, {
     "modelType" : "ConceptDescription",
@@ -620,7 +595,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#temperatureInformation",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#temperatureInformation",
     "idShort" : "temperatureInformation"
   }, {
     "modelType" : "ConceptDescription",
@@ -645,7 +620,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#rPCLastUpdated",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#rPCLastUpdated",
     "idShort" : "rPCLastUpdated"
   }, {
     "modelType" : "ConceptDescription",
@@ -671,7 +646,7 @@
         "unit" : "percent"
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#atSoC",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#atSoC",
     "idShort" : "atSoC"
   }, {
     "modelType" : "ConceptDescription",
@@ -697,7 +672,7 @@
         "unit" : "percent"
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#powerCapabilityAt",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#powerCapabilityAt",
     "idShort" : "powerCapabilityAt"
   }, {
     "modelType" : "ConceptDescription",
@@ -722,7 +697,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#remainingPowerCapabilityValue",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingPowerCapabilityValue",
     "idShort" : "remainingPowerCapabilityValue"
   }, {
     "modelType" : "ConceptDescription",
@@ -751,7 +726,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#remainingPowerCapability",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingPowerCapability",
     "idShort" : "remainingPowerCapability"
   }, {
     "modelType" : "ConceptDescription",
@@ -768,17 +743,17 @@
         "dataType" : "REAL_MEASURE",
         "preferredName" : [ {
           "language" : "en",
-          "text" : "evolutionOfSelfDischargeValue"
+          "text" : "evolutionOfSelfDischargeEntityValue"
         } ],
         "shortName" : [ {
           "language" : "en",
-          "text" : "evolutionOfSelfDischargeValue"
+          "text" : "evolutionOfSelfDischargeEntityValue"
         } ],
         "unit" : "percent"
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#evolutionOfSelfDischargeValue",
-    "idShort" : "evolutionOfSelfDischargeValue"
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#evolutionOfSelfDischargeEntityValue",
+    "idShort" : "evolutionOfSelfDischargeEntityValue"
   }, {
     "modelType" : "ConceptDescription",
     "embeddedDataSpecifications" : [ {
@@ -806,7 +781,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#evolutionOfSelfDischarge",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#evolutionOfSelfDischarge",
     "idShort" : "evolutionOfSelfDischarge"
   }, {
     "modelType" : "ConceptDescription",
@@ -823,17 +798,17 @@
         "dataType" : "REAL_MEASURE",
         "preferredName" : [ {
           "language" : "en",
-          "text" : "currentSelfDischargingRateValue"
+          "text" : "currentSelfDischargingRateEntity"
         } ],
         "shortName" : [ {
           "language" : "en",
-          "text" : "currentSelfDischargingRateValue"
+          "text" : "currentSelfDischargingRateEntity"
         } ],
         "unit" : "percent"
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#currentSelfDischargingRateValue",
-    "idShort" : "currentSelfDischargingRateValue"
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#currentSelfDischargingRateEntity",
+    "idShort" : "currentSelfDischargingRateEntity"
   }, {
     "modelType" : "ConceptDescription",
     "embeddedDataSpecifications" : [ {
@@ -861,7 +836,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#currentSelfDischargingRate",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#currentSelfDischargingRate",
     "idShort" : "currentSelfDischargingRate"
   }, {
     "modelType" : "ConceptDescription",
@@ -887,7 +862,7 @@
         "unit" : "percent"
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#remainingRoundTripEnergyEfficiencyValue",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingRoundTripEnergyEfficiencyValue",
     "idShort" : "remainingRoundTripEnergyEfficiencyValue"
   }, {
     "modelType" : "ConceptDescription",
@@ -916,7 +891,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#remainingRoundTripEnergyEfficiency",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingRoundTripEnergyEfficiency",
     "idShort" : "remainingRoundTripEnergyEfficiency"
   }, {
     "modelType" : "ConceptDescription",
@@ -942,7 +917,7 @@
         "unit" : "percent"
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#stateOfChargeValue",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#stateOfChargeValue",
     "idShort" : "stateOfChargeValue"
   }, {
     "modelType" : "ConceptDescription",
@@ -971,7 +946,7 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.BatteryPass.Performance:1.2.1#stateOfCharge",
+    "id" : "urn:samm:io.BatteryPass.Performance:1.2.0#stateOfCharge",
     "displayName" : [ {
       "language" : "en",
       "text" : "SoC"
@@ -996,35 +971,16 @@
     } ],
     "idShort" : "ProductCondition",
     "submodelElements" : [ {
-      "modelType" : "SubmodelElementCollection",
-      "description" : [ {
-        "language" : "en",
-        "text" : "The data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.7"
-      } ],
-      "idShort" : "energyThroughput",
-      "value" : [ {
-        "modelType" : "Property",
-        "semanticId" : {
-          "keys" : [ {
-            "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#energyThroughputValue"
-          } ],
-          "type" : "ExternalReference"
-        },
-        "valueType" : "xs:float",
-        "idShort" : "energyThroughputValue"
-      }, {
-        "modelType" : "Property",
-        "semanticId" : {
-          "keys" : [ {
-            "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate"
-          } ],
-          "type" : "ExternalReference"
-        },
-        "valueType" : "xs:dateTime",
-        "idShort" : "lastUpdate"
-      } ]
+      "modelType" : "Property",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#energyThroughput"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "valueType" : "xs:double",
+      "idShort" : "energyThroughput"
     }, {
       "modelType" : "SubmodelElementCollection",
       "description" : [ {
@@ -1037,7 +993,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#capacityThroughputValue"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#capacityThroughputValue"
           } ],
           "type" : "ExternalReference"
         },
@@ -1048,7 +1004,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
           } ],
           "type" : "ExternalReference"
         },
@@ -1067,7 +1023,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#numberOfFullCyclesValue"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#numberOfFullCyclesValue"
           } ],
           "type" : "ExternalReference"
         },
@@ -1078,7 +1034,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
           } ],
           "type" : "ExternalReference"
         },
@@ -1101,7 +1057,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#stateOfCertifiedEnergyValue"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#stateOfCertifiedEnergyValue"
           } ],
           "type" : "ExternalReference"
         },
@@ -1112,7 +1068,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
           } ],
           "type" : "ExternalReference"
         },
@@ -1131,18 +1087,18 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#remainingEnergyValue"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingEnergyalue"
           } ],
           "type" : "ExternalReference"
         },
         "valueType" : "xs:float",
-        "idShort" : "remainingEnergyValue"
+        "idShort" : "remainingEnergyalue"
       }, {
         "modelType" : "Property",
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
           } ],
           "type" : "ExternalReference"
         },
@@ -1161,7 +1117,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#remainingCapacityValue"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingCapacityValue"
           } ],
           "type" : "ExternalReference"
         },
@@ -1172,7 +1128,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
           } ],
           "type" : "ExternalReference"
         },
@@ -1184,7 +1140,7 @@
       "semanticId" : {
         "keys" : [ {
           "type" : "GlobalReference",
-          "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#NegativeEvents"
+          "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#NegativeEvents"
         } ],
         "type" : "ExternalReference"
       },
@@ -1199,7 +1155,7 @@
           "semanticId" : {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#negativeEvent"
+              "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#negativeEvent"
             } ],
             "type" : "ExternalReference"
           },
@@ -1214,7 +1170,7 @@
           "semanticId" : {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate"
+              "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
             } ],
             "type" : "ExternalReference"
           },
@@ -1234,7 +1190,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#timeExtremeHighTemp"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeHighTemp"
           } ],
           "type" : "ExternalReference"
         },
@@ -1245,7 +1201,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#timeExtremeLowTemp"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeLowTemp"
           } ],
           "type" : "ExternalReference"
         },
@@ -1256,7 +1212,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#timeExtremeHighTempCharging"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeHighTempCharging"
           } ],
           "type" : "ExternalReference"
         },
@@ -1267,7 +1223,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#timeExtremeLowTempCharging"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeLowTempCharging"
           } ],
           "type" : "ExternalReference"
         },
@@ -1278,7 +1234,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
           } ],
           "type" : "ExternalReference"
         },
@@ -1286,60 +1242,77 @@
         "idShort" : "lastUpdate"
       } ]
     }, {
-      "modelType" : "SubmodelElementCollection",
+      "modelType" : "SubmodelElementList",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#RemainingPowerCapability"
+        } ],
+        "type" : "ExternalReference"
+      },
       "description" : [ {
         "language" : "en",
         "text" : "'- Original power capability (in Watts) and limits, with temperature range when relevant.\n- The amount of energy that a battery is capable to provide over a given period of time under reference conditions.\n- Power capability at 80% and 20% state of charge.\n\nDIN DKE Spec 99100 chapter reference: 6.7.3.3"
       } ],
       "idShort" : "remainingPowerCapability",
+      "orderRelevant" : false,
+      "typeValueListElement" : "SubmodelElementCollection",
       "value" : [ {
         "modelType" : "SubmodelElementCollection",
-        "idShort" : "remainingPowerCapabilityValue",
+        "description" : [ {
+          "language" : "en",
+          "text" : "'- Original power capability (in Watts) and limits, with temperature range when relevant.\n- The amount of energy that a battery is capable to provide over a given period of time under reference conditions.\n- Power capability at 80% and 20% state of charge.\n\nDIN DKE Spec 99100 chapter reference: 6.7.3.3"
+        } ],
+        "idShort" : "remainingPowerCapability",
         "value" : [ {
+          "modelType" : "SubmodelElementCollection",
+          "idShort" : "remainingPowerCapabilityValue",
+          "value" : [ {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#rPCLastUpdated"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:dateTime",
+            "idShort" : "rPCLastUpdated"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#atSoC"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:float",
+            "idShort" : "atSoC"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#powerCapabilityAt"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:float",
+            "idShort" : "powerCapabilityAt"
+          } ]
+        }, {
           "modelType" : "Property",
           "semanticId" : {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#rPCLastUpdated"
+              "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
             } ],
             "type" : "ExternalReference"
           },
           "valueType" : "xs:dateTime",
-          "idShort" : "rPCLastUpdated"
-        }, {
-          "modelType" : "Property",
-          "semanticId" : {
-            "keys" : [ {
-              "type" : "GlobalReference",
-              "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#atSoC"
-            } ],
-            "type" : "ExternalReference"
-          },
-          "valueType" : "xs:float",
-          "idShort" : "atSoC"
-        }, {
-          "modelType" : "Property",
-          "semanticId" : {
-            "keys" : [ {
-              "type" : "GlobalReference",
-              "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#powerCapabilityAt"
-            } ],
-            "type" : "ExternalReference"
-          },
-          "valueType" : "xs:float",
-          "idShort" : "powerCapabilityAt"
+          "idShort" : "lastUpdate"
         } ]
-      }, {
-        "modelType" : "Property",
-        "semanticId" : {
-          "keys" : [ {
-            "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate"
-          } ],
-          "type" : "ExternalReference"
-        },
-        "valueType" : "xs:dateTime",
-        "idShort" : "lastUpdate"
       } ]
     }, {
       "modelType" : "SubmodelElementCollection",
@@ -1353,23 +1326,12 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#evolutionOfSelfDischargeValue"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#evolutionOfSelfDischargeEntityValue"
           } ],
           "type" : "ExternalReference"
         },
         "valueType" : "xs:float",
-        "idShort" : "evolutionOfSelfDischargeValue"
-      }, {
-        "modelType" : "Property",
-        "semanticId" : {
-          "keys" : [ {
-            "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate"
-          } ],
-          "type" : "ExternalReference"
-        },
-        "valueType" : "xs:dateTime",
-        "idShort" : "lastUpdate"
+        "idShort" : "evolutionOfSelfDischargeEntityValue"
       } ]
     }, {
       "modelType" : "SubmodelElementCollection",
@@ -1383,18 +1345,18 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#currentSelfDischargingRateValue"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#currentSelfDischargingRateEntity"
           } ],
           "type" : "ExternalReference"
         },
         "valueType" : "xs:float",
-        "idShort" : "currentSelfDischargingRateValue"
+        "idShort" : "currentSelfDischargingRateEntity"
       }, {
         "modelType" : "Property",
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
           } ],
           "type" : "ExternalReference"
         },
@@ -1413,7 +1375,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#remainingRoundTripEnergyEfficiencyValue"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#remainingRoundTripEnergyEfficiencyValue"
           } ],
           "type" : "ExternalReference"
         },
@@ -1424,7 +1386,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
           } ],
           "type" : "ExternalReference"
         },
@@ -1447,7 +1409,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#stateOfChargeValue"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#stateOfChargeValue"
           } ],
           "type" : "ExternalReference"
         },
@@ -1458,7 +1420,7 @@
         "semanticId" : {
           "keys" : [ {
             "type" : "GlobalReference",
-            "value" : "urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate"
+            "value" : "urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate"
           } ],
           "type" : "ExternalReference"
         },

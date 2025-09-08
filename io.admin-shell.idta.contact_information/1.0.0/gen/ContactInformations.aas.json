@@ -1415,13 +1415,13 @@
           "supplementalSemanticIds" : [ {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "0173-1%2302-AAN468%23008"
+              "value" : "https://api.eclass-cdp.com/0173-1-02-AAN468-008"
             } ],
             "type" : "ExternalReference"
           }, {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "https://api.eclass-cdp.com/0173-1-02-AAN468-008"
+              "value" : "0173-1%2302-AAN468%23008"
             } ],
             "type" : "ExternalReference"
           } ],

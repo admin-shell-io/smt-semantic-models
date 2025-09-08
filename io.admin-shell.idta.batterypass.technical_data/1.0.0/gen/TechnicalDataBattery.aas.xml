@@ -363,7 +363,7 @@
               <aas:displayName>
                 <aas:langStringNameType>
                   <aas:language>en</aas:language>
-                  <aas:text>identifier of the manfuacturer</aas:text>
+                  <aas:text>identifier of the manufacturer</aas:text>
                 </aas:langStringNameType>
               </aas:displayName>
               <aas:semanticId>
@@ -1132,45 +1132,25 @@ DIN DKE Spec 99100 chapter reference: 6.7.3.2
                   </aas:semanticId>
                   <aas:valueType>xs:short</aas:valueType>
                 </aas:property>
-                <aas:submodelElementCollection>
-                  <aas:idShort>numberOfFullCycles</aas:idShort>
-                  <aas:description>
-                    <aas:langStringTextType>
+                <aas:property>
+                  <aas:idShort>expectedNumberOfCycles</aas:idShort>
+                  <aas:displayName>
+                    <aas:langStringNameType>
                       <aas:language>en</aas:language>
-                      <aas:text>Number of (full) charging and discharging cycles.
-
-DIN DKE Spec 99100 chapter reference: 6.7.6.3</aas:text>
-                    </aas:langStringTextType>
-                  </aas:description>
-                  <aas:value>
-                    <aas:property>
-                      <aas:idShort>numberOfFullCyclesValue</aas:idShort>
-                      <aas:semanticId>
-                        <aas:type>ExternalReference</aas:type>
-                        <aas:keys>
-                          <aas:key>
-                            <aas:type>GlobalReference</aas:type>
-                            <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#numberOfFullCyclesValue</aas:value>
-                          </aas:key>
-                        </aas:keys>
-                      </aas:semanticId>
-                      <aas:valueType>xs:integer</aas:valueType>
-                    </aas:property>
-                    <aas:property>
-                      <aas:idShort>lastUpdate</aas:idShort>
-                      <aas:semanticId>
-                        <aas:type>ExternalReference</aas:type>
-                        <aas:keys>
-                          <aas:key>
-                            <aas:type>GlobalReference</aas:type>
-                            <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate</aas:value>
-                          </aas:key>
-                        </aas:keys>
-                      </aas:semanticId>
-                      <aas:valueType>xs:dateTime</aas:valueType>
-                    </aas:property>
-                  </aas:value>
-                </aas:submodelElementCollection>
+                      <aas:text>ExpectedNumberOfCycles</aas:text>
+                    </aas:langStringNameType>
+                  </aas:displayName>
+                  <aas:semanticId>
+                    <aas:type>ExternalReference</aas:type>
+                    <aas:keys>
+                      <aas:key>
+                        <aas:type>GlobalReference</aas:type>
+                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#expectedNumberOfCycles</aas:value>
+                      </aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:valueType>xs:long</aas:valueType>
+                </aas:property>
                 <aas:property>
                   <aas:idShort>capacityThresholdForExhaustion</aas:idShort>
                   <aas:semanticId>
@@ -1670,7 +1650,7 @@ The path can be absolute or relative.</aas:text>
       <aas:displayName>
         <aas:langStringNameType>
           <aas:language>en</aas:language>
-          <aas:text>identifier of the manfuacturer</aas:text>
+          <aas:text>identifier of the manufacturer</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
       <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#manufacturerIdentifier</aas:id>
@@ -1690,7 +1670,7 @@ The path can be absolute or relative.</aas:text>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>identifier of the manfuacturer</aas:text>
+                  <aas:text>identifier of the manufacturer</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
@@ -3260,8 +3240,14 @@ DIN DKE Spec 99100 chapter reference: 6.7.6.2</aas:text>
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>numberOfFullCyclesValue</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#numberOfFullCyclesValue</aas:id>
+      <aas:idShort>expectedNumberOfCycles</aas:idShort>
+      <aas:displayName>
+        <aas:langStringNameType>
+          <aas:language>en</aas:language>
+          <aas:text>ExpectedNumberOfCycles</aas:text>
+        </aas:langStringNameType>
+      </aas:displayName>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#expectedNumberOfCycles</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -3278,55 +3264,23 @@ DIN DKE Spec 99100 chapter reference: 6.7.6.2</aas:text>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>numberOfFullCyclesValue</aas:text>
+                  <aas:text>ExpectedNumberOfCycles</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>numberOfFullCyclesValue</aas:text>
+                  <aas:text>expectedNumberOfCycles</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
               <aas:unit>cycle</aas:unit>
-              <aas:dataType>INTEGER_MEASURE</aas:dataType>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>numberOfFullCycles</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#numberOfFullCycles</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>numberOfFullCycles</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>numberOfFullCycles</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
+              <aas:dataType>INTEGER_COUNT</aas:dataType>
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>Number of (full) charging and discharging cycles.
+                  <aas:text>Expected battery lifetime expressed in cycles.
+The exception for non-cycle applications in Article 10 appears sensible, but is not included in the Annex XIII provision.
+The data attribute is defined by measurement conditions of the cycle-life test such as the C-Rate (see below) and the depth of discharge in the cycle-life test
 
 DIN DKE Spec 99100 chapter reference: 6.7.6.3</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
