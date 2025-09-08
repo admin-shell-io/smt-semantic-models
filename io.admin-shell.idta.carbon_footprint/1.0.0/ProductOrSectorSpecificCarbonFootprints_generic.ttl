@@ -45,7 +45,12 @@
    samm:preferredName "product or sector specific carbon footprint"@en ;
    samm:description "Product Carbon Footprint, which is determined in accordance with sector or product group-specific rules or guidelines and covers the life cycle or parts of a product life cycle."@en ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/ProductOrSectorSpecificCarbonFootprint/1/0> ;
-   samm:properties ( [ samm:property pcf:productOrSectorSpecificPcfCalculationMethods; samm:payloadName "PcfCalculationMethods" ] [ samm:property pcf:productOrSectorSpecificRule; samm:payloadName "ProductOrSectorSpecificRule" ] [ samm:property pcf:externalPcfApi; samm:optional true; samm:payloadName "ExternalPcfApi" ] [ samm:property :productOrSectorSpecificPcfInformation; samm:optional true; samm:payloadName "PcfInformation" ] ) .
+   samm:properties ( 
+   [ samm:property pcf:productOrSectorSpecificPcfCalculationMethods; samm:payloadName "PcfCalculationMethods" ]
+   [ samm:property pcf:productOrSectorSpecificRule; samm:payloadName "ProductOrSectorSpecificRule" ]
+   [ samm:property pcf:externalPcfApi; samm:optional true; samm:payloadName "ExternalPcfApi" ]
+   [ samm:property :productOrSectorSpecificPcfInformation; samm:optional true; samm:payloadName "PcfInformation" ]
+   ) .
 
 :productOrSectorSpecificPcfInformation a samm:Property ;
    samm:preferredName "PCF information"@en ;
@@ -61,12 +66,7 @@
 :ProductOrSectorSpecificPcfInformationEntity a samm:Entity ;
   samm:properties () .
 
-:productOrSectorSpecificCarbonFootprints a samm:Property ;
-   samm:preferredName "product or sector specific carbon footprints"@en ;
-   samm:preferredName "Produkt- oder Sektor-spezifishce C02 Fußabdrücke"@en ;
-   samm:description "Product carbon footprints, which are determined in accordance with sector or product group-specific rules or guidelines and cover the life cycle or parts of a product life cycle."@en ;
-   samm:see <https://admin-shell.io/idta/CarbonFootprint/ProductOrSectorSpecificCarbonFootprint/1/0> ;
-   samm:characteristic :ProductOrSectorSpecificCarbonFootprintSet .
+
 
 
 
