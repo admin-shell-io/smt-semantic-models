@@ -40,7 +40,7 @@
 @prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#> .
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
-@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.0#> .
+@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.1#> .
 @prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 
 
@@ -50,18 +50,23 @@
    samm:see <urn:irdi:0173-1#02-ABL871#001> ;
    samm:preferredName "temperature range idle state (upper boundary)"@en ;
    samm:description "Upper boundary of the surrounding temperature range, which the battery can safely withstand."@en ;
-   samm:characteristic bp:TemperatureRangeIdleState ;
-   samm:exampleValue "-19"^^xsd:double .
+   samm:characteristic :TemperatureRangeBoundary ;
+   samm:exampleValue "-19"^^xsd:double
+
+  
 
 :temperatureRangeIdleStateLowerBoundary a samm:Property ;
    samm:see <urn:irdi:0173-1#02-ABL842#001> ;
    samm:preferredName "temperature range idle state (lower boundary)"@en ;
    samm:description "Lower boundary of the surrounding temperature range, which the battery can safely withstand."@en ;
-   samm:characteristic bp:TemperatureRangeIdleState ;
-   samm:exampleValue "49"^^xsd:double .
+   samm:characteristic :TemperatureRangeBoundary ;
+   samm:exampleValue "49"^^xsd:double
 
 
-
+:TemperatureRangeBoundary a samm:Characteristic ;
+   samm:preferredName "boundary for temperature range" ;
+   samm:dataType xsd:double ;
+   samm-c:unit unit:degreeCelsius .
 
 
 :originalPowerCapabilityLimits a samm:Property ;
@@ -119,9 +124,7 @@
 :EnergyEfficiency a samm-c:Measurement ;
    samm:dataType xsd:integer ;
    samm-c:unit unit:percent .
-
-
-  
+ 
 :initialInternalResistanceOfBatteryCell a samm:Property ;
   samm:description "Internal battery cell and pack resistance / Internal resistance (in Ohm)."@en ;
   samm:characteristic :InternalResistance ;
