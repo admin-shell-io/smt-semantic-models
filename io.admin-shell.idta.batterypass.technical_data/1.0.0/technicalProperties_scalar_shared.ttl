@@ -122,17 +122,17 @@
 
 
   
-:initialInternalResistanceOnBatteryCellLevel a samm:Property ;
+:initialInternalResistanceOfBatteryCell a samm:Property ;
   samm:description "Internal battery cell and pack resistance / Internal resistance (in Ohm)."@en ;
   samm:characteristic :InternalResistance ;
   samm:exampleValue "67"^^xsd:double .
   
-:initialInternalResistanceOnBatteryPackLevel a samm:Property ;
+:initialInternalResistanceOfBatteryPack a samm:Property ;
   samm:description "Initial (Pre-Use) internal resistance on battery pack level."@en ;
   samm:characteristic :InternalResistance ;
   samm:exampleValue "23"^^xsd:double .
   
-:initialInternalResistanceOnBatteryModuleLevel a samm:Property ;
+:initialInternalResistanceOfBatteryModule a samm:Property ;
   samm:see <urn:irdi:0173-1#02-ABL832#001> ;
   samm:description "Initial internal resistance means the absolute beginning value of the quotient of the voltage drop between the terminals by the electric current increase in the battery circuit during a current pulse."@en ;
   samm:characteristic :InternalResistance ;
