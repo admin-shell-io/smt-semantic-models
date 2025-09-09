@@ -131,7 +131,7 @@
   samm:properties ( 
     [ samm:property :maximumPermittedBatteryPower; samm:payloadName "MaximumPermittedBatteryPower" ] 
     [ samm:property bp:powerFade; samm:payloadName "PowerFade" ] 
-	[ samm:property bp:powerCapabilityRatio; samm:payloadName "RatioNorminalBatteryPowerAndBatteryEnergy" ]
+	[ samm:property bp:powerCapabilityRatio; samm:payloadName "RatioNominalBatteryPowerAndBatteryEnergy" ]
 	[ samm:property bp:originalPowerCapability; samm:payloadName "OriginalPowerCapability" ] 
   ) .
   
