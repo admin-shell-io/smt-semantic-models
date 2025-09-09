@@ -103,8 +103,7 @@
  
 
 	 
-:LifeCylceCharacteristic a samm-c:Set ;
-   samm:dataType xsd:string .
+
 
 :PcfCo2eqCharacteristic a samm-c:Measurement ;
    samm:dataType xsd:double ;

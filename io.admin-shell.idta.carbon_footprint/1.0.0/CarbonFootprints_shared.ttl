@@ -162,9 +162,7 @@
    samm:description "Norm, Standard, Verfahren zur Ermittlung der Treibhausgas-Emissionen eines Produkts. Mehrere Standards können aufgeführt werden wenn sie sich auf dieselbe PCF-Berechnung beziehen."@de ;
    samm:see <urn:irdi:0173-1%2302-ABG854%23003> ;
    samm:dataType xsd:string .
- 
- :LifeCylceCharacteristic a samm-c:Set ;
-   samm:dataType xsd:string .
+
 
 :PcfCo2eqCharacteristic a samm-c:Measurement ;
    samm:dataType xsd:double ;
