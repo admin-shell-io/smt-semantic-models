@@ -60,6 +60,7 @@
    [ samm:property contactInformation:middleNames; samm:optional true; samm:payloadName "MiddleNames" ]
    [ samm:property contactInformation:title; samm:optional true; samm:payloadName "Title" ] 
    [ samm:property contactInformation:academicTitle; samm:optional true; samm:payloadName "AcademicTitle" ] 
-   [ samm:property contactInformation:furtherDetailsOfContact; samm:optional true; samm:payloadName "FurtherDetailsOfContact" ] [ samm:property contactInformation:addressOfAdditionalLink; samm:optional true; samm:payloadName "AddressOfAdditionalLink" ]
+   [ samm:property contactInformation:furtherDetailsOfContact; samm:optional true; samm:payloadName "FurtherDetailsOfContact" ] 
+   [ samm:property contactInformation:addressOfAdditionalLink; samm:optional true; samm:payloadName "AddressOfAdditionalLink" ]
    ) .
 
