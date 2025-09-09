@@ -46,7 +46,6 @@ Dependencies:
 - enumerations are not (yet) modelled
 
 # Known Issues generation of aasx from aspect model:
-- payload names are not considered when generating idShort
 - SubmodelElement File is realized as SMC with two properties (ExplanatoryStatement and PcfRuleOnlineReference)
 - no template qualifiers generated
 - the idShort of the Element within a SML has the idShort of the list, not of the element
