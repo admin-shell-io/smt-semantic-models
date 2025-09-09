@@ -49,7 +49,7 @@ Git commit: 192116d12a1a4c9df4e03758a6b56dfa80132cf3
 
 Known Issues wheen generating an aasx file from a .ttl aspect model file:
 
-- payload names are not considered when generating idShort
+- payload names are not considered when generating idShort (update 2025-09-09: With the new ESMF CLI Release this is fixed)
 - no template qualifiers with type "Cardinality" or any other qualifiers are generated
 - the idShort of the Element within a SML has the idShort of the list, not of the element
 - no mapping to SubmodelElement "File", instead mapping to SMC with two properties "resourceValue" and "contentType"
