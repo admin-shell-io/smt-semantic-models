@@ -1,7 +1,3 @@
-# **REVIEW-VERSION**
-
-Resolution of findings will be done in Branch https://github.com/admin-shell-io/smt-semantic-models/tree/smt-xg/BatteryPass_FindingResolution
-
 # Legal Note
 
 Despite great efforts to ensure the accuracy, reliability and precision of technical and non-technical information, the IDTA cannot give any explicit or implicit assurance or warranty in respect of the accuracy of the provided aspect models for BatteryPass. 
