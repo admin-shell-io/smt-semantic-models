@@ -27,7 +27,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#> .
-@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.0#> .
+@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.1#> .
 @prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
 
 
@@ -47,7 +47,11 @@
 :NegativeEventsEntity a samm:Entity ;
    samm:preferredName "negative events Entity"@en ;
    samm:description "Negative Events Entity provides the information of no of accidents and deep discharge, over discharge events."@en ;
-   samm:properties ( :informationOnAccidents [ samm:property :noOfDeepDischargeEvents; samm:optional true ] [ samm:property :noOfOverchargeEvents; samm:optional true ] ) .
+   samm:properties ( 
+   :informationOnAccidents 
+   [ samm:property :noOfDeepDischargeEvents; samm:optional true ]
+   [ samm:property :noOfOverchargeEvents; samm:optional true ] 
+   ) .
    
 :noOfDeepDischargeEvents a samm:Property ;
    samm:preferredName "number of deep discharge events"@en ;

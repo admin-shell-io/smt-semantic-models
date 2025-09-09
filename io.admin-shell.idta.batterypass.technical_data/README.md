@@ -50,7 +50,7 @@ Contained Files:
 @prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#> .
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
-@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.0#> .
+@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.1#> .
 @prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 
 # Known Deviations (IDTA-02003-1-2)
@@ -97,7 +97,7 @@ to GenerationInformation:
 
 * "ratedEnergy" was renamed to "CertifiedUsableBatteryEnergy"
 * there is no semanticId for batteryCategory
-* In BatteryPass TemperatureRangeIdleState was modelled as one property with a range constraint with min= -20 and max=60. Now there are two properties for it
+* In BatteryPass TemperatureRangeIdleState was modelled as one property with a range constraint with min= -20 and max=60. Now there are two properties for it, TemperatureRangeIdleStateUpperBoundary and TemperatureRangeIdleStateLowerBoundary
 * Length not existing in BatteryPass 
 * Description of Length, Height, Width should be updated. Where is the Diameter mentioned in Length? Where is the depth mentioned in Width and Length.
 * VoltagEntity: min and max should be switched
@@ -111,6 +111,6 @@ to GenerationInformation:
 
 ### still open properties of Efficiency
 ### still open properties of Resistance
-### for consistency SMC for TemperatureRangeIdleStateBoundaries should be introduced
+### for consistency SMC for TemperatureRangeIdleStateBoundaries should be introduced ?
 ### should be remove optional [ samm:property tech:productClassifications; samm:optional true ] from generic Technical Data? We should if we do not have a recommendation what to add there
 
