@@ -49,19 +49,45 @@
         </aas:keys>
       </aas:semanticId>
       <aas:submodelElements>
-        <aas:property>
+        <aas:submodelElementCollection>
           <aas:idShort>energyThroughput</aas:idShort>
-          <aas:semanticId>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#energyThroughput</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:semanticId>
-          <aas:valueType>xs:double</aas:valueType>
-        </aas:property>
+          <aas:description>
+            <aas:langStringTextType>
+              <aas:language>en</aas:language>
+              <aas:text>The data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.
+
+DIN DKE Spec 99100 chapter reference: 6.7.6.7</aas:text>
+            </aas:langStringTextType>
+          </aas:description>
+          <aas:value>
+            <aas:property>
+              <aas:idShort>energyThroughputValue</aas:idShort>
+              <aas:semanticId>
+                <aas:type>ExternalReference</aas:type>
+                <aas:keys>
+                  <aas:key>
+                    <aas:type>GlobalReference</aas:type>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#energyThroughputValue</aas:value>
+                  </aas:key>
+                </aas:keys>
+              </aas:semanticId>
+              <aas:valueType>xs:float</aas:valueType>
+            </aas:property>
+            <aas:property>
+              <aas:idShort>lastUpdate</aas:idShort>
+              <aas:semanticId>
+                <aas:type>ExternalReference</aas:type>
+                <aas:keys>
+                  <aas:key>
+                    <aas:type>GlobalReference</aas:type>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate</aas:value>
+                  </aas:key>
+                </aas:keys>
+              </aas:semanticId>
+              <aas:valueType>xs:dateTime</aas:valueType>
+            </aas:property>
+          </aas:value>
+        </aas:submodelElementCollection>
         <aas:submodelElementCollection>
           <aas:idShort>capacityThroughput</aas:idShort>
           <aas:description>
@@ -80,7 +106,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.6.8</aas:text>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#capacityThroughputValue</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#capacityThroughputValue</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -93,7 +119,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.6.8</aas:text>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -119,7 +145,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.6.3</aas:text>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#numberOfFullCyclesValue</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#numberOfFullCyclesValue</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -132,7 +158,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.6.3</aas:text>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -164,7 +190,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.7</aas:text>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#stateOfCertifiedEnergyValue</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#stateOfCertifiedEnergyValue</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -177,7 +203,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.7</aas:text>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -198,13 +224,13 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.6</aas:text>
           </aas:description>
           <aas:value>
             <aas:property>
-              <aas:idShort>remainingEnergyalue</aas:idShort>
+              <aas:idShort>remainingEnergyValue</aas:idShort>
               <aas:semanticId>
                 <aas:type>ExternalReference</aas:type>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#remainingEnergyalue</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#remainingEnergyValue</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -217,7 +243,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.6</aas:text>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -243,7 +269,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.3</aas:text>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#remainingCapacityValue</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#remainingCapacityValue</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -256,7 +282,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.3</aas:text>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -271,7 +297,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.3</aas:text>
             <aas:keys>
               <aas:key>
                 <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#NegativeEvents</aas:value>
+                <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#NegativeEvents</aas:value>
               </aas:key>
             </aas:keys>
           </aas:semanticId>
@@ -294,7 +320,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.3</aas:text>
                     <aas:keys>
                       <aas:key>
                         <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#negativeEvent</aas:value>
+                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#negativeEvent</aas:value>
                       </aas:key>
                     </aas:keys>
                   </aas:semanticId>
@@ -307,7 +333,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.3</aas:text>
                     <aas:keys>
                       <aas:key>
                         <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate</aas:value>
+                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate</aas:value>
                       </aas:key>
                     </aas:keys>
                   </aas:semanticId>
@@ -335,7 +361,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.7.5 - 8</aas:text>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeHighTemp</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#timeExtremeHighTemp</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -348,7 +374,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.7.5 - 8</aas:text>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeLowTemp</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#timeExtremeLowTemp</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -361,7 +387,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.7.5 - 8</aas:text>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeHighTempCharging</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#timeExtremeHighTempCharging</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -374,7 +400,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.7.5 - 8</aas:text>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeLowTempCharging</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#timeExtremeLowTempCharging</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -387,7 +413,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.7.5 - 8</aas:text>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -395,7 +421,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.7.5 - 8</aas:text>
             </aas:property>
           </aas:value>
         </aas:submodelElementCollection>
-        <aas:submodelElementList>
+        <aas:submodelElementCollection>
           <aas:idShort>remainingPowerCapability</aas:idShort>
           <aas:description>
             <aas:langStringTextType>
@@ -407,92 +433,66 @@ DIN DKE Spec 99100 chapter reference: 6.7.7.5 - 8</aas:text>
 DIN DKE Spec 99100 chapter reference: 6.7.3.3</aas:text>
             </aas:langStringTextType>
           </aas:description>
-          <aas:semanticId>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#RemainingPowerCapability</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:semanticId>
-          <aas:orderRelevant>false</aas:orderRelevant>
-          <aas:typeValueListElement>SubmodelElementCollection</aas:typeValueListElement>
           <aas:value>
             <aas:submodelElementCollection>
-              <aas:idShort>remainingPowerCapability</aas:idShort>
-              <aas:description>
-                <aas:langStringTextType>
-                  <aas:language>en</aas:language>
-                  <aas:text>'- Original power capability (in Watts) and limits, with temperature range when relevant.
-- The amount of energy that a battery is capable to provide over a given period of time under reference conditions.
-- Power capability at 80% and 20% state of charge.
-
-DIN DKE Spec 99100 chapter reference: 6.7.3.3</aas:text>
-                </aas:langStringTextType>
-              </aas:description>
+              <aas:idShort>remainingPowerCapabilityValue</aas:idShort>
               <aas:value>
-                <aas:submodelElementCollection>
-                  <aas:idShort>remainingPowerCapabilityValue</aas:idShort>
-                  <aas:value>
-                    <aas:property>
-                      <aas:idShort>rPCLastUpdated</aas:idShort>
-                      <aas:semanticId>
-                        <aas:type>ExternalReference</aas:type>
-                        <aas:keys>
-                          <aas:key>
-                            <aas:type>GlobalReference</aas:type>
-                            <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#rPCLastUpdated</aas:value>
-                          </aas:key>
-                        </aas:keys>
-                      </aas:semanticId>
-                      <aas:valueType>xs:dateTime</aas:valueType>
-                    </aas:property>
-                    <aas:property>
-                      <aas:idShort>atSoC</aas:idShort>
-                      <aas:semanticId>
-                        <aas:type>ExternalReference</aas:type>
-                        <aas:keys>
-                          <aas:key>
-                            <aas:type>GlobalReference</aas:type>
-                            <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#atSoC</aas:value>
-                          </aas:key>
-                        </aas:keys>
-                      </aas:semanticId>
-                      <aas:valueType>xs:float</aas:valueType>
-                    </aas:property>
-                    <aas:property>
-                      <aas:idShort>powerCapabilityAt</aas:idShort>
-                      <aas:semanticId>
-                        <aas:type>ExternalReference</aas:type>
-                        <aas:keys>
-                          <aas:key>
-                            <aas:type>GlobalReference</aas:type>
-                            <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#powerCapabilityAt</aas:value>
-                          </aas:key>
-                        </aas:keys>
-                      </aas:semanticId>
-                      <aas:valueType>xs:float</aas:valueType>
-                    </aas:property>
-                  </aas:value>
-                </aas:submodelElementCollection>
                 <aas:property>
-                  <aas:idShort>lastUpdate</aas:idShort>
+                  <aas:idShort>rPCLastUpdated</aas:idShort>
                   <aas:semanticId>
                     <aas:type>ExternalReference</aas:type>
                     <aas:keys>
                       <aas:key>
                         <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate</aas:value>
+                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#rPCLastUpdated</aas:value>
                       </aas:key>
                     </aas:keys>
                   </aas:semanticId>
                   <aas:valueType>xs:dateTime</aas:valueType>
                 </aas:property>
+                <aas:property>
+                  <aas:idShort>atSoC</aas:idShort>
+                  <aas:semanticId>
+                    <aas:type>ExternalReference</aas:type>
+                    <aas:keys>
+                      <aas:key>
+                        <aas:type>GlobalReference</aas:type>
+                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#atSoC</aas:value>
+                      </aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:valueType>xs:float</aas:valueType>
+                </aas:property>
+                <aas:property>
+                  <aas:idShort>powerCapabilityAt</aas:idShort>
+                  <aas:semanticId>
+                    <aas:type>ExternalReference</aas:type>
+                    <aas:keys>
+                      <aas:key>
+                        <aas:type>GlobalReference</aas:type>
+                        <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#powerCapabilityAt</aas:value>
+                      </aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:valueType>xs:float</aas:valueType>
+                </aas:property>
               </aas:value>
             </aas:submodelElementCollection>
+            <aas:property>
+              <aas:idShort>lastUpdate</aas:idShort>
+              <aas:semanticId>
+                <aas:type>ExternalReference</aas:type>
+                <aas:keys>
+                  <aas:key>
+                    <aas:type>GlobalReference</aas:type>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate</aas:value>
+                  </aas:key>
+                </aas:keys>
+              </aas:semanticId>
+              <aas:valueType>xs:dateTime</aas:valueType>
+            </aas:property>
           </aas:value>
-        </aas:submodelElementList>
+        </aas:submodelElementCollection>
         <aas:submodelElementCollection>
           <aas:idShort>evolutionOfSelfDischarge</aas:idShort>
           <aas:description>
@@ -505,17 +505,30 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.8</aas:text>
           </aas:description>
           <aas:value>
             <aas:property>
-              <aas:idShort>evolutionOfSelfDischargeEntityValue</aas:idShort>
+              <aas:idShort>evolutionOfSelfDischargeValue</aas:idShort>
               <aas:semanticId>
                 <aas:type>ExternalReference</aas:type>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#evolutionOfSelfDischargeEntityValue</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#evolutionOfSelfDischargeValue</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
               <aas:valueType>xs:float</aas:valueType>
+            </aas:property>
+            <aas:property>
+              <aas:idShort>lastUpdate</aas:idShort>
+              <aas:semanticId>
+                <aas:type>ExternalReference</aas:type>
+                <aas:keys>
+                  <aas:key>
+                    <aas:type>GlobalReference</aas:type>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate</aas:value>
+                  </aas:key>
+                </aas:keys>
+              </aas:semanticId>
+              <aas:valueType>xs:dateTime</aas:valueType>
             </aas:property>
           </aas:value>
         </aas:submodelElementCollection>
@@ -531,13 +544,13 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.7</aas:text>
           </aas:description>
           <aas:value>
             <aas:property>
-              <aas:idShort>currentSelfDischargingRateEntity</aas:idShort>
+              <aas:idShort>currentSelfDischargingRateValue</aas:idShort>
               <aas:semanticId>
                 <aas:type>ExternalReference</aas:type>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#currentSelfDischargingRateEntity</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#currentSelfDischargingRateValue</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -550,7 +563,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.7</aas:text>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -578,7 +591,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.4</aas:text>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#remainingRoundTripEnergyEfficiencyValue</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#remainingRoundTripEnergyEfficiencyValue</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -591,7 +604,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.4</aas:text>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -623,7 +636,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.8</aas:text>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#stateOfChargeValue</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#stateOfChargeValue</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -636,7 +649,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.8</aas:text>
                 <aas:keys>
                   <aas:key>
                     <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate</aas:value>
+                    <aas:value>urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate</aas:value>
                   </aas:key>
                 </aas:keys>
               </aas:semanticId>
@@ -701,8 +714,8 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.8</aas:text>
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>energyThroughput</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#energyThroughput</aas:id>
+      <aas:idShort>energyThroughputValue</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#energyThroughputValue</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -719,59 +732,16 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.8</aas:text>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>energyThroughput</aas:text>
+                  <aas:text>energyThroughputValue</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>energyThroughput</aas:text>
+                  <aas:text>energyThroughputValue</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
               <aas:unit>kilowattHour</aas:unit>
-              <aas:dataType>REAL_MEASURE</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>The data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.
-
-DIN DKE Spec 99100 chapter reference: 6.7.6.7</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>capacityThroughputValue</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#capacityThroughputValue</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>capacityThroughputValue</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>capacityThroughputValue</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:unit>ampereHour</aas:unit>
               <aas:dataType>REAL_MEASURE</aas:dataType>
             </aas:dataSpecificationIec61360>
           </aas:dataSpecificationContent>
@@ -780,7 +750,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.6.7</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>lastUpdate</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#lastUpdate</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#lastUpdate</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -819,8 +789,85 @@ DIN DKE Spec 99100 chapter reference: 6.7.6.7</aas:text>
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
+      <aas:idShort>energyThroughput</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#energyThroughput</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>energyThroughput</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>energyThroughput</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>The data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.
+
+DIN DKE Spec 99100 chapter reference: 6.7.6.7</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>capacityThroughputValue</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#capacityThroughputValue</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>capacityThroughputValue</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>capacityThroughputValue</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:unit>ampereHour</aas:unit>
+              <aas:dataType>REAL_MEASURE</aas:dataType>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
       <aas:idShort>capacityThroughput</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#capacityThroughput</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#capacityThroughput</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -862,7 +909,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.6.8</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>numberOfFullCyclesValue</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#numberOfFullCyclesValue</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#numberOfFullCyclesValue</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -897,7 +944,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.6.8</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>numberOfFullCycles</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#numberOfFullCycles</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#numberOfFullCycles</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -939,7 +986,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.6.3</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>stateOfCertifiedEnergyValue</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#stateOfCertifiedEnergyValue</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#stateOfCertifiedEnergyValue</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -980,7 +1027,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.6.3</aas:text>
           <aas:text>SOCE</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#stateOfCertifiedEnergy</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#stateOfCertifiedEnergy</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1021,8 +1068,8 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.7</aas:text>
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>remainingEnergyalue</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#remainingEnergyalue</aas:id>
+      <aas:idShort>remainingEnergyValue</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#remainingEnergyValue</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1039,13 +1086,13 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.7</aas:text>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>remainingEnergyalue</aas:text>
+                  <aas:text>remainingEnergyValue</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>remainingEnergyalue</aas:text>
+                  <aas:text>remainingEnergyValue</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
               <aas:unit>kilowattHour</aas:unit>
@@ -1057,7 +1104,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.7</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>remainingEnergy</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#remainingEnergy</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#remainingEnergy</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1100,7 +1147,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.6</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>remainingCapacityValue</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#remainingCapacityValue</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#remainingCapacityValue</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1135,7 +1182,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.6</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>remainingCapacity</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#remainingCapacity</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#remainingCapacity</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1183,7 +1230,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.3</aas:text>
           <aas:text>Negative events, such as accidents. No further definition provided by regulation.</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#negativeEvent</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#negativeEvent</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1217,7 +1264,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.3</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>negativeEvents</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#negativeEvents</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#negativeEvents</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1251,7 +1298,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.3</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>timeExtremeHighTemp</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeHighTemp</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#timeExtremeHighTemp</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1292,7 +1339,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.3</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>timeExtremeLowTemp</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeLowTemp</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#timeExtremeLowTemp</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1333,7 +1380,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.3</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>timeExtremeHighTempCharging</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeHighTempCharging</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#timeExtremeHighTempCharging</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1374,7 +1421,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.3</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>timeExtremeLowTempCharging</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#timeExtremeLowTempCharging</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#timeExtremeLowTempCharging</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1415,7 +1462,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.3</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>temperatureInformation</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#temperatureInformation</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#temperatureInformation</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1457,7 +1504,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.7.5 - 8</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>rPCLastUpdated</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#rPCLastUpdated</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#rPCLastUpdated</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1491,7 +1538,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.7.5 - 8</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>atSoC</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#atSoC</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#atSoC</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1526,7 +1573,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.7.5 - 8</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>powerCapabilityAt</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#powerCapabilityAt</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#powerCapabilityAt</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1561,7 +1608,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.7.5 - 8</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>remainingPowerCapabilityValue</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#remainingPowerCapabilityValue</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#remainingPowerCapabilityValue</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1595,7 +1642,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.7.5 - 8</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>remainingPowerCapability</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#remainingPowerCapability</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#remainingPowerCapability</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1638,8 +1685,8 @@ DIN DKE Spec 99100 chapter reference: 6.7.3.3</aas:text>
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>evolutionOfSelfDischargeEntityValue</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#evolutionOfSelfDischargeEntityValue</aas:id>
+      <aas:idShort>evolutionOfSelfDischargeValue</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#evolutionOfSelfDischargeValue</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1656,13 +1703,13 @@ DIN DKE Spec 99100 chapter reference: 6.7.3.3</aas:text>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>evolutionOfSelfDischargeEntityValue</aas:text>
+                  <aas:text>evolutionOfSelfDischargeValue</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>evolutionOfSelfDischargeEntityValue</aas:text>
+                  <aas:text>evolutionOfSelfDischargeValue</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
               <aas:unit>percent</aas:unit>
@@ -1674,7 +1721,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.3.3</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>evolutionOfSelfDischarge</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#evolutionOfSelfDischarge</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#evolutionOfSelfDischarge</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1715,8 +1762,8 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.8</aas:text>
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>currentSelfDischargingRateEntity</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#currentSelfDischargingRateEntity</aas:id>
+      <aas:idShort>currentSelfDischargingRateValue</aas:idShort>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#currentSelfDischargingRateValue</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1733,13 +1780,13 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.8</aas:text>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>currentSelfDischargingRateEntity</aas:text>
+                  <aas:text>currentSelfDischargingRateValue</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>currentSelfDischargingRateEntity</aas:text>
+                  <aas:text>currentSelfDischargingRateValue</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
               <aas:unit>percent</aas:unit>
@@ -1751,7 +1798,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.8</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>currentSelfDischargingRate</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#currentSelfDischargingRate</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#currentSelfDischargingRate</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1793,7 +1840,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.7</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>remainingRoundTripEnergyEfficiencyValue</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#remainingRoundTripEnergyEfficiencyValue</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#remainingRoundTripEnergyEfficiencyValue</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1828,7 +1875,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.7</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>remainingRoundTripEnergyEfficiency</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#remainingRoundTripEnergyEfficiency</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#remainingRoundTripEnergyEfficiency</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1872,7 +1919,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.4</aas:text>
     </aas:conceptDescription>
     <aas:conceptDescription>
       <aas:idShort>stateOfChargeValue</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#stateOfChargeValue</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#stateOfChargeValue</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -1913,7 +1960,7 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.4</aas:text>
           <aas:text>SoC</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.0#stateOfCharge</aas:id>
+      <aas:id>urn:samm:io.BatteryPass.Performance:1.2.1#stateOfCharge</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>

@@ -7,12 +7,12 @@
     "submodels" : [ {
       "keys" : [ {
         "type" : "Submodel",
-        "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#HandoverDocumentation/submodel"
+        "value" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#HandoverDocumentation/submodel"
       } ],
       "type" : "ModelReference"
     } ],
     "administration" : { },
-    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#HandoverDocumentation",
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#HandoverDocumentation",
     "description" : [ {
       "language" : "en",
       "text" : "defaultAdminShell"
@@ -33,17 +33,17 @@
         "modelType" : "DataSpecificationIec61360",
         "definition" : [ {
           "language" : "de",
-          "text" : "Enthält alle wichtigen Dokumente für den Kunden."
+          "text" : "Enthält alle wichtigen Dokumente für den Kunden wie vom Batteriepass gefordert."
         }, {
           "language" : "en",
-          "text" : "Handover Documentation defines a set meta data for the handover of documentation from the manufacturer to the operator for industrial equipment."
+          "text" : "Handover Documentation defines a set meta data for the handover of documentation from the operator to the users of the Battery Passport."
         } ],
         "preferredName" : [ {
           "language" : "en",
-          "text" : "handover documentation"
+          "text" : "handover documentation of battery passport"
         }, {
           "language" : "de",
-          "text" : "Übergabe-Dokumentation"
+          "text" : "Übergabe-Dokumentation des Batteriepasses"
         } ],
         "shortName" : [ {
           "language" : "en",
@@ -51,21 +51,21 @@
         } ]
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#HandoverDocumentation",
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#HandoverDocumentation",
     "category" : "APPLICATION_CLASS",
     "description" : [ {
       "language" : "de",
-      "text" : "Enthält alle wichtigen Dokumente für den Kunden."
+      "text" : "Enthält alle wichtigen Dokumente für den Kunden wie vom Batteriepass gefordert."
     }, {
       "language" : "en",
-      "text" : "Handover Documentation defines a set meta data for the handover of documentation from the manufacturer to the operator for industrial equipment."
+      "text" : "Handover Documentation defines a set meta data for the handover of documentation from the operator to the users of the Battery Passport."
     } ],
     "displayName" : [ {
       "language" : "en",
-      "text" : "handover documentation"
+      "text" : "handover documentation of battery passport"
     }, {
       "language" : "de",
-      "text" : "Übergabe-Dokumentation"
+      "text" : "Übergabe-Dokumentation des Batteriepasses"
     } ],
     "idShort" : "HandoverDocumentation"
   }, {
@@ -1484,7 +1484,7 @@
     "semanticId" : {
       "keys" : [ {
         "type" : "GlobalReference",
-        "value" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#HandoverDocumentation"
+        "value" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#HandoverDocumentation"
       } ],
       "type" : "ExternalReference"
     },
@@ -1502,13 +1502,13 @@
       "type" : "ExternalReference"
     } ],
     "administration" : { },
-    "id" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#HandoverDocumentation/submodel",
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#HandoverDocumentation/submodel",
     "description" : [ {
       "language" : "de",
-      "text" : "Enthält alle wichtigen Dokumente für den Kunden."
+      "text" : "Enthält alle wichtigen Dokumente für den Kunden wie vom Batteriepass gefordert."
     }, {
       "language" : "en",
-      "text" : "Handover Documentation defines a set meta data for the handover of documentation from the manufacturer to the operator for industrial equipment."
+      "text" : "Handover Documentation defines a set meta data for the handover of documentation from the operator to the users of the Battery Passport."
     } ],
     "idShort" : "HandoverDocumentation",
     "submodelElements" : [ {

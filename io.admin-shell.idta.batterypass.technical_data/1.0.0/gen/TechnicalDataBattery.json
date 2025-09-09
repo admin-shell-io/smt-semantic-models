@@ -1,49 +1,55 @@
 {
   "TechnicalProperties" : {
     "Resistance" : {
-      "InitialInternalResistanceOnBatteryModuleLevel" : 10.0,
-      "InitialInternalResistanceOfCellLevel" : 10,
-      "InitialInternalResistanceOnBatteryPackLevel" : 23.0,
-      "InitialInternalResistanceOfPackLevel" : 10,
-      "InitialInternalResistanceOfModuleLevel" : 10,
-      "InitialInternalResistanceOnBatteryCellLevel" : 67.0
+      "InternalResistanceIncreaseOfBatteryModule" : 10,
+      "InitialInternalResistanceOfBatteryPack" : 23.0,
+      "InternalResistanceIncreaseOfBatteryCell" : 10,
+      "InternalResistanceIncreaseOfBatteryPack" : 10,
+      "InitialInternalResistanceOfBatteryCell" : 67.0,
+      "InitialInternalResistanceOnBatteryModule" : 10.0
     },
     "PowerCapability" : {
-      "RatioNorminalBatteryPowerAndBatteryEnergy" : 2.2816553E38,
-      "PowerFade" : 2.1780124E38,
+      "RatioNominalBatteryPowerAndBatteryEnergy" : 6.1616743E36,
+      "PowerFade" : 2.3592454E38,
       "MaximumPermittedBatteryPower" : "Infinity",
       "OriginalPowerCapability" : [ {
-        "atSoC" : 2.199975E38,
-        "powerCapabilityAt" : -1.6928961E38
+        "atSoC" : 1.3423649E37,
+        "powerCapabilityAt" : -2.8448882E38
       } ]
     },
     "CapacityEnergyVoltage" : {
-      "CertifiedUsableBatteryEnergy" : 3.4659155E36,
+      "CertifiedUsableBatteryEnergy" : 1.5330319E38,
       "CapacityFade" : {
-        "capacityFadeValue" : 2.8271754E38,
-        "lastUpdate" : "2025-09-08T09:48:05.437+02:00"
+        "capacityFadeValue" : -1.9338533E38,
+        "lastUpdate" : "2025-09-09T17:35:07.574+02:00"
       },
       "NominalVoltage" : 4.3,
-      "RatedCapacity" : 1.7420304E38,
+      "RatedCapacity" : 1.7729231E38,
       "MaxVoltage" : 6.0,
       "MinVoltage" : 2.04
     },
     "Temperature" : {
-      "TemperatureRangeIdleState_UpperBoundary" : -19.0,
-      "TemperatureRangeIdleState_LowerBoundary" : 49.0
+      "TemperatureRangeIdleState_UpperBoundary" : {
+        "minimum" : -100.0,
+        "maximum" : 200.0
+      },
+      "TemperatureRangeIdleState_LowerBoundary" : {
+        "minimum" : -100.0,
+        "maximum" : 200.0
+      }
     },
     "Lifetime" : {
       "CapacityThresholdExhaustion" : -1.7976931348623157E308,
-      "CrateOfRelevantCycleLifeTest" : -2.9401874E38,
-      "NumberOfChargeDischargeCycles" : -6972807924198637358,
-      "ExpectedLifetimeInCalendarYears " : -32433
+      "CrateOfRelevantCycleLifeTest" : 4.1332328E37,
+      "NumberOfChargeDischargeCycles" : 3038574977384143114,
+      "ExpectedLifetimeInCalendarYears " : -15674
     },
     "RoundTripEnergyEfficiency" : {
       "InitialRoundTripEnergyEfficiency" : 100,
-      "RoundTripEnergyEfficiencyAtFiftyofCycleLife" : -5.0938496E37,
+      "RoundTripEnergyEfficiencyAtFiftyofCycleLife" : -1.6797669E38,
       "EnergyRoundTripEfficiencyFade" : {
-        "capacityFadeValue" : -6.781118E35,
-        "lastUpdate" : "2025-09-08T09:48:05.437+02:00"
+        "capacityFadeValue" : -1.1742977E38,
+        "lastUpdate" : "2025-09-09T17:35:07.574+02:00"
       },
       "InitialSelfDischargingRate" : 2
     }
