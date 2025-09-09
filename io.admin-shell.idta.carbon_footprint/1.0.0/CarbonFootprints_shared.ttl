@@ -72,6 +72,7 @@
    samm:preferredName "Ablaufdatum"@de ;
    samm:description "End date up to which a study or data collection for calculating an ecological footprint is considered current and valid before an update or new calculation is required."@en ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/ExpirationDate/1/0> ;
+   samm:exampleValue "2027-09-09T18:13:17.476+02:00"^^xsd:dateTime ;
    samm:characteristic samm-c:Timestamp .
 
 :publicationDate a samm:Property ;
@@ -79,6 +80,7 @@
    samm:preferredName "Veröffentlichungsdatum"@de ;
    samm:description "Time at which something was first published or made available."@en ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/PublicationDate/1/0> ;
+   samm:exampleValue "2025-09-09T18:13:17.476+02:00"^^xsd:dateTime ;
    samm:characteristic samm-c:Timestamp .
 
 :goodsHandoverAddress a samm:Property ;
