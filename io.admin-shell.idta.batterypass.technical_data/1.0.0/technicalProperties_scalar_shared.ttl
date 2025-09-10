@@ -44,30 +44,25 @@
 @prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 
 
-
-
 :temperatureRangeIdleStateUpperBoundary a samm:Property ;
    samm:see <urn:irdi:0173-1#02-ABL871#001> ;
    samm:preferredName "temperature range idle state (upper boundary)"@en ;
    samm:description "Upper boundary of the surrounding temperature range, which the battery can safely withstand."@en ;
    samm:characteristic :TemperatureRangeBoundary ;
-   samm:exampleValue "-19"^^xsd:double
-
-  
+   samm:exampleValue "-19"^^xsd:double .
 
 :temperatureRangeIdleStateLowerBoundary a samm:Property ;
    samm:see <urn:irdi:0173-1#02-ABL842#001> ;
    samm:preferredName "temperature range idle state (lower boundary)"@en ;
    samm:description "Lower boundary of the surrounding temperature range, which the battery can safely withstand."@en ;
    samm:characteristic :TemperatureRangeBoundary ;
-   samm:exampleValue "49"^^xsd:double
+   samm:exampleValue "49"^^xsd:double .
 
 
 :TemperatureRangeBoundary a samm:Characteristic ;
-   samm:preferredName "boundary for temperature range" ;
+   samm:preferredName "boundary for temperature range"@en ;
    samm:dataType xsd:double ;
    samm-c:unit unit:degreeCelsius .
-
 
 :originalPowerCapabilityLimits a samm:Property ;
   samm:preferredName "original power capability limits"@en ;
