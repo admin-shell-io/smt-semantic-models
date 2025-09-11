@@ -163,11 +163,6 @@
    samm:see <urn:irdi:0173-1%2302-ABG854%23003> ;
    samm:dataType xsd:string .
 
-
-:PcfCo2eqCharacteristic a samm-c:Measurement ;
-   samm:dataType xsd:double ;
-   samm-c:unit samm-u:kilogram .
-
 :PcfCalculationMethodSet a samm-c:Set ;
    samm:dataType xsd:string .
 
