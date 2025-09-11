@@ -22,6 +22,7 @@ Contained Files:
 
 * HandoverDocumentation.ttl: the aspect model for the SMT
 * Organization_shared.ttl: properties "organizationOfficialName" and "organizationName" for official and short form of organizational names
+* Namespace.ttl: information on namespace
 
 Dependencies:
 
