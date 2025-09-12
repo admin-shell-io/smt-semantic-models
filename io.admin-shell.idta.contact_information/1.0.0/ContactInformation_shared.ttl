@@ -138,9 +138,13 @@
 :roleOfContactPerson a samm:Property ;
    samm:preferredName "Rolle der Kontaktperson"@de ;
    samm:preferredName "role of contact person"@en ;
-   samm:description "Function of a contact person in a process\nenumeration: 0173-1%2307-AAS927%23001 (administrativ contact), 0173-1%2307-AAS928%23001 (commercial contact), 0173-1%2307-AAS929%23001 (other contact), 0173-1%2307-AAS930%23001 (hazardous goods contact), 0173-1%2307-AAS931%23001 (technical contact)\nNote: the above mentioned ECLASS enumeration should be declared as “open” for further addition."@en ;
-   samm:characteristic samm-c:Text ;
-   samm:exampleValue "0173-1%2307-AAS931%23001" .
+   samm:see <urn:irdi:173-1%2302-AAO204%23003> ;
+   samm:description "Function of a contact person in a process\nenumeration: 0173-1#07-AAS927#001 (administrativ contact), 0173-1#07-AAS928#001 (commercial contact), 0173-1#07-AAS929#001 (other contact), 0173-1#07-AAS930#001 (hazardous goods contact), 0173-1#07-AAS931#001 (technical contact)\nNote: the above mentioned ECLASS enumeration should be declared as “open” for further addition."@en ;
+   samm:characteristic [
+      a samm:Characteristic ;
+      samm:dataType xsd:string ;
+   ] ;
+   samm:exampleValue :TechnicalContact .
 
 :firstName a samm:Property ;
    samm:preferredName "first name"@en ;
@@ -155,7 +159,7 @@
    samm:description "ZIP code of address."@en ;
    samm:description "Postleitzahl."@de ;
    samm:see <urn:irdi:0173-1%2302-AAO129%23002> ;
-   samm:exampleValue "12345"de ;
+   samm:exampleValue "12345"@de ;
    samm:characteristic shared:MultiLanguageTexts .
 
 :faxNumber a samm:Property ;
@@ -242,7 +246,6 @@
    samm:preferredName "email"@en ;
    samm:description "E-mail address and encryption method."@en ;
    samm:see <urn:irdi:0173-1%2302-AAQ836%23005> ;
-   samm:exampleValue "email@muster-ag.de"@de ;
    samm:characteristic :EmailCharacteristic .
 
 :typeOfPublicKey a samm:Property ;
@@ -255,7 +258,7 @@
 :typeOfTelephone a samm:Property ;
    samm:description "Characterization of a telephone according to its location or usage.\nenumeration: 0173-1%2307-AAS754%23001 (office), 0173-1%2307-AAS755%23001 (office mobile), 0173-1%2307-AAS756%23001 (secretary), 0173-1%2307-AAS757%23001 (substitute), 0173-1%2307-AAS758%23001 (home), 0173-1%2307-AAS759%23001 (private mobile)."@en ;
    samm:see <urn:irdi:0173-1%2302-AAO137%23003> ;
-   samm:exampleValue "0173-1#07-AAS755#001" ;
+   samm:exampleValue :Office ;
    samm:characteristic samm-c:Text .
 
 :nameOfContact a samm:Property ;
@@ -324,14 +327,14 @@
    samm:description "Characterization of the fax according its location or usage\nenumeration: 0173-1%2307-AAS754%23001 (office), 0173-1%2307-AAS756%23001 (secretary), 0173-1%2307-AAS758%23001 (home)."@en ;
    samm:see <urn:irdi:0173-1%2302-AAO196%23003> ;
    samm:characteristic samm-c:Text ;
-   samm:exampleValue "0173-1%2307-AAS754%23001" .
+   samm:exampleValue :Office .
 
 :typeOfEmailAddress a samm:Property ;
    samm:preferredName "type of email address"@en ;
    samm:description "Characterization of an e-mail address according to its location or usage\nenumeration: 0173-1%2307-AAS754%23001 (office), 0173-1%2307-AAS756%23001 (secretary), 0173-1%2307-AAS757%23001 (substitute), 0173-1%2307-AAS758%23001 (home)."@en ;
    samm:see <urn:irdi:0173-1%2302-AAO199%23003> ;
    samm:characteristic samm-c:Text ;
-   samm:exampleValue "0173-1%2307-AAS754%23001" .
+   samm:exampleValue :Office .
 
 :street a samm:Property ;
    samm:preferredName "street"@en ;
