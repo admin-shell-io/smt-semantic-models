@@ -9,7 +9,7 @@
 # https://creativecommons.org/licenses/by/4.0/.
 # SPDX-License-Identifier: CC-BY-4.0
 #
-# for namespace: urn:samm:io.catenax.pcf:7.0.0
+# for namespace: urn:samm:io.catenax.pcf:8.0.0
 # Copyright (c) 2022, 2023, 2024 ZF Friedrichshafen AG
 # Copyright (c) 2022, 2023, 2024 T-Systems International GmbH
 # Copyright (c) 2022, 2023, 2024 Robert Bosch Manufacturing Solutions GmbH
@@ -35,7 +35,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.carbon_footprint.pact:1.0.0#> .
 @prefix pcf: <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#> .
-@prefix cx: <urn:samm:io.catenax.pcf:7.0.0#> .
+@prefix cx: <urn:samm:io.catenax.pcf:8.0.0#> .
 @prefix ext-shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix contact: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
 @prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
