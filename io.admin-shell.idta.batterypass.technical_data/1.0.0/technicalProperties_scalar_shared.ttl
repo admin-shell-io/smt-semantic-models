@@ -64,19 +64,6 @@
    samm:dataType xsd:double ;
    samm-c:unit unit:degreeCelsius .
 
-:originalPowerCapabilityLimits a samm:Property ;
-  samm:preferredName "original power capability limits"@en ;
-  samm:description "Pre-use power capability (definition of power capability as given in Battery Regulation)."@en ;
-  samm:characteristic bp:PowerCapabilityAtSoc ;
-  samm:exampleValue "1.7976931348623157e+308"^^xsd:float .
-
-
-:maximumAllowedBatteryEnergy a samm:Property ;
-  samm:preferredName "maximum allowed battery energy"@en ;
-  samm:description "Original power capability (in Watts) and limits, with temperature range when relevant."@en ;
-  samm:characteristic bp:RatedEnergy ;
-  samm:exampleValue "1.7976931348623157e+308"^^xsd:float .
-
 
 :maximumPermittedBatteryPower a samm:Property ;
   samm:preferredName "maximum permitted battery power"@en ;
@@ -85,18 +72,9 @@
   samm:exampleValue "1.7976931348623157e+308"^^xsd:float .
 
  
-:powerCapabilityAt20Charge a samm:Property ;
-   samm:preferredName "power capability at 20% charge"@en ;
-   samm:description "In-use power fade, as defined in Battery Regulation. Pre-use power capability measurement at 20%."@en ;
-   samm:characteristic bp:PowerCapabilityAtSoc ;
-   samm:exampleValue "1.7976931348623157e+308"^^xsd:float .
 
 
-:powerCapabilityAt80Charge a samm:Property ;
-   samm:preferredName "power capability at 80% charge"@en ;
-   samm:description "In-use power fade, as defined in Battery Regulation. Pre-use power capability measurement at 80 %."@en ;
-   samm:characteristic bp:PowerCapabilityAtSoc ;
-   samm:exampleValue "1.7976931348623157e+308"^^xsd:float .
+
 
 :initialRoundTripEnergyEfficiency a samm:Property ;
    samm:see <urn:irdi:0173-1#02-ABL833#001> ;
@@ -116,9 +94,7 @@
    samm:dataType xsd:integer ;
    samm-c:unit unit:percent .
 
-:EnergyEfficiency a samm-c:Measurement ;
-   samm:dataType xsd:integer ;
-   samm-c:unit unit:percent .
+
  
 :initialInternalResistanceOfBatteryCell a samm:Property ;
   samm:description "Internal battery cell and pack resistance / Internal resistance (in Ohm)."@en ;
@@ -189,3 +165,7 @@
    samm:description "s"@en ;
    samm:dataType xsd:float ;
    samm-c:unit unit:volt .
+   
+:EnergyEfficiency a samm-c:Measurement ;
+   samm:dataType xsd:integer ;
+   samm-c:unit unit:percent .
