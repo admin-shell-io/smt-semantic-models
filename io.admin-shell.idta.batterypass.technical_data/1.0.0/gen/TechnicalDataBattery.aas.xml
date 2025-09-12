@@ -770,39 +770,39 @@ DIN DKE Spec 99100 chapter reference: 6.7.2.4</aas:text>
               </aas:supplementalSemanticIds>
               <aas:value>
                 <aas:property>
-                  <aas:idShort>initialInternalResistanceOnBatteryCellLevel</aas:idShort>
+                  <aas:idShort>initialInternalResistanceOfBatteryCell</aas:idShort>
                   <aas:semanticId>
                     <aas:type>ExternalReference</aas:type>
                     <aas:keys>
                       <aas:key>
                         <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOnBatteryCellLevel</aas:value>
+                        <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOfBatteryCell</aas:value>
                       </aas:key>
                     </aas:keys>
                   </aas:semanticId>
                   <aas:valueType>xs:double</aas:valueType>
                 </aas:property>
                 <aas:property>
-                  <aas:idShort>initialInternalResistanceOnBatteryPackLevel</aas:idShort>
+                  <aas:idShort>initialInternalResistanceOfBatteryPack</aas:idShort>
                   <aas:semanticId>
                     <aas:type>ExternalReference</aas:type>
                     <aas:keys>
                       <aas:key>
                         <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOnBatteryPackLevel</aas:value>
+                        <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOfBatteryPack</aas:value>
                       </aas:key>
                     </aas:keys>
                   </aas:semanticId>
                   <aas:valueType>xs:double</aas:valueType>
                 </aas:property>
                 <aas:property>
-                  <aas:idShort>initialInternalResistanceOnBatteryModuleLevel</aas:idShort>
+                  <aas:idShort>initialInternalResistanceOfBatteryModule</aas:idShort>
                   <aas:semanticId>
                     <aas:type>ExternalReference</aas:type>
                     <aas:keys>
                       <aas:key>
                         <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOnBatteryModuleLevel</aas:value>
+                        <aas:value>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOfBatteryModule</aas:value>
                       </aas:key>
                     </aas:keys>
                   </aas:semanticId>
@@ -2494,8 +2494,8 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.3
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>initialInternalResistanceOnBatteryCellLevel</aas:idShort>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOnBatteryCellLevel</aas:id>
+      <aas:idShort>initialInternalResistanceOfBatteryCell</aas:idShort>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOfBatteryCell</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -2512,13 +2512,13 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.3
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>initialInternalResistanceOnBatteryCellLevel</aas:text>
+                  <aas:text>initialInternalResistanceOfBatteryCell</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>initialInternalResistanceOnBatteryCellLevel</aas:text>
+                  <aas:text>initialInternalResistanceOfBatteryCell</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
               <aas:unit>ohm</aas:unit>
@@ -2535,8 +2535,8 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.3
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>initialInternalResistanceOnBatteryPackLevel</aas:idShort>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOnBatteryPackLevel</aas:id>
+      <aas:idShort>initialInternalResistanceOfBatteryPack</aas:idShort>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOfBatteryPack</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -2553,13 +2553,13 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.3
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>initialInternalResistanceOnBatteryPackLevel</aas:text>
+                  <aas:text>initialInternalResistanceOfBatteryPack</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>initialInternalResistanceOnBatteryPackLevel</aas:text>
+                  <aas:text>initialInternalResistanceOfBatteryPack</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
               <aas:unit>ohm</aas:unit>
@@ -2576,8 +2576,8 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.3
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>initialInternalResistanceOnBatteryModuleLevel</aas:idShort>
-      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOnBatteryModuleLevel</aas:id>
+      <aas:idShort>initialInternalResistanceOfBatteryModule</aas:idShort>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOfBatteryModule</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -2594,13 +2594,13 @@ DIN DKE Spec 99100 chapter reference: 6.7.4.3
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>initialInternalResistanceOnBatteryModuleLevel</aas:text>
+                  <aas:text>initialInternalResistanceOfBatteryModule</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>initialInternalResistanceOnBatteryModuleLevel</aas:text>
+                  <aas:text>initialInternalResistanceOfBatteryModule</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
               <aas:unit>ohm</aas:unit>
@@ -3100,7 +3100,6 @@ DIN DKE Spec 99100 chapter reference: 6.7.3.2
                   <aas:text>temperatureRangeIdleStateLowerBoundary</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
-              <aas:unit>degreeCelsius</aas:unit>
               <aas:dataType>REAL_MEASURE</aas:dataType>
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
@@ -3147,7 +3146,6 @@ DIN DKE Spec 99100 chapter reference: 6.7.3.2
                   <aas:text>temperatureRangeIdleStateUpperBoundary</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
-              <aas:unit>degreeCelsius</aas:unit>
               <aas:dataType>REAL_MEASURE</aas:dataType>
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>

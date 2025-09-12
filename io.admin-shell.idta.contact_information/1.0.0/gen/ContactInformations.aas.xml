@@ -135,6 +135,17 @@
                       </aas:key>
                     </aas:keys>
                   </aas:semanticId>
+                  <aas:supplementalSemanticIds>
+                    <aas:reference>
+                      <aas:type>ExternalReference</aas:type>
+                      <aas:keys>
+                        <aas:key>
+                          <aas:type>GlobalReference</aas:type>
+                          <aas:value>173-1%2302-AAO204%23003</aas:value>
+                        </aas:key>
+                      </aas:keys>
+                    </aas:reference>
+                  </aas:supplementalSemanticIds>
                   <aas:valueType>xs:string</aas:valueType>
                 </aas:property>
                 <aas:multiLanguageProperty>
@@ -1404,7 +1415,7 @@
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
                   <aas:text>Function of a contact person in a process
-enumeration: 0173-1%2307-AAS927%23001 (administrativ contact), 0173-1%2307-AAS928%23001 (commercial contact), 0173-1%2307-AAS929%23001 (other contact), 0173-1%2307-AAS930%23001 (hazardous goods contact), 0173-1%2307-AAS931%23001 (technical contact)
+enumeration: 0173-1#07-AAS927#001 (administrativ contact), 0173-1#07-AAS928#001 (commercial contact), 0173-1#07-AAS929#001 (other contact), 0173-1#07-AAS930#001 (hazardous goods contact), 0173-1#07-AAS931#001 (technical contact)
 Note: the above mentioned ECLASS enumeration should be declared as “open” for further addition.</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>

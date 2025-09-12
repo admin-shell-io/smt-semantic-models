@@ -969,17 +969,17 @@
         } ],
         "preferredName" : [ {
           "language" : "en",
-          "text" : "initialInternalResistanceOnBatteryCellLevel"
+          "text" : "initialInternalResistanceOfBatteryCell"
         } ],
         "shortName" : [ {
           "language" : "en",
-          "text" : "initialInternalResistanceOnBatteryCellLevel"
+          "text" : "initialInternalResistanceOfBatteryCell"
         } ],
         "unit" : "ohm"
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOnBatteryCellLevel",
-    "idShort" : "initialInternalResistanceOnBatteryCellLevel"
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOfBatteryCell",
+    "idShort" : "initialInternalResistanceOfBatteryCell"
   }, {
     "modelType" : "ConceptDescription",
     "embeddedDataSpecifications" : [ {
@@ -999,17 +999,17 @@
         } ],
         "preferredName" : [ {
           "language" : "en",
-          "text" : "initialInternalResistanceOnBatteryPackLevel"
+          "text" : "initialInternalResistanceOfBatteryPack"
         } ],
         "shortName" : [ {
           "language" : "en",
-          "text" : "initialInternalResistanceOnBatteryPackLevel"
+          "text" : "initialInternalResistanceOfBatteryPack"
         } ],
         "unit" : "ohm"
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOnBatteryPackLevel",
-    "idShort" : "initialInternalResistanceOnBatteryPackLevel"
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOfBatteryPack",
+    "idShort" : "initialInternalResistanceOfBatteryPack"
   }, {
     "modelType" : "ConceptDescription",
     "embeddedDataSpecifications" : [ {
@@ -1029,17 +1029,17 @@
         } ],
         "preferredName" : [ {
           "language" : "en",
-          "text" : "initialInternalResistanceOnBatteryModuleLevel"
+          "text" : "initialInternalResistanceOfBatteryModule"
         } ],
         "shortName" : [ {
           "language" : "en",
-          "text" : "initialInternalResistanceOnBatteryModuleLevel"
+          "text" : "initialInternalResistanceOfBatteryModule"
         } ],
         "unit" : "ohm"
       }
     } ],
-    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOnBatteryModuleLevel",
-    "idShort" : "initialInternalResistanceOnBatteryModuleLevel"
+    "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOfBatteryModule",
+    "idShort" : "initialInternalResistanceOfBatteryModule"
   }, {
     "modelType" : "ConceptDescription",
     "embeddedDataSpecifications" : [ {
@@ -1383,8 +1383,7 @@
         "shortName" : [ {
           "language" : "en",
           "text" : "temperatureRangeIdleStateLowerBoundary"
-        } ],
-        "unit" : "degreeCelsius"
+        } ]
       }
     } ],
     "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#temperatureRangeIdleStateLowerBoundary",
@@ -1417,8 +1416,7 @@
         "shortName" : [ {
           "language" : "en",
           "text" : "temperatureRangeIdleStateUpperBoundary"
-        } ],
-        "unit" : "degreeCelsius"
+        } ]
       }
     } ],
     "id" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#temperatureRangeIdleStateUpperBoundary",
@@ -2188,29 +2186,29 @@
           "semanticId" : {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOnBatteryCellLevel"
+              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOfBatteryCell"
             } ],
             "type" : "ExternalReference"
           },
           "valueType" : "xs:double",
-          "idShort" : "initialInternalResistanceOnBatteryCellLevel"
+          "idShort" : "initialInternalResistanceOfBatteryCell"
         }, {
           "modelType" : "Property",
           "semanticId" : {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOnBatteryPackLevel"
+              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOfBatteryPack"
             } ],
             "type" : "ExternalReference"
           },
           "valueType" : "xs:double",
-          "idShort" : "initialInternalResistanceOnBatteryPackLevel"
+          "idShort" : "initialInternalResistanceOfBatteryPack"
         }, {
           "modelType" : "Property",
           "semanticId" : {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOnBatteryModuleLevel"
+              "value" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOfBatteryModule"
             } ],
             "type" : "ExternalReference"
           },
@@ -2222,7 +2220,7 @@
             "type" : "ExternalReference"
           } ],
           "valueType" : "xs:double",
-          "idShort" : "initialInternalResistanceOnBatteryModuleLevel"
+          "idShort" : "initialInternalResistanceOfBatteryModule"
         }, {
           "modelType" : "Property",
           "semanticId" : {

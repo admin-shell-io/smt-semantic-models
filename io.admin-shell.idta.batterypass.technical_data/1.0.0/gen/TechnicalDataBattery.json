@@ -9,47 +9,41 @@
       "InitialInternalResistanceOnBatteryModule" : 10.0
     },
     "PowerCapability" : {
-      "RatioNominalBatteryPowerAndBatteryEnergy" : 6.1616743E36,
-      "PowerFade" : 2.3592454E38,
+      "RatioNominalBatteryPowerAndBatteryEnergy" : 2.963507E38,
+      "PowerFade" : -1.397452E38,
       "MaximumPermittedBatteryPower" : "Infinity",
       "OriginalPowerCapability" : [ {
-        "atSoC" : 1.3423649E37,
-        "powerCapabilityAt" : -2.8448882E38
+        "atSoC" : 2.9261822E38,
+        "powerCapabilityAt" : -3.1475835E38
       } ]
     },
     "CapacityEnergyVoltage" : {
-      "CertifiedUsableBatteryEnergy" : 1.5330319E38,
+      "CertifiedUsableBatteryEnergy" : 2.269122E38,
       "CapacityFade" : {
-        "capacityFadeValue" : -1.9338533E38,
-        "lastUpdate" : "2025-09-09T17:35:07.574+02:00"
+        "capacityFadeValue" : 5.855545E36,
+        "lastUpdate" : "2025-09-12T15:01:02.611+02:00"
       },
       "NominalVoltage" : 4.3,
-      "RatedCapacity" : 1.7729231E38,
+      "RatedCapacity" : -1.5496326E38,
       "MaxVoltage" : 6.0,
       "MinVoltage" : 2.04
     },
     "Temperature" : {
-      "TemperatureRangeIdleState_UpperBoundary" : {
-        "minimum" : -100.0,
-        "maximum" : 200.0
-      },
-      "TemperatureRangeIdleState_LowerBoundary" : {
-        "minimum" : -100.0,
-        "maximum" : 200.0
-      }
+      "TemperatureRangeIdleState_UpperBoundary" : -19.0,
+      "TemperatureRangeIdleState_LowerBoundary" : 49.0
     },
     "Lifetime" : {
       "CapacityThresholdExhaustion" : -1.7976931348623157E308,
-      "CrateOfRelevantCycleLifeTest" : 4.1332328E37,
-      "NumberOfChargeDischargeCycles" : 3038574977384143114,
-      "ExpectedLifetimeInCalendarYears " : -15674
+      "CrateOfRelevantCycleLifeTest" : -9.397124E37,
+      "NumberOfChargeDischargeCycles" : -8553693460777858011,
+      "ExpectedLifetimeInCalendarYears " : -14408
     },
     "RoundTripEnergyEfficiency" : {
       "InitialRoundTripEnergyEfficiency" : 100,
-      "RoundTripEnergyEfficiencyAtFiftyofCycleLife" : -1.6797669E38,
+      "RoundTripEnergyEfficiencyAtFiftyofCycleLife" : -1.9353396E38,
       "EnergyRoundTripEfficiencyFade" : {
-        "capacityFadeValue" : -1.1742977E38,
-        "lastUpdate" : "2025-09-09T17:35:07.574+02:00"
+        "capacityFadeValue" : 1.3249508E38,
+        "lastUpdate" : "2025-09-12T15:01:02.611+02:00"
       },
       "InitialSelfDischargingRate" : 2
     }

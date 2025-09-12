@@ -402,7 +402,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>https://admin-shell.io/aas/3/1/File</aas:value>
+                          <aas:value>https://admin-shell.io/idta/CarbonFootprint/ExplanatoryStatement/1/0</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -411,7 +411,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>https://admin-shell.io/idta/CarbonFootprint/ExplanatoryStatement/1/0</aas:value>
+                          <aas:value>https://admin-shell.io/aas/3/1/File</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -469,7 +469,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>0173-1%2302-AAQ837%23005</aas:value>
+                          <aas:value>0173-1%2301-AHF575%23003</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -478,7 +478,7 @@
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>0173-1%2301-AHF575%23003</aas:value>
+                          <aas:value>0173-1%2302-AAQ837%23005</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -505,6 +505,17 @@
                           </aas:key>
                         </aas:keys>
                       </aas:semanticId>
+                      <aas:supplementalSemanticIds>
+                        <aas:reference>
+                          <aas:type>ExternalReference</aas:type>
+                          <aas:keys>
+                            <aas:key>
+                              <aas:type>GlobalReference</aas:type>
+                              <aas:value>173-1%2302-AAO204%23003</aas:value>
+                            </aas:key>
+                          </aas:keys>
+                        </aas:reference>
+                      </aas:supplementalSemanticIds>
                       <aas:valueType>xs:string</aas:valueType>
                     </aas:property>
                     <aas:multiLanguageProperty>
@@ -567,7 +578,7 @@
                           <aas:keys>
                             <aas:key>
                               <aas:type>GlobalReference</aas:type>
-                              <aas:value>0173-1%2302-AAN468%23008</aas:value>
+                              <aas:value>https://api.eclass-cdp.com/0173-1-02-AAN468-008</aas:value>
                             </aas:key>
                           </aas:keys>
                         </aas:reference>
@@ -576,7 +587,7 @@
                           <aas:keys>
                             <aas:key>
                               <aas:type>GlobalReference</aas:type>
-                              <aas:value>https://api.eclass-cdp.com/0173-1-02-AAN468-008</aas:value>
+                              <aas:value>0173-1%2302-AAN468%23008</aas:value>
                             </aas:key>
                           </aas:keys>
                         </aas:reference>
@@ -1752,6 +1763,10 @@
               <aas:language>en</aas:language>
               <aas:text>product or sector specific carbon footprints</aas:text>
             </aas:langStringNameType>
+            <aas:langStringNameType>
+              <aas:language>de</aas:language>
+              <aas:text>Produkt- oder Sektor-spezifische C02-Fußabdrücke</aas:text>
+            </aas:langStringNameType>
           </aas:displayName>
           <aas:description>
             <aas:langStringTextType>
@@ -1788,6 +1803,10 @@
                 <aas:langStringNameType>
                   <aas:language>en</aas:language>
                   <aas:text>product or sector specific carbon footprints</aas:text>
+                </aas:langStringNameType>
+                <aas:langStringNameType>
+                  <aas:language>de</aas:language>
+                  <aas:text>Produkt- oder Sektor-spezifische C02-Fußabdrücke</aas:text>
                 </aas:langStringNameType>
               </aas:displayName>
               <aas:description>
@@ -2506,7 +2525,7 @@ The path can be absolute or relative.</aas:text>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
                   <aas:text>Function of a contact person in a process
-enumeration: 0173-1%2307-AAS927%23001 (administrativ contact), 0173-1%2307-AAS928%23001 (commercial contact), 0173-1%2307-AAS929%23001 (other contact), 0173-1%2307-AAS930%23001 (hazardous goods contact), 0173-1%2307-AAS931%23001 (technical contact)
+enumeration: 0173-1#07-AAS927#001 (administrativ contact), 0173-1#07-AAS928#001 (commercial contact), 0173-1#07-AAS929#001 (other contact), 0173-1#07-AAS930#001 (hazardous goods contact), 0173-1#07-AAS931#001 (technical contact)
 Note: the above mentioned ECLASS enumeration should be declared as “open” for further addition.</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
@@ -4581,6 +4600,10 @@ enumeration: 0173-1%2307-AAS754%23001 (office), 0173-1%2307-AAS756%23001 (secret
           <aas:language>en</aas:language>
           <aas:text>product or sector specific carbon footprints</aas:text>
         </aas:langStringNameType>
+        <aas:langStringNameType>
+          <aas:language>de</aas:language>
+          <aas:text>Produkt- oder Sektor-spezifische C02-Fußabdrücke</aas:text>
+        </aas:langStringNameType>
       </aas:displayName>
       <aas:id>urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#productOrSectorSpecificCarbonFootprints</aas:id>
       <aas:embeddedDataSpecifications>
@@ -4600,6 +4623,10 @@ enumeration: 0173-1%2307-AAS754%23001 (office), 0173-1%2307-AAS756%23001 (secret
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
                   <aas:text>product or sector specific carbon footprints</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>de</aas:language>
+                  <aas:text>Produkt- oder Sektor-spezifische C02-Fußabdrücke</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
