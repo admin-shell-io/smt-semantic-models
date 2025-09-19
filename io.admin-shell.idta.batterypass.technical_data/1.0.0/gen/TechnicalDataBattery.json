@@ -9,22 +9,22 @@
       "InitialInternalResistanceOnBatteryModule" : 10.0
     },
     "PowerCapability" : {
-      "RatioNominalBatteryPowerAndBatteryEnergy" : 2.963507E38,
-      "PowerFade" : -1.397452E38,
+      "RatioNominalBatteryPowerAndBatteryEnergy" : 1.2342603E37,
+      "PowerFade" : 3.4213563E37,
       "MaximumPermittedBatteryPower" : "Infinity",
       "OriginalPowerCapability" : [ {
-        "atSoC" : 2.9261822E38,
-        "powerCapabilityAt" : -3.1475835E38
+        "atSoC" : -3.1778256E38,
+        "powerCapabilityAt" : -2.7181997E38
       } ]
     },
     "CapacityEnergyVoltage" : {
-      "CertifiedUsableBatteryEnergy" : 2.269122E38,
+      "CertifiedUsableBatteryEnergy" : 3.3770451E38,
       "CapacityFade" : {
-        "capacityFadeValue" : 5.855545E36,
-        "lastUpdate" : "2025-09-12T15:01:02.611+02:00"
+        "capacityFadeValue" : 3.3422667E38,
+        "lastUpdate" : "2025-09-12T15:30:25.078+02:00"
       },
       "NominalVoltage" : 4.3,
-      "RatedCapacity" : -1.5496326E38,
+      "RatedCapacity" : -5.097668E37,
       "MaxVoltage" : 6.0,
       "MinVoltage" : 2.04
     },
@@ -34,16 +34,16 @@
     },
     "Lifetime" : {
       "CapacityThresholdExhaustion" : -1.7976931348623157E308,
-      "CrateOfRelevantCycleLifeTest" : -9.397124E37,
-      "NumberOfChargeDischargeCycles" : -8553693460777858011,
-      "ExpectedLifetimeInCalendarYears " : -14408
+      "CrateOfRelevantCycleLifeTest" : 2.7539936E38,
+      "NumberOfChargeDischargeCycles" : 2116146441073720777,
+      "ExpectedLifetimeInCalendarYears " : -21567
     },
     "RoundTripEnergyEfficiency" : {
       "InitialRoundTripEnergyEfficiency" : 100,
-      "RoundTripEnergyEfficiencyAtFiftyofCycleLife" : -1.9353396E38,
+      "RoundTripEnergyEfficiencyAtFiftyofCycleLife" : 7.269944E37,
       "EnergyRoundTripEfficiencyFade" : {
-        "capacityFadeValue" : 1.3249508E38,
-        "lastUpdate" : "2025-09-12T15:01:02.611+02:00"
+        "capacityFadeValue" : -2.8568032E38,
+        "lastUpdate" : "2025-09-12T15:30:25.078+02:00"
       },
       "InitialSelfDischargingRate" : 2
     }

@@ -10,7 +10,7 @@
         </aas:langStringTextType>
       </aas:description>
       <aas:administration/>
-      <aas:id>urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#HandoverDocumentation</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#HandoverDocumentation</aas:id>
       <aas:assetInformation>
         <aas:assetKind>Type</aas:assetKind>
       </aas:assetInformation>
@@ -20,7 +20,7 @@
           <aas:keys>
             <aas:key>
               <aas:type>Submodel</aas:type>
-              <aas:value>urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#HandoverDocumentation/submodel</aas:value>
+              <aas:value>urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#HandoverDocumentation/submodel</aas:value>
             </aas:key>
           </aas:keys>
         </aas:reference>
@@ -33,22 +33,22 @@
       <aas:description>
         <aas:langStringTextType>
           <aas:language>de</aas:language>
-          <aas:text>Enthält alle wichtigen Dokumente für den Kunden.</aas:text>
+          <aas:text>Enthält alle wichtigen Dokumente für den Kunden wie vom Batteriepass gefordert.</aas:text>
         </aas:langStringTextType>
         <aas:langStringTextType>
           <aas:language>en</aas:language>
-          <aas:text>Handover Documentation defines a set meta data for the handover of documentation from the manufacturer to the operator for industrial equipment.</aas:text>
+          <aas:text>Handover Documentation defines a set meta data for the handover of documentation from the operator to the users of the Battery Passport.</aas:text>
         </aas:langStringTextType>
       </aas:description>
       <aas:administration/>
-      <aas:id>urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#HandoverDocumentation/submodel</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#HandoverDocumentation/submodel</aas:id>
       <aas:kind>Template</aas:kind>
       <aas:semanticId>
         <aas:type>ExternalReference</aas:type>
         <aas:keys>
           <aas:key>
             <aas:type>GlobalReference</aas:type>
-            <aas:value>urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#HandoverDocumentation</aas:value>
+            <aas:value>urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#HandoverDocumentation</aas:value>
           </aas:key>
         </aas:keys>
       </aas:semanticId>
@@ -2136,24 +2136,24 @@ Note: if the described Entity has an own Asset Administration Shell, the SelfMan
       <aas:displayName>
         <aas:langStringNameType>
           <aas:language>en</aas:language>
-          <aas:text>handover documentation</aas:text>
+          <aas:text>handover documentation of battery passport</aas:text>
         </aas:langStringNameType>
         <aas:langStringNameType>
           <aas:language>de</aas:language>
-          <aas:text>Übergabe-Dokumentation</aas:text>
+          <aas:text>Übergabe-Dokumentation des Batteriepasses</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
       <aas:description>
         <aas:langStringTextType>
           <aas:language>de</aas:language>
-          <aas:text>Enthält alle wichtigen Dokumente für den Kunden.</aas:text>
+          <aas:text>Enthält alle wichtigen Dokumente für den Kunden wie vom Batteriepass gefordert.</aas:text>
         </aas:langStringTextType>
         <aas:langStringTextType>
           <aas:language>en</aas:language>
-          <aas:text>Handover Documentation defines a set meta data for the handover of documentation from the manufacturer to the operator for industrial equipment.</aas:text>
+          <aas:text>Handover Documentation defines a set meta data for the handover of documentation from the operator to the users of the Battery Passport.</aas:text>
         </aas:langStringTextType>
       </aas:description>
-      <aas:id>urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#HandoverDocumentation</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#HandoverDocumentation</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -2170,11 +2170,11 @@ Note: if the described Entity has an own Asset Administration Shell, the SelfMan
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>handover documentation</aas:text>
+                  <aas:text>handover documentation of battery passport</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>de</aas:language>
-                  <aas:text>Übergabe-Dokumentation</aas:text>
+                  <aas:text>Übergabe-Dokumentation des Batteriepasses</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
@@ -2186,11 +2186,11 @@ Note: if the described Entity has an own Asset Administration Shell, the SelfMan
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>de</aas:language>
-                  <aas:text>Enthält alle wichtigen Dokumente für den Kunden.</aas:text>
+                  <aas:text>Enthält alle wichtigen Dokumente für den Kunden wie vom Batteriepass gefordert.</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>Handover Documentation defines a set meta data for the handover of documentation from the manufacturer to the operator for industrial equipment.</aas:text>
+                  <aas:text>Handover Documentation defines a set meta data for the handover of documentation from the operator to the users of the Battery Passport.</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>
