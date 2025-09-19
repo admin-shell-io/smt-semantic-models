@@ -59,7 +59,7 @@
    samm:properties ( 
      [ samm:property :documentIds; samm:payloadName "DocumentIds" ] 
 	 [ samm:property :documentClassifications; samm:payloadName "DocumentClassifications" ] 
-	 [ samm:property :documentVersions; samm:optional true; samm:payloadName "DocumentVersions" ] 
+	 [ samm:property :documentVersions; samm:payloadName "DocumentVersions" ] 
 	 ) ;
    samm:description "A single handover document."@en ;
    samm:see <0173-1%2302-ABI500%23003/0173-1%2301-AHF579%23003> ;
