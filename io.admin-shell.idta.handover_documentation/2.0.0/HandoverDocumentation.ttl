@@ -140,7 +140,7 @@
      [ samm:property shared:languages; samm:payloadName "Languages" ] 
 	 [ samm:property :version; samm:payloadName "Version" ] 
 	 [ samm:property :title; samm:payloadName "Title" ]
-	 [ samm:property :subtitle; samm:optional true; samm:payloadName "SubTitle" ] 
+	 [ samm:property :subtitle; samm:optional true; samm:payloadName "Subtitle" ] 
 	 [ samm:property :description; samm:payloadName "Description" ]
 	 [ samm:property :keywords; samm:payloadName "KeyWords" ] 
 	 [ samm:property :statusSetDate; samm:payloadName "StatusSetDate" ] 
