@@ -42,7 +42,9 @@ In the following only deviations from IDTA-02003-3-0 are documented:
 ### Changed
 
 * properties from Nameplate were used for SMC _GeneralInformation_ except for the new _productImage_ and payload name was adapted if differing from SMT Digital Nameplate 3.0
-* _ProductImage_ was mapped to a SAMM property _productImages_ since it is 0..*. The semanticId was changed  from https://admin-shell.io/ZVEI/TechnicalData/ProductImage/1/1 to ]https://admin-shell.io/ZVEI/TechnicalData/ProductImages/1/1
+* _ProductImage_ was mapped to a SAMM property _productImages_ since it is 0..*. 
+The semanticId was changed  from https://admin-shell.io/ZVEI/TechnicalData/ProductImage/1/1 to https://admin-shell.io/ZVEI/TechnicalData/ProductImages/1/1. 
+(Note: In TechnicalData 2.0 a SML ProductImages is introduced with semanticId 0173-1#02-ABM220#001/0173-1#01-AHY911#001).
 
 
 ### Removed
