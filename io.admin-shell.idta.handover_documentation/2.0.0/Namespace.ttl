@@ -19,5 +19,8 @@
 
 : a samm:Namespace ;
    samm:preferredName "namespace for handover documentation"@en ;
-   samm:description "This namespace is reserved for the Aspect Models and elements conformant to Submodel Template Specification (SMT) IDTA-02004 Handover Documentation, Version 2.0."@en .
+   samm:description "This namespace is reserved for the Aspect Models and elements conformant to Submodel Template Specification (SMT) IDTA-02004 Handover Documentation, Version 2.0.
+   
+   NOTE: Generating an .aasx or aas.xml or aas.json file from the aspect model will not result in the same aasx as being part of the IDTA-02004 release. For example the semanticIds would differ.
+   However, the Value-Only format is identical and no semantics of the original aasx-file is lost."@en .
 
