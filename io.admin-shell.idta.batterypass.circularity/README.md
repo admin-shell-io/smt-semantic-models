@@ -2,7 +2,6 @@
 
 This namespace is reserved for the Submodel Template Specification (SMT) IDTA-02035-7 Digital Battery Passport - Part 7: Circularity
 
-This SMT is derived from IDTA-02003-1-2 Generic Technical Data 1.2 
 
 Namespace: urn:samm:io.admin-shell.idta.batterypass.circularity
 
