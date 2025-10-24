@@ -15,20 +15,17 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix : <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
+@prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
 
-:resourceValue a samm:Property ;
-   samm:description "Path and name of the file (with file extension).\n\nThe path can be absolute or relative."@en ;
-   samm:characteristic samm-c:ResourcePath ;
-   samm:exampleValue "https://example.com/SafetyInstructions.pdf"^^xsd:anyURI .
+:furtherInformation a samm:Property ;
+   samm:description "Further information on the product, the validity of the information provided and this data record."@en ;
+   samm:see <https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1> ;
+   samm:characteristic :FurtherInformationCharacteristic .
 
-:FileWithContentType a samm:Characteristic ;
-   samm:dataType :ResourceWithContentType .
+:FurtherInformationCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :FurtherInformationEntity .
 
-:ResourceWithContentType a samm:Entity ;
-   samm:preferredName "Datei mit Content Type"@de ;
-   samm:preferredName "file with content type"@en ;
-   samm:description "A file is a data element that represents an address to a file (a locator). The value is a URI that can represent an absolute or relative path."@en ;
-   samm:see <https://admin-shell.io/aas/3/1/File> ;
-   samm:properties ( [ samm:property :resourceValue; samm:payloadName "value" ] :contentType ) .
+:FurtherInformationEntity a samm:Entity ;
+   samm:properties ( ) .
 

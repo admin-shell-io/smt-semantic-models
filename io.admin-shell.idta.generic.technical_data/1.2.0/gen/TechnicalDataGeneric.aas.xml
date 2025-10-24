@@ -10,7 +10,7 @@
         </aas:langStringTextType>
       </aas:description>
       <aas:administration/>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#MaterialComposition</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData</aas:id>
       <aas:assetInformation>
         <aas:assetKind>Type</aas:assetKind>
       </aas:assetInformation>
@@ -20,7 +20,7 @@
           <aas:keys>
             <aas:key>
               <aas:type>Submodel</aas:type>
-              <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#MaterialComposition/submodel</aas:value>
+              <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData/submodel</aas:value>
             </aas:key>
           </aas:keys>
         </aas:reference>
@@ -29,89 +29,93 @@
   </aas:assetAdministrationShells>
   <aas:submodels>
     <aas:submodel>
-      <aas:idShort>MaterialComposition</aas:idShort>
+      <aas:idShort>TechnicalData</aas:idShort>
       <aas:description>
         <aas:langStringTextType>
           <aas:language>en</aas:language>
-          <aas:text>Mandatory data: Battery chemistry; critical raw materials; materials used in the cathode, anode, and 
-electrolyte; hazardous substances; impact of substances on the environment and on human health or 
-safety
-
-Copyright ? 2024 Circulor (for and on behalf of the Battery Pass Consortium). This work is li-censed under a Creative Commons License Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Readers may reproduce material for their own publications, as long as it is not sold com-mercially and is given appropriate attribution.</aas:text>
+          <aas:text>Technical data of the asset and associated product classificatons.</aas:text>
         </aas:langStringTextType>
       </aas:description>
       <aas:administration/>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#MaterialComposition/submodel</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData/submodel</aas:id>
       <aas:kind>Template</aas:kind>
       <aas:semanticId>
         <aas:type>ExternalReference</aas:type>
         <aas:keys>
           <aas:key>
             <aas:type>GlobalReference</aas:type>
-            <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#MaterialComposition</aas:value>
+            <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData</aas:value>
           </aas:key>
         </aas:keys>
       </aas:semanticId>
+      <aas:supplementalSemanticIds>
+        <aas:reference>
+          <aas:type>ExternalReference</aas:type>
+          <aas:keys>
+            <aas:key>
+              <aas:type>GlobalReference</aas:type>
+              <aas:value>https://admin-shell.io/ZVEI/TechnicalData/Submodel/1/2</aas:value>
+            </aas:key>
+          </aas:keys>
+        </aas:reference>
+      </aas:supplementalSemanticIds>
       <aas:submodelElements>
         <aas:submodelElementCollection>
-          <aas:idShort>batteryChemistry</aas:idShort>
-          <aas:displayName>
-            <aas:langStringNameType>
-              <aas:language>en</aas:language>
-              <aas:text>ProductChemistry</aas:text>
-            </aas:langStringNameType>
-          </aas:displayName>
+          <aas:idShort>furtherInformation</aas:idShort>
           <aas:description>
             <aas:langStringTextType>
               <aas:language>en</aas:language>
-              <aas:text>Composition of a product in general terms by specifying the cathode and anode active material as well as electrolyte.
-
-DIN DKE Spec 99100 chapter reference: 6.5.2</aas:text>
+              <aas:text>Further information on the product, the validity of the information provided and this data record.</aas:text>
             </aas:langStringTextType>
           </aas:description>
-          <aas:value>
-            <aas:property>
-              <aas:idShort>shortName</aas:idShort>
-              <aas:semanticId>
-                <aas:type>ExternalReference</aas:type>
-                <aas:keys>
-                  <aas:key>
-                    <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#shortName</aas:value>
-                  </aas:key>
-                </aas:keys>
-              </aas:semanticId>
-              <aas:valueType>xs:string</aas:valueType>
-            </aas:property>
-            <aas:property>
-              <aas:idShort>clearName</aas:idShort>
-              <aas:semanticId>
-                <aas:type>ExternalReference</aas:type>
-                <aas:keys>
-                  <aas:key>
-                    <aas:type>GlobalReference</aas:type>
-                    <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#clearName</aas:value>
-                  </aas:key>
-                </aas:keys>
-              </aas:semanticId>
-              <aas:valueType>xs:string</aas:valueType>
-            </aas:property>
-          </aas:value>
+          <aas:supplementalSemanticIds>
+            <aas:reference>
+              <aas:type>ExternalReference</aas:type>
+              <aas:keys>
+                <aas:key>
+                  <aas:type>GlobalReference</aas:type>
+                  <aas:value>https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1</aas:value>
+                </aas:key>
+              </aas:keys>
+            </aas:reference>
+          </aas:supplementalSemanticIds>
+        </aas:submodelElementCollection>
+        <aas:submodelElementCollection>
+          <aas:idShort>technicalProperties</aas:idShort>
+          <aas:description>
+            <aas:langStringTextType>
+              <aas:language>en</aas:language>
+              <aas:text>Technical and product properties. Individual Characteristics that describe the product and its technical properties.</aas:text>
+            </aas:langStringTextType>
+          </aas:description>
+          <aas:supplementalSemanticIds>
+            <aas:reference>
+              <aas:type>ExternalReference</aas:type>
+              <aas:keys>
+                <aas:key>
+                  <aas:type>GlobalReference</aas:type>
+                  <aas:value>https://admin-shell.io/ZVEI/TechnicalData/TechnicalProperties/1/1</aas:value>
+                </aas:key>
+              </aas:keys>
+            </aas:reference>
+          </aas:supplementalSemanticIds>
         </aas:submodelElementCollection>
         <aas:submodelElementList>
-          <aas:idShort>batteryMaterials</aas:idShort>
+          <aas:idShort>productClassifications</aas:idShort>
           <aas:displayName>
             <aas:langStringNameType>
               <aas:language>en</aas:language>
-              <aas:text>BatteryMaterials</aas:text>
+              <aas:text>product classifications</aas:text>
+            </aas:langStringNameType>
+            <aas:langStringNameType>
+              <aas:language>de</aas:language>
+              <aas:text>Produkt-Klassifikationen</aas:text>
             </aas:langStringNameType>
           </aas:displayName>
           <aas:description>
             <aas:langStringTextType>
               <aas:language>en</aas:language>
-              <aas:text>"Component materials used" (No. 17.a-c): Naming the materials (as a composition of substances) in cathode, anode, electrolyte according to public standards, including specification of the corresponding component (i.e., cathode, anode, or electrolyte). We suggest a reporting threshold of 0.1 % weight by weight.
-
-DIN DKE Spec 99100 chapter reference: 6.5.3-6.5.4</aas:text>
+              <aas:text>Product classifications by association with product classes in common classification systems.</aas:text>
             </aas:langStringTextType>
           </aas:description>
           <aas:semanticId>
@@ -119,210 +123,69 @@ DIN DKE Spec 99100 chapter reference: 6.5.3-6.5.4</aas:text>
             <aas:keys>
               <aas:key>
                 <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#BatteryMaterialList</aas:value>
+                <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#ProductClassificationSet</aas:value>
               </aas:key>
             </aas:keys>
           </aas:semanticId>
+          <aas:supplementalSemanticIds>
+            <aas:reference>
+              <aas:type>ExternalReference</aas:type>
+              <aas:keys>
+                <aas:key>
+                  <aas:type>GlobalReference</aas:type>
+                  <aas:value>https://admin-shell.io/ZVEI/TechnicalData/ProductClassifications/1/1</aas:value>
+                </aas:key>
+              </aas:keys>
+            </aas:reference>
+          </aas:supplementalSemanticIds>
           <aas:orderRelevant>false</aas:orderRelevant>
           <aas:typeValueListElement>SubmodelElementCollection</aas:typeValueListElement>
           <aas:value>
             <aas:submodelElementCollection>
-              <aas:idShort>batteryMaterials</aas:idShort>
+              <aas:idShort>productClassifications</aas:idShort>
               <aas:displayName>
                 <aas:langStringNameType>
                   <aas:language>en</aas:language>
-                  <aas:text>BatteryMaterials</aas:text>
+                  <aas:text>product classifications</aas:text>
+                </aas:langStringNameType>
+                <aas:langStringNameType>
+                  <aas:language>de</aas:language>
+                  <aas:text>Produkt-Klassifikationen</aas:text>
                 </aas:langStringNameType>
               </aas:displayName>
               <aas:description>
                 <aas:langStringTextType>
                   <aas:language>en</aas:language>
-                  <aas:text>"Component materials used" (No. 17.a-c): Naming the materials (as a composition of substances) in cathode, anode, electrolyte according to public standards, including specification of the corresponding component (i.e., cathode, anode, or electrolyte). We suggest a reporting threshold of 0.1 % weight by weight.
-
-DIN DKE Spec 99100 chapter reference: 6.5.3-6.5.4</aas:text>
+                  <aas:text>Product classifications by association with product classes in common classification systems.</aas:text>
                 </aas:langStringTextType>
               </aas:description>
-              <aas:value>
-                <aas:submodelElementCollection>
-                  <aas:idShort>batteryMaterialLocation</aas:idShort>
-                  <aas:displayName>
-                    <aas:langStringNameType>
-                      <aas:language>en</aas:language>
-                      <aas:text>Location</aas:text>
-                    </aas:langStringNameType>
-                  </aas:displayName>
-                  <aas:description>
-                    <aas:langStringTextType>
-                      <aas:language>en</aas:language>
-                      <aas:text>Battery component that relates to the material</aas:text>
-                    </aas:langStringTextType>
-                  </aas:description>
-                  <aas:value>
-                    <aas:property>
-                      <aas:idShort>componentName</aas:idShort>
-                      <aas:displayName>
-                        <aas:langStringNameType>
-                          <aas:language>en</aas:language>
-                          <aas:text>Name</aas:text>
-                        </aas:langStringNameType>
-                      </aas:displayName>
-                      <aas:semanticId>
-                        <aas:type>ExternalReference</aas:type>
-                        <aas:keys>
-                          <aas:key>
-                            <aas:type>GlobalReference</aas:type>
-                            <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#componentName</aas:value>
-                          </aas:key>
-                        </aas:keys>
-                      </aas:semanticId>
-                      <aas:valueType>xs:string</aas:valueType>
-                    </aas:property>
-                    <aas:property>
-                      <aas:idShort>componentId</aas:idShort>
-                      <aas:displayName>
-                        <aas:langStringNameType>
-                          <aas:language>en</aas:language>
-                          <aas:text>SubstanceId</aas:text>
-                        </aas:langStringNameType>
-                      </aas:displayName>
-                      <aas:semanticId>
-                        <aas:type>ExternalReference</aas:type>
-                        <aas:keys>
-                          <aas:key>
-                            <aas:type>GlobalReference</aas:type>
-                            <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#componentId</aas:value>
-                          </aas:key>
-                        </aas:keys>
-                      </aas:semanticId>
-                      <aas:valueType>xs:string</aas:valueType>
-                    </aas:property>
-                  </aas:value>
-                </aas:submodelElementCollection>
-                <aas:property>
-                  <aas:idShort>batteryMaterialIdentifier</aas:idShort>
-                  <aas:displayName>
-                    <aas:langStringNameType>
-                      <aas:language>en</aas:language>
-                      <aas:text>Identifier</aas:text>
-                    </aas:langStringNameType>
-                  </aas:displayName>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#batteryMaterialIdentifier</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:valueType>xs:string</aas:valueType>
-                </aas:property>
-                <aas:property>
-                  <aas:idShort>batteryMaterialName</aas:idShort>
-                  <aas:displayName>
-                    <aas:langStringNameType>
-                      <aas:language>en</aas:language>
-                      <aas:text>Name</aas:text>
-                    </aas:langStringNameType>
-                  </aas:displayName>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#batteryMaterialName</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:valueType>xs:string</aas:valueType>
-                </aas:property>
-                <aas:property>
-                  <aas:idShort>batteryMaterialMass</aas:idShort>
-                  <aas:displayName>
-                    <aas:langStringNameType>
-                      <aas:language>en</aas:language>
-                      <aas:text>Weight</aas:text>
-                    </aas:langStringNameType>
-                  </aas:displayName>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#batteryMaterialMass</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:valueType>xs:float</aas:valueType>
-                </aas:property>
-                <aas:property>
-                  <aas:idShort>isCriticalRawMaterial</aas:idShort>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#isCriticalRawMaterial</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:valueType>xs:boolean</aas:valueType>
-                </aas:property>
-              </aas:value>
-            </aas:submodelElementCollection>
-          </aas:value>
-        </aas:submodelElementList>
-        <aas:submodelElementList>
-          <aas:idShort>hazardousSubstances</aas:idShort>
-          <aas:displayName>
-            <aas:langStringNameType>
-              <aas:language>en</aas:language>
-              <aas:text>HazardousSubstances</aas:text>
-            </aas:langStringNameType>
-          </aas:displayName>
-          <aas:description>
-            <aas:langStringTextType>
-              <aas:language>en</aas:language>
-              <aas:text>"Hazardous substances" (No 20.a-e): Name (agreed substance nomenclature, e.g. IUPAC or chemical name) all hazardous substance (as ?any substance that poses a threat to human health and the environment?). Suggested above 0.1 % weight by weight within each (sub-)component.
-
-DIN DKE Spec 99100 chapter reference: 6.5.4 - 6.5.6</aas:text>
-            </aas:langStringTextType>
-          </aas:description>
-          <aas:semanticId>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#HazardousSubstancesList</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:semanticId>
-          <aas:orderRelevant>false</aas:orderRelevant>
-          <aas:typeValueListElement>SubmodelElementCollection</aas:typeValueListElement>
-          <aas:value>
-            <aas:submodelElementCollection>
-              <aas:idShort>hazardousSubstances</aas:idShort>
-              <aas:displayName>
-                <aas:langStringNameType>
-                  <aas:language>en</aas:language>
-                  <aas:text>HazardousSubstances</aas:text>
-                </aas:langStringNameType>
-              </aas:displayName>
-              <aas:description>
-                <aas:langStringTextType>
-                  <aas:language>en</aas:language>
-                  <aas:text>"Hazardous substances" (No 20.a-e): Name (agreed substance nomenclature, e.g. IUPAC or chemical name) all hazardous substance (as ?any substance that poses a threat to human health and the environment?). Suggested above 0.1 % weight by weight within each (sub-)component.
-
-DIN DKE Spec 99100 chapter reference: 6.5.4 - 6.5.6</aas:text>
-                </aas:langStringTextType>
-              </aas:description>
+              <aas:supplementalSemanticIds>
+                <aas:reference>
+                  <aas:type>ExternalReference</aas:type>
+                  <aas:keys>
+                    <aas:key>
+                      <aas:type>GlobalReference</aas:type>
+                      <aas:value>https://api.eclass-cdp.com/0173-1-02-ABI502-003/0173-1-01-AHF581-003</aas:value>
+                    </aas:key>
+                  </aas:keys>
+                </aas:reference>
+                <aas:reference>
+                  <aas:type>ExternalReference</aas:type>
+                  <aas:keys>
+                    <aas:key>
+                      <aas:type>GlobalReference</aas:type>
+                      <aas:value>0173-1#02-ABI502#003/0173-1#01-AHF581#003</aas:value>
+                    </aas:key>
+                  </aas:keys>
+                </aas:reference>
+              </aas:supplementalSemanticIds>
               <aas:value>
                 <aas:property>
-                  <aas:idShort>hazardousSubstanceClass</aas:idShort>
+                  <aas:idShort>productClassificationSystem</aas:idShort>
                   <aas:displayName>
                     <aas:langStringNameType>
                       <aas:language>en</aas:language>
-                      <aas:text>Class</aas:text>
+                      <aas:text>product classification system</aas:text>
                     </aas:langStringNameType>
                   </aas:displayName>
                   <aas:semanticId>
@@ -330,166 +193,7 @@ DIN DKE Spec 99100 chapter reference: 6.5.4 - 6.5.6</aas:text>
                     <aas:keys>
                       <aas:key>
                         <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceClass</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:valueType>xs:string</aas:valueType>
-                </aas:property>
-                <aas:property>
-                  <aas:idShort>hazardousSubstanceName</aas:idShort>
-                  <aas:displayName>
-                    <aas:langStringNameType>
-                      <aas:language>en</aas:language>
-                      <aas:text>Name</aas:text>
-                    </aas:langStringNameType>
-                  </aas:displayName>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceName</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:valueType>xs:string</aas:valueType>
-                </aas:property>
-                <aas:property>
-                  <aas:idShort>hazardousSubstanceConcentration</aas:idShort>
-                  <aas:displayName>
-                    <aas:langStringNameType>
-                      <aas:language>en</aas:language>
-                      <aas:text>Concentration</aas:text>
-                    </aas:langStringNameType>
-                  </aas:displayName>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceConcentration</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:valueType>xs:double</aas:valueType>
-                </aas:property>
-                <aas:submodelElementList>
-                  <aas:idShort>hazardousSubstanceImpact</aas:idShort>
-                  <aas:displayName>
-                    <aas:langStringNameType>
-                      <aas:language>en</aas:language>
-                      <aas:text>Impact</aas:text>
-                    </aas:langStringNameType>
-                  </aas:displayName>
-                  <aas:description>
-                    <aas:langStringTextType>
-                      <aas:language>en</aas:language>
-                      <aas:text>Impact statements based on, e.g., REACH or GHS for all hazard classes applicable to substances in the battery.</aas:text>
-                    </aas:langStringTextType>
-                  </aas:description>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#ImpactList</aas:value>
-                      </aas:key>
-                    </aas:keys>
-                  </aas:semanticId>
-                  <aas:orderRelevant>false</aas:orderRelevant>
-                  <aas:typeValueListElement>SubmodelElementCollection</aas:typeValueListElement>
-                  <aas:value>
-                    <aas:property>
-                      <aas:idShort>hazardousSubstanceImpact</aas:idShort>
-                      <aas:displayName>
-                        <aas:langStringNameType>
-                          <aas:language>en</aas:language>
-                          <aas:text>Impact</aas:text>
-                        </aas:langStringNameType>
-                      </aas:displayName>
-                      <aas:semanticId>
-                        <aas:type>ExternalReference</aas:type>
-                        <aas:keys>
-                          <aas:key>
-                            <aas:type>GlobalReference</aas:type>
-                            <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceImpact</aas:value>
-                          </aas:key>
-                        </aas:keys>
-                      </aas:semanticId>
-                      <aas:valueType>xs:string</aas:valueType>
-                    </aas:property>
-                  </aas:value>
-                </aas:submodelElementList>
-                <aas:submodelElementCollection>
-                  <aas:idShort>hazardousSubstanceLocation</aas:idShort>
-                  <aas:displayName>
-                    <aas:langStringNameType>
-                      <aas:language>en</aas:language>
-                      <aas:text>Location</aas:text>
-                    </aas:langStringNameType>
-                  </aas:displayName>
-                  <aas:description>
-                    <aas:langStringTextType>
-                      <aas:language>en</aas:language>
-                      <aas:text>Hazardous substances (No. 19-23): Location on a (sub-)component-level of all hazardous substances (as ?any substance that poses a threat to human health and the environment?). Suggested via a unique identifier or nomenclature.</aas:text>
-                    </aas:langStringTextType>
-                  </aas:description>
-                  <aas:value>
-                    <aas:property>
-                      <aas:idShort>componentName</aas:idShort>
-                      <aas:displayName>
-                        <aas:langStringNameType>
-                          <aas:language>en</aas:language>
-                          <aas:text>Name</aas:text>
-                        </aas:langStringNameType>
-                      </aas:displayName>
-                      <aas:semanticId>
-                        <aas:type>ExternalReference</aas:type>
-                        <aas:keys>
-                          <aas:key>
-                            <aas:type>GlobalReference</aas:type>
-                            <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#componentName</aas:value>
-                          </aas:key>
-                        </aas:keys>
-                      </aas:semanticId>
-                      <aas:valueType>xs:string</aas:valueType>
-                    </aas:property>
-                    <aas:property>
-                      <aas:idShort>componentId</aas:idShort>
-                      <aas:displayName>
-                        <aas:langStringNameType>
-                          <aas:language>en</aas:language>
-                          <aas:text>SubstanceId</aas:text>
-                        </aas:langStringNameType>
-                      </aas:displayName>
-                      <aas:semanticId>
-                        <aas:type>ExternalReference</aas:type>
-                        <aas:keys>
-                          <aas:key>
-                            <aas:type>GlobalReference</aas:type>
-                            <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#componentId</aas:value>
-                          </aas:key>
-                        </aas:keys>
-                      </aas:semanticId>
-                      <aas:valueType>xs:string</aas:valueType>
-                    </aas:property>
-                  </aas:value>
-                </aas:submodelElementCollection>
-                <aas:property>
-                  <aas:idShort>hazardousSubstanceIdentifier</aas:idShort>
-                  <aas:displayName>
-                    <aas:langStringNameType>
-                      <aas:language>en</aas:language>
-                      <aas:text>Identifier</aas:text>
-                    </aas:langStringNameType>
-                  </aas:displayName>
-                  <aas:semanticId>
-                    <aas:type>ExternalReference</aas:type>
-                    <aas:keys>
-                      <aas:key>
-                        <aas:type>GlobalReference</aas:type>
-                        <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceIdentifier</aas:value>
+                        <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassificationSystem</aas:value>
                       </aas:key>
                     </aas:keys>
                   </aas:semanticId>
@@ -499,7 +203,67 @@ DIN DKE Spec 99100 chapter reference: 6.5.4 - 6.5.6</aas:text>
                       <aas:keys>
                         <aas:key>
                           <aas:type>GlobalReference</aas:type>
-                          <aas:value>https://www.cas.org/cas-data/cas-registry</aas:value>
+                          <aas:value>https://admin-shell.io/ZVEI/TechnicalData/ProductClassificationSystem/1/1</aas:value>
+                        </aas:key>
+                      </aas:keys>
+                    </aas:reference>
+                  </aas:supplementalSemanticIds>
+                  <aas:valueType>xs:string</aas:valueType>
+                </aas:property>
+                <aas:property>
+                  <aas:idShort>classificationSystemVersion</aas:idShort>
+                  <aas:displayName>
+                    <aas:langStringNameType>
+                      <aas:language>en</aas:language>
+                      <aas:text>classification system version</aas:text>
+                    </aas:langStringNameType>
+                  </aas:displayName>
+                  <aas:semanticId>
+                    <aas:type>ExternalReference</aas:type>
+                    <aas:keys>
+                      <aas:key>
+                        <aas:type>GlobalReference</aas:type>
+                        <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#classificationSystemVersion</aas:value>
+                      </aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:supplementalSemanticIds>
+                    <aas:reference>
+                      <aas:type>ExternalReference</aas:type>
+                      <aas:keys>
+                        <aas:key>
+                          <aas:type>GlobalReference</aas:type>
+                          <aas:value>https://admin-shell.io/ZVEI/TechnicalData/ClassificationSystemVersion/1/1</aas:value>
+                        </aas:key>
+                      </aas:keys>
+                    </aas:reference>
+                  </aas:supplementalSemanticIds>
+                  <aas:valueType>xs:string</aas:valueType>
+                </aas:property>
+                <aas:property>
+                  <aas:idShort>productClassId</aas:idShort>
+                  <aas:displayName>
+                    <aas:langStringNameType>
+                      <aas:language>en</aas:language>
+                      <aas:text>product class ID</aas:text>
+                    </aas:langStringNameType>
+                  </aas:displayName>
+                  <aas:semanticId>
+                    <aas:type>ExternalReference</aas:type>
+                    <aas:keys>
+                      <aas:key>
+                        <aas:type>GlobalReference</aas:type>
+                        <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassId</aas:value>
+                      </aas:key>
+                    </aas:keys>
+                  </aas:semanticId>
+                  <aas:supplementalSemanticIds>
+                    <aas:reference>
+                      <aas:type>ExternalReference</aas:type>
+                      <aas:keys>
+                        <aas:key>
+                          <aas:type>GlobalReference</aas:type>
+                          <aas:value>https://admin-shell.io/ZVEI/TechnicalData/ProductClassId/1/1</aas:value>
                         </aas:key>
                       </aas:keys>
                     </aas:reference>
@@ -510,30 +274,346 @@ DIN DKE Spec 99100 chapter reference: 6.5.4 - 6.5.6</aas:text>
             </aas:submodelElementCollection>
           </aas:value>
         </aas:submodelElementList>
+        <aas:submodelElementCollection>
+          <aas:idShort>generalInformation</aas:idShort>
+          <aas:displayName>
+            <aas:langStringNameType>
+              <aas:language>en</aas:language>
+              <aas:text>general information</aas:text>
+            </aas:langStringNameType>
+          </aas:displayName>
+          <aas:description>
+            <aas:langStringTextType>
+              <aas:language>en</aas:language>
+              <aas:text>General information, for example ordering and manufacturer information.</aas:text>
+            </aas:langStringTextType>
+          </aas:description>
+          <aas:supplementalSemanticIds>
+            <aas:reference>
+              <aas:type>ExternalReference</aas:type>
+              <aas:keys>
+                <aas:key>
+                  <aas:type>GlobalReference</aas:type>
+                  <aas:value>https://admin-shell.io/ZVEI/TechnicalData/GeneralInformation/1/1</aas:value>
+                </aas:key>
+              </aas:keys>
+            </aas:reference>
+          </aas:supplementalSemanticIds>
+          <aas:value>
+            <aas:property>
+              <aas:idShort>manufacturerName</aas:idShort>
+              <aas:displayName>
+                <aas:langStringNameType>
+                  <aas:language>de</aas:language>
+                  <aas:text>Herstellername</aas:text>
+                </aas:langStringNameType>
+                <aas:langStringNameType>
+                  <aas:language>en</aas:language>
+                  <aas:text>manufacturer name</aas:text>
+                </aas:langStringNameType>
+              </aas:displayName>
+              <aas:semanticId>
+                <aas:type>ExternalReference</aas:type>
+                <aas:keys>
+                  <aas:key>
+                    <aas:type>GlobalReference</aas:type>
+                    <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerName</aas:value>
+                  </aas:key>
+                </aas:keys>
+              </aas:semanticId>
+              <aas:supplementalSemanticIds>
+                <aas:reference>
+                  <aas:type>ExternalReference</aas:type>
+                  <aas:keys>
+                    <aas:key>
+                      <aas:type>GlobalReference</aas:type>
+                      <aas:value>0173-1%2302-AAO677%23002</aas:value>
+                    </aas:key>
+                  </aas:keys>
+                </aas:reference>
+              </aas:supplementalSemanticIds>
+              <aas:valueType>xs:string</aas:valueType>
+            </aas:property>
+            <aas:property>
+              <aas:idShort>manufacturerLogo</aas:idShort>
+              <aas:displayName>
+                <aas:langStringNameType>
+                  <aas:language>en</aas:language>
+                  <aas:text>company logo</aas:text>
+                </aas:langStringNameType>
+                <aas:langStringNameType>
+                  <aas:language>de</aas:language>
+                  <aas:text>Firmenlogo</aas:text>
+                </aas:langStringNameType>
+              </aas:displayName>
+              <aas:semanticId>
+                <aas:type>ExternalReference</aas:type>
+                <aas:keys>
+                  <aas:key>
+                    <aas:type>GlobalReference</aas:type>
+                    <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerLogo</aas:value>
+                  </aas:key>
+                </aas:keys>
+              </aas:semanticId>
+              <aas:supplementalSemanticIds>
+                <aas:reference>
+                  <aas:type>ExternalReference</aas:type>
+                  <aas:keys>
+                    <aas:key>
+                      <aas:type>GlobalReference</aas:type>
+                      <aas:value>https://admin-shell.io/ZVEI/TechnicalData/ManufacturerLogo/1/1</aas:value>
+                    </aas:key>
+                  </aas:keys>
+                </aas:reference>
+              </aas:supplementalSemanticIds>
+              <aas:valueType>xs:anyURI</aas:valueType>
+            </aas:property>
+            <aas:multiLanguageProperty>
+              <aas:idShort>manufacturerProductDesignation</aas:idShort>
+              <aas:displayName>
+                <aas:langStringNameType>
+                  <aas:language>de</aas:language>
+                  <aas:text>Produktbezeichnung</aas:text>
+                </aas:langStringNameType>
+                <aas:langStringNameType>
+                  <aas:language>en</aas:language>
+                  <aas:text>manufacturer product designation</aas:text>
+                </aas:langStringNameType>
+              </aas:displayName>
+              <aas:description>
+                <aas:langStringTextType>
+                  <aas:language>de</aas:language>
+                  <aas:text>Bezeichnung des Produkts.</aas:text>
+                </aas:langStringTextType>
+                <aas:langStringTextType>
+                  <aas:language>en</aas:language>
+                  <aas:text>Short description of the product (short text), third or lowest level of a 3 level manufacturer specific product hierarchy.</aas:text>
+                </aas:langStringTextType>
+              </aas:description>
+              <aas:semanticId>
+                <aas:type>ExternalReference</aas:type>
+                <aas:keys>
+                  <aas:key>
+                    <aas:type>GlobalReference</aas:type>
+                    <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerProductDesignation</aas:value>
+                  </aas:key>
+                </aas:keys>
+              </aas:semanticId>
+              <aas:supplementalSemanticIds>
+                <aas:reference>
+                  <aas:type>ExternalReference</aas:type>
+                  <aas:keys>
+                    <aas:key>
+                      <aas:type>GlobalReference</aas:type>
+                      <aas:value>0173-1%2302-AAW338%23001</aas:value>
+                    </aas:key>
+                  </aas:keys>
+                </aas:reference>
+              </aas:supplementalSemanticIds>
+            </aas:multiLanguageProperty>
+            <aas:property>
+              <aas:idShort>manufacturerArticleNumber</aas:idShort>
+              <aas:displayName>
+                <aas:langStringNameType>
+                  <aas:language>en</aas:language>
+                  <aas:text>article number of the product</aas:text>
+                </aas:langStringNameType>
+                <aas:langStringNameType>
+                  <aas:language>de</aas:language>
+                  <aas:text>Artikelnummer des Produkts</aas:text>
+                </aas:langStringNameType>
+              </aas:displayName>
+              <aas:semanticId>
+                <aas:type>ExternalReference</aas:type>
+                <aas:keys>
+                  <aas:key>
+                    <aas:type>GlobalReference</aas:type>
+                    <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerArticleNumber</aas:value>
+                  </aas:key>
+                </aas:keys>
+              </aas:semanticId>
+              <aas:supplementalSemanticIds>
+                <aas:reference>
+                  <aas:type>ExternalReference</aas:type>
+                  <aas:keys>
+                    <aas:key>
+                      <aas:type>GlobalReference</aas:type>
+                      <aas:value>0173-1%2302-AAO676%23003</aas:value>
+                    </aas:key>
+                  </aas:keys>
+                </aas:reference>
+              </aas:supplementalSemanticIds>
+              <aas:valueType>xs:string</aas:valueType>
+            </aas:property>
+            <aas:property>
+              <aas:idShort>manufacturerOrderCode</aas:idShort>
+              <aas:displayName>
+                <aas:langStringNameType>
+                  <aas:language>en</aas:language>
+                  <aas:text>order code for the product</aas:text>
+                </aas:langStringNameType>
+                <aas:langStringNameType>
+                  <aas:language>de</aas:language>
+                  <aas:text>Bestellcode des Produkts</aas:text>
+                </aas:langStringNameType>
+              </aas:displayName>
+              <aas:semanticId>
+                <aas:type>ExternalReference</aas:type>
+                <aas:keys>
+                  <aas:key>
+                    <aas:type>GlobalReference</aas:type>
+                    <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerOrderCode</aas:value>
+                  </aas:key>
+                </aas:keys>
+              </aas:semanticId>
+              <aas:supplementalSemanticIds>
+                <aas:reference>
+                  <aas:type>ExternalReference</aas:type>
+                  <aas:keys>
+                    <aas:key>
+                      <aas:type>GlobalReference</aas:type>
+                      <aas:value>0173-1%2302-AAO227%23002</aas:value>
+                    </aas:key>
+                  </aas:keys>
+                </aas:reference>
+              </aas:supplementalSemanticIds>
+              <aas:valueType>xs:string</aas:valueType>
+            </aas:property>
+            <aas:submodelElementList>
+              <aas:idShort>productImages</aas:idShort>
+              <aas:displayName>
+                <aas:langStringNameType>
+                  <aas:language>en</aas:language>
+                  <aas:text>product images</aas:text>
+                </aas:langStringNameType>
+              </aas:displayName>
+              <aas:description>
+                <aas:langStringTextType>
+                  <aas:language>en</aas:language>
+                  <aas:text>Image files for associated product provided in common format (.png, .jpg).</aas:text>
+                </aas:langStringTextType>
+              </aas:description>
+              <aas:semanticId>
+                <aas:type>ExternalReference</aas:type>
+                <aas:keys>
+                  <aas:key>
+                    <aas:type>GlobalReference</aas:type>
+                    <aas:value>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#ProductImageSet</aas:value>
+                  </aas:key>
+                </aas:keys>
+              </aas:semanticId>
+              <aas:supplementalSemanticIds>
+                <aas:reference>
+                  <aas:type>ExternalReference</aas:type>
+                  <aas:keys>
+                    <aas:key>
+                      <aas:type>GlobalReference</aas:type>
+                      <aas:value>https://admin-shell.io/ZVEI/TechnicalData/ProductImages/1/1</aas:value>
+                    </aas:key>
+                  </aas:keys>
+                </aas:reference>
+              </aas:supplementalSemanticIds>
+              <aas:orderRelevant>false</aas:orderRelevant>
+              <aas:typeValueListElement>SubmodelElementCollection</aas:typeValueListElement>
+              <aas:value>
+                <aas:submodelElementCollection>
+                  <aas:idShort>productImages</aas:idShort>
+                  <aas:displayName>
+                    <aas:langStringNameType>
+                      <aas:language>en</aas:language>
+                      <aas:text>product images</aas:text>
+                    </aas:langStringNameType>
+                  </aas:displayName>
+                  <aas:description>
+                    <aas:langStringTextType>
+                      <aas:language>en</aas:language>
+                      <aas:text>Image files for associated product provided in common format (.png, .jpg).</aas:text>
+                    </aas:langStringTextType>
+                  </aas:description>
+                  <aas:supplementalSemanticIds>
+                    <aas:reference>
+                      <aas:type>ExternalReference</aas:type>
+                      <aas:keys>
+                        <aas:key>
+                          <aas:type>GlobalReference</aas:type>
+                          <aas:value>https://admin-shell.io/aas/3/1/File</aas:value>
+                        </aas:key>
+                      </aas:keys>
+                    </aas:reference>
+                  </aas:supplementalSemanticIds>
+                  <aas:value>
+                    <aas:property>
+                      <aas:idShort>resourceValue</aas:idShort>
+                      <aas:semanticId>
+                        <aas:type>ExternalReference</aas:type>
+                        <aas:keys>
+                          <aas:key>
+                            <aas:type>GlobalReference</aas:type>
+                            <aas:value>urn:samm:io.admin-shell.idta.shared:3.1.0#resourceValue</aas:value>
+                          </aas:key>
+                        </aas:keys>
+                      </aas:semanticId>
+                      <aas:valueType>xs:anyURI</aas:valueType>
+                    </aas:property>
+                    <aas:property>
+                      <aas:idShort>contentType</aas:idShort>
+                      <aas:displayName>
+                        <aas:langStringNameType>
+                          <aas:language>en</aas:language>
+                          <aas:text>content type</aas:text>
+                        </aas:langStringNameType>
+                      </aas:displayName>
+                      <aas:semanticId>
+                        <aas:type>ExternalReference</aas:type>
+                        <aas:keys>
+                          <aas:key>
+                            <aas:type>GlobalReference</aas:type>
+                            <aas:value>urn:samm:io.admin-shell.idta.shared:3.1.0#contentType</aas:value>
+                          </aas:key>
+                        </aas:keys>
+                      </aas:semanticId>
+                      <aas:supplementalSemanticIds>
+                        <aas:reference>
+                          <aas:type>ExternalReference</aas:type>
+                          <aas:keys>
+                            <aas:key>
+                              <aas:type>GlobalReference</aas:type>
+                              <aas:value>https://admin-shell.io/aas/3/1/File/contentType</aas:value>
+                            </aas:key>
+                          </aas:keys>
+                        </aas:reference>
+                        <aas:reference>
+                          <aas:type>ExternalReference</aas:type>
+                          <aas:keys>
+                            <aas:key>
+                              <aas:type>GlobalReference</aas:type>
+                              <aas:value>https://admin-shell.io/aas/3/1/Blob/contentType</aas:value>
+                            </aas:key>
+                          </aas:keys>
+                        </aas:reference>
+                      </aas:supplementalSemanticIds>
+                      <aas:valueType>xs:string</aas:valueType>
+                    </aas:property>
+                  </aas:value>
+                </aas:submodelElementCollection>
+              </aas:value>
+            </aas:submodelElementList>
+          </aas:value>
+        </aas:submodelElementCollection>
       </aas:submodelElements>
     </aas:submodel>
   </aas:submodels>
   <aas:conceptDescriptions>
     <aas:conceptDescription>
       <aas:category>APPLICATION_CLASS</aas:category>
-      <aas:idShort>MaterialComposition</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>MaterialComposition</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
+      <aas:idShort>TechnicalData</aas:idShort>
       <aas:description>
         <aas:langStringTextType>
           <aas:language>en</aas:language>
-          <aas:text>Mandatory data: Battery chemistry; critical raw materials; materials used in the cathode, anode, and 
-electrolyte; hazardous substances; impact of substances on the environment and on human health or 
-safety
-
-Copyright ? 2024 Circulor (for and on behalf of the Battery Pass Consortium). This work is li-censed under a Creative Commons License Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Readers may reproduce material for their own publications, as long as it is not sold com-mercially and is given appropriate attribution.</aas:text>
+          <aas:text>Technical data of the asset and associated product classificatons.</aas:text>
         </aas:langStringTextType>
       </aas:description>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#MaterialComposition</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#TechnicalData</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -550,23 +630,622 @@ Copyright ? 2024 Circulor (for and on behalf of the Battery Pass Consortium). Th
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>MaterialComposition</aas:text>
+                  <aas:text>TechnicalData</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>MaterialComposition</aas:text>
+                  <aas:text>TechnicalData</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>Mandatory data: Battery chemistry; critical raw materials; materials used in the cathode, anode, and 
-electrolyte; hazardous substances; impact of substances on the environment and on human health or 
-safety
+                  <aas:text>Technical data of the asset and associated product classificatons.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>furtherInformation</aas:idShort>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#furtherInformation</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>furtherInformation</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>furtherInformation</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Further information on the product, the validity of the information provided and this data record.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>technicalProperties</aas:idShort>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#technicalProperties</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>technicalProperties</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>technicalProperties</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Technical and product properties. Individual Characteristics that describe the product and its technical properties.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>productClassificationSystem</aas:idShort>
+      <aas:displayName>
+        <aas:langStringNameType>
+          <aas:language>en</aas:language>
+          <aas:text>product classification system</aas:text>
+        </aas:langStringNameType>
+      </aas:displayName>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassificationSystem</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>product classification system</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>productClassificationSystem</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Common name of the classification system.
+Note: Examples for common names for classification systems are "ECLASS" or "IEC CDD".</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>classificationSystemVersion</aas:idShort>
+      <aas:displayName>
+        <aas:langStringNameType>
+          <aas:language>en</aas:language>
+          <aas:text>classification system version</aas:text>
+        </aas:langStringNameType>
+      </aas:displayName>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#classificationSystemVersion</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>classification system version</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>classificationSystemVersion</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Common version identifier of the used classification system, in order to distinguish different version of the property dictionary.
+Note: Casing is to be ignored.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>productClassId</aas:idShort>
+      <aas:displayName>
+        <aas:langStringNameType>
+          <aas:language>en</aas:language>
+          <aas:text>product class ID</aas:text>
+        </aas:langStringNameType>
+      </aas:displayName>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassId</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>product class ID</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>productClassId</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Class of the associated product or industrial equipment in the classification system. According to the notation of the system.
+Note: Ideally, the Property/valueId is used to reference the IRI/ IRDI of the product class.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>productClassifications</aas:idShort>
+      <aas:displayName>
+        <aas:langStringNameType>
+          <aas:language>en</aas:language>
+          <aas:text>product classifications</aas:text>
+        </aas:langStringNameType>
+        <aas:langStringNameType>
+          <aas:language>de</aas:language>
+          <aas:text>Produkt-Klassifikationen</aas:text>
+        </aas:langStringNameType>
+      </aas:displayName>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productClassifications</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>product classifications</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>de</aas:language>
+                  <aas:text>Produkt-Klassifikationen</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>productClassifications</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Product classifications by association with product classes in common classification systems.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>manufacturerName</aas:idShort>
+      <aas:displayName>
+        <aas:langStringNameType>
+          <aas:language>de</aas:language>
+          <aas:text>Herstellername</aas:text>
+        </aas:langStringNameType>
+        <aas:langStringNameType>
+          <aas:language>en</aas:language>
+          <aas:text>manufacturer name</aas:text>
+        </aas:langStringNameType>
+      </aas:displayName>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerName</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>de</aas:language>
+                  <aas:text>Herstellername</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>manufacturer name</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>manufacturerName</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>de</aas:language>
+                  <aas:text>Name des Herstellers.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Legally valid designation of the natural or judicial person which is directly responsible for the design, production, packaging and labeling of a product in respect to its being brought into circulation.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>manufacturerLogo</aas:idShort>
+      <aas:displayName>
+        <aas:langStringNameType>
+          <aas:language>en</aas:language>
+          <aas:text>company logo</aas:text>
+        </aas:langStringNameType>
+        <aas:langStringNameType>
+          <aas:language>de</aas:language>
+          <aas:text>Firmenlogo</aas:text>
+        </aas:langStringNameType>
+      </aas:displayName>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerLogo</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>company logo</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>de</aas:language>
+                  <aas:text>Firmenlogo</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>manufacturerLogo</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>de</aas:language>
+                  <aas:text>Das Firmenlogo des Produkts.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>A graphic mark used to represent a company, an organisation or a product.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>manufacturerProductDesignation</aas:idShort>
+      <aas:displayName>
+        <aas:langStringNameType>
+          <aas:language>de</aas:language>
+          <aas:text>Produktbezeichnung</aas:text>
+        </aas:langStringNameType>
+        <aas:langStringNameType>
+          <aas:language>en</aas:language>
+          <aas:text>manufacturer product designation</aas:text>
+        </aas:langStringNameType>
+      </aas:displayName>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerProductDesignation</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>de</aas:language>
+                  <aas:text>Produktbezeichnung</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>manufacturer product designation</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>manufacturerProductDesignation</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>de</aas:language>
+                  <aas:text>Bezeichnung des Produkts.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Short description of the product (short text), third or lowest level of a 3 level manufacturer specific product hierarchy.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>manufacturerArticleNumber</aas:idShort>
+      <aas:displayName>
+        <aas:langStringNameType>
+          <aas:language>en</aas:language>
+          <aas:text>article number of the product</aas:text>
+        </aas:langStringNameType>
+        <aas:langStringNameType>
+          <aas:language>de</aas:language>
+          <aas:text>Artikelnummer des Produkts</aas:text>
+        </aas:langStringNameType>
+      </aas:displayName>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerArticleNumber</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>article number of the product</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>de</aas:language>
+                  <aas:text>Artikelnummer des Produkts</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>manufacturerArticleNumber</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Unique product identifier of the manufacturer Note: The manufacturer article number is represented as a string, although often a numerical ID.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>manufacturerOrderCode</aas:idShort>
+      <aas:displayName>
+        <aas:langStringNameType>
+          <aas:language>en</aas:language>
+          <aas:text>order code for the product</aas:text>
+        </aas:langStringNameType>
+        <aas:langStringNameType>
+          <aas:language>de</aas:language>
+          <aas:text>Bestellcode des Produkts</aas:text>
+        </aas:langStringNameType>
+      </aas:displayName>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#manufacturerOrderCode</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>order code for the product</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>de</aas:language>
+                  <aas:text>Bestellcode des Produkts</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>manufacturerOrderCode</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>de</aas:language>
+                  <aas:text>Eindeutige Zahlen- und Buchstabenkombination um das Produkt eindeutig für die Bestellung zu identifizieren.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Unique combination of numbers and letters used to identify the device for ordering.</aas:text>
+                </aas:langStringDefinitionTypeIec61360>
+              </aas:definition>
+            </aas:dataSpecificationIec61360>
+          </aas:dataSpecificationContent>
+        </aas:embeddedDataSpecification>
+      </aas:embeddedDataSpecifications>
+    </aas:conceptDescription>
+    <aas:conceptDescription>
+      <aas:idShort>resourceValue</aas:idShort>
+      <aas:id>urn:samm:io.admin-shell.idta.shared:3.1.0#resourceValue</aas:id>
+      <aas:embeddedDataSpecifications>
+        <aas:embeddedDataSpecification>
+          <aas:dataSpecification>
+            <aas:type>ExternalReference</aas:type>
+            <aas:keys>
+              <aas:key>
+                <aas:type>GlobalReference</aas:type>
+                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
+              </aas:key>
+            </aas:keys>
+          </aas:dataSpecification>
+          <aas:dataSpecificationContent>
+            <aas:dataSpecificationIec61360>
+              <aas:preferredName>
+                <aas:langStringPreferredNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>resourceValue</aas:text>
+                </aas:langStringPreferredNameTypeIec61360>
+              </aas:preferredName>
+              <aas:shortName>
+                <aas:langStringShortNameTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>resourceValue</aas:text>
+                </aas:langStringShortNameTypeIec61360>
+              </aas:shortName>
+              <aas:dataType>STRING</aas:dataType>
+              <aas:definition>
+                <aas:langStringDefinitionTypeIec61360>
+                  <aas:language>en</aas:language>
+                  <aas:text>Path and name of the file (with file extension).
 
-Copyright ? 2024 Circulor (for and on behalf of the Battery Pass Consortium). This work is li-censed under a Creative Commons License Attribution-NonCommercial 4.0 International (CC BY-NC 4.0). Readers may reproduce material for their own publications, as long as it is not sold com-mercially and is given appropriate attribution.</aas:text>
+The path can be absolute or relative.</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>
@@ -575,82 +1254,14 @@ Copyright ? 2024 Circulor (for and on behalf of the Battery Pass Consortium). Th
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>shortName</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#shortName</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>shortName</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>shortName</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>clearName</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#clearName</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>clearName</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>clearName</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>batteryChemistry</aas:idShort>
+      <aas:idShort>contentType</aas:idShort>
       <aas:displayName>
         <aas:langStringNameType>
           <aas:language>en</aas:language>
-          <aas:text>ProductChemistry</aas:text>
+          <aas:text>content type</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#batteryChemistry</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.shared:3.1.0#contentType</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -667,22 +1278,20 @@ Copyright ? 2024 Circulor (for and on behalf of the Battery Pass Consortium). Th
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>ProductChemistry</aas:text>
+                  <aas:text>content type</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>batteryChemistry</aas:text>
+                  <aas:text>contentType</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
               <aas:dataType>STRING</aas:dataType>
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>Composition of a product in general terms by specifying the cathode and anode active material as well as electrolyte.
-
-DIN DKE Spec 99100 chapter reference: 6.5.2</aas:text>
+                  <aas:text>Content type of the content of the file or blob.</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>
@@ -691,14 +1300,14 @@ DIN DKE Spec 99100 chapter reference: 6.5.2</aas:text>
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>componentName</aas:idShort>
+      <aas:idShort>productImages</aas:idShort>
       <aas:displayName>
         <aas:langStringNameType>
           <aas:language>en</aas:language>
-          <aas:text>Name</aas:text>
+          <aas:text>product images</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#componentName</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#productImages</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -715,100 +1324,20 @@ DIN DKE Spec 99100 chapter reference: 6.5.2</aas:text>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>Name</aas:text>
+                  <aas:text>product images</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>componentName</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>componentId</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>SubstanceId</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#componentId</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>SubstanceId</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>componentId</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>batteryMaterialLocation</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>Location</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#batteryMaterialLocation</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Location</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>batteryMaterialLocation</aas:text>
+                  <aas:text>productImages</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
               <aas:dataType>STRING</aas:dataType>
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>Battery component that relates to the material</aas:text>
+                  <aas:text>Image files for associated product provided in common format (.png, .jpg).</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>
@@ -817,14 +1346,14 @@ DIN DKE Spec 99100 chapter reference: 6.5.2</aas:text>
       </aas:embeddedDataSpecifications>
     </aas:conceptDescription>
     <aas:conceptDescription>
-      <aas:idShort>batteryMaterialIdentifier</aas:idShort>
+      <aas:idShort>generalInformation</aas:idShort>
       <aas:displayName>
         <aas:langStringNameType>
           <aas:language>en</aas:language>
-          <aas:text>Identifier</aas:text>
+          <aas:text>general information</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#batteryMaterialIdentifier</aas:id>
+      <aas:id>urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#generalInformation</aas:id>
       <aas:embeddedDataSpecifications>
         <aas:embeddedDataSpecification>
           <aas:dataSpecification>
@@ -841,569 +1370,20 @@ DIN DKE Spec 99100 chapter reference: 6.5.2</aas:text>
               <aas:preferredName>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>Identifier</aas:text>
+                  <aas:text>general information</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
                 <aas:langStringShortNameTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>batteryMaterialIdentifier</aas:text>
+                  <aas:text>generalInformation</aas:text>
                 </aas:langStringShortNameTypeIec61360>
               </aas:shortName>
               <aas:dataType>STRING</aas:dataType>
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>CAS Number </aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>batteryMaterialName</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>Name</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#batteryMaterialName</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Name</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>batteryMaterialName</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Clear name of Material</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>batteryMaterialMass</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>Weight</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#batteryMaterialMass</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Weight</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>batteryMaterialMass</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:unit>gram</aas:unit>
-              <aas:dataType>REAL_MEASURE</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Weight of component material</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>isCriticalRawMaterial</aas:idShort>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#isCriticalRawMaterial</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>isCriticalRawMaterial</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>isCriticalRawMaterial</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>BOOLEAN</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>The battery passport must contain information on the critical raw materials present in the battery.
-
-The information on the critical raw materials must also be provided on the battery label.
-Per Annex VI, Part A(10), critical raw materials must be reported if present in the battery in a concentration of more than 0,1 % weight by weight. </aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>batteryMaterials</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>BatteryMaterials</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#batteryMaterials</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>BatteryMaterials</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>batteryMaterials</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>"Component materials used" (No. 17.a-c): Naming the materials (as a composition of substances) in cathode, anode, electrolyte according to public standards, including specification of the corresponding component (i.e., cathode, anode, or electrolyte). We suggest a reporting threshold of 0.1 % weight by weight.
-
-DIN DKE Spec 99100 chapter reference: 6.5.3-6.5.4</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>hazardousSubstanceClass</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>Class</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceClass</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Class</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>hazardousSubstanceClass</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Battery Regulation narrows reporting to substances falling under defined hazard classes and categories of the CLP regulation.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-              <aas:valueList>
-                <aas:valueReferencePairs>
-                  <aas:valueReferencePair>
-                    <aas:value>AcuteToxicity</aas:value>
-                    <aas:valueId>
-                      <aas:type>ModelReference</aas:type>
-                      <aas:keys>
-                        <aas:key>
-                          <aas:type>DataElement</aas:type>
-                          <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#HazardousSubstanceClassChrateristicEnum:_AcuteToxicity90bfce19</aas:value>
-                        </aas:key>
-                      </aas:keys>
-                    </aas:valueId>
-                  </aas:valueReferencePair>
-                  <aas:valueReferencePair>
-                    <aas:value>SkinCorrosionOrIrritation</aas:value>
-                    <aas:valueId>
-                      <aas:type>ModelReference</aas:type>
-                      <aas:keys>
-                        <aas:key>
-                          <aas:type>DataElement</aas:type>
-                          <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#HazardousSubstanceClassChrateristicEnum:_SkinCorrosionOrIrritationf87a46ce</aas:value>
-                        </aas:key>
-                      </aas:keys>
-                    </aas:valueId>
-                  </aas:valueReferencePair>
-                  <aas:valueReferencePair>
-                    <aas:value>EyeDamageOrIrritation</aas:value>
-                    <aas:valueId>
-                      <aas:type>ModelReference</aas:type>
-                      <aas:keys>
-                        <aas:key>
-                          <aas:type>DataElement</aas:type>
-                          <aas:value>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#HazardousSubstanceClassChrateristicEnum:_EyeDamageOrIrritation3b92bbc2</aas:value>
-                        </aas:key>
-                      </aas:keys>
-                    </aas:valueId>
-                  </aas:valueReferencePair>
-                </aas:valueReferencePairs>
-              </aas:valueList>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>hazardousSubstanceName</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>Name</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceName</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Name</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>hazardousSubstanceName</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Clear name of hazardous substance</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>hazardousSubstanceConcentration</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>Concentration</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceConcentration</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Concentration</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>hazardousSubstanceConcentration</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:unit>percent</aas:unit>
-              <aas:dataType>REAL_MEASURE</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Concentration of hazardous substance</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>hazardousSubstanceImpact</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>Impact</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceImpact</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Impact</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>hazardousSubstanceImpact</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Impact statements based on, e.g., REACH or GHS for all hazard classes applicable to substances in the battery.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>hazardousSubstanceLocation</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>Location</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceLocation</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Location</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>hazardousSubstanceLocation</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Hazardous substances (No. 19-23): Location on a (sub-)component-level of all hazardous substances (as ?any substance that poses a threat to human health and the environment?). Suggested via a unique identifier or nomenclature.</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>hazardousSubstanceIdentifier</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>Identifier</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstanceIdentifier</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>Identifier</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>hazardousSubstanceIdentifier</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>CAS identifier of hazardous substance</aas:text>
-                </aas:langStringDefinitionTypeIec61360>
-              </aas:definition>
-            </aas:dataSpecificationIec61360>
-          </aas:dataSpecificationContent>
-        </aas:embeddedDataSpecification>
-      </aas:embeddedDataSpecifications>
-    </aas:conceptDescription>
-    <aas:conceptDescription>
-      <aas:idShort>hazardousSubstances</aas:idShort>
-      <aas:displayName>
-        <aas:langStringNameType>
-          <aas:language>en</aas:language>
-          <aas:text>HazardousSubstances</aas:text>
-        </aas:langStringNameType>
-      </aas:displayName>
-      <aas:id>urn:samm:io.BatteryPass.MaterialComposition:1.2.0#hazardousSubstances</aas:id>
-      <aas:embeddedDataSpecifications>
-        <aas:embeddedDataSpecification>
-          <aas:dataSpecification>
-            <aas:type>ExternalReference</aas:type>
-            <aas:keys>
-              <aas:key>
-                <aas:type>GlobalReference</aas:type>
-                <aas:value>https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0</aas:value>
-              </aas:key>
-            </aas:keys>
-          </aas:dataSpecification>
-          <aas:dataSpecificationContent>
-            <aas:dataSpecificationIec61360>
-              <aas:preferredName>
-                <aas:langStringPreferredNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>HazardousSubstances</aas:text>
-                </aas:langStringPreferredNameTypeIec61360>
-              </aas:preferredName>
-              <aas:shortName>
-                <aas:langStringShortNameTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>hazardousSubstances</aas:text>
-                </aas:langStringShortNameTypeIec61360>
-              </aas:shortName>
-              <aas:dataType>STRING</aas:dataType>
-              <aas:definition>
-                <aas:langStringDefinitionTypeIec61360>
-                  <aas:language>en</aas:language>
-                  <aas:text>"Hazardous substances" (No 20.a-e): Name (agreed substance nomenclature, e.g. IUPAC or chemical name) all hazardous substance (as ?any substance that poses a threat to human health and the environment?). Suggested above 0.1 % weight by weight within each (sub-)component.
-
-DIN DKE Spec 99100 chapter reference: 6.5.4 - 6.5.6</aas:text>
+                  <aas:text>General information, for example ordering and manufacturer information.</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>

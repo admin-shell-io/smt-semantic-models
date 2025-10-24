@@ -1,0 +1,2226 @@
+{
+  "assetAdministrationShells" : [ {
+    "modelType" : "AssetAdministrationShell",
+    "assetInformation" : {
+      "assetKind" : "Type"
+    },
+    "submodels" : [ {
+      "keys" : [ {
+        "type" : "Submodel",
+        "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#ContactInformations/submodel"
+      } ],
+      "type" : "ModelReference"
+    } ],
+    "administration" : { },
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#ContactInformations",
+    "description" : [ {
+      "language" : "en",
+      "text" : "defaultAdminShell"
+    } ],
+    "idShort" : "defaultAdminShell"
+  } ],
+  "conceptDescriptions" : [ {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "test Aspect for Contact Information"
+        }, {
+          "language" : "de",
+          "text" : "Test-Aspect für Kontaktinformation"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "ContactInformations"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#ContactInformations",
+    "category" : "APPLICATION_CLASS",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "test Aspect for Contact Information"
+    }, {
+      "language" : "de",
+      "text" : "Test-Aspect für Kontaktinformation"
+    } ],
+    "idShort" : "ContactInformations"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Function of a contact person in a process\nenumeration: 0173-1#07-AAS927#001 (administrativ contact), 0173-1#07-AAS928#001 (commercial contact), 0173-1#07-AAS929#001 (other contact), 0173-1#07-AAS930#001 (hazardous goods contact), 0173-1#07-AAS931#001 (technical contact)\nNote: the above mentioned ECLASS enumeration should be declared as “open” for further addition."
+        } ],
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "Rolle der Kontaktperson"
+        }, {
+          "language" : "en",
+          "text" : "role of contact person"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "roleOfContactPerson"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#roleOfContactPerson",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "Rolle der Kontaktperson"
+    }, {
+      "language" : "en",
+      "text" : "role of contact person"
+    } ],
+    "idShort" : "roleOfContactPerson"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "de",
+          "text" : "Länderkürzel."
+        }, {
+          "language" : "en",
+          "text" : "Code of a country (Country codes defined accord. to DIN EN ISO 3166-1)."
+        } ],
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "Länderkürzel"
+        }, {
+          "language" : "en",
+          "text" : "National code"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "nationalCode"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#nationalCode",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "Länderkürzel"
+    }, {
+      "language" : "en",
+      "text" : "National code"
+    } ],
+    "idShort" : "nationalCode"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "languages"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "languages"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#languages",
+    "idShort" : "languages"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Offsets from Coordinated Universal Time (UTC)\nNote: notation accord. to ISO 8601\nNote: for time in UTC the zone designator “Z” is to be used."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "time zone"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "timeZone"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#timeZone",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "time zone"
+    } ],
+    "idShort" : "timeZone"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Town or city."
+        }, {
+          "language" : "de",
+          "text" : "Ort."
+        } ],
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "Ort"
+        }, {
+          "language" : "en",
+          "text" : "City"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "cityTown"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#cityTown",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "Ort"
+    }, {
+      "language" : "en",
+      "text" : "City"
+    } ],
+    "idShort" : "cityTown"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Name of the company."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "company"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "company"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#company",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "company"
+    } ],
+    "idShort" : "company"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Administrative section within an organisation where a business partner is located."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "department"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "department"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#department",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "department"
+    } ],
+    "idShort" : "department"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Complete telephone number to be called to reach a business partner."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "telephone number"
+        }, {
+          "language" : "de",
+          "text" : "Telefonnummer"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "telephoneNumber"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#telephoneNumber",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "telephone number"
+    }, {
+      "language" : "de",
+      "text" : "Telefonnummer"
+    } ],
+    "idShort" : "telephoneNumber"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Characterization of a telephone according to its location or usage.\nenumeration: 0173-1%2307-AAS754%23001 (office), 0173-1%2307-AAS755%23001 (office mobile), 0173-1%2307-AAS756%23001 (secretary), 0173-1%2307-AAS757%23001 (substitute), 0173-1%2307-AAS758%23001 (home), 0173-1%2307-AAS759%23001 (private mobile)."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "typeOfTelephone"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "typeOfTelephone"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#typeOfTelephone",
+    "idShort" : "typeOfTelephone"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Specification of the available time window."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "available time"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "availableTime"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#availableTime",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "available time"
+    } ],
+    "idShort" : "availableTime"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Phone number including type."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "phone"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "phone"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#phone",
+    "idShort" : "phone"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Complete telephone number to be called to reach a business partner's fax machine."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "fax number"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "faxNumber"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#faxNumber",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "fax number"
+    } ],
+    "idShort" : "faxNumber"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Characterization of the fax according its location or usage\nenumeration: 0173-1%2307-AAS754%23001 (office), 0173-1%2307-AAS756%23001 (secretary), 0173-1%2307-AAS758%23001 (home)."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "type of fax number"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "typeOfFaxNumber"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#typeOfFaxNumber",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "type of fax number"
+    } ],
+    "idShort" : "typeOfFaxNumber"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "Fax"
+        }, {
+          "language" : "en",
+          "text" : "fax"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "fax"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#fax",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "Fax"
+    }, {
+      "language" : "en",
+      "text" : "fax"
+    } ],
+    "idShort" : "fax"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Electronic mail address of a business partner."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "email address"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "emailAddress"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#emailAddress",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "email address"
+    } ],
+    "idShort" : "emailAddress"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Public part of an unsymmetrical key pair to sign or encrypt text or messages."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "public key"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "publicKey"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#publicKey",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "public key"
+    } ],
+    "idShort" : "publicKey"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Characterization of an e-mail address according to its location or usage\nenumeration: 0173-1%2307-AAS754%23001 (office), 0173-1%2307-AAS756%23001 (secretary), 0173-1%2307-AAS757%23001 (substitute), 0173-1%2307-AAS758%23001 (home)."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "type of email address"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "typeOfEmailAddress"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#typeOfEmailAddress",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "type of email address"
+    } ],
+    "idShort" : "typeOfEmailAddress"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Characterization of a public key according to its encryption process."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "type of public key"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "typeOfPublicKey"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#typeOfPublicKey",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "type of public key"
+    } ],
+    "idShort" : "typeOfPublicKey"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "E-mail address and encryption method."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "email"
+        }, {
+          "language" : "de",
+          "text" : "Email"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "email"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#email",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "email"
+    }, {
+      "language" : "de",
+      "text" : "Email"
+    } ],
+    "idShort" : "email"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Web site address where information about the product or contact is given."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "address of additional link"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "addressOfAdditionalLinkOfIpCommunicationChannel"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#addressOfAdditionalLinkOfIpCommunicationChannel",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "address of additional link"
+    } ],
+    "idShort" : "addressOfAdditionalLinkOfIpCommunicationChannel"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Characterization of an IP-based communication channel."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "type of communication"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "typeOfCommunication"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#typeOfCommunication",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "type of communication"
+    } ],
+    "idShort" : "typeOfCommunication"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Specification of the available time windows."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "available time"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "availableTimeIpCommunicationChannel"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#availableTimeIpCommunicationChannel",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "available time"
+    } ],
+    "idShort" : "availableTimeIpCommunicationChannel"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "IP-based communication channels, e.g. chat or video call."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "IP communication channel"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "iPCommunicationChannels"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#iPCommunicationChannels",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "IP communication channel"
+    } ],
+    "idShort" : "iPCommunicationChannels"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "de",
+          "text" : "Straße und Nummer."
+        }, {
+          "language" : "en",
+          "text" : "Street name and house number."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "street"
+        }, {
+          "language" : "de",
+          "text" : "Straße"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "street"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#street",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "street"
+    }, {
+      "language" : "de",
+      "text" : "Straße"
+    } ],
+    "idShort" : "street"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "ZIP code of address."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "ZIP code"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "zipCode"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#zipCode",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "ZIP code"
+    } ],
+    "idShort" : "zipCode"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "P.O. box number."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "P.O. box"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "poBox"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#poBox",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "P.O. box"
+    } ],
+    "idShort" : "poBox"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "ZIP code of address."
+        }, {
+          "language" : "de",
+          "text" : "Postleitzahl."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "ZIP code"
+        }, {
+          "language" : "de",
+          "text" : "Postleitzahl"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "zipCodeOfPoBox"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#zipCodeOfPoBox",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "ZIP code"
+    }, {
+      "language" : "de",
+      "text" : "Postleitzahl"
+    } ],
+    "idShort" : "zipCodeOfPoBox"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Federal state, a part of a state."
+        }, {
+          "language" : "de",
+          "text" : "Bundesland/Region"
+        } ],
+        "preferredName" : [ {
+          "language" : "de",
+          "text" : "Bundesland/Region"
+        }, {
+          "language" : "en",
+          "text" : "state/county"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "stateCounty"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#stateCounty",
+    "displayName" : [ {
+      "language" : "de",
+      "text" : "Bundesland/Region"
+    }, {
+      "language" : "en",
+      "text" : "state/county"
+    } ],
+    "idShort" : "stateCounty"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "name of contact"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "nameOfContact"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#nameOfContact",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "name of contact"
+    } ],
+    "idShort" : "nameOfContact"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "First name of a contact person."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "first name"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "firstName"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#firstName",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "first name"
+    } ],
+    "idShort" : "firstName"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Middle names of contact person."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "middle names"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "middleNames"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#middleNames",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "middle names"
+    } ],
+    "idShort" : "middleNames"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Common, formal, religious, or other title preceding a contact person's name."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "title"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "title"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#title",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "title"
+    } ],
+    "idShort" : "title"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Academic title preceding a contact person's name."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "academic title"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "academicTitle"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#academicTitle",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "academic title"
+    } ],
+    "idShort" : "academicTitle"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Additional information of the contact person."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "furtherDetailsOfContact"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "furtherDetailsOfContact"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#furtherDetailsOfContact",
+    "idShort" : "furtherDetailsOfContact"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Web site address where information about the product or contact is given."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "address of additional link"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "addressOfAdditionalLink"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#addressOfAdditionalLink",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "address of additional link"
+    } ],
+    "idShort" : "addressOfAdditionalLink"
+  }, {
+    "modelType" : "ConceptDescription",
+    "embeddedDataSpecifications" : [ {
+      "dataSpecification" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/DataSpecificationTemplates/DataSpecificationIec61360/3/0"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "dataSpecificationContent" : {
+        "modelType" : "DataSpecificationIec61360",
+        "dataType" : "STRING",
+        "definition" : [ {
+          "language" : "en",
+          "text" : "Collection for various contact information."
+        } ],
+        "preferredName" : [ {
+          "language" : "en",
+          "text" : "information on contacts"
+        }, {
+          "language" : "de",
+          "text" : "Kontaktinformation"
+        } ],
+        "shortName" : [ {
+          "language" : "en",
+          "text" : "contactInformations"
+        } ]
+      }
+    } ],
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#contactInformations",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "information on contacts"
+    }, {
+      "language" : "de",
+      "text" : "Kontaktinformation"
+    } ],
+    "idShort" : "contactInformations"
+  } ],
+  "submodels" : [ {
+    "modelType" : "Submodel",
+    "kind" : "Template",
+    "semanticId" : {
+      "keys" : [ {
+        "type" : "GlobalReference",
+        "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#ContactInformations"
+      } ],
+      "type" : "ExternalReference"
+    },
+    "administration" : { },
+    "id" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#ContactInformations/submodel",
+    "idShort" : "ContactInformations",
+    "submodelElements" : [ {
+      "modelType" : "SubmodelElementList",
+      "semanticId" : {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#ContactInfomationSet"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "supplementalSemanticIds" : [ {
+        "keys" : [ {
+          "type" : "GlobalReference",
+          "value" : "https://admin-shell.io/zvei/nameplate/1/0/ContactInformations"
+        } ],
+        "type" : "ExternalReference"
+      } ],
+      "description" : [ {
+        "language" : "en",
+        "text" : "Collection for various contact information."
+      } ],
+      "displayName" : [ {
+        "language" : "en",
+        "text" : "information on contacts"
+      }, {
+        "language" : "de",
+        "text" : "Kontaktinformation"
+      } ],
+      "idShort" : "contactInformations",
+      "orderRelevant" : false,
+      "typeValueListElement" : "SubmodelElementCollection",
+      "value" : [ {
+        "modelType" : "SubmodelElementCollection",
+        "supplementalSemanticIds" : [ {
+          "keys" : [ {
+            "type" : "GlobalReference",
+            "value" : "0173-1%2302-AAQ837%23005"
+          } ],
+          "type" : "ExternalReference"
+        } ],
+        "description" : [ {
+          "language" : "en",
+          "text" : "Collection for various contact information."
+        } ],
+        "displayName" : [ {
+          "language" : "en",
+          "text" : "information on contacts"
+        }, {
+          "language" : "de",
+          "text" : "Kontaktinformation"
+        } ],
+        "idShort" : "contactInformations",
+        "value" : [ {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#roleOfContactPerson"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "173-1%2302-AAO204%23003"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:string",
+          "displayName" : [ {
+            "language" : "de",
+            "text" : "Rolle der Kontaktperson"
+          }, {
+            "language" : "en",
+            "text" : "role of contact person"
+          } ],
+          "idShort" : "roleOfContactPerson"
+        }, {
+          "modelType" : "MultiLanguageProperty",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#nationalCode"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1%2302-AAO134%23002"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "de",
+            "text" : "Länderkürzel."
+          }, {
+            "language" : "en",
+            "text" : "Code of a country (Country codes defined accord. to DIN EN ISO 3166-1)."
+          } ],
+          "displayName" : [ {
+            "language" : "de",
+            "text" : "Länderkürzel"
+          }, {
+            "language" : "en",
+            "text" : "National code"
+          } ],
+          "idShort" : "nationalCode"
+        }, {
+          "modelType" : "SubmodelElementList",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#LanguageSet"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://api.eclass-cdp.com/0173-1-02-AAN468-008"
+            } ],
+            "type" : "ExternalReference"
+          }, {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1%2302-AAN468%23008"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "idShort" : "languages",
+          "orderRelevant" : false,
+          "typeValueListElement" : "SubmodelElementCollection",
+          "value" : [ {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.admin-shell.idta.shared:3.1.0#languages"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "valueType" : "xs:string",
+            "idShort" : "languages"
+          } ]
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#timeZone"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/zvei/nameplate/1/0/ContactInformations/ContactInformation/TimeZone"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:string",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "time zone"
+          } ],
+          "idShort" : "timeZone"
+        }, {
+          "modelType" : "MultiLanguageProperty",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#cityTown"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1%2302-AAO132%23002"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "Town or city."
+          }, {
+            "language" : "de",
+            "text" : "Ort."
+          } ],
+          "displayName" : [ {
+            "language" : "de",
+            "text" : "Ort"
+          }, {
+            "language" : "en",
+            "text" : "City"
+          } ],
+          "idShort" : "cityTown"
+        }, {
+          "modelType" : "MultiLanguageProperty",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#company"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1%2302-AAW001%23001"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "Name of the company."
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "company"
+          } ],
+          "idShort" : "company"
+        }, {
+          "modelType" : "MultiLanguageProperty",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#department"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1%2302-AAO127%23003"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "Administrative section within an organisation where a business partner is located."
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "department"
+          } ],
+          "idShort" : "department"
+        }, {
+          "modelType" : "SubmodelElementCollection",
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1%2302-AAQ833%23005"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "Phone number including type."
+          } ],
+          "idShort" : "phone",
+          "value" : [ {
+            "modelType" : "MultiLanguageProperty",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#telephoneNumber"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "0173-1%2302-AAO136%23002"
+              } ],
+              "type" : "ExternalReference"
+            } ],
+            "description" : [ {
+              "language" : "en",
+              "text" : "Complete telephone number to be called to reach a business partner."
+            } ],
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "telephone number"
+            }, {
+              "language" : "de",
+              "text" : "Telefonnummer"
+            } ],
+            "idShort" : "telephoneNumber"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#typeOfTelephone"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "0173-1%2302-AAO137%23003"
+              } ],
+              "type" : "ExternalReference"
+            } ],
+            "valueType" : "xs:string",
+            "idShort" : "typeOfTelephone"
+          }, {
+            "modelType" : "MultiLanguageProperty",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#availableTime"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "description" : [ {
+              "language" : "en",
+              "text" : "Specification of the available time window."
+            } ],
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "available time"
+            } ],
+            "idShort" : "availableTime"
+          } ]
+        }, {
+          "modelType" : "SubmodelElementCollection",
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1%2302-AAQ834%23005"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "displayName" : [ {
+            "language" : "de",
+            "text" : "Fax"
+          }, {
+            "language" : "en",
+            "text" : "fax"
+          } ],
+          "idShort" : "fax",
+          "value" : [ {
+            "modelType" : "MultiLanguageProperty",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#faxNumber"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:idi:0173-1%2302-AAO195%23002"
+              } ],
+              "type" : "ExternalReference"
+            } ],
+            "description" : [ {
+              "language" : "en",
+              "text" : "Complete telephone number to be called to reach a business partner's fax machine."
+            } ],
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "fax number"
+            } ],
+            "idShort" : "faxNumber"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#typeOfFaxNumber"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "0173-1%2302-AAO196%23003"
+              } ],
+              "type" : "ExternalReference"
+            } ],
+            "valueType" : "xs:string",
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "type of fax number"
+            } ],
+            "idShort" : "typeOfFaxNumber"
+          } ]
+        }, {
+          "modelType" : "SubmodelElementCollection",
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1%2302-AAQ836%23005"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "E-mail address and encryption method."
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "email"
+          }, {
+            "language" : "de",
+            "text" : "Email"
+          } ],
+          "idShort" : "email",
+          "value" : [ {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#emailAddress"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "0173-1%2302-AAO198%23002"
+              } ],
+              "type" : "ExternalReference"
+            } ],
+            "valueType" : "xs:string",
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "email address"
+            } ],
+            "idShort" : "emailAddress"
+          }, {
+            "modelType" : "MultiLanguageProperty",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#publicKey"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "0173-1%2302-AAO200%23002"
+              } ],
+              "type" : "ExternalReference"
+            } ],
+            "description" : [ {
+              "language" : "en",
+              "text" : "Public part of an unsymmetrical key pair to sign or encrypt text or messages."
+            } ],
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "public key"
+            } ],
+            "idShort" : "publicKey"
+          }, {
+            "modelType" : "Property",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#typeOfEmailAddress"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "0173-1%2302-AAO199%23003"
+              } ],
+              "type" : "ExternalReference"
+            } ],
+            "valueType" : "xs:string",
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "type of email address"
+            } ],
+            "idShort" : "typeOfEmailAddress"
+          }, {
+            "modelType" : "MultiLanguageProperty",
+            "semanticId" : {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#typeOfPublicKey"
+              } ],
+              "type" : "ExternalReference"
+            },
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "0173-1%2302-AAO201%23002"
+              } ],
+              "type" : "ExternalReference"
+            } ],
+            "description" : [ {
+              "language" : "en",
+              "text" : "Characterization of a public key according to its encryption process."
+            } ],
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "type of public key"
+            } ],
+            "idShort" : "typeOfPublicKey"
+          } ]
+        }, {
+          "modelType" : "SubmodelElementList",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#IpCommunicationChannelSet"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "https://admin-shell.io/zvei/nameplate/1/0/ContactInformations/ContactInformation/IPCommunication"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "IP-based communication channels, e.g. chat or video call."
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "IP communication channel"
+          } ],
+          "idShort" : "iPCommunicationChannels",
+          "orderRelevant" : false,
+          "typeValueListElement" : "SubmodelElementCollection",
+          "value" : [ {
+            "modelType" : "SubmodelElementCollection",
+            "description" : [ {
+              "language" : "en",
+              "text" : "IP-based communication channels, e.g. chat or video call."
+            } ],
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "IP communication channel"
+            } ],
+            "idShort" : "iPCommunicationChannels",
+            "value" : [ {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#addressOfAdditionalLinkOfIpCommunicationChannel"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "0173-1%2302-AAQ326%23002"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "valueType" : "xs:string",
+              "displayName" : [ {
+                "language" : "en",
+                "text" : "address of additional link"
+              } ],
+              "idShort" : "addressOfAdditionalLinkOfIpCommunicationChannel"
+            }, {
+              "modelType" : "Property",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#typeOfCommunication"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://admin-shell.io/zvei/nameplate/1/0/ContactInformations/ContactInformation/IPCommunication/TypeOfCommunication"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "valueType" : "xs:string",
+              "displayName" : [ {
+                "language" : "en",
+                "text" : "type of communication"
+              } ],
+              "idShort" : "typeOfCommunication"
+            }, {
+              "modelType" : "MultiLanguageProperty",
+              "semanticId" : {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#availableTimeIpCommunicationChannel"
+                } ],
+                "type" : "ExternalReference"
+              },
+              "supplementalSemanticIds" : [ {
+                "keys" : [ {
+                  "type" : "GlobalReference",
+                  "value" : "https://admin-shell.io/zvei/nameplate/1/0/ContactInformations/ContactInformation/AvailableTime/"
+                } ],
+                "type" : "ExternalReference"
+              } ],
+              "description" : [ {
+                "language" : "en",
+                "text" : "Specification of the available time windows."
+              } ],
+              "displayName" : [ {
+                "language" : "en",
+                "text" : "available time"
+              } ],
+              "idShort" : "availableTimeIpCommunicationChannel"
+            } ]
+          } ]
+        }, {
+          "modelType" : "MultiLanguageProperty",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#street"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1%2302-AAO128%23002"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "de",
+            "text" : "Straße und Nummer."
+          }, {
+            "language" : "en",
+            "text" : "Street name and house number."
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "street"
+          }, {
+            "language" : "de",
+            "text" : "Straße"
+          } ],
+          "idShort" : "street"
+        }, {
+          "modelType" : "MultiLanguageProperty",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#zipCode"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1%2302-AAO129%23002"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "ZIP code of address."
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "ZIP code"
+          } ],
+          "idShort" : "zipCode"
+        }, {
+          "modelType" : "MultiLanguageProperty",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#poBox"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1%2302-AAO130%23002"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "P.O. box number."
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "P.O. box"
+          } ],
+          "idShort" : "poBox"
+        }, {
+          "modelType" : "MultiLanguageProperty",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#zipCodeOfPoBox"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1%2302-AAO129%23002"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "ZIP code of address."
+          }, {
+            "language" : "de",
+            "text" : "Postleitzahl."
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "ZIP code"
+          }, {
+            "language" : "de",
+            "text" : "Postleitzahl"
+          } ],
+          "idShort" : "zipCodeOfPoBox"
+        }, {
+          "modelType" : "MultiLanguageProperty",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#stateCounty"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1%2302-AAO133%23002"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "Federal state, a part of a state."
+          }, {
+            "language" : "de",
+            "text" : "Bundesland/Region"
+          } ],
+          "displayName" : [ {
+            "language" : "de",
+            "text" : "Bundesland/Region"
+          }, {
+            "language" : "en",
+            "text" : "state/county"
+          } ],
+          "idShort" : "stateCounty"
+        }, {
+          "modelType" : "MultiLanguageProperty",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#nameOfContact"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "name of contact"
+          } ],
+          "idShort" : "nameOfContact"
+        }, {
+          "modelType" : "MultiLanguageProperty",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#firstName"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1%2302-AAO206%23002"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "First name of a contact person."
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "first name"
+          } ],
+          "idShort" : "firstName"
+        }, {
+          "modelType" : "MultiLanguageProperty",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#middleNames"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1%2302-AAO207%23002"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "Middle names of contact person."
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "middle names"
+          } ],
+          "idShort" : "middleNames"
+        }, {
+          "modelType" : "MultiLanguageProperty",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#title"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1%2302-AAO208%23003"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "Common, formal, religious, or other title preceding a contact person's name."
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "title"
+          } ],
+          "idShort" : "title"
+        }, {
+          "modelType" : "MultiLanguageProperty",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#academicTitle"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1%2302-AAO209%23003"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "Academic title preceding a contact person's name."
+          } ],
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "academic title"
+          } ],
+          "idShort" : "academicTitle"
+        }, {
+          "modelType" : "MultiLanguageProperty",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#furtherDetailsOfContact"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1%2302-AAO210%23002"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "description" : [ {
+            "language" : "en",
+            "text" : "Additional information of the contact person."
+          } ],
+          "idShort" : "furtherDetailsOfContact"
+        }, {
+          "modelType" : "Property",
+          "semanticId" : {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#addressOfAdditionalLink"
+            } ],
+            "type" : "ExternalReference"
+          },
+          "supplementalSemanticIds" : [ {
+            "keys" : [ {
+              "type" : "GlobalReference",
+              "value" : "0173-1%2302-AAQ326%23002"
+            } ],
+            "type" : "ExternalReference"
+          } ],
+          "valueType" : "xs:string",
+          "displayName" : [ {
+            "language" : "en",
+            "text" : "address of additional link"
+          } ],
+          "idShort" : "addressOfAdditionalLink"
+        } ]
+      } ]
+    } ]
+  } ]
+}

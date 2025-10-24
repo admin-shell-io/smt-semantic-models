@@ -39,12 +39,12 @@
       "KeyWords" : [ {
         "en" : "Example multi language string"
       } ],
+      "Subtitle" : [ {
+        "en" : "Example multi language string"
+      } ],
       "OrganizationShortName" : "Example company",
       "Version" : "V1.2",
       "StatusValue" : "Released",
-      "SubTitle" : [ {
-        "en" : "Example multi language string"
-      } ],
       "OrganizationOfficialName" : "Example company Ltd.",
       "BasedOnReferences" : [ {
         "type" : "ModelReference",
