@@ -45,4 +45,4 @@ Dependencies:
 * urn:samm:io.BatteryPass.Performance:1.2.0
 
 Deviations:
-* informationOnAccidents is modelled as a DocumentSet (reuse from SMT HandoverDocumentation), in DIN SPEC 99100 it is described as a Reference to a pdf File.  
+* informationOnAccidents is modelled as a DocumentSet (reuse from SMT HandoverDocumentation), in DIN DKE SPEC 99100 it is described as a Reference to a pdf File.  
