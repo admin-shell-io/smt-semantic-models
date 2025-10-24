@@ -9,22 +9,22 @@
       "InitialInternalResistanceOnBatteryModule" : 10.0
     },
     "PowerCapability" : {
-      "RatioNominalBatteryPowerAndBatteryEnergy" : 1.2342603E37,
-      "PowerFade" : 3.4213563E37,
+      "RatioNominalBatteryPowerAndBatteryEnergy" : 1.5213282E38,
+      "PowerFade" : -7.015649E37,
       "MaximumPermittedBatteryPower" : "Infinity",
       "OriginalPowerCapability" : [ {
-        "atSoC" : -3.1778256E38,
-        "powerCapabilityAt" : -2.7181997E38
+        "atSoC" : 1.7341337E37,
+        "powerCapabilityAt" : -2.2925729E38
       } ]
     },
     "CapacityEnergyVoltage" : {
-      "CertifiedUsableBatteryEnergy" : 3.3770451E38,
+      "CertifiedUsableBatteryEnergy" : 3.1516585E37,
       "CapacityFade" : {
-        "capacityFadeValue" : 3.3422667E38,
-        "lastUpdate" : "2025-09-12T15:30:25.078+02:00"
+        "capacityFadeValue" : -8.3394616E37,
+        "lastUpdate" : "2025-10-24T12:55:06.211+02:00"
       },
       "NominalVoltage" : 4.3,
-      "RatedCapacity" : -5.097668E37,
+      "RatedCapacity" : 2.2624908E38,
       "MaxVoltage" : 6.0,
       "MinVoltage" : 2.04
     },
@@ -34,16 +34,16 @@
     },
     "Lifetime" : {
       "CapacityThresholdExhaustion" : -1.7976931348623157E308,
-      "CrateOfRelevantCycleLifeTest" : 2.7539936E38,
-      "NumberOfChargeDischargeCycles" : 2116146441073720777,
-      "ExpectedLifetimeInCalendarYears " : -21567
+      "CrateOfRelevantCycleLifeTest" : -8.651704E37,
+      "NumberOfChargeDischargeCycles" : -8614686800807876267,
+      "ExpectedLifetimeInCalendarYears " : -3481
     },
     "RoundTripEnergyEfficiency" : {
       "InitialRoundTripEnergyEfficiency" : 100,
-      "RoundTripEnergyEfficiencyAtFiftyofCycleLife" : 7.269944E37,
+      "RoundTripEnergyEfficiencyAtFiftyofCycleLife" : 2.0009588E37,
       "EnergyRoundTripEfficiencyFade" : {
-        "capacityFadeValue" : -2.8568032E38,
-        "lastUpdate" : "2025-09-12T15:30:25.078+02:00"
+        "capacityFadeValue" : -2.3760305E38,
+        "lastUpdate" : "2025-10-24T12:55:06.211+02:00"
       },
       "InitialSelfDischargingRate" : 2
     }
@@ -62,7 +62,7 @@
     } ],
     "ManufacturerOrderCode" : "JxkyvRnL",
     "ManufacturerArticleNumber" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
-    "WarrantyPeriod" : "--09",
+    "WarrantyPeriod" : "--10",
     "ManufacturerIdentifier" : "RYtGKbgicZaHCBRQDSx"
   }
 }
