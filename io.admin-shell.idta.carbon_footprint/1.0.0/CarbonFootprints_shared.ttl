@@ -105,12 +105,12 @@
    samm:preferredName "Lebenszyklusphasen"@de ;
    samm:description "Life cycle stages of the product according to the quantification requirements of the standard to which the PCF carbon footprint statement refers."@en ;
    samm:see <urn:irdi:0173-1%2302-ABG858%23003> ;
-   samm:characteristic :lifeCyclePhaseSet ;
+   samm:characteristic :LifeCyclePhaseSet ;
    samm:exampleValue "C4 - landfill" .
    
-:lifeCyclePhaseSet a samm-c:Set ;
-   samm:dataType xsd:string .
-   
+:LifeCyclePhaseSet a samm-c:Set ;
+   samm-c:elementCharacteristic :LifeCyclePhaseEnum .
+
 :quantityOfMeasureForCalculation a samm:Property ;
    samm:preferredName "quantity of measure for calculation"@en ;
    samm:preferredName "Mengenangabe für die Berechnung"@de ;
