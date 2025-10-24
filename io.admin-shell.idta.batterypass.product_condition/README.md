@@ -23,7 +23,7 @@ Source Content Hub of the IDTA: [IDTA-02035-5 V1.2]()
 # Dependencies
 
 This model is using  models or model elements of the BatteryPass Consortium: https://github.com/batterypass/BatteryPassDataModel
-with license CC BY-NC 4.0.
+with license CC BY 4.0.
 
 
 
