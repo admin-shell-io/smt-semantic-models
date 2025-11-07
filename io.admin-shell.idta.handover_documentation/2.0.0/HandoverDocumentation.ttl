@@ -60,6 +60,7 @@
      [ samm:property :documentIds; samm:payloadName "DocumentIds" ] 
 	 [ samm:property :documentClassifications; samm:payloadName "DocumentClassifications" ] 
 	 [ samm:property :documentVersions; samm:payloadName "DocumentVersions" ] 
+	 [ samm:property :documentEntities; samm:optional true; samm:payloadName "DocumentedEntities" ] 
 	 ) ;
    samm:description "A single handover document."@en ;
    samm:see <0173-1%2302-ABI500%23003/0173-1%2301-AHF579%23003> ;
@@ -105,9 +106,7 @@
 :DocumentVersion a samm-c:Set ;
    samm:dataType :DocumentVersionEntity .
 
-:ReferenceSet a samm-c:Set ;
-   samm:preferredName "set of references"@en ;
-   samm:dataType shared:ReferenceEntity .
+
 
 :DocumentIdEntity a samm:Entity ;
    samm:preferredName "Dokumentennummer Entity"@de ;
@@ -318,3 +317,14 @@
 :FileSet a samm-c:Set ;
    samm-c:elementCharacteristic shared:FileWithContentType .
 
+:documentedEntities a samm:Property ;
+   samm:preferredName "documented entities"@en ;
+   samm:preferredName "Dokumentierte Entitäten"@de ;
+   samm:description "Documented Entities."@en ;
+   samm:description "Liste der dokumentierten Entitäten"@de ;
+   samm:see https://admin-shell.io/vdi/2770/1/0/Document/DocumentedEntities ;
+   samm:characteristic :ReferenceSet .
+
+:ReferenceSet a samm-c:Set ;
+   samm:preferredName "set of references"@en ;
+   samm:dataType shared:ReferenceEntity .
