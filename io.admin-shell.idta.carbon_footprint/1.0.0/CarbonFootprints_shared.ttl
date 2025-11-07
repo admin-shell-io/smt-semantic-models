@@ -57,7 +57,7 @@
    samm:see <https://admin-shell.io/idta/CarbonFootprint/ProductCarbonFootprint/1/0> ;
    samm:properties ( 
    [ samm:property :pcfCalculationMethods; samm:payloadName "PcfCalculationMethods" ] 
-   [ samm:property :pcf2CoEq; samm:payloadName "PcfCo2eq" ] 
+   [ samm:property :pcfCo2eq; samm:payloadName "PcfCo2eq" ] 
    [ samm:property :referenceImpactUnitForCalculation; samm:payloadName "ReferenceImpactUnitForCalculation" ] 
    [ samm:property :quantityOfMeasureForCalculation; samm:payloadName "QuantityOfMeasureForCalculation" ]
    [ samm:property :lifeCyclePhases; samm:payloadName "LifeCyclePhases" ]  
@@ -131,7 +131,7 @@
    samm:characteristic samm-c:Text ;
    samm:exampleValue "piece" .
 
-:pcf2CoEq a samm:Property ;
+:pcfCo2eq a samm:Property ;
    samm:preferredName "CO2 eq Climate Change"@en ;
    samm:preferredName "CO2 eq Klimawandel"@de ;
    samm:description "Sum of all greenhouse gas emissions of a product according to the quantification requirements of the standard."@en ;
