@@ -143,8 +143,8 @@
    samm:exampleValue "17.2"^^xsd:double .
 
 :pcfCalculationMethods a samm:Property ;
-   samm:preferredName "Folgenabschätzungsmethode / Berechnungsmethode"@en ;
-   samm:preferredName "impact assessment method / calculation method"@de ;
+   samm:preferredName "Folgenabschätzungsmethode / Berechnungsmethode"@de ;
+   samm:preferredName "impact assessment method / calculation method"@en ;
    samm:description "Standards, methods for determining the greenhouse gas emissions of a product."@en ;
    samm:description "Normen, Standards, Verfahren zur Ermittlung der Treibhausgas-Emissionen eines Produkts."@de ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/PcfCalculationMethods/1/0> ;

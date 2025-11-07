@@ -115,7 +115,7 @@
    
 :pcfApiQuery a samm:Property ;
    samm:preferredName "query"@en ;
-   samm:preferredName "Abfrage"@dn ;
+   samm:preferredName "Abfrage"@de ;
    samm:description "Specific query that can be used to retrieve data from external sources to calculate the carbon footprint of a product."@en ;
    samm:description "Spezifische Abfrage, über die Daten zur Berechnung des CO2-Fußabdrucks eines Produkts von externen Quellen abgerufen werden können."@de ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/ExternalPcfApi/Query/1/0> ;
@@ -124,7 +124,7 @@
    
 :pcfRuleOperator a samm:Property ;
    samm:preferredName "operator of the PCF calculation method"@en ;
-   samm:preferredName "Herausgeber der PCF Berechnungsmethode"@dn ;
+   samm:preferredName "Herausgeber der PCF Berechnungsmethode"@de ;
    samm:description "Organization that defines and implements specific instructions and methods for calculating and monitoring the carbon footprint of a product or sector."@en ;
    samm:description "Einrichtung, welche spezifische Anweisungen und Methoden zur Berechnung und Überwachung des CO2-Fußabdrucks eines Produkts oder Sektors definiert und umsetzt."@de ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/ProductOrSectorSpecificRule/Operator/1/0> ;
@@ -133,7 +133,7 @@
    
 :pcfRuleName a samm:Property ;
    samm:preferredName "name of the PCF calculation method"@en ;
-   samm:preferredName "Name der PCF Berechnungsmethode"@dn ;
+   samm:preferredName "Name der PCF Berechnungsmethode"@de ;
    samm:description "Standard, method for determining the greenhouse gas emissions of a product."@en ;
    samm:description "Folgenabschätzungsmethode / Berechnungsmethode."@de ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/ProductOrSectorSpecificRule/Name/1/0> ;
@@ -141,7 +141,7 @@
 
 :pcfRuleVersion a samm:Property ;
    samm:preferredName "version of the PCF calculation method"@en ;
-   samm:preferredName "Version der PCF Berechnungsmethode"@dn ;
+   samm:preferredName "Version der PCF Berechnungsmethode"@de ;
    samm:description "Specific version or revision of the rule used to calculate the carbon footprint of a product."@en ;
    samm:description "Spezifische Ausgabe oder Revision der Regel, die zur Berechnung des CO2-Fußabdrucks eines Produkts verwendet wird."@de ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/ProductOrSectorSpecificRule/Version/1/0> ;
