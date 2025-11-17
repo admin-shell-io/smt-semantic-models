@@ -139,7 +139,7 @@
    samm:preferredName "Rolle der Kontaktperson"@de ;
    samm:preferredName "role of contact person"@en ;
    samm:see <urn:irdi:173-1%2302-AAO204%23003> ;
-   samm:description "Function of a contact person in a process\nenumeration: 0173-1#07-AAS927#001 (administrativ contact), 0173-1#07-AAS928#001 (commercial contact), 0173-1#07-AAS929#001 (other contact), 0173-1#07-AAS930#001 (hazardous goods contact), 0173-1#07-AAS931#001 (technical contact)\nNote: the above mentioned ECLASS enumeration should be declared as “open” for further addition."@en ;
+   samm:description "Function of a contact person in a process\nenumeration: 0173-1#07-AAS927#001 (administrativ contact), 0173-1#07-AAS928#001 (commercial contact), 0173-1#07-AAS929#001 (other contact), 0173-1#07-AAS930#001 (hazardous goods contact), 0173-1#07-AAS931#001 (technical contact)\nNote: the above mentioned ECLASS enumeration should be declared as 'open' for further addition."@en ;
    samm:characteristic [
       a samm:Characteristic ;
       samm:dataType xsd:string ;
