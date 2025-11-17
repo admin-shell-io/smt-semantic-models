@@ -8,7 +8,6 @@
 # SPDX-License-Identifier: CC-BY-4.0
 #######################################################################
 
-
 @prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
 @prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
 @prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
@@ -28,7 +27,8 @@
    samm:see <https://api.eclass-cdp.com/0173-1-01-AHF578-003> ;
    samm:properties ( 
       [ samm:property :documents; samm:payloadName "Documents" ] 
-	  [ samm:property :entities; samm:optional true; samm:payloadName "Entities" ] ) ;
+	  [ samm:property :entities; samm:optional true; samm:payloadName "Entities" ] 
+	  ) ;
    samm:operations ( ) ;
    samm:events ( ) .
 
@@ -60,7 +60,7 @@
      [ samm:property :documentIds; samm:payloadName "DocumentIds" ] 
 	 [ samm:property :documentClassifications; samm:payloadName "DocumentClassifications" ] 
 	 [ samm:property :documentVersions; samm:payloadName "DocumentVersions" ] 
-	 [ samm:property :documentEntities; samm:optional true; samm:payloadName "DocumentedEntities" ] 
+	 [ samm:property :documentedEntities; samm:optional true; samm:payloadName "DocumentedEntities" ] 
 	 ) ;
    samm:description "A single handover document."@en ;
    samm:see <0173-1%2302-ABI500%23003/0173-1%2301-AHF579%23003> ;
@@ -322,9 +322,11 @@
    samm:preferredName "Dokumentierte Entitäten"@de ;
    samm:description "Documented Entities."@en ;
    samm:description "Liste der dokumentierten Entitäten"@de ;
-   samm:see https://admin-shell.io/vdi/2770/1/0/Document/DocumentedEntities ;
+   samm:see <https://admin-shell.io/vdi/2770/1/0/Document/DocumentedEntities> ;
    samm:characteristic :ReferenceSet .
 
 :ReferenceSet a samm-c:Set ;
    samm:preferredName "set of references"@en ;
    samm:dataType shared:ReferenceEntity .
+   
+
