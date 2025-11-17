@@ -43,7 +43,7 @@
 :productCarbonFootprints a samm:Property ;
    samm:preferredName "product carbon footprints"@en ;
    samm:preferredName "Produkt CO2-Fußabdrücke"@de ;
-   samm:description "Balance of greenhouse gas emissions along the entire life cycle of a product in a defined application and in relation to a defined unit of use."@en ;
+   samm:description "(Set) Balance of greenhouse gas emissions along the entire life cycle of a product in a defined application and in relation to a defined unit of use."@en ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/CarbonFootprints/1/0> ;
    samm:characteristic :ProductCarbonFootprintSet .
 
