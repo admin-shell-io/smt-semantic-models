@@ -64,7 +64,7 @@
    samm:see <urn:irdi:0173-1%2302-AAQ833%23005> ;
    samm:properties ( 
    [ samm:property :telephoneNumber; samm:payloadName "TelephoneNumber" ]
-   [ samm:property :typeOfTelephone; samm:optional true; samm:payloadName "TYpeOfTelephone" ]
+   [ samm:property :typeOfTelephone; samm:optional true; samm:payloadName "TypeOfTelephone" ]
    [ samm:property :availableTime; samm:optional true; samm:payloadName "AvailableTime" ] 
    ) .
 
