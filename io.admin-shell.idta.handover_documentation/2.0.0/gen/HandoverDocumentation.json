@@ -5,6 +5,13 @@
       "DocumentIsPrimary" : true,
       "DocumentDomainId" : "1213455566"
     } ],
+    "DocumentedEntities" : [ {
+      "type" : "ModelReference",
+      "keys" : [ {
+        "value" : "id1234",
+        "key" : "Submodel"
+      } ]
+    } ],
     "DocumentVersions" : [ {
       "Description" : [ {
         "en" : "Example multi language string"
@@ -28,7 +35,6 @@
       "Title" : [ {
         "en" : "Example multi language string"
       } ],
-      "Languages" : [ "en" ],
       "RefersToEntities" : [ {
         "type" : "ModelReference",
         "keys" : [ {
@@ -43,6 +49,7 @@
         "en" : "Example multi language string"
       } ],
       "OrganizationShortName" : "Example company",
+      "Language" : [ "en" ],
       "Version" : "V1.2",
       "StatusValue" : "Released",
       "OrganizationOfficialName" : "Example company Ltd.",
