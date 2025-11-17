@@ -31,6 +31,6 @@ Dependencies:
 
 
 
-In the following only deviations from IDTA-02004-2-0 are documented:
+In the following change requests to IDTA-02004-2-0 are documented:
 
-* SML Language is named "Languages" (see also [issue #158](https://github.com/admin-shell-io/submodel-templates/issues/158))
+* SML Language should be renamed from "Language" to "Languages" (see also [issue #158](https://github.com/admin-shell-io/submodel-templates/issues/158))

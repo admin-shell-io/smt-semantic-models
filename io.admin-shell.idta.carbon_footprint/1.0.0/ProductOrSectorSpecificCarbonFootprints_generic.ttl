@@ -49,7 +49,7 @@
    [ samm:property pcf:productOrSectorSpecificPcfCalculationMethods; samm:payloadName "PcfCalculationMethods" ]
    [ samm:property pcf:productOrSectorSpecificRule; samm:payloadName "ProductOrSectorSpecificRule" ]
    [ samm:property pcf:externalPcfApi; samm:optional true; samm:payloadName "ExternalPcfApi" ]
-   [ samm:property :productOrSectorSpecificPcfInformation; samm:optional true; samm:payloadName "PcfInformation" ]
+   [ samm:property :productOrSectorSpecificPcfInformation; samm:payloadName "PcfInformation" ]
    ) .
 
 :productOrSectorSpecificPcfInformation a samm:Property ;

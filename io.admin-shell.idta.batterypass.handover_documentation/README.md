@@ -18,8 +18,7 @@ The battery passport consists of the following 7 parts:
 
 # General
 
-The folder "gen" for each version contains sammple JSON files generated for the aspect model(s)
-The folder "input" contains source files like .aasx or the submodel template specification itself
+The folder "gen" for each version contains sammple JSON files and html generated for the aspect model(s)
 
 # Changelog
 All notable changes to this model will be documented in this section.

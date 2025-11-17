@@ -57,7 +57,7 @@
    samm:see <https://admin-shell.io/idta/CarbonFootprint/ProductCarbonFootprint/1/0> ;
    samm:properties ( 
    [ samm:property :pcfCalculationMethods; samm:payloadName "PcfCalculationMethods" ] 
-   [ samm:property :pcf2CoEq; samm:payloadName "PcfCo2eq" ] 
+   [ samm:property :pcfCo2eq; samm:payloadName "PcfCo2eq" ] 
    [ samm:property :referenceImpactUnitForCalculation; samm:payloadName "ReferenceImpactUnitForCalculation" ] 
    [ samm:property :quantityOfMeasureForCalculation; samm:payloadName "QuantityOfMeasureForCalculation" ]
    [ samm:property :lifeCyclePhases; samm:payloadName "LifeCyclePhases" ]  
@@ -87,7 +87,10 @@
    samm:preferredName "goods address hand-over"@en ;
    samm:preferredName "Warenübergabeadresse"@de ;
    samm:description "Indicates the hand-over address of the goods transport."@en ;
-   samm:see <urn:irdi:0173-1%2301-AHF575%23003> ;
+   samm:see <https://admin-shell.io/zvei/nameplate/1/0/ContactInformations/AddressInformation> ;
+   samm:see <https://admin-shell.io/smt-dropin/smt-dropin-use/1/0> ;
+   samm:see <urn:irdi:0112/2///61360_7#AAS002#001> ;
+   samm:see <urn:irdi:0173-1#02-AAQ837#008> ;
    samm:characteristic :ContactAddressCharacteristic . 
    
 :ContactAddressCharacteristic a samm-c:SingleEntity ;
@@ -105,12 +108,12 @@
    samm:preferredName "Lebenszyklusphasen"@de ;
    samm:description "Life cycle stages of the product according to the quantification requirements of the standard to which the PCF carbon footprint statement refers."@en ;
    samm:see <urn:irdi:0173-1%2302-ABG858%23003> ;
-   samm:characteristic :lifeCyclePhaseSet ;
+   samm:characteristic :LifeCyclePhaseSet ;
    samm:exampleValue "C4 - landfill" .
    
-:lifeCyclePhaseSet a samm-c:Set ;
-   samm:dataType xsd:string .
-   
+:LifeCyclePhaseSet a samm-c:Set ;
+   samm-c:elementCharacteristic :LifeCyclePhaseEnum .
+
 :quantityOfMeasureForCalculation a samm:Property ;
    samm:preferredName "quantity of measure for calculation"@en ;
    samm:preferredName "Mengenangabe für die Berechnung"@de ;
@@ -131,7 +134,7 @@
    samm:characteristic samm-c:Text ;
    samm:exampleValue "piece" .
 
-:pcf2CoEq a samm:Property ;
+:pcfCo2eq a samm:Property ;
    samm:preferredName "CO2 eq Climate Change"@en ;
    samm:preferredName "CO2 eq Klimawandel"@de ;
    samm:description "Sum of all greenhouse gas emissions of a product according to the quantification requirements of the standard."@en ;
@@ -140,8 +143,8 @@
    samm:exampleValue "17.2"^^xsd:double .
 
 :pcfCalculationMethods a samm:Property ;
-   samm:preferredName "Folgenabschätzungsmethode / Berechnungsmethode"@en ;
-   samm:preferredName "impact assessment method / calculation method"@de ;
+   samm:preferredName "Folgenabschätzungsmethode / Berechnungsmethode"@de ;
+   samm:preferredName "impact assessment method / calculation method"@en ;
    samm:description "Standards, methods for determining the greenhouse gas emissions of a product."@en ;
    samm:description "Normen, Standards, Verfahren zur Ermittlung der Treibhausgas-Emissionen eines Produkts."@de ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/PcfCalculationMethods/1/0> ;

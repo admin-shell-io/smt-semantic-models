@@ -23,7 +23,7 @@ Source Content Hub of the IDTA: [IDTA-02035-5 V1.2]()
 # Dependencies
 
 This model is using  models or model elements of the BatteryPass Consortium: https://github.com/batterypass/BatteryPassDataModel
-with license CC BY-NC 4.0.
+with license CC BY 4.0.
 
 
 
@@ -45,4 +45,4 @@ Dependencies:
 * urn:samm:io.BatteryPass.Performance:1.2.0
 
 Deviations:
-* informationOnAccidents is modelled as a DocumentSet (reuse from SMT HandoverDocumentation), in DIN SPEC 99100 it is described as a Reference to a pdf File.  
+* informationOnAccidents is modelled as a DocumentSet (reuse from SMT HandoverDocumentation), in DIN DKE SPEC 99100 it is described as a Reference to a pdf File.  

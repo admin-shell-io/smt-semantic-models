@@ -107,10 +107,7 @@ to GenerationInformation:
 * in BatteryPass CurrentSelfDischargingRateValue is float, here InitialSelfDischargingRate is integer. Same for InitialRoundTripEnergyEfficiency, here integer, in BatteryPass for example RemainingRoundTripEnergyEfficiencyValue is float
 
 
-## Open Questions
+### Open issues
 
-### still open properties of Efficiency
-### still open properties of Resistance
-### for consistency SMC for TemperatureRangeIdleStateBoundaries should be introduced ?
-### should be remove optional [ samm:property tech:productClassifications; samm:optional true ] from generic Technical Data? We should if we do not have a recommendation what to add there
+* https://github.com/batterypass/BatteryPassDataModel/issues/33 Warrenty VS Warranty (Payload name already Warranty)
 
