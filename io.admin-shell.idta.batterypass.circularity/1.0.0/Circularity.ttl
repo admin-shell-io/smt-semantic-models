@@ -30,9 +30,11 @@
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.circularity:1.2.0#> .
 
 :Circularity a samm:Aspect ;
-   samm:description "Dismantling information (including at least: exploded diagrams of the battery system/pack showing the location of battery cells; disassembly sequences; type and number of fastening techniques to be unlocked; tools required for disassembly; warnings if risk of damaging parts exists; amount of cells used and layout); part numbers for components and contact details of sources for replacement spares; safety measures (Annex XIII (2b-d)); usable extinguishing agent (Annex VI, Part A(9))."@en ;
+   samm:description """Dismantling information (including at least: exploded diagrams of the battery system/pack showing the location of battery cells; disassembly sequences; type and number of fastening techniques to be unlocked; tools required for disassembly; warnings if risk of damaging parts exists; amount of cells used and layout); part numbers for components and contact details of sources for replacement spares; safety measures 
+   
+   (Annex XIII (2b-d)); usable extinguishing agent (Annex VI, Part A(9))."""@en ;
    samm:properties ( 
-	bp:dismantlingAndRemovalInformation 
+	:dismantlingAndRemovalInformation 
 	bp:sparePartSources 
 	bp:recycledContent 
 	bp:safetyMeasures 
@@ -44,5 +46,21 @@
 
 :dismantlingAndRemovalInformation a samm:Property ;
    samm:preferredName "dismantling and removal information"@en ;
-   samm:description "Dismantling and Removal information, including at least:- Exploded diagrams of the battery system/pack showing the location of battery cells- Disassembly sequences- Type and number of fastening techniques to be unlocked- Tools required for disassembly- Warnings if risk of damaging parts exists- Amount of cells used and layout. BR Annex XIII (2c)\n\nDIN DKE Spec 99100 chapter reference: 6.6.1.2"@en ;
-   samm:characteristic docu:DocumentSet .
+   samm:description """
+   Dismantling and Removal information, including at least:
+   * Exploded diagrams of the battery system/pack showing the location of battery cells
+   * Disassembly sequences
+   * Type and number of fastening techniques to be unlocked
+   * Tools required for disassembly
+   * Warnings if risk of damaging parts exists
+   * Amount of cells used and layout. 
+   
+   BR Annex XIII (2c)\n\nDIN DKE Spec 99100 chapter reference: 6.6.1.2
+   
+    > NOTE: For more information on the document identified by its document ID please refer to the Handover Documentation of the battery.
+	"""@en ;
+   samm:characteristic :documentIdentifierSet .
+   
+:documentIdentifierSet a samm-c:Set ;
+   samm:preferredName "set of document identifiers"@en ;
+   samm-c:elementCharacteristic docu:documentIdentifierCharacteristic .
