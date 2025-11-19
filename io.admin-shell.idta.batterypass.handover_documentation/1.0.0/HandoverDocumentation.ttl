@@ -24,7 +24,7 @@
 :HandoverDocumentation a samm:Aspect ;
    samm:preferredName "handover documentation of battery passport"@en ;
    samm:preferredName "Übergabe-Dokumentation des Batteriepasses"@de ;
-   samm:description "Handover Documentation defines a set meta data for the handover of documentation from the operator to the users of the Battery Passport."@en ;
+   samm:description "Handover Documentation defines a set of meta data for the handover of documentation from the operator to the users of the Battery Passport."@en ;
    samm:description "Enthält alle wichtigen Dokumente für den Kunden wie vom Batteriepass gefordert."@de ;
    samm:see <urn:irdi:0173-1%2301-AHF578%23003> ;
    samm:see <https://api.eclass-cdp.com/0173-1-01-AHF578-003> ;
