@@ -47,9 +47,10 @@
    samm:preferredName "negative events Entity"@en ;
    samm:description "Negative Events Entity provides the information of no of accidents and deep discharge, over discharge events."@en ;
    samm:properties ( 
-   :informationOnAccidents 
-   [ samm:property :noOfDeepDischargeEvents; samm:optional true ]
-   [ samm:property :noOfOverchargeEvents; samm:optional true ] 
+    
+   [ samm:property :informationOnAccidents;  samm:payloadName "InformationOnAccidents" ] 
+   [ samm:property :noOfDeepDischargeEvents; samm:optional true; samm:payloadName "NoOfDeepDischargeEvents" ]
+   [ samm:property :noOfOverchargeEvents; samm:optional true; samm:payloadName "NoOfOverchargeEvents" ] 
    ) .
    
 :noOfDeepDischargeEvents a samm:Property ;
