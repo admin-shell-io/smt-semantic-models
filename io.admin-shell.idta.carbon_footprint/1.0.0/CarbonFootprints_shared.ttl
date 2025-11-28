@@ -41,9 +41,9 @@
 @prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
 
 :productCarbonFootprints a samm:Property ;
-   samm:preferredName "product carbon footprint"@en ;
-   samm:preferredName "Produkt CO2-Fußabdruck"@de ;
-   samm:description "Balance of greenhouse gas emissions along the entire life cycle of a product in a defined application and in relation to a defined unit of use."@en ;
+   samm:preferredName "product carbon footprints"@en ;
+   samm:preferredName "Produkt CO2-Fußabdrücke"@de ;
+   samm:description "(Set) Balance of greenhouse gas emissions along the entire life cycle of a product in a defined application and in relation to a defined unit of use."@en ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/CarbonFootprints/1/0> ;
    samm:characteristic :ProductCarbonFootprintSet .
 
@@ -143,8 +143,8 @@
    samm:exampleValue "17.2"^^xsd:double .
 
 :pcfCalculationMethods a samm:Property ;
-   samm:preferredName "Folgenabschätzungsmethode / Berechnungsmethode"@de ;
    samm:preferredName "impact assessment method / calculation method"@en ;
+   samm:preferredName "Folgenabschätzungsmethode / Berechnungsmethode"@de ;
    samm:description "Standards, methods for determining the greenhouse gas emissions of a product."@en ;
    samm:description "Normen, Standards, Verfahren zur Ermittlung der Treibhausgas-Emissionen eines Produkts."@de ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/PcfCalculationMethods/1/0> ;

@@ -27,23 +27,14 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> .
-@prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#> .
+@prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
 @prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.1#> .
 @prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 
 
-
-:technicalProperties a samm:Property ;
-   samm:description "Technical and product properties. Individual Characteristics that describe the product and its technical properties."@en ;
-   samm:see <https://admin-shell.io/ZVEI/TechnicalData/TechnicalProperties/1/1> ;
-   samm:characteristic :TechnicalPropertiesCharacteristic .
-
-:TechnicalPropertiesCharacteristic a samm-c:SingleEntity ;
-   samm:dataType :TechnicalPropertiesEntity .
-
-:TechnicalPropertiesEntity a samm:Entity ;
+:TechnicalAttributesEntity a samm:Entity ;
   samm:properties (  
     [ samm:property :capacityEnergyVoltage; samm:payloadName "CapacityEnergyVoltage" ] 
     [ samm:property :roundTripEnergyEfficiency; samm:payloadName "RoundTripEnergyEfficiency" ] 
@@ -84,7 +75,7 @@
 :RoundTripEnergyEfficiencyEntity a samm:Entity ;
   samm:properties ( 
   [ samm:property :initialRoundTripEnergyEfficiency; samm:payloadName "InitialRoundTripEnergyEfficiency" ] 
-  [ samm:property bp:roundTripEfficiencyat50PerCentCycleLife; samm:payloadName "RoundTripEnergyEfficiencyAtFiftyofCycleLife" ]
+  [ samm:property bp:roundTripEfficiencyAt50PercentCycleLife; samm:payloadName "RoundTripEnergyEfficiencyAtFiftyofCycleLife" ]
   [ samm:property bp:capacityFade; samm:optional true; samm:payloadName "EnergyRoundTripEfficiencyFade" ]   
   [ samm:property :initialSelfDischargingRate; samm:optional true; samm:payloadName "InitialSelfDischargingRate" ] 
   ) .
@@ -151,7 +142,7 @@
 :LifetimeEntity a samm:Entity ;
   samm:properties ( 
       [ samm:property bp:expectedLifetime; samm:payloadName "ExpectedLifetimeInCalendarYears " ] 
-	  [ samm:property bp:expectedNumberOfCycles; samm:payloadName "NumberOfChargeDischargeCycles" ] 
+	  [ samm:property bp:expectedNumberOfCycles; samm:payloadName "ExpectedNumberOfCycles" ] 
       [ samm:property bp:capacityThresholdForExhaustion; samm:payloadName "CapacityThresholdExhaustion" ] 
       [ samm:property bp:cRateLifeCycleTest; samm:payloadName "CrateOfRelevantCycleLifeTest" ] 
   ) .

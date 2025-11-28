@@ -1,23 +1,19 @@
 {
-  "renewableContent" : -2.1837363E37,
-  "dismantlingAndRemovalInformation" : [ {
-    "documentType" : "BillOfMaterial",
-    "mimeType" : "eOMtThyhVNLWUZNRcBaQKxI",
-    "documentURL" : "telnet://192.0.2.16:80/"
-  } ],
+  "renewableContent" : 7.886797E37,
+  "dismantlingAndRemovalInformation" : [ "eOMtThyhVNLWUZNRcBaQKxI" ],
   "recycledContent" : [ {
-    "preConsumerShare" : 10.607893,
+    "preConsumerShare" : 94.09522,
     "recycledMaterial" : "Cobalt",
-    "postConsumerShare" : 33.179176
+    "postConsumerShare" : 75.63347
   } ],
   "endOfLifeInformation" : {
-    "separateCollection" : "ftp://ftp.is.co.za/rfc/rfc1808.txt",
-    "wastePrevention" : "http://www.wikipedia.org",
-    "informationOnCollection" : "telnet://192.0.2.16:80/"
+    "separateCollection" : "http://www.wikipedia.org",
+    "wastePrevention" : "http://www.ietf.org/rfc/rfc2396.txt",
+    "informationOnCollection" : "ftp://ftp.is.co.za/rfc/rfc1808.txt"
   },
   "safetyMeasures" : {
-    "safetyInstructions" : "http://www.ietf.org/rfc/rfc2396.txt",
-    "extinguishingAgent" : [ "RYtGKbgicZaHCBRQDSx" ]
+    "extinguishingAgents" : [ "RYtGKbgicZaHCBRQDSx" ],
+    "safetyInstructions" : "ftp://ftp.is.co.za/rfc/rfc1808.txt"
   },
   "sparePartSources" : [ {
     "nameOfSupplier" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
@@ -25,8 +21,8 @@
       "partName" : "Cell",
       "partNumber" : "JxkyvRnL"
     } ],
-    "supplierWebAddress" : "ftp://ftp.is.co.za/rfc/rfc1808.txt",
-    "emailAddressOfSupplier" : "_OvVbXekX5HQwY@_rbhBQ2xnofB-GgoI-A6ipWuuoA2jXKT4.F0kGWa0-IMEV5kUt4_1o2v5JglgM4p9lw.UVxfMeuzYDwdYqoIMVTBNDJSDzuZhmktphCDnlCIdIJnetVzbkiArrqDrRCfmilG",
+    "supplierWebAddress" : "telnet://192.0.2.16:80/",
+    "emailAddressOfSupplier" : "4FeHSXx9pS.VxYrzYXJw3ksWI9aC1noGQ2b@5BBGx.qgBKjoDrWuHc.3.HKwerA",
     "addressOfSupplier" : {
       "addressCountry" : "Germany",
       "streetAddress" : "Street 1",
