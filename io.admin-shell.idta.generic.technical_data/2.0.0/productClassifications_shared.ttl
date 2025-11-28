@@ -1,0 +1,94 @@
+######################################################################
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix nameplate: <urn:samm:io.admin-shell.idta.nameplate:3.0.0#> .
+@prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+
+
+   
+:ProductClassificationEntity a samm:Entity ;
+   samm:preferredName "product classification entity"@en ;
+   samm:description "Single product classification item by association with product class in a particular classification system or property dictionary."@en ;
+   samm:see <urn:irdi:0173-1#02-ABI502#003/0173-1#01-AHF581#003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABI502-003/0173-1-01-AHF581-003> ;
+   samm:properties ( 
+   [ samm:property :productClassificationSystem; samm:payloadName "ProductClassificationSystem" ]
+   [ samm:property :classificationSystemVersion; samm:optional true; samm:payloadName "ClassificationSystemVersion" ]
+   [ samm:property :classificationSystemUrl; samm:optional true; samm:payloadName "ClassificationSystemUrl" ]
+   [ samm:property :productClassId; samm:payloadName "ProductClassId" ] 
+   [ samm:property :productClassCodedName; samm:payloadName "ProductClassCodedName" ]
+   [ samm:property :productClassName; samm:optional true; samm:payloadName "ProductClassName" ]
+   [ samm:property :referenceToTechnicalPropertyArea; samm:optional true; samm:payloadName "ReferenceToTechnicalPropertyArea" ]
+   ) .
+
+
+:productClassificationSystem a samm:Property ;
+   samm:preferredName "product classification system"@en ;
+   samm:description "Common name of the classification system.\nNote: Examples for common names for classification systems are \"ECLASS\" or \"IEC CDD\"."@en ;
+   samm:see <https://admin-shell.io/ZVEI/TechnicalData/ProductClassificationSystem/1/1> ;
+   samm:see <urn:irdi:0173-1#02-ABL424#001> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABL424-001> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "ECLASS" .
+
+:classificationSystemVersion a samm:Property ;
+   samm:preferredName "classification system version"@en ;
+   samm:description "Common version identifier of the used classification system, in order to distinguish different version of the property dictionary.\nNote: Casing is to be ignored."@en ;
+   samm:see <https://admin-shell.io/ZVEI/TechnicalData/ClassificationSystemVersion/1/1> ;
+   samm:see <urn:irdi:0173-1#02-AAR710#003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-AAR710-003> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "9.0 (BASIC)" .
+
+:productClassId a samm:Property ;
+   samm:preferredName "product class ID"@en ;
+   samm:description "Class of the associated product or industrial equipment in the classification system. According to the notation of the system.\nNote: Ideally, the Property/valueId is used to reference the IRI/ IRDI of the product class."@en ;
+   samm:see <https://admin-shell.io/ZVEI/TechnicalData/ProductClassId/1/1> ;
+   samm:see <urn:irdi:0173-1#02-ABG776#003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABG776-003> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "27-01-88-77" .
+   
+:classificationSystemUrl a samm:Property ;
+   samm:preferredName "Classification system URL"@en ;
+   samm:description "URL of the used classification system."@en ;
+   samm:preferredName "Klassifizierungssystem-URL"@de ;
+   samm:description "URL zum Klassifizierungssystem."@de ;
+   samm:characteristic samm-c:Text .
+
+:productClassCodedName a samm:Property ;
+   samm:preferredName "Product classification coded name"@en ;
+   samm:description "Unique class code in a classification hierarchy."@en ;
+   samm:preferredName "Produktklassifizierungs-Code"@de ;
+   samm:description "Eindeutiger Code einer Klassifizierungs-Hierarchie."@de ;
+   samm:characteristic samm-c:Text .
+
+:productClassName a samm:Property ;
+   samm:preferredName "Product classification name"@en ;
+   samm:description "Name of product class in the used classification system."@en ;
+   samm:preferredName "Produktklassifizierungs-Name"@de ;
+   samm:description "Name der Produktklasse innerhalb des Klassifizierungssystems."@de ;
+   samm:characteristic shared:MultiLanguageTexts .
+   
+
+   
+:referenceToTechnicalPropertyArea a samm:Property ;
+   samm:preferredName "reference to technical property area"@en ;
+   samm:description "Reference to technical property area."@en ;
+   samm:characteristic shared:ReferenceType  .

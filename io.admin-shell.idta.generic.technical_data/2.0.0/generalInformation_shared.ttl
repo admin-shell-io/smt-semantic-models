@@ -23,7 +23,7 @@
    samm:see <https://admin-shell.io/ZVEI/TechnicalData/GeneralInformation/1/1> ;
    samm:properties ( 
    [ samm:property :manufacturerName; samm:payloadName "ManufacturerName" ] 
-   [ samm:property :manufacturerLogo; samm:optional true; samm:payloadName "CompanyLogo" ] 
+   [ samm:property :companyLogo; samm:optional true; samm:payloadName "CompanyLogo" ] 
    [ samm:property :manufacturerProductDesignation; samm:payloadName "ManufacturerProductDesignation" ] 
    [ samm:property :manufacturerArticleNumber; samm:payloadName "ManufacturerArticleNumber" ]  
    [ samm:property :manufacturerOrderCode; samm:payloadName "ManufacturerOrderCode" ] 
@@ -36,18 +36,16 @@
    samm:description "Legally valid designation of the natural or judicial person which is directly responsible for the design, production, packaging and labeling of a product in respect to its being brought into circulation."@en ;
    samm:description "Name des Herstellers."@de ;
    samm:see <urn:irdi:0173-1%2302-AAO677%23002> ;
-   samm:see <urn:irdi:0173-1%2302-AAO677%23004> ;
-   samm:see <https://api.eclass-cdp.com/0173-1-02-AAO677-004> ;
    samm:characteristic samm-c:Text .
    
-:manufacturerLogo a samm:Property ;
+:companyLogo a samm:Property ;
    samm:preferredName "Firmenlogo"@de ;
    samm:preferredName "company logo"@en ;
    samm:description "Das Firmenlogo des Produkts."@de ;
-   samm:description "A graphic mark used to represent a company, an organisation or a product."@en ;
+   samm:description "Imagefile for logo of the company provided in common format (.png, .jpg)"@en ;
    samm:see <https://admin-shell.io/ZVEI/TechnicalData/ManufacturerLogo/1/1> ;
    samm:see <urn:irdi:0173-1%2302-ABI776%23002> ;
-   samm:see <https://api.eclass-cdp.com/0173-1-02-ABI776-002> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-AAO677-004> ;
    samm:characteristic samm-c:ResourcePath .
    
 :manufacturerProductDesignation a samm:Property ;
@@ -56,6 +54,8 @@
    samm:description "Short description of the product (short text), third or lowest level of a 3 level manufacturer specific product hierarchy."@en ;
    samm:description "Bezeichnung des Produkts."@de ;
    samm:see <urn:irdi:0173-1%2302-AAW338%23001> ;
+   samm:see <urn:irdi:0173-1%2302-AAW338%23003> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABI776-002> ;
    samm:characteristic shared:MultiLanguageTexts .
 
 :manufacturerArticleNumber a samm:Property ;
@@ -63,6 +63,8 @@
    samm:preferredName "article number of the product"@en ;
    samm:description "Unique product identifier of the manufacturer Note: The manufacturer article number is represented as a string, although often a numerical ID."@en ;
    samm:see <urn:irdi:0173-1%2302-AAO676%23003> ;
+   samm:see <urn:irdi:0173-1%2302-AAO676%23005> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-AAO676-005> ;
    samm:characteristic samm-c:Text .
 
 :manufacturerOrderCode a samm:Property ;
@@ -71,6 +73,8 @@
    samm:description "Eindeutige Zahlen- und Buchstabenkombination um das Produkt eindeutig für die Bestellung zu identifizieren."@de ;
    samm:description "Unique combination of numbers and letters used to identify the device for ordering."@en ;
    samm:see <urn:irdi:0173-1%2302-AAO227%23002> ;
+   samm:see <urn:irdi:0173-1%2302-AAO227%23004> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-AAO227-004> ;
    samm:characteristic samm-c:Text .
    
 
