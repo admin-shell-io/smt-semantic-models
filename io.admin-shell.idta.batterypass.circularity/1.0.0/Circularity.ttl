@@ -34,12 +34,12 @@
    
    (Annex XIII (2b-d)); usable extinguishing agent (Annex VI, Part A(9))."""@en ;
    samm:properties ( 
-	:dismantlingAndRemovalInformation 
-	bp:sparePartSources 
-	bp:recycledContent 
-	bp:safetyMeasures 
-	bp:endOfLifeInformation 
-	bp:renewableContent 
+   	[ samm:property :dismantlingAndRemovalInformation; samm:payloadName "DismantlingAndRemovalInformation" ] 
+   	[ samm:property bp:sparePartSources; samm:payloadName "SparePartSources" ] 	 
+	[ samm:property bp:recycledContent; samm:payloadName "RecycledContent" ]  
+	[ samm:property bp:safetyMeasures; samm:payloadName "SafetyMeasures" ] 
+	[ samm:property bp:endOfLifeInformation; samm:payloadName "EndOfLifeInformation" ]  
+	[ samm:property bp:renewableContent; samm:payloadName "RenewableContent" ]  	 
 	) ;
    samm:operations ( ) ;
    samm:events ( ) .
