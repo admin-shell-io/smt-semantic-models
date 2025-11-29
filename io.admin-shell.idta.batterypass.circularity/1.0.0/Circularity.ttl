@@ -25,8 +25,9 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix bp: <urn:samm:io.BatteryPass.Circularity:1.2.0#> .
+@prefix bp: <urn:samm:io.BatteryPass.Circularity:2.0.0#> .
 @prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.circularity:1.2.0#> .
 
 :Circularity a samm:Aspect ;
@@ -34,7 +35,7 @@
    
    (Annex XIII (2b-d)); usable extinguishing agent (Annex VI, Part A(9))."""@en ;
    samm:properties ( 
-   	[ samm:property :dismantlingAndRemovalInformation; samm:payloadName "DismantlingAndRemovalInformation" ] 
+   	[ samm:property bp:dismantlingAndRemovalInformation; samm:payloadName "DismantlingAndRemovalInformation" ] 
    	[ samm:property bp:sparePartSources; samm:payloadName "SparePartSources" ] 	 
 	[ samm:property bp:recycledContent; samm:payloadName "RecycledContent" ]  
 	[ samm:property bp:safetyMeasures; samm:payloadName "SafetyMeasures" ] 
@@ -59,8 +60,5 @@
    
     > NOTE: For more information on the document identified by its document ID please refer to the Handover Documentation of the battery.
 	"""@en ;
-   samm:characteristic :documentIdentifierSet .
+   samm:characteristic shared:DocumentIdentifierSet .
    
-:documentIdentifierSet a samm-c:Set ;
-   samm:preferredName "set of document identifiers"@en ;
-   samm-c:elementCharacteristic docu:documentIdentifierCharacteristic .

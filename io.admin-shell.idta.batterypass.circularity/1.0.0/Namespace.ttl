@@ -19,6 +19,5 @@
 
 : a samm:Namespace ;
    samm:preferredName "namespace for circularity"@en ;
-   samm:description "This namespace is reserved for the Aspect Models and elements being the source for IDTA-02035-7 Digital Battery Passport - Part 7: Circularity, Version 1.0.
- "@en .
+   samm:description "This namespace is reserved for the Aspect Models and elements being the source for IDTA-02035-7 Digital Battery Passport - Part 7: Circularity, Version 1.0."@en .
 

@@ -1,32 +1,49 @@
 {
-  "renewableContent" : 7.886797E37,
-  "dismantlingAndRemovalInformation" : [ "eOMtThyhVNLWUZNRcBaQKxI" ],
-  "recycledContent" : [ {
-    "preConsumerShare" : 94.09522,
-    "recycledMaterial" : "Cobalt",
-    "postConsumerShare" : 75.63347
-  } ],
-  "endOfLifeInformation" : {
-    "separateCollection" : "http://www.wikipedia.org",
-    "wastePrevention" : "http://www.ietf.org/rfc/rfc2396.txt",
-    "informationOnCollection" : "ftp://ftp.is.co.za/rfc/rfc1808.txt"
-  },
-  "safetyMeasures" : {
-    "extinguishingAgents" : [ "RYtGKbgicZaHCBRQDSx" ],
-    "safetyInstructions" : "ftp://ftp.is.co.za/rfc/rfc1808.txt"
-  },
-  "sparePartSources" : [ {
-    "nameOfSupplier" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
-    "components" : [ {
-      "partName" : "Cell",
-      "partNumber" : "JxkyvRnL"
+  "DismantlingAndRemovalInformation" : [ "eOMtThyhVNLWUZNRcBaQKxI" ],
+  "SparePartSources" : [ {
+    "Components" : [ {
+      "PartName" : "Cell",
+      "PartNumber" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa"
     } ],
-    "supplierWebAddress" : "telnet://192.0.2.16:80/",
-    "emailAddressOfSupplier" : "4FeHSXx9pS.VxYrzYXJw3ksWI9aC1noGQ2b@5BBGx.qgBKjoDrWuHc.3.HKwerA",
-    "addressOfSupplier" : {
-      "addressCountry" : "Germany",
-      "streetAddress" : "Street 1",
-      "postalCode" : "DE-10719"
-    }
-  } ]
+    "AddressOfSupplier" : {
+      "PostalCode" : [ {
+        "de" : "DE-10719"
+      } ],
+      "Street" : [ {
+        "de" : "Musterstrasse 1"
+      } ],
+      "NationalCode" : [ {
+        "en" : "DE"
+      } ]
+    },
+    "EmailAddressOfSupplier" : {
+      "EmailAddress" : "email@muster-ag.de",
+      "PublicKey" : [ {
+        "en" : "0x07"
+      } ],
+      "TypeOfEmailAddress" : "office",
+      "TypeOfPublicKey" : [ {
+        "en" : "RSA"
+      } ]
+    },
+    "NameOfSupplier" : [ {
+      "en" : "ABC Company"
+    } ],
+    "SupplierWebAddress" : "https://example.com/information/product/1224/contact"
+  } ],
+  "RenewableContent" : 8.4204325E37,
+  "RecycledContent" : [ {
+    "PreConsumerShare" : 7.579241,
+    "RecycledMaterial" : "Cobalt",
+    "PostConsumerShare" : 61.813965
+  } ],
+  "SafetyMeasures" : {
+    "ExtinguishingAgents" : [ "RYtGKbgicZaHCBRQDSx" ],
+    "SafetyInstructions" : [ "JxkyvRnL" ]
+  },
+  "EndOfLifeInformation" : {
+    "WastePrevention" : [ "VLhpfQGTMDYpsBZxvfBoeygjb" ],
+    "SeparateCollection" : [ "UMaAIKKIkknjWEXJUfPxxQHeWKEJ" ],
+    "InformationOnCollection" : [ "dpHYZGhtgdntugzvvKAXLhM" ]
+  }
 }
