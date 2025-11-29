@@ -39,6 +39,7 @@
    samm:preferredName "general information"@en ;
    samm:description "General information, for example ordering and manufacturer information."@en ;
    samm:see <urn:irdi:0173-1#02-ABK161#002/0173-1#01-AHX838#002> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABK161-002/0173-1-01-AHX838-002> ;
    samm:characteristic :GeneralInformationCharacteristic .
 
 :GeneralInformationCharacteristic a samm-c:SingleEntity ;
@@ -48,7 +49,6 @@
    samm:preferredName "Produkt-Klassifikationen"@de ;
    samm:preferredName "product classifications"@en ;
    samm:description "Product classifications by association with product classes in common classification systems."@en ;
-   samm:see <https://admin-shell.io/ZVEI/TechnicalData/ProductClassifications/1/1> ;
    samm:see <urn:irdi:0173-1#02-ABK162#002> ;
    samm:see <https://api.eclass-cdp.com/0173-1-02-ABK162-002> ;
    samm:characteristic :ProductClassificationSet .
@@ -61,6 +61,8 @@
    samm:preferredName "Technische Daten-Bereiche"@de ;
    samm:description "List of all technical property areas."@en ;
    samm:description "Liste aller technischen Daten-Bereiche."@de ;
+   samm:see <urn:irdi:0173-1#02-ABK163#002> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABK163-002> ;
    samm:characteristic :TechnicalPropertyAreaSet .
 
 :TechnicalPropertyAreaSet a samm-c:Set ;
@@ -68,7 +70,8 @@
      
 :furtherInformation a samm:Property ;
    samm:description "Further information on the product, the validity of the information provided and this data record."@en ;
-   samm:see <https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1> ;
+   samm:see <urn:irdi:0173-1#02-ABK164#002> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABK164-002> ;
    samm:characteristic :FurtherInformationCharacteristic .
 
 :FurtherInformationCharacteristic a samm-c:SingleEntity ;
@@ -77,6 +80,8 @@
 :specificDescriptions a samm:Property ;
    samm:preferredName "specific descriptions"@en ;
    samm:description "Specific description areas for multiple use cases or areas of application."@en ;
+   samm:see <urn:irdi:0173-1#02-ABM221#001> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABM221-001> ;
    samm:characteristic :SpecificDescriptionsSet .
    
 :SpecificDescriptionsSet a samm-c:Set ;
