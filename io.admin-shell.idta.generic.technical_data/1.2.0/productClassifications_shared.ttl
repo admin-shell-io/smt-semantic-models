@@ -35,11 +35,7 @@
    samm:description "Single product classification item by association with product class in a particular classification system or property dictionary."@en ;
    samm:see <urn:irdi:0173-1#02-ABI502#003/0173-1#01-AHF581#003> ;
    samm:see <https://api.eclass-cdp.com/0173-1-02-ABI502-003/0173-1-01-AHF581-003> ;
-   samm:properties ( 
-   [ samm:property :productClassificationSystem; samm:payloadName "ProductClassificationSystem" ]
-   [ samm:property :classificationSystemVersion; samm:optional true; samm:payloadName "ClassificationSystemVersion" ]
-   [ samm:property :productClassId; samm:payloadName "ProductClassId" ] 
-   ) .
+   samm:properties ( [ samm:property :productClassificationSystem; samm:payloadName "ProductClassificationSystem" ] [ samm:property :classificationSystemVersion; samm:optional true; samm:payloadName "ClassificationSystemVersion" ] [ samm:property :productClassId; samm:payloadName "ProductClassId" ] ) .
 
 
 :productClassificationSystem a samm:Property ;
