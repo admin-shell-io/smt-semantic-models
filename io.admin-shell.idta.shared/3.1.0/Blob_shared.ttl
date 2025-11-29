@@ -1,0 +1,44 @@
+######################################################################
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+
+:BlobWithContentType a samm:Characteristic ;
+   samm:preferredName "Large Binary Object (BLOB) mit Content-Type"@de ;
+   samm:preferredName "Large Binary Object (BLOB) with content type"@en ;
+   samm:description "A Blob is a data element representing a file that is contained in the value attribute with its source code. The code syntax is characterized by its content type (MIME type)."@en ;
+   samm:see <https://admin-shell.io/aas/3/1/Blob> ;
+   samm:dataType :BlobWithContentTypeEntity .
+
+:blobValue a samm:Property ;
+   samm:preferredName "binary large object (BLOB)"@en ;
+   samm:description "The data of the BLOB (Binary Large Object)."@en ;
+   samm:characteristic :BlobType ;
+   samm:see <https://admin-shell.io/aas/3/1/Blob/value> ;
+   samm:exampleValue "SGVsbG8sIFdvcmxkIQ=="^^xsd:base64Binary .
+
+:BlobType a samm:Characteristic ;
+   samm:see <https://admin-shell.io/aas/3/1/BlobType> ;
+   samm:dataType xsd:base64Binary .
+
+:BlobWithContentTypeEntity a samm:Entity ;
+   samm:preferredName "Large Binary Object (BLOB) mit Content-Type"@de ;
+   samm:preferredName "Large Binary Object (BLOB) with content type"@en ;
+   samm:description "A Blob is a data element representing a file that is contained in the value attribute with its source code. The code syntax is characterized by its content type (MIME type)."@en ;
+   samm:see <https://admin-shell.io/aas/3/1/Blob> ;
+   samm:properties ( [ samm:property :blobValue; samm:payloadName "value" ] :contentType ) .
+

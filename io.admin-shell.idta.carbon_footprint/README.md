@@ -43,10 +43,12 @@ Dependencies:
 - In Contact Information Street is defined as street names and house number, in Pcf there are two separate properties. Neverthelesse the street property from Contact Information was used. In Contact Information it has IRDI urn:irdi:0173-1#02-AAO128#002. In Pcf it has IRDI 0173-1#02-ABH956#003.
 - SAMM does not allows numbers in names, therefore pcfCo2eq was renamed to pcfCoEq
 - Property "ArbitraryContent" as part of "PcfInformation" is modelled an SAMM Entity without properties
-- enumerations are not (yet) modelled
+- enumerations are not (yet) modelled:
+  -- ReferenceImpactUnitForCalculation - the list is open, i.e. additional values may be added. In SAMM enumerations are closed, therefore not modelled
+  -- PcfCalculationMethod - the list is open, i.e. additional values may be added. In SAMM enumerations are closed, therefore not modelled
+  
 
 # Known Issues generation of aasx from aspect model:
-- payload names are not considered when generating idShort
 - SubmodelElement File is realized as SMC with two properties (ExplanatoryStatement and PcfRuleOnlineReference)
 - no template qualifiers generated
 - the idShort of the Element within a SML has the idShort of the list, not of the element

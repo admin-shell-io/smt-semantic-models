@@ -9,7 +9,7 @@
 # https://creativecommons.org/licenses/by/4.0/.
 # SPDX-License-Identifier: CC-BY-4.0
 #
-# for namespace: urn:samm:io.catenax.pcf:7.0.0
+# for namespace: urn:samm:io.catenax.pcf:8.0.0
 # Copyright (c) 2022, 2023, 2024 ZF Friedrichshafen AG
 # Copyright (c) 2022, 2023, 2024 T-Systems International GmbH
 # Copyright (c) 2022, 2023, 2024 Robert Bosch Manufacturing Solutions GmbH
@@ -35,24 +35,22 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#> .
 @prefix pcf: <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#> .
-@prefix cx: <urn:samm:io.catenax.pcf:7.0.0#> .
+@prefix cx: <urn:samm:io.catenax.pcf:8.0.0#> .
 @prefix ext-shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix contact: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
 @prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
 
-  
 :productOrSectorSpecificCarbonFootprints a samm:Property ;
    samm:preferredName "product or sector specific carbon footprints"@en ;
+   samm:preferredName "Produkt- oder Sektor-spezifische C02-Fußabdrücke"@de ;
    samm:description "Product carbon footprints, which are determined in accordance with sector or product group-specific rules or guidelines and cover the life cycle or parts of a product life cycle."@en ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/ProductOrSectorSpecificCarbonFootprint/1/0> ;
    samm:characteristic :ProductOrSectorSpecificCarbonFootprintSet .
-
-
+  
 :ProductOrSectorSpecificCarbonFootprintSet a samm-c:Set ;
    samm:dataType :ProductOrSectorSpecificCarbonFootprintEntity .
 
-
-  
+ 
 :productOrSectorSpecificPcfCalculationMethods a samm:Property ;
    samm:preferredName "Folgenabschätzungsmethode / Berechnungsmethode"@en ;
    samm:preferredName "impact assessment method / calculation method"@de ;
@@ -74,7 +72,12 @@
    samm:dataType :ProductOrSectorSpecificRuleEntity .
 
 :ProductOrSectorSpecificRuleEntity a samm:Entity ;
-  samm:properties: ( [ samm:property :pcfRuleOperator; samm:payloadName "PcfRuleOperator" ] [ samm:property :pcfRuleName; samm:payloadName "PcfRuleName" ] [ samm:property :pcfRuleVersion; samm:optional true; samm:payloadName "PcfRuleVersion" ] [ samm:property :pcfRuleOnlineReference; samm:optional true; samm:payloadName "PcfRuleOnlineReference" ]) .
+  samm:properties: ( 
+  [ samm:property :pcfRuleOperator; samm:payloadName "PcfRuleOperator" ] 
+  [ samm:property :pcfRuleName; samm:payloadName "PcfRuleName" ] 
+  [ samm:property :pcfRuleVersion; samm:optional true; samm:payloadName "PcfRuleVersion" ] 
+  [ samm:property :pcfRuleOnlineReference; samm:optional true; samm:payloadName "PcfRuleOnlineReference" ]
+  ) .
 
 :externalPcfApi a samm:Property ;
    samm:preferredName "external API for PCF information"@en ;
@@ -93,19 +96,13 @@
   samm:description "An external service that provides carbon footprint information via an interface, allowing on-demand retrieval of this data when required."@en ;
   samm:description "Ein externer Dienst, der über eine Schnittstelle Informationen zum CO2-Fußabdruck bereitstellt und den Abruf dieser Daten auf Abruf ermöglicht."@de ;
   samm:see <https://admin-shell.io/idta/CarbonFootprint/ExternalPcfApi/1/0> ;
-  samm:properties: ( [ samm:property :pcfApiEndpoint; samm:payloadName "PcfApiEndpoint" ] [ samm:property :pcfApiQuery; samm:payloadName "PcfApiQuery" ]) .
+  samm:properties: ( 
+  [ samm:property :pcfApiEndpoint; samm:payloadName "PcfApiEndpoint" ]
+  [ samm:property :pcfApiQuery; samm:payloadName "PcfApiQuery" ]
+  ) .
  
 
-	 
-:LifeCylceCharacteristic a samm-c:Set ;
-   samm:dataType xsd:string .
 
-:PcfCo2eqCharacteristic a samm-c:Measurement ;
-   samm:dataType xsd:double ;
-   samm-c:unit samm-u:kilogram .
-
-:PcfCalculationMethodSet a samm-c:Set ;
-   samm:dataType xsd:string .
 
 :pcfApiEndpoint a samm:Property ;
    samm:preferredName "endpoint"@en ;
@@ -118,7 +115,7 @@
    
 :pcfApiQuery a samm:Property ;
    samm:preferredName "query"@en ;
-   samm:preferredName "Abfrage"@dn ;
+   samm:preferredName "Abfrage"@de ;
    samm:description "Specific query that can be used to retrieve data from external sources to calculate the carbon footprint of a product."@en ;
    samm:description "Spezifische Abfrage, über die Daten zur Berechnung des CO2-Fußabdrucks eines Produkts von externen Quellen abgerufen werden können."@de ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/ExternalPcfApi/Query/1/0> ;
@@ -127,7 +124,7 @@
    
 :pcfRuleOperator a samm:Property ;
    samm:preferredName "operator of the PCF calculation method"@en ;
-   samm:preferredName "Herausgeber der PCF Berechnungsmethode"@dn ;
+   samm:preferredName "Herausgeber der PCF Berechnungsmethode"@de ;
    samm:description "Organization that defines and implements specific instructions and methods for calculating and monitoring the carbon footprint of a product or sector."@en ;
    samm:description "Einrichtung, welche spezifische Anweisungen und Methoden zur Berechnung und Überwachung des CO2-Fußabdrucks eines Produkts oder Sektors definiert und umsetzt."@de ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/ProductOrSectorSpecificRule/Operator/1/0> ;
@@ -136,7 +133,7 @@
    
 :pcfRuleName a samm:Property ;
    samm:preferredName "name of the PCF calculation method"@en ;
-   samm:preferredName "Name der PCF Berechnungsmethode"@dn ;
+   samm:preferredName "Name der PCF Berechnungsmethode"@de ;
    samm:description "Standard, method for determining the greenhouse gas emissions of a product."@en ;
    samm:description "Folgenabschätzungsmethode / Berechnungsmethode."@de ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/ProductOrSectorSpecificRule/Name/1/0> ;
@@ -144,7 +141,7 @@
 
 :pcfRuleVersion a samm:Property ;
    samm:preferredName "version of the PCF calculation method"@en ;
-   samm:preferredName "Version der PCF Berechnungsmethode"@dn ;
+   samm:preferredName "Version der PCF Berechnungsmethode"@de ;
    samm:description "Specific version or revision of the rule used to calculate the carbon footprint of a product."@en ;
    samm:description "Spezifische Ausgabe oder Revision der Regel, die zur Berechnung des CO2-Fußabdrucks eines Produkts verwendet wird."@de ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/ProductOrSectorSpecificRule/Version/1/0> ;

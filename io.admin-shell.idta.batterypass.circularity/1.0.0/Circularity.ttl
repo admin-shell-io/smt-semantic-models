@@ -12,11 +12,10 @@
 # Copyright (c) 2025 Circulor GmbH on behalf of the Battery Pass Consortium
 #
 # The referenced work is made available under the terms of the
-# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
 # which is available at
-# https://creativecommons.org/licenses/by-nc/4.0/.
-#
-# SPDX-License-Identifier: CC-BY-NC-4.0
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
 #######################################################################
 
 @prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
@@ -26,23 +25,40 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix bp: <urn:samm:io.BatteryPass.Circularity:1.2.0#> .
+@prefix bp: <urn:samm:io.BatteryPass.Circularity:2.0.0#> .
 @prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.circularity:1.2.0#> .
 
 :Circularity a samm:Aspect ;
-   samm:description "Dismantling information (including at least: exploded diagrams of the battery system/pack showing the location of battery cells; disassembly sequences; type and number of fastening techniques to be unlocked; tools required for disassembly; warnings if risk of damaging parts exists; amount of cells used and layout); part numbers for components and contact details of sources for replacement spares; safety measures (Annex XIII (2b-d)); usable extinguishing agent (Annex VI, Part A(9))."@en ;
+   samm:description """Dismantling information (including at least: exploded diagrams of the battery system/pack showing the location of battery cells; disassembly sequences; type and number of fastening techniques to be unlocked; tools required for disassembly; warnings if risk of damaging parts exists; amount of cells used and layout); part numbers for components and contact details of sources for replacement spares; safety measures 
+   
+   (Annex XIII (2b-d)); usable extinguishing agent (Annex VI, Part A(9))."""@en ;
    samm:properties ( 
-	bp:dismantlingAndRemovalInformation 
-	bp:sparePartSources 
-	bp:recycledContent 
-	bp:safetyMeasures 
-	bp:endOfLifeInformation 
-	bp:renewableContent 
+   	[ samm:property bp:dismantlingAndRemovalInformation; samm:payloadName "DismantlingAndRemovalInformation" ] 
+   	[ samm:property bp:sparePartSources; samm:payloadName "SparePartSources" ] 	 
+	[ samm:property bp:recycledContent; samm:payloadName "RecycledContent" ]  
+	[ samm:property bp:safetyMeasures; samm:payloadName "SafetyMeasures" ] 
+	[ samm:property bp:endOfLifeInformation; samm:payloadName "EndOfLifeInformation" ]  
+	[ samm:property bp:renewableContent; samm:payloadName "RenewableContent" ]  	 
 	) ;
    samm:operations ( ) ;
    samm:events ( ) .
 
 :dismantlingAndRemovalInformation a samm:Property ;
-   samm:description "Dismantling and Removal information, including at least:- Exploded diagrams of the battery system/pack showing the location of battery cells- Disassembly sequences- Type and number of fastening techniques to be unlocked- Tools required for disassembly- Warnings if risk of damaging parts exists- Amount of cells used and layout. BR Annex XIII (2c)\n\nDIN DKE Spec 99100 chapter reference: 6.6.1.2"@en ;
-   samm:characteristic docu:DocumentSet .
+   samm:preferredName "dismantling and removal information"@en ;
+   samm:description """
+   Dismantling and Removal information, including at least:
+   * Exploded diagrams of the battery system/pack showing the location of battery cells
+   * Disassembly sequences
+   * Type and number of fastening techniques to be unlocked
+   * Tools required for disassembly
+   * Warnings if risk of damaging parts exists
+   * Amount of cells used and layout. 
+   
+   BR Annex XIII (2c)\n\nDIN DKE Spec 99100 chapter reference: 6.6.1.2
+   
+    > NOTE: For more information on the document identified by its document ID please refer to the Handover Documentation of the battery.
+	"""@en ;
+   samm:characteristic shared:DocumentIdentifierSet .
+   

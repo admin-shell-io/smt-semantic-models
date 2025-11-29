@@ -1,36 +1,49 @@
 {
-  "renewableContent" : -2.2312437E38,
-  "dismantlingAndRemovalInformation" : [ {
-    "documentType" : "BillOfMaterial",
-    "mimeType" : "eOMtThyhVNLWUZNRcBaQKxI",
-    "documentURL" : "telnet://192.0.2.16:80/"
-  } ],
-  "recycledContent" : [ {
-    "preConsumerShare" : 36.479477,
-    "recycledMaterial" : "Cobalt",
-    "postConsumerShare" : 92.669266
-  } ],
-  "endOfLifeInformation" : {
-    "separateCollection" : "ftp://ftp.is.co.za/rfc/rfc1808.txt",
-    "wastePrevention" : "http://www.wikipedia.org",
-    "informationOnCollection" : "telnet://192.0.2.16:80/"
-  },
-  "safetyMeasures" : {
-    "safetyInstructions" : "http://www.ietf.org/rfc/rfc2396.txt",
-    "extinguishingAgent" : [ "RYtGKbgicZaHCBRQDSx" ]
-  },
-  "sparePartSources" : [ {
-    "nameOfSupplier" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
-    "components" : [ {
-      "partName" : "Cell",
-      "partNumber" : "JxkyvRnL"
+  "DismantlingAndRemovalInformation" : [ "eOMtThyhVNLWUZNRcBaQKxI" ],
+  "SparePartSources" : [ {
+    "Components" : [ {
+      "PartName" : "Cell",
+      "PartNumber" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa"
     } ],
-    "supplierWebAddress" : "ftp://ftp.is.co.za/rfc/rfc1808.txt",
-    "emailAddressOfSupplier" : "w.--..---....wwww--.--www.--ww.-w-w.w-w--w.w.w-w.-w.-.ww.-..--..-w--w-ww..ww-ww-.---w.w-ww..--@.w--?SwKQBKyQnCgibLARrhmEZasmXJUKHjqAwmWXlDKCcbJtAuUOYRUovbLIUekneoEAixugmUjASGAuqLatOkYPPlcArJTlIwbr",
-    "addressOfSupplier" : {
-      "addressCountry" : "Germany",
-      "streetAddress" : "Street 1",
-      "postalCode" : "DE-10719"
-    }
-  } ]
+    "AddressOfSupplier" : {
+      "PostalCode" : [ {
+        "de" : "DE-10719"
+      } ],
+      "Street" : [ {
+        "de" : "Musterstrasse 1"
+      } ],
+      "NationalCode" : [ {
+        "en" : "DE"
+      } ]
+    },
+    "EmailAddressOfSupplier" : {
+      "EmailAddress" : "email@muster-ag.de",
+      "PublicKey" : [ {
+        "en" : "0x07"
+      } ],
+      "TypeOfEmailAddress" : "office",
+      "TypeOfPublicKey" : [ {
+        "en" : "RSA"
+      } ]
+    },
+    "NameOfSupplier" : [ {
+      "en" : "ABC Company"
+    } ],
+    "SupplierWebAddress" : "https://example.com/information/product/1224/contact"
+  } ],
+  "RenewableContent" : 8.4204325E37,
+  "RecycledContent" : [ {
+    "PreConsumerShare" : 7.579241,
+    "RecycledMaterial" : "Cobalt",
+    "PostConsumerShare" : 61.813965
+  } ],
+  "SafetyMeasures" : {
+    "ExtinguishingAgents" : [ "RYtGKbgicZaHCBRQDSx" ],
+    "SafetyInstructions" : [ "JxkyvRnL" ]
+  },
+  "EndOfLifeInformation" : {
+    "WastePrevention" : [ "VLhpfQGTMDYpsBZxvfBoeygjb" ],
+    "SeparateCollection" : [ "UMaAIKKIkknjWEXJUfPxxQHeWKEJ" ],
+    "InformationOnCollection" : [ "dpHYZGhtgdntugzvvKAXLhM" ]
+  }
 }

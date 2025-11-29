@@ -22,6 +22,7 @@ Contained Files:
 
 * HandoverDocumentation.ttl: the aspect model for the SMT
 * Organization_shared.ttl: properties "organizationOfficialName" and "organizationName" for official and short form of organizational names
+* Namespace.ttl: information on namespace
 
 Dependencies:
 
@@ -30,6 +31,6 @@ Dependencies:
 
 
 
-In the following only deviations from IDTA-02004-2-0 are documented:
+In the following change requests to IDTA-02004-2-0 are documented:
 
-NONE
+* SML Language should be renamed from "Language" to "Languages" (see also [issue #158](https://github.com/admin-shell-io/submodel-templates/issues/158))

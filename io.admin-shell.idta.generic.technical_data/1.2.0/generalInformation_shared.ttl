@@ -21,7 +21,14 @@
 
 :GeneralInformationEntity a samm:Entity ;
    samm:see <https://admin-shell.io/ZVEI/TechnicalData/GeneralInformation/1/1> ;
-   samm:properties ( [ samm:property :manufacturerName; samm:payloadName "ManufacturerName" ] [ samm:property :manufacturerLogo; samm:optional true; samm:payloadName "ManufacturerLogo" ] [ samm:property :manufacturerProductDesignation; samm:payloadName "ManufacturerProductDesignation" ] [ samm:property :manufacturerArticleNumber; samm:payloadName "ManufacturerArticleNumber" ]  [ samm:property :manufacturerOrderCode; samm:payloadName "ManufacturerOrderCode" ] [ samm:property :productImages; samm:optional true; samm:payloadName "ProductImages" ] ) .
+   samm:properties ( 
+   [ samm:property :manufacturerName; samm:payloadName "ManufacturerName" ] 
+   [ samm:property :manufacturerLogo; samm:optional true; samm:payloadName "ManufacturerLogo" ] 
+   [ samm:property :manufacturerProductDesignation; samm:payloadName "ManufacturerProductDesignation" ]
+   [ samm:property :manufacturerArticleNumber; samm:payloadName "ManufacturerArticleNumber" ]
+   [ samm:property :manufacturerOrderCode; samm:payloadName "ManufacturerOrderCode" ]
+   [ samm:property :productImages; samm:optional true; samm:payloadName "ProductImages" ] 
+   ) .
    
 :manufacturerName a samm:Property ;
    samm:preferredName "manufacturer name"@en ;

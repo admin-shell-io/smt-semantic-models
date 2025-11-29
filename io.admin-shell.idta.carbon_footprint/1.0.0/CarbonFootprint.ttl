@@ -9,7 +9,7 @@
 # https://creativecommons.org/licenses/by/4.0/.
 # SPDX-License-Identifier: CC-BY-4.0
 #
-# for namespace: urn:samm:io.catenax.pcf:7.0.0
+# for namespace: urn:samm:io.catenax.pcf:8.0.0
 # Copyright (c) 2022, 2023, 2024 ZF Friedrichshafen AG
 # Copyright (c) 2022, 2023, 2024 T-Systems International GmbH
 # Copyright (c) 2022, 2023, 2024 Robert Bosch Manufacturing Solutions GmbH
@@ -35,14 +35,14 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#> .
 @prefix pcf: <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#> .
-@prefix cx: <urn:samm:io.catenax.pcf:7.0.0#> .
+@prefix cx: <urn:samm:io.catenax.pcf:8.0.0#> .
 @prefix ext-shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix contact: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
 @prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
 
 :CarbonFootprint a samm:Aspect ;
    samm:preferredName "Carbon Footprint"@en ;
-   samm:preferredName "C02 Footprint"@de ;
+   samm:preferredName "C02 Fußabdruck"@de ;
    samm:description "Provides the means to access the Carbon Footprint of the asset."@en ;
    samm:see <https://admin-shell.io/idta/SubmodelTemplate/CarbonFootprint/1/0> ;
    samm:see <https://admin-shell.io/IDTA-02023-1-0> ;

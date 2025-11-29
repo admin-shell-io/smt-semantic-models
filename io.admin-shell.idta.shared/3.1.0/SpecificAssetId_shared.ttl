@@ -16,7 +16,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
-@prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
 
 :externalSubjectId a samm:Property ;
    samm:preferredName "external subject ID"@en ;
@@ -35,7 +34,11 @@
    samm:preferredName "specific asset ID"@en ;
    samm:description "A specific asset ID describes a generic supplementary identifying attribute of the asset. The specific asset ID is not necessarily globally unique."@en ;
    samm:see <https://admin-shell.io/aas/3/1/SpecificAssetId> ;
-   samm:properties ( [ samm:property :externalSubjectId; samm:optional true ] [ samm:property :specificAssetIdValue; samm:payloadName "value" ] [ samm:property :specificAssetIdName; samm:payloadName "name" ] ) .
+   samm:properties ( 
+   [ samm:property :externalSubjectId; samm:optional true ]
+   [ samm:property :specificAssetIdValue; samm:payloadName "value" ] 
+   [ samm:property :specificAssetIdName; samm:payloadName "name" ] 
+   ) .
 
 :specificAssetIdValue a samm:Property ;
    samm:preferredName "value"@en ;

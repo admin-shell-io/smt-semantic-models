@@ -22,11 +22,6 @@
    samm:characteristic samm-c:ResourcePath ;
    samm:exampleValue "https://example.com/SafetyInstructions.pdf"^^xsd:anyURI .
 
-:contentType a samm:Property ;
-   samm:description "Content type of the content of the file."@en ;
-   samm:characteristic samm-c:MimeType ;
-   samm:exampleValue "application/pdf" .
-
 :FileWithContentType a samm:Characteristic ;
    samm:dataType :ResourceWithContentType .
 

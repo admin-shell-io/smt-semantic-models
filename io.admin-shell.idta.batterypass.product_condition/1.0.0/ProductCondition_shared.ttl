@@ -12,11 +12,10 @@
 # Copyright (c) 2025 Circulor GmbH on behalf of the Battery Pass Consortium
 #
 # The referenced work is made available under the terms of the
-# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
 # which is available at
-# https://creativecommons.org/licenses/by-nc/4.0/.
-#
-# SPDX-License-Identifier: CC-BY-NC-4.0
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
 #######################################################################
 
 @prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
@@ -27,7 +26,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#> .
-@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.0#> .
+@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.1#> .
 @prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
 
 
@@ -47,7 +46,12 @@
 :NegativeEventsEntity a samm:Entity ;
    samm:preferredName "negative events Entity"@en ;
    samm:description "Negative Events Entity provides the information of no of accidents and deep discharge, over discharge events."@en ;
-   samm:properties ( :informationOnAccidents [ samm:property :noOfDeepDischargeEvents; samm:optional true ] [ samm:property :noOfOverchargeEvents; samm:optional true ] ) .
+   samm:properties ( 
+    
+   [ samm:property :informationOnAccidents;  samm:payloadName "InformationOnAccidents" ] 
+   [ samm:property :noOfDeepDischargeEvents; samm:optional true; samm:payloadName "NoOfDeepDischargeEvents" ]
+   [ samm:property :noOfOverchargeEvents; samm:optional true; samm:payloadName "NoOfOverchargeEvents" ] 
+   ) .
    
 :noOfDeepDischargeEvents a samm:Property ;
    samm:preferredName "number of deep discharge events"@en ;

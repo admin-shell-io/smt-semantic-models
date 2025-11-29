@@ -39,5 +39,29 @@
 :AdressInformation a samm:Entity ;
    samm:description "Contains information on how to contact the manufacturer or an authorised service provider, e.g. when a maintenance service is required."@en ;
    samm:see <urn:irdi:0173-1%2302-AAQ837%23005> ;
-   samm:properties ( [ samm:property contactInformation:roleOfContactPerson; samm:optional true; samm:payloadName "RoleOfContactPerson" ] [ samm:property contactInformation:nationalCode; samm:payloadName "NationalCode" ] [ samm:property shared:languages; samm:optional true; samm:payloadName "Languages" ] [ samm:property contactInformation:timeZone; samm:optional true; samm:payloadName "TimeZone" ]  [ samm:property contactInformation:cityTown; samm:payloadName "CityTown" ] [ samm:property contactInformation:company; samm:optional true; samm:payloadName "Company" ]    [ samm:property contactInformation:department; samm:optional true; samm:payloadName "Department" ] [ samm:property contactInformation:phone; samm:optional true; samm:payloadName "Phone" ] [ samm:property contactInformation:fax; samm:optional true; samm:payloadName "Fax" ] [ samm:property contactInformation:email; samm:optional true; samm:payloadName "Email" ] [ samm:property contactInformation:iPCommunicationChannels; samm:optional true; samm:payloadName "IPCommunicationChannels" ]  [ samm:property contactInformation:street; samm:payloadName "Street" ] [ samm:property contactInformation:zipCode; samm:payloadName "ZipCode" ] [ samm:property contactInformation:poBox; samm:optional true; samm:payloadName "POBox" ] [ samm:property contactInformation:zipCodeOfPoBox; samm:optional true; samm:payloadName "ZipCodeOfPOBox" ]  [ samm:property contactInformation:stateCounty; samm:optional true; samm:payloadName "StateCounty" ] [ samm:property contactInformation:nameOfContact; samm:optional true; samm:payloadName "NameOfContact" ] [ samm:property contactInformation:firstName; samm:optional true; samm:payloadName "FirstName" ] [ samm:property contactInformation:middleNames; samm:optional true; samm:payloadName "MiddleNames" ] [ samm:property contactInformation:title; samm:optional true; samm:payloadName "Title" ] [ samm:property contactInformation:academicTitle; samm:optional true; samm:payloadName "AcademicTitle" ] [ samm:property contactInformation:furtherDetailsOfContact; samm:optional true; samm:payloadName "FurtherDetailsOfContact" ] [ samm:property contactInformation:addressOfAdditionalLink; samm:optional true; samm:payloadName "AddressOfAdditionalLink" ]) .
+   samm:properties ( 
+   [ samm:property contactInformation:roleOfContactPerson; samm:optional true; samm:payloadName "RoleOfContactPerson" ]
+   [ samm:property contactInformation:nationalCode; samm:payloadName "NationalCode" ]
+   [ samm:property shared:languages; samm:optional true; samm:payloadName "Languages" ]
+   [ samm:property contactInformation:timeZone; samm:optional true; samm:payloadName "TimeZone" ]
+   [ samm:property contactInformation:cityTown; samm:payloadName "CityTown" ]
+   [ samm:property contactInformation:company; samm:optional true; samm:payloadName "Company" ]
+   [ samm:property contactInformation:department; samm:optional true; samm:payloadName "Department" ]
+   [ samm:property contactInformation:phone; samm:optional true; samm:payloadName "Phone" ]
+   [ samm:property contactInformation:fax; samm:optional true; samm:payloadName "Fax" ]
+   [ samm:property contactInformation:email; samm:optional true; samm:payloadName "Email" ]
+   [ samm:property contactInformation:ipCommunicationChannels; samm:optional true; samm:payloadName "IPCommunicationChannels" ]  
+   [ samm:property contactInformation:street; samm:payloadName "Street" ]
+   [ samm:property contactInformation:zipCode; samm:payloadName "ZipCode" ]
+   [ samm:property contactInformation:poBox; samm:optional true; samm:payloadName "POBox" ]
+   [ samm:property contactInformation:zipCodeOfPoBox; samm:optional true; samm:payloadName "ZipCodeOfPOBox" ]
+   [ samm:property contactInformation:stateCounty; samm:optional true; samm:payloadName "StateCounty" ]
+   [ samm:property contactInformation:nameOfContact; samm:optional true; samm:payloadName "NameOfContact" ]
+   [ samm:property contactInformation:firstName; samm:optional true; samm:payloadName "FirstName" ]
+   [ samm:property contactInformation:middleNames; samm:optional true; samm:payloadName "MiddleNames" ]
+   [ samm:property contactInformation:title; samm:optional true; samm:payloadName "Title" ] 
+   [ samm:property contactInformation:academicTitle; samm:optional true; samm:payloadName "AcademicTitle" ] 
+   [ samm:property contactInformation:furtherDetailsOfContact; samm:optional true; samm:payloadName "FurtherDetailsOfContact" ] 
+   [ samm:property contactInformation:addressOfAdditionalLink; samm:optional true; samm:payloadName "AddressOfAdditionalLink" ]
+   ) .
 

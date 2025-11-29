@@ -38,6 +38,7 @@
    samm:description "Common name of the marking."@en ;
    samm:description "IRDI der Kennzeichnung."@de ;
    samm:see <urn:irdi:0112/2///61987%23ABA231%23009> ;
+   samm:see <urn:irdi:0173-1%2302-ABI190%23003> ;
    samm:see <urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/MarkingName> ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "0173-1%2307-DAA603%23004" .
@@ -97,3 +98,91 @@
    samm:see <urn:irdi:0112/2///61360_7%23AAS006%23001> ;
    samm:dataType :MarkingsEntity .
 
+:ProductMarkingEnum a samm-c:Enumeration ;
+   samm:preferredName "product marking types"@en ;
+   samm:dataType xsd:string ;
+   samm:see <urn:irdi:0173-1%2309-AAD674%23001> ;
+   samm-c:values (
+      :CECC
+	  :CCC
+	  :CE
+	  :DGRL
+	  :EExIa 
+	  :EExedIIC
+	  :EExmII 
+	  :EAC
+	  :ExplosionProof
+	  :GsMarkOfConformity
+	  :TUEV
+	  :VDEMarkOfConformity
+   ) .
+
+:CECC a samm:Value ;
+   samm:value "AAA555" ;
+   samm:preferredName "CECC mark of conformity"@en ;
+   samm:see <urn:irdi:0173-1#07-AAA555#003> .
+
+:CCC a samm:Value ;
+   samm:value "AAB047" ;
+   samm:preferredName "China Compulsiv Certification (CCC)"@en ;
+   samm:see <urn:irdi:0173-1#07-AAB047#005> .
+   
+:CE a samm:Value ;
+   samm:value "DAA603" ;
+   samm:preferredName "Communauté Européenne (CE)"@en ;
+   samm:see <urn:irdi:00173-1#07-DAA603#006> .
+   
+:DGRL a samm:Value ;
+   samm:value "4" ;
+   samm:preferredName "DGRL"@en ;
+   samm:see <urn:irdi:0173-1#07-AAU119#003> .
+   
+:EExIa a samm:Value ;
+   samm:value "WAA099" ;
+   samm:preferredName "EEx ia"@en ;
+   samm:see <urn:irdi:0173-1#07-WAA099#005> .
+   
+:CE a samm:Value ;
+   samm:value "DAA603" ;
+   samm:preferredName "Communauté Européenne (CE)"@en ;
+   samm:see <urn:irdi:00173-1#07-DAA603#006> .
+   
+:DGRL a samm:Value ;
+   samm:value "4" ;
+   samm:preferredName "DGRL"@en ;
+   samm:see <urn:irdi:0173-1#07-AAU119#003> .
+   
+:EExedIIC a samm:Value ;
+   samm:value "WAA102" ;
+   samm:preferredName "EExedIIC"@en ;
+   samm:see <urn:irdi:0173-1#07-WAA102#005> .
+   
+:EExmII a samm:Value ;
+   samm:value "WAA101" ;
+   samm:preferredName "EExmII"@en ;
+   samm:see <urn:irdi:0173-1#07-WAA101#005> .
+   
+:EAC a samm:Value ;
+   samm:value "EAC" ;
+   samm:preferredName "Eurasian Conformity (EAC)"@en ;
+   samm:see <urn:irdi:0173-1#07-ABC243#003> .
+   
+:ExplosionProof a samm:Value ;
+   samm:value "WAA094" ;
+   samm:preferredName "Explosion-proof"@en ;
+   samm:see <urn:irdi:0173-1#07-WAA094#005> .
+   
+:GsMarkOfConformity a samm:Value ;
+   samm:value "AAA374" ;
+   samm:preferredName "GS mark of conformity"@en ;
+   samm:see <urn:irdi:0173-1#07-AAA374#005> .
+   
+:TUEV a samm:Value ;
+   samm:value "AAA375" ;
+   samm:preferredName "TÜV sign"@en ;
+   samm:see <urn:irdi:0173-1#07-AAA375#003> .
+   
+:VDEMarkOfConformity a samm:Value ;
+   samm:value "AAA554" ;
+   samm:preferredName "VDE mark of conformity"@en ;
+   samm:see <urn:irdi:0173-1#07-AAA554#003> .

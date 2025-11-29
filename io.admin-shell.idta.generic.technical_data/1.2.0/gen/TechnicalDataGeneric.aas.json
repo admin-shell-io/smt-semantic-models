@@ -499,11 +499,11 @@
         "dataType" : "STRING",
         "definition" : [ {
           "language" : "en",
-          "text" : "Content type of the content of the file."
+          "text" : "Content type of the content of the file or blob."
         } ],
         "preferredName" : [ {
           "language" : "en",
-          "text" : "contentType"
+          "text" : "content type"
         } ],
         "shortName" : [ {
           "language" : "en",
@@ -512,6 +512,10 @@
       }
     } ],
     "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#contentType",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "content type"
+    } ],
     "idShort" : "contentType"
   }, {
     "modelType" : "ConceptDescription",
@@ -971,7 +975,24 @@
               } ],
               "type" : "ExternalReference"
             },
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/aas/3/1/File/contentType"
+              } ],
+              "type" : "ExternalReference"
+            }, {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/aas/3/1/Blob/contentType"
+              } ],
+              "type" : "ExternalReference"
+            } ],
             "valueType" : "xs:string",
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "content type"
+            } ],
             "idShort" : "contentType"
           } ]
         } ]
