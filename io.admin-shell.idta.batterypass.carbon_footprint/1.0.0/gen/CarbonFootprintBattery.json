@@ -55,7 +55,7 @@
         "TelephoneNumber" : [ {
           "de" : "+491234567890"
         } ],
-        "TYpeOfTelephone" : "office",
+        "TypeOfTelephone" : "office",
         "AvailableTime" : [ {
           "de" : "Montag – Freitag 08:00 bis 16:00"
         } ]
