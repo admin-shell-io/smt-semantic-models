@@ -24,9 +24,9 @@
    samm:properties ( 
    [ samm:property :manufacturerName; samm:payloadName "ManufacturerName" ] 
    [ samm:property :manufacturerLogo; samm:optional true; samm:payloadName "ManufacturerLogo" ] 
-   [ samm:property :manufacturerProductDesignation; samm:payloadName "ManufacturerProductDesignation" ] 
-   [ samm:property :manufacturerArticleNumber; samm:payloadName "ManufacturerArticleNumber" ]  
-   [ samm:property :manufacturerOrderCode; samm:payloadName "ManufacturerOrderCode" ] 
+   [ samm:property :manufacturerProductDesignation; samm:payloadName "ManufacturerProductDesignation" ]
+   [ samm:property :manufacturerArticleNumber; samm:payloadName "ManufacturerArticleNumber" ]
+   [ samm:property :manufacturerOrderCode; samm:payloadName "ManufacturerOrderCode" ]
    [ samm:property :productImages; samm:optional true; samm:payloadName "ProductImages" ] 
    ) .
    
