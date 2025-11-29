@@ -15,24 +15,16 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix : <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 
-:ContactInformations a samm:Aspect ;
-   samm:preferredName "test Aspect for Contact Information"@en ;
-   samm:preferredName "Test-Aspect für Kontaktinformation"@de ;
-   samm:properties ( :contactInformations ) ;
-   samm:operations ( ) ;
-   samm:events ( ) .
 
-:contactInformations a samm:Property ;
-   samm:preferredName "Kontaktinformation"@de ;
-   samm:preferredName "information on contacts"@en ;
-   samm:description "Collection for various contact information."@en ;
-   samm:see <https://admin-shell.io/zvei/nameplate/1/0/ContactInformations> ;
-   samm:characteristic :ContactInfomationSet .
-
-:ContactInfomationSet a samm-c:Set ;
-   samm:dataType :ContactInformation .
+:postalCode a samm:Property ;
+   samm:preferredName "postal code"@en ;
+   samm:description "postal code of address."@en ;
+   samm:see <https://schema.org/postalCode> ;
+   samm:see <urn:irdi:0173-1%2302-AAO129%23002> ;
+   samm:exampleValue "DE-10719"@de ;
+   samm:characteristic shared:MultiLanguageTexts .
 
 
