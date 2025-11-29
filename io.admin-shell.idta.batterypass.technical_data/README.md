@@ -2,7 +2,7 @@
 
 This namespace is reserved for the Submodel Template Specification (SMT)  IDTA-02035-4 Digital Battery Passport - Part 4: Technical Data 
 
-This SMT is derived from IDTA-02003-1-2 Generic Technical Data 1.2 
+This SMT is derived from IDTA-02003-2-0 Generic Technical Data 2.0 
 
 Namespace: urn:samm:io.admin-shell.idta.batterypass.technical_data
 
@@ -18,15 +18,19 @@ The battery passport consists of the following 7 parts:
 *	Digital Battery Passport - Part 7: Circularity  (IDTA-02035-7)
 
 Source GitHub IDTA: https://github.com/admin-shell-io/submodel-templates 
-Source Content Hub of the IDTA: [IDTA-02035-4 V1.2]()
+Source Content Hub of the IDTA: [IDTA-02035-4 V2.0]()
 
 # General
 
 The folder "gen" for each version contains sample JSON files generated for the aspect model(s)
 
-Deviations from IDTA-02003-1-2
+Deviations from IDTA-02003-2-0
 
-- productClassifications not included
+- optional productClassifications not included
+- optional furtherInformation not included
+- optional specificDescriptions not included
+
+- TechnicalPropertyAreas not realized as SML but as SMC (https://github.com/admin-shell-io/submodel-templates/issues/175)
 
 # Changelog
 All notable changes to this model will be documented in this section.
@@ -37,21 +41,16 @@ Contained Files:
 
 * TechnicalData.ttl: the aspect model for the SMT 
 * technicalProperties_shared.ttl
-* technicalProperties_capacity.ttl
-* technicalProperties_efficiency.ttl
-* technicalProperties_resistance.ttl
-* technicalProperties_voltage.ttl
-
-
-
+* technicalProperties_scalar_shared.ttl
+* generalInformation_shared.ttl
 
 # Dependencies:
 
-@prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#> .
+@prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
 @prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.1#> .
-@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
+@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> 
 
 # Known Deviations (IDTA-02003-1-2)
 
