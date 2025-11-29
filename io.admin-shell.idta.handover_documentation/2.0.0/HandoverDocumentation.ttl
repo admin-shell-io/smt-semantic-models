@@ -170,10 +170,10 @@
    samm:description "Alphanumeric character sequence uniquely identifying a document."@en ;
    samm:see <urn:irdi:0173-1%2302-AAO099%23004> ;
    samm:see <https://api.eclass-cdp.com/0173-1-02-AAO099-004> ;
-   samm:characteristic :documentIdentifierCharacteristic ;
+   samm:characteristic :DocumentIdentifierCharacteristic ;
    samm:exampleValue "XF90-884" .
 
-:documentIdentifierCharacteristic a samm:Characteristic;
+:DocumentIdentifierCharacteristic a samm:Characteristic;
    samm:preferredName "Dokumentennummer"@de ;
    samm:preferredName "document identifier (ID)"@en ;
    samm:description "Alphanumerische Zeichenfolge, die ein Dokument eindeutig identifiziert."@de ;
