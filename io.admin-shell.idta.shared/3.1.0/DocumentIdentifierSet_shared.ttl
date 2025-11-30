@@ -23,4 +23,4 @@
 :DocumentIdentifierSet a samm-c:Set ;
    samm:preferredName "set of document identifiers"@en ;
    samm:description "Each document is uniquely discoverable via its identifier. If more information is needed, please refer to the 'Handover Documentation'."@en ;
-   samm-c:elementCharacteristic docu:DocumentIdentifierCharacteristic .
+   samm-c:elementCharacteristic docu:DocumentIdentifier .
