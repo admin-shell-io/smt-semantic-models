@@ -124,8 +124,6 @@ and a second file defining the specific technical properties for the product und
 @prefix : <urn:samm:io.admin-shell.idta.technical_data.example:1.0.0#> .
 @prefix generic: <urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
-@prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
-
 
 :TechnicalPropertiesCharacteristic a samm-c:SingleEntity ;
    samm:preferredName "technical properties"@en ;
