@@ -65,9 +65,10 @@
    samm:see <https://api.eclass-cdp.com/0173-1-02-ABK163-002> ;
    samm:characteristic :TechnicalPropertyAreaSet .
 
-:TechnicalPropertyAreaSet a samm-c:Set ;
+    
+:TechnicalPropertyAreaSet a samm-c:SingleEntity ;
    samm:dataType :TechnicalAttributesEntity .
-     
+	 
 :furtherInformation a samm:Property ;
    samm:description "Further information on the product, the validity of the information provided and this data record."@en ;
    samm:see <urn:irdi:0173-1#02-ABK164#002> ;
@@ -85,4 +86,6 @@
    samm:characteristic :SpecificDescriptionsSet .
    
 :SpecificDescriptionsSet a samm-c:Set ;
-   samm:dataType :SpecificDescriptionEntity .  
+   samm:dataType :SpecificDescriptionEntity . 
+
+   

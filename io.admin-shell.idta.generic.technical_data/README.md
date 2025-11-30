@@ -32,6 +32,11 @@ Dependencies:
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
 
+Deviations:
+
+* furtherInformation ist just one statement (https://github.com/admin-shell-io/submodel-templates/issues/175)
+* TechnicalPropertyAreas is not SML but a SMC (https://github.com/admin-shell-io/submodel-templates/issues/175)
+
 ## [1.2.0] - 2005-03-11
 
 Contained Files:

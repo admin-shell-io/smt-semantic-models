@@ -59,7 +59,7 @@
    samm:description "Liste aller technischen Daten-Bereiche."@de ;
    samm:characteristic :TechnicalPropertyAreaSet .
 
-:TechnicalPropertyAreaSet a samm-c:Set ;
+:TechnicalPropertyAreaSet a samm-c:SingleEntity ;
    samm:dataType :TechnicalAttributesEntity .
    
 
