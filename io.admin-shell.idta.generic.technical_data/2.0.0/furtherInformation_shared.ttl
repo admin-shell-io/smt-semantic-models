@@ -16,6 +16,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 
 
 :FurtherInformationEntity a samm:Entity ;
@@ -40,5 +41,4 @@
    samm:description "Erläuterung des Hersteller in Textform, z.B. Anwendungsbereich"@de ;
    samm:see <urn:irdi:0173-1#02-ABK134#002> ;
    samm:see <https://api.eclass-cdp.com/0173-1-02-ABK134-002> ;
-   samm:characteristic shared:MultiLanguageTextSet ;
-   samm:optional true .
+   samm:characteristic shared:MultiLanguageTexts .
