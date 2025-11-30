@@ -1,0 +1,257 @@
+######################################################################
+# Copyright (c) 2025 Circulor GmbH on behalf of the Battery Pass Consortium
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+#
+# This work is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+#
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
+@prefix contact: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
+
+
+:dismantlingAndRemovalInformation a samm:Property ;
+   samm:preferredName "dismantling and removal information"@en ;
+   samm:description """
+   Dismantling and Removal information, including at least:
+   * Exploded diagrams of the battery system/pack showing the location of battery cells
+   * Disassembly sequences
+   * Type and number of fastening techniques to be unlocked
+   * Tools required for disassembly
+   * Warnings if risk of damaging parts exists
+   * Amount of cells used and layout. 
+   
+   BR Annex XIII (2c)\n\nDIN DKE Spec 99100 chapter reference: 6.6.1.2
+   
+    > NOTE: For more information on the document identified by its document ID please refer to the Handover Documentation of the battery.
+	"""@en ;
+   samm:characteristic shared:DocumentIdentifierSet .
+
+:sparePartSources a samm:Property ;
+   samm:preferredName "spare part sources"@en ;
+   samm:description "Contact details of sources for replacement spares. Postal address, including name and brand names, postal code and place, street and number, country, telephone, if any. BR Annex XIII (2b)\n\nDIN DKE Spec 99100 chapter reference: 6.6.1.3"@en ;
+   samm:characteristic :SparePartSourcesList .
+
+:recycledContent a samm:Property ;
+   samm:preferredName "recycled content"@en ;
+   samm:description "Share of material recovered from waste present in active materials for each battery model per year and per manufacturing plant.\n\nDIN DKE Spec 99100 chapter reference:  6.6.2.3 - 6.6.2.10"@en ;
+   samm:characteristic :RecycledContentList .
+
+:safetyMeasures a samm:Property ;
+   samm:preferredName "safety measures"@en ;
+   samm:description "Safety measures and instructions should also take past negative and extreme events as well as the separate data attributes 'battery status' and 'battery composition/chemistry' into account.\n\nDIN DKE Spec 99100 chapter reference: 6.6.1.5"@en ;
+   samm:characteristic :SafetyMeasures .
+
+:endOfLifeInformation a samm:Property ;
+   samm:preferredName "end of life information"@en ;
+   samm:description "Producer or producer responsibility organisations shall make information available to distributors and end-users on: the role of end-users in contributing to waste prevention, including by information on good practices and recommendations concerning the use of batteries aiming at extending their use phase and the possibilities of re-use, preparing for re-use, preparing for repurpose, repurposing and remanufacturing.\n\nDIN DKE Spec 99100 chapter reference: 6.6.3.2 - 6.6.3.4"@en ;
+   samm:characteristic :EndOfLifeInformation .
+
+:renewableContent a samm:Property ;
+   samm:preferredName "renewable content"@en ;
+   samm:description "Share of renewable material content. A renewable material is a material made of natural resources that can be replenished. \n\nDIN DKE Spec 99100 chapter reference: 6.6.2.11"@en ;
+   samm:characteristic :RenewableContent .
+
+
+:SparePartSourcesList a samm-c:List ;
+   samm:dataType :SparePartSupplier .
+
+:RecycledContentList a samm-c:List ;
+   samm:dataType :RecycledContent .
+
+:SafetyMeasures a samm-c:SingleEntity ;
+   samm:preferredName "safety measures"@en ;
+   samm:dataType :SafetyMeasuresEntity .
+
+:EndOfLifeInformation a samm-c:SingleEntity ;
+   samm:preferredName "end of life information"@en ;
+   samm:dataType :EndOfLifeInformationEntity .
+
+:RenewableContent a samm-c:Measurement ;
+   samm:preferredName "renewable content"@en ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:percent .
+
+
+:SparePartSupplier a samm:Entity ;
+   samm:preferredName "spare part supplier"@en ;
+   samm:description "The part numbers for components should be provided together with the postal address, e-mail address and web address of the sources for spare parts."@en ;
+   samm:properties ( 
+          [ samm:property contact:company;  samm:payloadName "NameOfSupplier" ] 
+          [ samm:property :addressOfSupplier;  samm:payloadName "AddressOfSupplier" ] 
+          [ samm:property contact:email;  samm:payloadName "EmailAddressOfSupplier" ] 
+          [ samm:property contact:addressOfAdditionalLink;  samm:payloadName "SupplierWebAddress" ] 
+          [ samm:property :components;  samm:payloadName "Components" ] 		  
+   ) .
+
+:RecycledContent a samm:Entity ;
+   samm:preferredName "recycled content"@en ;
+   samm:description "A battery passport must include recycled content information.\n\nThe content information must include the percentage share of nickel that is present in active materials and that has been recovered from battery manufacturing waste, for each battery model per year and per manufacturing plant."@en ;
+   samm:properties ( 
+	[ samm:property :preConsumerShare ;  samm:payloadName "PreConsumerShare" ]  
+	[ samm:property :recycledMaterial ;  samm:payloadName "RecycledMaterial" ]  
+	[ samm:property :postConsumerShare ;  samm:payloadName "PostConsumerShare" ]  
+   ) .
+
+:SafetyMeasuresEntity a samm:Entity ;
+   samm:preferredName "safety measures"@en ;
+   samm:description "The safety measures should be provided via the instruction manual as URL linking to PDF."@en ;
+   samm:properties ( 
+   	[ samm:property :safetyInstructions ;  samm:payloadName "SafetyInstructions" ]  
+	[ samm:property :extinguishingAgents ;  samm:payloadName "ExtinguishingAgents" ]  
+   ) .
+
+:EndOfLifeInformationEntity a samm:Entity ;
+   samm:preferredName "end of life information"@en ;
+   samm:properties ( 
+   	[ samm:property :wastePrevention ;  samm:payloadName "WastePrevention" ]  
+	[ samm:property :separateCollection ;  samm:payloadName "SeparateCollection" ]  
+	[ samm:property :informationOnCollection ;  samm:payloadName "InformationOnCollection" ]  
+   ) .
+
+
+:nameOfSupplier a samm:Property ;
+   samm:preferredName "name of supplier"@en ;
+   samm:description "Name of Supplier"@en ;
+   samm:characteristic samm-c:Text .
+
+:addressOfSupplier a samm:Property ;
+   samm:preferredName "address of supplier"@en ;
+   samm:description "Postal address of supplier for spare parts."@en ;
+   samm:characteristic :AddressOfSupplier .
+
+
+:supplierWebAddress a samm:Property ;
+   samm:preferredName "WEB address of supplier"@en ;
+   samm:description "Web address of supplier for spare parts."@en ;
+   samm:characteristic samm-c:ResourcePath .
+
+:components a samm:Property ;
+   samm:preferredName "components"@en ;
+   samm:description "Components available at supplier"@en ;
+   samm:characteristic :ComponentList .
+
+:preConsumerShare a samm:Property ;
+   samm:preferredName "pre consumer share"@en ;
+   samm:description "Recycled material share from pre-consumer waste (manufacturing waste, excluding run-around scrap) of the active material."@en ;
+   samm:characteristic :PreConsumerShareTrait .
+
+:recycledMaterial a samm:Property ;
+   samm:preferredName "recycled material"@en ;
+   samm:description "Name of recycled material"@en ;
+   samm:characteristic :RecycledMaterial .
+
+:postConsumerShare a samm:Property ;
+   samm:preferredName "post consumer share"@en ;
+   samm:description "Recycled material share from post-consumer waste (end-of-life scrap) of the active material."@en ;
+   samm:characteristic :PostConsumerShareTrait .
+
+:safetyInstructions a samm:Property ;
+   samm:preferredName "safety instructions"@en ;
+   samm:description "- Safety measures. - Necessary safety instructions to handle waste batteries, including in relation to the risks associated with, and the handling of, batteries containing lithium."@en ;
+   samm:characteristic shared:DocumentIdentifierSet .
+
+:extinguishingAgents a samm:Property ;
+   samm:preferredName "extinguishing agents"@en ;
+   samm:description "Usable extinguishing agents refering to classes of extinguishers (A, B, C, D, K). EUBR: Annex XIII (1a), Annex VI Part A (9)"@en ;
+   samm:characteristic :ExtinguishingAgentsList .
+
+:wastePrevention a samm:Property ;
+   samm:preferredName "waste prevention"@en ;
+   samm:description "Prevention and management of waste batteries: Point (a) of Article 60(1): Information on the role of end-users in contributing to waste prevention, including by information on good practices and recommendations concerning the use of batteries aiming at extending their use phase and the possibilities of re-use, preparing for re-use, preparing for repurpose, repurposing and remanufacturing"@en ;
+   samm:characteristic shared:DocumentIdentifierSet .
+
+:separateCollection a samm:Property ;
+   samm:preferredName "separate collection"@en ;
+   samm:description "Prevention and management of waste batteries: Point (b) of Article 60(1): Information on the role of end-users in contributing to the separate collection of waste batteries in accordance with their obligations under Article 51 so as to allow their treatment"@en ;
+   samm:characteristic shared:DocumentIdentifierSet .
+
+:informationOnCollection a samm:Property ;
+   samm:preferredName "information on collection"@en ;
+   samm:description "Prevention and management of waste batteries: Point (c) of Article 60(1): information on the separate collection, the take back, the collection points and preparing for re-use, preparing for repurposing, and recycling operations available for waste batteries"@en ;
+   samm:characteristic shared:DocumentIdentifierSet .
+
+
+:AddressOfSupplier a samm-c:SingleEntity ;
+   samm:see <https://schema.org/address> ;
+   samm:dataType :PostalAddress .
+
+
+:ComponentList a samm-c:List ;
+   samm:description "List of components available at supplier"@en ;
+   samm:dataType :Component .
+
+:PreConsumerShareTrait a samm-c:Trait ;
+   samm-c:baseCharacteristic :PreConsumerShare ;
+   samm-c:constraint :ConsumerShareRange .
+
+:RecycledMaterial a samm-c:Enumeration ;
+   samm:dataType xsd:string ;
+   samm-c:values ( "Cobalt" "Nickel" "Lithium" "Lead" "Cobalt" "Nickel" "Lithium" "Lead" ) .
+
+:PostConsumerShareTrait a samm-c:Trait ;
+   samm-c:baseCharacteristic :PostConsumerShare ;
+   samm-c:constraint :ConsumerShareRange .
+
+:ExtinguishingAgentsList a samm-c:List ;
+   samm:dataType xsd:string .
+
+:PostalAddress a samm:Entity ;
+   samm:preferredName "postal address"@en ;
+   samm:see <https://schema.org/PostalAddress> ;
+   samm:properties ( 
+   [ samm:property contact:nationalCode ;  samm:payloadName "NationalCode" ] 
+   [ samm:property contact:postalCode ;  samm:payloadName "PostalCode" ] 
+   [ samm:property contact:street ;  samm:payloadName "Street" ] 
+    ) .
+
+:Component a samm:Entity ;
+   samm:properties ( 
+      [ samm:property :partName ;  samm:payloadName "PartName" ] 
+	  [ samm:property :partNumber ;  samm:payloadName "PartNumber" ] 
+   ) .
+
+:PreConsumerShare a samm-c:Measurement ;
+   samm:preferredName "pre consumer share"@en ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:percent .
+
+:ConsumerShareRange a samm-c:RangeConstraint ;
+   samm-c:minValue "0"^^xsd:float ;
+   samm-c:maxValue "100"^^xsd:float ;
+   samm-c:lowerBoundDefinition samm-c:AT_LEAST ;
+   samm-c:upperBoundDefinition samm-c:AT_MOST .
+
+:PostConsumerShare a samm-c:Measurement ;
+   samm:preferredName "post consumer share"@en ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:percent .
+
+
+:partName a samm:Property ;
+   samm:preferredName "part name"@en ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "Cell" .
+
+:partNumber a samm:Property ;
+   samm:preferredName "part number"@en ;
+   samm:description "Part Number of Component"@en ;
+   samm:characteristic :PartNumber .
+
+:PartNumber a samm-c:Code ;
+   samm:dataType xsd:string .
+
