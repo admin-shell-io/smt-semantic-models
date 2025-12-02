@@ -26,7 +26,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#> .
-@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.1#> .
+@prefix bp: <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#> .
 @prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
 
 :ProductConditionIndustrialLmt a samm:Aspect ;
@@ -39,10 +39,9 @@
         [ samm:property bp:stateOfCertifiedEnergy; samm:optional true;  samm:payloadName "StateOfCertifiedEnergy" ]
         [ samm:property bp:remainingEnergy; samm:optional true; samm:payloadName "RemainingEnergy" ]
         [ samm:property bp:remainingCapacity; samm:payloadName "RemainingCapacity" ]
-        [ samm:property bp:negativeEvents; samm:payloadName "NegativeEvents" ]
+        [ samm:property :negativeEvents; samm:payloadName "NegativeEvents" ]
         [ samm:property bp:temperatureInformation; samm:payloadName "TemperatureInformation" ]
         [ samm:property bp:remainingPowerCapability; samm:optional true; samm:payloadName "RemainingPowerCapability" ]
-        [ samm:property bp:roundTripEfficiencyFade; samm:payloadName "RoundTripEfficiencyFade" ]
         [ samm:property bp:evolutionOfSelfDischarge; samm:payloadName "EvolutionOfSelfDischarge" ]
         [ samm:property bp:currentSelfDischargingRate; samm:optional true;  samm:payloadName "CurrentSelfDischargingRate" ]
         [ samm:property bp:remainingRoundTripEnergyEfficiency; samm:payloadName "RemainingRoundTripEnergyEfficiency" ]
