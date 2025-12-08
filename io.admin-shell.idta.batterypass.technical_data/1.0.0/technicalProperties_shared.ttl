@@ -59,14 +59,20 @@
      [ samm:property :maximumVoltage; samm:payloadName "MaxVoltage" ] 
      [ samm:property :minimumVoltage; samm:payloadName "MinVoltage" ]
 	 [ samm:property bp:ratedCapacity; samm:payloadName "RatedCapacity" ] 
-	 [ samm:property bp:capacityFade; samm:optional true; samm:payloadName "CapacityFade" ]
+	 [ samm:property :capacityFade; samm:optional true; samm:payloadName "CapacityFade" ]
 	 [ samm:property bp:ratedEnergy; samm:optional true; samm:payloadName "CertifiedUsableBatteryEnergy" ] 
 	 ) .
 
+:capacityFade a samm:Property ;
+   samm:preferredName "capacity fade"@en ;
+   samm:description "The capacity fade is the Decrease over time and upon usage in the amount of charge that a battery can deliver at the rated voltage, with respect to the original rated capacity (see BattReg Annex IV (2)) as declared by the manufacturer.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.4"@en ;
+   samm:characteristic :CapacityFadeValue .
 
+:CapacityFadeValue a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:percent .
 
 :roundTripEnergyEfficiency a samm:Property ;
-   samm:see <https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1> ;
    samm:characteristic :RoundTripEnergyEfficiencyCharacteristic .
    
 :RoundTripEnergyEfficiencyCharacteristic a samm-c:SingleEntity ;
@@ -76,10 +82,18 @@
   samm:properties ( 
   [ samm:property :initialRoundTripEnergyEfficiency; samm:payloadName "InitialRoundTripEnergyEfficiency" ] 
   [ samm:property bp:roundTripEfficiencyAt50PercentCycleLife; samm:payloadName "RoundTripEnergyEfficiencyAtFiftyofCycleLife" ]
-  [ samm:property bp:capacityFade; samm:optional true; samm:payloadName "EnergyRoundTripEfficiencyFade" ]   
+  [ samm:property :energyRoundTripEfficiencyFade; samm:optional true; samm:payloadName "EnergyRoundTripEfficiencyFade" ]   
   [ samm:property :initialSelfDischargingRate; samm:optional true; samm:payloadName "InitialSelfDischargingRate" ] 
   ) .
-   
+
+:energyRoundTripEfficiencyFade a samm:Property ;
+   samm:preferredName "energy round trip efficiency fade"@en ;
+   samm:description "Energy round trip efficiency fade is the decrease of round trip energy efficiency as percentage.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.5"@en ;
+   samm:characteristic :energyRoundTripEfficiencyFadeValue .
+
+:energyRoundTripEfficiencyFadeValue a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:percent .   
  
 :resistance a samm:Property ;
    samm:see <https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1> ;
@@ -142,7 +156,17 @@
 :LifetimeEntity a samm:Entity ;
   samm:properties ( 
       [ samm:property bp:expectedLifetime; samm:payloadName "ExpectedLifetimeInCalendarYears " ] 
-	  [ samm:property bp:expectedNumberOfCycles; samm:payloadName "ExpectedNumberOfCycles" ] 
+	  [ samm:property :expectedNumberOfCycles; samm:payloadName "ExpectedNumberOfCycles" ] 
       [ samm:property bp:capacityThresholdForExhaustion; samm:payloadName "CapacityThresholdExhaustion" ] 
       [ samm:property bp:cRateLifeCycleTest; samm:payloadName "CrateOfRelevantCycleLifeTest" ] 
   ) .
+  
+:expectedNumberOfCycles a samm:Property ;
+   samm:preferredName "expected number of cycles"@en ;
+   samm:description "Expected battery lifetime expressed in cycles.\nThe exception for non-cycle applications in Article 10 appears sensible, but is not included in the Annex XIII provision.\nThe data attribute is defined by measurement conditions of the cycle-life test such as the C-Rate (see below) and the depth of discharge in the cycle-life test\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.3"@en ;
+   samm:characteristic :ExpectedNumberOfCycles ;
+   samm:exampleValue "1000"^^unsignedInt .
+   
+:ExpectedNumberOfCycles a samm-c:Quantifiable ;
+   samm:dataType xsd:unsignedInt ;
+   samm-c:unit unit:cycle .
