@@ -89,7 +89,7 @@
 
 :SparePartSupplier a samm:Entity ;
    samm:preferredName "spare part supplier"@en ;
-   samm:description "The part numbers for components should be provided together with the postal address, e-mail address and web address of the sources for spare parts."@en ;
+   samm:description "The part numbers for components should be provided together with the postal address, e-mail address and web address of the sources for spare parts. \n\nDIN DKE Spec 99100 chapter reference: 6.6.1.3"@en ;
    samm:properties ( 
           [ samm:property contact:company;  samm:payloadName "NameOfSupplier" ] 
           [ samm:property :addressOfSupplier;  samm:payloadName "AddressOfSupplier" ] 
@@ -162,7 +162,7 @@
 
 :safetyInstructions a samm:Property ;
    samm:preferredName "safety instructions"@en ;
-   samm:description "- Safety measures. - Necessary safety instructions to handle waste batteries, including in relation to the risks associated with, and the handling of, batteries containing lithium."@en ;
+   samm:description "Necessary safety instructions to handle waste batteries, including in relation to the risks associated with, and the handling of, batteries containing lithium."@en ;
    samm:characteristic shared:DocumentIdentifierSet .
 
 :extinguishingAgents a samm:Property ;
@@ -208,10 +208,16 @@
    samm-c:constraint :ConsumerShareRange .
 
 :ExtinguishingAgentsList a samm-c:List ;
+   samm-c:elementCharacteristic :ExtinguishingAgent .
+   
+:ExtinguishingAgent a samm:Characteristic ;
+   samm:preferredName "extinguishing agent"@en ;
+   samm:description "Extinguishing agent."@en ;
    samm:dataType xsd:string .
 
 :PostalAddress a samm:Entity ;
    samm:preferredName "postal address"@en ;
+   samm:description "Postal address."@en ;
    samm:see <https://schema.org/PostalAddress> ;
    samm:properties ( 
    [ samm:property contact:nationalCode ;  samm:payloadName "NationalCode" ] 
@@ -244,12 +250,13 @@
 
 :partName a samm:Property ;
    samm:preferredName "part name"@en ;
+   samm:description "Name of the part."@en ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "Cell" .
 
 :partNumber a samm:Property ;
    samm:preferredName "part number"@en ;
-   samm:description "Part Number of Component"@en ;
+   samm:description "Part number of Component."@en ;
    samm:characteristic :PartNumber .
 
 :PartNumber a samm-c:Code ;
