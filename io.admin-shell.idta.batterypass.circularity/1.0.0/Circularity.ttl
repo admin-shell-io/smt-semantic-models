@@ -37,7 +37,7 @@
    samm:properties ( 
    	[ samm:property bp:dismantlingAndRemovalInformation; samm:payloadName "DismantlingAndRemovalInformation" ] 
    	[ samm:property bp:sparePartSources; samm:payloadName "SparePartSources" ] 	 
-	[ samm:property bp:recycledContent; samm:payloadName "RecycledContent" ]  
+	[ samm:property bp:recycledContent; samm:payloadName "RecycledContentInformation" ]  
 	[ samm:property bp:safetyMeasures; samm:payloadName "SafetyMeasures" ] 
 	[ samm:property bp:endOfLifeInformation; samm:payloadName "EndOfLifeInformation" ]  
 	[ samm:property bp:renewableContent; samm:payloadName "RenewableContent" ]  	 
