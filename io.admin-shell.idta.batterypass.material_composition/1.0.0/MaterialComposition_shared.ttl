@@ -56,6 +56,7 @@
 
 :BatteryChemistryEntity a samm:Entity ;
    samm:preferredName "chemistry"@en ;
+   samm:description "Chemistry of battery."@en ;
    samm:properties ( 
       [ samm:property :shortName ;  samm:payloadName "ShortName" ] 
       [ samm:property :clearName ;  samm:payloadName "ClearName" ] 
@@ -63,6 +64,7 @@
 
 :BatteryMaterialEntity a samm:Entity ;
    samm:preferredName "material"@en ;
+   samm:description "Material of battery."@en ;
    samm:properties ( 
       [ samm:property :batteryMaterialLocation ;  samm:payloadName "BatteryMaterialLocation" ] 
       [ samm:property :batteryMaterialIdentifier ;  samm:payloadName "BatteryMaterialIdentifier" ]    
@@ -85,34 +87,36 @@
 
 :shortName a samm:Property ;
    samm:preferredName "short name"@en ;
+   samm:description "Short name."@en ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "NMC" .
 
 :clearName a samm:Property ;
    samm:preferredName "clear name"@en ;
+   samm:description "Clear name."@en ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "Lithium nickel manganese cobalt oxides" .
 
 :batteryMaterialLocation a samm:Property ;
    samm:preferredName "location"@en ;
-   samm:description "Battery component that relates to the material"@en ;
+   samm:description "Battery component that relates to the material."@en ;
    samm:characteristic :BatteryMaterialLocation .
 
 :batteryMaterialIdentifier a samm:Property ;
    samm:preferredName "identifier"@en ;
-   samm:description "CAS Number "@en ;
+   samm:description "CAS Number."@en ;
    samm:characteristic :MaterialIdentifierTrait ;
    samm:exampleValue "7439-93-2" .
 
 :batteryMaterialName a samm:Property ;
    samm:preferredName "name"@en ;
-   samm:description "Clear name of Material"@en ;
+   samm:description "Clear name of Material."@en ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "Lithium" .
 
 :batteryMaterialMass a samm:Property ;
    samm:preferredName "weight"@en ;
-   samm:description "Weight of component material"@en ;
+   samm:description "Weight of component material."@en ;
    samm:characteristic :Weight .
 
 :isCriticalRawMaterial a samm:Property ;
@@ -128,12 +132,12 @@
 
 :hazardousSubstanceName a samm:Property ;
    samm:preferredName "name"@en ;
-   samm:description "Clear name of hazardous substance"@en ;
+   samm:description "Clear name of hazardous substance."@en ;
    samm:characteristic samm-c:Text .
 
 :hazardousSubstanceConcentration a samm:Property ;
    samm:preferredName "concentration"@en ;
-   samm:description "Concentration of hazardous substance"@en ;
+   samm:description "Concentration of hazardous substance."@en ;
    samm:characteristic :HazardousSubstanceConcentrationCharacteristic .
 
 :hazardousSubstanceImpact a samm:Property ;
@@ -148,7 +152,7 @@
 
 :hazardousSubstanceIdentifier a samm:Property ;
    samm:preferredName "identifier"@en ;
-   samm:description "CAS identifier of hazardous substance"@en ;
+   samm:description "CAS identifier of hazardous substance."@en ;
    samm:see <https://www.cas.org/cas-data/cas-registry> ;
    samm:characteristic :MaterialIdentifierTrait .
 
@@ -183,7 +187,7 @@
 
 :BatteryLocationEntity a samm:Entity ;
    samm:preferredName "battery location "@en ;
-   samm:description "Battery component that includes the material"@en ;
+   samm:description "Battery component that includes the material."@en ;
    samm:properties ( 
     [ samm:property :componentName; samm:optional true; samm:payloadName "ComponentName"  ] 
     [ samm:property :componentId; samm:optional true; samm:payloadName "ComponentId" ] 
@@ -194,10 +198,12 @@
 
 :componentName a samm:Property ;
    samm:preferredName "name"@en ;
+   samm:Description "Name of a component."@en ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "Anode" .
 
 :componentId a samm:Property ;
    samm:preferredName "component ID"@en ;
+   samm:preferredName "Identifier of the component."@en ;
    samm:characteristic samm-c:Text .
 
