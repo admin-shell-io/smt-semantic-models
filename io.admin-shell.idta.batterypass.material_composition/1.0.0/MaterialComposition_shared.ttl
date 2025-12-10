@@ -36,25 +36,25 @@
 
 :hazardousSubstances a samm:Property ;
    samm:preferredName "hazardous substances"@en ;
-   samm:description "\"Hazardous substances\" (No 20.a-e): Name (agreed substance nomenclature, e.g. IUPAC or chemical name) all hazardous substance (as ?any substance that poses a threat to human health and the environment?). Suggested above 0.1 % weight by weight within each (sub-)component.\n\nDIN DKE Spec 99100 chapter reference: 6.5.4 - 6.5.6"@en ;
+   samm:description "\"Hazardous substances\" (No 20.a-e): Name (agreed substance nomenclature, e.g. IUPAC or chemical name) all hazardous substance (as 'any substance that poses a threat to human health and the environment'). Suggested above 0.1 % weight by weight within each (sub-)component.\n\nDIN DKE Spec 99100 chapter reference: 6.5.4 - 6.5.6"@en ;
    samm:characteristic :HazardousSubstancesList .
 
 :BatteryChemistryEntityList a samm-c:SingleEntity ;
    samm:preferredName "battery chemistry"@en ;
    samm:description "Detailed composition, including materials used in the cathode, anode, and electrolyte.\nAll common cells have two electrodes and an electrolyte. The specific combination of materials used to make these components is called \"chemistry.\" A cell's chemistry largely determines its properties, while most variations within it are caused by additives, purification, and design elements.\n\nEUBR: Annex XIII (1b) ? Annex VI Part A (7)"@en ;
-   samm:dataType :BatteryChemistryEntity .
+   samm:dataType :BatteryChemistry .
 
 :BatteryMaterialList a samm-c:List ;
    samm:preferredName "battery materials"@en ;
    samm:description "Detailed composition, including materials used in the cathode, anode, and electrolyte\n\nEUBR: Annex XIII (2a)"@en ;
-   samm:dataType :BatteryMaterialEntity .
+   samm:dataType :BatteryMaterial .
 
 :HazardousSubstancesList a samm-c:List ;
    samm:preferredName "hazardous substances"@en ;
    samm:description "Hazardous substances contained in the battery other than mercury, cadmium or lead. Substance as a chemical element and its compounds in the natural state or the result of a manufacturing process (ECHA). Battery Regulation narrows reporting to substances falling under defined hazard classes and categories of the CLP regulation.\n\nEUBR: Annex XIII (1b) ? Annex VI Part A (8)"@en ;
-   samm:dataType :HazardousSubstanceEntity .
+   samm:dataType :HazardousSubstance .
 
-:BatteryChemistryEntity a samm:Entity ;
+:BatteryChemistry a samm:Entity ;
    samm:preferredName "chemistry"@en ;
    samm:description "Chemistry of battery."@en ;
    samm:properties ( 
@@ -62,7 +62,7 @@
       [ samm:property :clearName ;  samm:payloadName "ClearName" ] 
       ) .
 
-:BatteryMaterialEntity a samm:Entity ;
+:BatteryMaterial a samm:Entity ;
    samm:preferredName "material"@en ;
    samm:description "Material of battery."@en ;
    samm:properties ( 
@@ -73,7 +73,7 @@
       [ samm:property :isCriticalRawMaterial ;  samm:payloadName "IsCriticalRawMaterial" ]     
    ) .
 
-:HazardousSubstanceEntity a samm:Entity ;
+:HazardousSubstance a samm:Entity ;
    samm:preferredName "hazardous substance"@en ;
    samm:description "Hazardous substances (No. 19-23): Name (agreed substance nomenclature, e.g. IUPAC or chemical name) all hazardous substance (as ?any substance that poses a threat to human health and the environment?). Suggested above 0.1 % weight by weight within each (sub-)component."@en ;
    samm:properties ( 
@@ -106,6 +106,7 @@
    samm:preferredName "identifier"@en ;
    samm:description "CAS Number."@en ;
    samm:characteristic :MaterialIdentifierTrait ;
+   samm:see <https://www.cas.org/cas-data/cas-registry> ;
    samm:exampleValue "7439-93-2" .
 
 :batteryMaterialName a samm:Property ;
@@ -128,7 +129,7 @@
 :hazardousSubstanceClass a samm:Property ;
    samm:preferredName "class"@en ;
    samm:description "Battery Regulation narrows reporting to substances falling under defined hazard classes and categories of the CLP regulation."@en ;
-   samm:characteristic :HazardousSubstanceClassChrateristicEnum .
+   samm:characteristic :HazardousSubstanceClassEnum .
 
 :hazardousSubstanceName a samm:Property ;
    samm:preferredName "name"@en ;
@@ -158,7 +159,7 @@
 
 :BatteryMaterialLocation a samm-c:SingleEntity ;
    samm:preferredName "location"@en ;
-   samm:dataType :BatteryLocationEntity .
+   samm:dataType :BatteryLocation .
 
 :MaterialIdentifierTrait a samm-c:Trait ;
    samm-c:baseCharacteristic samm-c:Text ;
@@ -168,9 +169,26 @@
    samm:dataType xsd:float ;
    samm-c:unit unit:gram .
 
-:HazardousSubstanceClassChrateristicEnum a samm-c:Enumeration ;
+:HazardousSubstanceClassEnum a samm-c:Enumeration ;
    samm:dataType xsd:string ;
-   samm-c:values ( "AcuteToxicity" "SkinCorrosionOrIrritation" "EyeDamageOrIrritation" ) .
+   samm-c:values ( 
+      :AcuteToxicity 
+	  :SkinCorrosionOrIrritation
+	  :EyeDamageOrIrritation
+	  ) .
+
+:AcuteToxicity a samm:Value ;
+   samm:value "AcuteToxicity" ;
+   samm:preferredName "acute toxicity"@en .
+
+:SkinCorrosionOrIrritation a samm:Value ;
+   samm:value "SkinCorrosionOrIrritation" ;
+   samm:preferredName "skin corrosion or irritation"@en .
+   
+:EyeDamageOrIrritation a samm:Value ;
+   samm:value "EyeDamageOrIrritation" ;
+   samm:preferredName "eye damage or irritation"@en .
+
 
 :HazardousSubstanceConcentrationCharacteristic a samm-c:Measurement ;
    samm:dataType xsd:double ;
@@ -178,14 +196,19 @@
 
 :ImpactList a samm-c:List ;
    samm:dataType xsd:string ;
-   samm-c:elementCharacteristic samm-c:Text .
+   samm-c:elementCharacteristic :Impact .
+
+:Impact a samm:Characteristic;
+   samm:preferredName "impact"@en ;
+   samm:description "Impact."@en ;
+   samm:dataType xsd:string .
 
 :HubstanceSubstanceLocationEntity a samm-c:SingleEntity ;
    samm:preferredName "location"@en ;
    samm:description "\"The impact of substances, in particular, hazardous substances, contained in batteries on the environment and on human health or safety of persons, including impact due to inappropriate discarding of waste batteries such as littering or discarding as unsorted municipal waste?."@en ;
-   samm:dataType :BatteryLocationEntity .
+   samm:dataType :BatteryLocation .
 
-:BatteryLocationEntity a samm:Entity ;
+:BatteryLocation a samm:Entity ;
    samm:preferredName "battery location "@en ;
    samm:description "Battery component that includes the material."@en ;
    samm:properties ( 
@@ -204,6 +227,6 @@
 
 :componentId a samm:Property ;
    samm:preferredName "component ID"@en ;
-   samm:preferredName "Identifier of the component."@en ;
+   samm:description "Identifier of the component."@en ;
    samm:characteristic samm-c:Text .
 
