@@ -165,8 +165,10 @@
    samm:preferredName "expected number of cycles"@en ;
    samm:description "Expected battery lifetime expressed in cycles.\nThe exception for non-cycle applications in Article 10 appears sensible, but is not included in the Annex XIII provision.\nThe data attribute is defined by measurement conditions of the cycle-life test such as the C-Rate (see below) and the depth of discharge in the cycle-life test\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.3"@en ;
    samm:characteristic :ExpectedNumberOfCycles ;
-   samm:exampleValue "1000"^^unsignedInt .
+   samm:exampleValue "1000"^^xsd:unsignedInt .
    
 :ExpectedNumberOfCycles a samm-c:Quantifiable ;
    samm:dataType xsd:unsignedInt ;
    samm-c:unit unit:cycle .
+   
+	  
