@@ -78,7 +78,7 @@
    samm:characteristic samm-c:Text ;
    samm:exampleValue "KEMA99IECE X1105/128" .
 
-:MarkingsEntity a samm:Entity ;
+:Marking a samm:Entity ;
    samm:preferredName "single marking information. Note: CE marking is declared as mandatory according to the Blue Guide of the EU-Commission"@en ;
    samm:preferredName "Kennzeichnung"@de ;
    samm:see <urn:irdi:0112/2///61360_7%23AAS009%23001> ;
@@ -96,7 +96,7 @@
    samm:preferredName "Kennzeichnungen"@de ;
    samm:description "Note: CE marking is declared as mandatory according to EU Blue Guide."@en ;
    samm:see <urn:irdi:0112/2///61360_7%23AAS006%23001> ;
-   samm:dataType :MarkingsEntity .
+   samm:dataType :Marking .
 
 :ProductMarkingEnum a samm-c:Enumeration ;
    samm:preferredName "product marking types"@en ;

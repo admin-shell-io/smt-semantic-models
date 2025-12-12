@@ -8,6 +8,8 @@
 # SPDX-License-Identifier: CC-BY-4.0
 #######################################################################
 
+
+
 @prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
 @prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
 @prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
@@ -15,9 +17,10 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
+@prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
 
-
-:FurtherInformationEntity a samm:Entity ;
-   samm:properties ( ) .
-
+:DocumentIdentifierSet a samm-c:Set ;
+   samm:preferredName "set of document identifiers"@en ;
+   samm:description "Each document is uniquely discoverable via its identifier. If more information is needed, please refer to the 'Handover Documentation'."@en ;
+   samm-c:elementCharacteristic docu:DocumentIdentifier .

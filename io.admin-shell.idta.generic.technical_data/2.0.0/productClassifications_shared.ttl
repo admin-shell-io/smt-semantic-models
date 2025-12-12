@@ -18,8 +18,6 @@
 @prefix : <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.nameplate:3.0.0#> .
-@prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
-
 
    
 :ProductClassificationEntity a samm:Entity ;

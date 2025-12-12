@@ -3,7 +3,6 @@
     "de" : "Muster AG"
   } ],
   "SerialNumber" : "A12345-X75EN",
-  "BatteryStatus" : "Original",
   "OperatorIdentifier" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
   "AddressInformation" : {
     "POBox" : [ {
@@ -54,7 +53,7 @@
       "TelephoneNumber" : [ {
         "de" : "+491234567890"
       } ],
-      "TYpeOfTelephone" : "office",
+      "TypeOfTelephone" : "office",
       "AvailableTime" : [ {
         "de" : "Montag – Freitag 08:00 bis 16:00"
       } ]
@@ -101,6 +100,7 @@
     },
     "MarkingAdditionalText" : "0044"
   } ],
+  "LifeCycleStage" : "original",
   "DateOfManufacture" : "2022-01-01",
   "ManufacturerIdentifier" : "JxkyvRnL"
 }

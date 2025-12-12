@@ -15,17 +15,16 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
+@prefix : <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 
-:productImages a samm:Property ;
-   samm:preferredName "product images"@en ;
-   samm:description "Image files for associated product provided in common format (.png, .jpg)."@en ;
-   samm:see <https://admin-shell.io/ZVEI/TechnicalData/ProductImages/1/1> ;
-   samm:see <urn:irdi:0173-1#02-ABM220#001> ;
-   samm:see <https://api.eclass-cdp.com/0173-1-02-ABM220-001> ;
-   samm:characteristic :ProductImageSet .
 
-:ProductImageSet a samm-c:Set ;
-   samm-c:elementCharacteristic shared:FileWithContentType .
+:postalCode a samm:Property ;
+   samm:preferredName "postal code"@en ;
+   samm:description "postal code of address."@en ;
+   samm:see <https://schema.org/postalCode> ;
+   samm:see <urn:irdi:0173-1%2302-AAO129%23002> ;
+   samm:exampleValue "DE-10719"@de ;
+   samm:characteristic shared:MultiLanguageTexts .
+
 

@@ -1,7 +1,7 @@
 ######################################################################
-# namespace: urn:samm:io.admin-shell.idta.batterypass.product_condition:1.2.0
 # Copyright (c) 2025 Bosch Connected Industry
 # Copyright (c) 2025 Industrial Digital Twin Association
+# Copyright (c) 2025 Circulor GmbH on behalf of the Battery Pass Consortium
 # This work  is made available under the terms of the
 # Creative Commons Attribution 4.0 International (CC BY 4.0) license,
 # which is available at
@@ -28,7 +28,6 @@
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
 @prefix contactInformation: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
-@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 @prefix tech: <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> 
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
 
@@ -45,17 +44,66 @@
    [ samm:property nameplate:serialNumber; samm:payloadName "SerialNumber" ] 
    [ samm:property nameplate:dateOfManufacture; samm:payloadName "DateOfManufacture" ] 
    [ samm:property nameplate:uniqueFacilityIdentifier; samm:payloadName "UniqueFacilityIdentifier" ]
-   [ samm:property bpg:batteryStatus; samm:payloadName "BatteryStatus" ]
+   [ samm:property :batteryStatus; samm:payloadName "LifeCycleStage" ]
    [ samm:property :operatorIdentifier; samm:optional true; samm:payloadName "OperatorIdentifier" ] 
    [ samm:property tech:manufacturerIdentifier; samm:payloadName "ManufacturerIdentifier" ] 
    [ samm:property nameplate:markings; samm:payloadName "Markings" ] 
    );
    samm:operations ( ) ;
    samm:events ( ) ;
-   samm:see <https://admin-shell.io/idta/nameplate/3/0/Nameplate> .
+   samm:see <https://admin-shell.io/idta/nameplate/3/0/Nameplate> ;
+   samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0> .
 
 
 :operatorIdentifier a samm:Property ;
    samm:preferredName "identifier of the operator"@en ;
    samm:description "The unique operator identifier should comply with ISO/IEC 15459 1:2014, ISO/IEC 15459 2:2015, ISO/IEC 15459 3:2014, ISO/IEC 15459 4:2014, ISO/IEC 15459 5:2014, ISO/IEC 15459 6:2014, or their equivalent until referenced harmonised standards are listed in the OJEU."@en ;
    samm:characteristic samm-c:Text .
+   
+:batteryStatus a samm:Property ;
+   samm:preferredName "BatteryStatus"@en ;
+   samm:description """A battery passport must include information on the life cycle status of the battery.
+   
+   The status of the battery must be defined as 'original' (0173-1#07-ACC020#001), 'repurposed'(0173-1#07-ACC021#001), 're-used'(0173-1#07-ACC022#001), 'remanufactured' (0173-1#07-ACC023#001) or 'waste' (0173-1#07-ACC024#001).
+   
+   A new battery passport must be issued when a battery was subject to remanufacturing, repurpose or one of the treatment operations preparing for re-use and preparing for repurpose and is placed on the market again.
+   
+   DIN DKE Spec 99100 chapter reference: 6.1.3.7"""@en ;
+   samm:characteristic :BatteryStatusEnumeration ;
+   samm:exampleValue "Original" .
+   
+:BatteryStatusEnumeration a samm-c:Enumeration ;
+   samm:description "Lifecycle status of the battery. Status defined from a list, with the options suggested as follows: 'original', 'repurposed', 'reused', 'remanufactured', 'waste'\n\nEUBR: Annex XIII (4c)"@en ;
+   samm:dataType xsd:string ;
+   samm-c:values ( 
+	:Original 
+	:Repurposed 
+	:Reused
+	:Remanufactured
+	:Waste 
+	) .
+   
+:Original a samm:Value ;
+   samm:value "original" ;
+   samm:preferredName "original"@en ;
+   samm:see <urn:irdi:0173-1#07-ACC020#001> .
+   
+:Repurposed a samm:Value ;
+   samm:value "repurposed" ;
+   samm:preferredName "repurposed"@en ;
+   samm:see <urn:irdi:0173-1#07-ACC021#001> .
+   
+:Reused a samm:Value ;
+   samm:value "re-used" ;
+   samm:preferredName "re-used"@en ;
+   samm:see <urn:irdi:0173-1#07-ACC022#001> .
+   
+:Remanufactured a samm:Value ;
+   samm:value "remanufactured" ;
+   samm:preferredName "remanufactured"@en ;
+   samm:see <urn:irdi:0173-1#07-ACC023#001> .
+   
+:Waste a samm:Value ;
+   samm:value "waste" ;
+   samm:preferredName "waste"@en ;
+   samm:see <urn:irdi:0173-1#07-ACC024#001> .

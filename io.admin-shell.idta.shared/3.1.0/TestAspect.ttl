@@ -22,9 +22,12 @@
    samm:preferredName "test Aspect"@en ;
    samm:description "Test-Aspect."@de ;
    samm:description "Test Aspect."@en ;
-   samm:properties ( :example4Markings :languages ) ;
+   samm:properties ( :example4Markings :languages :example4documentIdentifierSet ) ;
    samm:operations ( ) ;
    samm:events ( ) .
 
 :example4Markings a samm:Property ;
    samm:characteristic :Markings  .
+   
+:example4documentIdentifierSet a samm:Property ;
+   samm:characteristic :DocumentIdentifierSet  .

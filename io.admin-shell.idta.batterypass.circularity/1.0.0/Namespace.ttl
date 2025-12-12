@@ -15,10 +15,9 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.0#> .
 
 : a samm:Namespace ;
    samm:preferredName "namespace for circularity"@en ;
-   samm:description "This namespace is reserved for the Aspect Models and elements being the source for IDTA-02035-7 Digital Battery Passport - Part 7: Circularity, Version 1.0.
- "@en .
+   samm:description "This namespace is reserved for the Aspect Models and elements being the source for IDTA-02035-7 Digital Battery Passport - Part 7: Circularity, Version 1.0."@en .
 

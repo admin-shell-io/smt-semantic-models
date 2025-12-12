@@ -17,7 +17,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
-@prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
 
 :GeneralInformationEntity a samm:Entity ;
    samm:see <https://admin-shell.io/ZVEI/TechnicalData/GeneralInformation/1/1> ;

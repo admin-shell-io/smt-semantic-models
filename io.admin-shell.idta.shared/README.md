@@ -30,6 +30,7 @@ Additionally, properties are predefined that may be used in several Submodel Tem
 
 * Markings_shared: properties for markings as used for example in SMT "Nameplate"
 * languageSet_shared: property "languages" for a set of languages
+* DocumentIdentifierSet_shared: Characteristic "DocumentIdentifierSet" to be used in SMT that reference documents in 'Handover Documentation'
 
 Two aspect model are contained to illustrate how to use the properties and characteristics, they are exemplary only:
 
@@ -38,7 +39,7 @@ Two aspect model are contained to illustrate how to use the properties and chara
 
 Dependencies:
 
-NONE
+@prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
 
 
 In the following only deviations from IDTA-01001-3-1 are documented:

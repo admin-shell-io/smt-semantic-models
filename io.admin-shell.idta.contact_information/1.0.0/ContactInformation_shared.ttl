@@ -347,6 +347,7 @@
    samm:description "Street name and house number."@en ;
    samm:description "Straße und Nummer."@de ;
    samm:see <urn:irdi:0173-1%2302-AAO128%23002> ;
+   samm:see <https://schema.org/streetAddress> ;
    samm:exampleValue "Musterstrasse 1"@de ;
    samm:characteristic shared:MultiLanguageTexts .
 

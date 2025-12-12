@@ -1,0 +1,44 @@
+######################################################################
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+
+
+:FurtherInformationEntity a samm:Entity ;
+   samm:properties ( 
+      [ samm:property :textStatement; samm:payloadName "TextStatement" ] 
+	  [ samm:property :validDate; samm:payloadName "ValidDate" ] 
+   ) .
+
+:validDate a samm:Property ;
+   samm:preferredName "valid date"@en ;
+   samm:preferredName "Gültigkeitsdatum"@de ;
+   samm:see <urn:irdi:0173-1#02-ABL775#001> ;
+   samm:see <https://api.eclass-cdp.com/0173-1#02-ABL775#001> ;
+   samm:description "Denotes a date on which the data specified in the Submodel was valid from for the associated asset."@en ;
+   samm:description "Datum, ab dem die Daten, die in diesem Submodell spezifiziert wurden, gültig sind."@de ;
+   samm:characteristic samm-c:Timestamp .
+
+:textStatement a samm:Property ;
+   samm:preferredName "text statement"@en ;
+   samm:preferredName "Erläuterung"@de ;
+   samm:description "Statement by the manufacturer in text form, e.g. scope of validity of the statements, scopes of application, conditions of operation"@en ;
+   samm:description "Erläuterung des Hersteller in Textform, z.B. Anwendungsbereich"@de ;
+   samm:see <urn:irdi:0173-1#02-ABK134#002> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABK134-002> ;
+   samm:characteristic shared:MultiLanguageTexts .
