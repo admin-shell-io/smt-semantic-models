@@ -26,7 +26,7 @@
 # SPDX-License-Identifier: CC-BY-4.0
 #######################################################################
 
-#######################################################################
+
 
 @prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
 @prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
@@ -49,7 +49,84 @@
    samm:see <https://admin-shell.io/IDTA-02035-3/1/0> ;
    samm:see <https://admin-shell.io/IDTA-02023/1/0> ;
    samm:properties ( 
-   [ samm:property pcf:productCarbonFootprints; samm:payloadName "ProductCarbonFootprints" ] 
+   [ samm:property :productCarbonFootprints; samm:payloadName "ProductCarbonFootprints" ] 
    ) ;
    samm:operations ( ) ;
    samm:events ( ) .
+
+
+:productCarbonFootprints a samm:Property ;
+   samm:preferredName "product carbon footprints"@en ;
+   samm:preferredName "Produkt CO2-Fußabdrücke"@de ;
+   samm:description "(Set) Balance of greenhouse gas emissions along the entire life cycle of a product in a defined application and in relation to a defined unit of use."@en ;
+   samm:see <https://admin-shell.io/idta/CarbonFootprint/CarbonFootprints/1/0> ;
+   samm:characteristic :ProductCarbonFootprintSet .
+
+:ProductCarbonFootprintSet a samm-c:Set ;
+   samm:dataType :ProductCarbonFootprint .  
+
+
+:ProductCarbonFootprint a samm:Entity ;
+   samm:preferredName "carbon footprint of a product"@en ;
+   samm:description "Balance of greenhouse gas emissions along the entire life cycle of a product in a defined application and in relation to a defined unit of use."@en ;
+   samm:see <https://admin-shell.io/idta/CarbonFootprint/ProductCarbonFootprint/1/0> ;
+   samm:properties ( 
+   [ samm:property pcf:pcfCalculationMethods; samm:payloadName "PcfCalculationMethods" ] 
+   [ samm:property :pcfCo2eq; samm:payloadName "PcfCo2eq" ] 
+   [ samm:property :referenceImpactUnitForCalculation; samm:payloadName "ReferenceImpactUnitForCalculation" ] 
+   [ samm:property :quantityOfMeasureForCalculation; samm:payloadName "QuantityOfMeasureForCalculation" ]
+   [ samm:property :lifeCyclePhases; samm:payloadName "LifeCyclePhases" ] 
+   [ samm:property :performanceClass; samm:payloadName "PerformanceClass" ] 
+   [ samm:property :webLinkToPublicCarbonFootprintStudy; samm:payloadName "WebLinkToPublicCarbonFootprintStudy" ]
+   ) .
+ 
+:pcfCo2eq a samm:Property ;
+   samm:preferredName "CO2 eq Climate Change"@en ;
+   samm:preferredName "CO2 eq Klimawandel"@de ;
+   samm:description "sum of all greenhouse gas emissions of a product according to the quantification requirements of the standard\n\n DIN DKE Spec 99100 chapter reference: 6.3.2"@en ;
+   samm:see <urn:irdi:0173-1#02-ABG855#003> ;
+   samm:see <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#pcfCo2eq> ;
+   samm:characteristic pcf:PcfCo2eqCharacteristic ;
+   samm:exampleValue "17.2"^^xsd:double .
+
+:referenceImpactUnitForCalculation a samm:Property ;
+   samm:preferredName "reference value for calculation"@en ;
+   samm:preferredName "Referenzeinheit für die Berechnung"@de ;
+   samm:description "Quantity unit of the product to which the PCF information on the CO2 footprint refers.\n\n If a normalized product carbon footprint (PCF) value is provided, the reference value for calculation should be a specific unit such as 'kWh'. If the total PCF value is provided the reference value for calculation should be 'piece'."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABG856%23003> ;
+   samm:see <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#referenceImpactUnitForCalculation> ;
+   samm:characteristic pcf:ReferenceImpactUnitForCalculationEnum ;
+   samm:exampleValue "piece" .
+
+
+:quantityOfMeasureForCalculation a samm:Property ;
+   samm:preferredName "quantity of measure for calculation"@en ;
+   samm:preferredName "Mengenangabe für die Berechnung"@de ;
+   samm:description "Provides the quantity number of pieces or mass or volume to compute the impact of climate change or product carbon footprint.\n\n If a normalized product carbon footprint (PCF) value is provided, the quantity of measure for calculation should be 1.\n If the total PCF value is provided the quantity of measure for calculation should be 1."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABG857%23003> ;
+   samm:see <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#quantityOfMeasureForCalculation> ;
+   samm:characteristic pcf:QuantityOfMeasureForCalculationCharacteristic ;
+   samm:exampleValue "5.0"^^xsd:double .
+ 
+:lifeCyclePhases a samm:Property ;
+   samm:preferredName "life cycle phases"@en ;
+   samm:preferredName "Lebenszyklusphasen"@de ;
+   samm:description "Life cycle stages of the product according to the quantification requirements of the standard to which the PCF carbon footprint statement refers.\n\nThe string value in the value list is based on DIN DKE SPEC 99100: 'A1 - raw material supply (and upstream production)' (6.3.5 required lify cycle mapping), 'A3 - production' (6.3.4 Contribution of main product production/manufacturing lifecycle stage), 'A4 - transport to final destination' (6.3.5 Contribution of distribution lifecycle stage), 'C3 - recycling, waste treatment' (6.3.6 Contribution of end of life and recycling lifecycle stage)\n\nPlease note that the model should always contain at least one Product Carbon Footprint entry that reflects the total PCF value (including all life cycle phases) of the battery."@en ;
+   samm:see <urn:irdi:0173-1%2302-ABG858%23003> ;
+   samm:see <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#lifeCyclePhases> ;
+   samm:characteristic pcf:LifeCyclePhaseSet ;
+   samm:exampleValue "C4 - landfill" . 
+ 
+:performanceClass a samm:Property ;
+  samm:preferredName "carbon footprint performance class"@en ;
+  samm:description "The battery passport must include the carbon footprint performance class in accordance with the entry into force of the delegated and implementing acts on the carbon footprint performance classes per Article7 of the Battery Regulation.\n\n DIN DKE Spec 99100 chapter reference: 6.3.7 "@en ;
+  samm:characteristic [
+      a samm:Characteristic ;
+      samm:dataType xsd:string ;
+   ] .
+   
+:webLinkToPublicCarbonFootprintStudy a samm:Property ;
+   samm:preferredName "web link to public carbon footprint study"@en ;
+   samm:description "One or more document identifiers (depending, for example, on the translation) of a specific document, which can be found in the 'HandoverDocumentation' model.\n\n DIN DKE Spec 99100 chapter reference: 6.3.8"@en ;
+   samm:see <urn:irdi:0173-1#02-ABL848#001> ;
+   samm:characteristic ext-shared:DocumentIdentifierSet .
