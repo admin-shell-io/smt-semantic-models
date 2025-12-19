@@ -38,7 +38,7 @@
 
 :AdressInformation a samm:Entity ;
    samm:description "Contains information on how to contact the manufacturer or an authorised service provider, e.g. when a maintenance service is required."@en ;
-   samm:see <urn:irdi:0173-1%2302-AAQ837%23005> ;
+   samm:see <urn:irdi:0173-1#02-AAQ837#005> ;
    samm:properties ( 
    [ samm:property contactInformation:roleOfContactPerson; samm:optional true; samm:payloadName "RoleOfContactPerson" ]
    [ samm:property contactInformation:nationalCode; samm:payloadName "NationalCode" ]
