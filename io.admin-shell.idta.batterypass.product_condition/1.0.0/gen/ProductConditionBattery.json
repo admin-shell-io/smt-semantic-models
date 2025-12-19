@@ -14,7 +14,7 @@
   "TemperatureInformation" : {
     "TimeExtremeLowTemp" : 0.0,
     "TimeExtremeHighTempCharging " : 0.0,
-    "TimeExtremeHighTemp" : 2.2670682E38,
+    "TimeExtremeHighTemp" : 0.0,
     "TimeExtremeLowTempCharging" : 0.0,
     "LastUpdate" : "2000-01-01T14:23:00"
   },
