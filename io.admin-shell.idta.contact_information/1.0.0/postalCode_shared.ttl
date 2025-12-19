@@ -23,7 +23,7 @@
    samm:preferredName "postal code"@en ;
    samm:description "postal code of address."@en ;
    samm:see <https://schema.org/postalCode> ;
-   samm:see <urn:irdi:0173-1%2302-AAO129%23002> ;
+   samm:see <urn:irdi:0173-1#02-AAO129#002> ;
    samm:exampleValue "DE-10719"@de ;
    samm:characteristic shared:MultiLanguageTexts .
 

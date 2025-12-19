@@ -19,7 +19,7 @@
 :ContactRoleEnum a samm-c:Enumeration ;
    samm:preferredName "contact role"@en ;
    samm:dataType xsd:string ;
-   samm:see <urn:irdi:0173-1%2309-AAD678%23001> ;
+   samm:see <urn:irdi:0173-1#09-AAD678#001> ;
    samm-c:values (
 	:AdministrativeContact
 	:CommercialContact
@@ -31,7 +31,7 @@
 :TelephoneTypeEnum a samm-c:Enumeration ;
    samm:preferredName "phone number type"@en ;
    samm:dataType xsd:string ;
-   samm:see <urn:irdi:0173-1%2309-AAD674%23001> ;
+   samm:see <urn:irdi:0173-1#09-AAD674#001> ;
    samm-c:values (
       :Home
 	  :Office
@@ -44,7 +44,7 @@
 :EmailTypeEnum a samm-c:Enumeration ;
    samm:preferredName "e-mail type"@en ;
    samm:dataType xsd:string ;
-   samm:see <urn:irdi:0173-1%2309-AAD677%23001> ;
+   samm:see <urn:irdi:0173-1#09-AAD677#001> ;
    samm-c:values (
       :Home
 	  :Office
@@ -56,7 +56,7 @@
 :FaxTypeEnum a samm-c:Enumeration ;
    samm:preferredName "fax number type"@en ;
    samm:dataType xsd:string ;
-   samm:see <urn:irdi:0173-1%2309-AAD674%23001> ;
+   samm:see <urn:irdi:0173-1#09-AAD674#001> ;
    samm-c:values (
       :Home
 	  :Office
@@ -66,54 +66,54 @@
 :AdministrativeContact a samm:Value ;
    samm:value "administrativ contact" ;
    samm:preferredName "administrativ contact"@en ;
-   samm:see <urn:irdi:0173-1%2307-AAS927%23001> .
+   samm:see <urn:irdi:0173-1#07-AAS927#001> .
 
 :CommercialContact a samm:Value ;
    samm:value "commercial contact" ;
    samm:preferredName "commercial contact"@en ;
-   samm:see <urn:irdi:0173-1%2307-AAS928%23001> .
+   samm:see <urn:irdi:0173-1#07-AAS928#001> .
 
 :HazardousGoodsContact a samm:Value ;
    samm:value "hazardous goods contact" ;
    samm:preferredName "hazardous goods contact"@en ;
-   samm:see <urn:irdi:00173-1%2307-AAS930%23001> .
+   samm:see <urn:irdi:00173-1#07-AAS930#001> .
 
 :OtherContact a samm:Value ;
    samm:value "other contact" ;
    samm:preferredName "other contact"@en ;
-   samm:see <urn:irdi:0173-1%2307-AAS929%23001> .
+   samm:see <urn:irdi:0173-1#07-AAS929#001> .
 
 :TechnicalContact a samm:Value ;
    samm:value "technical contact" ;
    samm:preferredName "technical contact"@en ;
-   samm:see <urn:irdi:0173-1%2307-AAS931%23001> .
+   samm:see <urn:irdi:0173-1#07-AAS931#001> .
 
 :Home a samm:Value ;
    samm:value "home" ;
    samm:preferredName "home"@en ;
-   samm:see <urn:irdi:0173-1%2307-AAS758%23001> .
+   samm:see <urn:irdi:0173-1#07-AAS758#001> .
    
 :Office a samm:Value ;
    samm:value "office" ;
    samm:preferredName "office"@en ;
-   samm:see <urn:irdi:0173-1%2307-AAS754%23001> .
+   samm:see <urn:irdi:0173-1#07-AAS754#001> .
 
 :OfficeMobile a samm:Value ;
    samm:value "office mobile" ;
    samm:preferredName "office mobile"@en ;
-   samm:see <urn:irdi:0173-1%2307-AAS755%23001> .
+   samm:see <urn:irdi:0173-1#07-AAS755#001> .
    
 :PrivateMobile a samm:Value ;
    samm:value "private mobile" ;
    samm:preferredName "private mobile"@en ;
-   samm:see <urn:irdi:173-1%2307-AAS759%23001> .
+   samm:see <urn:irdi:173-1#07-AAS759#001> .
  
 :Secretary a samm:Value ;
    samm:value "secretary" ;
    samm:preferredName "secretary"@en ;
-   samm:see <urn:irdi:0173-1%2307-AAS756%23001> .
+   samm:see <urn:irdi:0173-1#07-AAS756#001> .
    
 :Substitute a samm:Value ;
    samm:value "substitute" ;
    samm:preferredName "substitute"@en ;
-   samm:see <urn:irdi:0173-1%2307-AAS757%23001> .
+   samm:see <urn:irdi:0173-1#07-AAS757#001> .
