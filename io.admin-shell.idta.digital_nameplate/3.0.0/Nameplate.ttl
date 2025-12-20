@@ -150,7 +150,7 @@
 :dateOfManufacture a samm:Property ;
    samm:preferredName "date of manufacture"@en ;
    samm:preferredName "Herstelldatum"@de ;
-   samm:description "Date when an item was manufactured-"@en ;
+   samm:description "Date when an item was manufactured."@en ;
    samm:description "Datum, zu dem das Produkt hergestellt wurde."@de ;
    samm:see <urn:irdi:0112/2///61987%23ABB757%23007> ;
    samm:see <urn:irdi:0173-1%2302-AAR972%23004> ;

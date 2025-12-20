@@ -51,3 +51,12 @@ Dependencies:
 
 Deviations:
 * informationOnAccidents is modelled as a DocumentSet (reuse from SMT HandoverDocumentation), in DIN DKE SPEC 99100 it is described as a Reference to a pdf File.  
+
+## ECLASS
+
+no ECLASS IRDIs for
+
+* NegativeEvents
+* SMC TemperatureInformation (but for temperatures within)
+* EvolutionOfSelfDischarge
+* CurrentSelfDischargingRate

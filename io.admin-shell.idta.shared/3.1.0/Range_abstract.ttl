@@ -15,16 +15,23 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
-@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 
 
-:postalCode a samm:Property ;
-   samm:preferredName "postal code"@en ;
-   samm:description "postal code of address."@en ;
-   samm:see <https://schema.org/postalCode> ;
-   samm:see <urn:irdi:0173-1#02-AAO129#002> ;
-   samm:exampleValue "DE-10719"@de ;
-   samm:characteristic shared:MultiLanguageTexts .
+:rangeMinAbstract a samm:AbstractProperty ;
+   samm:preferredName "min"@de ;
+   samm:preferredName "min"@en ;
+   samm:description "Minimum value within range."@en .
+
+:rangeMaxAbstract a samm:AbstractProperty ;
+   samm:preferredName "max"@de ;
+   samm:preferredName "max"@en ;
+   samm:description "Maximum value within range."@en .
+   
+:RangeTypeAbstract a samm:AbstractEntity ;
+   samm:preferredName "Wertebereich"@de ;
+   samm:preferredName "range"@en ;
+   samm:description "A range data element is a data element that defines a range with min and max.\n\n If the min value is missing, the value is assumed to be negative infinite.\n If the max value is missing, the value is assumed to be positive infinite."@en ;
+   samm:see <https://admin-shell.io/aas/3/1/Range> .
 
 

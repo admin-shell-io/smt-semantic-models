@@ -131,7 +131,7 @@
    samm:preferredName "Referenzeinheit für die Berechnung"@de ;
    samm:description "Quantity unit of the product to which the PCF information on the CO2 footprint refers."@en ;
    samm:see <urn:irdi:0173-1%2302-ABG856%23003> ;
-   samm:characteristic samm-c:Text ;
+   samm:characteristic :ReferenceImpactUnitForCalculationEnum ;
    samm:exampleValue "piece" .
 
 :pcfCo2eq a samm:Property ;

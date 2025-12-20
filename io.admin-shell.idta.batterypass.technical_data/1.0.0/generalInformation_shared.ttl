@@ -35,9 +35,7 @@
    [ samm:property bpg:batteryMass; samm:payloadName "BatteryMass" ]    
    ) .
    
-   
-   
 :manufacturerIdentifier a samm:Property ;
    samm:preferredName "identifier of the manufacturer"@en ;
-   samm:description "A battery passport must include information identifying the manufacturer."@en ;
+   samm:description "A battery passport must include information identifying the manufacturer.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.4"@en ;
    samm:characteristic samm-c:Text .

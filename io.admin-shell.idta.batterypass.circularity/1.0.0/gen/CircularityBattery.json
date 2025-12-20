@@ -32,11 +32,11 @@
     "SupplierWebAddress" : "https://example.com/information/product/1224/contact"
   } ],
   "RecycledContentInformation" : [ {
-    "PreConsumerShare" : 42.63208,
+    "PreConsumerShare" : 21.954641,
     "RecycledMaterial" : "Cobalt",
-    "PostConsumerShare" : 12.14089
+    "PostConsumerShare" : 4.018692
   } ],
-  "RenewableContent" : 8.4436097E37,
+  "RenewableContent" : 1.6958236E38,
   "SafetyMeasures" : {
     "ExtinguishingAgents" : [ "RYtGKbgicZaHCBRQDSx" ],
     "SafetyInstructions" : [ "JxkyvRnL" ]

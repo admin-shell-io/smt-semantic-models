@@ -64,6 +64,7 @@
 :renewableContent a samm:Property ;
    samm:preferredName "renewable content"@en ;
    samm:description "Share of renewable material content. A renewable material is a material made of natural resources that can be replenished. \n\nDIN DKE Spec 99100 chapter reference: 6.6.2.11"@en ;
+   samm:see <urn:irdi:0173-1#02-ABL867#001> ;
    samm:characteristic :RenewableContent .
 
 
@@ -173,16 +174,19 @@
 :wastePrevention a samm:Property ;
    samm:preferredName "waste prevention"@en ;
    samm:description "Prevention and management of waste batteries: Point (a) of Article 60(1): Information on the role of end-users in contributing to waste prevention, including by information on good practices and recommendations concerning the use of batteries aiming at extending their use phase and the possibilities of re-use, preparing for re-use, preparing for repurpose, repurposing and remanufacturing"@en ;
+   samm:see <urn:irdi:0173-1#02-ABL855#001> ;
    samm:characteristic shared:DocumentIdentifierSet .
 
 :separateCollection a samm:Property ;
    samm:preferredName "separate collection"@en ;
    samm:description "Prevention and management of waste batteries: Point (b) of Article 60(1): Information on the role of end-users in contributing to the separate collection of waste batteries in accordance with their obligations under Article 51 so as to allow their treatment"@en ;
+   samm:see <urn:idi:0173-1#02-ABL854#001> ;
    samm:characteristic shared:DocumentIdentifierSet .
 
 :informationOnCollection a samm:Property ;
    samm:preferredName "information on collection"@en ;
    samm:description "Prevention and management of waste batteries: Point (c) of Article 60(1): information on the separate collection, the take back, the collection points and preparing for re-use, preparing for repurposing, and recycling operations available for waste batteries"@en ;
+   samm:see <urn:irdi:0173-1#02-ABL856#001> ;
    samm:characteristic shared:DocumentIdentifierSet .
 
 

@@ -58,4 +58,5 @@
 :informationOnAccidents a samm:Property ;
    samm:preferredName "information on accidents"@en ;
    samm:description "The battery passport must contain information and data resulting from its use such as accidents. \n\nDIN DKE Spec 99100 chapter reference: 6.7.8.4"@en ;
+   samm:see <urn:irdi:0173-1#02-ABL848#001> ;
    samm:characteristic shared:DocumentIdentifierSet .

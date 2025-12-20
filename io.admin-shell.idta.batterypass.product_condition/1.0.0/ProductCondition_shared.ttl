@@ -33,6 +33,7 @@
 :energyThroughput a samm:Property ;
    samm:preferredName "energy throughput"@en ;
    samm:description "The data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.7"@en ;
+   samm:see <urn:irdi:0173-1#02-ABL850#001> ;
    samm:characteristic :EnergyThroughput .
 
 :EnergyThroughput a samm-c:SingleEntity ;
@@ -58,6 +59,7 @@
  
 :capacityThroughput a samm:Property ;
    samm:description "The data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.8"@en ;
+   samm:see <urn:irdi:0173-1#02-ABL849#001> ;
    samm:characteristic :CapacityThroughput .
 
  :CapacityThroughput a samm-c:SingleEntity ;
@@ -83,7 +85,9 @@
    samm-c:unit unit:ampereHour .
    
 :numberOfFullCycles a samm:Property ;
+   samm:preferredName "number of full cycles"@en ;
    samm:description "Number of (full) charging and discharging cycles.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.4"@en ;
+   samm:see <urn:irdi:0173-1#02-ABL868#001> ;
    samm:characteristic :NumberOfFullCycles .
 
    
@@ -112,6 +116,7 @@
 :stateOfCertifiedEnergy a samm:Property ;
    samm:preferredName "SOCE"@en ;
    samm:description "Definition based on UNECE GTR 22: The measured or on-board UBE performance at a specific point in its lifetime, expressed as a percentage of the certified usable battery energy.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.7"@en ;
+   samm:see <urn:irdi:0173-1#02-ABL847#001> ;
    samm:characteristic :StateOfCertifiedEnergy .
    
 :StateOfCertifiedEnergy a samm-c:SingleEntity ;
@@ -138,6 +143,7 @@
 :remainingEnergy a samm:Property ;
    samm:preferredName "remaining energy"@en ;
    samm:description "Definition from UNECE GTR 22, applicable only to EVs.\nThe energy supplied by the battery from the beginning of the test procedure used for certification until the applicable break-off criterion of the test procedure used for certification is reached.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.6"@en ;
+   samm:see <urn:irdi:0173-1#02-ABL870#001> ;
    samm:characteristic :RemainingEnergy .
    
 :RemainingEnergy a samm-c:SingleEntity ;
@@ -164,6 +170,7 @@
 :remainingCapacity a samm:Property ;
    samm:preferredName "remaining capacity"@en ;
    samm:description "The in-use data attribute on capacity, corresponding with the definition of rated capacity.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.3"@en ;
+   samm:see <urn:irdi:0173-1#02-ABL840#001> ;
    samm:characteristic :RemainingCapacity .
    
 :RemainingCapacity a samm-c:SingleEntity ;
@@ -232,7 +239,9 @@
 :timeExtremeHighTemp a samm:Property ;
    samm:preferredName "time extreme high temperature"@en ;
    samm:description "Cumulated time spent above the given upper boundary of temperature."@en ;
-   samm:characteristic :TimeExtremeHighTemp .
+   samm:see <urn:irdi:0173-1#02-ABL816#001> ;
+   samm:characteristic :TimeExtremeHighTemp ;
+   samm:exampleValue "0"^^xsd:float .
    
 :TimeExtremeHighTemp a samm-c:Measurement ;
    samm:dataType xsd:float ;
@@ -241,6 +250,7 @@
 :timeExtremeLowTemp a samm:Property ;
    samm:preferredName "time extreme low temperature"@en ;
    samm:description "Cumulated time spent below the given lower boundary of temperature."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL817#001> ;
    samm:characteristic :TimeExtremeLowTemp ;
    samm:exampleValue "0"^^xsd:float .
    
@@ -251,6 +261,7 @@
 :timeExtremeHighTempCharging a samm:Property ;
    samm:preferredName "time extreme high temperature charging"@en ;
    samm:description "Cumulated time spent above the given upper boundary of temperature during Charging."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL818#001> ;
    samm:characteristic :TimeExtremeHighTempCharging ;
    samm:exampleValue "0"^^xsd:float .
    
@@ -262,6 +273,7 @@
 :timeExtremeLowTempCharging a samm:Property ;
    samm:preferredName "time extreme low temperature charging"@en ;
    samm:description "Cumulated time spent below the given lower boundary of temperature during charging."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL819#001> ;
    samm:characteristic :TimeExtremeLowTempCharging ;
    samm:exampleValue "0"^^xsd:float .
    
@@ -272,6 +284,7 @@
 :remainingPowerCapability a samm:Property ;
    samm:preferredName "remaining power capability"@en ;
    samm:description "Original power capability (in Watts) and limits, with temperature range when relevant.\n- The amount of energy that a battery is capable to provide over a given period of time under reference conditions.\n- Power capability at 80% and 20% state of charge.\n\nDIN DKE Spec 99100 chapter reference: 6.7.3.3"@en ;
+   samm:see <urn:irdi:0173-1#02-ABL820#001> ;
    samm:characteristic :RemainingPowerCapability .
    
 :RemainingPowerCapability a samm-c:SingleEntity ;
@@ -393,6 +406,7 @@
 :stateOfCharge a samm:Property ;
    samm:preferredName "state of charge (SoC)"@en ;
    samm:description "Available capacity in a battery expressed as a percentage of remaining capacity.  \n\nDIN DKE Spec 99100 chapter reference: 6.7.2.8 (changed: available energy or charge in a battery expressed as a percentage of rated capacity as declared by the manufacturer, or, when the battery’s state of health is no longer equal to its initial condition, of the maximum energy or charge that can be stored in the battery at the time of charging)"@en ;
+   samm:see <urn:irdi:0173-1#02-ABL821#001> ;
    samm:characteristic :StateOfCharge .
    
 :StateOfCharge a samm-c:SingleEntity ;
@@ -421,6 +435,7 @@
 :remainingRoundTripEnergyEfficiency a samm:Property ;
    samm:preferredName "remaining round trip energy efficiency"@en ;
    samm:description "The battery passport shall include information, where possible, about the remaining round trip energy efficiency as information on the state of health of the battery \n\nThe update frequency of remaining round trip energy efficiency should be aligned with the update frequency of round trip energy efficiency fade and should be provided upon change of the battery status.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.4"@en ;
+   samm:see <urn:iridi:0173-1#02-ABL851#001> ;
    samm:characteristic :RemainingRoundTripEnergyEfficiency .
    
 
