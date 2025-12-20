@@ -1,0 +1,91 @@
+######################################################################
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
+
+
+:TechnicalData a samm:Aspect ;
+   samm:description "Technical data of the asset and associated product classificatons."@en ;
+   samm:see <urn:irdi:0173-1#01-AHX837#002> ;
+   samm:properties ( 
+	 
+	[ samm:property :generalInformation;  samm:payloadName "GeneralInformation" ] 
+	[ samm:property :productClassifications; samm:optional true; samm:payloadName "ProductClassifications" ] 
+	[ samm:property :technicalPropertyAreas; samm:optional true; samm:payloadName "TechnicalPropertyAreas" ] 
+	[ samm:property :furtherInformation; samm:optional true; samm:payloadName "FurtherInformation" ] 
+    [ samm:property :specificDescriptions; samm:optional true; samm:payloadName "SpecificDescriptions" ] 
+   ) ;
+   samm:operations ( ) ;
+   samm:events ( ) .
+
+
+:generalInformation a samm:Property ;
+   samm:preferredName "general information"@en ;
+   samm:description "General information, for example ordering and manufacturer information."@en ;
+   samm:see <urn:irdi:0173-1#02-ABK161#002/0173-1#01-AHX838#002> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABK161-002/0173-1-01-AHX838-002> ;
+   samm:characteristic :GeneralInformationCharacteristic .
+
+:GeneralInformationCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :GeneralInformationEntity .
+
+:productClassifications a samm:Property ;
+   samm:preferredName "Produkt-Klassifikationen"@de ;
+   samm:preferredName "product classifications"@en ;
+   samm:description "Product classifications by association with product classes in common classification systems."@en ;
+   samm:see <urn:irdi:0173-1#02-ABK162#002> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABK162-002> ;
+   samm:characteristic :ProductClassificationSet .
+   
+:ProductClassificationSet a samm-c:Set ;
+   samm:dataType :ProductClassificationEntity .
+
+:technicalPropertyAreas a samm:Property ;
+   samm:preferredName "technical property areas"@en ;
+   samm:preferredName "Technische Daten-Bereiche"@de ;
+   samm:description "List of all technical property areas."@en ;
+   samm:description "Liste aller technischen Daten-Bereiche."@de ;
+   samm:see <urn:irdi:0173-1#02-ABK163#002> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABK163-002> ;
+   samm:characteristic :TechnicalPropertyAreaSet .
+
+    
+:TechnicalPropertyAreaSet a samm-c:SingleEntity ;
+   samm:dataType :TechnicalAttributesEntity .
+	 
+:furtherInformation a samm:Property ;
+   samm:description "Further information on the product, the validity of the information provided and this data record."@en ;
+   samm:see <urn:irdi:0173-1#02-ABK164#002> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABK164-002> ;
+   samm:characteristic :FurtherInformationCharacteristic .
+
+:FurtherInformationCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :FurtherInformationEntity .
+   
+:specificDescriptions a samm:Property ;
+   samm:preferredName "specific descriptions"@en ;
+   samm:description "Specific description areas for multiple use cases or areas of application."@en ;
+   samm:see <urn:irdi:0173-1#02-ABM221#001> ;
+   samm:see <https://api.eclass-cdp.com/0173-1-02-ABM221-001> ;
+   samm:characteristic :SpecificDescriptionsSet .
+   
+:SpecificDescriptionsSet a samm-c:Set ;
+   samm:dataType :SpecificDescriptionEntity . 
+
+   

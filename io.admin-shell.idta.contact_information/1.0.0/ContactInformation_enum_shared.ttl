@@ -1,0 +1,119 @@
+######################################################################
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
+
+:ContactRoleEnum a samm-c:Enumeration ;
+   samm:preferredName "contact role"@en ;
+   samm:dataType xsd:string ;
+   samm:see <urn:irdi:0173-1%2309-AAD678%23001> ;
+   samm-c:values (
+	:AdministrativeContact
+	:CommercialContact
+	:HazardousGoodsContact
+	:OtherContact
+	:TechnicalContact
+   ) .
+  
+:TelephoneTypeEnum a samm-c:Enumeration ;
+   samm:preferredName "phone number type"@en ;
+   samm:dataType xsd:string ;
+   samm:see <urn:irdi:0173-1%2309-AAD674%23001> ;
+   samm-c:values (
+      :Home
+	  :Office
+	  :OfficeMobile
+	  :PrivateMobile
+	  :Secretary
+	  :Substitute
+   ) .
+
+:EmailTypeEnum a samm-c:Enumeration ;
+   samm:preferredName "e-mail type"@en ;
+   samm:dataType xsd:string ;
+   samm:see <urn:irdi:0173-1%2309-AAD677%23001> ;
+   samm-c:values (
+      :Home
+	  :Office
+	  :Secretary
+	  :Substitute
+   ) .
+
+
+:FaxTypeEnum a samm-c:Enumeration ;
+   samm:preferredName "fax number type"@en ;
+   samm:dataType xsd:string ;
+   samm:see <urn:irdi:0173-1%2309-AAD674%23001> ;
+   samm-c:values (
+      :Home
+	  :Office
+	  :Secretary
+   ) .
+  
+:AdministrativeContact a samm:Value ;
+   samm:value "administrativ contact" ;
+   samm:preferredName "administrativ contact"@en ;
+   samm:see <urn:irdi:0173-1%2307-AAS927%23001> .
+
+:CommercialContact a samm:Value ;
+   samm:value "commercial contact" ;
+   samm:preferredName "commercial contact"@en ;
+   samm:see <urn:irdi:0173-1%2307-AAS928%23001> .
+
+:HazardousGoodsContact a samm:Value ;
+   samm:value "hazardous goods contact" ;
+   samm:preferredName "hazardous goods contact"@en ;
+   samm:see <urn:irdi:00173-1%2307-AAS930%23001> .
+
+:OtherContact a samm:Value ;
+   samm:value "other contact" ;
+   samm:preferredName "other contact"@en ;
+   samm:see <urn:irdi:0173-1%2307-AAS929%23001> .
+
+:TechnicalContact a samm:Value ;
+   samm:value "technical contact" ;
+   samm:preferredName "technical contact"@en ;
+   samm:see <urn:irdi:0173-1%2307-AAS931%23001> .
+
+:Home a samm:Value ;
+   samm:value "home" ;
+   samm:preferredName "home"@en ;
+   samm:see <urn:irdi:0173-1%2307-AAS758%23001> .
+   
+:Office a samm:Value ;
+   samm:value "office" ;
+   samm:preferredName "office"@en ;
+   samm:see <urn:irdi:0173-1%2307-AAS754%23001> .
+
+:OfficeMobile a samm:Value ;
+   samm:value "office mobile" ;
+   samm:preferredName "office mobile"@en ;
+   samm:see <urn:irdi:0173-1%2307-AAS755%23001> .
+   
+:PrivateMobile a samm:Value ;
+   samm:value "private mobile" ;
+   samm:preferredName "private mobile"@en ;
+   samm:see <urn:irdi:173-1%2307-AAS759%23001> .
+ 
+:Secretary a samm:Value ;
+   samm:value "secretary" ;
+   samm:preferredName "secretary"@en ;
+   samm:see <urn:irdi:0173-1%2307-AAS756%23001> .
+   
+:Substitute a samm:Value ;
+   samm:value "substitute" ;
+   samm:preferredName "substitute"@en ;
+   samm:see <urn:irdi:0173-1%2307-AAS757%23001> .

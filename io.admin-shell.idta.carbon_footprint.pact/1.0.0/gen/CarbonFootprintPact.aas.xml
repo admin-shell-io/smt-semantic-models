@@ -33,7 +33,7 @@
       <aas:description>
         <aas:langStringTextType>
           <aas:language>en</aas:language>
-          <aas:text>Provides the means to access the Carbon Footprint of the asset.</aas:text>
+          <aas:text>Provides the means to access the Carbon Footprint of the asset. It supports to provide the Carbon Footprint conformant to the specification of the Partnership for Carbon Transparency (PACT).</aas:text>
         </aas:langStringTextType>
       </aas:description>
       <aas:administration/>
@@ -4116,13 +4116,13 @@
         </aas:langStringNameType>
         <aas:langStringNameType>
           <aas:language>de</aas:language>
-          <aas:text>C02 Footprint</aas:text>
+          <aas:text>C02 Fußabdruck</aas:text>
         </aas:langStringNameType>
       </aas:displayName>
       <aas:description>
         <aas:langStringTextType>
           <aas:language>en</aas:language>
-          <aas:text>Provides the means to access the Carbon Footprint of the asset.</aas:text>
+          <aas:text>Provides the means to access the Carbon Footprint of the asset. It supports to provide the Carbon Footprint conformant to the specification of the Partnership for Carbon Transparency (PACT).</aas:text>
         </aas:langStringTextType>
       </aas:description>
       <aas:id>urn:samm:io.admin-shell.idta.carbon_footprint.pact:1.0.0#PactCarbonFootprint</aas:id>
@@ -4146,7 +4146,7 @@
                 </aas:langStringPreferredNameTypeIec61360>
                 <aas:langStringPreferredNameTypeIec61360>
                   <aas:language>de</aas:language>
-                  <aas:text>C02 Footprint</aas:text>
+                  <aas:text>C02 Fußabdruck</aas:text>
                 </aas:langStringPreferredNameTypeIec61360>
               </aas:preferredName>
               <aas:shortName>
@@ -4158,7 +4158,7 @@
               <aas:definition>
                 <aas:langStringDefinitionTypeIec61360>
                   <aas:language>en</aas:language>
-                  <aas:text>Provides the means to access the Carbon Footprint of the asset.</aas:text>
+                  <aas:text>Provides the means to access the Carbon Footprint of the asset. It supports to provide the Carbon Footprint conformant to the specification of the Partnership for Carbon Transparency (PACT).</aas:text>
                 </aas:langStringDefinitionTypeIec61360>
               </aas:definition>
             </aas:dataSpecificationIec61360>

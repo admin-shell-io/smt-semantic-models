@@ -40,7 +40,7 @@
           "text" : "Carbon Footprint"
         }, {
           "language" : "de",
-          "text" : "C02 Footprint"
+          "text" : "C02 Fußabdruck"
         } ],
         "shortName" : [ {
           "language" : "en",
@@ -59,7 +59,7 @@
       "text" : "Carbon Footprint"
     }, {
       "language" : "de",
-      "text" : "C02 Footprint"
+      "text" : "C02 Fußabdruck"
     } ],
     "idShort" : "CarbonFootprint"
   }, {
@@ -305,11 +305,11 @@
         "dataType" : "STRING",
         "definition" : [ {
           "language" : "en",
-          "text" : "Content type of the content of the file."
+          "text" : "Content type of the content of the file or blob."
         } ],
         "preferredName" : [ {
           "language" : "en",
-          "text" : "contentType"
+          "text" : "content type"
         } ],
         "shortName" : [ {
           "language" : "en",
@@ -318,6 +318,10 @@
       }
     } ],
     "id" : "urn:samm:io.admin-shell.idta.shared:3.1.0#contentType",
+    "displayName" : [ {
+      "language" : "en",
+      "text" : "content type"
+    } ],
     "idShort" : "contentType"
   }, {
     "modelType" : "ConceptDescription",
@@ -373,7 +377,7 @@
         "dataType" : "STRING",
         "definition" : [ {
           "language" : "en",
-          "text" : "Function of a contact person in a process\nenumeration: 0173-1%2307-AAS927%23001 (administrativ contact), 0173-1%2307-AAS928%23001 (commercial contact), 0173-1%2307-AAS929%23001 (other contact), 0173-1%2307-AAS930%23001 (hazardous goods contact), 0173-1%2307-AAS931%23001 (technical contact)\nNote: the above mentioned ECLASS enumeration should be declared as “open” for further addition."
+          "text" : "Function of a contact person in a process\nenumeration: 0173-1#07-AAS927#001 (administrativ contact), 0173-1#07-AAS928#001 (commercial contact), 0173-1#07-AAS929#001 (other contact), 0173-1#07-AAS930#001 (hazardous goods contact), 0173-1#07-AAS931#001 (technical contact)\nNote: the above mentioned ECLASS enumeration should be declared as “open” for further addition."
         } ],
         "preferredName" : [ {
           "language" : "de",
@@ -1898,6 +1902,9 @@
         "preferredName" : [ {
           "language" : "en",
           "text" : "product or sector specific carbon footprints"
+        }, {
+          "language" : "de",
+          "text" : "Produkt- oder Sektor-spezifische C02-Fußabdrücke"
         } ],
         "shortName" : [ {
           "language" : "en",
@@ -1909,6 +1916,9 @@
     "displayName" : [ {
       "language" : "en",
       "text" : "product or sector specific carbon footprints"
+    }, {
+      "language" : "de",
+      "text" : "Produkt- oder Sektor-spezifische C02-Fußabdrücke"
     } ],
     "idShort" : "productOrSectorSpecificCarbonFootprints"
   } ],
@@ -2174,13 +2184,13 @@
           "supplementalSemanticIds" : [ {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "https://admin-shell.io/aas/3/1/File"
+              "value" : "https://admin-shell.io/idta/CarbonFootprint/ExplanatoryStatement/1/0"
             } ],
             "type" : "ExternalReference"
           }, {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "https://admin-shell.io/idta/CarbonFootprint/ExplanatoryStatement/1/0"
+              "value" : "https://admin-shell.io/aas/3/1/File"
             } ],
             "type" : "ExternalReference"
           } ],
@@ -2216,7 +2226,24 @@
               } ],
               "type" : "ExternalReference"
             },
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/aas/3/1/File/contentType"
+              } ],
+              "type" : "ExternalReference"
+            }, {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "https://admin-shell.io/aas/3/1/Blob/contentType"
+              } ],
+              "type" : "ExternalReference"
+            } ],
             "valueType" : "xs:string",
+            "displayName" : [ {
+              "language" : "en",
+              "text" : "content type"
+            } ],
             "idShort" : "contentType"
           } ]
         }, {
@@ -2224,13 +2251,13 @@
           "supplementalSemanticIds" : [ {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "0173-1%2302-AAQ837%23005"
+              "value" : "0173-1%2301-AHF575%23003"
             } ],
             "type" : "ExternalReference"
           }, {
             "keys" : [ {
               "type" : "GlobalReference",
-              "value" : "0173-1%2301-AHF575%23003"
+              "value" : "0173-1%2302-AAQ837%23005"
             } ],
             "type" : "ExternalReference"
           } ],
@@ -2255,6 +2282,13 @@
               } ],
               "type" : "ExternalReference"
             },
+            "supplementalSemanticIds" : [ {
+              "keys" : [ {
+                "type" : "GlobalReference",
+                "value" : "173-1%2302-AAO204%23003"
+              } ],
+              "type" : "ExternalReference"
+            } ],
             "valueType" : "xs:string",
             "displayName" : [ {
               "language" : "de",
@@ -2307,13 +2341,13 @@
             "supplementalSemanticIds" : [ {
               "keys" : [ {
                 "type" : "GlobalReference",
-                "value" : "0173-1%2302-AAN468%23008"
+                "value" : "https://api.eclass-cdp.com/0173-1-02-AAN468-008"
               } ],
               "type" : "ExternalReference"
             }, {
               "keys" : [ {
                 "type" : "GlobalReference",
-                "value" : "https://api.eclass-cdp.com/0173-1-02-AAN468-008"
+                "value" : "0173-1%2302-AAN468%23008"
               } ],
               "type" : "ExternalReference"
             } ],
@@ -3180,6 +3214,9 @@
       "displayName" : [ {
         "language" : "en",
         "text" : "product or sector specific carbon footprints"
+      }, {
+        "language" : "de",
+        "text" : "Produkt- oder Sektor-spezifische C02-Fußabdrücke"
       } ],
       "idShort" : "productOrSectorSpecificCarbonFootprints",
       "orderRelevant" : false,
@@ -3200,6 +3237,9 @@
         "displayName" : [ {
           "language" : "en",
           "text" : "product or sector specific carbon footprints"
+        }, {
+          "language" : "de",
+          "text" : "Produkt- oder Sektor-spezifische C02-Fußabdrücke"
         } ],
         "idShort" : "productOrSectorSpecificCarbonFootprints",
         "value" : [ {

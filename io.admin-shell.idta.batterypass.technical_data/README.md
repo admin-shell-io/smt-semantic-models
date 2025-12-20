@@ -2,7 +2,7 @@
 
 This namespace is reserved for the Submodel Template Specification (SMT)  IDTA-02035-4 Digital Battery Passport - Part 4: Technical Data 
 
-This SMT is derived from IDTA-02003-1-2 Generic Technical Data 1.2 
+This SMT is derived from IDTA-02003-2-0 Generic Technical Data 2.0 
 
 Namespace: urn:samm:io.admin-shell.idta.batterypass.technical_data
 
@@ -18,15 +18,19 @@ The battery passport consists of the following 7 parts:
 *	Digital Battery Passport - Part 7: Circularity  (IDTA-02035-7)
 
 Source GitHub IDTA: https://github.com/admin-shell-io/submodel-templates 
-Source Content Hub of the IDTA: [IDTA-02035-4 V1.2]()
+Source Content Hub of the IDTA: [IDTA-02035-4 V2.0]()
 
 # General
 
 The folder "gen" for each version contains sample JSON files generated for the aspect model(s)
 
-Deviations from IDTA-02003-1-2
+Deviations from IDTA-02003-2-0
 
-- productClassifications not included
+- optional productClassifications not included
+- optional furtherInformation not included
+- optional specificDescriptions not included
+
+- TechnicalPropertyAreas not realized as SML but as SMC (https://github.com/admin-shell-io/submodel-templates/issues/175)
 
 # Changelog
 All notable changes to this model will be documented in this section.
@@ -37,21 +41,16 @@ Contained Files:
 
 * TechnicalData.ttl: the aspect model for the SMT 
 * technicalProperties_shared.ttl
-* technicalProperties_capacity.ttl
-* technicalProperties_efficiency.ttl
-* technicalProperties_resistance.ttl
-* technicalProperties_voltage.ttl
-
-
-
+* technicalProperties_scalar_shared.ttl
+* generalInformation_shared.ttl
 
 # Dependencies:
 
-@prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:1.2.0#> .
+@prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
-@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.0#> .
-@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
+@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.1#> .
+@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> 
 
 # Known Deviations (IDTA-02003-1-2)
 
@@ -97,7 +96,7 @@ to GenerationInformation:
 
 * "ratedEnergy" was renamed to "CertifiedUsableBatteryEnergy"
 * there is no semanticId for batteryCategory
-* In BatteryPass TemperatureRangeIdleState was modelled as one property with a range constraint with min= -20 and max=60. Now there are two properties for it
+* In BatteryPass TemperatureRangeIdleState was modelled as one property with a range constraint with min= -20 and max=60. Now there are two properties for it, TemperatureRangeIdleStateUpperBoundary and TemperatureRangeIdleStateLowerBoundary
 * Length not existing in BatteryPass 
 * Description of Length, Height, Width should be updated. Where is the Diameter mentioned in Length? Where is the depth mentioned in Width and Length.
 * VoltagEntity: min and max should be switched
@@ -107,10 +106,7 @@ to GenerationInformation:
 * in BatteryPass CurrentSelfDischargingRateValue is float, here InitialSelfDischargingRate is integer. Same for InitialRoundTripEnergyEfficiency, here integer, in BatteryPass for example RemainingRoundTripEnergyEfficiencyValue is float
 
 
-## Open Questions
+### Open issues
 
-### still open properties of Efficiency
-### still open properties of Resistance
-### for consistency SMC for TemperatureRangeIdleStateBoundaries should be introduced
-### should be remove optional [ samm:property tech:productClassifications; samm:optional true ] from generic Technical Data? We should if we do not have a recommendation what to add there
+* https://github.com/batterypass/BatteryPassDataModel/issues/33 Warrenty VS Warranty (Payload name already Warranty)
 

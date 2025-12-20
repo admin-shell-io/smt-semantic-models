@@ -20,6 +20,9 @@ with license CC BY-NC 4.0.
 Source GitHub IDTA: https://github.com/admin-shell-io/submodel-templates 
 Source Content Hub of the IDTA: [IDTA-02035-6 V1.2]()
 
+# General
+
+The folder "gen" for each version contains sammple JSON files and html generated for the aspect model(s)
 
 # Changelog
 All notable changes to this model will be documented in this section.
@@ -33,14 +36,11 @@ Contained Files:
 * MaterialComposition.ttl
 
 
-
 Dependencies:
 
 * urn:samm:io.BatteryPass.MaterialComposition:1.2.0
 
-Known Issues:
 
-* semanticId of Submodel is not correct
 
 
 

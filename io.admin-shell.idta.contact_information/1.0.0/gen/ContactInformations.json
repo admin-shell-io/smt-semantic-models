@@ -1,85 +1,85 @@
 {
   "contactInformations" : [ {
-    "POBox" : {
-      "en" : "Example multi language string"
-    },
+    "POBox" : [ {
+      "de" : "PF 1234"
+    } ],
     "Company" : [ {
-      "en" : "Example multi language string"
+      "en" : "ABC Company"
     } ],
     "Email" : {
       "EmailAddress" : "email@muster-ag.de",
       "PublicKey" : [ {
-        "en" : "Example multi language string"
+        "en" : "0x07"
       } ],
-      "TypeOfEmailAddress" : "0173-1%2307-AAS754%23001",
-      "TypeOfPublicKey" : {
-        "en" : "Example multi language string"
-      }
+      "TypeOfEmailAddress" : "office",
+      "TypeOfPublicKey" : [ {
+        "en" : "RSA"
+      } ]
     },
-    "NameOfContact" : {
-      "en" : "Example multi language string"
-    },
+    "NameOfContact" : [ {
+      "en" : "Doe"
+    } ],
     "ZipCode" : [ {
-      "en" : "Example multi language string"
+      "de" : "12345"
     } ],
-    "FirstName" : {
-      "en" : "Example multi language string"
-    },
-    "Title" : {
-      "en" : "Example multi language string"
-    },
+    "FirstName" : [ {
+      "en" : "Jane"
+    } ],
+    "Title" : [ {
+      "en" : "Mrs."
+    } ],
     "Languages" : [ "en" ],
-    "AcademicTitle" : {
-      "en" : "Example multi language string"
-    },
-    "IPCommunicationChannels" : [ {
-      "TypeOfCommunication" : "RYtGKbgicZaHCBRQDSx",
-      "availableTime" : [ {
-        "en" : "Example multi language string"
-      } ],
-      "AddressOfAdditionalLink" : "JxkyvRnL"
+    "AcademicTitle" : [ {
+      "en" : "PhD"
     } ],
-    "RoleOfContactPerson" : "eOMtThyhVNLWUZNRcBaQKxI",
+    "IPCommunicationChannels" : [ {
+      "TypeOfCommunication" : "Chat",
+      "availableTime" : [ {
+        "de" : "Montag – Freitag 08:00 bis 16:00"
+      } ],
+      "AddressOfAdditionalLink" : "eOMtThyhVNLWUZNRcBaQKxI"
+    } ],
+    "RoleOfContactPerson" : "technical contact",
     "TimeZone" : "-12:00",
     "Department" : [ {
-      "en" : "Example multi language string"
+      "de" : "Vertrieb"
     } ],
     "Phone" : {
       "TelephoneNumber" : [ {
-        "en" : "Example multi language string"
+        "de" : "+491234567890"
       } ],
-      "TYpeOfTelephone" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
+      "TypeOfTelephone" : "office",
       "AvailableTime" : [ {
-        "en" : "Example multi language string"
+        "de" : "Montag – Freitag 08:00 bis 16:00"
       } ]
     },
     "NationalCode" : [ {
-      "en" : "Example multi language string"
+      "en" : "DE"
     } ],
-    "FurtherDetailsOfContact" : {
-      "en" : "Example multi language string"
-    },
-    "AddressOfAdditionalLink" : "VLhpfQGTMDYpsBZxvfBoeygjb",
+    "FurtherDetailsOfContact" : [ {
+      "de" : "-"
+    } ],
+    "AddressOfAdditionalLink" : "https://example.com/information/product/1224/contact",
     "Street" : [ {
-      "en" : "Example multi language string"
+      "de" : "Musterstrasse 1"
     } ],
     "StateCounty" : [ {
-      "en" : "Example multi language string"
+      "de" : "Muster-Bundesland"
     } ],
     "Fax" : {
-      "TypeOfFaxNumber" : "1",
+      "TypeOfFaxNumber" : "office",
       "FaxNumber" : [ {
-        "en" : "Example multi language string"
+        "de" : "+491234567890"
       } ]
     },
     "CityTown" : [ {
-      "en" : "Example multi language string"
+      "de" : "Musterstadt"
     } ],
     "ZipCodeOfPOBox" : [ {
-      "en" : "Example multi language string"
+      "de" : "12345"
     } ],
-    "MiddleNames" : {
-      "en" : "Example multi language string"
-    }
+    "MiddleNames" : [ {
+      "en" : "M."
+    } ]
   } ]
 }

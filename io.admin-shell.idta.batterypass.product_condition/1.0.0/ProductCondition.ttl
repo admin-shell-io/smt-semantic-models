@@ -12,11 +12,10 @@
 # Copyright (c) 2025 Circulor GmbH on behalf of the Battery Pass Consortium
 #
 # The referenced work is made available under the terms of the
-# Creative Commons Attribution 4.0 International (CC BY-NC 4.0) license,
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
 # which is available at
-# https://creativecommons.org/licenses/by-nc/4.0/.
-#
-# SPDX-License-Identifier: CC-BY-NC-4.0
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
 #######################################################################
 
 @prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
@@ -27,7 +26,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#> .
-@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.0#> .
+@prefix bp: <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
 
 :ProductCondition a samm:Aspect ;
@@ -36,12 +36,13 @@
    samm:properties ( 
         [ samm:property bp:energyThroughput; samm:optional true; samm:payloadName "EnergyThroughput" ]
         [ samm:property bp:capacityThroughput; samm:optional true; samm:payloadName "CapacityThroughput" ]
-		[ samm:property bp:numberOfFullCycles; samm:payloadName "NumberOfFullCycles" ]
+		[ samm:property :numberOfFullCycles; samm:payloadName "NumberOfFullCycles" ]
         [ samm:property bp:stateOfCertifiedEnergy; samm:optional true; samm:payloadName "StateOfCertifiedEnergy" ]
         [ samm:property bp:remainingEnergy; samm:optional true; samm:payloadName "RemainingEnergy" ]
         [ samm:property bp:remainingCapacity; samm:optional true; samm:payloadName "RemainingCapacity" ]
         [ samm:property bp:negativeEvents; samm:optional true; samm:payloadName "NegativeEvents" ]
-        [ samm:property bp:temperatureInformation; samm:optional true; samm:payloadName "TemperatureInformation" ]
+        [ samm:property :informationOnAccidents; samm:payloadName "InformationOnAccidents" ]
+		[ samm:property :temperatureInformation; samm:payloadName "TemperatureInformation" ]
         [ samm:property bp:remainingPowerCapability; samm:optional true; samm:payloadName "RemainingPowerCapability" ]
         [ samm:property bp:evolutionOfSelfDischarge; samm:optional true; samm:payloadName "EvolutionOfSelfDischarge" ]
         [ samm:property bp:currentSelfDischargingRate; samm:optional true;  samm:payloadName "CurrentSelfDischargingRate" ]
@@ -51,3 +52,10 @@
    samm:operations ( ) ;
    samm:events ( ) .
    
+   
+ 
+ 
+:informationOnAccidents a samm:Property ;
+   samm:preferredName "information on accidents"@en ;
+   samm:description "The battery passport must contain information and data resulting from its use such as accidents. \n\nDIN DKE Spec 99100 chapter reference: 6.7.8.4"@en ;
+   samm:characteristic shared:DocumentIdentifierSet .

@@ -2,7 +2,6 @@
 
 This namespace is reserved for the Submodel Template Specification (SMT) IDTA-02035-7 Digital Battery Passport - Part 7: Circularity
 
-This SMT is derived from IDTA-02003-1-2 Generic Technical Data 1.2 
 
 Namespace: urn:samm:io.admin-shell.idta.batterypass.circularity
 
@@ -24,7 +23,7 @@ Source Content Hub of the IDTA: [IDTA-02035-7 V1.2]()
 # Dependencies
 
 This model is using the models of the BatteryPass Consortium: https://github.com/batterypass/BatteryPassDataModel
-with license CC BY-NC 4.0.
+with license CC BY 4.0.
 
 
 # Changelog
@@ -37,6 +36,12 @@ for changelog see  [IDTA-020xx V1.2, section "Version history"]()
 Contained Files:
 
 * Circularity.ttl
+* Namespace.ttl
+
+Known issues:
+
+* generated html file: wrong urn for Aspect Model, should be urn:samm:io.admin-shell.idta.batterypass.circularity:1.2.0#Circularity (properties of urn:samm:io.BatteryPass.Circularity:2.0.0#Circularity are used, both have same name) (see https://github.com/eclipse-esmf/esmf-sdk/issues/798)
+
 
 
 Dependencies:

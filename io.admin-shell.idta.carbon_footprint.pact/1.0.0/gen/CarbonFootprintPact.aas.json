@@ -33,14 +33,14 @@
         "modelType" : "DataSpecificationIec61360",
         "definition" : [ {
           "language" : "en",
-          "text" : "Provides the means to access the Carbon Footprint of the asset."
+          "text" : "Provides the means to access the Carbon Footprint of the asset. It supports to provide the Carbon Footprint conformant to the specification of the Partnership for Carbon Transparency (PACT)."
         } ],
         "preferredName" : [ {
           "language" : "en",
           "text" : "Carbon Footprint"
         }, {
           "language" : "de",
-          "text" : "C02 Footprint"
+          "text" : "C02 Fußabdruck"
         } ],
         "shortName" : [ {
           "language" : "en",
@@ -52,14 +52,14 @@
     "category" : "APPLICATION_CLASS",
     "description" : [ {
       "language" : "en",
-      "text" : "Provides the means to access the Carbon Footprint of the asset."
+      "text" : "Provides the means to access the Carbon Footprint of the asset. It supports to provide the Carbon Footprint conformant to the specification of the Partnership for Carbon Transparency (PACT)."
     } ],
     "displayName" : [ {
       "language" : "en",
       "text" : "Carbon Footprint"
     }, {
       "language" : "de",
-      "text" : "C02 Footprint"
+      "text" : "C02 Fußabdruck"
     } ],
     "idShort" : "PactCarbonFootprint"
   }, {
@@ -4777,7 +4777,7 @@
     "id" : "urn:samm:io.admin-shell.idta.carbon_footprint.pact:1.0.0#PactCarbonFootprint/submodel",
     "description" : [ {
       "language" : "en",
-      "text" : "Provides the means to access the Carbon Footprint of the asset."
+      "text" : "Provides the means to access the Carbon Footprint of the asset. It supports to provide the Carbon Footprint conformant to the specification of the Partnership for Carbon Transparency (PACT)."
     } ],
     "idShort" : "PactCarbonFootprint",
     "submodelElements" : [ {
