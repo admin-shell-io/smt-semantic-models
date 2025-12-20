@@ -40,8 +40,36 @@ Dependencies:
 * urn:samm:io.admin-shell.idta.shared
 
 
-
-
 In the following only deviations from IDTA-02035-2 are documented:
 
-see IDTA-02004
+
+
+- mandatory properties not included:
+
+  * from DocumentVersion:
+  
+	  * :keywords
+	  * :statusSetDate
+	  * :statusValue;
+	  * :organizationName
+	  * :organizationOfficialName
+
+- mandatory properties made optional:
+
+  * from DocumentVersion:
+  
+  	  * :version
+	  * :description
+	  
+- optional properties not included:
+
+  * :entities
+  * :documentedEntities in :DocumentEntity
+  * from DocumentVersion:
+
+	  * :refersToEntities
+	  * :basedOnReferences
+	  * :translationOfEntities
+	  * :previewFile
+
+For further potential deviations see Aspect Model of IDTA-02004 

@@ -2,7 +2,7 @@
 
 This namespace is reserved for the Submodel Template Specification (SMT)  IDTA-02035-3 Digital Battery Passport - Part 3: Product Carbon Footprint 
 
-This SMT is derived from IDTA-02023 Version 1.0 Carbon Footprint
+This SMT is derived from IDTA-02023 Version 1.0 Carbon Footprint, urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#
 
 The battery passport consists of the following 7 parts:
 
@@ -24,24 +24,41 @@ see IDTA-02023
 # Changelog
 All notable changes to this model will be documented in this section.
 
-## [1.0.0] - <add date>
+## [1.0.0] - 2025-12
 
 for changelog see  [IDTA-02035-3 V1.0, section "Version history"]()
 
 Contained Files:
 
-* CarbonFootprint.ttl
+* CarbonFootprintBattery.ttl
 
 
 Dependencies:
 
 @prefix pcf: <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#> .
-@prefix cx: <urn:samm:io.catenax.pcf:7.0.0#> .
+@prefix cx: <urn:samm:io.catenax.pcf:8.0.0#> .
 @prefix ext-shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix contact: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
 
 
-# Deviations:
+# Deviations compared to urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#:
 - optional ProductOrSectorSpecificCarbonFootprints from IDTA-02023 not included
+- description were updated to include information on DIN DKE SPEC 99110
+- not included for Battery Passport:
+ 
+  * :explanatoryStatement
+  * :goodsHandoverAddress
+  * :publicationDate  (although mandatory)
+  * :expirationDate
+  * :productOrSectorSpecificCarbonFootprints
+  
+- new propertiers specific to Battery Passport: 
 
-for additional deviations see IDTA-02023
+  * :performanceClass
+  * :webLinkToPublicCarbonFootprintStudy
+
+for potential additional deviations see Aspect Model for IDTA-02023, urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#
+
+# Deviations compared to IDTA-02023 aasx:
+
+for potential additional deviations see Aspect Model for IDTA-02023, urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#

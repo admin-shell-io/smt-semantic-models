@@ -20,22 +20,23 @@ Source GitHub IDTA: https://github.com/admin-shell-io/submodel-templates
 
 Source Content Hub of the IDTA: [IDTA-02035-7 V1.2]()
 
-# Dependencies
+# Copyright Information
 
 This model is using the models of the BatteryPass Consortium: https://github.com/batterypass/BatteryPassDataModel
-with license CC BY 4.0.
+with license CC BY 4.0. (urn:samm:io.BatteryPass.Circularity:1.2.0#)
 
 
 # Changelog
 All notable changes to this model will be documented in this section.
 
-## [1.0.0] - <add date>
+## [1.0.0] - 2025-12
 
-for changelog see  [IDTA-020xx V1.2, section "Version history"]()
+for changelog see  [IDTA-02035-7 V1.0, section "Version history"]()
 
 Contained Files:
 
 * Circularity.ttl
+* Circularity_shared.ttl
 * Namespace.ttl
 
 Known issues:
@@ -46,7 +47,10 @@ Known issues:
 
 Dependencies:
 
-urn:samm:io.BatteryPass.Circularity:1.2.0#
+@prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+
+
 
 
 

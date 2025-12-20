@@ -20,13 +20,13 @@ The battery passport consists of the following 7 parts:
 # Changelog
 All notable changes to this model will be documented in this section.
 
-## [1.0.0] - 2025-07
-
-identical to 
+## [1.0.0] - 2025-12
 
 Contained Files:
 
 * Nameplate.ttl: the aspect model for the SMT
+* BatteryStatus_enum.ttl: enumeration of :batteryStatus
+* AddressInformation_shared.ttl: copy of :addressInformation of urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#addressInformation but with updated description to include reference to DIN DKE SPEC 99100
 
 # Dependencies:
 
@@ -69,6 +69,8 @@ The following attributes are new:
 
 * operatorIdentifier
 * manufacturerIdentifier
+* euDeclarationOfConformity
+* resultsOfTestReportsProvingCompliance
 
 # Overall Deviations
 
