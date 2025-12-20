@@ -48,9 +48,10 @@ and
 Dependencies:
 
 * urn:samm:io.admin-shell.idta.handover_documentation:2.0.0
+* urn:samm:io.admin-shell.idta.shared:3.1.0
 
 Deviations:
-* informationOnAccidents is modelled as a DocumentSet (reuse from SMT HandoverDocumentation), in DIN DKE SPEC 99100 it is described as a Reference to a pdf File.  
+* informationOnAccidents is modelled as a Set of Document Identifier (reuse from SMT HandoverDocumentation), in DIN DKE SPEC 99100 it is described as a Reference to a pdf File.  
 
 ## ECLASS
 

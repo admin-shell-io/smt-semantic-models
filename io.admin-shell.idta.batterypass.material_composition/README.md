@@ -14,7 +14,7 @@ The battery passport consists of the following 7 parts:
 *	Digital Battery Passport - Part 6: Material Composition  (IDTA-02035-6)
 *	Digital Battery Passport - Part 7: Circularity  (IDTA-02035-7)
 
-This model is using the models of the BatteryPass Consortium: https://github.com/batterypass/BatteryPassDataModel/tree/main/BatteryPass/io.BatteryPass.MaterialComposition
+This model is using the models of the BatteryPass Consortium: https://github.com/batterypass/BatteryPassDataModel/tree/main/BatteryPass/io.BatteryPass.MaterialComposition (urn:samm:io.BatteryPass.MaterialComposition:1.2.0)
 with license CC BY-NC 4.0.
 
 Source GitHub IDTA: https://github.com/admin-shell-io/submodel-templates 
@@ -34,11 +34,9 @@ for changelog see  [IDTA-02035-6 V1.2, section "Version history"]()
 Contained Files:
 
 * MaterialComposition.ttl
+* MaterialComposition_shared.ttl
 
 
-Dependencies:
-
-* urn:samm:io.BatteryPass.MaterialComposition:1.2.0
 
 
 
