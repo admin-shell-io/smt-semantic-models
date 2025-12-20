@@ -91,24 +91,24 @@
    samm:description "Liste der Dokument-Versionen."@de ;
    samm:see <0173-1%2302-ABI503%23003> ;
    samm:see <https://api.eclass-cdp.com/0173-1-02-ABI503-003> ;
-   samm:characteristic :DocumentVersion .
+   samm:characteristic :DocumentVersions .
 
 :DocumentIdSet a samm-c:Set ;
    samm:preferredName "specification of Document IDs"@en ;
    samm:preferredName "Spezifikation von Dokumentennummern"@de ;
    samm:description "Set of the IDs of the documents."@en ;
    samm:description "Menge von Dokumentennummern."@de ;
-   samm:dataType :DocumentIdEntity .
+   samm:dataType :DocumentId .
 
 :DocumentClassificationSet a samm-c:Set ;
    samm:dataType :DocumentClassificationEntity .
 
-:DocumentVersion a samm-c:Set ;
-   samm:dataType :DocumentVersionEntity .
+:DocumentVersions a samm-c:Set ;
+   samm:dataType :DocumentVersion .
 
 
 
-:DocumentIdEntity a samm:Entity ;
+:DocumentId a samm:Entity ;
    samm:preferredName "Dokumentennummer Entity"@de ;
    samm:preferredName "document ID entity"@en ;
    samm:description "Spezifikation einer Dokumentennummer."@de ;
@@ -131,7 +131,7 @@
 	 [ samm:property :className; samm:payloadName "ClassName" ]
 	 [ samm:property :classificationSystem; samm:payloadName "ClassificationSystem" ] ) .
 
-:DocumentVersionEntity a samm:Entity ;
+:DocumentVersion a samm:Entity ;
    samm:preferredName "Dokumenten-Version Entity"@de ;
    samm:preferredName "document version entity"@en ;
    samm:see <urn:irdi:0173-1%2302-ABI502%23003/0173-1%2301-AHF581%23003> ;
@@ -150,7 +150,8 @@
 	 [ samm:property :basedOnReferences; samm:optional true; samm:payloadName "BasedOnReferences" ]
 	 [ samm:property :translationOfEntities; samm:optional true; samm:payloadName "TranslationOfEntities" ]
 	 [ samm:property :digitalFiles; samm:payloadName "DigitalFiles" ]
-	 [ samm:property :previewFile; samm:optional true; samm:payloadName "PreviewFile" ] ) ;
+	 [ samm:property :previewFile; samm:optional true; samm:payloadName "PreviewFile" ] 
+	 ) ;
    samm:see <urn:irdi:0173-1%2302-ABI503%23003/0173-1%2301-AHF582%23003> ;
    samm:see <https://api.eclass-cdp.com/0173-1-02-ABI503-003/0173-1-01-AHF582-003> .
 
