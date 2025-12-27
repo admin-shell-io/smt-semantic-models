@@ -38,24 +38,32 @@
    samm:description "A set of relevant documents to hand over to customers for documentation purposes."@en ;
    samm:see <urn:irdi:0173-1%2302-ABI500%23003> ;
    samm:see <https://api.eclass-cdp.com/0173-1-02-ABI500-003> ;
-   samm:characteristic :DocumentSet .
+   samm:characteristic :DocumentSetTrait .
+
+:DocumentSetTrait a samm-c:Trait ;
+   samm-c:baseCharacteristic :DocumentSet ;
+   samm-c:constraint shared:CardinalityOneToMany .
 
 :entities a samm:Property ;
    samm:preferredName "entities for documentation"@en ;
    samm:preferredName "Einheiten für Dokumentation"@de ;
    samm:description "States that the described Entity is an important entity for documentation of the superordinate Asset of the Asset Administration Shell.\nNote: typically, such Entities are well-identified sub-parts of the Asset, such as supplier parts delivered to the manufacturer of the Asset.\nNote: these Entities are the target of the 'DocumentedEntity'-ReferenceElements of the particular Documents contained in this Submodel. This mechanism substitutes the ObjectId-provision of VDI 2770 (see section 2.2).\nNote: if the described Entity has an own Asset Administration Shell, the SelfManaged-flag and AssetId-reference of the Entity shall be set accordingly."@en ;
    samm:see <https://admin-shell.io/vdi/2770/1/0/EntitiesForDocumentation> ;
-   samm:characteristic :EntitySet .
+   samm:characteristic :EntitySetTrait .
+
+:EntitySetTrait a samm-c:Trait ;
+   samm-c:baseCharacteristic :EntitySet ;
+   samm-c:constraint shared:CardinalityOneToMany .
 
 :DocumentSet a samm-c:Set ;
    samm:see <https://admin-shell.io/vdi/2770/1/0/EntityForDocumentation> ;
-   samm:dataType :DocumentEntity .
+   samm:dataType :Document .
 
 :EntitySet a samm-c:Set ;
    samm:description "Set of entities representing an asset."@en ;
    samm:dataType shared:AasEntityType .
 
-:DocumentEntity a samm:Entity ;
+:Document a samm:Entity ;
    samm:properties ( 
      [ samm:property :documentIds; samm:payloadName "DocumentIds" ] 
 	 [ samm:property :documentClassifications; samm:payloadName "DocumentClassifications" ] 
@@ -101,16 +109,14 @@
    samm:dataType :DocumentId .
 
 :DocumentClassificationSet a samm-c:Set ;
-   samm:dataType :DocumentClassificationEntity .
+   samm:dataType :DocumentClassification .
 
 :DocumentVersions a samm-c:Set ;
    samm:dataType :DocumentVersion .
 
-
-
 :DocumentId a samm:Entity ;
-   samm:preferredName "Dokumentennummer Entity"@de ;
-   samm:preferredName "document ID entity"@en ;
+   samm:preferredName "Dokumentennummer"@de ;
+   samm:preferredName "document ID"@en ;
    samm:description "Spezifikation einer Dokumentennummer."@de ;
    samm:description "Specification of a document ID."@en ;
    samm:see <urn:irdi:0173-1%2302-ABI500%23003/0173-1%2301-AHF579%23003> ;
@@ -121,9 +127,9 @@
 	  [ samm:property :documentIsPrimary; samm:optional true; samm:payloadName "DocumentIsPrimary" ] 
 	  ) .
 
-:DocumentClassificationEntity a samm:Entity ;
-   samm:preferredName "Dokumenten-Klassifikation Entity"@de ;
-   samm:preferredName "document classification entity"@en ;
+:DocumentClassification a samm:Entity ;
+   samm:preferredName "Dokumenten-Klassifikation"@de ;
+   samm:preferredName "document classification"@en ;
    samm:see <urn:irdi:0173-1%2302-ABI502%23003/0173-1%2301-AHF581%23003> ;
    samm:see <https://api.eclass-cdp.com/0173-1-02-ABI502-003/0173-1-01-AHF581-003> ;
    samm:properties ( 
@@ -132,8 +138,8 @@
 	 [ samm:property :classificationSystem; samm:payloadName "ClassificationSystem" ] ) .
 
 :DocumentVersion a samm:Entity ;
-   samm:preferredName "Dokumenten-Version Entity"@de ;
-   samm:preferredName "document version entity"@en ;
+   samm:preferredName "Dokumenten-Version"@de ;
+   samm:preferredName "document version"@en ;
    samm:see <urn:irdi:0173-1%2302-ABI502%23003/0173-1%2301-AHF581%23003> ;
    samm:properties ( 
      [ samm:property shared:languages; samm:payloadName "Language" ] 
@@ -285,7 +291,11 @@
    samm:description "MIME-Type, file name and file contents\n\nConstraint: at least one PDF/A file type shall be provided.\nNote: each DigitalFile represents the same content or Document version, but can be provided in different technical formats (PDF, PDFA, html, etc.) or by a link."@en ;
    samm:see <urn:irdi:0173-1%2302-ABK126%23002> ;
    samm:see <https://api.eclass-cdp.com/0173-1-02-ABK126-002> ;
-   samm:characteristic :FileSet .
+   samm:characteristic :FileSetTrait .
+
+:FileSetTrait a samm-c:Trait ;
+   samm-c:baseCharacteristic :FileSet ;
+   samm-c:constraint shared:CardinalityOneToMany .
 
 :previewFile a samm:Property ;
    samm:preferredName "Vorschaudatei"@de ;
@@ -301,7 +311,11 @@
    samm:description "Forms a based on-relationship to another document or document version. Typically states, that the content of the document bases on another document (e.g. specification requirements). Both have a strong relationship\n\nConstraint: reference targets a  'Document' or a 'DocumentVersion'."@en ;
    samm:see <urn:irdi:0173-1%2302-ABK289%23002> ;
    samm:see <https://api.eclass-cdp.com/0173-1-02-ABK289-002> ;
-   samm:characteristic :ReferenceSet .
+   samm:characteristic :ReferenceSetTrait .
+
+:ReferenceSetTrait a samm-c:Trait ;
+   samm-c:baseCharacteristic :ReferenceSet ;
+   samm-c:constraint shared:CardinalityOneToMany .
 
 :translationOfEntities a samm:Property ;
    samm:description "Forms a translation of-relationship to another document or document version. Both have a strong relationship\n\nConstraint: the (language-independent) content must be identical in both Documents or DocumentVersions.\n\nConstraint: reference targets a 'Document' or a 'DocumentVersion'."@en ;
@@ -313,7 +327,8 @@
    samm:description "Forms a generic refers to-relationship to another document or document version. They have a loose relationship\n\nConstraint: reference targets a 'Document' or a 'DocumentVersion'."@en ;
    samm:see <urn:irdi:0173-1%2302-ABK288%23002> ;
    samm:see <https://api.eclass-cdp.com/0173-1-02-ABK288-002> ;
-   samm:characteristic :ReferenceSet .
+   samm:characteristic :ReferenceSetTrait .
+
 
 :subtitle a samm:Property ;
    samm:preferredName "Untertitel"@de ;
