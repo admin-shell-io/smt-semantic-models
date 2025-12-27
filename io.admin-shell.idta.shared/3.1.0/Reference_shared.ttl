@@ -17,19 +17,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 
-:TestReference a samm:Aspect ;
-   samm:preferredName "test Aspect"@en ;
-   samm:description "Test aspect for AAS Reference."@en ;
-   samm:properties ( :refExample ) ;
-   samm:operations ( ) ;
-   samm:events ( ) .
-
-:refExample a samm:Property ;
-   samm:preferredName "Reference"@en ;
-   samm:description "Reference conformant to AAS."@en ;
-   samm:characteristic :ReferenceType .
 
 :ReferenceType a samm:Characteristic ;
+   samm:see <https://admin-shell.io/aas/3/1/Reference> ;
    samm:dataType :ReferenceEntity .
 
 :ReferenceEntity a samm:Entity ;
@@ -40,23 +30,166 @@
 
 :type a samm:Property ;
    samm:characteristic :KeyReferenceTypesEnum ;
-   samm:exampleValue "ModelReference" .
-
-:SetOfKeys a samm-c:Set ;
-   samm:dataType :KeyEntity .
+   samm:exampleValue "ExternalReference" .
 
 :KeyReferenceTypesEnum a samm-c:Enumeration ;
    samm:dataType xsd:string ;
    samm-c:values ( "ModelReference" "ExternalReference" ) .
+   
+:SetOfKeys a samm-c:Set ;
+   samm:dataType :KeyEntity .
 
 :KeyEntity a samm:Entity ;
    samm:properties ( :key [ samm:property :keyValue; samm:payloadName "value" ] ) .
 
 :key a samm:Property ;
-   samm:characteristic samm-c:Text ;
-   samm:exampleValue "Submodel" .
+   samm:characteristic :ReferenceKeyEnum ;
+   samm:exampleValue "GlobalReference" .
 
 :keyValue a samm:Property ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "id1234" .
 
+:ReferenceKeyEnum a samm-c:Enumeration ;
+   samm:dataType xsd:string ;
+   samm-c:values ( 
+   "AnnotatedRelationshipElement" 
+   "AssetAdministrationShell"
+   "BasicEventElement"
+   "Blob"
+   "Capability"
+   "ConceptDescription"
+   "DataElement"
+   "Entity"
+   "EventElement"
+   "File"
+   "FragmentReference"
+   "Identifiable"
+   "MultiLanguageProperty"
+   "Operation"
+   "Property"
+   "Range"
+   "Referable"
+   "ReferenceElement"
+   "RelationshipElement"
+   "Submodel"
+   "SubmodelElement"  
+   "SubmodelElementCollection"
+   "SubmodelElementList"   
+   ) . 
+
+### Model Reference ###
+
+:ModelReferenceType a samm:Characteristic ;
+   samm:see <https://admin-shell.io/aas/3/1/Reference> ;
+   samm:dataType :ModelReferenceEntity .
+
+:ModelReferenceEntity a samm:Entity ;
+   samm:properties ( 
+      [ samm:property :modelReferenceKeys; samm:payloadName "keys" ] 
+	  [ samm:property :modelReferenceType; samm:payloadName "type" ] 
+   ) .
+
+:modelReferenceKeys a samm:Property ;
+   samm:characteristic :ModelReferenceSetOfKeys .
+
+:modelReferenceType a samm:Property ;
+   samm:characteristic :KeyModelReferenceTypesEnum ;
+   samm:exampleValue "ModelReference" .
+
+:KeyModelReferenceTypesEnum a samm-c:Enumeration ;
+   samm:dataType xsd:string ;
+   samm-c:values ( "ModelReference"  ) .
+   
+:ModelReferenceSetOfKeys a samm-c:Set ;
+   samm:dataType :ModelReferenceKeyEntity .
+
+:ModelReferenceKeyEntity a samm:Entity ;
+   samm:properties ( 
+   [ samm:property :ModelReferenceKey; samm:payloadName "key" ] 
+   [ samm:property :ModelReferenceKeyValue; samm:payloadName "value" ] 
+   ) .
+
+:ModelReferenceKey a samm:Property ;
+   samm:characteristic :ModelReferenceKeyEnum ;
+   samm:exampleValue "Submodel" .
+
+:ModelReferenceKeyValue a samm:Property ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "id1234" .
+   
+:ModelReferenceKeyEnum a samm-c:Enumeration ;
+   samm:dataType xsd:string ;
+   samm-c:values ( 
+   "AnnotatedRelationshipElement" 
+   "AssetAdministrationShell"
+   "BasicEventElement"
+   "Blob"
+   "Capability"
+   "ConceptDescription"
+   "DataElement"
+   "Entity"
+   "EventElement"
+   "File"
+   "FragmentReference"
+   "GlobalReference"
+   "Identifiable"
+   "MultiLanguageProperty"
+   "Operation"
+   "Property"
+   "Range"
+   "Referable"
+   "ReferenceElement"
+   "RelationshipElement"
+   "Submodel"
+   "SubmodelElement"  
+   "SubmodelElementCollection"
+   "SubmodelElementList"   
+   ) .  
+   
+### External Reference ###
+
+:ExternalReferenceType a samm:Characteristic ;
+   samm:see <https://admin-shell.io/aas/3/1/Reference> ;
+   samm:dataType :ExternaReferenceEntity .
+
+:ExternaReferenceEntity a samm:Entity ;
+   samm:properties ( 
+      [ samm:property :externaReferenceKeys; samm:payloadName "keys" ] 
+	  [ samm:property :externaReferenceType; samm:payloadName "type" ] 
+   ) .
+
+:externaReferenceKeys a samm:Property ;
+   samm:characteristic :ExternaReferenceSetOfKeys .
+
+:externaReferenceType a samm:Property ;
+   samm:characteristic :KeyExternaReferenceTypesEnum ;
+   samm:exampleValue "ExternaReference" .
+
+:KeyExternaReferenceTypesEnum a samm-c:Enumeration ;
+   samm:dataType xsd:string ;
+   samm-c:values ( "ExternalReference"  ) .
+   
+:ExternaReferenceSetOfKeys a samm-c:Set ;
+   samm:dataType :ModelReferenceKeyEntity .
+
+:ExternaReferenceKeyEntity a samm:Entity ;
+   samm:properties ( 
+   [ samm:property :ExternaReferenceKey; samm:payloadName "key" ] 
+   [ samm:property :ExternaReferenceKeyValue; samm:payloadName "value" ] 
+   ) .
+
+:ExternaReferenceKey a samm:Property ;
+   samm:characteristic :ModelReferenceKeyEnum ;
+   samm:exampleValue "GlobalReference" .
+
+:ExternaReferenceKeyValue a samm:Property ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "id1234" .
+   
+:ExternaReferenceKeyEnum a samm-c:Enumeration ;
+   samm:dataType xsd:string ;
+   samm-c:values ( 
+   "FragmentReference"
+   "GlobalReference"
+   ) .  
