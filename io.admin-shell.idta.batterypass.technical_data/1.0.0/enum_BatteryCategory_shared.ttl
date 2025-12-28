@@ -1,0 +1,65 @@
+######################################################################
+# for namespace: urn:samm:io.admin-shell.idta.
+# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Industrial Digital Twin Association
+#
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> .
+@prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
+@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.1#> .
+@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
+
+:BatteryCategoryEnum a samm-c:Enumeration ;
+   samm:dataType xsd:string ;
+   samm-c:values (
+		:Lmt 
+		:Ev 
+		:Industrial 
+		:Stationary 
+		) .
+   
+:Lmt a samm:Value ;
+  samm:value "lmt" ;
+  samm:preferredName "Light means of transport battery (LMT battery)"@en ;
+  samm:description """Battery that is sealed, weighs 25kg or less and is specifically designed to provide electric power for the traction of wheeled vehicles that can be powered by an electric motor alone or by a combination of motor and human power, including type-approved vehicles of category L within the meaning of Regulation(EU)No168/2013 of the European Parliament and of the Council, and that is not an electric vehicle battery.
+  
+  [SOURCE: DIN DKE SPEC 99100 - Regulation(EU)2023/1542, Article3, 1(11)]"""@en . 
+  
+:Ev a samm:Value ;
+  samm:value "ev" ;
+  samm:preferredName "Electric vehicle battery (EV battery)"@en ;
+  samm:description """Battery that is specifically designed to provide electric power for traction in hybrid or electric vehicles of category L as provided for in Regulation(EU)No168/2013, that weighs more than 25kg, or a battery that is cifically designed to provide electric power for traction in hybrid or electric vehicles of categories M, N or O as provided for in Regulation(EU)2018/858.
+  
+  [SOURCE: DIN DKE SPEC 99100 - Regulation(EU)2023/1542, Article3, 1(14)]"""@en . 
+  
+:Industrial a samm:Value ;
+  samm:value "industrial" ;
+  samm:preferredName "industrial battery"@en ;
+  samm:description """Battery that is specifically designed for industrial uses, intended for industrial uses after having been subject to preparation for repurposing or repurposing, or any other battery that weighs more than 5kg and that is neither an electric vehicle battery, an LMT battery, nor an SLI battery.
+  
+  [SOURCE: DIN DKE SPEC 99100 - Regulation(EU)2023/1542, Article3, 1(13)]
+    """@en .  
+  
+:Stationary a samm:Value ;
+  samm:value "stationary" ;
+  samm:preferredName "stationary battery energy storage system (stationary BESS)"@en ;
+  samm:description """Industrial battery with internal storage that is specifically designed to store from and deliver electric energy to the grid or store for and deliver electric energy to end-users, regardless of where and by whom the battery is being used.
+  
+  [SOURCE: DIN DKE SPEC 99100 - Regulation(EU)2023/1542, Article3, 1(15)]
+  """@en .
