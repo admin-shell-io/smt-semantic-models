@@ -53,14 +53,13 @@
    samm:dataType :GeneralInformationEntity .
 
 :technicalPropertyAreas a samm:Property ;
-   samm:preferredName "Technical Property Areas"@en ;
-   samm:preferredName "Technische Daten-Bereiche"@de ;
-   samm:description "List of all technical property areas."@en ;
-   samm:description "Liste aller technischen Daten-Bereiche."@de ;
+   samm:see <urn:irdi:0173-1#02-ABK163#002> ;
+   samm:preferredName "battery characteristics"@en ;
+   samm:description "Individual battery characteristics based on DIN DKE SPEC 99100."@en ;
    samm:characteristic :TechnicalPropertyAreaSet .
 
 :TechnicalPropertyAreaSet a samm-c:SingleEntity ;
-   samm:dataType :TechnicalAttributesEntity .
+   samm:dataType :TechnicalAttributes .
    
 
   
