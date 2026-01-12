@@ -1,0 +1,220 @@
+{
+  "$schema" : "http://json-schema.org/draft-04/schema",
+  "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#TestAspect",
+  "description" : "Test Aspect.",
+  "type" : "object",
+  "components" : {
+    "schemas" : {
+      "Text" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Text",
+        "description" : "Describes a Property which contains plain text. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+      },
+      "Date" : {
+        "type" : "string",
+        "format" : "date",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#Date",
+        "description" : "Date in format CCYY-MM-DD."
+      },
+      "ResourcePath" : {
+        "type" : "string",
+        "format" : "uri",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#ResourcePath",
+        "description" : "The path of a resource."
+      },
+      "MimeType" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#MimeType",
+        "description" : "A MIME type as defined in RFC 2046, for example \"application/pdf\"."
+      },
+      "FileWithContentType" : {
+        "description" : "A file is a data element that represents an address to a file (a locator). The value is a URI that can represent an absolute or relative path.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#FileWithContentType",
+        "type" : "object",
+        "properties" : {
+          "value" : {
+            "description" : "Path and name of the file (with file extension).\n\nThe path can be absolute or relative.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#resourceValue",
+            "$ref" : "#/components/schemas/ResourcePath"
+          },
+          "contentType" : {
+            "description" : "Content type of the content of the file or blob.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#contentType",
+            "$ref" : "#/components/schemas/MimeType"
+          }
+        },
+        "required" : [ "value", "contentType" ]
+      },
+      "Marking" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#Marking",
+        "type" : "object",
+        "properties" : {
+          "MarkingName" : {
+            "description" : "Common name of the marking.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#markingName",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "DesignationOfCertificateOrApproval" : {
+            "description" : "Alphanumeric character sequence identifying a certificate or approval.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#designationOfCertificateOrApproval",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "IssueDate" : {
+            "description" : "Date, at which the specified certificate is issued. Note: format by lexical representation: CCYY-MM-DD. Note: to be specified to the day.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#issueDate",
+            "$ref" : "#/components/schemas/Date"
+          },
+          "ExpiryDate" : {
+            "description" : "Date, at which the specified certificate expires. Note: format by lexical representation: CCYY-MM-DD. Note: to be specified to the day.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#expiryDate",
+            "$ref" : "#/components/schemas/Date"
+          },
+          "MarkingFile" : {
+            "description" : "Conformity symbol of the marking.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#markingFile",
+            "$ref" : "#/components/schemas/FileWithContentType"
+          },
+          "MarkingAdditionalText" : {
+            "description" : "Where applicable, additional information on the marking in plain text, e.g. the ID-number of the notified body involved in the conformity process.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#markingAdditionalText",
+            "$ref" : "#/components/schemas/Text"
+          }
+        },
+        "required" : [ "MarkingName", "MarkingFile" ]
+      },
+      "Markings" : {
+        "description" : "Note: CE marking is declared as mandatory according to EU Blue Guide.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#Markings",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Marking"
+        },
+        "uniqueItems" : true
+      },
+      "LanguageSetTrait" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#LanguageSetTrait",
+        "type" : "array",
+        "items" : {
+          "type" : "string",
+          "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Locale",
+          "description" : "Describes a Property containing a locale according to IETF BCP 47, for example \"de-DE\"."
+        },
+        "uniqueItems" : true,
+        "minItems" : 1
+      },
+      "ReferenceKeyEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ReferenceKeyEnum",
+        "enum" : [ "AnnotatedRelationshipElement", "AssetAdministrationShell", "BasicEventElement", "Blob", "Capability", "ConceptDescription", "DataElement", "Entity", "EventElement", "File", "FragmentReference", "Identifiable", "MultiLanguageProperty", "Operation", "Property", "Range", "Referable", "ReferenceElement", "RelationshipElement", "Submodel", "SubmodelElement", "SubmodelElementCollection", "SubmodelElementList" ]
+      },
+      "KeyEntity" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyEntity",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#key",
+            "$ref" : "#/components/schemas/ReferenceKeyEnum"
+          },
+          "value" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keyValue",
+            "$ref" : "#/components/schemas/Text"
+          }
+        },
+        "required" : [ "key", "value" ]
+      },
+      "SetOfKeys" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SetOfKeys",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/KeyEntity"
+        },
+        "uniqueItems" : true
+      },
+      "KeyReferenceTypesEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyReferenceTypesEnum",
+        "enum" : [ "ModelReference", "ExternalReference" ]
+      },
+      "ReferenceType" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ReferenceType",
+        "type" : "object",
+        "properties" : {
+          "keys" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keys",
+            "$ref" : "#/components/schemas/SetOfKeys"
+          },
+          "type" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#type",
+            "$ref" : "#/components/schemas/KeyReferenceTypesEnum"
+          }
+        },
+        "required" : [ "keys", "type" ]
+      },
+      "SpecificAssetId" : {
+        "description" : "A specific asset ID describes a generic supplementary identifying attribute of the asset. The specific asset ID is not necessarily globally unique.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SpecificAssetId",
+        "type" : "object",
+        "properties" : {
+          "externalSubjectId" : {
+            "description" : "The unique ID of the (external) subject the specific asset ID value belongs to or has meaning to.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#externalSubjectId",
+            "$ref" : "#/components/schemas/ReferenceType"
+          },
+          "value" : {
+            "description" : "The value of the specific asset identifier with the corresponding name.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#specificAssetIdValue",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "name" : {
+            "description" : "Name of the asset identifier.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#specificAssetIdName",
+            "$ref" : "#/components/schemas/Text"
+          }
+        },
+        "required" : [ "value", "name" ]
+      },
+      "Example4specificAssetIdCharacteristic" : {
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/SpecificAssetId"
+        } ]
+      },
+      "DocumentIdentifierSet" : {
+        "description" : "Each document is uniquely discoverable via its identifier. If more information is needed, please refer to the 'Handover Documentation'.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#DocumentIdentifierSet",
+        "type" : "array",
+        "items" : {
+          "type" : "string",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#DocumentIdentifierSetTrait",
+          "description" : "Alphanumeric character sequence uniquely identifying a document.",
+          "minLength" : 1
+        },
+        "uniqueItems" : true
+      }
+    }
+  },
+  "properties" : {
+    "example4Markings" : {
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#example4Markings",
+      "$ref" : "#/components/schemas/Markings"
+    },
+    "languages" : {
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#languages",
+      "$ref" : "#/components/schemas/LanguageSetTrait"
+    },
+    "example4specificAssetId" : {
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#example4specificAssetId",
+      "$ref" : "#/components/schemas/Example4specificAssetIdCharacteristic"
+    },
+    "example4documentIdentifierSet" : {
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#example4documentIdentifierSet",
+      "$ref" : "#/components/schemas/DocumentIdentifierSet"
+    },
+    "externalSubjectId" : {
+      "description" : "The unique ID of the (external) subject the specific asset ID value belongs to or has meaning to.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#externalSubjectId",
+      "$ref" : "#/components/schemas/ReferenceType"
+    }
+  },
+  "required" : [ "example4Markings", "languages", "example4specificAssetId", "example4documentIdentifierSet", "externalSubjectId" ]
+}

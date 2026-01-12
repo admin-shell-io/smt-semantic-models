@@ -34,7 +34,7 @@
     "StateOfCertifiedEnergyValue" : 70.0,
     "LastUpdate" : "2000-01-01T14:23:00"
   },
-  "InformationOnAccidents" : [ "eOMtThyhVNLWUZNRcBaQKxI" ],
+  "InformationOnAccidents" : [ "eOMtThyhVNLWUZNRcBaQK" ],
   "EvolutionOfSelfDischarge" : {
     "EvolutionOfSelfDischargeValue" : 1.0,
     "LastUpdate" : "2000-01-01T14:23:00"

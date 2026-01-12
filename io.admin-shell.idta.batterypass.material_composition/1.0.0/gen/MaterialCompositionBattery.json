@@ -11,7 +11,7 @@
       "ComponentId" : "RYtGKbgicZaHCBRQDSx",
       "ComponentName" : "Anode"
     },
-    "HazardousSubstanceIdentifier" : "83575-53-7",
+    "HazardousSubstanceIdentifier" : "34-44-7",
     "HazardousSubstanceName" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa"
   } ],
   "BatteryMaterials" : [ {
@@ -21,7 +21,7 @@
       "ComponentId" : "eOMtThyhVNLWUZNRcBaQKxI",
       "ComponentName" : "Anode"
     },
-    "BatteryMaterialMass" : -2.299492E38,
+    "BatteryMaterialMass" : 2.1044487E38,
     "IsCriticalRawMaterial" : true
   } ]
 }

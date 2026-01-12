@@ -1,16 +1,19 @@
 {
-  "valueOnly4File" : {
-    "value" : "https://example.com/SafetyInstructions.pdf",
-    "contentType" : "application/pdf"
-  },
   "valueOnly4Reference" : {
     "type" : "ModelReference",
     "keys" : [ {
       "value" : "id1234",
-      "key" : "Submodel"
+      "key" : "AnnotatedRelationshipElement"
     } ]
   },
-  "example4Entity" : {
+  "valueOnly4ModelReference" : {
+    "type" : "ModelReference",
+    "keys" : [ {
+      "value" : "id1234",
+      "key" : "AnnotatedRelationshipElement"
+    } ]
+  },
+  "valueOnly4Entity" : {
     "specificAssetIds" : [ {
       "name" : "SerialNumber",
       "value" : "eOMtThyhVNLWUZNRcBaQKxI",
@@ -18,14 +21,45 @@
         "type" : "ModelReference",
         "keys" : [ {
           "value" : "id1234",
-          "key" : "Submodel"
+          "key" : "AnnotatedRelationshipElement"
         } ]
       }
     } ],
     "entityType" : "SelfManagedEntity",
     "globalAssetId" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa"
   },
+  "valueOnly4RelationshipElement" : {
+    "first" : {
+      "type" : "ModelReference",
+      "keys" : [ {
+        "value" : "id1234",
+        "key" : "AnnotatedRelationshipElement"
+      } ]
+    },
+    "second" : {
+      "type" : "ModelReference",
+      "keys" : [ {
+        "value" : "id1234",
+        "key" : "AnnotatedRelationshipElement"
+      } ]
+    }
+  },
   "valueOnly4MultiLanguageProperty" : [ {
     "en" : "Example multi language string"
-  } ]
+  } ],
+  "valueOnly4ExternalReference" : {
+    "type" : "ExternalReference",
+    "keys" : [ {
+      "value" : "id1234",
+      "key" : "AnnotatedRelationshipElement"
+    } ]
+  },
+  "valueOnly4Range" : {
+    "max" : 2.2854207E38,
+    "min" : 2.1402139E38
+  },
+  "valueOnly4File" : {
+    "value" : "https://example.com/SafetyInstructions.pdf",
+    "contentType" : "application/pdf"
+  }
 }

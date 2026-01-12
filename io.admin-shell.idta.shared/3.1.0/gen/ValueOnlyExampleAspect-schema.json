@@ -1,0 +1,353 @@
+{
+  "$schema" : "http://json-schema.org/draft-04/schema",
+  "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ValueOnlyExampleAspect",
+  "description" : "Example Aspect with characteristics for Value-Only serialization of Submodel Elements.",
+  "type" : "object",
+  "components" : {
+    "schemas" : {
+      "MultiLanguageTexts" : {
+        "description" : "A set of language-text items.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#MultiLanguageTexts",
+        "type" : "array",
+        "items" : {
+          "type" : "object",
+          "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#MultiLanguageText",
+          "description" : "Describes a Property which contains plain text in multiple languages. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+        },
+        "uniqueItems" : true
+      },
+      "ResourcePath" : {
+        "type" : "string",
+        "format" : "uri",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#ResourcePath",
+        "description" : "The path of a resource."
+      },
+      "MimeType" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#MimeType",
+        "description" : "A MIME type as defined in RFC 2046, for example \"application/pdf\"."
+      },
+      "FileWithContentType" : {
+        "description" : "A file is a data element that represents an address to a file (a locator). The value is a URI that can represent an absolute or relative path.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#FileWithContentType",
+        "type" : "object",
+        "properties" : {
+          "value" : {
+            "description" : "Path and name of the file (with file extension).\n\nThe path can be absolute or relative.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#resourceValue",
+            "$ref" : "#/components/schemas/ResourcePath"
+          },
+          "contentType" : {
+            "description" : "Content type of the content of the file or blob.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#contentType",
+            "$ref" : "#/components/schemas/MimeType"
+          }
+        },
+        "required" : [ "value", "contentType" ]
+      },
+      "ReferenceKeyEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ReferenceKeyEnum",
+        "enum" : [ "AnnotatedRelationshipElement", "AssetAdministrationShell", "BasicEventElement", "Blob", "Capability", "ConceptDescription", "DataElement", "Entity", "EventElement", "File", "FragmentReference", "Identifiable", "MultiLanguageProperty", "Operation", "Property", "Range", "Referable", "ReferenceElement", "RelationshipElement", "Submodel", "SubmodelElement", "SubmodelElementCollection", "SubmodelElementList" ]
+      },
+      "Text" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Text",
+        "description" : "Describes a Property which contains plain text. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+      },
+      "KeyEntity" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyEntity",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#key",
+            "$ref" : "#/components/schemas/ReferenceKeyEnum"
+          },
+          "value" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keyValue",
+            "$ref" : "#/components/schemas/Text"
+          }
+        },
+        "required" : [ "key", "value" ]
+      },
+      "SetOfKeys" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SetOfKeys",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/KeyEntity"
+        },
+        "uniqueItems" : true
+      },
+      "KeyReferenceTypesEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyReferenceTypesEnum",
+        "enum" : [ "ModelReference", "ExternalReference" ]
+      },
+      "ReferenceType" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ReferenceType",
+        "type" : "object",
+        "properties" : {
+          "keys" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keys",
+            "$ref" : "#/components/schemas/SetOfKeys"
+          },
+          "type" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#type",
+            "$ref" : "#/components/schemas/KeyReferenceTypesEnum"
+          }
+        },
+        "required" : [ "keys", "type" ]
+      },
+      "ModelReferenceKeyEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ModelReferenceKeyEnum",
+        "enum" : [ "AnnotatedRelationshipElement", "AssetAdministrationShell", "BasicEventElement", "Blob", "Capability", "ConceptDescription", "DataElement", "Entity", "EventElement", "File", "FragmentReference", "GlobalReference", "Identifiable", "MultiLanguageProperty", "Operation", "Property", "Range", "Referable", "ReferenceElement", "RelationshipElement", "Submodel", "SubmodelElement", "SubmodelElementCollection", "SubmodelElementList" ]
+      },
+      "ModelReferenceKeyEntity" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ModelReferenceKeyEntity",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ModelReferenceKey",
+            "$ref" : "#/components/schemas/ModelReferenceKeyEnum"
+          },
+          "value" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ModelReferenceKeyValue",
+            "$ref" : "#/components/schemas/Text"
+          }
+        },
+        "required" : [ "key", "value" ]
+      },
+      "ModelReferenceSetOfKeys" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ModelReferenceSetOfKeys",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/ModelReferenceKeyEntity"
+        },
+        "uniqueItems" : true
+      },
+      "KeyModelReferenceTypesEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyModelReferenceTypesEnum",
+        "enum" : [ "ModelReference" ]
+      },
+      "ModelReferenceType" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ModelReferenceType",
+        "type" : "object",
+        "properties" : {
+          "keys" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#modelReferenceKeys",
+            "$ref" : "#/components/schemas/ModelReferenceSetOfKeys"
+          },
+          "type" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#modelReferenceType",
+            "$ref" : "#/components/schemas/KeyModelReferenceTypesEnum"
+          }
+        },
+        "required" : [ "keys", "type" ]
+      },
+      "ExternaReferenceSetOfKeys" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternaReferenceSetOfKeys",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/ModelReferenceKeyEntity"
+        },
+        "uniqueItems" : true
+      },
+      "KeyExternaReferenceTypesEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyExternaReferenceTypesEnum",
+        "enum" : [ "ExternalReference" ]
+      },
+      "ExternalReferenceType" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternalReferenceType",
+        "type" : "object",
+        "properties" : {
+          "keys" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#externaReferenceKeys",
+            "$ref" : "#/components/schemas/ExternaReferenceSetOfKeys"
+          },
+          "type" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#externaReferenceType",
+            "$ref" : "#/components/schemas/KeyExternaReferenceTypesEnum"
+          }
+        },
+        "required" : [ "keys", "type" ]
+      },
+      "RelationshipElementType" : {
+        "description" : "A predefined submodel element subtype of the Asset Administration Shell used to model relationships.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#RelationshipElementType",
+        "type" : "object",
+        "properties" : {
+          "first" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#first",
+            "$ref" : "#/components/schemas/ReferenceType"
+          },
+          "second" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#second",
+            "$ref" : "#/components/schemas/ReferenceType"
+          }
+        },
+        "required" : [ "first", "second" ]
+      },
+      "SpecificAssetId" : {
+        "description" : "A specific asset ID describes a generic supplementary identifying attribute of the asset. The specific asset ID is not necessarily globally unique.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SpecificAssetId",
+        "type" : "object",
+        "properties" : {
+          "externalSubjectId" : {
+            "description" : "The unique ID of the (external) subject the specific asset ID value belongs to or has meaning to.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#externalSubjectId",
+            "$ref" : "#/components/schemas/ReferenceType"
+          },
+          "value" : {
+            "description" : "The value of the specific asset identifier with the corresponding name.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#specificAssetIdValue",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "name" : {
+            "description" : "Name of the asset identifier.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#specificAssetIdName",
+            "$ref" : "#/components/schemas/Text"
+          }
+        },
+        "required" : [ "value", "name" ]
+      },
+      "SpecificAssetIdSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SpecificAssetIdSet",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/SpecificAssetId"
+        },
+        "uniqueItems" : true
+      },
+      "EntityType" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#EntityType",
+        "enum" : [ "SelfManagedEntity", "CoManagedEntity" ]
+      },
+      "AasEntityType" : {
+        "description" : "A predefined submodel element subtype of the Asset Administration Shell used to model entities.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#AasEntityType",
+        "type" : "object",
+        "properties" : {
+          "specificAssetIds" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#specificAssetIds",
+            "$ref" : "#/components/schemas/SpecificAssetIdSet"
+          },
+          "globalAssetId" : {
+            "description" : "Globally unique identifier of an asset.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#globalAssetId",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "entityType" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#entityType",
+            "$ref" : "#/components/schemas/EntityType"
+          }
+        },
+        "required" : [ "specificAssetIds", "globalAssetId", "entityType" ]
+      },
+      "AasEntityCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#AasEntityCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/AasEntityType"
+        } ]
+      },
+      "RangeMinAbstractCharacteristic" : {
+        "type" : "number"
+      },
+      "x4A3B1B2A0" : {
+        "type" : "number"
+      },
+      "RangeFloatType" : {
+        "description" : "A range data element is a data element that defines a range with min and max.\n\n If the min value is missing, the value is assumed to be negative infinite.\n If the max value is missing, the value is assumed to be positive infinite.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#RangeFloatTypeCharacteristic",
+        "type" : "object",
+        "properties" : {
+          "min" : {
+            "description" : "Minimum value within range.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#rangeMinAbstract",
+            "$ref" : "#/components/schemas/RangeMinAbstractCharacteristic"
+          },
+          "max" : {
+            "description" : "Minimum value within range.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#rangeMinAbstract",
+            "$ref" : "#/components/schemas/x4A3B1B2A0"
+          }
+        },
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/RangeTypeAbstract"
+        } ]
+      },
+      "RangeTypeAbstract" : {
+        "description" : "A range data element is a data element that defines a range with min and max.\n\n If the min value is missing, the value is assumed to be negative infinite.\n If the max value is missing, the value is assumed to be positive infinite.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#RangeTypeAbstract",
+        "type" : "object",
+        "properties" : { }
+      },
+      "RangeFloatTypeCharacteristic" : {
+        "description" : "A range data element is a data element that defines a range with min and max.\n\n If the min value is missing, the value is assumed to be negative infinite.\n If the max value is missing, the value is assumed to be positive infinite.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#RangeFloatTypeCharacteristic",
+        "type" : "object",
+        "properties" : {
+          "min" : {
+            "description" : "Minimum value within range.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#rangeMinAbstract",
+            "$ref" : "#/components/schemas/RangeMinAbstractCharacteristic"
+          },
+          "max" : {
+            "description" : "Minimum value within range.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#rangeMinAbstract",
+            "$ref" : "#/components/schemas/x4A3B1B2A0"
+          }
+        },
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/RangeTypeAbstract"
+        } ]
+      }
+    }
+  },
+  "properties" : {
+    "valueOnly4MultiLanguageProperty" : {
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4MultiLanguageProperty",
+      "$ref" : "#/components/schemas/MultiLanguageTexts"
+    },
+    "valueOnly4File" : {
+      "description" : "Digital copy of this document",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4File",
+      "$ref" : "#/components/schemas/FileWithContentType"
+    },
+    "valueOnly4Reference" : {
+      "description" : "Reference conformant to AAS.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4Reference",
+      "$ref" : "#/components/schemas/ReferenceType"
+    },
+    "valueOnly4ModelReference" : {
+      "description" : "Reference conformant to AAS.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4ModelReference",
+      "$ref" : "#/components/schemas/ModelReferenceType"
+    },
+    "valueOnly4ExternalReference" : {
+      "description" : "Reference conformant to AAS.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4ExternalReference",
+      "$ref" : "#/components/schemas/ExternalReferenceType"
+    },
+    "valueOnly4RelationshipElement" : {
+      "description" : "RelationshipElement conformant to AAS.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4RelationshipElement",
+      "$ref" : "#/components/schemas/RelationshipElementType"
+    },
+    "valueOnly4Entity" : {
+      "description" : "Entity conformant to AAS.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4Entity",
+      "$ref" : "#/components/schemas/AasEntityCharacteristic"
+    },
+    "valueOnly4Range" : {
+      "description" : "Range conformant to AAS.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4Range",
+      "$ref" : "#/components/schemas/RangeFloatTypeCharacteristic"
+    }
+  },
+  "required" : [ "valueOnly4MultiLanguageProperty", "valueOnly4File", "valueOnly4Reference", "valueOnly4ModelReference", "valueOnly4ExternalReference", "valueOnly4RelationshipElement", "valueOnly4Entity", "valueOnly4Range" ]
+}

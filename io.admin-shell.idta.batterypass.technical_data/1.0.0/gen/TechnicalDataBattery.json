@@ -1,27 +1,27 @@
 {
   "TechnicalPropertyAreas" : {
     "Resistance" : {
-      "InternalResistanceIncreaseOfBatteryModule" : 10,
-      "InitialInternalResistanceOfBatteryPack" : 23.0,
-      "InternalResistanceIncreaseOfBatteryCell" : 10,
-      "InternalResistanceIncreaseOfBatteryPack" : 10,
-      "InitialInternalResistanceOfBatteryCell" : 67.0,
-      "InitialInternalResistanceOnBatteryModule" : 10.0
+      "InitialInternalResistanceOfBatteryCellLevel" : 67.0,
+      "InitialInternalResistanceOfBatteryPackLevel" : 23.0,
+      "InitialInternalResistanceOnBatteryModuleLevel" : 10.0,
+      "InternalResistanceIncreaseOfBatteryModuleLevel" : 10,
+      "InternalResistanceIncreaseOfBatteryCellLevel" : 10,
+      "InternalResistanceIncreaseOfBatteryPackLevel" : 10
     },
     "PowerCapability" : {
-      "RatioNominalBatteryPowerAndBatteryEnergy" : 8.881995E37,
-      "PowerFade" : 6.2629733E37,
+      "RatioNominalBatteryPowerAndBatteryEnergy" : 0.611,
+      "PowerFade" : 23.0,
       "MaximumPermittedBatteryPower" : "Infinity",
       "OriginalPowerCapability" : [ {
-        "atSoC" : -3.3232535E38,
-        "powerCapabilityAt" : 1.3598018E38
+        "atSoC" : 80.0,
+        "powerCapabilityAt" : 500.0
       } ]
     },
     "CapacityEnergyVoltage" : {
-      "CertifiedUsableBatteryEnergy" : -2.6783323E38,
-      "CapacityFade" : -8.792845E37,
+      "CertifiedUsableBatteryEnergy" : 100.0,
+      "CapacityFade" : 10.0,
       "NominalVoltage" : 4.3,
-      "RatedCapacity" : 2.5080502E38,
+      "RatedCapacity" : 210.0,
       "MaxVoltage" : 6.0,
       "MinVoltage" : 2.04
     },
@@ -31,20 +31,20 @@
     },
     "Lifetime" : {
       "ExpectedNumberOfCycles" : 1000,
-      "CapacityThresholdExhaustion" : -1.7976931348623157E308,
-      "CrateOfRelevantCycleLifeTest" : -1.1466522E38,
-      "ExpectedLifetimeInCalendarYears " : -19481
+      "CapacityThresholdExhaustion" : 23.0,
+      "CrateOfRelevantCycleLifeTest" : -1.2771808E38,
+      "ExpectedLifetimeInCalendarYears " : 15
     },
     "RoundTripEnergyEfficiency" : {
       "InitialRoundTripEnergyEfficiency" : 100,
-      "RoundTripEnergyEfficiencyAtFiftyofCycleLife" : -2.6589069E38,
-      "EnergyRoundTripEfficiencyFade" : 1.2180019E38,
-      "InitialSelfDischargingRate" : 2
+      "EnergyRoundTripEfficiencyFade" : 10.0,
+      "InitialSelfDischargingRate" : 2,
+      "RoundTripEnergyEfficiencyAt50PercentOfCycleLife" : 100
     }
   },
   "GeneralInformation" : {
     "CompanyLogo" : "telnet://192.0.2.16:80/",
-    "BatteryMass" : 699.0,
+    "BatteryMass" : 1007.0,
     "ManufacturerName" : "eOMtThyhVNLWUZNRcBaQKxI",
     "ProductImages" : [ {
       "value" : "https://example.com/SafetyInstructions.pdf",
@@ -56,7 +56,7 @@
     } ],
     "ManufacturerOrderCode" : "JxkyvRnL",
     "ManufacturerArticleNumber" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
-    "WarrantyPeriod" : "--12",
+    "WarrantyPeriod" : "2031-10",
     "ManufacturerIdentifier" : "RYtGKbgicZaHCBRQDSx"
   }
 }
