@@ -166,6 +166,5 @@
    samm:see <urn:irdi:0173-1%2302-ABG854%23003> ;
    samm:dataType xsd:string .
 
-:PcfCalculationMethodSet a samm-c:Set ;
-   samm:dataType xsd:string .
+
 

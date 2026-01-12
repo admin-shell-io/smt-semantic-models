@@ -72,7 +72,7 @@
    samm:dataType :ProductOrSectorSpecificRuleEntity .
 
 :ProductOrSectorSpecificRuleEntity a samm:Entity ;
-  samm:properties: ( 
+  samm:properties ( 
   [ samm:property :pcfRuleOperator; samm:payloadName "PcfRuleOperator" ] 
   [ samm:property :pcfRuleName; samm:payloadName "PcfRuleName" ] 
   [ samm:property :pcfRuleVersion; samm:optional true; samm:payloadName "PcfRuleVersion" ] 
@@ -96,7 +96,7 @@
   samm:description "An external service that provides carbon footprint information via an interface, allowing on-demand retrieval of this data when required."@en ;
   samm:description "Ein externer Dienst, der über eine Schnittstelle Informationen zum CO2-Fußabdruck bereitstellt und den Abruf dieser Daten auf Abruf ermöglicht."@de ;
   samm:see <https://admin-shell.io/idta/CarbonFootprint/ExternalPcfApi/1/0> ;
-  samm:properties: ( 
+  samm:properties ( 
   [ samm:property :pcfApiEndpoint; samm:payloadName "PcfApiEndpoint" ]
   [ samm:property :pcfApiQuery; samm:payloadName "PcfApiQuery" ]
   ) .
