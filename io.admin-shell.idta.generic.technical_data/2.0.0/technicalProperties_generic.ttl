@@ -18,7 +18,7 @@
 @prefix : <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
 
 
-:TechnicalAttributesEntity a samm:Entity ;
+:TechnicalAttributes a samm:Entity ;
    samm:properties ( ) .
 
 
