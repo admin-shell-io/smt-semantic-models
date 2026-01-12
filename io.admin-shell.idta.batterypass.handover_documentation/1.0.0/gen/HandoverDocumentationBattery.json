@@ -5,61 +5,22 @@
       "DocumentIsPrimary" : true,
       "DocumentDomainId" : "1213455566"
     } ],
-    "DocumentedEntities" : [ {
-      "type" : "ModelReference",
-      "keys" : [ {
-        "value" : "id1234",
-        "key" : "Submodel"
-      } ]
-    } ],
     "DocumentVersions" : [ {
-      "Description" : [ {
-        "en" : "Example multi language string"
-      } ],
-      "StatusSetDate" : "2020-02-06",
-      "TranslationOfEntities" : [ {
-        "type" : "ModelReference",
-        "keys" : [ {
-          "value" : "id1234",
-          "key" : "Submodel"
-        } ]
-      } ],
       "DigitalFiles" : [ {
         "value" : "https://example.com/SafetyInstructions.pdf",
         "contentType" : "application/pdf"
       } ],
-      "PreviewFile" : {
-        "value" : "https://example.com/SafetyInstructions.pdf",
-        "contentType" : "application/pdf"
-      },
       "Title" : [ {
-        "en" : "Example multi language string"
-      } ],
-      "RefersToEntities" : [ {
-        "type" : "ModelReference",
-        "keys" : [ {
-          "value" : "id1234",
-          "key" : "Submodel"
-        } ]
-      } ],
-      "KeyWords" : [ {
         "en" : "Example multi language string"
       } ],
       "Subtitle" : [ {
         "en" : "Example multi language string"
       } ],
-      "OrganizationShortName" : "Example company",
-      "Language" : [ "en" ],
-      "Version" : "V1.2",
-      "StatusValue" : "Released",
-      "OrganizationOfficialName" : "Example company Ltd.",
-      "BasedOnReferences" : [ {
-        "type" : "ModelReference",
-        "keys" : [ {
-          "value" : "id1234",
-          "key" : "Submodel"
-        } ]
-      } ]
+      "Description" : [ {
+        "en" : "Example multi language string"
+      } ],
+      "Language" : [ "eOMtThyhVNLWUZNRcBaQKxI", "yedUsFwdkelQbxeTeQOvaScfqIOOmaa" ],
+      "Version" : "V1.2"
     } ],
     "DocumentClassifications" : [ {
       "ClassName" : [ {
@@ -68,20 +29,5 @@
       "ClassId" : "03-02",
       "ClassificationSystem" : "VDI2770 Blatt 1:2020"
     } ]
-  } ],
-  "Entities" : [ {
-    "specificAssetIds" : [ {
-      "name" : "SerialNumber",
-      "value" : "eOMtThyhVNLWUZNRcBaQKxI",
-      "externalSubjectId" : {
-        "type" : "ModelReference",
-        "keys" : [ {
-          "value" : "id1234",
-          "key" : "Submodel"
-        } ]
-      }
-    } ],
-    "entityType" : "SelfManagedEntity",
-    "globalAssetId" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa"
   } ]
 }

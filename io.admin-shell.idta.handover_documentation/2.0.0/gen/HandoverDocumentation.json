@@ -9,7 +9,7 @@
       "type" : "ModelReference",
       "keys" : [ {
         "value" : "id1234",
-        "key" : "Submodel"
+        "key" : "AnnotatedRelationshipElement"
       } ]
     } ],
     "DocumentVersions" : [ {
@@ -21,7 +21,7 @@
         "type" : "ModelReference",
         "keys" : [ {
           "value" : "id1234",
-          "key" : "Submodel"
+          "key" : "AnnotatedRelationshipElement"
         } ]
       } ],
       "DigitalFiles" : [ {
@@ -39,7 +39,7 @@
         "type" : "ModelReference",
         "keys" : [ {
           "value" : "id1234",
-          "key" : "Submodel"
+          "key" : "AnnotatedRelationshipElement"
         } ]
       } ],
       "KeyWords" : [ {
@@ -49,7 +49,7 @@
         "en" : "Example multi language string"
       } ],
       "OrganizationShortName" : "Example company",
-      "Language" : [ "en" ],
+      "Language" : [ "eOMtThyhVNLWUZNRcBaQKxI", "yedUsFwdkelQbxeTeQOvaScfqIOOmaa", "JxkyvRnL", "RYtGKbgicZaHCBRQDSx" ],
       "Version" : "V1.2",
       "StatusValue" : "Released",
       "OrganizationOfficialName" : "Example company Ltd.",
@@ -57,7 +57,7 @@
         "type" : "ModelReference",
         "keys" : [ {
           "value" : "id1234",
-          "key" : "Submodel"
+          "key" : "AnnotatedRelationshipElement"
         } ]
       } ]
     } ],
@@ -72,16 +72,16 @@
   "Entities" : [ {
     "specificAssetIds" : [ {
       "name" : "SerialNumber",
-      "value" : "eOMtThyhVNLWUZNRcBaQKxI",
+      "value" : "VLhpfQGTMDYpsBZxvfBoeygjb",
       "externalSubjectId" : {
         "type" : "ModelReference",
         "keys" : [ {
           "value" : "id1234",
-          "key" : "Submodel"
+          "key" : "AnnotatedRelationshipElement"
         } ]
       }
     } ],
     "entityType" : "SelfManagedEntity",
-    "globalAssetId" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa"
+    "globalAssetId" : "UMaAIKKIkknjWEXJUfPxxQHeWKEJ"
   } ]
 }
