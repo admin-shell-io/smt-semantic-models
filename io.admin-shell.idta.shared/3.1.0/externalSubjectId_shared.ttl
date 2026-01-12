@@ -15,12 +15,11 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
+@prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 
-
-:TechnicalAttributes a samm:Entity ;
-   samm:properties ( ) .
-
-
-
+:externalSubjectId a samm:Property ;
+   samm:preferredName "external subject ID"@en ;
+   samm:description "The unique ID of the (external) subject the specific asset ID value belongs to or has meaning to."@en ;
+   samm:see <https://admin-shell.io/aas/3/1/SpecificAssetId/externalSubjectId> ;
+   samm:characteristic :ReferenceType .
 

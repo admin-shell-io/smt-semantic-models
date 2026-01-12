@@ -45,9 +45,9 @@
    
 :DocumentSet a samm-c:Set ;
    samm:see <https://admin-shell.io/vdi/2770/1/0/EntityForDocumentation> ;
-   samm:dataType :DocumentEntity .
+   samm:dataType :Document .
    
-:DocumentEntity a samm:Entity ;
+:Document a samm:Entity ;
    samm:properties ( 
      [ samm:property docu:documentIds; samm:payloadName "DocumentIds" ] 
 	 [ samm:property docu:documentClassifications; samm:payloadName "DocumentClassifications" ] 
@@ -74,8 +74,8 @@
    samm:dataType :DocumentVersion .
  
 :DocumentVersion a samm:Entity ;
-   samm:preferredName "Dokumenten-Version Entity"@de ;
-   samm:preferredName "document version entity"@en ;
+   samm:preferredName "Dokumenten-Version"@de ;
+   samm:preferredName "document version"@en ;
    samm:see <urn:irdi:0173-1%2302-ABI502%23003/0173-1%2301-AHF581%23003> ;
    samm:properties ( 
      [ samm:property shared:languages; samm:payloadName "Language" ] 

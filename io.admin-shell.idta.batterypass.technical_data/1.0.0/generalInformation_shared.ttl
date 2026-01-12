@@ -28,14 +28,44 @@
    [ samm:property tech:manufacturerProductDesignation; samm:payloadName "ManufacturerProductDesignation" ] 
    [ samm:property tech:manufacturerArticleNumber; samm:payloadName "ManufacturerArticleNumber" ] 
    [ samm:property tech:manufacturerOrderCode; samm:payloadName "ManufacturerOrderCode" ] 
-   [ samm:property tech:productImages; samm:optional true; samm:payloadName "ProductImages" ]
    [ samm:property :manufacturerIdentifier; samm:payloadName "ManufacturerIdentifier" ] 
-   [ samm:property bpg:warrentyPeriod; samm:payloadName "WarrantyPeriod" ] 
-   [ samm:property bpg:batteryCategory; samm:payloadName "BatteryCategory" ]  
-   [ samm:property bpg:batteryMass; samm:payloadName "BatteryMass" ]    
+   [ samm:property :warrantyPeriod; samm:payloadName "WarrantyPeriod" ] 
+   [ samm:property :batteryCategory; samm:payloadName "BatteryCategory" ]  
+   [ samm:property :batteryMass; samm:payloadName "BatteryMass" ]   
+   [ samm:property tech:productImages; samm:optional true; samm:payloadName "ProductImages" ]   
    ) .
    
 :manufacturerIdentifier a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-AAO677#004> ;
    samm:preferredName "identifier of the manufacturer"@en ;
    samm:description "A battery passport must include information identifying the manufacturer.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.4"@en ;
    samm:characteristic samm-c:Text .
+
+
+:warrantyPeriod a samm:Property ;
+   samm:preferredName "warranty period"@en ;
+   samm:description "The battery passport must include information about the period for which the commercial warranty applies.\n\nDIN DKE Spec chapter reference: 6.1.3.4"@en ;
+   samm:characteristic :WarrantyPeriod ;
+   samm:exampleValue "2031-10"^^xsd:gYearMonth .
+   
+:WarrantyPeriod a samm-c:Measurement ;
+   samm:dataType xsd:gYearMonth;
+   samm-c:unit unit:month .
+   
+:batteryCategory a samm:Property ;
+   samm:preferredName "BatteryCategory"@en ;
+   samm:description "Categories relevant for the battery passport: LMT battery, electric vehicle battery, stationary or other industrial battery >2kWh.\n\nDIN DKE Spec chapter reference: 6.1.3.5"@en ;
+   samm:characteristic :BatteryCategoryEnum ;
+   samm:exampleValue "ev"^^xsd:string .
+   
+:batteryMass a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-AAF040#010> ;
+   samm:preferredName "battery mass"@en ;
+   samm:description "Mass of the entire battery in kilograms. Voluntary: if the battery is defined on pack or module level: also weight of the modules and/or cells.\n\nDIN DKE Spec chapter reference: 6.1.3.6"@en ;
+   samm:characteristic :BatteryMassMeasurable ;
+   samm:exampleValue "1007"^^xsd:float .
+   
+:BatteryMassMeasurable a samm-c:Measurement ;
+   samm:description "Weight of the battery\nEUBR: Annex XIII (1a) - Annex VI Part A (5)"@en ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:kilogram .

@@ -2,6 +2,8 @@
 # namespace: io.admin-shell.idta.batterypass
 # Copyright (c) 2025 Bosch Connected Industry
 # Copyright (c) 2025 Industrial Digital Twin Association
+# Copyright (c) 2024 Circulor GmbH on behalf of the Battery Pass Consortium
+#
 # This work  is made available under the terms of the
 # Creative Commons Attribution 4.0 International (CC BY 4.0) license,
 # which is available at
@@ -34,7 +36,7 @@
 @prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 
 
-:TechnicalAttributesEntity a samm:Entity ;
+:TechnicalAttributes a samm:Entity ;
   samm:properties (  
     [ samm:property :capacityEnergyVoltage; samm:payloadName "CapacityEnergyVoltage" ] 
     [ samm:property :roundTripEnergyEfficiency; samm:payloadName "RoundTripEnergyEfficiency" ] 
@@ -46,129 +48,132 @@
 
 :capacityEnergyVoltage a samm:Property ;
   samm:preferredName "capacity, energy and voltage"@en ;
-  samm:description "Information on battery capacity, energy and voltage."@en ;
-  samm:see <https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1> ;
+  samm:description "Information on battery capacity, energy and voltage.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2"@en ;
   samm:characteristic :CapacityEnergyVoltageCharacteristic .
 
 :CapacityEnergyVoltageCharacteristic a samm-c:SingleEntity ;
-   samm:dataType :CapacityEnergyVoltageEntity .
+   samm:dataType :CapacityEnergyVoltage .
 
-:CapacityEnergyVoltageEntity a samm:Entity ;
+:CapacityEnergyVoltage a samm:Entity ;
   samm:properties ( 
      [ samm:property :nominalVoltage; samm:payloadName "NominalVoltage" ] 
+	 [ samm:property :minimumVoltage; samm:payloadName "MinVoltage" ]
      [ samm:property :maximumVoltage; samm:payloadName "MaxVoltage" ] 
-     [ samm:property :minimumVoltage; samm:payloadName "MinVoltage" ]
-	 [ samm:property bp:ratedCapacity; samm:payloadName "RatedCapacity" ] 
+	 [ samm:property :ratedCapacity; samm:payloadName "RatedCapacity" ] 
 	 [ samm:property :capacityFade; samm:optional true; samm:payloadName "CapacityFade" ]
-	 [ samm:property bp:ratedEnergy; samm:optional true; samm:payloadName "CertifiedUsableBatteryEnergy" ] 
+	 [ samm:property :ratedEnergy; samm:optional true; samm:payloadName "CertifiedUsableBatteryEnergy" ] 
 	 ) .
 
-:capacityFade a samm:Property ;
-   samm:preferredName "capacity fade"@en ;
-   samm:description "The capacity fade is the Decrease over time and upon usage in the amount of charge that a battery can deliver at the rated voltage, with respect to the original rated capacity (see BattReg Annex IV (2)) as declared by the manufacturer.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.4"@en ;
-   samm:characteristic :CapacityFadeValue .
 
-:CapacityFadeValue a samm-c:Measurement ;
-   samm:dataType xsd:float ;
-   samm-c:unit unit:percent .
 
 :roundTripEnergyEfficiency a samm:Property ;
+   samm:preferredName "round trip energy efficiency and self-discharge"@en ;
+   samm:description "Information regarding round trip energy efficiency.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4"@en ;
    samm:characteristic :RoundTripEnergyEfficiencyCharacteristic .
    
 :RoundTripEnergyEfficiencyCharacteristic a samm-c:SingleEntity ;
-   samm:dataType :RoundTripEnergyEfficiencyEntity .
+   samm:dataType :RoundTripEnergyEfficiency .
 
-:RoundTripEnergyEfficiencyEntity a samm:Entity ;
+:RoundTripEnergyEfficiency a samm:Entity ;
   samm:properties ( 
   [ samm:property :initialRoundTripEnergyEfficiency; samm:payloadName "InitialRoundTripEnergyEfficiency" ] 
-  [ samm:property bp:roundTripEfficiencyAt50PercentCycleLife; samm:payloadName "RoundTripEnergyEfficiencyAtFiftyofCycleLife" ]
+  [ samm:property :roundTripEfficiencyAt50PercentCycleLife; samm:payloadName "RoundTripEnergyEfficiencyAt50PercentOfCycleLife" ]
   [ samm:property :energyRoundTripEfficiencyFade; samm:optional true; samm:payloadName "EnergyRoundTripEfficiencyFade" ]   
   [ samm:property :initialSelfDischargingRate; samm:optional true; samm:payloadName "InitialSelfDischargingRate" ] 
   ) .
 
-:energyRoundTripEfficiencyFade a samm:Property ;
-   samm:preferredName "energy round trip efficiency fade"@en ;
-   samm:description "Energy round trip efficiency fade is the decrease of round trip energy efficiency as percentage.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.5"@en ;
-   samm:characteristic :energyRoundTripEfficiencyFadeValue .
-
-:energyRoundTripEfficiencyFadeValue a samm-c:Measurement ;
-   samm:dataType xsd:float ;
-   samm-c:unit unit:percent .   
  
 :resistance a samm:Property ;
-   samm:see <https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1> ;
+   samm:preferredName "resistance"@en ;
+   samm:description "Data elements regarding internal resistance and electrochemical impedance.\n\nDIN DKE Spec 99100 chapter reference: 6.7.5"@en ;
    samm:characteristic :ResistanceCharacteristic .
    
 :ResistanceCharacteristic a samm-c:SingleEntity ;
-   samm:dataType :ResistanceEntity .
+   samm:dataType :Resistance .
    
 
-:ResistanceEntity a samm:Entity ;
+:Resistance a samm:Entity ;
   samm:properties ( 
-  [ samm:property :initialInternalResistanceOfBatteryCell; samm:payloadName "InitialInternalResistanceOfBatteryCell" ] 
-  [ samm:property :initialInternalResistanceOfBatteryPack; samm:payloadName "InitialInternalResistanceOfBatteryPack" ] 
-  [ samm:property :initialInternalResistanceOfBatteryModule; samm:optional true; samm:payloadName "InitialInternalResistanceOnBatteryModule" ] 
-  [ samm:property :internalResistanceIncreaseOfBatteryCell; samm:optional true; samm:payloadName "InternalResistanceIncreaseOfBatteryCell" ] 
-  [ samm:property :internalResistanceIncreaseOfBatteryPack; samm:payloadName "InternalResistanceIncreaseOfBatteryPack" ] 
-  [ samm:property :internalResistanceIncreaseOfBatteryModule; samm:optional true; samm:payloadName "InternalResistanceIncreaseOfBatteryModule" ] 
+  [ samm:property :initialInternalResistanceOfBatteryCell; samm:payloadName "InitialInternalResistanceOfBatteryCellLevel" ] 
+  [ samm:property :initialInternalResistanceOfBatteryPack; samm:payloadName "InitialInternalResistanceOfBatteryPackLevel" ] 
+  [ samm:property :initialInternalResistanceOfBatteryModule; samm:optional true; samm:payloadName "InitialInternalResistanceOnBatteryModuleLevel" ] 
+  [ samm:property :internalResistanceIncreaseOfBatteryCell; samm:optional true; samm:payloadName "InternalResistanceIncreaseOfBatteryCellLevel" ] 
+  [ samm:property :internalResistanceIncreaseOfBatteryPack; samm:payloadName "InternalResistanceIncreaseOfBatteryPackLevel" ] 
+  [ samm:property :internalResistanceIncreaseOfBatteryModule; samm:optional true; samm:payloadName "InternalResistanceIncreaseOfBatteryModuleLevel" ] 
   ) .
   
   
 :powerCapability a samm:Property ;
-   samm:see <https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1> ;
+   samm:preferredName "power capability"@en ;
+   samm:description "Information regarding power capability.\n\nDIN DKE Spec 99100 chapter reference: 6.7.3"@en ;
    samm:characteristic :PowerCapabilityCharacteristic .
    
 :PowerCapabilityCharacteristic a samm-c:SingleEntity ;
-   samm:dataType :PowerCapabilityEntity .
+   samm:dataType :PowerCapability .
    
 
-:PowerCapabilityEntity a samm:Entity ;
+:PowerCapability a samm:Entity ;
   samm:properties ( 
     [ samm:property :maximumPermittedBatteryPower; samm:payloadName "MaximumPermittedBatteryPower" ] 
-    [ samm:property bp:powerFade; samm:payloadName "PowerFade" ] 
-	[ samm:property bp:powerCapabilityRatio; samm:payloadName "RatioNominalBatteryPowerAndBatteryEnergy" ]
-	[ samm:property bp:originalPowerCapability; samm:payloadName "OriginalPowerCapability" ] 
+    [ samm:property :powerFade; samm:payloadName "PowerFade" ] 
+	[ samm:property :powerCapabilityRatio; samm:payloadName "RatioNominalBatteryPowerAndBatteryEnergy" ]
+	[ samm:property :originalPowerCapability; samm:payloadName "OriginalPowerCapability" ] 
   ) .
   
   
 :temperature a samm:Property ;
-   samm:see <https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1> ;
+   samm:preferredName "temperature conditions"@en ;
+   samm:description "Information regarding temperature conditions.\n\nDIN DKE Spec 99100 chapter reference: 6.7.7"@en ;
    samm:characteristic :TemperatureCharacteristic .
    
 :TemperatureCharacteristic a samm-c:SingleEntity ;
-   samm:dataType :TemperatureEntity .
+   samm:dataType :Temperature .
    
 
-:TemperatureEntity a samm:Entity ;
+:Temperature a samm:Entity ;
   samm:properties ( 
   [ samm:property :temperatureRangeIdleStateLowerBoundary; samm:payloadName "TemperatureRangeIdleState_LowerBoundary" ]  
   [ samm:property :temperatureRangeIdleStateUpperBoundary; samm:payloadName "TemperatureRangeIdleState_UpperBoundary" ] 
   ) .
   
 :lifetime a samm:Property ;
-   samm:see <https://admin-shell.io/ZVEI/TechnicalData/FurtherInformation/1/1> ;
+   samm:preferredName "battery lifetime"@en ;
+   samm:description "Information regarding battery lifetime.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6"@en ;
    samm:characteristic :LifetimeCharacteristic .
    
 :LifetimeCharacteristic a samm-c:SingleEntity ;
-   samm:dataType :LifetimeEntity .
+   samm:dataType :Lifetime .
    
 
-:LifetimeEntity a samm:Entity ;
+:Lifetime a samm:Entity ;
   samm:properties ( 
-      [ samm:property bp:expectedLifetime; samm:payloadName "ExpectedLifetimeInCalendarYears " ] 
+      [ samm:property :expectedLifetime; samm:payloadName "ExpectedLifetimeInCalendarYears " ] 
 	  [ samm:property :expectedNumberOfCycles; samm:payloadName "ExpectedNumberOfCycles" ] 
-      [ samm:property bp:capacityThresholdForExhaustion; samm:payloadName "CapacityThresholdExhaustion" ] 
-      [ samm:property bp:cRateLifeCycleTest; samm:payloadName "CrateOfRelevantCycleLifeTest" ] 
+      [ samm:property :capacityThresholdForExhaustion; samm:payloadName "CapacityThresholdExhaustion" ] 
+      [ samm:property :cRateLifeCycleTest; samm:payloadName "CrateOfRelevantCycleLifeTest" ] 
   ) .
   
-:expectedNumberOfCycles a samm:Property ;
-   samm:preferredName "expected number of cycles"@en ;
-   samm:description "Expected battery lifetime expressed in cycles.\nThe exception for non-cycle applications in Article 10 appears sensible, but is not included in the Annex XIII provision.\nThe data attribute is defined by measurement conditions of the cycle-life test such as the C-Rate (see below) and the depth of discharge in the cycle-life test\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.3"@en ;
-   samm:characteristic :ExpectedNumberOfCycles ;
-   samm:exampleValue "1000"^^xsd:unsignedInt .
+
+:originalPowerCapability a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL853#002> ;
+   samm:preferredName "original power capability"@en ;
+   samm:description "List of pre-use power capabilities (definition of power capability as given in Battery Regulation).\n\n Power capability shall be measured at reference conditions, which must include measurements at 80% and 20% state of charge for EV and industrial batteries. \n\nDIN DKE Spec 99100 chapter reference: 6.7.3.2\n\n"@en ;
+   samm:characteristic :PowerCapabilityAtSoCTrait .
+
+:PowerCapabilityAtSoCTrait a samm-c:Trait ;
+   samm-c:baseCharacteristic :PowerCapabilityAtSoC;
+   samm-c:constraint shared:CardinalityOneToMany .  
+ 
+:PowerCapabilityAtSoC a samm-c:List ;
+   samm-c:elementCharacteristic :PowerCapabilityAtCharacteristic .
    
-:ExpectedNumberOfCycles a samm-c:Quantifiable ;
-   samm:dataType xsd:unsignedInt ;
-   samm-c:unit unit:cycle .
-   
-	  
+:PowerCapabilityAtCharacteristic a samm:Characteristic ;
+  samm:dataType :PowerCapabilityAt .
+ 
+:PowerCapabilityAt a samm:Entity ;
+   samm:preferredName "power capability at reference condition"@en ;
+   samm:description "Power capability measured at a reference condition, for example at 80% or 20% state of charge (SoC).\n\nDIN DKE Spec 99100 chapter reference: 6.7.3.2"@en ;
+   samm:properties ( 
+   :atSoC 
+   :powerCapabilityAt 
+   ) .

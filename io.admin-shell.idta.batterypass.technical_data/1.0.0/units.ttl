@@ -32,34 +32,5 @@
 @prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.1#> .
 @prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 
-:TechnicalData a samm:Aspect ;
-   samm:description "Technical data of the asset and associated product classificatons."@en ;
-   samm:see <urn:irdi:0173-1#01-AHX837#002> ;
-   samm:properties ( 
-   	 [ samm:property :generalInformation; samm:payloadName "GeneralInformation" ] 
-	 [ samm:property :technicalPropertyAreas; samm:payloadName "TechnicalPropertyAreas" ] 
-	  ) ;
-   samm:operations ( ) ;
-   samm:events ( ) .
-
-
-:generalInformation a samm:Property ;
-   samm:preferredName "general information"@en ;
-   samm:description "General information, for example ordering and manufacturer information."@en ;
-   samm:see <urn:irdi:0173-1#02-ABK161#002/0173-1#01-AHX838#002> ;
-   samm:characteristic :GeneralInformationCharacteristic .
-
-:GeneralInformationCharacteristic a samm-c:SingleEntity ;
-   samm:dataType :GeneralInformationEntity .
-
-:technicalPropertyAreas a samm:Property ;
-   samm:see <urn:irdi:0173-1#02-ABK163#002> ;
-   samm:preferredName "battery characteristics"@en ;
-   samm:description "Individual battery characteristics based on DIN DKE SPEC 99100."@en ;
-   samm:characteristic :TechnicalPropertyAreaSet .
-
-:TechnicalPropertyAreaSet a samm-c:SingleEntity ;
-   samm:dataType :TechnicalAttributes .
-   
-
-  
+:C a samm:Unit ;
+   samm:symbol "C" .

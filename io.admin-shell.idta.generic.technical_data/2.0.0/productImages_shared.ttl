@@ -21,7 +21,6 @@
 :productImages a samm:Property ;
    samm:preferredName "product images"@en ;
    samm:description "Image files for associated product provided in common format (.png, .jpg)."@en ;
-   samm:see <https://admin-shell.io/ZVEI/TechnicalData/ProductImages/1/1> ;
    samm:see <urn:irdi:0173-1#02-ABM220#001> ;
    samm:see <https://api.eclass-cdp.com/0173-1-02-ABM220-001> ;
    samm:characteristic :ProductImageSet .
