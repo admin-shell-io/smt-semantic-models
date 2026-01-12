@@ -72,7 +72,7 @@
    samm:dataType :ProductOrSectorSpecificRuleEntity .
 
 :ProductOrSectorSpecificRuleEntity a samm:Entity ;
-  samm:properties: ( 
+  samm:properties ( 
   [ samm:property :pcfRuleOperator; samm:payloadName "PcfRuleOperator" ] 
   [ samm:property :pcfRuleName; samm:payloadName "PcfRuleName" ] 
   [ samm:property :pcfRuleVersion; samm:optional true; samm:payloadName "PcfRuleVersion" ] 
