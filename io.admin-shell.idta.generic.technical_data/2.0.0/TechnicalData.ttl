@@ -67,7 +67,7 @@
 
     
 :TechnicalPropertyAreaSet a samm-c:SingleEntity ;
-   samm:dataType :TechnicalAttributesEntity .
+   samm:dataType :TechnicalAttributes .
 	 
 :furtherInformation a samm:Property ;
    samm:description "Further information on the product, the validity of the information provided and this data record."@en ;
