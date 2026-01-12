@@ -9,7 +9,9 @@
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#PcfCalculationMethodSet",
         "type" : "array",
         "items" : {
-          "type" : "string"
+          "type" : "string",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#PcfCalculationMethodCharacteristic",
+          "description" : "Standard, method for determining the greenhouse gas emissions of a product. Multiple standards can be listed in case these standards are all applied to the respective PCF calculation."
         },
         "uniqueItems" : true
       },

@@ -9,7 +9,9 @@
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#PcfCalculationMethodSet",
         "type" : "array",
         "items" : {
-          "type" : "string"
+          "type" : "string",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#PcfCalculationMethodCharacteristic",
+          "description" : "Standard, method for determining the greenhouse gas emissions of a product. Multiple standards can be listed in case these standards are all applied to the respective PCF calculation."
         },
         "uniqueItems" : true
       },
@@ -411,13 +413,47 @@
       "ProductOrSectorSpecificRuleCharacteristic" : {
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#ProductOrSectorSpecificRuleCharacteristic",
         "type" : "object",
-        "properties" : { }
+        "properties" : {
+          "PcfRuleOperator" : {
+            "description" : "Organization that defines and implements specific instructions and methods for calculating and monitoring the carbon footprint of a product or sector.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#pcfRuleOperator",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "PcfRuleName" : {
+            "description" : "Standard, method for determining the greenhouse gas emissions of a product.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#pcfRuleName",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "PcfRuleVersion" : {
+            "description" : "Specific version or revision of the rule used to calculate the carbon footprint of a product.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#pcfRuleVersion",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "PcfRuleOnlineReference" : {
+            "description" : "Online PCF calculation methodology reference that provides detailed instructions and guidelines for calculating a product's carbon footprint.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#pcfRuleOnlineReference",
+            "$ref" : "#/components/schemas/FileWithContentType"
+          }
+        },
+        "required" : [ "PcfRuleOperator", "PcfRuleName" ]
       },
       "ExternalPcfApiEntity" : {
         "description" : "An external service that provides carbon footprint information via an interface, allowing on-demand retrieval of this data when required.",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#ExternalPcfApiEntity",
         "type" : "object",
-        "properties" : { }
+        "properties" : {
+          "PcfApiEndpoint" : {
+            "description" : "Specific URL or address that can be used to retrieve data from external sources to calculate the carbon footprint of a product.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#pcfApiEndpoint",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "PcfApiQuery" : {
+            "description" : "Specific query that can be used to retrieve data from external sources to calculate the carbon footprint of a product.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#pcfApiQuery",
+            "$ref" : "#/components/schemas/Text"
+          }
+        },
+        "required" : [ "PcfApiEndpoint", "PcfApiQuery" ]
       },
       "ExternalPcfApiCharacteristic" : {
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#ExternalPcfApiCharacteristic",

@@ -96,9 +96,20 @@
     "LifeCyclePhases" : [ "C4 - landfill" ]
   } ],
   "ProductOrSectorSpecificCarbonFootprints" : [ {
-    "ExternalPcfApi" : { },
+    "ExternalPcfApi" : {
+      "PcfApiEndpoint" : "https://example.com/pcf",
+      "PcfApiQuery" : "specific query"
+    },
     "PcfInformation" : { },
-    "ProductOrSectorSpecificRule" : { },
+    "ProductOrSectorSpecificRule" : {
+      "PcfRuleName" : "VLhpfQGTMDYpsBZxvfBoeygjb",
+      "PcfRuleOperator" : "WBCSD",
+      "PcfRuleOnlineReference" : {
+        "value" : "https://example.com/SafetyInstructions.pdf",
+        "contentType" : "application/pdf"
+      },
+      "PcfRuleVersion" : "UMaAIKKIkknjWEXJUfPxxQHeWKEJ"
+    },
     "PcfCalculationMethods" : [ "sector specific calculation method" ]
   } ]
 }
