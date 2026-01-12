@@ -156,7 +156,7 @@
    samm-c:unit samm-u:kilogram .
    
 :PcfCalculationMethodSet a samm-c:Set ;
-   samm:characteristic :PcfCalculationMethodCharacteristic .
+   samm:elementCharacteristic :PcfCalculationMethodCharacteristic .
    
 :PcfCalculationMethodCharacteristic a samm:Characteristic ;
    samm:preferredName "Folgenabschätzungsmethode / Berechnungsmethode"@de ;
