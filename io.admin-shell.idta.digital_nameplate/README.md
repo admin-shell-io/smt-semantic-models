@@ -9,6 +9,8 @@ All notable changes to this model will be documented in this section.
 
 for changelog see Annex B in [IDTA-02006-3-0](https://industrialdigitaltwin.org/en/wp-content/uploads/sites/2/2024/11/IDTA-02006-3-0_Submodel_Digital-Nameplate.pdf)
 
+Source GitHub IDTA for .aasx file and Submodel Template Specification etc.: https://github.com/admin-shell-io/submodel-templates/tree/main/published/Digital%20nameplate
+
 Contained Files:
 
 * Nameplate.ttl: the aspect model for the SMT

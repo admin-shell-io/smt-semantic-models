@@ -15,9 +15,8 @@ The battery passport consists of the following 7 parts:
 *	Digital Battery Passport - Part 7: Circularity  (IDTA-02035-7)
 
 
-Source GitHub IDTA: https://github.com/admin-shell-io/submodel-templates 
+Source GitHub IDTA for .aasx file and Submodel Template Specification etc.: https://github.com/admin-shell-io/submodel-templates 
 
-Source Content Hub of the IDTA: [IDTA-02035-5 V1.2]()
 
 
 # Dependencies

@@ -16,14 +16,16 @@ The battery passport consists of the following 7 parts:
 *	Digital Battery Passport - Part 6: Material Composition  (IDTA-02035-6)
 *	Digital Battery Passport - Part 7: Circularity  (IDTA-02035-7)
 
+Source GitHub IDTA for .aasx file and Submodel Template Specification etc.: https://github.com/admin-shell-io/submodel-templates 
+
 # General
 
-The folder "gen" for each version contains sammple JSON files and html generated for the aspect model(s)
+The folder "gen" for each version contains sammple JSON files, the JSON schema and html generated for the aspect model(s)
 
 # Changelog
 All notable changes to this model will be documented in this section.
 
-## [2.0.0] - <date to be added> IDTA-02035-2
+## [2.0.0] - December 2025
 
 for detailled changelog see [IDTA-02035-2](https://industrialdigitaltwin.org/en/content-hub/submodels)
 

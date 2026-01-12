@@ -22,7 +22,7 @@ Source Content Hub of the IDTA: [IDTA-02023 V1.0](https://industrialdigitaltwin.
 # Changelog
 All notable changes to this model will be documented in this section.
 
-## [1.0.0] - <add date>
+## [1.0.0] - December 2025
 
 for changelog see  [IDTA-02023 V1.0, section "Version history"](https://industrialdigitaltwin.org/en/wp-content/uploads/sites/2/2025/03/IDTA-02023_Submodel_CarbonFootprint.pdf)
 
@@ -34,9 +34,10 @@ Contained Files:
 
 Dependencies:
 
-* 
+None
 
 # Deviations:
+
 - preferred names in English typically starting with small letter
 - description starting with capital letter and ending with "."
 - if description contains AAS specific wording like "Submodel" etc. this is omitted
@@ -49,6 +50,7 @@ Dependencies:
   
 
 # Known Issues generation of aasx from aspect model:
+
 - SubmodelElement File is realized as SMC with two properties (ExplanatoryStatement and PcfRuleOnlineReference)
 - no template qualifiers generated
 - the idShort of the Element within a SML has the idShort of the list, not of the element
