@@ -17,17 +17,18 @@ The battery passport consists of the following 7 parts:
 This model is using the models of the BatteryPass Consortium: https://github.com/batterypass/BatteryPassDataModel/tree/main/BatteryPass/io.BatteryPass.MaterialComposition (urn:samm:io.BatteryPass.MaterialComposition:1.2.0)
 with license CC BY-NC 4.0.
 
-Source GitHub IDTA: https://github.com/admin-shell-io/submodel-templates 
-Source Content Hub of the IDTA: [IDTA-02035-6 V1.2]()
+Source GitHub IDTA for .aasx file and Submodel Template Specification etc.: https://github.com/admin-shell-io/submodel-templates 
 
 # General
 
-The folder "gen" for each version contains sammple JSON files and html generated for the aspect model(s)
+# General
+
+The folder "gen" for each version contains sammple JSON files, the JSON schema and html generated for the aspect model(s)
 
 # Changelog
 All notable changes to this model will be documented in this section.
 
-## [1.0.0] - <add date>
+## [1.0.0] - December 2025
 
 for changelog see  [IDTA-02035-6 V1.2, section "Version history"]()
 

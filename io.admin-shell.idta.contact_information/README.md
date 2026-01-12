@@ -9,6 +9,9 @@ All notable changes to this model will be documented in this section.
 
 for changelog see Annex B in [IDTA-02002-1-0](https://industrialdigitaltwin.org/wp-content/uploads/2022/10/IDTA-02002-1-0_Submodel_ContactInformation.pdf)
 
+
+Source GitHub IDTA for .aasx file and Submodel Template Specification etc.: https://github.com/admin-shell-io/submodel-templates/tree/main/published/Contact%20Information 
+
 Contained Files:
 
 * ContactInformations.ttl: the aspect model for the SMT, mainly needed for example JSON payload etc., Contact Information typically is just shared and not a stand-alone aspect
