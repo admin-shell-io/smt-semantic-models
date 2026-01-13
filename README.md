@@ -8,7 +8,7 @@ There are differnt ways how to create and use these Aspect Models in [Submodel T
 SPECIFICATION](https://industrialdigitaltwin.org/en/wp-content/uploads/sites/2/2022/12/I40-IDTA-WS-Process-How-to-write-a-SMT-FINAL-.pdf)
 * They are created on basis of an existing Submodel Template Specification
 * They are build parallel to a Submodel Template Specification using a different workflow or using different semantic definitions as master
-* They are build for reuse but not Submodel Template Specification is existing for these
+* They are build for reuse but no Submodel Template Specification is existing for these
 
 
 [Best practices](https://eclipse-esmf.github.io/samm-specification/snapshot/appendix/best-practices.html) as defined in the SAMM specification should be followed.
