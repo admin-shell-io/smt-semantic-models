@@ -55,8 +55,8 @@
     } ]
   },
   "valueOnly4Range" : {
-    "max" : 8.334788E37,
-    "min" : 2.3749322E38
+    "max" : -4.3748757E37,
+    "min" : -3.3465966E38
   },
   "valueOnly4File" : {
     "value" : "https://example.com/SafetyInstructions.pdf",

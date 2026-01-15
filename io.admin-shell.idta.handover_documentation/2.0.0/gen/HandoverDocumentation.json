@@ -49,7 +49,7 @@
         "en" : "Example multi language string"
       } ],
       "OrganizationShortName" : "Example company",
-      "Language" : [ "eOMtThyhVNLWUZNRcBaQKxI", "yedUsFwdkelQbxeTeQOvaScfqIOOmaa", "JxkyvRnL", "RYtGKbgicZaHCBRQDSx" ],
+      "Language" : [ "eOMtThyhVNLWUZNRcBaQKxI", "yedUsFwdkelQbxeTeQOvaScfqIOOmaa" ],
       "Version" : "V1.2",
       "StatusValue" : "Released",
       "OrganizationOfficialName" : "Example company Ltd.",
@@ -72,16 +72,16 @@
   "Entities" : [ {
     "specificAssetIds" : [ {
       "name" : "SerialNumber",
-      "value" : "VLhpfQGTMDYpsBZxvfBoeygjb",
+      "value" : "JxkyvRnL",
       "externalSubjectId" : {
-        "type" : "ModelReference",
+        "type" : "ExternalReference",
         "keys" : [ {
           "value" : "id1234",
-          "key" : "AnnotatedRelationshipElement"
+          "key" : "FragmentReference"
         } ]
       }
     } ],
     "entityType" : "SelfManagedEntity",
-    "globalAssetId" : "UMaAIKKIkknjWEXJUfPxxQHeWKEJ"
+    "globalAssetId" : "RYtGKbgicZaHCBRQDSx"
   } ]
 }

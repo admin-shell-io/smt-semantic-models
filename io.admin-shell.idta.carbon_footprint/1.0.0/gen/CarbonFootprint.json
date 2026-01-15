@@ -35,7 +35,7 @@
       "Title" : [ {
         "en" : "Mrs."
       } ],
-      "Languages" : [ "eOMtThyhVNLWUZNRcBaQKxI", "yedUsFwdkelQbxeTeQOvaScfqIOOmaa", "JxkyvRnL" ],
+      "Languages" : [ "eOMtThyhVNLWUZNRcBaQKxI", "yedUsFwdkelQbxeTeQOvaScfqIOOmaa", "JxkyvRnL", "RYtGKbgicZaHCBRQDSx" ],
       "AcademicTitle" : [ {
         "en" : "PhD"
       } ],
@@ -44,7 +44,7 @@
         "availableTime" : [ {
           "de" : "Montag – Freitag 08:00 bis 16:00"
         } ],
-        "AddressOfAdditionalLink" : "RYtGKbgicZaHCBRQDSx"
+        "AddressOfAdditionalLink" : "VLhpfQGTMDYpsBZxvfBoeygjb"
       } ],
       "RoleOfContactPerson" : "technical contact",
       "TimeZone" : "-12:00",
@@ -102,13 +102,13 @@
     },
     "PcfInformation" : { },
     "ProductOrSectorSpecificRule" : {
-      "PcfRuleName" : "VLhpfQGTMDYpsBZxvfBoeygjb",
+      "PcfRuleName" : "UMaAIKKIkknjWEXJUfPxxQHeWKEJ",
       "PcfRuleOperator" : "WBCSD",
       "PcfRuleOnlineReference" : {
         "value" : "https://example.com/SafetyInstructions.pdf",
         "contentType" : "application/pdf"
       },
-      "PcfRuleVersion" : "UMaAIKKIkknjWEXJUfPxxQHeWKEJ"
+      "PcfRuleVersion" : "dpHYZGhtgdntugzvvKAXLhM"
     },
     "PcfCalculationMethods" : [ "sector specific calculation method" ]
   } ]
