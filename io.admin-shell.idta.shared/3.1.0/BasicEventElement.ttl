@@ -17,9 +17,14 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 
-:externalSubjectId a samm:Property ;
-   samm:preferredName "external subject ID"@en ;
-   samm:description "The unique ID of the (external) subject the specific asset ID value belongs to or has meaning to."@en ;
-   samm:see <https://admin-shell.io/aas/3/1/SpecificAssetId/externalSubjectId> ;
-   samm:characteristic :ExternalReferenceType .
+:BasicEventElementType a samm:Characteristic ;
+   samm:dataType :BasicEventElementEntity .
 
+:BasicEventElementEntity a samm:Entity ;
+   samm:see <https://admin-shell.io/aas/3/1/BasicEventElementElement> ;
+   samm:description "A basic event element."@en ;
+   samm:properties ( :observed ) .
+   
+:observed a samm:Property ;
+     samm:characteristic :ModelReferenceType .
+	

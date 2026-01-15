@@ -146,17 +146,37 @@
         },
         "required" : [ "keys", "type" ]
       },
-      "ExternaReferenceSetOfKeys" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternaReferenceSetOfKeys",
+      "ExternalReferenceKeyEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternalReferenceKeyEnum",
+        "enum" : [ "FragmentReference", "GlobalReference" ]
+      },
+      "ExternalReferenceKeyEntity" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternalReferenceKeyEntity",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternalReferenceKey",
+            "$ref" : "#/components/schemas/ExternalReferenceKeyEnum"
+          },
+          "value" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternalReferenceKeyValue",
+            "$ref" : "#/components/schemas/Text"
+          }
+        },
+        "required" : [ "key", "value" ]
+      },
+      "ExternalReferenceSetOfKeys" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternalReferenceSetOfKeys",
         "type" : "array",
         "items" : {
-          "$ref" : "#/components/schemas/ModelReferenceKeyEntity"
+          "$ref" : "#/components/schemas/ExternalReferenceKeyEntity"
         },
         "uniqueItems" : true
       },
-      "KeyExternaReferenceTypesEnum" : {
+      "KeyExternalReferenceTypesEnum" : {
         "type" : "string",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyExternaReferenceTypesEnum",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyExternalReferenceTypesEnum",
         "enum" : [ "ExternalReference" ]
       },
       "ExternalReferenceType" : {
@@ -164,12 +184,12 @@
         "type" : "object",
         "properties" : {
           "keys" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#externaReferenceKeys",
-            "$ref" : "#/components/schemas/ExternaReferenceSetOfKeys"
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeysExternalReference",
+            "$ref" : "#/components/schemas/ExternalReferenceSetOfKeys"
           },
           "type" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#externaReferenceType",
-            "$ref" : "#/components/schemas/KeyExternaReferenceTypesEnum"
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#TypeExternalReference",
+            "$ref" : "#/components/schemas/KeyExternalReferenceTypesEnum"
           }
         },
         "required" : [ "keys", "type" ]
@@ -190,6 +210,48 @@
         },
         "required" : [ "first", "second" ]
       },
+      "ExampleAnnotationsCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExampleAnnotationsCharacteristic",
+        "type" : "object",
+        "properties" : {
+          "valueOnly4MultiLanguageProperty" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4MultiLanguageProperty",
+            "$ref" : "#/components/schemas/MultiLanguageTexts"
+          }
+        },
+        "required" : [ "valueOnly4MultiLanguageProperty" ]
+      },
+      "RelationshipElementEntity" : {
+        "description" : "A predefined submodel element subtype of the Asset Administration Shell used to model relationships.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#RelationshipElementType",
+        "type" : "object",
+        "properties" : {
+          "first" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#first",
+            "$ref" : "#/components/schemas/ReferenceType"
+          },
+          "second" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#second",
+            "$ref" : "#/components/schemas/ReferenceType"
+          }
+        },
+        "required" : [ "first", "second" ]
+      },
+      "valueOnly4RelationshipElementWithAnnotationsCharacteristic" : {
+        "description" : "A predefined submodel element subtype of the Asset Administration Shell used to model relationships.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4RelationshipElementWithAnnotationsCharacteristic",
+        "type" : "object",
+        "properties" : {
+          "annotations" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#annotations",
+            "$ref" : "#/components/schemas/ExampleAnnotationsCharacteristic"
+          }
+        },
+        "required" : [ "annotations" ],
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/RelationshipElementEntity"
+        } ]
+      },
       "SpecificAssetId" : {
         "description" : "A specific asset ID describes a generic supplementary identifying attribute of the asset. The specific asset ID is not necessarily globally unique.",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SpecificAssetId",
@@ -198,7 +260,7 @@
           "externalSubjectId" : {
             "description" : "The unique ID of the (external) subject the specific asset ID value belongs to or has meaning to.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#externalSubjectId",
-            "$ref" : "#/components/schemas/ReferenceType"
+            "$ref" : "#/components/schemas/ExternalReferenceType"
           },
           "value" : {
             "description" : "The value of the specific asset identifier with the corresponding name.",
@@ -227,7 +289,7 @@
         "enum" : [ "SelfManagedEntity", "CoManagedEntity" ]
       },
       "AasEntityType" : {
-        "description" : "A predefined submodel element subtype of the Asset Administration Shell used to model entities.",
+        "description" : "A predefined submodel element subtype of the Asset Administration Shell used to model entities without additional statements.",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#AasEntityType",
         "type" : "object",
         "properties" : {
@@ -244,8 +306,7 @@
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#entityType",
             "$ref" : "#/components/schemas/EntityType"
           }
-        },
-        "required" : [ "specificAssetIds", "globalAssetId", "entityType" ]
+        }
       },
       "AasEntityCharacteristic" : {
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#AasEntityCharacteristic",
@@ -254,10 +315,60 @@
           "$ref" : "#/components/schemas/AasEntityType"
         } ]
       },
+      "ExampleStatementsCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExampleStatementsCharacteristic",
+        "type" : "object",
+        "properties" : {
+          "valueOnly4MultiLanguageProperty" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4MultiLanguageProperty",
+            "$ref" : "#/components/schemas/MultiLanguageTexts"
+          }
+        },
+        "required" : [ "valueOnly4MultiLanguageProperty" ]
+      },
+      "ValueOnly4EntityWithStatements" : {
+        "description" : "A predefined submodel element subtype of the Asset Administration Shell used to model entities without additional statements.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4EntityWithStatementsCharacteristic",
+        "type" : "object",
+        "properties" : {
+          "statements" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#statements",
+            "$ref" : "#/components/schemas/ExampleStatementsCharacteristic"
+          }
+        },
+        "required" : [ "statements" ],
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/AasEntityWithStatementsType"
+        } ]
+      },
+      "AasEntityWithStatementsType" : {
+        "description" : "A predefined submodel element subtype of the Asset Administration Shell used to model entities without additional statements.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#AasEntityWithStatementsType",
+        "type" : "object",
+        "properties" : { },
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/AasEntityType"
+        } ]
+      },
+      "valueOnly4EntityWithStatementsCharacteristic" : {
+        "description" : "A predefined submodel element subtype of the Asset Administration Shell used to model entities without additional statements.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4EntityWithStatementsCharacteristic",
+        "type" : "object",
+        "properties" : {
+          "statements" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#statements",
+            "$ref" : "#/components/schemas/ExampleStatementsCharacteristic"
+          }
+        },
+        "required" : [ "statements" ],
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/AasEntityWithStatementsType"
+        } ]
+      },
       "RangeMinAbstractCharacteristic" : {
         "type" : "number"
       },
-      "x4A3B1B2A0" : {
+      "RangeMaxAbstractCharacteristic" : {
         "type" : "number"
       },
       "RangeFloatType" : {
@@ -271,9 +382,9 @@
             "$ref" : "#/components/schemas/RangeMinAbstractCharacteristic"
           },
           "max" : {
-            "description" : "Minimum value within range.",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#rangeMinAbstract",
-            "$ref" : "#/components/schemas/x4A3B1B2A0"
+            "description" : "Maximum value within range.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#rangeMaxAbstract",
+            "$ref" : "#/components/schemas/RangeMaxAbstractCharacteristic"
           }
         },
         "allOf" : [ {
@@ -297,14 +408,26 @@
             "$ref" : "#/components/schemas/RangeMinAbstractCharacteristic"
           },
           "max" : {
-            "description" : "Minimum value within range.",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#rangeMinAbstract",
-            "$ref" : "#/components/schemas/x4A3B1B2A0"
+            "description" : "Maximum value within range.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#rangeMaxAbstract",
+            "$ref" : "#/components/schemas/RangeMaxAbstractCharacteristic"
           }
         },
         "allOf" : [ {
           "$ref" : "#/components/schemas/RangeTypeAbstract"
         } ]
+      },
+      "BasicEventElementType" : {
+        "description" : "A basic event element.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#BasicEventElementType",
+        "type" : "object",
+        "properties" : {
+          "observed" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#observed",
+            "$ref" : "#/components/schemas/ModelReferenceType"
+          }
+        },
+        "required" : [ "observed" ]
       }
     }
   },
@@ -338,16 +461,31 @@
       "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4RelationshipElement",
       "$ref" : "#/components/schemas/RelationshipElementType"
     },
+    "valueOnly4RelationshipElementWithAnnotations" : {
+      "description" : "Example RelationshipElement with annotations.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4RelationshipElementWithAnnotations",
+      "$ref" : "#/components/schemas/valueOnly4RelationshipElementWithAnnotationsCharacteristic"
+    },
     "valueOnly4Entity" : {
       "description" : "Entity conformant to AAS.",
       "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4Entity",
       "$ref" : "#/components/schemas/AasEntityCharacteristic"
     },
+    "valueOnly4EntityWithStatements" : {
+      "description" : "Example Entity conformant to AAS with statements.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4EntityWithStatements",
+      "$ref" : "#/components/schemas/valueOnly4EntityWithStatementsCharacteristic"
+    },
     "valueOnly4Range" : {
       "description" : "Range conformant to AAS.",
       "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4Range",
       "$ref" : "#/components/schemas/RangeFloatTypeCharacteristic"
+    },
+    "valueOnly4BasicEventElement" : {
+      "description" : "BasicEventElement conformant to AAS.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#valueOnly4BasicEventElement",
+      "$ref" : "#/components/schemas/BasicEventElementType"
     }
   },
-  "required" : [ "valueOnly4MultiLanguageProperty", "valueOnly4File", "valueOnly4Reference", "valueOnly4ModelReference", "valueOnly4ExternalReference", "valueOnly4RelationshipElement", "valueOnly4Entity", "valueOnly4Range" ]
+  "required" : [ "valueOnly4MultiLanguageProperty", "valueOnly4File", "valueOnly4Reference", "valueOnly4ModelReference", "valueOnly4ExternalReference", "valueOnly4RelationshipElement", "valueOnly4RelationshipElementWithAnnotations", "valueOnly4Entity", "valueOnly4EntityWithStatements", "valueOnly4Range", "valueOnly4BasicEventElement" ]
 }

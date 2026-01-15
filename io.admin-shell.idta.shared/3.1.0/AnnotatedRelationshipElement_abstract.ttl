@@ -16,10 +16,15 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 
-:externalSubjectId a samm:Property ;
-   samm:preferredName "external subject ID"@en ;
-   samm:description "The unique ID of the (external) subject the specific asset ID value belongs to or has meaning to."@en ;
-   samm:see <https://admin-shell.io/aas/3/1/SpecificAssetId/externalSubjectId> ;
-   samm:characteristic :ExternalReferenceType .
+:annotations a samm:AbstractProperty ;
+   samm:see <https://admin-shell.io/aas/3/1/Entity/statement> .
+
+:AasAnnotatedRelationshipElementWithAnnotationsType a samm:AbstractEntity ;
+   samm:extends shared:RelationshipElementEntity ;
+   samm:properties ( :annotations ) .
+   
+
+
 

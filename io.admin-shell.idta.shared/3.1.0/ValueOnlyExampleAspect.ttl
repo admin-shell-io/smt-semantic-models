@@ -16,6 +16,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 
 :ValueOnlyExampleAspect a samm:Aspect ;
    samm:preferredName "Value-Only Beispiele"@de ;
@@ -28,9 +29,12 @@
    :valueOnly4Reference 
    :valueOnly4ModelReference
    :valueOnly4ExternalReference
-   :valueOnly4RelationshipElement 
+   :valueOnly4RelationshipElement
+   :valueOnly4RelationshipElementWithAnnotations   
    :valueOnly4Entity 
+   :valueOnly4EntityWithStatements
    :valueOnly4Range  
+   :valueOnly4BasicEventElement
    ) ;
    samm:operations ( ) ;
    samm:events ( ) .
@@ -73,7 +77,61 @@
    samm:description "Entity conformant to AAS."@en ;
    samm:characteristic :AasEntityCharacteristic .
 
+
+:valueOnly4EntityWithStatements a samm:Property ;
+   samm:preferredName "Example Entity with statements"@en ;
+   samm:description "Example Entity conformant to AAS with statements."@en ;
+   samm:characteristic :valueOnly4EntityWithStatementsCharacteristic .
+   
+:valueOnly4EntityWithStatementsCharacteristic a samm:Characteristic ;
+   samm:dataType :ValueOnly4EntityWithStatements .
+   
+:ValueOnly4EntityWithStatements a samm:Entity ;
+   samm:extends :AasEntityWithStatementsType ;
+   samm:properties ( 
+     [ samm:property :exampleStatements; samm:payloadName "statements" ]
+   ).
+
+:exampleStatements a samm:Property ;
+  samm:extends :statements ;
+  samm:characteristic :ExampleStatementsCharacteristic .
+  
+:ExampleStatementsCharacteristic a samm:Characteristic ;
+  samm:dataType :ExampleStatements .
+  
+:ExampleStatements a samm:Entity ;
+  samm:properties ( :valueOnly4MultiLanguageProperty ) . 
+
 :valueOnly4Range a samm:Property ;
    samm:preferredName "Range"@en ;
    samm:description "Range conformant to AAS."@en ;
    samm:characteristic :RangeFloatTypeCharacteristic .
+   
+:valueOnly4BasicEventElement a samm:Property ;
+   samm:preferredName"Basic Event"@en ;
+   samm:description "BasicEventElement conformant to AAS."@en ;
+   samm:characteristic :BasicEventElementType.
+   
+:valueOnly4RelationshipElementWithAnnotations a samm:Property ;
+   samm:preferredName "Example RelationshipElement with annotations"@en ;
+   samm:description "Example RelationshipElement with annotations."@en ;
+   samm:characteristic :valueOnly4RelationshipElementWithAnnotationsCharacteristic .
+   
+:valueOnly4RelationshipElementWithAnnotationsCharacteristic a samm:Characteristic ;
+   samm:dataType :ValueOnly4RelationshipElementWithAnnotations .
+   
+:ValueOnly4RelationshipElementWithAnnotations a samm:Entity ;
+   samm:extends :RelationshipElementEntity ;
+   samm:properties ( 
+     [ samm:property :exampleAnnotations; samm:payloadName "annotations" ]
+   ).
+
+:exampleAnnotations a samm:Property ;
+  samm:extends shared:annotations ;
+  samm:characteristic :ExampleAnnotationsCharacteristic .
+  
+:ExampleAnnotationsCharacteristic a samm:Characteristic ;
+  samm:dataType :ExampleAnnotations .
+  
+:ExampleAnnotations a samm:Entity ;
+  samm:properties ( :valueOnly4MultiLanguageProperty ) .  

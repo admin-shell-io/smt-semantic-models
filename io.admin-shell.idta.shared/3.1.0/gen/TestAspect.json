@@ -12,20 +12,20 @@
     "MarkingAdditionalText" : "0044"
   } ],
   "externalSubjectId" : {
-    "type" : "ModelReference",
+    "type" : "ExternalReference",
     "keys" : [ {
       "value" : "id1234",
-      "key" : "AnnotatedRelationshipElement"
+      "key" : "FragmentReference"
     } ]
   },
   "example4specificAssetId" : {
     "name" : "SerialNumber",
     "value" : "VLhpfQGTMDYpsBZxvfBoeygjb",
     "externalSubjectId" : {
-      "type" : "ModelReference",
+      "type" : "ExternalReference",
       "keys" : [ {
         "value" : "id1234",
-        "key" : "AnnotatedRelationshipElement"
+        "key" : "FragmentReference"
       } ]
     }
   },
