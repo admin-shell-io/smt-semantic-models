@@ -25,7 +25,10 @@
 
 :lastUpdate a samm:Property ;
    samm:preferredName "last update"@en ;
-   samm:description "Timestamp for dynamic data attributes show the last update time.\n\n Defined time within a time range, measured from the start time of the time range."@en ;
+   samm:description """Timestamp for dynamic data attributes show the last update time.
+
+   Defined time within a time range, measured from the start time of the time range.
+   """@en ;
    samm:see <urn:irdi:0173-1#02-ABG740#003> ;
    samm:characteristic samm-c:Timestamp ;
    samm:exampleValue "2000-01-01T14:23:00"^^xsd:dateTime .
