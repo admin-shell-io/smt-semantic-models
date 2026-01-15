@@ -102,50 +102,50 @@
         "uniqueItems" : true,
         "minItems" : 1
       },
-      "ReferenceKeyEnum" : {
+      "ExternalReferenceKeyEnum" : {
         "type" : "string",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ReferenceKeyEnum",
-        "enum" : [ "AnnotatedRelationshipElement", "AssetAdministrationShell", "BasicEventElement", "Blob", "Capability", "ConceptDescription", "DataElement", "Entity", "EventElement", "File", "FragmentReference", "Identifiable", "MultiLanguageProperty", "Operation", "Property", "Range", "Referable", "ReferenceElement", "RelationshipElement", "Submodel", "SubmodelElement", "SubmodelElementCollection", "SubmodelElementList" ]
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternalReferenceKeyEnum",
+        "enum" : [ "FragmentReference", "GlobalReference" ]
       },
-      "KeyEntity" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyEntity",
+      "ExternalReferenceKeyEntity" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternalReferenceKeyEntity",
         "type" : "object",
         "properties" : {
           "key" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#key",
-            "$ref" : "#/components/schemas/ReferenceKeyEnum"
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternalReferenceKey",
+            "$ref" : "#/components/schemas/ExternalReferenceKeyEnum"
           },
           "value" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keyValue",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternalReferenceKeyValue",
             "$ref" : "#/components/schemas/Text"
           }
         },
         "required" : [ "key", "value" ]
       },
-      "SetOfKeys" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SetOfKeys",
+      "ExternalReferenceSetOfKeys" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternalReferenceSetOfKeys",
         "type" : "array",
         "items" : {
-          "$ref" : "#/components/schemas/KeyEntity"
+          "$ref" : "#/components/schemas/ExternalReferenceKeyEntity"
         },
         "uniqueItems" : true
       },
-      "KeyReferenceTypesEnum" : {
+      "KeyExternalReferenceTypesEnum" : {
         "type" : "string",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyReferenceTypesEnum",
-        "enum" : [ "ModelReference", "ExternalReference" ]
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyExternalReferenceTypesEnum",
+        "enum" : [ "ExternalReference" ]
       },
-      "ReferenceType" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ReferenceType",
+      "ExternalReferenceType" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternalReferenceType",
         "type" : "object",
         "properties" : {
           "keys" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keys",
-            "$ref" : "#/components/schemas/SetOfKeys"
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeysExternalReference",
+            "$ref" : "#/components/schemas/ExternalReferenceSetOfKeys"
           },
           "type" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#type",
-            "$ref" : "#/components/schemas/KeyReferenceTypesEnum"
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#TypeExternalReference",
+            "$ref" : "#/components/schemas/KeyExternalReferenceTypesEnum"
           }
         },
         "required" : [ "keys", "type" ]
@@ -158,7 +158,7 @@
           "externalSubjectId" : {
             "description" : "The unique ID of the (external) subject the specific asset ID value belongs to or has meaning to.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#externalSubjectId",
-            "$ref" : "#/components/schemas/ReferenceType"
+            "$ref" : "#/components/schemas/ExternalReferenceType"
           },
           "value" : {
             "description" : "The value of the specific asset identifier with the corresponding name.",
@@ -213,7 +213,7 @@
     "externalSubjectId" : {
       "description" : "The unique ID of the (external) subject the specific asset ID value belongs to or has meaning to.",
       "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#externalSubjectId",
-      "$ref" : "#/components/schemas/ReferenceType"
+      "$ref" : "#/components/schemas/ExternalReferenceType"
     }
   },
   "required" : [ "example4Markings", "languages", "example4specificAssetId", "example4documentIdentifierSet", "externalSubjectId" ]
