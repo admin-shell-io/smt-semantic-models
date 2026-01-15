@@ -103,15 +103,17 @@
    samm:characteristic :BatteryMaterialLocation .
 
 :batteryMaterialIdentifier a samm:Property ;
-   samm:preferredName "identifier"@en ;
-   samm:description "CAS Number."@en ;
+   samm:preferredName "CAS Number"@en ;
+   samm:description "Registration number of an international designation standard (CAS = Chemical Abstracts Service) for chemical substances. For each chemical substance registered in the CAS database (also biosequences, alloys, polymers) there is a unique CAS number."@en ;
    samm:characteristic :MaterialIdentifierTrait ;
    samm:see <https://www.cas.org/cas-data/cas-registry> ;
+   samm:see <urn:irdi:0173-1#02-ABH034#003> ;
    samm:exampleValue "7439-93-2" .
 
 :batteryMaterialName a samm:Property ;
    samm:preferredName "name"@en ;
-   samm:description "Clear name of Material."@en ;
+   samm:description "Clear name of Material.\n\n Alphanumeric character string which describes the object."@en ;
+   samm:see <urn:irdi:0173-1#02-AAN920#003> ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "Lithium" .
 
