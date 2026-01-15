@@ -104,6 +104,7 @@
    samm:description "Unique string of characters for the identification of locations or buildings involved in a product’s value chain or used by actors involved in a product’s value chain.\n\n The manufacturing place should be uniquely identifiable.\n\n DIN DKE Spec 99100 chapter reference: 6.1.3.1"@en ;
    samm:see <https://adminshell.io/idta/nameplate/3/0/UniqueFacilityIdentifier> ;
    samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#uniqueFacilityIdentifier> ;
+   samm:see <urn:irdi:0173-1#02-AAV646#003> ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "987654321" .
 
@@ -146,10 +147,12 @@ Note: CE marking is declared as mandatory according to EU Blue Guide
 :euDeclarationOfConformity a samm:Property ;
    samm:preferredName "EU declaration of conformity"@en ;
    samm:description "A battery passport must include the EU declaration of conformity.\n\n  DIN DKE Spec 99100 chapter reference: 6.2.7 \n\n Document identifiers (e.g., depending of different languages) of a document (e.g., PDF) that can be found in the Handover Documentation model."@en ;
+   samm:see <urn:irdi:0173-1#02-ABA889#003> ;
    samm:characteristic shared:DocumentIdentifierSet .
 
 :resultsOfTestReportsProvingCompliance a samm:Property ;
    samm:preferredName "result of test reports proving compliance"@en ;
    samm:description "A battery passport must include the test report results that can prove the compliance with the requirements stated in the battery regulation.\n\n  DIN DKE Spec 99100 chapter reference: 6.2.8\n\n Document identifiers (e.g., depending of different languages) of a document (e.g., PDF) that can be found in the Handover Documentation model.\n\n "@en ;
+   samm:see <urn:irdi:0173-1#02-ABA705#003> ;
    samm:characteristic shared:DocumentIdentifierSet .
  

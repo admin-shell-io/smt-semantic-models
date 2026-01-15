@@ -119,14 +119,14 @@
 :internalResistanceIncreaseOfBatteryPack a samm:Property ;
   samm:see <urn:irdi:0173-1#02-ABL831#001> ;
   samm:preferredName "internal resistance increase of battery pack"@en ;
-  samm:description "Internal resistance increase of battery pack."@en ;
+  samm:description "'Internal resistance increase on battery pack level' defined by 'increase of internal resistance in % as calculated from current and initial values (calculated from initial and current internal resistance on battery pack level)."@en ;
   samm:characteristic :ResistanceIncrease ;
   samm:exampleValue "10"^^xsd:integer .
   
 :internalResistanceIncreaseOfBatteryModule a samm:Property ;
   samm:see <urn:irdi:0173-1#02-ABL831#001> ;
   samm:preferredName "internal resistance increase of battery module"@en ;
-  samm:description "Internal resistance increase of battery module."@en ;
+  samm:description "Internal resistance increase on battery module level' defined by 'internal resistance increase on battery module level, calculated from initial and current internal resistance on battery module level."@en ;
   samm:characteristic :ResistanceIncrease ;
   samm:exampleValue "10"^^xsd:integer .
 
@@ -203,6 +203,7 @@
    
    DIN DKE Spec 99100 chapter reference: 6.7.3.6
    """@en ;
+   samm:see <urn:irdi:0173-1#02-ABL857#001> ;
    samm:characteristic :PowerCapabilityRatio ;
    samm:exampleValue "0.611"^^xsd:float . 
    
@@ -236,6 +237,7 @@
 :expectedNumberOfCycles a samm:Property ;
    samm:preferredName "expected number of cycles"@en ;
    samm:description "Expected battery lifetime expressed in cycles.\nThe exception for non-cycle applications in Article 10 appears sensible, but is not included in the Annex XIII provision.\nThe data attribute is defined by measurement conditions of the cycle-life test such as the C-Rate (see below) and the depth of discharge in the cycle-life test\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.3"@en ;
+   samm:see <urn:irdi:0173-1#02-ABL830#001> ;
    samm:characteristic :ExpectedNumberOfCycles ;
    samm:exampleValue "1000"^^xsd:unsignedInt .
    
@@ -287,10 +289,12 @@
    
 :atSoC a samm:Property ;
    samm:preferredName "state of charge (SoC) in percent"@en ;
-   samm:description "Power capability shall be measured at reference conditions, which must include measurements at 80% and 20% state of charge for EV and industrial batteries."@en ;
+   samm:description "Available capacity in a battery expressed as a percentage of remaining capacity.\n\nPower capability shall be measured at reference conditions, which must include measurements at 80% and 20% state of charge for EV and industrial batteries."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL821#001> ;
    samm:characteristic :AtSoC ;
    samm:exampleValue "80"^^xsd:float . 
-   
+ 
+
 :AtSoC a samm-c:Measurement ;
    samm:dataType xsd:float ;
    samm-c:unit unit:percent .
