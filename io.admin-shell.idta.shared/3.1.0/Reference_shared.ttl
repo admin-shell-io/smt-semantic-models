@@ -151,43 +151,43 @@
 
 :ExternalReferenceType a samm:Characteristic ;
    samm:see <https://admin-shell.io/aas/3/1/Reference> ;
-   samm:dataType :ExternaReferenceEntity .
+   samm:dataType :ExternalReferenceEntity .
 
-:ExternaReferenceEntity a samm:Entity ;
+:ExternalReferenceEntity a samm:Entity ;
    samm:properties ( 
-      [ samm:property :externaReferenceKeys; samm:payloadName "keys" ] 
-	  [ samm:property :externaReferenceType; samm:payloadName "type" ] 
+      [ samm:property :KeysExternalReference; samm:payloadName "keys" ] 
+	  [ samm:property :TypeExternalReference; samm:payloadName "type" ] 
    ) .
 
-:externaReferenceKeys a samm:Property ;
-   samm:characteristic :ExternaReferenceSetOfKeys .
+:KeysExternalReference a samm:Property ;
+   samm:characteristic :ExternalReferenceSetOfKeys .
 
-:externaReferenceType a samm:Property ;
-   samm:characteristic :KeyExternaReferenceTypesEnum ;
-   samm:exampleValue "ExternaReference" .
+:TypeExternalReference a samm:Property ;
+   samm:characteristic :KeyExternalReferenceTypesEnum ;
+   samm:exampleValue "ExternalReference" .
 
-:KeyExternaReferenceTypesEnum a samm-c:Enumeration ;
+:KeyExternalReferenceTypesEnum a samm-c:Enumeration ;
    samm:dataType xsd:string ;
    samm-c:values ( "ExternalReference"  ) .
    
-:ExternaReferenceSetOfKeys a samm-c:Set ;
-   samm:dataType :ModelReferenceKeyEntity .
+:ExternalReferenceSetOfKeys a samm-c:Set ;
+   samm:dataType :ExternalReferenceKeyEntity .
 
-:ExternaReferenceKeyEntity a samm:Entity ;
+:ExternalReferenceKeyEntity a samm:Entity ;
    samm:properties ( 
-   [ samm:property :ExternaReferenceKey; samm:payloadName "key" ] 
-   [ samm:property :ExternaReferenceKeyValue; samm:payloadName "value" ] 
+   [ samm:property :ExternalReferenceKey; samm:payloadName "key" ] 
+   [ samm:property :ExternalReferenceKeyValue; samm:payloadName "value" ] 
    ) .
 
-:ExternaReferenceKey a samm:Property ;
-   samm:characteristic :ModelReferenceKeyEnum ;
+:ExternalReferenceKey a samm:Property ;
+   samm:characteristic :ExternalReferenceKeyEnum ;
    samm:exampleValue "GlobalReference" .
 
-:ExternaReferenceKeyValue a samm:Property ;
+:ExternalReferenceKeyValue a samm:Property ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "id1234" .
    
-:ExternaReferenceKeyEnum a samm-c:Enumeration ;
+:ExternalReferenceKeyEnum a samm-c:Enumeration ;
    samm:dataType xsd:string ;
    samm-c:values ( 
    "FragmentReference"
