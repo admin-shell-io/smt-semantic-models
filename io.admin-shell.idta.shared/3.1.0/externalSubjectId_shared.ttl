@@ -21,5 +21,5 @@
    samm:preferredName "external subject ID"@en ;
    samm:description "The unique ID of the (external) subject the specific asset ID value belongs to or has meaning to."@en ;
    samm:see <https://admin-shell.io/aas/3/1/SpecificAssetId/externalSubjectId> ;
-   samm:characteristic :ReferenceType .
+   samm:characteristic :ExternalReferenceType .
 
