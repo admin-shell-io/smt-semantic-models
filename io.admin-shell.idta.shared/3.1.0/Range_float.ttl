@@ -29,7 +29,7 @@
 	 ] .
 
 :rangeFloatMax a samm:Property ;
-   samm:extends shared:rangeMinAbstract ;
+   samm:extends shared:rangeMaxAbstract ;
    samm:characteristic [
      a samm:Characteristic ;
      samm:dataType xsd:float ;
@@ -41,5 +41,4 @@
    [ samm:property :rangeFloatMin; samm:optional true; samm:payloadName "min" ] 
    [ samm:property :rangeFloatMax; samm:optional true; samm:payloadName "max" ] 
    ) .
-
 
