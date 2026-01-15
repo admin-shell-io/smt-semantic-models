@@ -459,7 +459,7 @@
    
 :remainingRoundTripEnergyEfficiencyValue a samm:Property ;
    samm:preferredName "remaining round trip energy efficiency value"@en ;
-   samm:description "Remaining round trip energy efficiency value.\n\n Percentage of energy that can be recovered and used after a full charge and discharge cycle, reflecting the battery's ability to retain and return energy efficiently over time."@en ;
+   samm:description "Percentage of energy that can be recovered and used after a full charge and discharge cycle, reflecting the battery's ability to retain and return energy efficiently over time."@en ;
    samm:see <urn:irdi:0173-1#02-ABL851#001> ;
    samm:characteristic :RemainingRoundTripEnergyEfficiencyValue ;
    samm:exampleValue "80"^^xsd:float .
