@@ -40,8 +40,12 @@
 
 :AasEntityType a samm:Entity ;
    samm:see <https://admin-shell.io/aas/3/1/Entity> ;
-   samm:description "A predefined submodel element subtype of the Asset Administration Shell used to model entities."@en ;
-   samm:properties ( :specificAssetIds :globalAssetId :entityType ) .
+   samm:description "A predefined submodel element subtype of the Asset Administration Shell used to model entities without additional statements."@en ;
+   samm:properties ( 
+      [ samm:property :specificAssetIds; samm:optional true ]
+	  [ samm:property :globalAssetId; samm:optional true  ]
+	  [ samm:property :entityType ; samm:optional true  ]
+	   ) .
 
 :entityType a samm:Property ;
    samm:preferredName "entity type"@en ;
