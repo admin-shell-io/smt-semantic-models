@@ -6,15 +6,22 @@ The application of these aspect models does not release users from the bility fo
 
 # Semantic Models
 
-This repository is for aspect models that are used as semantic definition in [Submodel Templates](https://github.com/admin-shell-io/submodel-templates).
 
-They are used in the so-called "Semantic driven workflow" as desribed in [HOW TO CREATE A SUBMODEL TEMPLATE
-SPECIFICATION](https://industrialdigitaltwin.org/wp-content/uploads/2025/06/IDTA_How-to-write-a-SMT-v1.1.pdf).
+This repository is for semantic models based on the [ESMF](https://eclipse-esmf.github.io/esmf-documentation/index.html) [Semantic Aspect Meta Model (SAMM)](https://eclipse-esmf.github.io/samm-specification) .
 
-Here semantic models based on the [Semantic Aspect Meta Model (SAMM)](https://eclipse-esmf.github.io/samm-specification) are stored. 
+There are differnt ways how to create and use these Aspect Models in [Submodel Template Specifications](https://github.com/admin-shell-io/submodel-templates):
+
+* They are used as master of the semantic definitions used in the so-called "Semantic Drived workflow" as desribed in [HOW TO CREATE A SUBMODEL TEMPLATE
+SPECIFICATION](https://industrialdigitaltwin.org/en/wp-content/uploads/sites/2/2022/12/I40-IDTA-WS-Process-How-to-write-a-SMT-FINAL-.pdf)
+* They are created on basis of an existing Submodel Template Specification
+* They are build parallel to a Submodel Template Specification using a different workflow or using different semantic definitions as master
+* They are build for reuse but no Submodel Template Specification is existing for these
+
+
 [Best practices](https://eclipse-esmf.github.io/samm-specification/snapshot/appendix/best-practices.html) as defined in the SAMM specification should be followed.
 
-They belong to the namespaces starting with **io.admin-shell.idta**.
+The Aspect Models defined in this repository belong to the [namespaces](https://eclipse-esmf.github.io/samm-specification/snapshot/namespaces.html) starting with *io.admin-shell.idta*.
+
 
 Models can reuse elements from different namespaces within the repository.
 
@@ -47,18 +54,9 @@ Build date: 2025-07-09 10:57:19
 Git commit: 12e6bf900ae63a8ee993da3e0cbc08cf36ee5c50
 
 
-# Known issues for generation of aasx from aspect model
+There is a [command line tool in ESMF](https://eclipse-esmf.github.io/esmf-developer-guide/tooling-guide/samm-cli.html) that supports generation of different software artifacts like JSON schema, html etc.
+In the "gen" Folder of the Aspect Models some of these software artifacts are contained.
 
-Known Issues wheen generating an aasx file from a .ttl aspect model file:
 
-- payload names are not considered when generating idShort (update 2025-09-09: With the new ESMF CLI Release this is fixed)
-- no template qualifiers with type "Cardinality" or any other qualifiers are generated
-- the idShort of the Element within a SML has the idShort of the list, not of the element
-- no mapping to SubmodelElement "File", instead mapping to SMC with two properties "resourceValue" and "contentType"
-- no example values generated, neither as "value" nor as qualifier using the template qualifier "SMT/ExampleValue"
-- semanticId only added for Properties but not for SMC or SML (but ConceptDescriptions are derived)
-- Concept Descriptions: For enumerations no valueList is created for its values (example :HazardousSubstanceClassChrateristicEnum in MaterialComposition)
-- Concept Descriptions: The preferred name is identical to the element name and not the samm:preferred name of the samm:property
-- for some models the generated Submodel/id and Submodel/semanticId are not correct and need to be updated manually
 
 
