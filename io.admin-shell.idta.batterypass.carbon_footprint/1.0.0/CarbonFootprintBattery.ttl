@@ -123,7 +123,8 @@
   samm:characteristic [
       a samm:Characteristic ;
       samm:dataType xsd:string ;
-   ] .
+   ] ;
+  samm:exampleValue "B+" .
    
 :webLinkToPublicCarbonFootprintStudy a samm:Property ;
    samm:preferredName "web link to public carbon footprint study"@en ;
