@@ -1,6 +1,6 @@
 ######################################################################
 # namespace: io.admin-shell.idta.batterypass
-# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
 # Copyright (c) 2025 Industrial Digital Twin Association
 # Copyright (c) 2024 Circulor GmbH on behalf of the Battery Pass Consortium
 #

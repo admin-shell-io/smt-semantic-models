@@ -1,6 +1,6 @@
 ######################################################################
 # Copyright (c) 2024 Circulor GmbH on behalf of the Battery Pass Consortium
-# Copyright (c) 2025 Bosch Connected Industry
+# Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
 # Copyright (c) 2025 Industrial Digital Twin Association
 #
 # See the NOTICE file(s) distributed with this work for additional
@@ -25,7 +25,10 @@
 
 :lastUpdate a samm:Property ;
    samm:preferredName "last update"@en ;
-   samm:description "Timestamp for dynamic data attributes show the last update time.\n\n Defined time within a time range, measured from the start time of the time range."@en ;
+   samm:description """Timestamp for dynamic data attributes show the last update time.
+
+   Defined time within a time range, measured from the start time of the time range.
+   """@en ;
    samm:see <urn:irdi:0173-1#02-ABG740#003> ;
    samm:characteristic samm-c:Timestamp ;
    samm:exampleValue "2000-01-01T14:23:00"^^xsd:dateTime .
@@ -459,7 +462,7 @@
    
 :remainingRoundTripEnergyEfficiencyValue a samm:Property ;
    samm:preferredName "remaining round trip energy efficiency value"@en ;
-   samm:description "Remaining round trip energy efficiency value.\n\n Percentage of energy that can be recovered and used after a full charge and discharge cycle, reflecting the battery's ability to retain and return energy efficiently over time."@en ;
+   samm:description "Percentage of energy that can be recovered and used after a full charge and discharge cycle, reflecting the battery's ability to retain and return energy efficiently over time."@en ;
    samm:see <urn:irdi:0173-1#02-ABL851#001> ;
    samm:characteristic :RemainingRoundTripEnergyEfficiencyValue ;
    samm:exampleValue "80"^^xsd:float .
