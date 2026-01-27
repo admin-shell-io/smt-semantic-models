@@ -28,7 +28,7 @@ Models can reuse elements from different namespaces within the repository.
 When defining and reusing elements from other aspect models, the following repositories with aspect models are allowed to be used besides the ones in this repository:
 
 * [Catena-X aspect models](https://github.com/eclipse-tractusx/sldt-semantic-models), their namespaces start with *io.catenax*
-* [BatteryPass aspect models](https://github.com/batterypass/BatteryPassDataModel), their namespaces start with *io.BatteryPass* - however, please note that these aspect models have licence **CC BY-NC 4.0**.
+* [BatteryPass aspect models](https://github.com/batterypass/BatteryPassDataModel), their namespaces start with *io.BatteryPass* - however, please note that older version of these aspect models have licence **CC BY-NC 4.0**, only use Aspect MOdels with licence **CC BY 4.0**
 
 
 # Generator used
