@@ -6,6 +6,14 @@
 # which is available at
 # https://creativecommons.org/licenses/by/4.0/.
 # SPDX-License-Identifier: CC-BY-4.0
+#
+# elements of namespace: urn:samm:io.BatteryPass:GeneralProductInformation:1.2.0 
+# within https://github.com/batterypass/BatteryPassDataModel
+# with licence CC-BY-4.0
+# and Copyright (c) 2025 Circulor GmbH on behalf of the Battery Pass Consortium
+# are used but enhanced, adapted or changed to be compliant with DIN DKE SPEC 99100 
+# and to align with existing IDTA sub model templates
+#
 #######################################################################
 
 @prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
@@ -17,7 +25,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> .
 @prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
-@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 
 :GeneralInformationEntity a samm:Entity ;
