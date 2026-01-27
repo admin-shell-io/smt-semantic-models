@@ -20,7 +20,7 @@
   },
   "example4specificAssetId" : {
     "name" : "SerialNumber",
-    "value" : "VLhpfQGTMDYpsBZxvfBoeygjb",
+    "value" : "JxkyvRnL",
     "externalSubjectId" : {
       "type" : "ExternalReference",
       "keys" : [ {
@@ -29,5 +29,5 @@
       } ]
     }
   },
-  "languages" : [ "eOMtThyhVNLWUZNRcBaQKxI", "yedUsFwdkelQbxeTeQOvaScfqIOOmaa", "JxkyvRnL", "RYtGKbgicZaHCBRQDSx" ]
+  "languages" : [ "eOMtThyhVNLWUZNRcBaQKxI", "yedUsFwdkelQbxeTeQOvaScfqIOOmaa" ]
 }

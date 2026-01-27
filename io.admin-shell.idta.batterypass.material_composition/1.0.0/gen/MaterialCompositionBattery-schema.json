@@ -85,12 +85,12 @@
             "$ref" : "#/components/schemas/BatteryMaterialLocation"
           },
           "BatteryMaterialIdentifier" : {
-            "description" : "CAS Number.",
+            "description" : "Registration number of an international designation standard (CAS = Chemical Abstracts Service) for chemical substances. For each chemical substance registered in the CAS database (also biosequences, alloys, polymers) there is a unique CAS number.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.0#batteryMaterialIdentifier",
             "$ref" : "#/components/schemas/MaterialIdentifierTrait"
           },
           "BatteryMaterialName" : {
-            "description" : "Clear name of Material.",
+            "description" : "Clear name of Material.\n\n Alphanumeric character string which describes the object.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.0#batteryMaterialName",
             "$ref" : "#/components/schemas/Text"
           },

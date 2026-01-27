@@ -4,7 +4,7 @@
   } ],
   "SerialNumber" : "A12345-X75EN",
   "EUDeclarationOfConformity" : [ "eOMtThyhVNLWUZNRcBaQK" ],
-  "OperatorIdentifier" : "dpHYZGhtgdntugzvvKAXLhM",
+  "OperatorIdentifier" : "VLhpfQGTMDYpsBZxvfBoeygjb",
   "AddressInformation" : {
     "POBox" : [ {
       "de" : "PF 1234"
@@ -34,7 +34,7 @@
     "Title" : [ {
       "en" : "Mrs."
     } ],
-    "Languages" : [ "eOMtThyhVNLWUZNRcBaQKxI", "yedUsFwdkelQbxeTeQOvaScfqIOOmaa", "JxkyvRnL", "RYtGKbgicZaHCBRQDSx", "VLhpfQGTMDYpsBZxvfBoeygjb" ],
+    "Languages" : [ "eOMtThyhVNLWUZNRcBaQKxI", "yedUsFwdkelQbxeTeQOvaScfqIOOmaa", "JxkyvRnL" ],
     "AcademicTitle" : [ {
       "en" : "PhD"
     } ],
@@ -43,7 +43,7 @@
       "availableTime" : [ {
         "de" : "Montag – Freitag 08:00 bis 16:00"
       } ],
-      "AddressOfAdditionalLink" : "UMaAIKKIkknjWEXJUfPxxQHeWKEJ"
+      "AddressOfAdditionalLink" : "RYtGKbgicZaHCBRQDSx"
     } ],
     "RoleOfContactPerson" : "technical contact",
     "TimeZone" : "-12:00",
@@ -104,5 +104,5 @@
   } ],
   "LifeCycleStage" : "original",
   "DateOfManufacture" : "2022-01-01",
-  "ManufacturerIdentifier" : "LlN"
+  "ManufacturerIdentifier" : "UMaAIKKIkknjWEXJUfPxxQHeWKEJ"
 }

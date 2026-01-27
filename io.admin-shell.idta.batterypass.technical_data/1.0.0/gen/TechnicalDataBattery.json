@@ -32,7 +32,7 @@
     "Lifetime" : {
       "ExpectedNumberOfCycles" : 1000,
       "CapacityThresholdExhaustion" : 23.0,
-      "CrateOfRelevantCycleLifeTest" : -1.2771808E38,
+      "CrateOfRelevantCycleLifeTest" : 2.6035454E38,
       "ExpectedLifetimeInCalendarYears " : 15
     },
     "RoundTripEnergyEfficiency" : {
