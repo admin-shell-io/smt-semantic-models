@@ -9,6 +9,10 @@
 # https://creativecommons.org/licenses/by/4.0/.
 # SPDX-License-Identifier: CC-BY-4.0
 #
+# This work is derived from Submodel Template Specification (SMT) IDTA-02023 Version 1.0 Carbon Footprint
+# with licence CC-BY-4.0
+# changes are documented in Readme of namespace urn:samm:io.admin-shell.idta.carbon_footprint
+#
 #######################################################################
 
 @prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
