@@ -1,0 +1,137 @@
+######################################################################
+# Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+
+:ValueOnlyExampleAspect a samm:Aspect ;
+   samm:preferredName "Value-Only Beispiele"@de ;
+   samm:preferredName "Value-Only Examples"@en ;
+   samm:description "Beispiel-Aspekt, der Charakteristiken für Submodel-Elemente testet."@de ;
+   samm:description "Example Aspect with characteristics for Value-Only serialization of Submodel Elements."@en ;
+   samm:properties ( 
+   :valueOnly4MultiLanguageProperty 
+   :valueOnly4File 
+   :valueOnly4Reference 
+   :valueOnly4ModelReference
+   :valueOnly4ExternalReference
+   :valueOnly4RelationshipElement
+   :valueOnly4RelationshipElementWithAnnotations   
+   :valueOnly4Entity 
+   :valueOnly4EntityWithStatements
+   :valueOnly4Range  
+   :valueOnly4BasicEventElement
+   ) ;
+   samm:operations ( ) ;
+   samm:events ( ) .
+
+:valueOnly4MultiLanguageProperty a samm:Property ;
+   samm:preferredName "multi language text"@de ;
+   samm:preferredName "mehrsprachiger Text"@en ;
+   samm:see <urn:irdi:0173-1#02-ABJ219#002> ;
+   samm:characteristic :MultiLanguageTexts .
+
+:valueOnly4File a samm:Property ;
+   samm:preferredName "digital file"@en ;
+   samm:preferredName "digitale Datei"@de ;
+   samm:description "Digital copy of this document"@en ;
+   samm:description "Digital Kopie dieses Dokuments"@de ;
+   samm:characteristic :FileWithContentType .
+
+:valueOnly4Reference a samm:Property ;
+   samm:preferredName "Reference"@en ;
+   samm:description "Reference conformant to AAS."@en ;
+   samm:characteristic :ReferenceType .
+   
+:valueOnly4ModelReference a samm:Property ;
+   samm:preferredName "Reference"@en ;
+   samm:description "Reference conformant to AAS."@en ;
+   samm:characteristic :ModelReferenceType .
+
+:valueOnly4ExternalReference a samm:Property ;
+   samm:preferredName "Reference"@en ;
+   samm:description "Reference conformant to AAS."@en ;
+   samm:characteristic :ExternalReferenceType .
+   
+:valueOnly4RelationshipElement a samm:Property ;
+   samm:preferredName "RelationshipElement"@en ;
+   samm:description "RelationshipElement conformant to AAS."@en ;
+   samm:characteristic :RelationshipElementType .
+
+:valueOnly4Entity a samm:Property ;
+   samm:preferredName "Entity"@en ;
+   samm:description "Entity conformant to AAS."@en ;
+   samm:characteristic :AasEntityCharacteristic .
+
+
+:valueOnly4EntityWithStatements a samm:Property ;
+   samm:preferredName "Example Entity with statements"@en ;
+   samm:description "Example Entity conformant to AAS with statements."@en ;
+   samm:characteristic :valueOnly4EntityWithStatementsCharacteristic .
+   
+:valueOnly4EntityWithStatementsCharacteristic a samm:Characteristic ;
+   samm:dataType :ValueOnly4EntityWithStatements .
+   
+:ValueOnly4EntityWithStatements a samm:Entity ;
+   samm:extends :AasEntityWithStatementsType ;
+   samm:properties ( 
+     [ samm:property :exampleStatements; samm:payloadName "statements" ]
+   ).
+
+:exampleStatements a samm:Property ;
+  samm:extends :statements ;
+  samm:characteristic :ExampleStatementsCharacteristic .
+  
+:ExampleStatementsCharacteristic a samm:Characteristic ;
+  samm:dataType :ExampleStatements .
+  
+:ExampleStatements a samm:Entity ;
+  samm:properties ( :valueOnly4MultiLanguageProperty ) . 
+
+:valueOnly4Range a samm:Property ;
+   samm:preferredName "Range"@en ;
+   samm:description "Range conformant to AAS."@en ;
+   samm:characteristic :RangeFloatTypeCharacteristic .
+   
+:valueOnly4BasicEventElement a samm:Property ;
+   samm:preferredName"Basic Event"@en ;
+   samm:description "BasicEventElement conformant to AAS."@en ;
+   samm:characteristic :BasicEventElementType.
+   
+:valueOnly4RelationshipElementWithAnnotations a samm:Property ;
+   samm:preferredName "Example RelationshipElement with annotations"@en ;
+   samm:description "Example RelationshipElement with annotations."@en ;
+   samm:characteristic :valueOnly4RelationshipElementWithAnnotationsCharacteristic .
+   
+:valueOnly4RelationshipElementWithAnnotationsCharacteristic a samm:Characteristic ;
+   samm:dataType :ValueOnly4RelationshipElementWithAnnotations .
+   
+:ValueOnly4RelationshipElementWithAnnotations a samm:Entity ;
+   samm:extends :RelationshipElementEntity ;
+   samm:properties ( 
+     [ samm:property :exampleAnnotations; samm:payloadName "annotations" ]
+   ).
+
+:exampleAnnotations a samm:Property ;
+  samm:extends shared:annotations ;
+  samm:characteristic :ExampleAnnotationsCharacteristic .
+  
+:ExampleAnnotationsCharacteristic a samm:Characteristic ;
+  samm:dataType :ExampleAnnotations .
+  
+:ExampleAnnotations a samm:Entity ;
+  samm:properties ( :valueOnly4MultiLanguageProperty ) .  

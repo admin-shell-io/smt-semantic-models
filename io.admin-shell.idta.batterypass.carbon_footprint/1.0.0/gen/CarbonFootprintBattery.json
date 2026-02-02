@@ -1,0 +1,11 @@
+{
+  "ProductCarbonFootprints" : [ {
+    "QuantityOfMeasureForCalculation" : 5.0,
+    "PcfCo2eq" : 17.2,
+    "ReferenceImpactUnitForCalculation" : "g",
+    "WebLinkToPublicCarbonFootprintStudy" : [ "eOMtThyhVNLWUZNRcBaQK" ],
+    "PcfCalculationMethods" : [ "ISO 14067" ],
+    "PerformanceClass" : "eOMtThyhVNLWUZNRcBaQKxI",
+    "LifeCyclePhases" : [ "C4 - landfill" ]
+  } ]
+}

@@ -1,0 +1,36 @@
+######################################################################
+# Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
+@prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
+@prefix contactInformation: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+
+
+:addressInformation a samm:Property ;
+   samm:preferredName "Addresse des Herstellers"@de ;
+   samm:preferredName "adress of the manufacturer"@en ;
+   samm:description "The manufacturer information postal address, indicating a single contact point. Web address, if available; and web address, if available.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.3"@en ;
+   samm:see <https://adminshell.io/zvei/nameplate/1/0/ContactInformations/AddressInformation> ;
+   samm:see <https://admin-shell.io/smt-dropin/smt-dropin-use/1/0> ;
+   samm:see <urn:irdi:0112/2///61360_7#AAS002#001> ;
+   samm:see <urn:irdi:0173-1#02-AAQ837#008/0173-1#01-ADR448#008> ;
+   samm:see <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#addressInformation> ;
+   samm:characteristic nameplate:AddressInformationCharacteristic .
+

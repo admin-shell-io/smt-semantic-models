@@ -1,0 +1,171 @@
+######################################################################
+# Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
+# Copyright (c) 2025 Industrial Digital Twin Association
+#
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#
+# This work is derived from Submodel Template Specification (SMT) IDTA-02023 Version 1.0 Carbon Footprint
+# with licence CC-BY-4.0
+# changes are documented in Readme of namespace urn:samm:io.admin-shell.idta.carbon_footprint
+#
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#> .
+@prefix pcf: <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#> .
+@prefix cx: <urn:samm:io.catenax.pcf:8.0.0#> .
+@prefix ext-shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix contact: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
+@prefix samm-u: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+
+:LifeCyclePhaseEnum a samm-c:Enumeration ;
+   samm:preferredName "life cycle phases"@en ;
+   samm:dataType xsd:string ;
+   samm:see <urn:irdi:0173-1#09-AAO113#003> ;
+   samm-c:values (
+	:A1
+	:A1A3
+	:A3
+	:A4
+	:A4A5
+	:A5
+	:B1
+	:B1B7
+	:B2
+	:B3
+	:B4
+	:B5
+	:B6
+	:B7
+	:C1
+	:C1C4
+	:C2
+	:C2C4
+	:C3
+	:C4
+	:D
+   ) .
+
+:A1 a samm:Value ;
+   samm:value "A1 - raw material supply (and upstream production)" ;
+   samm:preferredName "A1 - raw material supply (and upstream production)"@en ;
+   samm:see <urn:irdi:0173-1#07-ABU208#003> .
+   
+:A1A3 a samm:Value ;
+   samm:value "A1-A3" ;
+   samm:preferredName "A1-A3"@en ;
+   samm:see <urn:irdi:0173-1#07-ABZ789#003> .
+   
+:A2 a samm:Value ;
+   samm:value "A2 - cradle-to-gate transport to factory" ;
+   samm:preferredName "A2 - cradle-to-gate transport to factory"@en ;
+   samm:see <urn:irdi:0173-1#07-ABU209#003> .
+
+:A3 a samm:Value ;
+   samm:value "A3 - production" ;
+   samm:preferredName "A3 - production"@en ;
+   samm:see <urn:irdi:0173-1#07-ABU210#003> .
+
+:A4 a samm:Value ;
+   samm:value "A4 - transport to final destination" ;
+   samm:preferredName "A4 - transport to final destination"@en ;
+   samm:see <urn:irdi:0173-1#07-ABU211#003> .
+
+:A4A5 a samm:Value ;
+   samm:value "A4-A5" ;
+   samm:preferredName "A4-A5"@en ;
+   samm:see <urn:irdi:0173-1#07-ACC013#001> .
+   
+:A5 a samm:Value ;
+   samm:value "A5 - Installation" ;
+   samm:preferredName "A5 - Installation"@en ;
+   samm:see <urn:irdi:0173-1#07-ACC016#001> .
+   
+:B1 a samm:Value ;
+   samm:value "B1 - usage phase" ;
+   samm:preferredName "B1 - usage phase"@en ;
+   samm:see <urn:irdi:0173-1#07-ABU212#003> .
+
+:B1B7 a samm:Value ;
+   samm:value "B1-B7" ;
+   samm:preferredName "B1-B7"@en ;
+   samm:see <urn:irdi:0173-1#07-ACC014#001> .
+   
+:B2 a samm:Value ;
+   samm:value "B2 - maintenance" ;
+   samm:preferredName "B2 - maintenance"@en ;
+   samm:see <urn:irdi:0173-1#07-ABV498#003> .
+   
+:B3 a samm:Value ;
+   samm:value "B3 - repair" ;
+   samm:preferredName "B3 - repair"@en ;
+   samm:see <urn:irdi:0173-1#07-ABV497#003> .
+   
+:B4 a samm:Value ;
+   samm:value "B4 - Replacement" ;
+   samm:preferredName "B4 - Replacement"@en ;
+   samm:see <urn:irdi:0173-1#07-ACC017#001> .
+
+:B5 a samm:Value ;
+   samm:value "B5 - update/upgrade, refurbishing" ;
+   samm:preferredName "B5 - update/upgrade, refurbishing"@en ;
+   samm:see <urn:irdi:0173-1#07-ABV499#003> .
+   
+:B6 a samm:Value ;
+   samm:value "B6 - usage energy consumption" ;
+   samm:preferredName "B6 - usage energy consumption"@en ;
+   samm:see <urn:irdi:0173-1#07-ABV500#003> .
+   
+:B7 a samm:Value ;
+   samm:value "B7 - usage water consumption" ;
+   samm:preferredName "B7 - usage water consumption"@en ;
+   samm:see <urn:irdi:0173-1#07-ABV501#003> .
+   
+:C1 a samm:Value ;
+   samm:value "C1 - reassembly" ;
+   samm:preferredName "C1 - reassembly"@en ;
+   samm:see <urn:irdi:0173-1#07-ABV502#003> .
+   
+  
+:C1C4 a samm:Value ;
+   samm:value "C1-C4" ;
+   samm:preferredName "C1-C4"@en ;
+   samm:see <urn:irdi:0173-1#07-ACC015#001> .
+
+
+:C2 a samm:Value ;
+   samm:value "C2 - transport to recycler" ;
+   samm:preferredName "C2 - transport to recycler"@en ;
+   samm:see <urn:irdi:0173-1#07-ABU213#003> .
+
+    
+:C2C4 a samm:Value ;
+   samm:value "C2-C4" ;
+   samm:preferredName "C2-C4"@en ;
+   samm:see <urn:irdi:0173-1#07-ACC018#001> .
+
+   
+:C3 a samm:Value ;
+   samm:value "C3 - recycling, waste treatment" ;
+   samm:preferredName "C3 - recycling, waste treatment"@en ;
+   samm:see <urn:irdi:0173-1#07-ABV503#003> .
+  
+:C4 a samm:Value ;
+   samm:value "C4 - landfill" ;
+   samm:preferredName "C4 - landfill"@en ;
+   samm:see <urn:irdi:0173-1#07-ABV504#003> .  
+   
+:D a samm:Value ;
+   samm:value "D - reuse" ;
+   samm:preferredName "D - reuse"@en ;
+   samm:see <urn:irdi:0173-1#07-ABU214#003> .

@@ -1,0 +1,87 @@
+{
+  "Documents" : [ {
+    "DocumentIds" : [ {
+      "DocumentIdentifier" : "XF90-884",
+      "DocumentIsPrimary" : true,
+      "DocumentDomainId" : "1213455566"
+    } ],
+    "DocumentedEntities" : [ {
+      "type" : "ModelReference",
+      "keys" : [ {
+        "value" : "id1234",
+        "key" : "AnnotatedRelationshipElement"
+      } ]
+    } ],
+    "DocumentVersions" : [ {
+      "Description" : [ {
+        "en" : "Example multi language string"
+      } ],
+      "StatusSetDate" : "2020-02-06",
+      "TranslationOfEntities" : [ {
+        "type" : "ModelReference",
+        "keys" : [ {
+          "value" : "id1234",
+          "key" : "AnnotatedRelationshipElement"
+        } ]
+      } ],
+      "DigitalFiles" : [ {
+        "value" : "https://example.com/SafetyInstructions.pdf",
+        "contentType" : "application/pdf"
+      } ],
+      "PreviewFile" : {
+        "value" : "https://example.com/SafetyInstructions.pdf",
+        "contentType" : "application/pdf"
+      },
+      "Title" : [ {
+        "en" : "Example multi language string"
+      } ],
+      "RefersToEntities" : [ {
+        "type" : "ModelReference",
+        "keys" : [ {
+          "value" : "id1234",
+          "key" : "AnnotatedRelationshipElement"
+        } ]
+      } ],
+      "KeyWords" : [ {
+        "en" : "Example multi language string"
+      } ],
+      "Subtitle" : [ {
+        "en" : "Example multi language string"
+      } ],
+      "OrganizationShortName" : "Example company",
+      "Language" : [ "eOMtThyhVNLWUZNRcBaQKxI", "yedUsFwdkelQbxeTeQOvaScfqIOOmaa" ],
+      "Version" : "V1.2",
+      "StatusValue" : "Released",
+      "OrganizationOfficialName" : "Example company Ltd.",
+      "BasedOnReferences" : [ {
+        "type" : "ModelReference",
+        "keys" : [ {
+          "value" : "id1234",
+          "key" : "AnnotatedRelationshipElement"
+        } ]
+      } ]
+    } ],
+    "DocumentClassifications" : [ {
+      "ClassName" : [ {
+        "en" : "Example multi language string"
+      } ],
+      "ClassId" : "03-02",
+      "ClassificationSystem" : "VDI2770 Blatt 1:2020"
+    } ]
+  } ],
+  "Entities" : [ {
+    "specificAssetIds" : [ {
+      "name" : "SerialNumber",
+      "value" : "JxkyvRnL",
+      "externalSubjectId" : {
+        "type" : "ExternalReference",
+        "keys" : [ {
+          "value" : "id1234",
+          "key" : "FragmentReference"
+        } ]
+      }
+    } ],
+    "entityType" : "SelfManagedEntity",
+    "globalAssetId" : "RYtGKbgicZaHCBRQDSx"
+  } ]
+}

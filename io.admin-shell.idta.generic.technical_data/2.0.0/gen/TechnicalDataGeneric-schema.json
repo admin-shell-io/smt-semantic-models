@@ -1,0 +1,286 @@
+{
+  "$schema" : "http://json-schema.org/draft-04/schema",
+  "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#TechnicalData",
+  "description" : "Technical data of the asset and associated product classificatons.",
+  "type" : "object",
+  "components" : {
+    "schemas" : {
+      "Text" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Text",
+        "description" : "Describes a Property which contains plain text. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+      },
+      "ResourcePath" : {
+        "type" : "string",
+        "format" : "uri",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#ResourcePath",
+        "description" : "The path of a resource."
+      },
+      "MultiLanguageTexts" : {
+        "description" : "A set of language-text items.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#MultiLanguageTexts",
+        "type" : "array",
+        "items" : {
+          "type" : "object",
+          "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#MultiLanguageText",
+          "description" : "Describes a Property which contains plain text in multiple languages. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+        },
+        "uniqueItems" : true
+      },
+      "MimeType" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#MimeType",
+        "description" : "A MIME type as defined in RFC 2046, for example \"application/pdf\"."
+      },
+      "ProductImageSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#ProductImageSet",
+        "type" : "array",
+        "items" : {
+          "description" : "A file is a data element that represents an address to a file (a locator). The value is a URI that can represent an absolute or relative path.",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#FileWithContentType",
+          "type" : "object",
+          "properties" : {
+            "value" : {
+              "description" : "Path and name of the file (with file extension).\n\nThe path can be absolute or relative.",
+              "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#resourceValue",
+              "$ref" : "#/components/schemas/ResourcePath"
+            },
+            "contentType" : {
+              "description" : "Content type of the content of the file or blob.",
+              "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#contentType",
+              "$ref" : "#/components/schemas/MimeType"
+            }
+          },
+          "required" : [ "value", "contentType" ]
+        },
+        "uniqueItems" : true
+      },
+      "GeneralInformationEntity" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#GeneralInformationEntity",
+        "type" : "object",
+        "properties" : {
+          "ManufacturerName" : {
+            "description" : "Legally valid designation of the natural or judicial person which is directly responsible for the design, production, packaging and labeling of a product in respect to its being brought into circulation.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#manufacturerName",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "CompanyLogo" : {
+            "description" : "Imagefile for logo of the company provided in common format (.png, .jpg)",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#companyLogo",
+            "$ref" : "#/components/schemas/ResourcePath"
+          },
+          "ManufacturerProductDesignation" : {
+            "description" : "Short description of the product (short text), third or lowest level of a 3 level manufacturer specific product hierarchy.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#manufacturerProductDesignation",
+            "$ref" : "#/components/schemas/MultiLanguageTexts"
+          },
+          "ManufacturerArticleNumber" : {
+            "description" : "Unique product identifier of the manufacturer Note: The manufacturer article number is represented as a string, although often a numerical ID.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#manufacturerArticleNumber",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "ManufacturerOrderCode" : {
+            "description" : "Unique combination of numbers and letters used to identify the device for ordering.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#manufacturerOrderCode",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "ProductImages" : {
+            "description" : "Image files for associated product provided in common format (.png, .jpg).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#productImages",
+            "$ref" : "#/components/schemas/ProductImageSet"
+          }
+        },
+        "required" : [ "ManufacturerName", "ManufacturerProductDesignation", "ManufacturerArticleNumber", "ManufacturerOrderCode" ]
+      },
+      "GeneralInformationCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#GeneralInformationCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/GeneralInformationEntity"
+        } ]
+      },
+      "ReferenceKeyEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ReferenceKeyEnum",
+        "enum" : [ "AnnotatedRelationshipElement", "AssetAdministrationShell", "BasicEventElement", "Blob", "Capability", "ConceptDescription", "DataElement", "Entity", "EventElement", "File", "FragmentReference", "Identifiable", "MultiLanguageProperty", "Operation", "Property", "Range", "Referable", "ReferenceElement", "RelationshipElement", "Submodel", "SubmodelElement", "SubmodelElementCollection", "SubmodelElementList" ]
+      },
+      "KeyEntity" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyEntity",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#key",
+            "$ref" : "#/components/schemas/ReferenceKeyEnum"
+          },
+          "value" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keyValue",
+            "$ref" : "#/components/schemas/Text"
+          }
+        },
+        "required" : [ "key", "value" ]
+      },
+      "SetOfKeys" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SetOfKeys",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/KeyEntity"
+        },
+        "uniqueItems" : true
+      },
+      "KeyReferenceTypesEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyReferenceTypesEnum",
+        "enum" : [ "ModelReference", "ExternalReference" ]
+      },
+      "ReferenceType" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ReferenceType",
+        "type" : "object",
+        "properties" : {
+          "keys" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keys",
+            "$ref" : "#/components/schemas/SetOfKeys"
+          },
+          "type" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#type",
+            "$ref" : "#/components/schemas/KeyReferenceTypesEnum"
+          }
+        },
+        "required" : [ "keys", "type" ]
+      },
+      "ProductClassificationEntity" : {
+        "description" : "Single product classification item by association with product class in a particular classification system or property dictionary.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#ProductClassificationEntity",
+        "type" : "object",
+        "properties" : {
+          "ProductClassificationSystem" : {
+            "description" : "Common name of the classification system.\nNote: Examples for common names for classification systems are \"ECLASS\" or \"IEC CDD\".",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#productClassificationSystem",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "ClassificationSystemVersion" : {
+            "description" : "Common version identifier of the used classification system, in order to distinguish different version of the property dictionary.\nNote: Casing is to be ignored.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#classificationSystemVersion",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "ClassificationSystemUrl" : {
+            "description" : "URL of the used classification system.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#classificationSystemUrl",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "ProductClassId" : {
+            "description" : "Class of the associated product or industrial equipment in the classification system. According to the notation of the system.\nNote: Ideally, the Property/valueId is used to reference the IRI/ IRDI of the product class.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#productClassId",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "ProductClassCodedName" : {
+            "description" : "Unique class code in a classification hierarchy.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#productClassCodedName",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "ProductClassName" : {
+            "description" : "Name of product class in the used classification system.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#productClassName",
+            "$ref" : "#/components/schemas/MultiLanguageTexts"
+          },
+          "ReferenceToTechnicalPropertyArea" : {
+            "description" : "Reference to technical property area.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#referenceToTechnicalPropertyArea",
+            "$ref" : "#/components/schemas/ReferenceType"
+          }
+        },
+        "required" : [ "ProductClassificationSystem", "ProductClassId", "ProductClassCodedName" ]
+      },
+      "ProductClassificationSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#ProductClassificationSet",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/ProductClassificationEntity"
+        },
+        "uniqueItems" : true
+      },
+      "TechnicalAttributes" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#TechnicalAttributes",
+        "type" : "object",
+        "properties" : { }
+      },
+      "TechnicalPropertyAreaSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#TechnicalPropertyAreaSet",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/TechnicalAttributes"
+        } ]
+      },
+      "Timestamp" : {
+        "type" : "string",
+        "pattern" : "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Timestamp",
+        "description" : "Describes a Property which contains the date and time with an optional timezone."
+      },
+      "FurtherInformationEntity" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#FurtherInformationEntity",
+        "type" : "object",
+        "properties" : {
+          "TextStatement" : {
+            "description" : "Statement by the manufacturer in text form, e.g. scope of validity of the statements, scopes of application, conditions of operation",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#textStatement",
+            "$ref" : "#/components/schemas/MultiLanguageTexts"
+          },
+          "ValidDate" : {
+            "description" : "Denotes a date on which the data specified in the Submodel was valid from for the associated asset.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#validDate",
+            "$ref" : "#/components/schemas/Timestamp"
+          }
+        },
+        "required" : [ "TextStatement", "ValidDate" ]
+      },
+      "FurtherInformationCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#FurtherInformationCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/FurtherInformationEntity"
+        } ]
+      },
+      "SpecificDescriptionEntity" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#SpecificDescriptionEntity",
+        "type" : "object",
+        "properties" : { }
+      },
+      "SpecificDescriptionsSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#SpecificDescriptionsSet",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/SpecificDescriptionEntity"
+        },
+        "uniqueItems" : true
+      }
+    }
+  },
+  "properties" : {
+    "GeneralInformation" : {
+      "description" : "General information, for example ordering and manufacturer information.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#generalInformation",
+      "$ref" : "#/components/schemas/GeneralInformationCharacteristic"
+    },
+    "ProductClassifications" : {
+      "description" : "Product classifications by association with product classes in common classification systems.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#productClassifications",
+      "$ref" : "#/components/schemas/ProductClassificationSet"
+    },
+    "TechnicalPropertyAreas" : {
+      "description" : "List of all technical property areas.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#technicalPropertyAreas",
+      "$ref" : "#/components/schemas/TechnicalPropertyAreaSet"
+    },
+    "FurtherInformation" : {
+      "description" : "Further information on the product, the validity of the information provided and this data record.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#furtherInformation",
+      "$ref" : "#/components/schemas/FurtherInformationCharacteristic"
+    },
+    "SpecificDescriptions" : {
+      "description" : "Specific description areas for multiple use cases or areas of application.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#specificDescriptions",
+      "$ref" : "#/components/schemas/SpecificDescriptionsSet"
+    }
+  },
+  "required" : [ "GeneralInformation" ]
+}

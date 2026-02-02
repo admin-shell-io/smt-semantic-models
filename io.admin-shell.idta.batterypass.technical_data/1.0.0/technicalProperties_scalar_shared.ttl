@@ -1,0 +1,309 @@
+######################################################################
+# Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
+# Copyright (c) 2025 Industrial Digital Twin Association
+#
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#
+# elements of namespace: urn:samm:io.BatteryPass.Performance:1.2.1
+# and urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0
+# within https://github.com/batterypass/BatteryPassDataModel
+# with licence CC-BY-4.0
+# and Copyright (c) 2025 Circulor GmbH on behalf of the Battery Pass Consortium
+# are used but enhanced, adapted or changed to be compliant with DIN DKE SPEC 99100 
+# and to align with existing IDTA sub model templates
+#
+#######################################################################
+
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> .
+@prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
+@prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.1#> .
+@prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
+
+
+:temperatureRangeIdleStateUpperBoundary a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL871#001> ;
+   samm:preferredName "temperature range idle state (upper boundary)"@en ;
+   samm:description "Upper boundary of the surrounding temperature range, which the battery can safely withstand."@en ;
+   samm:characteristic :TemperatureRangeBoundary ;
+   samm:exampleValue "-19"^^xsd:float .
+
+:temperatureRangeIdleStateLowerBoundary a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL842#001> ;
+   samm:preferredName "temperature range idle state (lower boundary)"@en ;
+   samm:description "Lower boundary of the surrounding temperature range, which the battery can safely withstand."@en ;
+   samm:characteristic :TemperatureRangeBoundary ;
+   samm:exampleValue "49"^^xsd:float .
+
+
+:TemperatureRangeBoundary a samm:Characteristic ;
+   samm:preferredName "boundary for temperature range"@en ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:degreeCelsius .
+
+
+:maximumPermittedBatteryPower a samm:Property ;
+  samm:see <urn:irdi:0173-1#02-ABL843#002> ;
+  samm:preferredName "maximum permitted battery power"@en ;
+  samm:description "Maximum permitted power the battery is rated for, includes the data relevant for power limits."@en ;
+  samm:characteristic :PowerCapabilityAtSoc ;
+  samm:exampleValue "1.7976931348623157e+308"^^xsd:float .
+
+:initialRoundTripEnergyEfficiency a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL833#001> ;
+   samm:preferredName "initial round trip energy efficiency"@en ;
+   samm:description "Initial round trip energy efficiency means the ratio of the net energy delivered by a battery during a discharge test to the total energy required to restore the initial State of Charge by a standard charge."@en ;
+   samm:characteristic :EnergyEfficiency ;
+   samm:exampleValue "100"^^xsd:integer .
+      
+:initialSelfDischargingRate a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL834#001> ;
+   samm:preferredName "initial self discharging rate"@en ;
+   samm:description "Initial self-discharge in % of capacity per unit of time in defined conditions (temperature range etc) as pre-use metric."@en ;
+   samm:characteristic :BatteryDischargingRate ;
+   samm:exampleValue "2"^^xsd:integer .
+
+:BatteryDischargingRate a samm-c:Measurement ;
+   samm:dataType xsd:integer ;
+   samm-c:unit unit:percent .
+
+
+ 
+:initialInternalResistanceOfBatteryCell a samm:Property ;
+  samm:see <urn:irdi:0173-1#02-ABL844#002> ;
+  samm:preferredName "initial internal resistance of battery cell"@en ;
+  samm:description "Internal battery cell and pack resistance / Internal resistance (in Ohm)."@en ;
+  samm:characteristic :InternalResistance ;
+  samm:exampleValue "67"^^xsd:float .
+  
+:initialInternalResistanceOfBatteryPack a samm:Property ;
+  samm:see <urn:irdi:0173-1#02-ABL846#002> ;
+  samm:preferredName "initial internal resistance of battery pack"@en ;
+  samm:description "Initial (Pre-Use) internal resistance on battery pack level."@en ;
+  samm:characteristic :InternalResistance ;
+  samm:exampleValue "23"^^xsd:float .
+  
+:initialInternalResistanceOfBatteryModule a samm:Property ;
+  samm:see <urn:irdi:0173-1#02-ABL832#002> ;
+  samm:preferredName "initial internal resistance of battery module"@en ;
+  samm:see <urn:irdi:0173-1#02-ABL832#001> ;
+  samm:description "Initial internal resistance of battery module. Initial internal resistance means the absolute beginning value of the quotient of the voltage drop between the terminals by the electric current increase in the battery circuit during a current pulse."@en ;
+  samm:characteristic :InternalResistance ;
+  samm:exampleValue "10"^^xsd:float .
+  
+:InternalResistance a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:ohm .
+
+:internalResistanceIncreaseOfBatteryCell a samm:Property ;
+  samm:see <urn:irdi:0173-1#02-ABL831#001> ;
+  samm:preferredName "internal resistance increase of battery cell"@en ;
+  samm:description "Internal resistance increase of battery cell."@en ;
+  samm:characteristic :ResistanceIncrease ;
+  samm:exampleValue "10"^^xsd:integer .
+  
+:internalResistanceIncreaseOfBatteryPack a samm:Property ;
+  samm:see <urn:irdi:0173-1#02-ABL831#001> ;
+  samm:preferredName "internal resistance increase of battery pack"@en ;
+  samm:description "'Internal resistance increase on battery pack level' defined by 'increase of internal resistance in % as calculated from current and initial values (calculated from initial and current internal resistance on battery pack level)."@en ;
+  samm:characteristic :ResistanceIncrease ;
+  samm:exampleValue "10"^^xsd:integer .
+  
+:internalResistanceIncreaseOfBatteryModule a samm:Property ;
+  samm:see <urn:irdi:0173-1#02-ABL831#001> ;
+  samm:preferredName "internal resistance increase of battery module"@en ;
+  samm:description "Internal resistance increase on battery module level' defined by 'internal resistance increase on battery module level, calculated from initial and current internal resistance on battery module level."@en ;
+  samm:characteristic :ResistanceIncrease ;
+  samm:exampleValue "10"^^xsd:integer .
+
+:ResistanceIncrease a samm-c:Measurement ;
+   samm:dataType xsd:integer ;
+   samm-c:unit unit:percent .
+
+
+  
+:nominalVoltage a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL588#001> ;
+   samm:preferredName "voltage - NOM"@en ;
+   samm:description "Nominal voltage the battery is rated for.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.11"@en ;
+   samm:characteristic :Voltage ;
+   samm:exampleValue "4.3"^^xsd:float .
+
+:minimumVoltage a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL587#001> ;
+   samm:preferredName "voltage - MIN"@en ;
+   samm:description "Minimum voltage the battery is rated for.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.9"@en ;
+   samm:characteristic :Voltage ;
+   samm:exampleValue "2.04"^^xsd:float .
+
+:maximumVoltage a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL589#001> ;
+   samm:preferredName "voltage - MAX"@en ;
+   samm:description "Maximum voltage the battery is rated for.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.10"@en ;
+   samm:characteristic :Voltage ;
+   samm:exampleValue "6"^^xsd:float . 
+
+:Voltage a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:volt .
+   
+:EnergyEfficiency a samm-c:Measurement ;
+   samm:dataType xsd:integer ;
+   samm-c:unit unit:percent .
+
+:ratedEnergy a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL829#002> ;
+   samm:preferredName "rated energy"@en ;
+   samm:description "The certified usable battery energy is the usable battery energy according to the procedure in the UN GTR No 22 as determined during the certification of the vehicle.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.5"@en ;
+   samm:characteristic :RatedEnergy ;
+   samm:exampleValue "100"^^xsd:float .
+
+:RatedEnergy a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:kilowattHour .
+   
+:ratedCapacity a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL869#002> ;
+   samm:preferredName "rated capacity"@en ;
+   samm:description "Rated capacity is the total number of ampere-hours (Ah) that can be withdrawn from a fully charged battery under reference conditions (see BattReg Annex IV (1)).\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.2"@en ;
+   samm:characteristic :RatedCapacity ;
+   samm:exampleValue "210"^^xsd:float .
+   
+:RatedCapacity a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:ampereHour .
+   
+:powerFade a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL852#002> ;
+   samm:description "Power fade (in %) means the decrease over time and upon usage in the amount of power that a battery can deliver at the rated voltage. (see BattReg Annex IV (4)).\n\nPower fade should be calculated using original and remaining power capability following the formula below:\nPfade(x) = (1-P(x)) / PBOL\" 100\" %\" \nwhere\nx \tis the aging parameter (e.g. storage time, number of cycles, etc.);\nP(x) \tis the power capability at aging parameter x;\nPBOL \tis the power capability at begin of life.\n\nDIN DKE Spec 99100 chapter reference: 6.7.3.4"@en ;
+   samm:characteristic :PowerFade ;
+   samm:exampleValue "23"^^xsd:float .  
+   
+:PowerFade a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:percent .
+   
+:powerCapabilityRatio a samm:Property ;
+   samm:preferredName "power capability ratio"@en ;
+   samm:description """The nominal battery power is the suitable approximate value of the power capability used to designate or identify the battery, while the battery energy is determined in reference conditions to be defined.
+   
+   DIN DKE Spec 99100 chapter reference: 6.7.3.6
+   """@en ;
+   samm:see <urn:irdi:0173-1#02-ABL857#001> ;
+   samm:characteristic :PowerCapabilityRatio ;
+   samm:exampleValue "0.611"^^xsd:float . 
+   
+:PowerCapabilityRatio a samm-c:Measurement ;
+   samm:description "Ratio between nominal allowed battery power (W) and battery energy (Wh)."@en ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:percent .
+   
+:capacityFade a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL828#002> ;
+   samm:preferredName "capacity fade"@en ;
+   samm:description "The capacity fade is the Decrease over time and upon usage in the amount of charge that a battery can deliver at the rated voltage, with respect to the original rated capacity (see BattReg Annex IV (2)) as declared by the manufacturer.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.4"@en ;
+   samm:characteristic :CapacityFadeValue ;
+   samm:exampleValue "10"^^xsd:float .
+
+:CapacityFadeValue a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:percent .
+   
+:energyRoundTripEfficiencyFade a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL827#002> ;
+   samm:preferredName "energy round trip efficiency fade"@en ;
+   samm:description "Energy round trip efficiency fade is the decrease of round trip energy efficiency as percentage.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.5"@en ;
+   samm:characteristic :energyRoundTripEfficiencyFadeValue ;
+   samm:exampleValue "10"^^xsd:float .
+
+:energyRoundTripEfficiencyFadeValue a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:percent . 
+
+:expectedNumberOfCycles a samm:Property ;
+   samm:preferredName "expected number of cycles"@en ;
+   samm:description "Expected battery lifetime expressed in cycles.\nThe exception for non-cycle applications in Article 10 appears sensible, but is not included in the Annex XIII provision.\nThe data attribute is defined by measurement conditions of the cycle-life test such as the C-Rate (see below) and the depth of discharge in the cycle-life test\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.3"@en ;
+   samm:see <urn:irdi:0173-1#02-ABL830#001> ;
+   samm:characteristic :ExpectedNumberOfCycles ;
+   samm:exampleValue "1000"^^xsd:unsignedInt .
+   
+:ExpectedNumberOfCycles a samm-c:Quantifiable ;
+   samm:dataType xsd:unsignedInt ;
+   samm-c:unit unit:cycle .  
+
+   
+:roundTripEfficiencyAt50PercentCycleLife a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL866#002> ;
+   samm:preferredName "round trip efficiency at 50 percent cycle life"@en ;
+   samm:description "Initial round trip energy efficiency shall be measured at reference conditions that include the specification of 50 % of cycle-life.\n\nTest methods and reference conditions should separately consider non-cycle applications and batteries with very long cycle-life.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.3\n"@en ;
+   samm:characteristic :RoundTripEfficiencyAt50PercentCycleLife ;
+   samm:exampleValue "100"^^xsd:integer .   
+
+:RoundTripEfficiencyAt50PercentCycleLife a samm-c:Measurement ;
+   samm:dataType xsd:integer ;
+   samm-c:unit unit:percent . 
+
+:expectedLifetime a samm:Property ;
+   samm:preferredName "expected lifetime in calendar years"@en ;
+   samm:description "The battery passport must include information about the expected battery lifetime in calendar years.\n\nThe update interval must be upon placement on the market and upon change of the battery status.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.2"@en ;
+   samm:characteristic :ExpectedLifeTime ;
+   samm:exampleValue "15"^^xsd:unsignedInt .   
+   
+:ExpectedLifeTime a samm-c:Quantifiable ;
+   samm:dataType xsd:unsignedInt ;
+   samm-c:unit unit:year .
+   
+:capacityThresholdForExhaustion a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-ABL838#002> ;
+   samm:preferredName "capacity threshold for exhaustion"@en ;
+   samm:description "The percentage of SOCE, above which the battery is still considered operational as EV battery in its current life, as provided by the economic operator.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.9"@en ;
+   samm:characteristic :CapacityThresholdForExhaustion ;
+   samm:exampleValue "23"^^xsd:float . 
+   
+:CapacityThresholdForExhaustion a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:percent .
+
+:cRateLifeCycleTest a samm:Property ;
+   samm:preferredName "C-rate life cycle test"@en ;
+   samm:description "The C-rate should be provided separately for both the charge and discharge of the battery, if applicable.\n\nThe exception for non-cycle applications as mentioned in \"Expected lifetime: Number of charge-discharge cycles\" should apply to this data attribute as well.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.6"@en ;
+   samm:characteristic :CRateLifeCycleTest .
+   
+:CRateLifeCycleTest a samm-c:Quantifiable ;
+   samm:dataType xsd:float ;
+   samm-c:unit :C .
+   
+:atSoC a samm:Property ;
+   samm:preferredName "state of charge (SoC) in percent"@en ;
+   samm:description "Available capacity in a battery expressed as a percentage of remaining capacity.\n\nPower capability shall be measured at reference conditions, which must include measurements at 80% and 20% state of charge for EV and industrial batteries."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL821#001> ;
+   samm:characteristic :AtSoC ;
+   samm:exampleValue "80"^^xsd:float . 
+ 
+
+:AtSoC a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:percent .
+   
+:powerCapabilityAt a samm:Property ;
+   samm:preferredName "power capability"@en ;
+   samm:description "Power capability."@en ;
+   samm:characteristic :PowerCapabilityAtSoc ;
+   samm:exampleValue "500"^^xsd:float . 
+   
+:PowerCapabilityAtSoc a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:watt .

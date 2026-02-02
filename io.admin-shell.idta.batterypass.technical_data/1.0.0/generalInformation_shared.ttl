@@ -1,0 +1,80 @@
+######################################################################
+# Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#
+# elements of namespace: urn:samm:io.BatteryPass:GeneralProductInformation:1.2.0 
+# within https://github.com/batterypass/BatteryPassDataModel
+# with licence CC-BY-4.0
+# and Copyright (c) 2025 Circulor GmbH on behalf of the Battery Pass Consortium
+# are used but enhanced, adapted or changed to be compliant with DIN DKE SPEC 99100 
+# and to align with existing IDTA sub model templates
+#
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> .
+@prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+
+:GeneralInformationEntity a samm:Entity ;
+   samm:see <https://admin-shell.io/ZVEI/TechnicalData/GeneralInformation/1/1> ;
+   samm:properties ( 
+   [ samm:property tech:manufacturerName; samm:payloadName "ManufacturerName" ] 
+   [ samm:property tech:companyLogo; samm:optional true; samm:payloadName "CompanyLogo" ]
+   [ samm:property tech:manufacturerProductDesignation; samm:payloadName "ManufacturerProductDesignation" ] 
+   [ samm:property tech:manufacturerArticleNumber; samm:payloadName "ManufacturerArticleNumber" ] 
+   [ samm:property tech:manufacturerOrderCode; samm:payloadName "ManufacturerOrderCode" ] 
+   [ samm:property :manufacturerIdentifier; samm:payloadName "ManufacturerIdentifier" ] 
+   [ samm:property :warrantyPeriod; samm:payloadName "WarrantyPeriod" ] 
+   [ samm:property :batteryCategory; samm:payloadName "BatteryCategory" ]  
+   [ samm:property :batteryMass; samm:payloadName "BatteryMass" ]   
+   [ samm:property tech:productImages; samm:optional true; samm:payloadName "ProductImages" ]   
+   ) .
+   
+:manufacturerIdentifier a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-AAO677#004> ;
+   samm:preferredName "identifier of the manufacturer"@en ;
+   samm:description "A battery passport must include information identifying the manufacturer.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.4"@en ;
+   samm:characteristic samm-c:Text .
+
+
+:warrantyPeriod a samm:Property ;
+   samm:preferredName "warranty period"@en ;
+   samm:description "The battery passport must include information about the period for which the commercial warranty applies.\n\nDIN DKE Spec chapter reference: 6.1.3.4"@en ;
+   samm:see <urn:irdi:0173-1#02-AAX540#004> ;
+   samm:characteristic :WarrantyPeriod ;
+   samm:exampleValue "2031-10"^^xsd:gYearMonth .
+   
+:WarrantyPeriod a samm-c:Measurement ;
+   samm:dataType xsd:gYearMonth;
+   samm-c:unit unit:month .
+   
+:batteryCategory a samm:Property ;
+   samm:preferredName "BatteryCategory"@en ;
+   samm:description "Categories relevant for the battery passport: LMT battery, electric vehicle battery, stationary or other industrial battery >2kWh.\n\nDIN DKE Spec chapter reference: 6.1.3.5"@en ;
+   samm:see <urn:irdi:0173-1#02-AAR724#007> ;
+   samm:characteristic :BatteryCategoryEnum ;
+   samm:exampleValue "ev"^^xsd:string .
+   
+:batteryMass a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-AAF040#010> ;
+   samm:preferredName "battery mass"@en ;
+   samm:description "Mass of the entire battery in kilograms. Voluntary: if the battery is defined on pack or module level: also weight of the modules and/or cells.\n\nDIN DKE Spec chapter reference: 6.1.3.6"@en ;
+   samm:characteristic :BatteryMassMeasurable ;
+   samm:exampleValue "1007"^^xsd:float .
+   
+:BatteryMassMeasurable a samm-c:Measurement ;
+   samm:description "Weight of the battery\nEUBR: Annex XIII (1a) - Annex VI Part A (5)"@en ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:kilogram .

@@ -1,0 +1,49 @@
+{
+  "DismantlingAndRemovalInformation" : [ "eOMtThyhVNLWUZNRcBaQK" ],
+  "SparePartSources" : [ {
+    "Components" : [ {
+      "PartName" : "Cell",
+      "PartNumber" : "eOMtThyhVNLWUZNRcBaQKxI"
+    } ],
+    "AddressOfSupplier" : {
+      "PostalCode" : [ {
+        "de" : "DE-10719"
+      } ],
+      "Street" : [ {
+        "de" : "Musterstrasse 1"
+      } ],
+      "NationalCode" : [ {
+        "en" : "DE"
+      } ]
+    },
+    "EmailAddressOfSupplier" : {
+      "EmailAddress" : "email@muster-ag.de",
+      "PublicKey" : [ {
+        "en" : "0x07"
+      } ],
+      "TypeOfEmailAddress" : "office",
+      "TypeOfPublicKey" : [ {
+        "en" : "RSA"
+      } ]
+    },
+    "NameOfSupplier" : [ {
+      "en" : "ABC Company"
+    } ],
+    "SupplierWebAddress" : "https://example.com/information/product/1224/contact"
+  } ],
+  "RecycledContentInformation" : [ {
+    "PreConsumerShare" : 59.636215,
+    "RecycledMaterial" : "Cobalt",
+    "PostConsumerShare" : 9.108972
+  } ],
+  "RenewableContent" : -2.9217805E38,
+  "SafetyMeasures" : {
+    "ExtinguishingAgents" : [ "yedUsFwdkelQbxeTeQOvaScfqIOOmaa" ],
+    "SafetyInstructions" : [ "eOMtThyhVNLWUZNRcBaQK" ]
+  },
+  "EndOfLifeInformation" : {
+    "WastePrevention" : [ "eOMtThyhVNLWUZNRcBaQK" ],
+    "SeparateCollection" : [ "eOMtThyhVNLWUZNRcBaQK" ],
+    "InformationOnCollection" : [ "eOMtThyhVNLWUZNRcBaQK" ]
+  }
+}

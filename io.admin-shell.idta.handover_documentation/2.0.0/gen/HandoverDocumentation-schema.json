@@ -1,0 +1,486 @@
+{
+  "$schema" : "http://json-schema.org/draft-04/schema",
+  "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#HandoverDocumentation",
+  "description" : "Handover Documentation defines a set meta data for the handover of documentation from the manufacturer to the operator for industrial equipment.",
+  "type" : "object",
+  "components" : {
+    "schemas" : {
+      "Text" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Text",
+        "description" : "Describes a Property which contains plain text. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+      },
+      "DocumentIdentifier" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#DocumentIdentifier",
+        "description" : "Alphanumeric character sequence uniquely identifying a document."
+      },
+      "Boolean" : {
+        "type" : "boolean",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Boolean",
+        "description" : "Represents a boolean value (i.e. a \"flag\")."
+      },
+      "DocumentId" : {
+        "description" : "Specification of a document ID.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#DocumentId",
+        "type" : "object",
+        "properties" : {
+          "DocumentDomainId" : {
+            "description" : "Identification of the domain in which the given DocumentId is unique. The domain ID can e.g., be the name or acronym of the providing organisation.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentDomainId",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "DocumentIdentifier" : {
+            "description" : "Alphanumeric character sequence uniquely identifying a document.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentIdentifier",
+            "$ref" : "#/components/schemas/DocumentIdentifier"
+          },
+          "DocumentIsPrimary" : {
+            "description" : "Flag indicating that a DocumentId within a collection of at least two DocumentId`s is the 'primary' identifier for the document. This is the preferred ID of the document (commonly from the point of view of the owner of the asset).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentIsPrimary",
+            "$ref" : "#/components/schemas/Boolean"
+          }
+        },
+        "required" : [ "DocumentDomainId", "DocumentIdentifier" ]
+      },
+      "DocumentIdSet" : {
+        "description" : "Set of the IDs of the documents.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#DocumentIdSet",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/DocumentId"
+        },
+        "uniqueItems" : true
+      },
+      "MultiLanguageTexts" : {
+        "description" : "A set of language-text items.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#MultiLanguageTexts",
+        "type" : "array",
+        "items" : {
+          "type" : "object",
+          "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#MultiLanguageText",
+          "description" : "Describes a Property which contains plain text in multiple languages. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+        },
+        "uniqueItems" : true
+      },
+      "DocumentClassification" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#DocumentClassification",
+        "type" : "object",
+        "properties" : {
+          "ClassId" : {
+            "description" : "Unique ID of the document class within a classficationsystem.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#classId",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "ClassName" : {
+            "description" : "Type of document.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#className",
+            "$ref" : "#/components/schemas/MultiLanguageTexts"
+          },
+          "ClassificationSystem" : {
+            "description" : "Classification of a document according to its purpose or the information it contains.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#classificationSystem",
+            "$ref" : "#/components/schemas/Text"
+          }
+        },
+        "required" : [ "ClassId", "ClassName", "ClassificationSystem" ]
+      },
+      "DocumentClassificationSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#DocumentClassificationSet",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/DocumentClassification"
+        },
+        "uniqueItems" : true
+      },
+      "LanguageSetTrait" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#LanguageSetTrait",
+        "type" : "array",
+        "items" : {
+          "type" : "string",
+          "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Locale",
+          "description" : "Describes a Property containing a locale according to IETF BCP 47, for example \"de-DE\"."
+        },
+        "uniqueItems" : true,
+        "minItems" : 1
+      },
+      "Timestamp" : {
+        "type" : "string",
+        "pattern" : "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Timestamp",
+        "description" : "Describes a Property which contains the date and time with an optional timezone."
+      },
+      "ReferenceKeyEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ReferenceKeyEnum",
+        "enum" : [ "AnnotatedRelationshipElement", "AssetAdministrationShell", "BasicEventElement", "Blob", "Capability", "ConceptDescription", "DataElement", "Entity", "EventElement", "File", "FragmentReference", "Identifiable", "MultiLanguageProperty", "Operation", "Property", "Range", "Referable", "ReferenceElement", "RelationshipElement", "Submodel", "SubmodelElement", "SubmodelElementCollection", "SubmodelElementList" ]
+      },
+      "KeyEntity" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyEntity",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#key",
+            "$ref" : "#/components/schemas/ReferenceKeyEnum"
+          },
+          "value" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keyValue",
+            "$ref" : "#/components/schemas/Text"
+          }
+        },
+        "required" : [ "key", "value" ]
+      },
+      "SetOfKeys" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SetOfKeys",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/KeyEntity"
+        },
+        "uniqueItems" : true
+      },
+      "KeyReferenceTypesEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyReferenceTypesEnum",
+        "enum" : [ "ModelReference", "ExternalReference" ]
+      },
+      "ReferenceEntity" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ReferenceEntity",
+        "type" : "object",
+        "properties" : {
+          "keys" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#keys",
+            "$ref" : "#/components/schemas/SetOfKeys"
+          },
+          "type" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#type",
+            "$ref" : "#/components/schemas/KeyReferenceTypesEnum"
+          }
+        },
+        "required" : [ "keys", "type" ]
+      },
+      "ReferenceSetTrait" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#ReferenceSetTrait",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/ReferenceEntity"
+        },
+        "uniqueItems" : true,
+        "minItems" : 1
+      },
+      "ReferenceSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#ReferenceSet",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/ReferenceEntity"
+        },
+        "uniqueItems" : true
+      },
+      "ResourcePath" : {
+        "type" : "string",
+        "format" : "uri",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#ResourcePath",
+        "description" : "The path of a resource."
+      },
+      "MimeType" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#MimeType",
+        "description" : "A MIME type as defined in RFC 2046, for example \"application/pdf\"."
+      },
+      "FileSetTrait" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#FileSetTrait",
+        "type" : "array",
+        "items" : {
+          "description" : "A file is a data element that represents an address to a file (a locator). The value is a URI that can represent an absolute or relative path.",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#FileWithContentType",
+          "type" : "object",
+          "properties" : {
+            "value" : {
+              "description" : "Path and name of the file (with file extension).\n\nThe path can be absolute or relative.",
+              "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#resourceValue",
+              "$ref" : "#/components/schemas/ResourcePath"
+            },
+            "contentType" : {
+              "description" : "Content type of the content of the file or blob.",
+              "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#contentType",
+              "$ref" : "#/components/schemas/MimeType"
+            }
+          },
+          "required" : [ "value", "contentType" ]
+        },
+        "uniqueItems" : true,
+        "minItems" : 1
+      },
+      "FileWithContentType" : {
+        "description" : "A file is a data element that represents an address to a file (a locator). The value is a URI that can represent an absolute or relative path.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#FileWithContentType",
+        "type" : "object",
+        "properties" : {
+          "value" : {
+            "description" : "Path and name of the file (with file extension).\n\nThe path can be absolute or relative.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#resourceValue",
+            "$ref" : "#/components/schemas/ResourcePath"
+          },
+          "contentType" : {
+            "description" : "Content type of the content of the file or blob.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#contentType",
+            "$ref" : "#/components/schemas/MimeType"
+          }
+        },
+        "required" : [ "value", "contentType" ]
+      },
+      "DocumentVersion" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#DocumentVersion",
+        "type" : "object",
+        "properties" : {
+          "Language" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#languages",
+            "$ref" : "#/components/schemas/LanguageSetTrait"
+          },
+          "Version" : {
+            "description" : "Identifier of the version of this document.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#version",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "Title" : {
+            "description" : "Title of this document.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#title",
+            "$ref" : "#/components/schemas/MultiLanguageTexts"
+          },
+          "Subtitle" : {
+            "description" : "Denotes the focus of the document and has a referential or communicative function, which is to refer to the content, subject matter or theme of the document\nConstraint: for each language-dependent Title, a Summary and at least one KeyWord shall exist for the given language.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#subtitle",
+            "$ref" : "#/components/schemas/MultiLanguageTexts"
+          },
+          "Description" : {
+            "description" : "Plain text characterizing the content of the document.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#description",
+            "$ref" : "#/components/schemas/MultiLanguageTexts"
+          },
+          "KeyWords" : {
+            "description" : "Keywords that describe this document.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#keywords",
+            "$ref" : "#/components/schemas/MultiLanguageTexts"
+          },
+          "StatusSetDate" : {
+            "description" : "Date when the document status was set.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#statusSetDate",
+            "$ref" : "#/components/schemas/Timestamp"
+          },
+          "StatusValue" : {
+            "description" : "Each document version represents a point in time in the document life cycle. This status value refers to the milestones in the document life cycle. The following two values should be used for the application of this guideline: InReview (under review), Released (released).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#statusValue",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "OrganizationShortName" : {
+            "description" : "Organization name in short form.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#organizationName",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "OrganizationOfficialName" : {
+            "description" : "Official name of the organization.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#organizationOfficialName",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "RefersToEntities" : {
+            "description" : "Forms a generic refers to-relationship to another document or document version. They have a loose relationship\n\nConstraint: reference targets a 'Document' or a 'DocumentVersion'.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#refersToEntities",
+            "$ref" : "#/components/schemas/ReferenceSetTrait"
+          },
+          "BasedOnReferences" : {
+            "description" : "Forms a based on-relationship to another document or document version. Typically states, that the content of the document bases on another document (e.g. specification requirements). Both have a strong relationship\n\nConstraint: reference targets a  'Document' or a 'DocumentVersion'.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#basedOnReferences",
+            "$ref" : "#/components/schemas/ReferenceSetTrait"
+          },
+          "TranslationOfEntities" : {
+            "description" : "Forms a translation of-relationship to another document or document version. Both have a strong relationship\n\nConstraint: the (language-independent) content must be identical in both Documents or DocumentVersions.\n\nConstraint: reference targets a 'Document' or a 'DocumentVersion'.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#translationOfEntities",
+            "$ref" : "#/components/schemas/ReferenceSet"
+          },
+          "DigitalFiles" : {
+            "description" : "MIME-Type, file name and file contents\n\nConstraint: at least one PDF/A file type shall be provided.\nNote: each DigitalFile represents the same content or Document version, but can be provided in different technical formats (PDF, PDFA, html, etc.) or by a link.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#digitalFiles",
+            "$ref" : "#/components/schemas/FileSetTrait"
+          },
+          "PreviewFile" : {
+            "description" : "Provides a preview image of the Document Version, e.g. first page, in a commonly used image format and low resolution.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#previewFile",
+            "$ref" : "#/components/schemas/FileWithContentType"
+          }
+        },
+        "required" : [ "Language", "Version", "Title", "Description", "KeyWords", "StatusSetDate", "StatusValue", "OrganizationShortName", "OrganizationOfficialName", "DigitalFiles" ]
+      },
+      "DocumentVersions" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#DocumentVersions",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/DocumentVersion"
+        },
+        "uniqueItems" : true
+      },
+      "Document" : {
+        "description" : "A single handover document.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#Document",
+        "type" : "object",
+        "properties" : {
+          "DocumentIds" : {
+            "description" : "Set of document identifiers for the Document. One ID in this collection should be used as a preferred ID (see isPrimary).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentIds",
+            "$ref" : "#/components/schemas/DocumentIdSet"
+          },
+          "DocumentClassifications" : {
+            "description" : "Set of information for describing the classification of the Document according to ClassificationSystems.\nConstraint: at least one classification according to VDI 2770 shall be provided.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentClassifications",
+            "$ref" : "#/components/schemas/DocumentClassificationSet"
+          },
+          "DocumentVersions" : {
+            "description" : "Information elements of individual VDI 2770 DocumentVersion entities.\nNote: at the time of handover, this collection shall include at least one DocumentVersion.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentVersions",
+            "$ref" : "#/components/schemas/DocumentVersions"
+          },
+          "DocumentedEntities" : {
+            "description" : "Documented Entities.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentedEntities",
+            "$ref" : "#/components/schemas/ReferenceSet"
+          }
+        },
+        "required" : [ "DocumentIds", "DocumentClassifications", "DocumentVersions" ]
+      },
+      "DocumentSetTrait" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#DocumentSetTrait",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Document"
+        },
+        "uniqueItems" : true,
+        "minItems" : 1
+      },
+      "ExternalReferenceKeyEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternalReferenceKeyEnum",
+        "enum" : [ "FragmentReference", "GlobalReference" ]
+      },
+      "ExternalReferenceKeyEntity" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternalReferenceKeyEntity",
+        "type" : "object",
+        "properties" : {
+          "key" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternalReferenceKey",
+            "$ref" : "#/components/schemas/ExternalReferenceKeyEnum"
+          },
+          "value" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternalReferenceKeyValue",
+            "$ref" : "#/components/schemas/Text"
+          }
+        },
+        "required" : [ "key", "value" ]
+      },
+      "ExternalReferenceSetOfKeys" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternalReferenceSetOfKeys",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/ExternalReferenceKeyEntity"
+        },
+        "uniqueItems" : true
+      },
+      "KeyExternalReferenceTypesEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeyExternalReferenceTypesEnum",
+        "enum" : [ "ExternalReference" ]
+      },
+      "ExternalReferenceType" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExternalReferenceType",
+        "type" : "object",
+        "properties" : {
+          "keys" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#KeysExternalReference",
+            "$ref" : "#/components/schemas/ExternalReferenceSetOfKeys"
+          },
+          "type" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#TypeExternalReference",
+            "$ref" : "#/components/schemas/KeyExternalReferenceTypesEnum"
+          }
+        },
+        "required" : [ "keys", "type" ]
+      },
+      "SpecificAssetId" : {
+        "description" : "A specific asset ID describes a generic supplementary identifying attribute of the asset. The specific asset ID is not necessarily globally unique.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SpecificAssetId",
+        "type" : "object",
+        "properties" : {
+          "externalSubjectId" : {
+            "description" : "The unique ID of the (external) subject the specific asset ID value belongs to or has meaning to.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#externalSubjectId",
+            "$ref" : "#/components/schemas/ExternalReferenceType"
+          },
+          "value" : {
+            "description" : "The value of the specific asset identifier with the corresponding name.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#specificAssetIdValue",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "name" : {
+            "description" : "Name of the asset identifier.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#specificAssetIdName",
+            "$ref" : "#/components/schemas/Text"
+          }
+        },
+        "required" : [ "value", "name" ]
+      },
+      "SpecificAssetIdSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#SpecificAssetIdSet",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/SpecificAssetId"
+        },
+        "uniqueItems" : true
+      },
+      "EntityType" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#EntityType",
+        "enum" : [ "SelfManagedEntity", "CoManagedEntity" ]
+      },
+      "AasEntityType" : {
+        "description" : "A predefined submodel element subtype of the Asset Administration Shell used to model entities without additional statements.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#AasEntityType",
+        "type" : "object",
+        "properties" : {
+          "specificAssetIds" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#specificAssetIds",
+            "$ref" : "#/components/schemas/SpecificAssetIdSet"
+          },
+          "globalAssetId" : {
+            "description" : "Globally unique identifier of an asset.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#globalAssetId",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "entityType" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#entityType",
+            "$ref" : "#/components/schemas/EntityType"
+          }
+        }
+      },
+      "EntitySetTrait" : {
+        "description" : "Set of entities representing an asset.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#EntitySetTrait",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/AasEntityType"
+        },
+        "uniqueItems" : true,
+        "minItems" : 1
+      }
+    }
+  },
+  "properties" : {
+    "Documents" : {
+      "description" : "A set of relevant documents to hand over to customers for documentation purposes.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documents",
+      "$ref" : "#/components/schemas/DocumentSetTrait"
+    },
+    "Entities" : {
+      "description" : "States that the described Entity is an important entity for documentation of the superordinate Asset of the Asset Administration Shell.\nNote: typically, such Entities are well-identified sub-parts of the Asset, such as supplier parts delivered to the manufacturer of the Asset.\nNote: these Entities are the target of the 'DocumentedEntity'-ReferenceElements of the particular Documents contained in this Submodel. This mechanism substitutes the ObjectId-provision of VDI 2770 (see section 2.2).\nNote: if the described Entity has an own Asset Administration Shell, the SelfManaged-flag and AssetId-reference of the Entity shall be set accordingly.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#entities",
+      "$ref" : "#/components/schemas/EntitySetTrait"
+    }
+  },
+  "required" : [ "Documents" ]
+}

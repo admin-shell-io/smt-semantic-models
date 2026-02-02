@@ -1,0 +1,555 @@
+{
+  "$schema" : "http://json-schema.org/draft-04/schema",
+  "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#ProductCondition",
+  "description" : "Covers all battery lifetime relevant properties.",
+  "type" : "object",
+  "components" : {
+    "schemas" : {
+      "EnergyThroughputValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#EnergyThroughputValue"
+      },
+      "Timestamp" : {
+        "type" : "string",
+        "pattern" : "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Timestamp",
+        "description" : "Describes a Property which contains the date and time with an optional timezone."
+      },
+      "EnergyThroughputEntity" : {
+        "description" : "Energy throughput, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#EnergyThroughputEntity",
+        "type" : "object",
+        "properties" : {
+          "EnergyThroughputValue" : {
+            "description" : "Overall sum of the energy throughput over the battery lifetime (data attribute should be reported as measured for further potential processing. In addition, the normalisation by usable battery energy could add a further useful value that ensures comparability among battery sizes).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#energyThroughputValue",
+            "$ref" : "#/components/schemas/EnergyThroughputValue"
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#lastUpdate",
+            "$ref" : "#/components/schemas/Timestamp"
+          }
+        },
+        "required" : [ "EnergyThroughputValue", "LastUpdate" ]
+      },
+      "EnergyThroughput" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#EnergyThroughput",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/EnergyThroughputEntity"
+        } ]
+      },
+      "CapacityThroughputValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#CapacityThroughputValue"
+      },
+      "CapacityThroughputEntity" : {
+        "description" : "Capacity throughput, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#CapacityThroughputEntity",
+        "type" : "object",
+        "properties" : {
+          "CapacityThroughputValue" : {
+            "description" : "Overall sum of the capacity throughput over the battery lifetime (data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity could add a further useful value that ensures comparability among battery sizes).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#capacityThroughputValue",
+            "$ref" : "#/components/schemas/CapacityThroughputValue"
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#lastUpdate",
+            "$ref" : "#/components/schemas/Timestamp"
+          }
+        },
+        "required" : [ "CapacityThroughputValue", "LastUpdate" ]
+      },
+      "CapacityThroughput" : {
+        "description" : "Capacity throughput.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#CapacityThroughput",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/CapacityThroughputEntity"
+        } ]
+      },
+      "NumberOfFullCyclesValue" : {
+        "type" : "number",
+        "minimum" : 0,
+        "maximum" : 4294967295,
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#NumberOfFullCyclesValue"
+      },
+      "NumberOfFullCyclesEntity" : {
+        "description" : "Number of full cycles, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#NumberOfFullCyclesEntity",
+        "type" : "object",
+        "properties" : {
+          "NumberOfFullCyclesValue" : {
+            "description" : "Total count of times a battery has been fully charged from empty to full capacity and then fully discharged, used as an indicator of the battery's usage and lifespan.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#numberOfFullCyclesValue",
+            "$ref" : "#/components/schemas/NumberOfFullCyclesValue"
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#lastUpdate",
+            "$ref" : "#/components/schemas/Timestamp"
+          }
+        },
+        "required" : [ "NumberOfFullCyclesValue", "LastUpdate" ]
+      },
+      "NumberOfFullCycles" : {
+        "description" : "- Information and data as a result of its use, including the number of charging and discharging cycles.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#NumberOfFullCycles",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/NumberOfFullCyclesEntity"
+        } ]
+      },
+      "StateOfCertifiedEnergyValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#StateOfCertifiedEnergyValue"
+      },
+      "StateOfCertifiedEnergyEntity" : {
+        "description" : "State of certified energy, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#StateOfCertifiedEnergyEntity",
+        "type" : "object",
+        "properties" : {
+          "StateOfCertifiedEnergyValue" : {
+            "description" : "Measured or on-board UBE performance at a specific point in its lifetime, expressed as a percentage of the certified usable battery energy.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#stateOfCertifiedEnergyValue",
+            "$ref" : "#/components/schemas/StateOfCertifiedEnergyValue"
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#lastUpdate",
+            "$ref" : "#/components/schemas/Timestamp"
+          }
+        },
+        "required" : [ "StateOfCertifiedEnergyValue", "LastUpdate" ]
+      },
+      "StateOfCertifiedEnergy" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#StateOfCertifiedEnergy",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/StateOfCertifiedEnergyEntity"
+        } ]
+      },
+      "UBERemainingValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#UBERemainingValue"
+      },
+      "RemainingEnergyEntity" : {
+        "description" : "Remaining energy, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#RemainingEnergyEntity",
+        "type" : "object",
+        "properties" : {
+          "RemainingEnergyValue" : {
+            "description" : "UBE determined at the present point in the lifetime of the vehicle by the test procedure used for certification.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#remainingEnergyValue",
+            "$ref" : "#/components/schemas/UBERemainingValue"
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#lastUpdate",
+            "$ref" : "#/components/schemas/Timestamp"
+          }
+        },
+        "required" : [ "RemainingEnergyValue", "LastUpdate" ]
+      },
+      "RemainingEnergy" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#RemainingEnergy",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/RemainingEnergyEntity"
+        } ]
+      },
+      "RemainingCapacityValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#RemainingCapacityValue"
+      },
+      "RemainingCapacityEntity" : {
+        "description" : "Remaining capacity, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#RemainingCapacityEntity",
+        "type" : "object",
+        "properties" : {
+          "RemainingCapacityValue" : {
+            "description" : "In-use data attribute on capacity, corresponding with the definition of rated capacity.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#remainingCapacityValue",
+            "$ref" : "#/components/schemas/RemainingCapacityValue"
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#lastUpdate",
+            "$ref" : "#/components/schemas/Timestamp"
+          }
+        },
+        "required" : [ "RemainingCapacityValue", "LastUpdate" ]
+      },
+      "RemainingCapacity" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#RemainingCapacity",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/RemainingCapacityEntity"
+        } ]
+      },
+      "Text" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Text",
+        "description" : "Describes a Property which contains plain text. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+      },
+      "NegativeEvent" : {
+        "description" : "Negative event, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#NegativeEvent",
+        "type" : "object",
+        "properties" : {
+          "NegativeEventValue" : {
+            "description" : "Negative event, such as an accident. No further definition provided by regulation.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#negativeEventValue",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#lastUpdate",
+            "$ref" : "#/components/schemas/Timestamp"
+          }
+        },
+        "required" : [ "NegativeEventValue", "LastUpdate" ]
+      },
+      "NegativeEvents" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#NegativeEvents",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/NegativeEvent"
+        }
+      },
+      "DocumentIdentifierSet" : {
+        "description" : "Each document is uniquely discoverable via its identifier. If more information is needed, please refer to the 'Handover Documentation'.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#DocumentIdentifierSet",
+        "type" : "array",
+        "items" : {
+          "type" : "string",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#DocumentIdentifierSetTrait",
+          "description" : "Alphanumeric character sequence uniquely identifying a document.",
+          "minLength" : 1
+        },
+        "uniqueItems" : true
+      },
+      "TimeExtremeHighTemp" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#TimeExtremeHighTemp"
+      },
+      "TimeExtremeLowTemp" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#TimeExtremeLowTemp"
+      },
+      "TimeExtremeHighTempCharging" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#TimeExtremeHighTempCharging"
+      },
+      "TimeExtremeLowTempCharging" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#TimeExtremeLowTempCharging"
+      },
+      "TemperatureConditionsEntity" : {
+        "description" : "Temperature conditions, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#TemperatureConditionsEntity",
+        "type" : "object",
+        "properties" : {
+          "TimeExtremeHighTemp" : {
+            "description" : "Cumulated time spent above the given upper boundary of temperature.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#timeExtremeHighTemp",
+            "$ref" : "#/components/schemas/TimeExtremeHighTemp"
+          },
+          "TimeExtremeLowTemp" : {
+            "description" : "Cumulated time spent below the given lower boundary of temperature.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#timeExtremeLowTemp",
+            "$ref" : "#/components/schemas/TimeExtremeLowTemp"
+          },
+          "TimeExtremeHighTempCharging " : {
+            "description" : "Cumulated time spent above the given upper boundary of temperature during Charging.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#timeExtremeHighTempCharging",
+            "$ref" : "#/components/schemas/TimeExtremeHighTempCharging"
+          },
+          "TimeExtremeLowTempCharging" : {
+            "description" : "Cumulated time spent below the given lower boundary of temperature during charging.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#timeExtremeLowTempCharging",
+            "$ref" : "#/components/schemas/TimeExtremeLowTempCharging"
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#lastUpdate",
+            "$ref" : "#/components/schemas/Timestamp"
+          }
+        },
+        "required" : [ "LastUpdate" ]
+      },
+      "TemperatureInformation" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#TemperatureInformation",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/TemperatureConditionsEntity"
+        } ]
+      },
+      "AtSoC" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#AtSoC"
+      },
+      "PowerCapabilityAtSoc" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#PowerCapabilityAtSoc"
+      },
+      "PowerCapabilityAtEntity" : {
+        "description" : "Power capability at.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#PowerCapabilityAtEntity",
+        "type" : "object",
+        "properties" : {
+          "AtSoC" : {
+            "description" : "Available capacity in a battery expressed as a percentage of remaining capacity.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#atSoC",
+            "$ref" : "#/components/schemas/AtSoC"
+          },
+          "PowerCapabilityAt " : {
+            "description" : "Defined by 'pre-use power capability (definition of power capability as given in Battery Regulation.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#powerCapabilityAt",
+            "$ref" : "#/components/schemas/PowerCapabilityAtSoc"
+          }
+        },
+        "required" : [ "AtSoC", "PowerCapabilityAt " ]
+      },
+      "RemainingPowerCapabilityDynamicAt" : {
+        "description" : "Remaining power capability dynamic at.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#RemainingPowerCapabilityDynamicAt",
+        "type" : "object",
+        "properties" : {
+          "RPCLastUpdated" : {
+            "description" : "RPC last updated.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#rPCLastUpdated",
+            "$ref" : "#/components/schemas/Timestamp"
+          }
+        },
+        "required" : [ "RPCLastUpdated" ],
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/PowerCapabilityAtEntity"
+        } ]
+      },
+      "RemainingPowerCapabilityValue" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#RemainingPowerCapabilityValue",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/RemainingPowerCapabilityDynamicAt"
+        } ]
+      },
+      "RemainingPowerCapabilityEntity" : {
+        "description" : "Remaining power capability, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#RemainingPowerCapabilityEntity",
+        "type" : "object",
+        "properties" : {
+          "RemainingPowerCapabilityValue" : {
+            "description" : "Remaining power capability value.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#remainingPowerCapabilityValue",
+            "$ref" : "#/components/schemas/RemainingPowerCapabilityValue"
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#lastUpdate",
+            "$ref" : "#/components/schemas/Timestamp"
+          }
+        },
+        "required" : [ "RemainingPowerCapabilityValue", "LastUpdate" ]
+      },
+      "RemainingPowerCapability" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#RemainingPowerCapability",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/RemainingPowerCapabilityEntity"
+        } ]
+      },
+      "EvolutionOfSelfDischargeEntityValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#EvolutionOfSelfDischargeEntityValue"
+      },
+      "EvolutionOfSelfDischargeEntity" : {
+        "description" : "Evolution of self discharge, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#EvolutionOfSelfDischargeEntity",
+        "type" : "object",
+        "properties" : {
+          "EvolutionOfSelfDischargeValue" : {
+            "description" : "Total count of times a battery has been fully charged from empty to full capacity and then fully discharged, used as an indicator of the battery's usage and lifespan.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#evolutionOfSelfDischargeValue",
+            "$ref" : "#/components/schemas/EvolutionOfSelfDischargeEntityValue"
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#lastUpdate",
+            "$ref" : "#/components/schemas/Timestamp"
+          }
+        },
+        "required" : [ "EvolutionOfSelfDischargeValue", "LastUpdate" ]
+      },
+      "EvolutionOfSelfDischarge" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#EvolutionOfSelfDischarge",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/EvolutionOfSelfDischargeEntity"
+        } ]
+      },
+      "CurrentSelfDischargingRateValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#CurrentSelfDischargingRateValue"
+      },
+      "CurrentSelfDischargingRateEntity" : {
+        "description" : "Current self discharging rate.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#CurrentSelfDischargingRateEntity",
+        "type" : "object",
+        "properties" : {
+          "CurrentSelfDischargingRateValue" : {
+            "description" : "Current self-discharge in % of capacity per unit of time in defined conditions (temperature range) during the use phase.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#currentSelfDischargingRateValue",
+            "$ref" : "#/components/schemas/CurrentSelfDischargingRateValue"
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#lastUpdate",
+            "$ref" : "#/components/schemas/Timestamp"
+          }
+        },
+        "required" : [ "CurrentSelfDischargingRateValue", "LastUpdate" ]
+      },
+      "CurrentSelfDischargingRate" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#CurrentSelfDischargingRate",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/CurrentSelfDischargingRateEntity"
+        } ]
+      },
+      "RemainingRoundTripEnergyEfficiencyValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#RemainingRoundTripEnergyEfficiencyValue"
+      },
+      "RemainingRoundTripEnergyEfficiencyEntity" : {
+        "description" : "Remaining round trip energy efficiency.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#RemainingRoundTripEnergyEfficiencyEntity",
+        "type" : "object",
+        "properties" : {
+          "RemainingRoundTripEnergyEfficiencyValue " : {
+            "description" : "Percentage of energy that can be recovered and used after a full charge and discharge cycle, reflecting the battery's ability to retain and return energy efficiently over time.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#remainingRoundTripEnergyEfficiencyValue",
+            "$ref" : "#/components/schemas/RemainingRoundTripEnergyEfficiencyValue"
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#lastUpdate",
+            "$ref" : "#/components/schemas/Timestamp"
+          }
+        },
+        "required" : [ "RemainingRoundTripEnergyEfficiencyValue ", "LastUpdate" ]
+      },
+      "RemainingRoundTripEnergyEfficiency" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#RemainingRoundTripEnergyEfficiency",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/RemainingRoundTripEnergyEfficiencyEntity"
+        } ]
+      },
+      "StateOfChargeValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#StateOfChargeValue"
+      },
+      "StateOfChargeEntity" : {
+        "description" : "State of charge.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#StateOfChargeEntity",
+        "type" : "object",
+        "properties" : {
+          "StateOfChargeValue" : {
+            "description" : "Available capacity in a battery expressed as a percentage of remaining capacity.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#stateOfChargeValue",
+            "$ref" : "#/components/schemas/StateOfChargeValue"
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#lastUpdate",
+            "$ref" : "#/components/schemas/Timestamp"
+          }
+        },
+        "required" : [ "StateOfChargeValue", "LastUpdate" ]
+      },
+      "StateOfCharge" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#StateOfCharge",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/StateOfChargeEntity"
+        } ]
+      }
+    }
+  },
+  "properties" : {
+    "EnergyThroughput" : {
+      "description" : "The data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.7",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#energyThroughput",
+      "$ref" : "#/components/schemas/EnergyThroughput"
+    },
+    "CapacityThroughput" : {
+      "description" : "The data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.8",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#capacityThroughput",
+      "$ref" : "#/components/schemas/CapacityThroughput"
+    },
+    "NumberOfFullCycles" : {
+      "description" : "Number of (full) charging and discharging cycles.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.4",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#numberOfFullCycles",
+      "$ref" : "#/components/schemas/NumberOfFullCycles"
+    },
+    "StateOfCertifiedEnergy" : {
+      "description" : "Definition based on UNECE GTR 22: The measured or on-board UBE performance at a specific point in its lifetime, expressed as a percentage of the certified usable battery energy.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.7",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#stateOfCertifiedEnergy",
+      "$ref" : "#/components/schemas/StateOfCertifiedEnergy"
+    },
+    "RemainingEnergy" : {
+      "description" : "Definition from UNECE GTR 22, applicable only to EVs.\nThe energy supplied by the battery from the beginning of the test procedure used for certification until the applicable break-off criterion of the test procedure used for certification is reached.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.6",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#remainingEnergy",
+      "$ref" : "#/components/schemas/RemainingEnergy"
+    },
+    "RemainingCapacity" : {
+      "description" : "The in-use data attribute on capacity, corresponding with the definition of rated capacity.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.3",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#remainingCapacity",
+      "$ref" : "#/components/schemas/RemainingCapacity"
+    },
+    "NegativeEvents" : {
+      "description" : "The battery passport must contain information and data resulting from its use such as accidents. \n\nDIN DKE Spec 99100 chapter reference: 6.7.8.4",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#negativeEvents",
+      "$ref" : "#/components/schemas/NegativeEvents"
+    },
+    "InformationOnAccidents" : {
+      "description" : "The battery passport must contain information and data resulting from its use such as accidents. \n\nDIN DKE Spec 99100 chapter reference: 6.7.8.4",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#informationOnAccidents",
+      "$ref" : "#/components/schemas/DocumentIdentifierSet"
+    },
+    "TemperatureInformation" : {
+      "description" : "The battery passport must include periodically recorded information on the operating environmental conditions, including temperature.\n\nDIN DKE Spec 99100 chapter reference: 6.7.7.5 - 8",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#temperatureInformation",
+      "$ref" : "#/components/schemas/TemperatureInformation"
+    },
+    "RemainingPowerCapability" : {
+      "description" : "Original power capability (in Watts) and limits, with temperature range when relevant.\n- The amount of energy that a battery is capable to provide over a given period of time under reference conditions.\n- Power capability at 80% and 20% state of charge.\n\nDIN DKE Spec 99100 chapter reference: 6.7.3.3",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#remainingPowerCapability",
+      "$ref" : "#/components/schemas/RemainingPowerCapability"
+    },
+    "EvolutionOfSelfDischarge" : {
+      "description" : "Evolution of self-discharge rates is the change of self-discharge over time and usage, as percentage calculated from the initial and current self-discharge rate.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.8",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#evolutionOfSelfDischarge",
+      "$ref" : "#/components/schemas/EvolutionOfSelfDischarge"
+    },
+    "CurrentSelfDischargingRate" : {
+      "description" : "The current self-discharge rate is the change of the self-discharge rate in an idle state of the battery in reference conditions (temperature etc.) at aging parameter x, e.g. after a certain amount of storage time or, number of cycles.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.7",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#currentSelfDischargingRate",
+      "$ref" : "#/components/schemas/CurrentSelfDischargingRate"
+    },
+    "RemainingRoundTripEnergyEfficiency" : {
+      "description" : "The battery passport shall include information, where possible, about the remaining round trip energy efficiency as information on the state of health of the battery \n\nThe update frequency of remaining round trip energy efficiency should be aligned with the update frequency of round trip energy efficiency fade and should be provided upon change of the battery status.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.4",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#remainingRoundTripEnergyEfficiency",
+      "$ref" : "#/components/schemas/RemainingRoundTripEnergyEfficiency"
+    },
+    "StateOfCharge" : {
+      "description" : "Available capacity in a battery expressed as a percentage of remaining capacity.  \n\nDIN DKE Spec 99100 chapter reference: 6.7.2.8 (changed: available energy or charge in a battery expressed as a percentage of rated capacity as declared by the manufacturer, or, when the battery’s state of health is no longer equal to its initial condition, of the maximum energy or charge that can be stored in the battery at the time of charging)",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#stateOfCharge",
+      "$ref" : "#/components/schemas/StateOfCharge"
+    }
+  },
+  "required" : [ "NumberOfFullCycles", "InformationOnAccidents", "TemperatureInformation", "StateOfCharge" ]
+}

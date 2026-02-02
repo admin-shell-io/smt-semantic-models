@@ -1,0 +1,228 @@
+{
+  "$schema" : "http://json-schema.org/draft-04/schema",
+  "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#HandoverDocumentation",
+  "description" : "Handover Documentation defines a set of meta data for the handover of documentation from the operator to the users of the Battery Passport.",
+  "type" : "object",
+  "components" : {
+    "schemas" : {
+      "Text" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Text",
+        "description" : "Describes a Property which contains plain text. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+      },
+      "DocumentIdentifier" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#DocumentIdentifier",
+        "description" : "Alphanumeric character sequence uniquely identifying a document."
+      },
+      "Boolean" : {
+        "type" : "boolean",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Boolean",
+        "description" : "Represents a boolean value (i.e. a \"flag\")."
+      },
+      "DocumentId" : {
+        "description" : "Specification of a document ID.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#DocumentId",
+        "type" : "object",
+        "properties" : {
+          "DocumentDomainId" : {
+            "description" : "Identification of the domain in which the given DocumentId is unique. The domain ID can e.g., be the name or acronym of the providing organisation.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentDomainId",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "DocumentIdentifier" : {
+            "description" : "Alphanumeric character sequence uniquely identifying a document.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentIdentifier",
+            "$ref" : "#/components/schemas/DocumentIdentifier"
+          },
+          "DocumentIsPrimary" : {
+            "description" : "Flag indicating that a DocumentId within a collection of at least two DocumentId`s is the 'primary' identifier for the document. This is the preferred ID of the document (commonly from the point of view of the owner of the asset).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentIsPrimary",
+            "$ref" : "#/components/schemas/Boolean"
+          }
+        },
+        "required" : [ "DocumentDomainId", "DocumentIdentifier" ]
+      },
+      "DocumentIdSet" : {
+        "description" : "Set of the IDs of the documents.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#DocumentIdSet",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/DocumentId"
+        },
+        "uniqueItems" : true
+      },
+      "MultiLanguageTexts" : {
+        "description" : "A set of language-text items.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#MultiLanguageTexts",
+        "type" : "array",
+        "items" : {
+          "type" : "object",
+          "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#MultiLanguageText",
+          "description" : "Describes a Property which contains plain text in multiple languages. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+        },
+        "uniqueItems" : true
+      },
+      "DocumentClassification" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#DocumentClassification",
+        "type" : "object",
+        "properties" : {
+          "ClassId" : {
+            "description" : "Unique ID of the document class within a classficationsystem.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#classId",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "ClassName" : {
+            "description" : "Type of document.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#className",
+            "$ref" : "#/components/schemas/MultiLanguageTexts"
+          },
+          "ClassificationSystem" : {
+            "description" : "Classification of a document according to its purpose or the information it contains.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#classificationSystem",
+            "$ref" : "#/components/schemas/Text"
+          }
+        },
+        "required" : [ "ClassId", "ClassName", "ClassificationSystem" ]
+      },
+      "DocumentClassificationSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#DocumentClassificationSet",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/DocumentClassification"
+        },
+        "uniqueItems" : true
+      },
+      "LanguageSetTrait" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#LanguageSetTrait",
+        "type" : "array",
+        "items" : {
+          "type" : "string",
+          "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Locale",
+          "description" : "Describes a Property containing a locale according to IETF BCP 47, for example \"de-DE\"."
+        },
+        "uniqueItems" : true,
+        "minItems" : 1
+      },
+      "ResourcePath" : {
+        "type" : "string",
+        "format" : "uri",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#ResourcePath",
+        "description" : "The path of a resource."
+      },
+      "MimeType" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#MimeType",
+        "description" : "A MIME type as defined in RFC 2046, for example \"application/pdf\"."
+      },
+      "FileSetTrait" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#FileSetTrait",
+        "type" : "array",
+        "items" : {
+          "description" : "A file is a data element that represents an address to a file (a locator). The value is a URI that can represent an absolute or relative path.",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#FileWithContentType",
+          "type" : "object",
+          "properties" : {
+            "value" : {
+              "description" : "Path and name of the file (with file extension).\n\nThe path can be absolute or relative.",
+              "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#resourceValue",
+              "$ref" : "#/components/schemas/ResourcePath"
+            },
+            "contentType" : {
+              "description" : "Content type of the content of the file or blob.",
+              "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#contentType",
+              "$ref" : "#/components/schemas/MimeType"
+            }
+          },
+          "required" : [ "value", "contentType" ]
+        },
+        "uniqueItems" : true,
+        "minItems" : 1
+      },
+      "DocumentVersion" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#DocumentVersion",
+        "type" : "object",
+        "properties" : {
+          "Language" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#languages",
+            "$ref" : "#/components/schemas/LanguageSetTrait"
+          },
+          "Version" : {
+            "description" : "Identifier of the version of this document.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#version",
+            "$ref" : "#/components/schemas/Text"
+          },
+          "Title" : {
+            "description" : "Title of this document.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#title",
+            "$ref" : "#/components/schemas/MultiLanguageTexts"
+          },
+          "Subtitle" : {
+            "description" : "Denotes the focus of the document and has a referential or communicative function, which is to refer to the content, subject matter or theme of the document\nConstraint: for each language-dependent Title, a Summary and at least one KeyWord shall exist for the given language.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#subtitle",
+            "$ref" : "#/components/schemas/MultiLanguageTexts"
+          },
+          "Description" : {
+            "description" : "Plain text characterizing the content of the document.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#description",
+            "$ref" : "#/components/schemas/MultiLanguageTexts"
+          },
+          "DigitalFiles" : {
+            "description" : "MIME-Type, file name and file contents\n\nConstraint: at least one PDF/A file type shall be provided.\nNote: each DigitalFile represents the same content or Document version, but can be provided in different technical formats (PDF, PDFA, html, etc.) or by a link.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#digitalFiles",
+            "$ref" : "#/components/schemas/FileSetTrait"
+          }
+        },
+        "required" : [ "Language", "Title", "DigitalFiles" ]
+      },
+      "DocumentVersionsTrait" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#DocumentVersionsTrait",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/DocumentVersion"
+        },
+        "uniqueItems" : true,
+        "minItems" : 1
+      },
+      "Document" : {
+        "description" : "A single handover document.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#Document",
+        "type" : "object",
+        "properties" : {
+          "DocumentIds" : {
+            "description" : "Set of document identifiers for the Document. One ID in this collection should be used as a preferred ID (see isPrimary).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentIds",
+            "$ref" : "#/components/schemas/DocumentIdSet"
+          },
+          "DocumentClassifications" : {
+            "description" : "Set of information for describing the classification of the Document according to ClassificationSystems.\nConstraint: at least one classification according to VDI 2770 shall be provided.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentClassifications",
+            "$ref" : "#/components/schemas/DocumentClassificationSet"
+          },
+          "DocumentVersions" : {
+            "description" : "Information elements of individual VDI 2770 DocumentVersion entities.\nNote: at the time of handover, this collection shall include at least one DocumentVersion.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#documentVersions",
+            "$ref" : "#/components/schemas/DocumentVersionsTrait"
+          }
+        },
+        "required" : [ "DocumentIds", "DocumentClassifications", "DocumentVersions" ]
+      },
+      "DocumentSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#DocumentSet",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Document"
+        },
+        "uniqueItems" : true
+      }
+    }
+  },
+  "properties" : {
+    "Documents" : {
+      "description" : "A set of relevant documents to hand over to customers for documentation purposes.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#documents",
+      "$ref" : "#/components/schemas/DocumentSet"
+    }
+  },
+  "required" : [ "Documents" ]
+}

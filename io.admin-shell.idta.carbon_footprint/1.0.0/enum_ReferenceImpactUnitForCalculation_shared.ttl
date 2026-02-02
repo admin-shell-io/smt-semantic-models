@@ -1,0 +1,81 @@
+######################################################################
+# for namespace: urn:samm:io.admin-shell.idta.
+# Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
+# Copyright (c) 2025 Industrial Digital Twin Association
+#
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#
+# This work is derived from Submodel Template Specification (SMT) IDTA-02023 Version 1.0 Carbon Footprint
+# with licence CC-BY-4.0
+# changes are documented in Readme of namespace urn:samm:io.admin-shell.idta.carbon_footprint
+#
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#> .
+
+
+:ReferenceImpactUnitForCalculationEnum a samm-c:Enumeration ;
+   samm:preferredName "reference values for calculation"@en ;
+   samm:preferredName "Referenzeinheiten für die Berechnung"@de ;
+   samm:dataType xsd:string ;
+   samm:see <urn:irdi:0173-1#02-ABG856#003> ;
+   samm-c:values (
+    :g
+	:kg
+	:t
+	:ml
+	:l
+	:cbm
+	:qm
+	:piece
+	:kWh
+   ) .
+
+:g a samm:Value ;
+  samm:value "g" ;
+  samm:see <urn:irdi:0173-1#07-ABZ596#003> .
+
+:kg a samm:Value ;
+  samm:value "kg" ;
+  samm:see <urn:irdi:0173-1#07-ABZ597#003> .
+  
+:t a samm:Value ;
+  samm:value "t" ;
+  samm:see <urn:irdi:0173-1#07-ABZ598#003> .
+
+:ml a samm:Value ;
+  samm:value "ml" ;
+  samm:see <urn:irdi:0173-1#07-ABZ599#003> .
+
+:l a samm:Value ;
+  samm:value "l" ;
+  samm:see <urn:irdi:0173-1#07-ABZ598#003> . 
+  
+:cbm a samm:Value ;
+  samm:value "cbm" ;
+  samm:see <urn:irdi:0173-1#07-ABZ601#003> .
+  
+  
+:qm a samm:Value ;
+  samm:value "qm" ;
+  samm:see <urn:irdi:0173-1#07-ABZ602#003> .
+
+:piece a samm:Value ;
+  samm:value "piece" ;
+  samm:see <urn:irdi:0173-1#07-ABZ603#003> .
+  
+:kWh a samm:Value ;
+  samm:value "kwH" ;
+  samm:see <urn:irdi:0173-1#07-ACB997#001> .
+  

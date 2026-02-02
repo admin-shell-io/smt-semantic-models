@@ -1,0 +1,474 @@
+######################################################################
+# Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC-BY-4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/legalcode.
+# SPDX-License-Identifier: CC-BY-4.0
+#
+# elements of namespace: urn:samm:io.BatteryPass.Performance:1.2.1
+# within https://github.com/batterypass/BatteryPassDataModel
+# with licence CC-BY-4.0
+# and Copyright (c) 2025 Circulor GmbH on behalf of the Battery Pass Consortium
+# are used but enhanced, adapted or changed to be compliant with DIN DKE SPEC 99100 
+# and to align with existing IDTA sub model templates
+#
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#> .
+
+:lastUpdate a samm:Property ;
+   samm:preferredName "last update"@en ;
+   samm:description """Timestamp for dynamic data attributes show the last update time.
+
+   Defined time within a time range, measured from the start time of the time range.
+   """@en ;
+   samm:see <urn:irdi:0173-1#02-ABG740#003> ;
+   samm:characteristic samm-c:Timestamp ;
+   samm:exampleValue "2000-01-01T14:23:00"^^xsd:dateTime .
+
+
+:energyThroughput a samm:Property ;
+   samm:preferredName "energy throughput"@en ;
+   samm:description "The data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.7"@en ;
+   samm:characteristic :EnergyThroughput .
+
+:EnergyThroughput a samm-c:SingleEntity ;
+   samm:dataType :EnergyThroughputEntity .
+   
+:EnergyThroughputEntity a samm:Entity ;
+   samm:preferredName "energy throughput"@en ;
+   samm:description "Energy throughput, last update."@en ;
+   samm:properties ( 
+   [ samm:property :energyThroughputValue; samm:payloadName "EnergyThroughputValue" ] 
+   [ samm:property :lastUpdate; samm:payloadName "LastUpdate" ] 
+   ) .
+   
+:energyThroughputValue a samm:Property ;
+   samm:preferredName "energy throughput"@en ;
+   samm:description "Overall sum of the energy throughput over the battery lifetime (data attribute should be reported as measured for further potential processing. In addition, the normalisation by usable battery energy could add a further useful value that ensures comparability among battery sizes)."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL850#001> ;
+   samm:characteristic :EnergyThroughputValue ;
+   samm:exampleValue "100000"^^xsd:float .
+ 
+:EnergyThroughputValue a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:kilowattHour .
+ 
+:capacityThroughput a samm:Property ;
+   samm:description "The data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.8"@en ;
+   samm:characteristic :CapacityThroughput .
+
+ :CapacityThroughput a samm-c:SingleEntity ;
+   samm:description "Capacity throughput."@en ;
+   samm:dataType :CapacityThroughputEntity .
+
+:CapacityThroughputEntity a samm:Entity ;
+   samm:preferredName "capacity throughput"@en ;
+   samm:description "Capacity throughput, last update."@en ;
+   samm:properties ( 
+   [ samm:property :capacityThroughputValue; samm:payloadName "CapacityThroughputValue" ] 
+   [ samm:property :lastUpdate; samm:payloadName "LastUpdate" ] 
+   ) .  
+   
+:capacityThroughputValue a samm:Property ;
+   samm:preferredName "capacity throughput"@en ;
+   samm:description "Overall sum of the capacity throughput over the battery lifetime (data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity could add a further useful value that ensures comparability among battery sizes)."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL849#001> ;
+   samm:characteristic :CapacityThroughputValue ;
+   samm:exampleValue "214"^^xsd:float .
+   
+:CapacityThroughputValue a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:ampereHour .
+   
+:numberOfFullCycles a samm:Property ;
+   samm:preferredName "number of full cycles"@en ;
+   samm:description "Number of (full) charging and discharging cycles.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.4"@en ;
+   samm:characteristic :NumberOfFullCycles .
+
+   
+:NumberOfFullCycles a samm-c:SingleEntity ;
+   samm:description "- Information and data as a result of its use, including the number of charging and discharging cycles."@en ;
+   samm:dataType :NumberOfFullCyclesEntity .
+   
+:NumberOfFullCyclesEntity a samm:Entity ;
+   samm:preferredName "number of full cycles"@en ;
+   samm:description "Number of full cycles, last update."@en ;
+   samm:properties ( 
+   [ samm:property :numberOfFullCyclesValue; samm:payloadName "NumberOfFullCyclesValue" ]    
+   [ samm:property :lastUpdate; samm:payloadName "LastUpdate" ] 
+   ) .
+
+:numberOfFullCyclesValue a samm:Property ;
+   samm:preferredName "number of full cycles"@en ;
+   samm:description "Total count of times a battery has been fully charged from empty to full capacity and then fully discharged, used as an indicator of the battery's usage and lifespan."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL868#001> ;
+   samm:characteristic :NumberOfFullCyclesValue ;
+   samm:exampleValue "600"^^xsd:unsignedInt .
+	  
+:NumberOfFullCyclesValue a samm-c:Measurement ;
+   samm:dataType xsd:unsignedInt ;
+   samm-c:unit unit:cycle .
+   
+:stateOfCertifiedEnergy a samm:Property ;
+   samm:preferredName "SOCE"@en ;
+   samm:description "Definition based on UNECE GTR 22: The measured or on-board UBE performance at a specific point in its lifetime, expressed as a percentage of the certified usable battery energy.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.7"@en ;
+   samm:see <urn:irdi:0173-1#02-ABL847#001> ;
+   samm:characteristic :StateOfCertifiedEnergy .
+   
+:StateOfCertifiedEnergy a samm-c:SingleEntity ;
+   samm:dataType :StateOfCertifiedEnergyEntity  .
+   
+:StateOfCertifiedEnergyEntity a samm:Entity ;
+   samm:preferredName "state of certified energy"@en ;
+   samm:description "State of certified energy, last update."@en ;
+   samm:properties ( 
+   [ samm:property :stateOfCertifiedEnergyValue; samm:payloadName "StateOfCertifiedEnergyValue" ]   
+   [ samm:property :lastUpdate; samm:payloadName "LastUpdate" ] 
+   ) .
+   
+:stateOfCertifiedEnergyValue a samm:Property ;
+   samm:preferredName "state of certified energy"@en ;
+   samm:description "Measured or on-board UBE performance at a specific point in its lifetime, expressed as a percentage of the certified usable battery energy."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL847#001> ;
+   samm:characteristic :StateOfCertifiedEnergyValue ;
+   samm:exampleValue "70"^^xsd:float .
+   
+:StateOfCertifiedEnergyValue a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:percent .
+   
+:remainingEnergy a samm:Property ;
+   samm:preferredName "remaining energy"@en ;
+   samm:description "Definition from UNECE GTR 22, applicable only to EVs.\nThe energy supplied by the battery from the beginning of the test procedure used for certification until the applicable break-off criterion of the test procedure used for certification is reached.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.6"@en ;
+   samm:characteristic :RemainingEnergy .
+   
+:RemainingEnergy a samm-c:SingleEntity ;
+   samm:dataType :RemainingEnergyEntity .
+   
+:RemainingEnergyEntity a samm:Entity ;
+   samm:preferredName "remaining energy"@en ;
+   samm:description "Remaining energy, last update."@en ;
+   samm:properties ( 
+   [ samm:property :remainingEnergyValue; samm:payloadName "RemainingEnergyValue" ]    
+   [ samm:property :lastUpdate; samm:payloadName "LastUpdate" ] 
+   ) .
+   
+:remainingEnergyValue a samm:Property ;
+   samm:preferredName "remaining energy"@en ;
+   samm:description "UBE determined at the present point in the lifetime of the vehicle by the test procedure used for certification."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL870#001> ;
+   samm:characteristic :UBERemainingValue ;
+   samm:exampleValue "30"^^xsd:float .
+   
+:UBERemainingValue a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:kilowattHour .
+   
+:remainingCapacity a samm:Property ;
+   samm:preferredName "remaining capacity"@en ;
+   samm:description "The in-use data attribute on capacity, corresponding with the definition of rated capacity.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.3"@en ;
+   samm:characteristic :RemainingCapacity .
+   
+:RemainingCapacity a samm-c:SingleEntity ;
+   samm:dataType :RemainingCapacityEntity .
+   
+:RemainingCapacityEntity a samm:Entity ;
+   samm:preferredName "remaining capacity"@en ;
+   samm:description "Remaining capacity, last update."@en ;
+   samm:properties ( 
+   [ samm:property :remainingCapacityValue; samm:payloadName "RemainingCapacityValue" ]   
+   [ samm:property :lastUpdate; samm:payloadName "LastUpdate" ] 
+   ) .
+   
+:remainingCapacityValue a samm:Property ;
+   samm:preferredName "remaining capacity"@en ;
+   samm:description "In-use data attribute on capacity, corresponding with the definition of rated capacity."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL840#001> ;
+   samm:characteristic :RemainingCapacityValue ;
+   samm:exampleValue "56"^^xsd:float .
+   
+:RemainingCapacityValue a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:kilowattHour .
+
+   
+:negativeEvents a samm:Property ;
+   samm:preferredName "negative events"@en ;
+   samm:description "The battery passport must contain information and data resulting from its use such as accidents. \n\nDIN DKE Spec 99100 chapter reference: 6.7.8.4"@en ;
+   samm:characteristic :NegativeEvents .
+   
+:NegativeEvents a samm-c:List ;
+   samm:dataType :NegativeEvent .
+   
+:NegativeEvent a samm:Entity ;
+   samm:preferredName "negative event"@en ;
+   samm:description "Negative event, last update."@en ;
+   samm:properties ( 
+   [ samm:property :negativeEventValue; samm:payloadName "NegativeEventValue" ] 
+   [ samm:property :lastUpdate; samm:payloadName "LastUpdate" ] 
+   ) .
+   
+:negativeEventValue a samm:Property ;
+   samm:preferredName "negative event"@en ;
+   samm:description "Negative event, such as an accident. No further definition provided by regulation."@en ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "overcharged" .
+   
+:temperatureInformation a samm:Property ;
+   samm:preferredName "temperature information"@en ;
+   samm:description "The battery passport must include periodically recorded information on the operating environmental conditions, including temperature.\n\nDIN DKE Spec 99100 chapter reference: 6.7.7.5 - 8"@en ;
+   samm:characteristic :TemperatureInformation .
+   
+:TemperatureInformation a samm-c:SingleEntity ;
+   samm:dataType :TemperatureConditionsEntity .
+   
+:TemperatureConditionsEntity a samm:Entity ;
+   samm:preferredName "temperature conditions"@en ;
+   samm:description "Temperature conditions, last update."@en ;
+   samm:properties ( 
+   [ samm:property :timeExtremeHighTemp; samm:optional true; samm:payloadName "TimeExtremeHighTemp" ]
+   [ samm:property :timeExtremeLowTemp; samm:optional true; samm:payloadName "TimeExtremeLowTemp" ]
+   [ samm:property :timeExtremeHighTempCharging; samm:optional true;samm:payloadName "TimeExtremeHighTempCharging " ]
+   [ samm:property :timeExtremeLowTempCharging; samm:optional true; samm:payloadName "TimeExtremeLowTempCharging" ]
+   [ samm:property :lastUpdate; samm:payloadName "LastUpdate" ]
+   ) .
+   
+:timeExtremeHighTemp a samm:Property ;
+   samm:preferredName "time extreme high temperature"@en ;
+   samm:description "Cumulated time spent above the given upper boundary of temperature."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL816#001> ;
+   samm:characteristic :TimeExtremeHighTemp ;
+   samm:exampleValue "0"^^xsd:float .
+   
+:TimeExtremeHighTemp a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:minuteUnitOfTime .
+   
+:timeExtremeLowTemp a samm:Property ;
+   samm:preferredName "time extreme low temperature"@en ;
+   samm:description "Cumulated time spent below the given lower boundary of temperature."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL817#001> ;
+   samm:characteristic :TimeExtremeLowTemp ;
+   samm:exampleValue "0"^^xsd:float .
+   
+:TimeExtremeLowTemp a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:minuteUnitOfTime .
+   
+:timeExtremeHighTempCharging a samm:Property ;
+   samm:preferredName "time extreme high temperature charging"@en ;
+   samm:description "Cumulated time spent above the given upper boundary of temperature during Charging."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL818#001> ;
+   samm:characteristic :TimeExtremeHighTempCharging ;
+   samm:exampleValue "0"^^xsd:float .
+   
+:TimeExtremeHighTempCharging a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:minuteUnitOfTime ;
+   samm:exampleValue "0"^^xsd:float .
+   
+:timeExtremeLowTempCharging a samm:Property ;
+   samm:preferredName "time extreme low temperature charging"@en ;
+   samm:description "Cumulated time spent below the given lower boundary of temperature during charging."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL819#001> ;
+   samm:characteristic :TimeExtremeLowTempCharging ;
+   samm:exampleValue "0"^^xsd:float .
+   
+:TimeExtremeLowTempCharging a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:minuteUnitOfTime .
+   
+:remainingPowerCapability a samm:Property ;
+   samm:preferredName "remaining power capability"@en ;
+   samm:description "Original power capability (in Watts) and limits, with temperature range when relevant.\n- The amount of energy that a battery is capable to provide over a given period of time under reference conditions.\n- Power capability at 80% and 20% state of charge.\n\nDIN DKE Spec 99100 chapter reference: 6.7.3.3"@en ;
+   samm:see <urn:irdi:0173-1#02-ABL820#001> ;
+   samm:characteristic :RemainingPowerCapability .
+   
+:RemainingPowerCapability a samm-c:SingleEntity ;
+   samm:dataType :RemainingPowerCapabilityEntity .
+   
+:RemainingPowerCapabilityEntity a samm:Entity ;
+   samm:preferredName "remaining power capability"@en ;
+   samm:description "Remaining power capability, last update."@en ;
+   samm:properties ( 
+   [ samm:property :remainingPowerCapabilityValue; samm:payloadName "RemainingPowerCapabilityValue" ]
+   [ samm:property :lastUpdate; samm:payloadName "LastUpdate" ] 
+   ) .
+   
+:remainingPowerCapabilityValue a samm:Property ;
+   samm:preferredName "remaining power capability value"@en ;
+   samm:description "Remaining power capability value."@en ;
+   samm:characteristic :RemainingPowerCapabilityValue .
+   
+:RemainingPowerCapabilityValue a samm-c:SingleEntity ;
+   samm:preferredName "remaining power capability value"@en ;
+   samm:dataType :RemainingPowerCapabilityDynamicAt .
+   
+:RemainingPowerCapabilityDynamicAt a samm:Entity ;
+   samm:preferredName "remaining power capability dynamic at"@en ;
+   samm:description "Remaining power capability dynamic at."@en ;
+   samm:extends :PowerCapabilityAtEntity ;
+   samm:properties ( 
+    [samm:property :rPCLastUpdated; samm:payloadName "RPCLastUpdated" ] 
+    ) .
+
+:PowerCapabilityAtEntity a samm:Entity ;
+   samm:preferredName "power capability at"@en ;
+   samm:description "Power capability at."@en ;
+   samm:properties ( 
+   [samm:property :atSoC; samm:payloadName "AtSoC" ]
+   [samm:property :powerCapabilityAt ; samm:payloadName "PowerCapabilityAt " ]
+   ) .
+
+:atSoC a samm:Property ;
+   samm:preferredName "at SoC"@en ;
+   samm:description "Available capacity in a battery expressed as a percentage of remaining capacity."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL821#001> ;
+   samm:characteristic :AtSoC ;
+   samm:exampleValue "80"^^xsd:float .
+   
+:AtSoC a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:percent .
+
+:powerCapabilityAt a samm:Property ;
+   samm:preferredName "power capability at"@en ;
+   samm:description "Defined by 'pre-use power capability (definition of power capability as given in Battery Regulation."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL853#001> ;
+   samm:characteristic :PowerCapabilityAtSoc ;
+   samm:exampleValue "95"^^xsd:float .
+   
+:PowerCapabilityAtSoc a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:percent .
+
+:rPCLastUpdated a samm:Property ;
+   samm:preferredName "RPC last updated"@en ;
+   samm:description "RPC last updated."@en ;
+   samm:characteristic samm-c:Timestamp ;
+   samm:exampleValue "2000-01-01T14:23:00"^^xsd:dateTime .
+   
+:evolutionOfSelfDischarge a samm:Property ;
+   samm:preferredName "evolution of self discharge"@en ;
+   samm:description "Evolution of self-discharge rates is the change of self-discharge over time and usage, as percentage calculated from the initial and current self-discharge rate.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.8"@en ;
+   samm:characteristic :EvolutionOfSelfDischarge .
+   
+:EvolutionOfSelfDischarge a samm-c:SingleEntity ;
+   samm:dataType :EvolutionOfSelfDischargeEntity .
+   
+:EvolutionOfSelfDischargeEntity a samm:Entity ;
+   samm:preferredName "evolution of self discharge"@en ;
+   samm:description "Evolution of self discharge, last update."@en ;
+   samm:properties ( 
+   [ samm:property :evolutionOfSelfDischargeValue; samm:payloadName "EvolutionOfSelfDischargeValue" ]
+   [ samm:property :lastUpdate; samm:payloadName "LastUpdate" ]
+   ) .
+   
+:evolutionOfSelfDischargeValue a samm:Property ;
+   samm:preferredName "evolution of self discharge value"@en ;
+   samm:description "Total count of times a battery has been fully charged from empty to full capacity and then fully discharged, used as an indicator of the battery's usage and lifespan."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL834#001> ;
+   samm:characteristic :EvolutionOfSelfDischargeEntityValue ;
+   samm:exampleValue "1"^^xsd:float .  
+   
+:EvolutionOfSelfDischargeEntityValue a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:percent .
+   
+:currentSelfDischargingRate a samm:Property ;
+   samm:preferredName "current self discharge rate"@en ;
+   samm:description "The current self-discharge rate is the change of the self-discharge rate in an idle state of the battery in reference conditions (temperature etc.) at aging parameter x, e.g. after a certain amount of storage time or, number of cycles.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.7"@en ;
+   samm:characteristic :CurrentSelfDischargingRate .
+   
+:CurrentSelfDischargingRate a samm-c:SingleEntity ;
+   samm:dataType :CurrentSelfDischargingRateEntity .
+   
+:CurrentSelfDischargingRateEntity a samm:Entity ;
+   samm:preferredName "current self discharging rate"@en ;
+   samm:description "Current self discharging rate."@en ;
+   samm:properties (    
+   [ samm:property :currentSelfDischargingRateValue; samm:payloadName "CurrentSelfDischargingRateValue" ]
+   [ samm:property :lastUpdate; samm:payloadName "LastUpdate" ] 
+   ) .
+   
+:currentSelfDischargingRateValue a samm:Property ;
+   samm:preferredName "current self discharge rate value"@en ;
+   samm:description "Current self-discharge in % of capacity per unit of time in defined conditions (temperature range) during the use phase."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL825#001> ;
+   samm:characteristic :CurrentSelfDischargingRateValue ;
+   samm:exampleValue "2"^^xsd:float .
+   
+:CurrentSelfDischargingRateValue a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:percent .
+   
+
+   
+:stateOfCharge a samm:Property ;
+   samm:preferredName "state of charge (SoC)"@en ;
+   samm:description "Available capacity in a battery expressed as a percentage of remaining capacity.  \n\nDIN DKE Spec 99100 chapter reference: 6.7.2.8 (changed: available energy or charge in a battery expressed as a percentage of rated capacity as declared by the manufacturer, or, when the battery’s state of health is no longer equal to its initial condition, of the maximum energy or charge that can be stored in the battery at the time of charging)"@en ;
+   samm:characteristic :StateOfCharge .
+   
+:StateOfCharge a samm-c:SingleEntity ;
+   samm:preferredName "state of charge"@en ;
+   samm:dataType :StateOfChargeEntity .
+   
+:StateOfChargeEntity a samm:Entity ;
+   samm:preferredName "state of charge"@en ;
+   samm:description "State of charge."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL821#001> ;
+   samm:properties ( 
+   [ samm:property :stateOfChargeValue; samm:payloadName "StateOfChargeValue" ]
+   [ samm:property :lastUpdate; samm:payloadName "LastUpdate" ] 
+   ) .
+   
+:stateOfChargeValue a samm:Property ;
+   samm:preferredName "state of charge value"@en ;
+   samm:description "Available capacity in a battery expressed as a percentage of remaining capacity."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL821#001> ;
+   samm:characteristic :StateOfChargeValue ;
+   samm:exampleValue "70"^^xsd:float .  
+   
+:StateOfChargeValue a samm-c:Measurement ;
+   samm:preferredName "Value"@en ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:percent .
+   
+:remainingRoundTripEnergyEfficiency a samm:Property ;
+   samm:preferredName "remaining round trip energy efficiency"@en ;
+   samm:description "The battery passport shall include information, where possible, about the remaining round trip energy efficiency as information on the state of health of the battery \n\nThe update frequency of remaining round trip energy efficiency should be aligned with the update frequency of round trip energy efficiency fade and should be provided upon change of the battery status.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.4"@en ;
+   samm:characteristic :RemainingRoundTripEnergyEfficiency .
+   
+
+:RemainingRoundTripEnergyEfficiency a samm-c:SingleEntity ;
+   samm:preferredName "remaining round trip energy efficiency"@en ;
+   samm:dataType :RemainingRoundTripEnergyEfficiencyEntity .
+   
+:RemainingRoundTripEnergyEfficiencyEntity a samm:Entity ;
+   samm:preferredName "remaining round trip energy efficiency"@en ;
+   samm:description "Remaining round trip energy efficiency."@en ;
+   samm:properties ( 
+   [ samm:property :remainingRoundTripEnergyEfficiencyValue ; samm:payloadName "RemainingRoundTripEnergyEfficiencyValue " ] 
+   [ samm:property :lastUpdate; samm:payloadName "LastUpdate" ] 
+   ) .
+   
+:remainingRoundTripEnergyEfficiencyValue a samm:Property ;
+   samm:preferredName "remaining round trip energy efficiency value"@en ;
+   samm:description "Percentage of energy that can be recovered and used after a full charge and discharge cycle, reflecting the battery's ability to retain and return energy efficiently over time."@en ;
+   samm:see <urn:irdi:0173-1#02-ABL851#001> ;
+   samm:characteristic :RemainingRoundTripEnergyEfficiencyValue ;
+   samm:exampleValue "80"^^xsd:float .
+   
+:RemainingRoundTripEnergyEfficiencyValue a samm-c:Measurement ;
+   samm:dataType xsd:float ;
+   samm-c:unit unit:percent .

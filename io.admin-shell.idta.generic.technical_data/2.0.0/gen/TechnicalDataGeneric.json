@@ -1,0 +1,40 @@
+{
+  "ProductClassifications" : [ {
+    "ProductClassCodedName" : "VLhpfQGTMDYpsBZxvfBoeygjb",
+    "ProductClassName" : [ {
+      "en" : "Example multi language string"
+    } ],
+    "ProductClassificationSystem" : "ECLASS",
+    "ClassificationSystemVersion" : "9.0 (BASIC)",
+    "ProductClassId" : "27-01-88-77",
+    "ClassificationSystemUrl" : "RYtGKbgicZaHCBRQDSx",
+    "ReferenceToTechnicalPropertyArea" : {
+      "type" : "ModelReference",
+      "keys" : [ {
+        "value" : "id1234",
+        "key" : "AnnotatedRelationshipElement"
+      } ]
+    }
+  } ],
+  "TechnicalPropertyAreas" : { },
+  "SpecificDescriptions" : [ { } ],
+  "FurtherInformation" : {
+    "ValidDate" : "2026-01-15T16:27:24.243+01:00",
+    "TextStatement" : [ {
+      "en" : "Example multi language string"
+    } ]
+  },
+  "GeneralInformation" : {
+    "CompanyLogo" : "telnet://192.0.2.16:80/",
+    "ManufacturerOrderCode" : "JxkyvRnL",
+    "ManufacturerArticleNumber" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
+    "ManufacturerName" : "eOMtThyhVNLWUZNRcBaQKxI",
+    "ProductImages" : [ {
+      "value" : "https://example.com/SafetyInstructions.pdf",
+      "contentType" : "application/pdf"
+    } ],
+    "ManufacturerProductDesignation" : [ {
+      "en" : "Example multi language string"
+    } ]
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "TechnicalPropertyAreas" : {
+    "Resistance" : {
+      "InitialInternalResistanceOfBatteryCellLevel" : 67.0,
+      "InitialInternalResistanceOfBatteryPackLevel" : 23.0,
+      "InitialInternalResistanceOnBatteryModuleLevel" : 10.0,
+      "InternalResistanceIncreaseOfBatteryModuleLevel" : 10,
+      "InternalResistanceIncreaseOfBatteryCellLevel" : 10,
+      "InternalResistanceIncreaseOfBatteryPackLevel" : 10
+    },
+    "PowerCapability" : {
+      "RatioNominalBatteryPowerAndBatteryEnergy" : 0.611,
+      "PowerFade" : 23.0,
+      "MaximumPermittedBatteryPower" : "Infinity",
+      "OriginalPowerCapability" : [ {
+        "atSoC" : 80.0,
+        "powerCapabilityAt" : 500.0
+      } ]
+    },
+    "CapacityEnergyVoltage" : {
+      "CertifiedUsableBatteryEnergy" : 100.0,
+      "CapacityFade" : 10.0,
+      "NominalVoltage" : 4.3,
+      "RatedCapacity" : 210.0,
+      "MaxVoltage" : 6.0,
+      "MinVoltage" : 2.04
+    },
+    "Temperature" : {
+      "TemperatureRangeIdleState_UpperBoundary" : -19.0,
+      "TemperatureRangeIdleState_LowerBoundary" : 49.0
+    },
+    "Lifetime" : {
+      "ExpectedNumberOfCycles" : 1000,
+      "CapacityThresholdExhaustion" : 23.0,
+      "CrateOfRelevantCycleLifeTest" : 2.6035454E38,
+      "ExpectedLifetimeInCalendarYears " : 15
+    },
+    "RoundTripEnergyEfficiency" : {
+      "InitialRoundTripEnergyEfficiency" : 100,
+      "EnergyRoundTripEfficiencyFade" : 10.0,
+      "InitialSelfDischargingRate" : 2,
+      "RoundTripEnergyEfficiencyAt50PercentOfCycleLife" : 100
+    }
+  },
+  "GeneralInformation" : {
+    "CompanyLogo" : "telnet://192.0.2.16:80/",
+    "BatteryMass" : 1007.0,
+    "ManufacturerName" : "eOMtThyhVNLWUZNRcBaQKxI",
+    "ProductImages" : [ {
+      "value" : "https://example.com/SafetyInstructions.pdf",
+      "contentType" : "application/pdf"
+    } ],
+    "BatteryCategory" : "lmt",
+    "ManufacturerProductDesignation" : [ {
+      "en" : "Example multi language string"
+    } ],
+    "ManufacturerOrderCode" : "JxkyvRnL",
+    "ManufacturerArticleNumber" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
+    "WarrantyPeriod" : "2031-10",
+    "ManufacturerIdentifier" : "RYtGKbgicZaHCBRQDSx"
+  }
+}

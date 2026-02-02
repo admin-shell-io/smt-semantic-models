@@ -1,0 +1,115 @@
+{
+  "ProductCarbonFootprints" : [ {
+    "QuantityOfMeasureForCalculation" : 5.0,
+    "PublicationDate" : "2025-09-09T18:13:17.476+02:00",
+    "ExplanatoryStatement" : {
+      "value" : "https://example.com/SafetyInstructions.pdf",
+      "contentType" : "application/pdf"
+    },
+    "GoodsHandoverAddress" : {
+      "POBox" : [ {
+        "de" : "PF 1234"
+      } ],
+      "Company" : [ {
+        "en" : "ABC Company"
+      } ],
+      "Email" : {
+        "EmailAddress" : "email@muster-ag.de",
+        "PublicKey" : [ {
+          "en" : "0x07"
+        } ],
+        "TypeOfEmailAddress" : "office",
+        "TypeOfPublicKey" : [ {
+          "en" : "RSA"
+        } ]
+      },
+      "NameOfContact" : [ {
+        "en" : "Doe"
+      } ],
+      "ZipCode" : [ {
+        "de" : "12345"
+      } ],
+      "FirstName" : [ {
+        "en" : "Jane"
+      } ],
+      "Title" : [ {
+        "en" : "Mrs."
+      } ],
+      "Languages" : [ "eOMtThyhVNLWUZNRcBaQKxI", "yedUsFwdkelQbxeTeQOvaScfqIOOmaa", "JxkyvRnL", "RYtGKbgicZaHCBRQDSx" ],
+      "AcademicTitle" : [ {
+        "en" : "PhD"
+      } ],
+      "IPCommunicationChannels" : [ {
+        "TypeOfCommunication" : "Chat",
+        "availableTime" : [ {
+          "de" : "Montag – Freitag 08:00 bis 16:00"
+        } ],
+        "AddressOfAdditionalLink" : "VLhpfQGTMDYpsBZxvfBoeygjb"
+      } ],
+      "RoleOfContactPerson" : "technical contact",
+      "TimeZone" : "-12:00",
+      "Department" : [ {
+        "de" : "Vertrieb"
+      } ],
+      "Phone" : {
+        "TelephoneNumber" : [ {
+          "de" : "+491234567890"
+        } ],
+        "TypeOfTelephone" : "office",
+        "AvailableTime" : [ {
+          "de" : "Montag – Freitag 08:00 bis 16:00"
+        } ]
+      },
+      "NationalCode" : [ {
+        "en" : "DE"
+      } ],
+      "FurtherDetailsOfContact" : [ {
+        "de" : "-"
+      } ],
+      "AddressOfAdditionalLink" : "https://example.com/information/product/1224/contact",
+      "Street" : [ {
+        "de" : "Musterstrasse 1"
+      } ],
+      "StateCounty" : [ {
+        "de" : "Muster-Bundesland"
+      } ],
+      "Fax" : {
+        "TypeOfFaxNumber" : "office",
+        "FaxNumber" : [ {
+          "de" : "+491234567890"
+        } ]
+      },
+      "CityTown" : [ {
+        "de" : "Musterstadt"
+      } ],
+      "ZipCodeOfPOBox" : [ {
+        "de" : "12345"
+      } ],
+      "MiddleNames" : [ {
+        "en" : "M."
+      } ]
+    },
+    "ExpirationDate" : "2027-09-09T18:13:17.476+02:00",
+    "PcfCo2eq" : 17.2,
+    "ReferenceImpactUnitForCalculation" : "g",
+    "PcfCalculationMethods" : [ "ISO 14067" ],
+    "LifeCyclePhases" : [ "C4 - landfill" ]
+  } ],
+  "ProductOrSectorSpecificCarbonFootprints" : [ {
+    "ExternalPcfApi" : {
+      "PcfApiEndpoint" : "https://example.com/pcf",
+      "PcfApiQuery" : "specific query"
+    },
+    "PcfInformation" : { },
+    "ProductOrSectorSpecificRule" : {
+      "PcfRuleName" : "UMaAIKKIkknjWEXJUfPxxQHeWKEJ",
+      "PcfRuleOperator" : "WBCSD",
+      "PcfRuleOnlineReference" : {
+        "value" : "https://example.com/SafetyInstructions.pdf",
+        "contentType" : "application/pdf"
+      },
+      "PcfRuleVersion" : "dpHYZGhtgdntugzvvKAXLhM"
+    },
+    "PcfCalculationMethods" : [ "sector specific calculation method" ]
+  } ]
+}
