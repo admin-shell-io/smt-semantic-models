@@ -72,8 +72,8 @@
       },
       "NumberOfFullCyclesValue" : {
         "type" : "number",
-        "minimum" : 0,
         "maximum" : 4294967295,
+        "minimum" : 0,
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#NumberOfFullCyclesValue"
       },
       "NumberOfFullCyclesEntity" : {

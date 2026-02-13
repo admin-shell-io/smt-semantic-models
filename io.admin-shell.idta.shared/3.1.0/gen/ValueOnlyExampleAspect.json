@@ -1,115 +1,102 @@
 {
-  "valueOnly4Reference" : {
-    "type" : "ModelReference",
-    "keys" : [ {
-      "value" : "id1234",
-      "key" : "AnnotatedRelationshipElement"
-    } ]
-  },
-  "valueOnly4ModelReference" : {
-    "type" : "ModelReference",
-    "keys" : [ {
-      "value" : "id1234",
-      "key" : "AnnotatedRelationshipElement"
-    } ]
-  },
-  "valueOnly4Entity" : {
-    "specificAssetIds" : [ {
-      "name" : "SerialNumber",
-      "value" : "eOMtThyhVNLWUZNRcBaQKxI",
-      "externalSubjectId" : {
-        "type" : "ExternalReference",
-        "keys" : [ {
-          "value" : "id1234",
-          "key" : "FragmentReference"
-        } ]
-      }
-    } ],
-    "entityType" : "SelfManagedEntity",
-    "globalAssetId" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa"
-  },
-  "valueOnly4RelationshipElement" : {
-    "first" : {
-      "type" : "ModelReference",
-      "keys" : [ {
-        "value" : "id1234",
-        "key" : "AnnotatedRelationshipElement"
-      } ]
-    },
-    "second" : {
-      "type" : "ModelReference",
-      "keys" : [ {
-        "value" : "id1234",
-        "key" : "AnnotatedRelationshipElement"
-      } ]
-    }
-  },
   "valueOnly4MultiLanguageProperty" : [ {
-    "en" : "Example multi language string"
+    "de" : "okJNq"
   } ],
-  "valueOnly4ExternalReference" : {
-    "type" : "ExternalReference",
-    "keys" : [ {
-      "value" : "id1234",
-      "key" : "FragmentReference"
-    } ]
-  },
-  "valueOnly4Range" : {
-    "max" : -4.3748757E37,
-    "min" : -3.3465966E38
-  },
   "valueOnly4File" : {
     "value" : "https://example.com/SafetyInstructions.pdf",
     "contentType" : "application/pdf"
   },
+  "valueOnly4Reference" : {
+    "keys" : [ {
+      "key" : "GlobalReference",
+      "value" : "id1234"
+    } ],
+    "type" : "ExternalReference"
+  },
+  "valueOnly4ModelReference" : {
+    "keys" : [ {
+      "key" : "Submodel",
+      "value" : "id1234"
+    } ],
+    "type" : "ModelReference"
+  },
+  "valueOnly4ExternalReference" : {
+    "keys" : [ {
+      "key" : "GlobalReference",
+      "value" : "id1234"
+    } ],
+    "type" : "ExternalReference"
+  },
+  "valueOnly4RelationshipElement" : {
+    "first" : {
+      "keys" : [ {
+        "key" : "GlobalReference",
+        "value" : "id1234"
+      } ],
+      "type" : "ExternalReference"
+    },
+    "second" : {
+      "keys" : [ {
+        "key" : "GlobalReference",
+        "value" : "id1234"
+      } ],
+      "type" : "ExternalReference"
+    }
+  },
   "valueOnly4RelationshipElementWithAnnotations" : {
     "annotations" : {
       "valueOnly4MultiLanguageProperty" : [ {
-        "en" : "Example multi language string"
+        "de" : "VHyU4IB4bT"
       } ]
     },
     "first" : {
-      "type" : "ModelReference",
       "keys" : [ {
-        "value" : "id1234",
-        "key" : "AnnotatedRelationshipElement"
-      } ]
+        "key" : "GlobalReference",
+        "value" : "id1234"
+      } ],
+      "type" : "ExternalReference"
     },
     "second" : {
-      "type" : "ModelReference",
       "keys" : [ {
-        "value" : "id1234",
-        "key" : "AnnotatedRelationshipElement"
-      } ]
+        "key" : "GlobalReference",
+        "value" : "id1234"
+      } ],
+      "type" : "ExternalReference"
     }
   },
-  "valueOnly4BasicEventElement" : {
-    "observed" : {
-      "type" : "ModelReference",
-      "keys" : [ {
-        "value" : "id1234",
-        "key" : "AnnotatedRelationshipElement"
-      } ]
-    }
+  "valueOnly4Entity" : {
+    "specificAssetIds" : [ {
+      "externalSubjectId" : {
+        "keys" : [ {
+          "key" : "GlobalReference",
+          "value" : "id1234"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "value" : "cGERjzyHn",
+      "name" : "SerialNumber"
+    } ],
+    "globalAssetId" : "a9ND",
+    "entityType" : "SelfManagedEntity"
   },
   "valueOnly4EntityWithStatements" : {
     "statements" : {
       "valueOnly4MultiLanguageProperty" : [ {
-        "en" : "Example multi language string"
+        "en" : "N"
       } ]
-    },
-    "globalAssetId" : "RYtGKbgicZaHCBRQDSx",
-    "specificAssetIds" : [ {
-      "name" : "SerialNumber",
-      "value" : "JxkyvRnL",
-      "externalSubjectId" : {
-        "type" : "ExternalReference",
-        "keys" : [ {
-          "value" : "id1234",
-          "key" : "FragmentReference"
-        } ]
-      }
-    } ],
-    "entityType" : "SelfManagedEntity"
+    }
+  },
+  "valueOnly4Range" : {
+    "min" : 3142.0,
+    "max" : -1123.0
+  },
+  "valueOnly4BasicEventElement" : {
+    "observed" : {
+      "keys" : [ {
+        "key" : "Submodel",
+        "value" : "id1234"
+      } ],
+      "type" : "ModelReference"
+    }
   }
 }

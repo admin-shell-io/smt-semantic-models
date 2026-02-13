@@ -1,49 +1,49 @@
 {
-  "DismantlingAndRemovalInformation" : [ "eOMtThyhVNLWUZNRcBaQK" ],
+  "DismantlingAndRemovalInformation" : [ "1" ],
   "SparePartSources" : [ {
-    "Components" : [ {
-      "PartName" : "Cell",
-      "PartNumber" : "eOMtThyhVNLWUZNRcBaQKxI"
-    } ],
+    "NameOfSupplier" : {
+      "en" : "ABC Company"
+    },
     "AddressOfSupplier" : {
-      "PostalCode" : [ {
-        "de" : "DE-10719"
-      } ],
-      "Street" : [ {
-        "de" : "Musterstrasse 1"
-      } ],
-      "NationalCode" : [ {
+      "NationalCode" : {
         "en" : "DE"
-      } ]
+      },
+      "PostalCode" : {
+        "de" : "DE-10719"
+      },
+      "Street" : {
+        "de" : "Musterstrasse 1"
+      }
     },
     "EmailAddressOfSupplier" : {
       "EmailAddress" : "email@muster-ag.de",
-      "PublicKey" : [ {
+      "PublicKey" : {
         "en" : "0x07"
-      } ],
+      },
       "TypeOfEmailAddress" : "office",
-      "TypeOfPublicKey" : [ {
+      "TypeOfPublicKey" : {
         "en" : "RSA"
-      } ]
+      }
     },
-    "NameOfSupplier" : [ {
-      "en" : "ABC Company"
-    } ],
-    "SupplierWebAddress" : "https://example.com/information/product/1224/contact"
+    "SupplierWebAddress" : "https://example.com/information/product/1224/contact",
+    "Components" : [ {
+      "PartName" : "Cell",
+      "PartNumber" : "l"
+    } ]
   } ],
   "RecycledContentInformation" : [ {
-    "PreConsumerShare" : 59.636215,
+    "PreConsumerShare" : 59.44,
     "RecycledMaterial" : "Cobalt",
-    "PostConsumerShare" : 9.108972
+    "PostConsumerShare" : 21.18
   } ],
-  "RenewableContent" : -2.9217805E38,
   "SafetyMeasures" : {
-    "ExtinguishingAgents" : [ "yedUsFwdkelQbxeTeQOvaScfqIOOmaa" ],
-    "SafetyInstructions" : [ "eOMtThyhVNLWUZNRcBaQK" ]
+    "SafetyInstructions" : [ "kE0gXN7JQ" ],
+    "ExtinguishingAgents" : [ "S2R6cqbE" ]
   },
   "EndOfLifeInformation" : {
-    "WastePrevention" : [ "eOMtThyhVNLWUZNRcBaQK" ],
-    "SeparateCollection" : [ "eOMtThyhVNLWUZNRcBaQK" ],
-    "InformationOnCollection" : [ "eOMtThyhVNLWUZNRcBaQK" ]
-  }
+    "WastePrevention" : [ "nllp19FqD" ],
+    "SeparateCollection" : [ "MeZ" ],
+    "InformationOnCollection" : [ "3FG" ]
+  },
+  "RenewableContent" : -93019.4
 }

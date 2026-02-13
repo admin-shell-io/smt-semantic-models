@@ -1,50 +1,38 @@
 {
-  "StateOfCharge" : {
-    "LastUpdate" : "2000-01-01T14:23:00",
-    "StateOfChargeValue" : 70.0
-  },
-  "RemainingCapacity" : {
-    "LastUpdate" : "2000-01-01T14:23:00",
-    "RemainingCapacityValue" : 56.0
-  },
-  "NegativeEvents" : [ {
-    "LastUpdate" : "2000-01-01T14:23:00",
-    "NegativeEventValue" : "overcharged"
-  } ],
-  "TemperatureInformation" : {
-    "TimeExtremeLowTemp" : 0.0,
-    "TimeExtremeHighTempCharging " : 0.0,
-    "TimeExtremeHighTemp" : 0.0,
-    "TimeExtremeLowTempCharging" : 0.0,
-    "LastUpdate" : "2000-01-01T14:23:00"
-  },
-  "CurrentSelfDischargingRate" : {
-    "CurrentSelfDischargingRateValue" : 2.0,
-    "LastUpdate" : "2000-01-01T14:23:00"
-  },
-  "RemainingEnergy" : {
-    "LastUpdate" : "2000-01-01T14:23:00",
-    "RemainingEnergyValue" : 30.0
-  },
   "EnergyThroughput" : {
-    "LastUpdate" : "2000-01-01T14:23:00",
-    "EnergyThroughputValue" : 100000.0
+    "EnergyThroughputValue" : 100000.0,
+    "LastUpdate" : "2000-01-01T14:23:00"
+  },
+  "CapacityThroughput" : {
+    "CapacityThroughputValue" : 214.0,
+    "LastUpdate" : "2000-01-01T14:23:00"
+  },
+  "NumberOfFullCycles" : {
+    "NumberOfFullCyclesValue" : 600,
+    "LastUpdate" : "2000-01-01T14:23:00"
   },
   "StateOfCertifiedEnergy" : {
     "StateOfCertifiedEnergyValue" : 70.0,
     "LastUpdate" : "2000-01-01T14:23:00"
   },
-  "InformationOnAccidents" : [ "eOMtThyhVNLWUZNRcBaQK" ],
-  "EvolutionOfSelfDischarge" : {
-    "EvolutionOfSelfDischargeValue" : 1.0,
+  "RemainingEnergy" : {
+    "RemainingEnergyValue" : 30.0,
     "LastUpdate" : "2000-01-01T14:23:00"
   },
-  "RemainingRoundTripEnergyEfficiency" : {
-    "RemainingRoundTripEnergyEfficiencyValue " : 80.0,
+  "RemainingCapacity" : {
+    "RemainingCapacityValue" : 56.0,
     "LastUpdate" : "2000-01-01T14:23:00"
   },
-  "CapacityThroughput" : {
-    "CapacityThroughputValue" : 214.0,
+  "NegativeEvents" : [ {
+    "NegativeEventValue" : "overcharged",
+    "LastUpdate" : "2000-01-01T14:23:00"
+  } ],
+  "InformationOnAccidents" : [ "5Sl7QzN" ],
+  "TemperatureInformation" : {
+    "TimeExtremeHighTemp" : 0.0,
+    "TimeExtremeLowTemp" : 0.0,
+    "TimeExtremeHighTempCharging " : 0.0,
+    "TimeExtremeLowTempCharging" : 0.0,
     "LastUpdate" : "2000-01-01T14:23:00"
   },
   "RemainingPowerCapability" : {
@@ -55,8 +43,20 @@
     },
     "LastUpdate" : "2000-01-01T14:23:00"
   },
-  "NumberOfFullCycles" : {
-    "NumberOfFullCyclesValue" : 600,
+  "EvolutionOfSelfDischarge" : {
+    "EvolutionOfSelfDischargeValue" : 1.0,
+    "LastUpdate" : "2000-01-01T14:23:00"
+  },
+  "CurrentSelfDischargingRate" : {
+    "CurrentSelfDischargingRateValue" : 2.0,
+    "LastUpdate" : "2000-01-01T14:23:00"
+  },
+  "RemainingRoundTripEnergyEfficiency" : {
+    "RemainingRoundTripEnergyEfficiencyValue " : 80.0,
+    "LastUpdate" : "2000-01-01T14:23:00"
+  },
+  "StateOfCharge" : {
+    "StateOfChargeValue" : 70.0,
     "LastUpdate" : "2000-01-01T14:23:00"
   }
 }

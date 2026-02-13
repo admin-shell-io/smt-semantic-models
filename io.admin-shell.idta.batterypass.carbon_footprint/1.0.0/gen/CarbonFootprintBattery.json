@@ -1,11 +1,11 @@
 {
   "ProductCarbonFootprints" : [ {
-    "QuantityOfMeasureForCalculation" : 5.0,
+    "PcfCalculationMethods" : "ISO 14067",
     "PcfCo2eq" : 17.2,
-    "ReferenceImpactUnitForCalculation" : "g",
-    "WebLinkToPublicCarbonFootprintStudy" : [ "eOMtThyhVNLWUZNRcBaQK" ],
-    "PcfCalculationMethods" : [ "ISO 14067" ],
-    "PerformanceClass" : "eOMtThyhVNLWUZNRcBaQKxI",
-    "LifeCyclePhases" : [ "C4 - landfill" ]
+    "ReferenceImpactUnitForCalculation" : "piece",
+    "QuantityOfMeasureForCalculation" : 5.0,
+    "LifeCyclePhases" : "C4 - landfill",
+    "PerformanceClass" : "B+",
+    "WebLinkToPublicCarbonFootprintStudy" : [ "DRL" ]
   } ]
 }
