@@ -20,6 +20,8 @@ SPECIFICATION](https://industrialdigitaltwin.org/en/wp-content/uploads/sites/2/2
 
 [Best practices](https://eclipse-esmf.github.io/samm-specification/snapshot/appendix/best-practices.html) as defined in the SAMM specification should be followed.
 
+When creating an Aspect Model for an existing Submodel Template Specification it is recommended to use the predefined Characteristics in [io.admin-shell.idta.shared](https://github.com/admin-shell-io/smt-semantic-models/tree/main/io.admin-shell.idta.shared) to ensure that [Value-Only](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1.2/mappings/mappings.html#value-only-serialization-in-json)  format of AAS is identical to the  [payload](https://eclipse-esmf.github.io/samm-specification/snapshot/payloads.html) as defined by SAMM.
+
 The Aspect Models defined in this repository belong to the [namespaces](https://eclipse-esmf.github.io/samm-specification/snapshot/namespaces.html) starting with *io.admin-shell.idta*.
 
 
