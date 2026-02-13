@@ -92,12 +92,12 @@
 
 :Resistance a samm:Entity ;
   samm:properties ( 
-  [ samm:property :initialInternalResistanceOfBatteryCell; samm:payloadName "InitialInternalResistanceAtBatteryCellLevel" ] 
-  [ samm:property :initialInternalResistanceOfBatteryPack; samm:payloadName "InitialInternalResistanceAtBatteryPackLevel" ] 
-  [ samm:property :initialInternalResistanceOfBatteryModule; samm:optional true; samm:payloadName "InitialInternalResistanceAtBatteryModuleLevel" ] 
-  [ samm:property :internalResistanceIncreaseOfBatteryCell; samm:optional true; samm:payloadName "InternalResistanceIncreaseAtBatteryCellLevel" ] 
-  [ samm:property :internalResistanceIncreaseOfBatteryPack; samm:payloadName "InternalResistanceIncreaseAtBatteryPackLevel" ] 
-  [ samm:property :internalResistanceIncreaseOfBatteryModule; samm:optional true; samm:payloadName "InternalResistanceIncreaseAtBatteryModuleLevel" ] 
+  [ samm:property :initialInternalResistanceAtBatteryCellLevel; samm:payloadName "InitialInternalResistanceAtBatteryCellLevel" ] 
+  [ samm:property :initialInternalResistanceAtBatteryPackLevel; samm:payloadName "InitialInternalResistanceAtBatteryPackLevel" ] 
+  [ samm:property :initialInternalResistanceAtBatteryModuleLevel; samm:optional true; samm:payloadName "InitialInternalResistanceAtBatteryModuleLevel" ] 
+  [ samm:property :internalResistanceIncreaseAtBatteryCellLevel; samm:optional true; samm:payloadName "InternalResistanceIncreaseAtBatteryCellLevel" ] 
+  [ samm:property :internalResistanceIncreaseAtBatteryPackLevel; samm:payloadName "InternalResistanceIncreaseAtBatteryPackLevel" ] 
+  [ samm:property :internalResistanceIncreaseAtBatteryModuleLevel; samm:optional true; samm:payloadName "InternalResistanceIncreaseAtBatteryModuleLevel" ] 
   ) .
   
   
