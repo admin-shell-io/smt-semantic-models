@@ -1,108 +1,108 @@
 {
-  "ManufacturerName" : [ {
+  "URIOfTheProduct" : "https://dc-qr.com/?m=R123456789",
+  "ManufacturerName" : {
     "de" : "Muster AG"
-  } ],
-  "SerialNumber" : "A12345-X75EN",
-  "EUDeclarationOfConformity" : [ "eOMtThyhVNLWUZNRcBaQK" ],
-  "OperatorIdentifier" : "VLhpfQGTMDYpsBZxvfBoeygjb",
+  },
   "AddressInformation" : {
-    "POBox" : [ {
-      "de" : "PF 1234"
-    } ],
-    "Company" : [ {
+    "RoleOfContactPerson" : "technical contact",
+    "NationalCode" : {
+      "en" : "DE"
+    },
+    "Languages" : "en",
+    "TimeZone" : "-12:00",
+    "CityTown" : {
+      "de" : "Musterstadt"
+    },
+    "Company" : {
       "en" : "ABC Company"
-    } ],
+    },
+    "Department" : {
+      "de" : "Vertrieb"
+    },
+    "Phone" : {
+      "TelephoneNumber" : {
+        "de" : "+491234567890"
+      },
+      "TypeOfTelephone" : "office",
+      "AvailableTime" : {
+        "de" : "Montag – Freitag 08:00 bis 16:00"
+      }
+    },
+    "Fax" : {
+      "FaxNumber" : {
+        "de" : "+491234567890"
+      },
+      "TypeOfFaxNumber" : "office"
+    },
     "Email" : {
       "EmailAddress" : "email@muster-ag.de",
-      "PublicKey" : [ {
+      "PublicKey" : {
         "en" : "0x07"
-      } ],
+      },
       "TypeOfEmailAddress" : "office",
-      "TypeOfPublicKey" : [ {
+      "TypeOfPublicKey" : {
         "en" : "RSA"
-      } ]
+      }
     },
-    "NameOfContact" : [ {
-      "en" : "Doe"
-    } ],
-    "ZipCode" : [ {
-      "de" : "12345"
-    } ],
-    "FirstName" : [ {
-      "en" : "Jane"
-    } ],
-    "Title" : [ {
-      "en" : "Mrs."
-    } ],
-    "Languages" : [ "eOMtThyhVNLWUZNRcBaQKxI", "yedUsFwdkelQbxeTeQOvaScfqIOOmaa", "JxkyvRnL" ],
-    "AcademicTitle" : [ {
-      "en" : "PhD"
-    } ],
     "IPCommunicationChannels" : [ {
+      "AddressOfAdditionalLink" : "lNDR",
       "TypeOfCommunication" : "Chat",
-      "availableTime" : [ {
+      "availableTime" : {
         "de" : "Montag – Freitag 08:00 bis 16:00"
-      } ],
-      "AddressOfAdditionalLink" : "RYtGKbgicZaHCBRQDSx"
+      }
     } ],
-    "RoleOfContactPerson" : "technical contact",
-    "TimeZone" : "-12:00",
-    "Department" : [ {
-      "de" : "Vertrieb"
-    } ],
-    "Phone" : {
-      "TelephoneNumber" : [ {
-        "de" : "+491234567890"
-      } ],
-      "TypeOfTelephone" : "office",
-      "AvailableTime" : [ {
-        "de" : "Montag – Freitag 08:00 bis 16:00"
-      } ]
-    },
-    "NationalCode" : [ {
-      "en" : "DE"
-    } ],
-    "FurtherDetailsOfContact" : [ {
-      "de" : "-"
-    } ],
-    "AddressOfAdditionalLink" : "https://example.com/information/product/1224/contact",
-    "Street" : [ {
+    "Street" : {
       "de" : "Musterstrasse 1"
-    } ],
-    "StateCounty" : [ {
-      "de" : "Muster-Bundesland"
-    } ],
-    "Fax" : {
-      "TypeOfFaxNumber" : "office",
-      "FaxNumber" : [ {
-        "de" : "+491234567890"
-      } ]
     },
-    "CityTown" : [ {
-      "de" : "Musterstadt"
-    } ],
-    "ZipCodeOfPOBox" : [ {
+    "ZipCode" : {
       "de" : "12345"
-    } ],
-    "MiddleNames" : [ {
+    },
+    "POBox" : {
+      "de" : "PF 1234"
+    },
+    "ZipCodeOfPOBox" : {
+      "de" : "12345"
+    },
+    "StateCounty" : {
+      "de" : "Muster-Bundesland"
+    },
+    "NameOfContact" : {
+      "en" : "Doe"
+    },
+    "FirstName" : {
+      "en" : "Jane"
+    },
+    "MiddleNames" : {
       "en" : "M."
-    } ]
+    },
+    "Title" : {
+      "en" : "Mrs."
+    },
+    "AcademicTitle" : {
+      "en" : "PhD"
+    },
+    "FurtherDetailsOfContact" : {
+      "de" : "-"
+    },
+    "AddressOfAdditionalLink" : "https://example.com/information/product/1224/contact"
   },
-  "URIOfTheProduct" : "https://dc-qr.com/?m=R123456789",
+  "SerialNumber" : "A12345-X75EN",
+  "DateOfManufacture" : "2022-01-01",
   "UniqueFacilityIdentifier" : "987654321",
-  "ResultsOfTestReportsProvingCompliance" : [ "eOMtThyhVNLWUZNRcBaQK" ],
+  "LifeCycleStage" : "Original",
+  "OperatorIdentifier" : "1Kx5NgYZKm",
+  "ManufacturerIdentifier" : "8",
   "Markings" : [ {
     "MarkingName" : "0173-1%2307-DAA603%23004",
+    "DesignationOfCertificateOrApproval" : "KEMA99IECE X1105/128",
     "IssueDate" : "2022-01-01",
     "ExpiryDate" : "2022-01-01",
-    "DesignationOfCertificateOrApproval" : "KEMA99IECE X1105/128",
     "MarkingFile" : {
       "value" : "https://example.com/SafetyInstructions.pdf",
       "contentType" : "application/pdf"
     },
     "MarkingAdditionalText" : "0044"
   } ],
-  "LifeCycleStage" : "original",
-  "DateOfManufacture" : "2022-01-01",
-  "ManufacturerIdentifier" : "UMaAIKKIkknjWEXJUfPxxQHeWKEJ"
+  "EUDeclarationOfConformity" : [ "jOEqWQp1uq" ],
+  "ResultsOfTestReportsProvingCompliance" : [ "u5t5MbRoC" ]
 }

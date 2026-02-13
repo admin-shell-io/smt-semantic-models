@@ -1,33 +1,33 @@
 {
   "Documents" : [ {
     "DocumentIds" : [ {
+      "DocumentDomainId" : "1213455566",
       "DocumentIdentifier" : "XF90-884",
-      "DocumentIsPrimary" : true,
-      "DocumentDomainId" : "1213455566"
+      "DocumentIsPrimary" : true
+    } ],
+    "DocumentClassifications" : [ {
+      "ClassId" : "03-02",
+      "ClassName" : [ {
+        "en" : "W"
+      } ],
+      "ClassificationSystem" : "VDI2770 Blatt 1:2020"
     } ],
     "DocumentVersions" : [ {
+      "Language" : "en",
+      "Version" : "V1.2",
+      "Title" : [ {
+        "de" : "K"
+      } ],
+      "Subtitle" : [ {
+        "en" : "od"
+      } ],
+      "Description" : [ {
+        "en" : "CcG"
+      } ],
       "DigitalFiles" : [ {
         "value" : "https://example.com/SafetyInstructions.pdf",
         "contentType" : "application/pdf"
-      } ],
-      "Title" : [ {
-        "en" : "Example multi language string"
-      } ],
-      "Subtitle" : [ {
-        "en" : "Example multi language string"
-      } ],
-      "Description" : [ {
-        "en" : "Example multi language string"
-      } ],
-      "Language" : [ "eOMtThyhVNLWUZNRcBaQKxI", "yedUsFwdkelQbxeTeQOvaScfqIOOmaa", "JxkyvRnL" ],
-      "Version" : "V1.2"
-    } ],
-    "DocumentClassifications" : [ {
-      "ClassName" : [ {
-        "en" : "Example multi language string"
-      } ],
-      "ClassId" : "03-02",
-      "ClassificationSystem" : "VDI2770 Blatt 1:2020"
+      } ]
     } ]
   } ]
 }

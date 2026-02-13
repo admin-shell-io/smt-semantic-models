@@ -3,25 +3,22 @@
     "ShortName" : "NMC",
     "ClearName" : "Lithium nickel manganese cobalt oxides"
   },
-  "HazardousSubstances" : [ {
-    "HazardousSubstanceConcentration" : -1.7976931348623157E308,
-    "HazardousSubstanceClass" : "AcuteToxicity",
-    "HazardousSubstanceImpact" : [ "JxkyvRnL" ],
-    "HazardousSubstanceLocation" : {
-      "ComponentId" : "RYtGKbgicZaHCBRQDSx",
-      "ComponentName" : "Anode"
-    },
-    "HazardousSubstanceIdentifier" : "318515-15-1",
-    "HazardousSubstanceName" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa"
-  } ],
   "BatteryMaterials" : [ {
-    "BatteryMaterialName" : "Lithium",
-    "BatteryMaterialIdentifier" : "7439-93-2",
     "BatteryMaterialLocation" : {
-      "ComponentId" : "eOMtThyhVNLWUZNRcBaQKxI",
-      "ComponentName" : "Anode"
+      "ComponentName" : "Anode",
+      "ComponentId" : "Bs"
     },
-    "BatteryMaterialMass" : 4.356901E37,
+    "BatteryMaterialIdentifier" : "7439-93-2",
+    "BatteryMaterialName" : "Lithium",
+    "BatteryMaterialMass" : -63843.6,
     "IsCriticalRawMaterial" : true
+  } ],
+  "HazardousSubstances" : [ {
+    "HazardousSubstanceClass" : "AcuteToxicity",
+    "HazardousSubstanceName" : "1ysmMeVvj",
+    "HazardousSubstanceConcentration" : -78522.8,
+    "HazardousSubstanceImpact" : [ "nGq" ],
+    "HazardousSubstanceLocation" : { },
+    "HazardousSubstanceIdentifier" : "7948-47-4"
   } ]
 }

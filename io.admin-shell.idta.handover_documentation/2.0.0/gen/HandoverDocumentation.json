@@ -1,28 +1,56 @@
 {
   "Documents" : [ {
     "DocumentIds" : [ {
+      "DocumentDomainId" : "1213455566",
       "DocumentIdentifier" : "XF90-884",
-      "DocumentIsPrimary" : true,
-      "DocumentDomainId" : "1213455566"
+      "DocumentIsPrimary" : true
     } ],
-    "DocumentedEntities" : [ {
-      "type" : "ModelReference",
-      "keys" : [ {
-        "value" : "id1234",
-        "key" : "AnnotatedRelationshipElement"
-      } ]
+    "DocumentClassifications" : [ {
+      "ClassId" : "03-02",
+      "ClassName" : [ {
+        "en" : "qzS"
+      } ],
+      "ClassificationSystem" : "VDI2770 Blatt 1:2020"
     } ],
     "DocumentVersions" : [ {
+      "Language" : "en",
+      "Version" : "V1.2",
+      "Title" : [ {
+        "en" : "GPYuKmdB"
+      } ],
+      "Subtitle" : [ {
+        "de" : "ZcJkEZo"
+      } ],
       "Description" : [ {
-        "en" : "Example multi language string"
+        "en" : "E"
+      } ],
+      "KeyWords" : [ {
+        "en" : "NAjRbSIP"
       } ],
       "StatusSetDate" : "2020-02-06",
-      "TranslationOfEntities" : [ {
-        "type" : "ModelReference",
+      "StatusValue" : "Released",
+      "OrganizationShortName" : "Example company",
+      "OrganizationOfficialName" : "Example company Ltd.",
+      "RefersToEntities" : [ {
         "keys" : [ {
-          "value" : "id1234",
-          "key" : "AnnotatedRelationshipElement"
-        } ]
+          "key" : "GlobalReference",
+          "value" : "id1234"
+        } ],
+        "type" : "ExternalReference"
+      } ],
+      "BasedOnReferences" : [ {
+        "keys" : [ {
+          "key" : "GlobalReference",
+          "value" : "id1234"
+        } ],
+        "type" : "ExternalReference"
+      } ],
+      "TranslationOfEntities" : [ {
+        "keys" : [ {
+          "key" : "GlobalReference",
+          "value" : "id1234"
+        } ],
+        "type" : "ExternalReference"
       } ],
       "DigitalFiles" : [ {
         "value" : "https://example.com/SafetyInstructions.pdf",
@@ -31,57 +59,29 @@
       "PreviewFile" : {
         "value" : "https://example.com/SafetyInstructions.pdf",
         "contentType" : "application/pdf"
-      },
-      "Title" : [ {
-        "en" : "Example multi language string"
-      } ],
-      "RefersToEntities" : [ {
-        "type" : "ModelReference",
-        "keys" : [ {
-          "value" : "id1234",
-          "key" : "AnnotatedRelationshipElement"
-        } ]
-      } ],
-      "KeyWords" : [ {
-        "en" : "Example multi language string"
-      } ],
-      "Subtitle" : [ {
-        "en" : "Example multi language string"
-      } ],
-      "OrganizationShortName" : "Example company",
-      "Language" : [ "eOMtThyhVNLWUZNRcBaQKxI", "yedUsFwdkelQbxeTeQOvaScfqIOOmaa" ],
-      "Version" : "V1.2",
-      "StatusValue" : "Released",
-      "OrganizationOfficialName" : "Example company Ltd.",
-      "BasedOnReferences" : [ {
-        "type" : "ModelReference",
-        "keys" : [ {
-          "value" : "id1234",
-          "key" : "AnnotatedRelationshipElement"
-        } ]
-      } ]
+      }
     } ],
-    "DocumentClassifications" : [ {
-      "ClassName" : [ {
-        "en" : "Example multi language string"
+    "DocumentedEntities" : [ {
+      "keys" : [ {
+        "key" : "GlobalReference",
+        "value" : "id1234"
       } ],
-      "ClassId" : "03-02",
-      "ClassificationSystem" : "VDI2770 Blatt 1:2020"
+      "type" : "ExternalReference"
     } ]
   } ],
   "Entities" : [ {
     "specificAssetIds" : [ {
-      "name" : "SerialNumber",
-      "value" : "JxkyvRnL",
       "externalSubjectId" : {
-        "type" : "ExternalReference",
         "keys" : [ {
-          "value" : "id1234",
-          "key" : "FragmentReference"
-        } ]
-      }
+          "key" : "GlobalReference",
+          "value" : "id1234"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "value" : "LSdCWU9",
+      "name" : "SerialNumber"
     } ],
-    "entityType" : "SelfManagedEntity",
-    "globalAssetId" : "RYtGKbgicZaHCBRQDSx"
+    "globalAssetId" : "G6B",
+    "entityType" : "SelfManagedEntity"
   } ]
 }
