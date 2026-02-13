@@ -256,38 +256,38 @@
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#Resistance",
         "type" : "object",
         "properties" : {
-          "InitialInternalResistanceOnBatteryCellLevel" : {
-            "description" : "Internal battery cell and pack resistance / Internal resistance (in Ohm).",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOfBatteryCell",
+          "InitialInternalResistanceAtBatteryCellLevel" : {
+            "description" : "\r\n  Internal battery cell and pack resistance / Internal resistance (in Ohm).\r\n  \r\n  Measure of a battery cell’s opposition to current flow at the beginning of its operational life, affecting its performance, efficiency, and heat generation (internal resistance means the absolute value of the quotient of the voltage drop between the terminals by the electric current increase in the battery circuit during a current pulse).\r\n  ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceAtBatteryCellLevel",
             "$ref" : "#/components/schemas/InternalResistance"
           },
-          "InitialInternalResistanceOnBatteryPackLevel" : {
-            "description" : "Initial (Pre-Use) internal resistance on battery pack level.",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOfBatteryPack",
+          "InitialInternalResistanceAtBatteryPackLevel" : {
+            "description" : "\r\n  Initial (Pre-Use) internal resistance at battery pack level.\r\n  \r\n  Measure of opposition to current flow in an entire battery pack at the start of its operational life, affecting overall performance, efficiency, and heat generation (internal resistance means the absolute value of the quotient of the voltage drop between the terminals by the electric current increase in the battery circuit during a current pulse).\r\n  ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceAtBatteryPackLevel",
             "$ref" : "#/components/schemas/InternalResistance"
           },
-          "InitialInternalResistanceOnBatteryModuleLevel" : {
-            "description" : "Initial internal resistance of battery module. Initial internal resistance means the absolute beginning value of the quotient of the voltage drop between the terminals by the electric current increase in the battery circuit during a current pulse.",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOfBatteryModule",
+          "InitialInternalResistanceAtBatteryModuleLevel" : {
+            "description" : "\r\n  Initial internal resistance at battery module level.\r\n  \r\n  Initial internal resistance means the absolute beginning value of the quotient of the voltage drop between the terminals by the electric current increase in the battery circuit during a current pulse.\r\n  ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceAtBatteryModuleLevel",
             "$ref" : "#/components/schemas/InternalResistance"
           },
-          "InternalResistanceIncreaseOfBatteryCellLevel" : {
-            "description" : "Internal resistance increase of battery cell.",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#internalResistanceIncreaseOfBatteryCell",
+          "InternalResistanceIncreaseAtBatteryCellLevel" : {
+            "description" : "Internal resistance increase at battery cell level.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#internalResistanceIncreaseAtBatteryCellLevel",
             "$ref" : "#/components/schemas/ResistanceIncrease"
           },
-          "InternalResistanceIncreaseOfBatteryPackLevel" : {
-            "description" : "'Internal resistance increase on battery pack level' defined by 'increase of internal resistance in % as calculated from current and initial values (calculated from initial and current internal resistance on battery pack level).",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#internalResistanceIncreaseOfBatteryPack",
+          "InternalResistanceIncreaseAtBatteryPackLevel" : {
+            "description" : "'Internal resistance increase at battery pack level' defined by 'increase of internal resistance in % as calculated from current and initial values (calculated from initial and current internal resistance on battery pack level).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#internalResistanceIncreaseAtBatteryPackLevel",
             "$ref" : "#/components/schemas/ResistanceIncrease"
           },
-          "InternalResistanceIncreaseOfBatteryModuleLevel" : {
-            "description" : "Internal resistance increase on battery module level' defined by 'internal resistance increase on battery module level, calculated from initial and current internal resistance on battery module level.",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#internalResistanceIncreaseOfBatteryModule",
+          "InternalResistanceIncreaseAtBatteryModuleLevel" : {
+            "description" : "Internal resistance increase at battery module level level' defined by 'internal resistance increase on battery module level, calculated from initial and current internal resistance on battery module level.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#internalResistanceIncreaseAtBatteryModuleLevel",
             "$ref" : "#/components/schemas/ResistanceIncrease"
           }
         },
-        "required" : [ "InitialInternalResistanceOnBatteryCellLevel", "InitialInternalResistanceOnBatteryPackLevel", "InternalResistanceIncreaseOfBatteryPackLevel" ]
+        "required" : [ "InitialInternalResistanceAtBatteryCellLevel", "InitialInternalResistanceAtBatteryPackLevel", "InternalResistanceIncreaseAtBatteryPackLevel" ]
       },
       "ResistanceCharacteristic" : {
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#ResistanceCharacteristic",

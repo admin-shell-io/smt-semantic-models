@@ -1,13 +1,13 @@
 {
   "GeneralInformation" : {
-    "ManufacturerName" : "7f8zkbm",
-    "CompanyLogo" : "https://example.com/10cacP",
+    "ManufacturerName" : "qNg1dx",
+    "CompanyLogo" : "https://example.com/FDpInhxxDA",
     "ManufacturerProductDesignation" : [ {
-      "en" : "cHqwT"
+      "en" : "Xd"
     } ],
-    "ManufacturerArticleNumber" : "F2GbE",
-    "ManufacturerOrderCode" : "3Z68OI02",
-    "ManufacturerIdentifier" : "Ht",
+    "ManufacturerArticleNumber" : "G8IDnfORqd",
+    "ManufacturerOrderCode" : "l",
+    "ManufacturerIdentifier" : "XQXk",
     "WarrantyPeriod" : "2031-10",
     "BatteryCategory" : "ev",
     "BatteryMass" : 1007.0,
@@ -32,12 +32,12 @@
       "InitialSelfDischargingRate" : 2
     },
     "Resistance" : {
-      "InitialInternalResistanceOnBatteryCellLevel" : 67.0,
-      "InitialInternalResistanceOnBatteryPackLevel" : 23.0,
-      "InitialInternalResistanceOnBatteryModuleLevel" : 10.0,
-      "InternalResistanceIncreaseOfBatteryCellLevel" : 10,
-      "InternalResistanceIncreaseOfBatteryPackLevel" : 10,
-      "InternalResistanceIncreaseOfBatteryModuleLevel" : 10
+      "InitialInternalResistanceAtBatteryCellLevel" : 67.0,
+      "InitialInternalResistanceAtBatteryPackLevel" : 23.0,
+      "InitialInternalResistanceAtBatteryModuleLevel" : 10.0,
+      "InternalResistanceIncreaseAtBatteryCellLevel" : 10,
+      "InternalResistanceIncreaseAtBatteryPackLevel" : 10,
+      "InternalResistanceIncreaseAtBatteryModuleLevel" : 10
     },
     "PowerCapability" : {
       "MaximumPermittedBatteryPower" : "Infinity",
@@ -56,7 +56,7 @@
       "ExpectedLifetimeInCalendarYears " : 15,
       "ExpectedNumberOfCycles" : 1000,
       "CapacityThresholdExhaustion" : 23.0,
-      "CrateOfRelevantCycleLifeTest" : -63369.8
+      "CrateOfRelevantCycleLifeTest" : -85338.2
     }
   }
 }
