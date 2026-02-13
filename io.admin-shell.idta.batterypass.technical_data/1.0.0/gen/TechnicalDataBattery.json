@@ -1,62 +1,62 @@
 {
+  "GeneralInformation" : {
+    "ManufacturerName" : "7f8zkbm",
+    "CompanyLogo" : "https://example.com/10cacP",
+    "ManufacturerProductDesignation" : [ {
+      "en" : "cHqwT"
+    } ],
+    "ManufacturerArticleNumber" : "F2GbE",
+    "ManufacturerOrderCode" : "3Z68OI02",
+    "ManufacturerIdentifier" : "Ht",
+    "WarrantyPeriod" : "2031-10",
+    "BatteryCategory" : "ev",
+    "BatteryMass" : 1007.0,
+    "ProductImages" : [ {
+      "value" : "https://example.com/SafetyInstructions.pdf",
+      "contentType" : "application/pdf"
+    } ]
+  },
   "TechnicalPropertyAreas" : {
+    "CapacityEnergyVoltage" : {
+      "NominalVoltage" : 4.3,
+      "MinVoltage" : 2.04,
+      "MaxVoltage" : 6.0,
+      "RatedCapacity" : 210.0,
+      "CapacityFade" : 10.0,
+      "CertifiedUsableBatteryEnergy" : 100.0
+    },
+    "RoundTripEnergyEfficiency" : {
+      "InitialRoundTripEnergyEfficiency" : 100,
+      "RoundTripEnergyEfficiencyAt50PercentOfCycleLife" : 100,
+      "EnergyRoundTripEfficiencyFade" : 10.0,
+      "InitialSelfDischargingRate" : 2
+    },
     "Resistance" : {
-      "InitialInternalResistanceOfBatteryCellLevel" : 67.0,
-      "InitialInternalResistanceOfBatteryPackLevel" : 23.0,
+      "InitialInternalResistanceOnBatteryCellLevel" : 67.0,
+      "InitialInternalResistanceOnBatteryPackLevel" : 23.0,
       "InitialInternalResistanceOnBatteryModuleLevel" : 10.0,
-      "InternalResistanceIncreaseOfBatteryModuleLevel" : 10,
       "InternalResistanceIncreaseOfBatteryCellLevel" : 10,
-      "InternalResistanceIncreaseOfBatteryPackLevel" : 10
+      "InternalResistanceIncreaseOfBatteryPackLevel" : 10,
+      "InternalResistanceIncreaseOfBatteryModuleLevel" : 10
     },
     "PowerCapability" : {
-      "RatioNominalBatteryPowerAndBatteryEnergy" : 0.611,
-      "PowerFade" : 23.0,
       "MaximumPermittedBatteryPower" : "Infinity",
+      "PowerFade" : 23.0,
+      "RatioNominalBatteryPowerAndBatteryEnergy" : 0.611,
       "OriginalPowerCapability" : [ {
         "atSoC" : 80.0,
         "powerCapabilityAt" : 500.0
       } ]
     },
-    "CapacityEnergyVoltage" : {
-      "CertifiedUsableBatteryEnergy" : 100.0,
-      "CapacityFade" : 10.0,
-      "NominalVoltage" : 4.3,
-      "RatedCapacity" : 210.0,
-      "MaxVoltage" : 6.0,
-      "MinVoltage" : 2.04
-    },
     "Temperature" : {
-      "TemperatureRangeIdleState_UpperBoundary" : -19.0,
-      "TemperatureRangeIdleState_LowerBoundary" : 49.0
+      "TemperatureRangeIdleState_LowerBoundary" : 49.0,
+      "TemperatureRangeIdleState_UpperBoundary" : -19.0
     },
     "Lifetime" : {
+      "ExpectedLifetimeInCalendarYears " : 15,
       "ExpectedNumberOfCycles" : 1000,
       "CapacityThresholdExhaustion" : 23.0,
-      "CrateOfRelevantCycleLifeTest" : 2.6035454E38,
-      "ExpectedLifetimeInCalendarYears " : 15
-    },
-    "RoundTripEnergyEfficiency" : {
-      "InitialRoundTripEnergyEfficiency" : 100,
-      "EnergyRoundTripEfficiencyFade" : 10.0,
-      "InitialSelfDischargingRate" : 2,
-      "RoundTripEnergyEfficiencyAt50PercentOfCycleLife" : 100
+      "CrateOfRelevantCycleLifeTest" : -63369.8
     }
-  },
-  "GeneralInformation" : {
-    "CompanyLogo" : "telnet://192.0.2.16:80/",
-    "BatteryMass" : 1007.0,
-    "ManufacturerName" : "eOMtThyhVNLWUZNRcBaQKxI",
-    "ProductImages" : [ {
-      "value" : "https://example.com/SafetyInstructions.pdf",
-      "contentType" : "application/pdf"
-    } ],
-    "BatteryCategory" : "lmt",
-    "ManufacturerProductDesignation" : [ {
-      "en" : "Example multi language string"
-    } ],
-    "ManufacturerOrderCode" : "JxkyvRnL",
-    "ManufacturerArticleNumber" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
-    "WarrantyPeriod" : "2031-10",
-    "ManufacturerIdentifier" : "RYtGKbgicZaHCBRQDSx"
   }
 }
