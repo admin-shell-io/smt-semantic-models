@@ -38,22 +38,26 @@ The following [CLI - Semantic Aspect Meta Model Command Line Tool](https://eclip
 * validating the aspect models
 * for generating the different files in folder "gen"
 
-  * *.aas.json JSON format for AAS
-  * *.html  hmtl documentation of the Aspect Model
-  * *.json  example payload in [Value-Only format](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1/mappings/mappings.html#value-only-serialization-in-json)
+>   ***-schema.json**  JSON schema for [Value-Only](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1.2/mappings/mappings.html#value-only-serialization-in-json) format of AAS
+> 
+>   ***.json**  example payload in [Value-Only format](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1/mappings/mappings.html#value-only-serialization-in-json) conformant to generated schema *-schema.json*
+> 
+>   ***.html**  hmtl documentation of the Aspect Model
 
 
 The following version of the **samm-cli - Semantic Aspect Meta Model Command Line Tool** was used for validation and generation:
 
 
  > Version: 2.13.1
-  
+>   
  > Build date: 2026-01-19 14:02:48
-
+> 
  > Git commit: 047a17acdf0c1ecd945b671c0da45657bea87678
 
 
-The following version of the [Semantic Aspect Meta Model (SAMM)](https://eclipse-esmf.github.io/samm-specification) is currently used: **2.2.0**
+The following version of the [Semantic Aspect Meta Model (SAMM)](https://eclipse-esmf.github.io/samm-specification) is currently used: 
+
+> **2.2.0**
 
 
 
