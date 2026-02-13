@@ -256,12 +256,12 @@
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#Resistance",
         "type" : "object",
         "properties" : {
-          "InitialInternalResistanceOfBatteryCellLevel" : {
+          "InitialInternalResistanceOnBatteryCellLevel" : {
             "description" : "Internal battery cell and pack resistance / Internal resistance (in Ohm).",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOfBatteryCell",
             "$ref" : "#/components/schemas/InternalResistance"
           },
-          "InitialInternalResistanceOfBatteryPackLevel" : {
+          "InitialInternalResistanceOnBatteryPackLevel" : {
             "description" : "Initial (Pre-Use) internal resistance on battery pack level.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#initialInternalResistanceOfBatteryPack",
             "$ref" : "#/components/schemas/InternalResistance"
@@ -287,7 +287,7 @@
             "$ref" : "#/components/schemas/ResistanceIncrease"
           }
         },
-        "required" : [ "InitialInternalResistanceOfBatteryCellLevel", "InitialInternalResistanceOfBatteryPackLevel", "InternalResistanceIncreaseOfBatteryPackLevel" ]
+        "required" : [ "InitialInternalResistanceOnBatteryCellLevel", "InitialInternalResistanceOnBatteryPackLevel", "InternalResistanceIncreaseOfBatteryPackLevel" ]
       },
       "ResistanceCharacteristic" : {
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#ResistanceCharacteristic",
@@ -400,14 +400,14 @@
       },
       "ExpectedLifeTime" : {
         "type" : "number",
-        "minimum" : 0,
         "maximum" : 4294967295,
+        "minimum" : 0,
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#ExpectedLifeTime"
       },
       "ExpectedNumberOfCycles" : {
         "type" : "number",
-        "minimum" : 0,
         "maximum" : 4294967295,
+        "minimum" : 0,
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#ExpectedNumberOfCycles"
       },
       "CapacityThresholdForExhaustion" : {

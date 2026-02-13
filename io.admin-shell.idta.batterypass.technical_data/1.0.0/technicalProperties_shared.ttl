@@ -92,8 +92,8 @@
 
 :Resistance a samm:Entity ;
   samm:properties ( 
-  [ samm:property :initialInternalResistanceOfBatteryCell; samm:payloadName "InitialInternalResistanceOfBatteryCellLevel" ] 
-  [ samm:property :initialInternalResistanceOfBatteryPack; samm:payloadName "InitialInternalResistanceOfBatteryPackLevel" ] 
+  [ samm:property :initialInternalResistanceOfBatteryCell; samm:payloadName "InitialInternalResistanceOnBatteryCellLevel" ] 
+  [ samm:property :initialInternalResistanceOfBatteryPack; samm:payloadName "InitialInternalResistanceOnBatteryPackLevel" ] 
   [ samm:property :initialInternalResistanceOfBatteryModule; samm:optional true; samm:payloadName "InitialInternalResistanceOnBatteryModuleLevel" ] 
   [ samm:property :internalResistanceIncreaseOfBatteryCell; samm:optional true; samm:payloadName "InternalResistanceIncreaseOfBatteryCellLevel" ] 
   [ samm:property :internalResistanceIncreaseOfBatteryPack; samm:payloadName "InternalResistanceIncreaseOfBatteryPackLevel" ] 

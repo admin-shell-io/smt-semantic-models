@@ -7,16 +7,16 @@
     "ProductClassId" : "27-01-88-77"
   } ],
   "generalInformation" : {
-    "ManufacturerOrderCode" : "JxkyvRnL",
-    "ManufacturerLogo" : "telnet://192.0.2.16:80/",
-    "ManufacturerArticleNumber" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
-    "ManufacturerName" : "eOMtThyhVNLWUZNRcBaQKxI",
+    "ManufacturerName" : "qzcpqus",
+    "ManufacturerLogo" : "https://example.com/q0hhYi2",
+    "ManufacturerProductDesignation" : [ {
+      "de" : "xkz"
+    } ],
+    "ManufacturerArticleNumber" : "Ah",
+    "ManufacturerOrderCode" : "N8mwEsX0uR",
     "ProductImages" : [ {
       "value" : "https://example.com/SafetyInstructions.pdf",
       "contentType" : "application/pdf"
-    } ],
-    "ManufacturerProductDesignation" : [ {
-      "en" : "Example multi language string"
     } ]
   }
 }
