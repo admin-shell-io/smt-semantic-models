@@ -28,7 +28,7 @@ Models can reuse elements from different namespaces within the repository.
 When defining and reusing elements from other aspect models, the following repositories with aspect models are allowed to be used besides the ones in this repository:
 
 * [Catena-X aspect models](https://github.com/eclipse-tractusx/sldt-semantic-models), their namespaces start with *io.catenax*
-* [BatteryPass aspect models](https://github.com/batterypass/BatteryPassDataModel), their namespaces start with *io.BatteryPass* - however, please note that older version of these aspect models have licence **CC BY-NC 4.0**, only use Aspect MOdels with licence **CC BY 4.0**
+* [BatteryPass aspect models](https://github.com/batterypass/BatteryPassDataModel), their namespaces start with *io.BatteryPass* - however, please note that older version of these aspect models have licence **CC BY-NC 4.0**, only use Aspect Models with licence **CC BY 4.0**
 
 
 # Generator used
@@ -39,23 +39,21 @@ The following [CLI - Semantic Aspect Meta Model Command Line Tool](https://eclip
 * for generating the different files in folder "gen"
 
   * *.aas.json JSON format for AAS
-  * *.aas.xml  XML format for AAS
-  * *.aasx  [aasx format](https://industrialdigitaltwin.io/aas-specifications/IDTA-01005/v3.1/index.html) for AAS
   * *.html  hmtl documentation of the Aspect Model
   * *.json  example payload in [Value-Only format](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1/mappings/mappings.html#value-only-serialization-in-json)
 
 
-samm-cli - Semantic Aspect Meta Model Command Line Tool
-
-Version: 2.11.1
-
-Build date: 2025-07-09 10:57:19
-
-Git commit: 12e6bf900ae63a8ee993da3e0cbc08cf36ee5c50
+The following version of the **samm-cli - Semantic Aspect Meta Model Command Line Tool** was used for validation and generation:
 
 
-There is a [command line tool in ESMF](https://eclipse-esmf.github.io/esmf-developer-guide/tooling-guide/samm-cli.html) that supports generation of different software artifacts like JSON schema, html etc.
-In the "gen" Folder of the Aspect Models some of these software artifacts are contained.
+ > Version: 2.13.1
+  
+ > Build date: 2026-01-19 14:02:48
+
+ > Git commit: 047a17acdf0c1ecd945b671c0da45657bea87678
+
+
+The following version of the [Semantic Aspect Meta Model (SAMM)](https://eclipse-esmf.github.io/samm-specification) is currently used: **2.2.0**
 
 
 
