@@ -46,6 +46,15 @@ The following [CLI - Semantic Aspect Meta Model Command Line Tool](https://eclip
 > 
 >   ***.html**  hmtl documentation of the Aspect Model
 
+The corresponding commands with **%1** being the .ttl with the Aspect Model and **%2** is the name of the file, typically the name of the Aspect Model, are
+
+>samm aspect %1 validate
+>
+>samm aspect %1 to json --output "../_gen/%2.json"
+>
+> samm aspect %1 to schema  --output "../_gen/%2-schema.json"
+
+
 
 The following version of the **samm-cli - Semantic Aspect Meta Model Command Line Tool** was used for validation and generation:
 
