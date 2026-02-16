@@ -101,7 +101,7 @@
    samm:preferredName "date of putting into service"@en ;
    samm:description "Where appropriate, the battery passport must include information on the date of putting the battery into service. BR Annex VI Part A (1); Art. 3(33); Art. 38(7); ESPR Art. 2(32)\n\nDIN DKE Spec chapter reference: 6.1.3.3"@en ;
    samm:characteristic :PuttingIntoServiceDate ;
-   samm:exampleValue "2022-06-01" .
+   samm:exampleValue "2022-06-01"^^xsd:date .
 
 :uniqueFacilityIdentifier a samm:Property ;
    samm:preferredName "unique Identifier of a facility"@en ;
@@ -160,5 +160,5 @@ Note: CE marking is declared as mandatory according to EU Blue Guide
    samm:see <urn:irdi:0173-1#02-ABA705#003> ;
    samm:characteristic shared:DocumentIdentifierSet .
    
-:PuttingIntoServiceDateTime a samm:Characteristic ;
+:PuttingIntoServiceDate a samm:Characteristic ;
    samm:dataType xsd:date .
