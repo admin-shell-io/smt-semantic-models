@@ -77,6 +77,7 @@ The following attributes are new:
 * manufacturerIdentifier
 * euDeclarationOfConformity
 * resultsOfTestReportsProvingCompliance
+* dateOfPuttingIntoService
 
 # Overall Deviations
 
