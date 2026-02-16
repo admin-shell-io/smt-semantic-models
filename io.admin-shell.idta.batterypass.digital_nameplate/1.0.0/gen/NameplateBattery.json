@@ -45,7 +45,7 @@
       }
     },
     "IPCommunicationChannels" : [ {
-      "AddressOfAdditionalLink" : "lNDR",
+      "AddressOfAdditionalLink" : "jy5z",
       "TypeOfCommunication" : "Chat",
       "availableTime" : {
         "de" : "Montag – Freitag 08:00 bis 16:00"
@@ -88,10 +88,11 @@
   },
   "SerialNumber" : "A12345-X75EN",
   "DateOfManufacture" : "2022-01-01",
+  "DateOfPuttingIntoService" : "2022-06-01",
   "UniqueFacilityIdentifier" : "987654321",
   "LifeCycleStage" : "Original",
-  "OperatorIdentifier" : "1Kx5NgYZKm",
-  "ManufacturerIdentifier" : "8",
+  "OperatorIdentifier" : "yqk6j8VY",
+  "ManufacturerIdentifier" : "8UpyKAlt0",
   "Markings" : [ {
     "MarkingName" : "0173-1%2307-DAA603%23004",
     "DesignationOfCertificateOrApproval" : "KEMA99IECE X1105/128",
@@ -103,6 +104,6 @@
     },
     "MarkingAdditionalText" : "0044"
   } ],
-  "EUDeclarationOfConformity" : [ "jOEqWQp1uq" ],
-  "ResultsOfTestReportsProvingCompliance" : [ "u5t5MbRoC" ]
+  "EUDeclarationOfConformity" : [ "G8o" ],
+  "ResultsOfTestReportsProvingCompliance" : [ "0" ]
 }
