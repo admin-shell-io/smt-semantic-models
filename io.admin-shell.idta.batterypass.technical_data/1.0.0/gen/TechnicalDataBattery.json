@@ -1,13 +1,13 @@
 {
   "GeneralInformation" : {
-    "ManufacturerName" : "6lF",
-    "CompanyLogo" : "https://example.com/8E9DJ",
+    "ManufacturerName" : "cS204",
+    "CompanyLogo" : "https://example.com/YS8bv",
     "ManufacturerProductDesignation" : [ {
-      "en" : "8L"
+      "en" : "KHdLhiXZY"
     } ],
-    "ManufacturerArticleNumber" : "EDNmTrLQ5B",
-    "ManufacturerOrderCode" : "eZ",
-    "ManufacturerIdentifier" : "bnk",
+    "ManufacturerArticleNumber" : "tyHh9in",
+    "ManufacturerOrderCode" : "qsd7lsmsUf",
+    "ManufacturerIdentifier" : "d0CSVLC3w1",
     "WarrantyPeriod" : "2031-10",
     "BatteryCategory" : "ev",
     "BatteryMass" : 1007.0,
@@ -17,7 +17,7 @@
         "contentType" : "application/pdf"
       },
       "ImageNote" : [ {
-        "de" : "P"
+        "en" : "1bX"
       } ]
     } ]
   },
@@ -61,7 +61,8 @@
       "ExpectedLifetimeInCalendarYears " : 15,
       "ExpectedNumberOfCycles" : 1000,
       "CapacityThresholdExhaustion" : 23.0,
-      "CrateOfRelevantCycleLifeTest" : -32798.4
+      "CycleLifeReferenceTest" : [ "96hQh" ],
+      "CrateOfRelevantCycleLifeTest" : -96471.8
     }
   }
 }

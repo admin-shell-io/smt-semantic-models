@@ -435,6 +435,18 @@
         "type" : "number",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#CapacityThresholdForExhaustion"
       },
+      "DocumentIdentifierSet" : {
+        "description" : "Each document is uniquely discoverable via its identifier. If more information is needed, please refer to the 'Handover Documentation'.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#DocumentIdentifierSet",
+        "type" : "array",
+        "items" : {
+          "type" : "string",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#DocumentIdentifierSetTrait",
+          "description" : "Alphanumeric character sequence uniquely identifying a document.",
+          "minLength" : 1
+        },
+        "uniqueItems" : true
+      },
       "CRateLifeCycleTest" : {
         "type" : "number",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#CRateLifeCycleTest"
@@ -458,13 +470,18 @@
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#capacityThresholdForExhaustion",
             "$ref" : "#/components/schemas/CapacityThresholdForExhaustion"
           },
+          "CycleLifeReferenceTest" : {
+            "description" : "The battery passport must include information about the expected battery lifetime expressed in cycles, and reference test used. \n\nDIN DKE Spec 99100 chapter reference: 6.7.6.5",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#cycleLifeReferenceTest",
+            "$ref" : "#/components/schemas/DocumentIdentifierSet"
+          },
           "CrateOfRelevantCycleLifeTest" : {
             "description" : "The C-rate should be provided separately for both the charge and discharge of the battery, if applicable.\n\nThe exception for non-cycle applications as mentioned in \"Expected lifetime: Number of charge-discharge cycles\" should apply to this data attribute as well.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.6",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#cRateLifeCycleTest",
             "$ref" : "#/components/schemas/CRateLifeCycleTest"
           }
         },
-        "required" : [ "ExpectedLifetimeInCalendarYears ", "ExpectedNumberOfCycles", "CapacityThresholdExhaustion", "CrateOfRelevantCycleLifeTest" ]
+        "required" : [ "ExpectedLifetimeInCalendarYears ", "ExpectedNumberOfCycles", "CapacityThresholdExhaustion", "CycleLifeReferenceTest", "CrateOfRelevantCycleLifeTest" ]
       },
       "LifetimeCharacteristic" : {
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#LifetimeCharacteristic",
