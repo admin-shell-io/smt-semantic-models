@@ -1,40 +1,45 @@
 {
-  "ProductClassifications" : [ {
-    "ProductClassCodedName" : "VLhpfQGTMDYpsBZxvfBoeygjb",
-    "ProductClassName" : [ {
-      "en" : "Example multi language string"
+  "GeneralInformation" : {
+    "ManufacturerName" : "us5uLc",
+    "CompanyLogo" : "https://example.com/JeCaFfb7b",
+    "ManufacturerProductDesignation" : [ {
+      "en" : "orFB0M"
     } ],
+    "ManufacturerArticleNumber" : "Mnn",
+    "ManufacturerOrderCode" : "Hi8kC",
+    "ProductImages" : [ {
+      "ImageFile" : {
+        "value" : "https://example.com/SafetyInstructions.pdf",
+        "contentType" : "application/pdf"
+      },
+      "ImageNote" : [ {
+        "en" : "A"
+      } ]
+    } ]
+  },
+  "ProductClassifications" : [ {
     "ProductClassificationSystem" : "ECLASS",
     "ClassificationSystemVersion" : "9.0 (BASIC)",
+    "ClassificationSystemUrl" : "x",
     "ProductClassId" : "27-01-88-77",
-    "ClassificationSystemUrl" : "RYtGKbgicZaHCBRQDSx",
+    "ProductClassCodedName" : "pcVnqduX",
+    "ProductClassName" : [ {
+      "en" : "T1nvec"
+    } ],
     "ReferenceToTechnicalPropertyArea" : {
-      "type" : "ModelReference",
       "keys" : [ {
-        "value" : "id1234",
-        "key" : "AnnotatedRelationshipElement"
-      } ]
+        "key" : "GlobalReference",
+        "value" : "id1234"
+      } ],
+      "type" : "ExternalReference"
     }
   } ],
   "TechnicalPropertyAreas" : { },
-  "SpecificDescriptions" : [ { } ],
   "FurtherInformation" : {
-    "ValidDate" : "2026-01-15T16:27:24.243+01:00",
     "TextStatement" : [ {
-      "en" : "Example multi language string"
-    } ]
-  },
-  "GeneralInformation" : {
-    "CompanyLogo" : "telnet://192.0.2.16:80/",
-    "ManufacturerOrderCode" : "JxkyvRnL",
-    "ManufacturerArticleNumber" : "yedUsFwdkelQbxeTeQOvaScfqIOOmaa",
-    "ManufacturerName" : "eOMtThyhVNLWUZNRcBaQKxI",
-    "ProductImages" : [ {
-      "value" : "https://example.com/SafetyInstructions.pdf",
-      "contentType" : "application/pdf"
+      "de" : "Y71ygDY"
     } ],
-    "ManufacturerProductDesignation" : [ {
-      "en" : "Example multi language string"
-    } ]
-  }
+    "ValidDate" : "2026-02-17T13:03:20.000Z"
+  },
+  "SpecificDescriptions" : [ { } ]
 }

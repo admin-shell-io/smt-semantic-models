@@ -123,7 +123,7 @@
    
    DIN DKE Spec 99100 chapter reference: 6.1.3.7"""@en ;
    samm:characteristic :BatteryStatusEnumeration ;
-   samm:exampleValue "Original" .
+   samm:exampleValue :Original .
  
 :operatorIdentifier a samm:Property ;
    samm:preferredName "identifier of the operator"@en ;

@@ -21,15 +21,14 @@ Source GitHub IDTA for .aasx file and Submodel Template Specification etc.: http
 
 # Dependencies
 
-This model is using  models or model elements of the BatteryPass Consortium: https://github.com/batterypass/BatteryPassDataModel
-with license CC BY 4.0. They are marked by using the prefix bp:
+
 
 
 
 # Changelog
 All notable changes to this model will be documented in this section.
 
-## [1.0.0] - <add date>
+## [1.0.0] - February 2026
 
 for changelog see  [IDTA-02035-5 V1.2, section "Version history"]()
 
@@ -37,17 +36,15 @@ Contained Files:
 
 * ProductCondition.ttl
 * ProductCondition_shared.ttl (extract from BatteryPass Consortium)
-* namespace.ttl
+* Namespace.ttl
 
-and
-
-* ProductConditionIndustrialLmt.ttl
 
 
 Dependencies:
 
 * urn:samm:io.admin-shell.idta.handover_documentation:2.0.0
 * urn:samm:io.admin-shell.idta.shared:3.1.0
+
 
 Deviations:
 * informationOnAccidents is modelled as a Set of Document Identifier (reuse from SMT HandoverDocumentation), in DIN DKE SPEC 99100 it is described as a Reference to a pdf File.  

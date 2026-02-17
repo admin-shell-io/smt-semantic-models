@@ -31,7 +31,7 @@ with license CC BY 4.0. (urn:samm:io.BatteryPass.Circularity:1.2.0#)
 # Changelog
 All notable changes to this model will be documented in this section.
 
-## [1.0.0] - 2025-12
+## [1.0.0] - February 2026
 
 for changelog see  [IDTA-02035-7 V1.0, section "Version history"]()
 
@@ -40,10 +40,6 @@ Contained Files:
 * Circularity.ttl
 * Circularity_shared.ttl
 * Namespace.ttl
-
-Known issues:
-
-* generated html file: wrong urn for Aspect Model, should be urn:samm:io.admin-shell.idta.batterypass.circularity:1.2.0#Circularity (properties of urn:samm:io.BatteryPass.Circularity:2.0.0#Circularity are used, both have same name) (see https://github.com/eclipse-esmf/esmf-sdk/issues/798)
 
 
 

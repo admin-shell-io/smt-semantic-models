@@ -1,19 +1,24 @@
 {
   "GeneralInformation" : {
-    "ManufacturerName" : "qNg1dx",
-    "CompanyLogo" : "https://example.com/FDpInhxxDA",
+    "ManufacturerName" : "6lF",
+    "CompanyLogo" : "https://example.com/8E9DJ",
     "ManufacturerProductDesignation" : [ {
-      "en" : "Xd"
+      "en" : "8L"
     } ],
-    "ManufacturerArticleNumber" : "G8IDnfORqd",
-    "ManufacturerOrderCode" : "l",
-    "ManufacturerIdentifier" : "XQXk",
+    "ManufacturerArticleNumber" : "EDNmTrLQ5B",
+    "ManufacturerOrderCode" : "eZ",
+    "ManufacturerIdentifier" : "bnk",
     "WarrantyPeriod" : "2031-10",
     "BatteryCategory" : "ev",
     "BatteryMass" : 1007.0,
     "ProductImages" : [ {
-      "value" : "https://example.com/SafetyInstructions.pdf",
-      "contentType" : "application/pdf"
+      "ImageFile" : {
+        "value" : "https://example.com/SafetyInstructions.pdf",
+        "contentType" : "application/pdf"
+      },
+      "ImageNote" : [ {
+        "de" : "P"
+      } ]
     } ]
   },
   "TechnicalPropertyAreas" : {
@@ -56,7 +61,7 @@
       "ExpectedLifetimeInCalendarYears " : 15,
       "ExpectedNumberOfCycles" : 1000,
       "CapacityThresholdExhaustion" : 23.0,
-      "CrateOfRelevantCycleLifeTest" : -85338.2
+      "CrateOfRelevantCycleLifeTest" : -32798.4
     }
   }
 }

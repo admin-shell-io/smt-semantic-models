@@ -26,7 +26,7 @@ The folder "gen" for each version contains sammple JSON files, the JSON schema a
 # Changelog
 All notable changes to this model will be documented in this section.
 
-## [1.0.0] - 2025-12
+## [1.0.0] - February 2026
 
 Contained Files:
 
@@ -39,7 +39,8 @@ Contained Files:
 * urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0
 * urn:samm:io.admin-shell.idta.contact_information:3.0.0
 * urn:samm:io.admin-shell.idta.shared:3.1.0
-* urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0
+* urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0
+
 
 # Deviations from urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0
 

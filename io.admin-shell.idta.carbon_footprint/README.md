@@ -2,7 +2,6 @@
 
 This namespace is reserved for the Submodel Template Specification (SMT) IDTA-02023 Version 1.0 Carbon Footprint
 
-Previous Version: 0.9
 
 Source GitHub: https://github.com/admin-shell-io/submodel-templates/tree/main/published/Carbon%20Footprint/1/0
 Source Content Hub of the IDTA: [IDTA-02023 V1.0](https://industrialdigitaltwin.org/en/wp-content/uploads/sites/2/2025/03/IDTA-02023_Submodel_CarbonFootprint.pdf)
@@ -22,14 +21,18 @@ Source Content Hub of the IDTA: [IDTA-02023 V1.0](https://industrialdigitaltwin.
 # Changelog
 All notable changes to this model will be documented in this section.
 
-## [1.0.0] - December 2025
+## [1.0.0] - February 2026
 
 for changelog see  [IDTA-02023 V1.0, section "Version history"](https://industrialdigitaltwin.org/en/wp-content/uploads/sites/2/2025/03/IDTA-02023_Submodel_CarbonFootprint.pdf)
 
 Contained Files:
 
 * CarbonFootprint.ttl
-* pcfInformation_generic.ttl
+* CarbonFootprint_shared.ttl
+* enum_LifeCyclePhases_shared.ttl
+* enum_ReferenceImpactUnitForCaluclation_shared.ttl
+* ProductOrSectorSpecificCarbonFootprints_shared.ttl
+* ProductOrSectorSpecificCarbonFootprints_generic.ttl
 
 
 Dependencies:
@@ -42,17 +45,8 @@ None
 - description starting with capital letter and ending with "."
 - if description contains AAS specific wording like "Submodel" etc. this is omitted
 - In Contact Information Street is defined as street names and house number, in Pcf there are two separate properties. Neverthelesse the street property from Contact Information was used. In Contact Information it has IRDI urn:irdi:0173-1#02-AAO128#002. In Pcf it has IRDI 0173-1#02-ABH956#003.
-- SAMM does not allows numbers in names, therefore pcfCo2eq was renamed to pcfCoEq
 - Property "ArbitraryContent" as part of "PcfInformation" is modelled an SAMM Entity without properties
 - enumerations are not (yet) modelled:
-  -- ReferenceImpactUnitForCalculation - the list is open, i.e. additional values may be added. In SAMM enumerations are closed, therefore not modelled
+  -- ReferenceImpactUnitForCalculation - the list is open, i.e. additional values may be added. In SAMM enumerations are closed.
   -- PcfCalculationMethod - the list is open, i.e. additional values may be added. In SAMM enumerations are closed, therefore not modelled
   
-
-# Known Issues generation of aasx from aspect model:
-
-- SubmodelElement File is realized as SMC with two properties (ExplanatoryStatement and PcfRuleOnlineReference)
-- no template qualifiers generated
-- the idShort of the Element within a SML has the idShort of the list, not of the element
-- SMC ExternalPcfApi not generated with its properties, properties are missing
-- SMC ProductOrSectorSpecificRule not generated with its properties, properties are missing
