@@ -96,7 +96,7 @@
    samm:see <urn:irdi:0173-1%2302-ABG856%23003> ;
    samm:see <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#referenceImpactUnitForCalculation> ;
    samm:characteristic pcf:ReferenceImpactUnitForCalculationEnum ;
-   samm:exampleValue :piece .
+   samm:exampleValue pcf:piece .
 
 
 :quantityOfMeasureForCalculation a samm:Property ;
@@ -115,7 +115,7 @@
    samm:see <urn:irdi:0173-1%2302-ABG858%23003> ;
    samm:see <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#lifeCyclePhases> ;
    samm:characteristic pcf:LifeCyclePhaseSet ;
-   samm:exampleValue :C4 . 
+   samm:exampleValue pcf:C4 . 
  
 :performanceClass a samm:Property ;
   samm:preferredName "carbon footprint performance class"@en ;
