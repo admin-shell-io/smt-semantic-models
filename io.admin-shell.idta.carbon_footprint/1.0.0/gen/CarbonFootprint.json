@@ -51,7 +51,7 @@
         }
       },
       "IPCommunicationChannels" : [ {
-        "AddressOfAdditionalLink" : "MSp8hEfA",
+        "AddressOfAdditionalLink" : "XYLn",
         "TypeOfCommunication" : "Chat",
         "availableTime" : {
           "de" : "Montag – Freitag 08:00 bis 16:00"
@@ -99,8 +99,8 @@
     "PcfCalculationMethods" : "sector specific calculation method",
     "ProductOrSectorSpecificRule" : {
       "PcfRuleOperator" : "WBCSD",
-      "PcfRuleName" : "Gua35TF",
-      "PcfRuleVersion" : "sas0fSl",
+      "PcfRuleName" : "KPww",
+      "PcfRuleVersion" : "qB",
       "PcfRuleOnlineReference" : {
         "value" : "https://example.com/SafetyInstructions.pdf",
         "contentType" : "application/pdf"
