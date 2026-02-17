@@ -47,26 +47,47 @@
         "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#MimeType",
         "description" : "A MIME type as defined in RFC 2046, for example \"application/pdf\"."
       },
+      "FileWithContentType" : {
+        "description" : "A file is a data element that represents an address to a file (a locator). The value is a URI that can represent an absolute or relative path.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#FileWithContentType",
+        "type" : "object",
+        "properties" : {
+          "value" : {
+            "description" : "Path and name of the file (with file extension).\n\nThe path can be absolute or relative.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#resourceValue",
+            "$ref" : "#/components/schemas/ResourcePath"
+          },
+          "contentType" : {
+            "description" : "Content type of the content of the file or blob.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#contentType",
+            "$ref" : "#/components/schemas/MimeType"
+          }
+        },
+        "required" : [ "value", "contentType" ]
+      },
+      "ProductImage" : {
+        "description" : "Pictorial representation of the product related to an application.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#ProductImage",
+        "type" : "object",
+        "properties" : {
+          "ImageFile" : {
+            "description" : "Picture of the product (low resolution) 72 dpi / rgb (GIF or JPG).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#imageFile",
+            "$ref" : "#/components/schemas/FileWithContentType"
+          },
+          "ImageNote" : {
+            "description" : "Notes or explanations about the image provided.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#imageNote",
+            "$ref" : "#/components/schemas/MultiLanguageTexts"
+          }
+        },
+        "required" : [ "ImageFile" ]
+      },
       "ProductImageSet" : {
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#ProductImageSet",
         "type" : "array",
         "items" : {
-          "description" : "A file is a data element that represents an address to a file (a locator). The value is a URI that can represent an absolute or relative path.",
-          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#FileWithContentType",
-          "type" : "object",
-          "properties" : {
-            "value" : {
-              "description" : "Path and name of the file (with file extension).\n\nThe path can be absolute or relative.",
-              "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#resourceValue",
-              "$ref" : "#/components/schemas/ResourcePath"
-            },
-            "contentType" : {
-              "description" : "Content type of the content of the file or blob.",
-              "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#contentType",
-              "$ref" : "#/components/schemas/MimeType"
-            }
-          },
-          "required" : [ "value", "contentType" ]
+          "$ref" : "#/components/schemas/ProductImage"
         },
         "uniqueItems" : true
       },
