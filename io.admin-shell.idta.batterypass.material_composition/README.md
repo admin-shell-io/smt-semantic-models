@@ -19,7 +19,6 @@ with license CC BY-NC 4.0.
 
 Source GitHub IDTA for .aasx file and Submodel Template Specification etc.: https://github.com/admin-shell-io/submodel-templates 
 
-# General
 
 # General
 
@@ -28,14 +27,15 @@ The folder "gen" for each version contains sammple JSON files, the JSON schema a
 # Changelog
 All notable changes to this model will be documented in this section.
 
-## [1.0.0] - December 2025
+## [1.0.0] - February 2026
 
-for changelog see  [IDTA-02035-6 V1.2, section "Version history"]()
+for changelog see  [IDTA-02035-6 V1.0, section "Version history"]()
 
 Contained Files:
 
 * MaterialComposition.ttl
 * MaterialComposition_shared.ttl
+* Namespace.ttl
 
 
 

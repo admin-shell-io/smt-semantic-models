@@ -14,7 +14,7 @@ All notable changes to this model will be documented in this section.
 
 Source GitHub IDTA for .aasx file and Submodel Template Specification etc.: https://github.com/admin-shell-io/submodel-templates/tree/main/published/Handover%20Documentation
 
-## [2.0.0] - December 2025
+## [2.0.0] - February 2026
 
 for detailled changelog see [IDTA-02004-2-0](https://industrialdigitaltwin.org/en/content-hub/submodels)
 

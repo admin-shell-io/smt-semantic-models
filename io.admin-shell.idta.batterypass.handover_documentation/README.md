@@ -25,7 +25,7 @@ The folder "gen" for each version contains sammple JSON files, the JSON schema a
 # Changelog
 All notable changes to this model will be documented in this section.
 
-## [2.0.0] - December 2025
+## [2.0.0] - February 2026
 
 for detailled changelog see [IDTA-02035-2](https://industrialdigitaltwin.org/en/content-hub/submodels)
 

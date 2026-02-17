@@ -14,7 +14,7 @@ All notable changes to this model will be documented in this section.
 
 Source GitHub IDTA for .aasx file and Submodel Template Specification etc.: https://github.com/admin-shell-io/submodel-templates/tree/main/published/Technical_Data
 
-## [2.0.0]
+## [2.0.0] - February 2026
 
 Contained Files:
 
