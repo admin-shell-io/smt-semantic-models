@@ -8,7 +8,7 @@
     "DocumentClassifications" : [ {
       "ClassId" : "03-02",
       "ClassName" : [ {
-        "en" : "W"
+        "de" : "CH5KRG"
       } ],
       "ClassificationSystem" : "VDI2770 Blatt 1:2020"
     } ],
@@ -16,13 +16,13 @@
       "Language" : "en",
       "Version" : "V1.2",
       "Title" : [ {
-        "de" : "K"
+        "de" : "NVT7j90"
       } ],
       "Subtitle" : [ {
-        "en" : "od"
+        "en" : "nJ4qDDRSrD"
       } ],
       "Description" : [ {
-        "en" : "CcG"
+        "de" : "B"
       } ],
       "DigitalFiles" : [ {
         "value" : "https://example.com/SafetyInstructions.pdf",

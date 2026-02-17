@@ -1,30 +1,30 @@
 {
   "GeneralInformation" : {
-    "ManufacturerName" : "us5uLc",
-    "CompanyLogo" : "https://example.com/JeCaFfb7b",
+    "ManufacturerName" : "x8oDHgA7M",
+    "CompanyLogo" : "https://example.com/wa1DRmr",
     "ManufacturerProductDesignation" : [ {
-      "en" : "orFB0M"
+      "en" : "mO4bJZP"
     } ],
-    "ManufacturerArticleNumber" : "Mnn",
-    "ManufacturerOrderCode" : "Hi8kC",
+    "ManufacturerArticleNumber" : "PcdAx8",
+    "ManufacturerOrderCode" : "0C",
     "ProductImages" : [ {
       "ImageFile" : {
         "value" : "https://example.com/SafetyInstructions.pdf",
         "contentType" : "application/pdf"
       },
       "ImageNote" : [ {
-        "en" : "A"
+        "en" : "1u"
       } ]
     } ]
   },
   "ProductClassifications" : [ {
     "ProductClassificationSystem" : "ECLASS",
     "ClassificationSystemVersion" : "9.0 (BASIC)",
-    "ClassificationSystemUrl" : "x",
+    "ClassificationSystemUrl" : "I3ho5FG8y",
     "ProductClassId" : "27-01-88-77",
-    "ProductClassCodedName" : "pcVnqduX",
+    "ProductClassCodedName" : "lXV7C58",
     "ProductClassName" : [ {
-      "en" : "T1nvec"
+      "de" : "5NxEr"
     } ],
     "ReferenceToTechnicalPropertyArea" : {
       "keys" : [ {
@@ -37,9 +37,9 @@
   "TechnicalPropertyAreas" : { },
   "FurtherInformation" : {
     "TextStatement" : [ {
-      "de" : "Y71ygDY"
+      "en" : "PAGc"
     } ],
-    "ValidDate" : "2026-02-17T13:03:20.000Z"
+    "ValidDate" : "2026-02-17T17:23:35.000Z"
   },
   "SpecificDescriptions" : [ { } ]
 }

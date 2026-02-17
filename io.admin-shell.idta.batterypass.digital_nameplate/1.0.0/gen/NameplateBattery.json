@@ -45,7 +45,7 @@
       }
     },
     "IPCommunicationChannels" : [ {
-      "AddressOfAdditionalLink" : "jy5z",
+      "AddressOfAdditionalLink" : "IrO9oRm",
       "TypeOfCommunication" : "Chat",
       "availableTime" : {
         "de" : "Montag – Freitag 08:00 bis 16:00"
@@ -90,9 +90,9 @@
   "DateOfManufacture" : "2022-01-01",
   "DateOfPuttingIntoService" : "2022-06-01",
   "UniqueFacilityIdentifier" : "987654321",
-  "LifeCycleStage" : "Original",
-  "OperatorIdentifier" : "yqk6j8VY",
-  "ManufacturerIdentifier" : "8UpyKAlt0",
+  "LifeCycleStage" : "original",
+  "OperatorIdentifier" : "N",
+  "ManufacturerIdentifier" : "a4",
   "Markings" : [ {
     "MarkingName" : "0173-1%2307-DAA603%23004",
     "DesignationOfCertificateOrApproval" : "KEMA99IECE X1105/128",
@@ -104,6 +104,6 @@
     },
     "MarkingAdditionalText" : "0044"
   } ],
-  "EUDeclarationOfConformity" : [ "G8o" ],
-  "ResultsOfTestReportsProvingCompliance" : [ "0" ]
+  "EUDeclarationOfConformity" : [ "ClS" ],
+  "ResultsOfTestReportsProvingCompliance" : [ "NbA3c" ]
 }

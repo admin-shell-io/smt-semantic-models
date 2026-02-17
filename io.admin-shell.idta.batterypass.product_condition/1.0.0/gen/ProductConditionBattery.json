@@ -27,7 +27,7 @@
     "NegativeEventValue" : "overcharged",
     "LastUpdate" : "2000-01-01T14:23:00"
   } ],
-  "InformationOnAccidents" : [ "5Sl7QzN" ],
+  "InformationOnAccidents" : [ "apv" ],
   "TemperatureInformation" : {
     "TimeExtremeHighTemp" : 0.0,
     "TimeExtremeLowTemp" : 0.0,

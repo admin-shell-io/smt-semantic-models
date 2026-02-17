@@ -8,7 +8,7 @@
     "DocumentClassifications" : [ {
       "ClassId" : "03-02",
       "ClassName" : [ {
-        "en" : "qzS"
+        "de" : "iH"
       } ],
       "ClassificationSystem" : "VDI2770 Blatt 1:2020"
     } ],
@@ -16,16 +16,16 @@
       "Language" : "en",
       "Version" : "V1.2",
       "Title" : [ {
-        "en" : "GPYuKmdB"
+        "de" : "XQH"
       } ],
       "Subtitle" : [ {
-        "de" : "ZcJkEZo"
+        "de" : "w"
       } ],
       "Description" : [ {
-        "en" : "E"
+        "de" : "U0r5hI"
       } ],
       "KeyWords" : [ {
-        "en" : "NAjRbSIP"
+        "de" : "n"
       } ],
       "StatusSetDate" : "2020-02-06",
       "StatusValue" : "Released",
@@ -78,10 +78,10 @@
         } ],
         "type" : "ExternalReference"
       },
-      "value" : "LSdCWU9",
+      "value" : "kGk7hqd",
       "name" : "SerialNumber"
     } ],
-    "globalAssetId" : "G6B",
+    "globalAssetId" : "tz",
     "entityType" : "SelfManagedEntity"
   } ]
 }
