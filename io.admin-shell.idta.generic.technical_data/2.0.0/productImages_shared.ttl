@@ -31,5 +31,25 @@
    samm:characteristic :ProductImageSet .
 
 :ProductImageSet a samm-c:Set ;
-   samm-c:elementCharacteristic shared:FileWithContentType .
+   samm:dataType :ProductImage .  
 
+:ProductImage a samm:Entity ;
+   samm:preferredName "product image"@en ;
+   samm:description "Pictorial representation of the product related to an application."@en ;
+   samm:properties ( 
+      [ samm:property :imageFile; samm:payloadName "ImageFile" ]
+	  [ samm:property :imageNote; samm:optional true; samm:payloadName "ImageNote" ]
+   ) .
+   
+:imageFile a samm:Property ;
+    samm:see <urn:irdi:0173-1#02-ABK291#002> ;
+    samm:preferredName "image file"@en ;
+    samm:description "Picture of the product (low resolution) 72 dpi / rgb (GIF or JPG)."@en ;
+    samm:characteristic shared:FileWithContentType .
+
+:imageNote a samm:Property ;
+    samm:see <urn:irdi:0173-1#02-ABL423#001> ;
+	samm:see <https://api.eclass-cdp.com/0173-1-02-ABL423-001> ;
+    samm:preferredName "image note"@en ;
+    samm:description "Notes or explanations about the image provided."@en ;
+    samm:characteristic shared:MultiLanguageTexts .
