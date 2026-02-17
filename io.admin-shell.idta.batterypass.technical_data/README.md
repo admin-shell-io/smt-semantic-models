@@ -55,6 +55,9 @@ with license CC BY 4.0.
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
 
+# Known Deviations from DIN DKE SPEC 99100
+
+Cycle-life Reference test is not of type "string" but references a (pdf) document, realized as set of document identifiers
 
 # Known Deviations from IDTA-02003-2-0
 

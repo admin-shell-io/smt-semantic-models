@@ -148,6 +148,7 @@
       [ samm:property :expectedLifetime; samm:payloadName "ExpectedLifetimeInCalendarYears " ] 
 	  [ samm:property :expectedNumberOfCycles; samm:payloadName "ExpectedNumberOfCycles" ] 
       [ samm:property :capacityThresholdForExhaustion; samm:payloadName "CapacityThresholdExhaustion" ] 
+	  [ samm:property :cycleLifeReferenceTest; samm:payloadName "CycleLifeReferenceTest" ] 
       [ samm:property :cRateLifeCycleTest; samm:payloadName "CrateOfRelevantCycleLifeTest" ] 
   ) .
   
@@ -175,3 +176,8 @@
    :atSoC 
    :powerCapabilityAt 
    ) .
+   
+:cycleLifeReferenceTest a samm:Property ;
+   samm:preferredName "reference test for 'Expected lifetime: Number of charge-discharge cycles'"@en ;
+   samm:description "The battery passport must include information about the expected battery lifetime expressed in cycles, and reference test used. \n\nDIN DKE Spec 99100 chapter reference: 6.7.6.5"@en ;
+   samm:characteristic shared:DocumentIdentifierSet .
