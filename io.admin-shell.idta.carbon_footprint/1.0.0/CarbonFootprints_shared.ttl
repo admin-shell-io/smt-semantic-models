@@ -158,7 +158,7 @@
    
 :PcfCo2eqCharacteristic a samm-c:Measurement ;
    samm:dataType xsd:double ;
-   samm-c:unit unit:kilogram .
+   samm-c:unit :CO2eq .
    
 :PcfCalculationMethodSet a samm-c:Set ;
    samm-c:elementCharacteristic :PcfCalculationMethodCharacteristic .
