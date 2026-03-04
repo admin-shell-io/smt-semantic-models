@@ -87,7 +87,7 @@
    samm:see <urn:irdi:0173-1#02-ABG855#003> ;
    samm:see <urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#pcfCo2eq> ;
    samm:characteristic pcf:PcfCo2eqCharacteristic ;
-   samm:exampleValue "17.2"^^xsd:double .
+   samm:exampleValue "17.2"^^xsd:decimal .
 
 :referenceImpactUnitForCalculation a samm:Property ;
    samm:preferredName "reference value for calculation"@en ;
