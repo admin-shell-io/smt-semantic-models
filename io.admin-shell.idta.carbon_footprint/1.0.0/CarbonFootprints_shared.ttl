@@ -145,7 +145,7 @@
    samm:description "Sum of all greenhouse gas emissions of a product according to the quantification requirements of the standard."@en ;
    samm:see <urn:irdi:0173-1%2302-ABG855%23003> ;
    samm:characteristic :PcfCo2eqCharacteristic ;
-   samm:exampleValue "17.2"^^xsd:double .
+   samm:exampleValue "17.2"^^xsd:decimal .
 
 :pcfCalculationMethods a samm:Property ;
    samm:preferredName "impact assessment method / calculation method"@en ;
@@ -157,7 +157,7 @@
    samm:exampleValue "ISO 14067" .
    
 :PcfCo2eqCharacteristic a samm-c:Measurement ;
-   samm:dataType xsd:double ;
+   samm:dataType xsd:decimal ;
    samm-c:unit :CO2eq .
    
 :PcfCalculationMethodSet a samm-c:Set ;

@@ -20,5 +20,5 @@
 
 :CO2eq a samm:Unit ;
    samm:preferredName "kgCO2e/kWh"@en ;
-   samm:description "Measurement unit for battery carbon footprint."@en ;
+   samm:description "It quantifies the weight of greenhouse gases (kgCO₂e) emitted per unit of energy consumed or produced (kWh)."@en ;
    samm:symbol "kgCO2e/kWh" .

@@ -47,8 +47,8 @@ None
 - if description contains AAS specific wording like "Submodel" etc. this is omitted
 - In Contact Information Street is defined as street names and house number, in Pcf there are two separate properties. Neverthelesse the street property from Contact Information was used. In Contact Information it has IRDI urn:irdi:0173-1#02-AAO128#002. In Pcf it has IRDI 0173-1#02-ABH956#003.
 - "PcfInformation" is modelled an SAMM Entity without properties
-- enumerations are not (yet) modelled:
+- enumerations:
   -- ReferenceImpactUnitForCalculation - the list is open, i.e. additional values may be added. In SAMM enumerations are closed.
   -- PcfCalculationMethod - the list is open, i.e. additional values may be added. In SAMM enumerations are closed, therefore not modelled
-- pcf2CoEq has data type xsd:double and not xsd:decimal
+
   
