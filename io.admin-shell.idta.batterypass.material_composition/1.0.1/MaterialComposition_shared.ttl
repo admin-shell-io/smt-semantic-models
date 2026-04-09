@@ -123,7 +123,8 @@
 :batteryMaterialMass a samm:Property ;
    samm:preferredName "weight"@en ;
    samm:description "Weight of component material."@en ;
-   samm:characteristic :Weight .
+   samm:characteristic :WeightInKilogram ;
+   samm:exampleValue "52"^^xsd:float .
 
 :isCriticalRawMaterial a samm:Property ;
    samm:preferredName "is critical raw material"@en ;
@@ -174,9 +175,9 @@
    samm-c:baseCharacteristic samm-c:Text ;
    samm-c:constraint :CASNumberConstraint .
 
-:Weight a samm-c:Measurement ;
+:WeightInKilogram a samm-c:Measurement ;
    samm:dataType xsd:float ;
-   samm-c:unit unit:gram .
+   samm-c:unit unit:kilogram .
 
 :HazardousSubstanceClassEnum a samm-c:Enumeration ;
    samm:dataType xsd:string ;

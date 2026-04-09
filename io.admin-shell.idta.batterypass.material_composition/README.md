@@ -31,12 +31,14 @@ All notable changes to this model will be documented in this section.
 
 Major changes:
 
-* make BatteryMaterialMass optional (https://github.com/admin-shell-io/smt-semantic-models/issues/83[#83])
+* make :batteryMaterialMass optional (https://github.com/admin-shell-io/smt-semantic-models/issues/83[#83])
+* change measurement unit of BatteryMaterialMass from gram to kilogram (https://github.com/admin-shell-io/smt-semantic-models/issues/85[#85])
 
 Minor changes (not affecting payload or specification):
 
 * rename HubstanceSubstanceLocationEntity to HazardousSubstanceLocationEntity
 * editorial changes in descriptions
+* example value added for :batteryMaterialMass
 
 ## [1.0.0] - February 2026
 
