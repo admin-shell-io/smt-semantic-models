@@ -19,6 +19,5 @@
 
 : a samm:Namespace ;
    samm:preferredName "namespace for material composition"@en ;
-   samm:description "This namespace is reserved for the Aspect Models and elements being the source for IDTA-02035-6 Digital Battery Passport - Part 6: Material Composition, Version 1.0.
- "@en .
+   samm:description "This namespace is reserved for the Aspect Models and elements being the source for IDTA-02035-6 Digital Battery Passport - Part 6: Material Composition, Version 1.0."@en .
 
