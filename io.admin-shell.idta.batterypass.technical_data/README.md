@@ -29,11 +29,20 @@ Deviations from IDTA-02003-2-0
 - optional productClassifications not included
 - optional furtherInformation not included
 - optional specificDescriptions not included
+- mandatory manufacturerProductDesignation not included (similar to Digital Nameplate)
+- mandatory manufacturerArticleNumber not included (similar to Digital Nameplate)
+- mandatory manufacturerOrderCode not included (similar to Digital Nameplate)
 
 - TechnicalPropertyAreas not realized as SML but as SMC (https://github.com/admin-shell-io/submodel-templates/issues/175)
 
 # Changelog
 All notable changes to this model will be documented in this section.
+
+## [1.0.1] - April 2026
+
+Major Changes:
+
+* remove properties ManufacturerProductDesignation, ManufacturerArticleNumber and ManufacturerOrderCode (https://github.com/admin-shell-io/smt-semantic-models/issues/82[#82])
 
 ## [1.0.0] - February 2026
 
