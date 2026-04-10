@@ -183,7 +183,7 @@
    samm:dataType xsd:float ;
    samm-c:unit unit:kilogram .
 
-:HazardousSubstanceConcentrationCharacteristic a samm-c:iement ;
+:HazardousSubstanceConcentrationCharacteristic a samm-c:Measurement ;
    samm:dataType xsd:double ;
    samm-c:unit unit:percent .
 
