@@ -78,7 +78,7 @@
 
 :HazardousSubstance a samm:Entity ;
    samm:preferredName "hazardous substance"@en ;
-   samm:description "Hazardous substances (No. 19-23): Name (agreed substance nomenclature, e.g. IUPAC or chemical name) all hazardous substance (as ?any substance that poses a threat to human health and the environment?). Suggested above 0.1 % weight by weight within each (sub-)component."@en ;
+   samm:description "Hazardous substances (No. 19-23): Name (agreed substance nomenclature, e.g. IUPAC or chemical name) all hazardous substance (as any substance that poses a threat to human health and the environment'). Suggested above 0.1 % weight by weight within each (sub-)component."@en ;
    samm:properties ( 
 	[ samm:property :hazardousSubstanceClass ;  samm:payloadName "HazardousSubstanceClass" ] 
     [ samm:property :hazardousSubstanceName ;  samm:payloadName "HazardousSubstanceName" ]   
@@ -111,7 +111,7 @@
    samm:characteristic :MaterialIdentifierTrait ;
    samm:see <https://www.cas.org/cas-data/cas-registry> ;
    samm:see <urn:irdi:0173-1#02-ABH034#003> ;
-   samm:exampleValue "7439-93-2" .
+   samm:exampleValue "346417-97-8" .
 
 :batteryMaterialName a samm:Property ;
    samm:preferredName "name"@en ;
@@ -162,17 +162,18 @@
    (as 'any substance that poses a threat to human health and the environment'). 
    
    Suggested via a unique identifier or nomenclature."""@en ;
-   samm:characteristic :HazardousSubstanceLocationEntity .
+   samm:characteristic :HazardousSubstanceLocation .
 
 :hazardousSubstanceIdentifier a samm:Property ;
    samm:preferredName "identifier"@en ;
    samm:description "CAS identifier of hazardous substance."@en ;
    samm:see <https://www.cas.org/cas-data/cas-registry> ;
-   samm:characteristic :MaterialIdentifierTrait .
+   samm:characteristic :MaterialIdentifierTrait ;
+   samm:exampleValue "346417-97-8" .
 
 :BatteryMaterialLocation a samm-c:SingleEntity ;
    samm:preferredName "location"@en ;
-   samm:dataType :BatteryLocation .
+   samm:dataType :BatteryComponentEntity .
 
 :MaterialIdentifierTrait a samm-c:Trait ;
    samm-c:baseCharacteristic samm-c:Text ;
@@ -182,28 +183,7 @@
    samm:dataType xsd:float ;
    samm-c:unit unit:kilogram .
 
-:HazardousSubstanceClassEnum a samm-c:Enumeration ;
-   samm:dataType xsd:string ;
-   samm-c:values ( 
-      :AcuteToxicity 
-	  :SkinCorrosionOrIrritation
-	  :EyeDamageOrIrritation
-	  ) .
-
-:AcuteToxicity a samm:Value ;
-   samm:value "AcuteToxicity" ;
-   samm:preferredName "acute toxicity"@en .
-
-:SkinCorrosionOrIrritation a samm:Value ;
-   samm:value "SkinCorrosionOrIrritation" ;
-   samm:preferredName "skin corrosion or irritation"@en .
-   
-:EyeDamageOrIrritation a samm:Value ;
-   samm:value "EyeDamageOrIrritation" ;
-   samm:preferredName "eye damage or irritation"@en .
-
-
-:HazardousSubstanceConcentrationCharacteristic a samm-c:Measurement ;
+:HazardousSubstanceConcentrationCharacteristic a samm-c:iement ;
    samm:dataType xsd:double ;
    samm-c:unit unit:percent .
 
@@ -214,21 +194,22 @@
 :Impact a samm:Characteristic;
    samm:preferredName "impact"@en ;
    samm:description "Impact."@en ;
-   samm:dataType xsd:string ;
-   sammValue "May cause an allergic skin reaction." .
+   samm:dataType xsd:string .
 
-:HazardousSubstanceLocationEntity a samm-c:SingleEntity ;
+
+:HazardousSubstanceLocation a samm-c:SingleEntity ;
    samm:preferredName "location"@en ;
    samm:description "The impact of substances, in particular, hazardous substances, contained in batteries on the environment and on human health or safety of persons, including impact due to inappropriate discarding of waste batteries such as littering or discarding as unsorted municipal waste."@en ;
-   samm:dataType :BatteryLocation .
+   samm:dataType :BatteryComponentEntity .
 
-:BatteryLocation a samm:Entity ;
+:BatteryComponentEntity a samm:Entity ;
    samm:preferredName "battery location "@en ;
    samm:description "Battery component that includes the material."@en ;
    samm:properties ( 
     [ samm:property :componentName; samm:optional true; samm:payloadName "ComponentName"  ] 
     [ samm:property :componentId; samm:optional true; samm:payloadName "ComponentId" ] 
    ) .
+
 
 :CASNumberConstraint a samm-c:RegularExpressionConstraint ;
    samm:value "^\\d{2,7}-\\d{2}-\\d{1}$" .
@@ -242,5 +223,6 @@
 :componentId a samm:Property ;
    samm:preferredName "component ID"@en ;
    samm:description "Identifier of the component."@en ;
-   samm:characteristic samm-c:Text .
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "1234-344" .
 

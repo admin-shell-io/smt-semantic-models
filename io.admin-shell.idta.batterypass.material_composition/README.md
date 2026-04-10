@@ -36,9 +36,21 @@ Major changes:
 
 Minor changes (not affecting payload or specification):
 
-* rename HubstanceSubstanceLocationEntity to HazardousSubstanceLocationEntity
+* fix namespace in Namespace.ttl
+* rename HubstanceSubstanceLocationEntity to HazardousSubstanceLocation
+* rename :BatteryLocation to BatteryComponentEntity
 * editorial changes in descriptions
-* example value added for :batteryMaterialMass
+* example values added for several properties. Note: Since SAMM does not allow example values for lists the example value "May cause an allergic skin reaction" for Impact in HarzadousSubstanceImpact was added directly in .aasx
+* split file  MaterialComposition_shared.ttl into MaterialComposition_shared.ttl and enum_HazardousSubstanceClass_shared.ttl
+
+
+Contained Files:
+
+* MaterialComposition.ttl
+* MaterialComposition_shared.ttl
+* enum_HazardousSubstanceClass_shared.ttl
+* Namespace.ttl
+
 
 ## [1.0.0] - February 2026
 
