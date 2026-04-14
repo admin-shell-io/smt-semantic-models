@@ -28,6 +28,12 @@ Source GitHub IDTA for .aasx file and Submodel Template Specification etc.: http
 # Changelog
 All notable changes to this model will be documented in this section.
 
+## [1.0.1] - April 2026
+
+Major changes:
+
+* new optional property "measuredTemp" as part of TemperatureInformation (https://github.com/admin-shell-io/smt-semantic-models/issues/80)
+
 ## [1.0.0] - February 2026
 
 for changelog see  [IDTA-02035-5 V1.2, section "Version history"]()
