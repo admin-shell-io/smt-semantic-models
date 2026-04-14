@@ -37,14 +37,16 @@
    samm:properties ( 
    [ samm:property :uriOfTheProduct; samm:payloadName "URIOfTheProduct" ] 
    [ samm:property :manufacturerName; samm:payloadName "ManufacturerName" ] 
-   [ samm:property :addressInformation; samm:payloadName "AddressInformation" ] 
+   [ samm:property :manufacturerIdentifier; samm:payloadName "ManufacturerIdentifier" ] 
+   [ samm:property :manufacturerAddressInformation; samm:payloadName "AddressInformation" ] 
    [ samm:property :serialNumber; samm:payloadName "SerialNumber" ] 
    [ samm:property :dateOfManufacture; samm:payloadName "DateOfManufacture" ] 
    [ samm:property :dateOfPuttingIntoService; samm:optional true; samm:payloadName "DateOfPuttingIntoService" ] 
    [ samm:property :uniqueFacilityIdentifier; samm:payloadName "UniqueFacilityIdentifier" ]
    [ samm:property :batteryStatus; samm:payloadName "LifeCycleStage" ]
+   [ samm:property :economicOperatorName; samm:optional true; samm:payloadName "EconomicOperatorName" ] 
    [ samm:property :operatorIdentifier; samm:optional true; samm:payloadName "OperatorIdentifier" ] 
-   [ samm:property tech:manufacturerIdentifier; samm:payloadName "ManufacturerIdentifier" ] 
+   [ samm:property :economicOperatorAddressInformation; samm:optional true; samm:payloadName "EconomicOperatorAddressInformation" ] 
    [ samm:property :markings; samm:payloadName "Markings" ] 
    [ samm:property :euDeclarationOfConformity; samm:payloadName "EUDeclarationOfConformity" ] 
    [ samm:property :resultsOfTestReportsProvingCompliance; samm:payloadName "ResultsOfTestReportsProvingCompliance" ] 
@@ -67,13 +69,19 @@
 :manufacturerName a samm:Property ;
    samm:preferredName "manufacturer name"@en ;
    samm:preferredName "Herstellername"@de ;
-   samm:description "Legally valid designation of the natural or judicial person which is directly responsible for the design, production, packaging and labeling of a product in respect to its being brought into circulation.\n\n Information identifying the manufacturer with a name.Information identifying the manufacturer with a name.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.1"@en ;
+   samm:description "Name of manufacturer."@en ;
    samm:description "Name des Herstellers."@de ;
    samm:see <urn:irdi:0112/2///61987%23ABA565%23009> ;
    samm:see <urn:irdi:0173-1%2302-AAO677%23004> ;
    samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerName> ;
    samm:exampleValue "Muster AG"@de ;
    samm:characteristic shared:MultiLanguageTexts .
+
+:manufacturerIdentifier a samm:Property ;
+   samm:see <urn:irdi:0173-1#02-AAO677#004> ;
+   samm:preferredName "identifier of the manufacturer"@en ;
+   samm:description "A battery passport must include information identifying the manufacturer.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.4"@en ;
+   samm:characteristic samm-c:Text .
 
 :serialNumber a samm:Property ;
    samm:preferredName "Seriennummer"@de ;
@@ -129,6 +137,16 @@
    samm:preferredName "identifier of the operator"@en ;
    samm:description "The unique operator identifier should comply with ISO/IEC 15459 1:2014, ISO/IEC 15459 2:2015, ISO/IEC 15459 3:2014, ISO/IEC 15459 4:2014, ISO/IEC 15459 5:2014, ISO/IEC 15459 6:2014, or their equivalent until referenced harmonised standards are listed in the OJEU.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.3"@en ;
    samm:characteristic samm-c:Text .
+ 
+:economicOperatorName a samm:Property ;
+   samm:preferredName "economic operator name"@en ;
+   samm:description "Name of economic operator."@en ;
+   samm:description "Name des Herstellers."@de ;
+   samm:see <urn:irdi:0112/2///61987%23ABA565%23009> ;
+   samm:see <urn:irdi:0173-1%2302-AAO677%23004> ;
+   samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerName> ;
+   samm:exampleValue "Muster AG"@de ;
+   samm:characteristic shared:MultiLanguageTexts .
  
 :markings a samm:Property ;
    samm:preferredName "markings"@en ;

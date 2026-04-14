@@ -23,14 +23,25 @@
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 
 
-:addressInformation a samm:Property ;
+:manufacturerAddressInformation a samm:Property ;
    samm:preferredName "Addresse des Herstellers"@de ;
-   samm:preferredName "adress of the manufacturer"@en ;
-   samm:description "The manufacturer information postal address, indicating a single contact point. Web address, if available; and web address, if available.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.3"@en ;
+   samm:preferredName "address of the manufacturer"@en ;
+   samm:description "The manufacturer information postal address, indicating a single contact point. Web address, if available; and web address, if available.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.4"@en ;
    samm:see <https://adminshell.io/zvei/nameplate/1/0/ContactInformations/AddressInformation> ;
    samm:see <https://admin-shell.io/smt-dropin/smt-dropin-use/1/0> ;
    samm:see <urn:irdi:0112/2///61360_7#AAS002#001> ;
    samm:see <urn:irdi:0173-1#02-AAQ837#008/0173-1#01-ADR448#008> ;
    samm:see <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#addressInformation> ;
    samm:characteristic nameplate:AddressInformationCharacteristic .
+   
+:economicOperatorAddressInformation a samm:Property ;
+   samm:preferredName "address of the economic opearator"@en ;
+   samm:description "The economic operator information postal address, indicating a single contact point. Web address, if available; and web address, if available.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.3"@en ;
+   samm:see <https://adminshell.io/zvei/nameplate/1/0/ContactInformations/AddressInformation> ;
+   samm:see <https://admin-shell.io/smt-dropin/smt-dropin-use/1/0> ;
+   samm:see <urn:irdi:0112/2///61360_7#AAS002#001> ;
+   samm:see <urn:irdi:0173-1#02-AAQ837#008/0173-1#01-ADR448#008> ;
+   samm:see <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#addressInformation> ;
+   samm:characteristic nameplate:AddressInformationCharacteristic .   
+
 
