@@ -27,6 +27,33 @@ The folder "gen" for each version contains sammple JSON files, the JSON schema a
 # Changelog
 All notable changes to this model will be documented in this section.
 
+## [1.0.1] - April 2026
+
+Major changes:
+
+* change: measurement unit of BatteryMaterialMass from gram to kilogram (https://github.com/admin-shell-io/smt-semantic-models/issues/85[#85])
+* change: make :batteryMaterialMass optional (https://github.com/admin-shell-io/smt-semantic-models/issues/83[#83])
+* change: make :hazardousSubstanceClass, :hazardousSubstanceClass, :hazardousSubstanceConcentration, :hazardousSubstanceImpac and :hazardousSubstanceLocation optional in :HazardousSubstance (https://github.com/admin-shell-io/smt-semantic-models/issues/83[#83])
+
+
+Minor changes (not affecting payload or specification):
+
+* fix namespace in Namespace.ttl
+* rename HubstanceSubstanceLocationEntity to HazardousSubstanceLocation
+* rename :BatteryLocation to BatteryComponentEntity
+* editorial changes in descriptions
+* example values added for several properties. Note: Since SAMM does not allow example values for lists the example value "May cause an allergic skin reaction" for Impact in HarzadousSubstanceImpact was added directly in .aasx
+* split file  MaterialComposition_shared.ttl into MaterialComposition_shared.ttl and enum_HazardousSubstanceClass_shared.ttl
+
+
+Contained Files:
+
+* MaterialComposition.ttl
+* MaterialComposition_shared.ttl
+* enum_HazardousSubstanceClass_shared.ttl
+* Namespace.ttl
+
+
 ## [1.0.0] - February 2026
 
 for changelog see  [IDTA-02035-6 V1.0, section "Version history"]()

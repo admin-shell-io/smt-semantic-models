@@ -64,6 +64,14 @@ The following version of the **samm-cli - Semantic Aspect Meta Model Command Lin
  > Build date: 2026-01-19 14:02:48
 > 
  > Git commit: 047a17acdf0c1ecd945b671c0da45657bea87678
+ 
+and
+
+ > Version: 2.14.2
+>   
+ >   Build date: 2026-03-06 05:24:26
+>   
+ >   Git commit: 9bebd906c76b01ba0eff5efcf05eda8e139a0802
 
 
 The following version of the [Semantic Aspect Meta Model (SAMM)](https://eclipse-esmf.github.io/samm-specification) is currently used: 
