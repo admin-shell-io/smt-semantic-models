@@ -42,7 +42,11 @@
 :warrantyInformation a samm:Property ;
    samm:see <urn:irdi:0173-1#02-AAO677#004> ;
    samm:preferredName "identifier of the manufacturer"@en ;
-   samm:description "A battery passport must include information identifying the manufacturer.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.4"@en ;
+   samm:description """
+   The battery passport must include information about the period for which the commercial warranty applies.
+   
+   DIN DKE Spec chapter reference: 6.1.3.4
+   """@en ;
    samm:characteristic :WarrantyInformationCharacteristic .
  
 :WarrantyInformationCharacteristic a samm-c:SingleEntity ;
