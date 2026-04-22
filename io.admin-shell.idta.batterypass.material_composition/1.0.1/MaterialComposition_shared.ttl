@@ -175,6 +175,10 @@
    samm:preferredName "location"@en ;
    samm:dataType :BatteryComponentEntity .
 
+:BatteryMaterialLocation a samm-c:SingleEntity ;
+   samm:preferredName "location"@en ;
+   samm:dataType :BatteryComponentEntity .
+   
 :MaterialIdentifierTrait a samm-c:Trait ;
    samm-c:baseCharacteristic samm-c:Text ;
    samm-c:constraint :CASNumberConstraint .
@@ -199,10 +203,13 @@
 
 :HazardousSubstanceLocation a samm-c:SingleEntity ;
    samm:preferredName "location"@en ;
-   samm:description "The impact of substances, in particular, hazardous substances, contained in batteries on the environment and on human health or safety of persons, including impact due to inappropriate discarding of waste batteries such as littering or discarding as unsorted municipal waste."@en ;
-   samm:dataType :BatteryComponentEntity .
+   samm:description """
+   The impact of substances, in particular, hazardous substances, contained in batteries on the environment and on human health or safety of persons, 
+   including impact due to inappropriate discarding of waste batteries such as littering or discarding as unsorted municipal waste.
+   """@en ;
+   samm:dataType :HazardousSubstanceLocationEntity .
 
-:BatteryComponentEntity a samm:Entity ;
+:HazardousSubstanceLocationEntity a samm:Entity ;
    samm:preferredName "battery location "@en ;
    samm:description "Battery component that includes the material."@en ;
    samm:properties ( 
@@ -210,7 +217,14 @@
     [ samm:property :componentId; samm:optional true; samm:payloadName "ComponentId" ] 
    ) .
 
-
+:BatteryComponentEntity a samm:Entity ;
+   samm:preferredName "battery location "@en ;
+   samm:description "Battery component that includes the material."@en ;
+   samm:properties ( 
+    [ samm:property :batteryComponentName; samm:optional true; samm:payloadName "ComponentName"  ] 
+    [ samm:property :batteryComponentId; samm:optional true; samm:payloadName "ComponentId" ] 
+   ) .
+   
 :CASNumberConstraint a samm-c:RegularExpressionConstraint ;
    samm:value "^\\d{2,7}-\\d{2}-\\d{1}$" .
 
@@ -226,3 +240,14 @@
    samm:characteristic samm-c:Text ;
    samm:exampleValue "1234-344" .
 
+:batteryComponentName a samm:Property ;
+   samm:preferredName "name"@en ;
+   samm:Description "Name of a component."@en ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "Anode" .
+
+:batteryComponentId a samm:Property ;
+   samm:preferredName "component ID"@en ;
+   samm:description "Identifier of the component."@en ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "1234-344" .
