@@ -46,14 +46,14 @@
         "type" : "object",
         "properties" : {
           "ComponentName" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.1#componentName",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.1#batteryComponentName",
             "allOf" : [ {
               "$ref" : "#/components/schemas/Text"
             } ]
           },
           "ComponentId" : {
             "description" : "Identifier of the component.",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.1#componentId",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.1#batteryComponentId",
             "allOf" : [ {
               "$ref" : "#/components/schemas/Text"
             } ]
@@ -151,12 +151,32 @@
           "description" : "Impact."
         }
       },
+      "HazardousSubstanceLocationEntity" : {
+        "description" : "Battery component that includes the material.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.1#HazardousSubstanceLocationEntity",
+        "type" : "object",
+        "properties" : {
+          "ComponentName" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.1#componentName",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "ComponentId" : {
+            "description" : "Identifier of the component.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.1#componentId",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          }
+        }
+      },
       "HazardousSubstanceLocation" : {
-        "description" : "The impact of substances, in particular, hazardous substances, contained in batteries on the environment and on human health or safety of persons, including impact due to inappropriate discarding of waste batteries such as littering or discarding as unsorted municipal waste.",
+        "description" : "\r\n   The impact of substances, in particular, hazardous substances, contained in batteries on the environment and on human health or safety of persons, \r\n   including impact due to inappropriate discarding of waste batteries such as littering or discarding as unsorted municipal waste.\r\n   ",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.1#HazardousSubstanceLocation",
         "type" : "object",
         "allOf" : [ {
-          "$ref" : "#/components/schemas/BatteryComponentEntity"
+          "$ref" : "#/components/schemas/HazardousSubstanceLocationEntity"
         } ]
       },
       "HazardousSubstance" : {
