@@ -23,7 +23,7 @@ The following shared files ensure that  [Value-Only serialization](https://indus
 * AnnotatedRelationshipElement_abstract.ttl: abstract property for submodel element type [AnnotatedRelationshipElement](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1/spec-metamodel/submodel-elements.html#annotated-relationship-element-attributes). 
 * BasicEventElement_shared.ttl
 * Blob_shared.ttl: Characteristic used for properties of submodel element type [Blob](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1/spec-metamodel/submodel-elements.html#blob-attributes)
-* contentType_shared.ttl
+* contentType_shared.ttl: contentType of SME Blob or File, can also be (re)used in other contexts
 * Entity_abstract.ttl: abstract property for submodel element type [Entity](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1/spec-metamodel/submodel-elements.html#entity-attributes). Dependency to Entity_shared.ttl
 * Entity_shared.ttl: Characteristic used for properties of submodel element type [Entity](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1/spec-metamodel/submodel-elements.html#entity-attributes). Dependency to SpecificAssetId_shared.ttl
 * externalSubjectId_shared.ttl: property for [SpecificAssetId/externalSubjectId](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1.2/spec-metamodel/core.html#specific-asset-id-attributes). 
@@ -40,16 +40,16 @@ The following shared files ensure that  [Value-Only serialization](https://indus
 Additionally, properties are predefined that may be used in several Submodel Templates:
 
 * Markings_shared: properties for markings as used for example in SMT "Nameplate"
-* languageSet_shared: property "languages" for a set of languages
 * DocumentIdentifierSet_shared: Characteristic "DocumentIdentifierSet" to be used in SMT that reference documents in 'Handover Documentation'. Dependency to urn:samm:io.admin-shell.idta.handover_documentation
 * languageSet_shared.ttl: property 'languages' and trait for a set of language codes, at least one code
 
 Additionally, Constraint are predefined:
 
+* Constraint_Ranges_shared.ttl: contraint for ranges
 * LengthConstraint_OneToMany_shared.ttl
 
 
-Two aspect model are contained to illustrate how to use the properties and characteristics, they are exemplary only:
+Two aspect models are contained to illustrate how to use the properties and characteristics, they are exemplary only:
 
 * ValueOnlyExampleAspect.ttl: shows how to use the characteristics for different submodel element types
 * TestAspect.ttl: shows how to use predefined properties

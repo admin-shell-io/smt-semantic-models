@@ -40,5 +40,7 @@
    samm:preferredName "Large Binary Object (BLOB) with content type"@en ;
    samm:description "A Blob is a data element representing a file that is contained in the value attribute with its source code. The code syntax is characterized by its content type (MIME type)."@en ;
    samm:see <https://admin-shell.io/aas/3/1/Blob> ;
-   samm:properties ( [ samm:property :blobValue; samm:payloadName "value" ] :contentType ) .
-
+   samm:properties ( 
+      [ samm:property :blobValue; samm:payloadName "value" ] 
+	  [ samm:property :contentType; samm:optional true; samm:payloadName "contentType" ] 
+	  ) .
