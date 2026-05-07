@@ -33,7 +33,7 @@ Major changes:
 
 * change: measurement unit of BatteryMaterialMass from gram to kilogram (https://github.com/admin-shell-io/smt-semantic-models/issues/85[#85])
 * change: make :batteryMaterialMass optional (https://github.com/admin-shell-io/smt-semantic-models/issues/83[#83])
-* change: make :hazardousSubstanceClass, :hazardousSubstanceClass, :hazardousSubstanceConcentration, :hazardousSubstanceImpac and :hazardousSubstanceLocation optional in :HazardousSubstance (https://github.com/admin-shell-io/smt-semantic-models/issues/83[#83])
+* change: make :hazardousSubstanceClass, :hazardousSubstanceClass, :hazardousSubstanceConcentration, :hazardousSubstanceImpact and :hazardousSubstanceLocation optional in :HazardousSubstance (https://github.com/admin-shell-io/smt-semantic-models/issues/83[#83])
 
 
 Minor changes (not affecting payload or specification):
