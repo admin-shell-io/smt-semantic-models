@@ -26,14 +26,33 @@ The folder "gen" for each version contains sample JSON files generated for the a
 
 Deviations from IDTA-02003-2-0
 
-- optional productClassifications not included
-- optional furtherInformation not included
-- optional specificDescriptions not included
 
-- TechnicalPropertyAreas not realized as SML but as SMC (https://github.com/admin-shell-io/submodel-templates/issues/175)
+- optional ProductClassifications not included
+- optional FurtherInformation not included
+- optional SpecificDescriptions not included
+- Newly added properties to GeneralInformation
+  * ManufacturerIdentifier
+  * WarrantyInformation
+  * BatteryCategory
+  * BatteryMass
+* Properties of GeneralInformation not included
+ - mandatory manufacturerProductDesignation not included (similar to Digital Nameplate)
+ - mandatory manufacturerArticleNumber not included (similar to Digital Nameplate)
+ - mandatory manufacturerOrderCode not included (similar to Digital Nameplate)
+
+- TechnicalPropertyAreas not realized as SML but as SMC (https://github.com/admin-shell-io/submodel-templates/issues/175[#175])
 
 # Changelog
 All notable changes to this model will be documented in this section.
+
+## [1.0.1] - April 2026
+
+Major Changes:
+
+* DELETED: remove properties ManufacturerProductDesignation, ManufacturerArticleNumber and ManufacturerOrderCode (https://github.com/admin-shell-io/smt-semantic-models/issues/82[#82])
+* CHANGED: data type of WarrantyPeriod changed to xsd:string with regex constraint conformant to ISO 8601 duration format (https://github.com/admin-shell-io/smt-semantic-models/issues/89[#89])
+* CHANGE: WarrantyPeriod now property of entity WarrantyInformation, within GenerationInformation WarrantyPeriod substituted by WarrantyInformation (https://github.com/admin-shell-io/smt-semantic-models/issues/89[#89])
+* CHANGE: add IRDI to :TechnicalAttributes to be compliant to IDTA-02003-2-0 Generic Technical Data 2.0.1 (https://github.com/admin-shell-io/smt-semantic-models/issues/88[#88])
 
 ## [1.0.0] - February 2026
 
