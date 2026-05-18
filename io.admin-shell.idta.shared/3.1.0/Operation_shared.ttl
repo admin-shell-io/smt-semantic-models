@@ -1,0 +1,86 @@
+######################################################################
+# Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.2.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.2.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+ 
+
+
+:BaseOperationResult a samm:Entity ;
+  samm:extends :Result ;
+  samm:properties( 
+   [ samm:property :executionState; samm:optional true ]
+   [ samm:property :success; samm:optional true ]
+   ) .
+
+:Result a samm:Entity ;
+  samm:properties (
+     [ samm:property :messages; samm:optional true ]
+	) .
+
+:messages a samm:Property; 
+ samm:characteristic :Messages .
+
+:Messages a samm-c:List ;
+   samm:dataType :Message .
+
+:Message a samm:Entity ;
+  samm:properties (
+     [ samm:property :messageCode; samm:optional true; samm:payloadName "code" ]
+	 [ samm:property :executionState; samm:optional true ]
+     [ samm:property :correlationId; samm:optional true ]
+     [ samm:property :messageType; samm:optional true ]
+     [ samm:property :messageText; samm:optional true; samm:payloadName "text"  ]
+     [ samm:property :timestamp; samm:optional true ]
+  ) .
+
+:executionState a samm:Property ;
+   samm:characteristic :ExecutionStateOperationEnum ;
+   samm:exampleValue "Failed" .  
+
+:ExecutionStateOperationEnum a samm-c:Enumeration ;
+   samm:dataType xsd:string ;
+   samm-c:values ( "Initiated" "Running" "Completed" "Canceled" "Failed" "Timeout" ) .
+   
+:success a samm:Property ;
+   samm:characteristic samm-c:Boolean ;
+   samm:exampleValue "false"^^xsd:boolean .
+   
+:messageCode a samm:Property ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "ERR-RANGE" .
+
+:correlationId a samm:Property ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "98FA3F00-E733-23F7-2E6B-E0DD294A9F43" .
+
+:messageType a samm:Property ; 
+  samm:characteristic :MessageTypeOperationEnum ;
+  samm:exampleValue "Error" .  
+   
+:MessageTypeOperationEnum a samm-c:Enumeration ;
+   samm:dataType xsd:string ;
+   samm-c:values ( "Undefined" "Info" "Warning" "Error" "Exception" ) .
+   
+:messageText a samm:Property ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "not in range" .
+   
+:timestamp a samm:Property ;
+   samm:characteristic samm-c:Timestamp ;
+   samm:exampleValue "2000-01-01T14:23:00"^^xsd:dateTime .
+
+   

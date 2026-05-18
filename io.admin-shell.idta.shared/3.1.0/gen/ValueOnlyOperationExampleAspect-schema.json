@@ -1,0 +1,216 @@
+{
+  "$schema" : "http://json-schema.org/draft-04/schema",
+  "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ValueOnlyOperationExampleAspect",
+  "description" : "Example Aspect with characteristics for Value-Only serialization of Submodel Elements of type 'Operation'.",
+  "type" : "object",
+  "components" : {
+    "schemas" : {
+      "Text" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Text",
+        "description" : "Describes a Property which contains plain text. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+      },
+      "ToggleInoutputArguments" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ToggleInoutputArguments",
+        "type" : "object",
+        "properties" : {
+          "inoutArg" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#resultInoutArg",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          }
+        },
+        "required" : [ "inoutArg" ]
+      },
+      "ToggleInoutputArgumentsCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ToggleInoutputArgumentsCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/ToggleInoutputArguments"
+        } ]
+      },
+      "ToggleOutputArguments" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ToggleOutputArguments",
+        "type" : "object",
+        "properties" : {
+          "outArg" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#outArg",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          }
+        },
+        "required" : [ "outArg" ]
+      },
+      "ToggleOutputArgumentsCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ToggleOutputArgumentsCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/ToggleOutputArguments"
+        } ]
+      },
+      "ExecutionStateOperationEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ExecutionStateOperationEnum",
+        "enum" : [ "Initiated", "Running", "Completed", "Canceled", "Failed", "Timeout" ]
+      },
+      "Boolean" : {
+        "type" : "boolean",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Boolean",
+        "description" : "Represents a boolean value (i.e. a \"flag\")."
+      },
+      "MessageTypeOperationEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#MessageTypeOperationEnum",
+        "enum" : [ "Undefined", "Info", "Warning", "Error", "Exception" ]
+      },
+      "Timestamp" : {
+        "type" : "string",
+        "pattern" : "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Timestamp",
+        "description" : "Describes a Property which contains the date and time with an optional timezone."
+      },
+      "Message" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#Message",
+        "type" : "object",
+        "properties" : {
+          "code" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#messageCode",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "executionState" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#executionState",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ExecutionStateOperationEnum"
+            } ]
+          },
+          "correlationId" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#correlationId",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "messageType" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#messageType",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MessageTypeOperationEnum"
+            } ]
+          },
+          "text" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#messageText",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "timestamp" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#timestamp",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Timestamp"
+            } ]
+          }
+        }
+      },
+      "Messages" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#Messages",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Message"
+        }
+      },
+      "Result" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#Result",
+        "type" : "object",
+        "properties" : {
+          "messages" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#messages",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Messages"
+            } ]
+          }
+        }
+      },
+      "BaseOperationResult" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#BaseOperationResult",
+        "type" : "object",
+        "properties" : {
+          "executionState" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#executionState",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ExecutionStateOperationEnum"
+            } ]
+          },
+          "success" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#success",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Boolean"
+            } ]
+          }
+        },
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/Result"
+        } ]
+      },
+      "ToggleResult" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ToggleResult",
+        "type" : "object",
+        "properties" : {
+          "inoutputArguments" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#inoutputArguments",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ToggleInoutputArgumentsCharacteristic"
+            } ]
+          },
+          "outputArguments" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#outputArguments",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ToggleOutputArgumentsCharacteristic"
+            } ]
+          }
+        },
+        "required" : [ "inoutputArguments", "outputArguments" ],
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/OperationResultValueOnly"
+        } ]
+      },
+      "OperationResultValueOnly" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#OperationResultValueOnly",
+        "type" : "object",
+        "properties" : { },
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/BaseOperationResult"
+        } ]
+      },
+      "ToggleResultCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#ToggleResultCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/ToggleResult"
+        } ]
+      }
+    }
+  },
+  "properties" : {
+    "inArg" : {
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#inArg",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "inoutArg" : {
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#inoutArg",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "toggleResult" : {
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#toggleResult",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/ToggleResultCharacteristic"
+      } ]
+    }
+  },
+  "required" : [ "inArg", "inoutArg", "toggleResult" ]
+}

@@ -29,6 +29,8 @@ The following shared files ensure that  [Value-Only serialization](https://indus
 * externalSubjectId_shared.ttl: property for [SpecificAssetId/externalSubjectId](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1.2/spec-metamodel/core.html#specific-asset-id-attributes). 
 * File_shared.ttl: Characteristic used for properties of submodel element type [File](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1/spec-metamodel/submodel-elements.html#file-attributes)
 * MultiLanguageTexts_shared.ttl: Characteristic used for properties of submodel element type [MultiLanguageProperty](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1/spec-metamodel/submodel-elements.html#_multi_language_property_attributes)
+* Operation_shared.ttl: inherited properties for all operation results conformant to [https/REST API specification](https://github.com/admin-shell-io/aas-specs-api/blob/main/Part2-API-Schemas/openapi.yaml)
+* Operation_abstract.ttl: abstract classes for derivation of operations
 * Range_abstract.ttl: abstract property used for properties of submodel element type [Range](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1/spec-metamodel/submodel-elements.html#range-attributes)
 * Range_float.ttl:  Characteristic used for properties of submodel element type [Range](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1/spec-metamodel/submodel-elements.html#range-attributes) of type float
 * Reference_shared.ttl: Characteristic used for properties of submodel element type [ReferenceElement]([Reference][https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1/spec-metamodel/referencing.html#_reference_attributes]) and for attributes in other objects with type [Reference][https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1/spec-metamodel/referencing.html#_reference_attributes]
@@ -49,9 +51,11 @@ Additionally, Constraint are predefined:
 * LengthConstraint_OneToMany_shared.ttl
 
 
-Two aspect models are contained to illustrate how to use the properties and characteristics, they are exemplary only:
+Several aspect models are contained to illustrate how to use the properties and characteristics, they are exemplary only:
 
 * ValueOnlyExampleAspect.ttl: shows how to use the characteristics for different submodel element types
+* ValueOnlyOperationExampleAspect.ttl: shows how to model an Operation conformant to [https/REST API specification](https://github.com/admin-shell-io/aas-specs-api/blob/main/Part2-API-Schemas/openapi.yaml), version 3.1. 
+Note: since operations have no JSON payload generated the properties of the operation were added as properties to the Aspect to show how the payload would look like
 * TestAspect.ttl: shows how to use predefined properties
 
 Dependencies:
