@@ -16,6 +16,9 @@ All notable changes to this model will be documented in this section.
 
 for detailled changelog see [IDTA-01001-3-1](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1)
 
+Changes:
+- resolve circular dependency (https://github.com/admin-shell-io/smt-semantic-models/issues/98)
+
 Contained Files:
 
 The following shared files ensure that  [Value-Only serialization](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1/mappings/mappings.html#value-only-serialization-in-json) is consistent to the specification in [IDTA-01001-3-1](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1)
@@ -60,7 +63,7 @@ Note: since operations have no JSON payload generated the properties of the oper
 
 Dependencies:
 
-@prefix urn:samm:io.admin-shell.idta.handover_documentation:2.0.0
+None
 
 
 In the following only deviations from IDTA-01001-3-1 are documented:
