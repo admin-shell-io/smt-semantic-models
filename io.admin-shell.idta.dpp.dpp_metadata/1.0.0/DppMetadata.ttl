@@ -1,0 +1,227 @@
+######################################################################
+# Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.1.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.1.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.1.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.1.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#> .
+
+
+:DppMetadata a samm:Aspect ;
+   samm:preferredName "digital product passport (DPP)"@en ;
+   samm:preferredName "Digitaler Produktpass (DPP)"@de ;
+   samm:description """
+   Digital record of product characteristics throughout its life cycle.
+   
+   SOURCE: EN 18223:2026(en)   
+   """@en ;
+   samm:see <https://admin-shell.io/idta/cds/dppMetadata/1> ;
+   samm:properties ( 
+   [ samm:property :digitalProductPassportId; samm:payloadName "digitalProductPassportId" ] 
+   [ samm:property :uniqueProductIdentifier; samm:payloadName "uniqueProductIdentifier" ] 
+   [ samm:property :granularity; samm:payloadName "granularity" ] 
+   [ samm:property :dppSchemaVersion; samm:payloadName "dppSchemaVersion" ] 
+   [ samm:property :dppStatus; samm:payloadName "dppStatus" ]
+   [ samm:property :lastUpdate;  samm:payloadName "lastUpdate" ] 
+   [ samm:property :economicOperatorId;  samm:payloadName "economicOperatorId" ] 
+   [ samm:property :facilityId; samm:optional true; samm:payloadName "facilityId" ] 
+   [ samm:property :contentSpecificationIds; samm:optional true; samm:payloadName "contentSpecificationIds" ] 
+   );
+   samm:operations ( ) ;
+   samm:events ( ) .
+
+:digitalProductPassportId a samm:Property ;
+   samm:preferredName "unique product passport identifier (DPP ID)"@en ;
+   samm:description """
+   Unique identifier of an instance of the digital product passport.
+   
+   SOURCE: EN 18223:2026(en)   
+   """@en ;
+   samm:characteristic samm-c:Text ;
+   samm:see <https://admin-shell.io/idta/cds/digitalProductPassportId/1> ;
+   samm:exampleValue "https://www.example.org/dpp/1234545" .
+   
+:uniqueProductIdentifier a samm:Property ;
+   samm:preferredName "unique product identifier"@en ;
+   samm:see <https://admin-shell.io/idta/cds/uniqueProductIdentifier/1> ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA055#001> ;
+   samm:see <urn:irdi:0112/2///61987#ABN590#002> ;
+   samm:see <urn:irdi:0173-1#02-ABH173#003> ;
+   samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#uriOfTheProduct> ;
+   samm:description """
+   Unique string of characters for the identification of a product, that also enables a web link to the digital product passport.
+   
+   String formatted according to EN 18219:2026.
+
+   SOURCE: EN 18223:2026(en)   
+   """@en ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "https://www.example.org/dpp/1234545" .
+   
+:granularity a samm:Property ;
+   samm:preferredName "granularity"@en ;
+   samm:description """ 
+   The granularity of the Product. 
+   
+   There are three values: ‘Model‘, ‘Item‘ and ‘Batch‘.
+   
+   The term ‘model’ usually refers to a version of a product of which all units share the same technical characteristics relevant for the ecodesign requirements 
+   and the same model identifier, the term ‘batch’ usually refers to a subset 
+   of a specific model composed of all products produced in a specific manufacturing plant at a specific moment 
+   in time and the term ‘item’ usually refers to a single unit of a model. 
+   
+  SOURCE: ESPR p2024/1781, REGULATION (EU) 2024/1781 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 13 June 2024 
+  establishing a framework for the setting of ecodesign requirements for sustainable products, 
+  amending Directive (EU) 2020/1828 and Regulation (EU) 2023/1542 and repealing Directive 2009/125/EC. URI: OJ:L_202401781
+   """@en ;
+   samm:see <https://admin-shell.io/idta/cds/granularity/1> ;
+   samm:see <https://admin-shell.io/aas/3/1/AssetKind> ;
+   samm:characteristic :GranularityEnum ;
+   samm:exampleValue "Batch" .
+   
+:dppSchemaVersion a samm:Property ;
+   samm:preferredName "DPP schema version"@en ;
+   samm:see <https://admin-shell.io/idta/cds/dppSchemaVersion/1> ;
+   samm:description """
+   Reference standard the DPP instance schema refers to.
+   
+   SOURCE: EN 18223:2026(en)   
+   """@en ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "ENXXX:v1.0" .
+   
+:dppStatus a samm:Property ;
+   samm:preferredName "DPP status"@en ;
+   samm:see <https://admin-shell.io/idta/cds/dppSchemaVersion/1> ;
+   samm:description """
+   Status of the DPP instance as digital resource.
+   
+   SOURCE: EN 18223:2026(en)   
+   """@en ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "Active" .
+   
+   
+:lastUpdate a samm:Property ;
+   samm:preferredName "last update"@en ;
+   samm:see <https://admin-shell.io/idta/cds/lastUpdate/1> ;
+   samm:see <https://admin-shell.io/aas/3/2/AdministrativeInformation/updatedAt> ;
+   samm:description """
+   Date and time of the latest update to the DPP instance.
+   
+   String formatted as Timestamp UTC-based according to ISO 8601-1:2019/Amd1:2022.
+   
+   SOURCE: EN 18223:2026(en)   
+   """@en ;
+   samm:characteristic samm-c:Timestamp ;
+   samm:exampleValue "2025-08-22T03:12:00Z"^^xsd:dateTime .
+ 
+   
+:economicOperatorId a samm:Property ;
+   samm:preferredName "economic operator ID"@en ;
+   samm:see <https://admin-shell.io/idta/cds/economicOperatorId/1> ;
+   samm:description """
+   Unique string of characters for the identification of an actor involved in a product's life cycle.
+   
+   String formatted according to EN 18219:2026.
+
+   SOURCE: EN 18223:2026(en)   
+   """@en ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "gxx:ppp456789" .
+   
+   
+:facilityId a samm:Property ;
+   samm:preferredName "facility ID"@en ;
+   samm:see <urn:irdi:0173-1#02-AAV646#003> ;
+   samm:see <https://admin-shell.io/idta/cds/facilityId/1> ;
+   samm:see <https://adminshell.io/idta/nameplate/3/0/UniqueFacilityIdentifier> ;
+   samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#uniqueFacilityIdentifier> ;
+   samm:description """
+   Unique string of characters for the identification of locations or buildings involved in a product's value chain or used by actors  involved in a product's life cycle.
+   
+   String formatted according to EN 18219:2026.
+
+   SOURCE: EN 18223:2026(en)   
+   """@en ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "gxx:xxx987654" .
+   
+   
+:contentSpecificationIds a samm:Property ;
+   samm:preferredName "content specification IDs"@en ;
+   samm:see <https://admin-shell.io/idta/cds/contentSpecificationIds/1> ;
+   samm:description """
+   Reference to horizontal or product-type related content specifications for the DPP.
+   
+   SOURCE: EN 18223:2026(en)   
+   """@en ;
+   samm:characteristic :ContentSpecificationIdSet .
+
+   
+:GranularityEnum a samm-c:Enumeration ;
+   samm:preferredName "granularity enumeration"@en ;
+   samm:description """
+   Enumeration for granularity.
+   
+   SOURCE: EN 18223:2026(en)   
+   """@en ;
+   samm:dataType xsd:string ;
+   samm-c:values (
+     :Model
+	 :Batch
+	 :Item
+   ) .
+   
+
+:Model a samm:Value ;
+   samm:see <https://admin-shell.io/idta/cds/model/1> ;
+   samm:see <https://admin-shell.io/aas/3/2/AssetKind/Type> ;
+   samm:description """
+   
+   The term ‘model’ usually refers to a version of a product of which all units share the same technical characteristics relevant for the ecodesign requirements and the same model identifier, the term batch usually refers to a subset 
+   of a specific model composed of all products produced in a specific manufacturing plant at a specific moment 
+   in time and the term item usually refers to a single unit of a model. 
+   
+  SOURCE: ESPR p2024/1781, REGULATION (EU) 2024/1781 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 13 June 2024 
+  establishing a framework for the setting of ecodesign requirements for sustainable products, 
+  amending Directive (EU) 2020/1828 and Regulation (EU) 2023/1542 and repealing Directive 2009/125/EC. URI: OJ:L_202401781
+  
+   """@en ;
+   samm:value "Model" ;
+   samm:preferredName "Model"@en .
+
+:Batch a samm:Value ;
+   samm:see <https://admin-shell.io/idta/cds/batch/1> ;
+   samm:see <https://admin-shell.io/aas/3/2/AssetKind/Batch> ;
+   samm:value "Batch" ;
+   samm:preferredName "Batch"@en .
+   
+:Item a samm:Value ;
+   samm:see <https://admin-shell.io/idta/cds/item/1> ;
+   samm:see <https://admin-shell.io/aas/3/2/AssetKind/Instance> ;
+   samm:value "Item" ;
+   samm:preferredName "Item"@en .
+   
+:ContentSpecificationIdSet a samm-c:Set ;
+   samm-c:elementCharacteristic :ContentSpecificationId .  
+   
+:ContentSpecificationId a samm:Characteristic;
+   samm:preferredName "content specification ID"@en ;
+   samm:description """
+   Reference to horizontal or product-type related content specification for the DPP.
+   
+   SOURCE: EN 18223:2026(en)  
+   """@en ;
+   samm:dataType xsd:string .

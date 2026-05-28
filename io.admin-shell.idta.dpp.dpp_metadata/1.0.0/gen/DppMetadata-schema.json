@@ -1,0 +1,103 @@
+{
+  "$schema" : "http://json-schema.org/draft-04/schema",
+  "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#DppMetadata",
+  "description" : "\r\n   Digital record of product characteristics throughout its life cycle.\r\n   \r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
+  "type" : "object",
+  "components" : {
+    "schemas" : {
+      "Text" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Text",
+        "description" : "Describes a Property which contains plain text. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+      },
+      "GranularityEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#GranularityEnum",
+        "description" : "\r\n   Enumeration for granularity.\r\n   \r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
+        "enum" : [ "Model", "Batch", "Item" ]
+      },
+      "Timestamp" : {
+        "type" : "string",
+        "pattern" : "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Timestamp",
+        "description" : "Describes a Property which contains the date and time with an optional timezone."
+      },
+      "ContentSpecificationIdSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#ContentSpecificationIdSet",
+        "type" : "array",
+        "items" : {
+          "type" : "string",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#ContentSpecificationId",
+          "description" : "\r\n   Reference to horizontal or product-type related content specification for the DPP.\r\n   \r\n   SOURCE: EN 18223:2026(en)  \r\n   "
+        },
+        "uniqueItems" : true
+      }
+    }
+  },
+  "properties" : {
+    "digitalProductPassportId" : {
+      "description" : "\r\n   Unique identifier of an instance of the digital product passport.\r\n   \r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#digitalProductPassportId",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "uniqueProductIdentifier" : {
+      "description" : "\r\n   Unique string of characters for the identification of a product, that also enables a web link to the digital product passport.\r\n   \r\n   String formatted according to EN 18219:2026.\r\n\r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#uniqueProductIdentifier",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "granularity" : {
+      "description" : " \r\n   The granularity of the Product. \r\n   \r\n   There are three values: ‘Model‘, ‘Item‘ and ‘Batch‘.\r\n   \r\n   The term ‘model’ usually refers to a version of a product of which all units share the same technical characteristics relevant for the ecodesign requirements \r\n   and the same model identifier, the term ‘batch’ usually refers to a subset \r\n   of a specific model composed of all products produced in a specific manufacturing plant at a specific moment \r\n   in time and the term ‘item’ usually refers to a single unit of a model. \r\n   \r\n  SOURCE: ESPR p2024/1781, REGULATION (EU) 2024/1781 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 13 June 2024 \r\n  establishing a framework for the setting of ecodesign requirements for sustainable products, \r\n  amending Directive (EU) 2020/1828 and Regulation (EU) 2023/1542 and repealing Directive 2009/125/EC. URI: OJ:L_202401781\r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#granularity",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/GranularityEnum"
+      } ]
+    },
+    "dppSchemaVersion" : {
+      "description" : "\r\n   Reference standard the DPP instance schema refers to.\r\n   \r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#dppSchemaVersion",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "dppStatus" : {
+      "description" : "\r\n   Status of the DPP instance as digital resource.\r\n   \r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#dppStatus",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "lastUpdate" : {
+      "description" : "\r\n   Date and time of the latest update to the DPP instance.\r\n   \r\n   String formatted as Timestamp UTC-based according to ISO 8601-1:2019/Amd1:2022.\r\n   \r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#lastUpdate",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Timestamp"
+      } ]
+    },
+    "economicOperatorId" : {
+      "description" : "\r\n   Unique string of characters for the identification of an actor involved in a product's life cycle.\r\n   \r\n   String formatted according to EN 18219:2026.\r\n\r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#economicOperatorId",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "facilityId" : {
+      "description" : "\r\n   Unique string of characters for the identification of locations or buildings involved in a product's value chain or used by actors  involved in a product's life cycle.\r\n   \r\n   String formatted according to EN 18219:2026.\r\n\r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#facilityId",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "contentSpecificationIds" : {
+      "description" : "\r\n   Reference to horizontal or product-type related content specifications for the DPP.\r\n   \r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#contentSpecificationIds",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/ContentSpecificationIdSet"
+      } ]
+    }
+  },
+  "required" : [ "digitalProductPassportId", "uniqueProductIdentifier", "granularity", "dppSchemaVersion", "dppStatus", "lastUpdate", "economicOperatorId" ]
+}
