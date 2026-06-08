@@ -25,7 +25,7 @@
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
 @prefix contactInformation: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
-@prefix tech: <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> 
+@prefix tech: <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.1.0#> .
 
 
