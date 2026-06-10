@@ -131,21 +131,12 @@
    ) .
 
 
-:nameOfSupplier a samm:Property ;
-   samm:preferredName "name of supplier"@en ;
-   samm:description "Name of Supplier"@en ;
-   samm:characteristic samm-c:Text .
 
 :addressOfSupplier a samm:Property ;
    samm:preferredName "address of supplier"@en ;
    samm:description "Postal address of supplier for spare parts."@en ;
    samm:characteristic :AddressOfSupplier .
 
-
-:supplierWebAddress a samm:Property ;
-   samm:preferredName "WEB address of supplier"@en ;
-   samm:description "Web address of supplier for spare parts."@en ;
-   samm:characteristic samm-c:ResourcePath .
 
 :components a samm:Property ;
    samm:preferredName "components"@en ;
