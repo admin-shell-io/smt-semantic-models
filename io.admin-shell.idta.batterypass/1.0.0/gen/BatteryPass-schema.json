@@ -865,7 +865,7 @@
       },
       "DocumentIdentifier" : {
         "type" : "string",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#DocumentIdentifier",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#DocumentIdentifier",
         "description" : "Alphanumeric character sequence uniquely identifying a document."
       },
       "Boolean" : {
@@ -885,7 +885,7 @@
           },
           "DocumentIdentifier" : {
             "description" : "Alphanumeric character sequence uniquely identifying a document.",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#documentIdentifier",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#documentIdentifier",
             "$ref" : "#/components/schemas/DocumentIdentifier"
           },
           "DocumentIsPrimary" : {

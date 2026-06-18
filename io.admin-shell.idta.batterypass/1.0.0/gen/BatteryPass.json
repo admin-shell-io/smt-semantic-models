@@ -7,7 +7,7 @@
   "lastUpdate" : "2025-08-22T03:12:00Z",
   "economicOperatorId" : "gxx:ppp456789",
   "facilityId" : "gxx:xxx987654",
-  "contentSpecificationIds" : [ "b5Eq54Woo" ],
+  "contentSpecificationIds" : [ "td4o0n2ng" ],
   "https://admin-shell.io/idta/cds/carbonFootprint/1" : {
     "ProductCarbonFootprints" : [ {
       "PcfCalculationMethods" : "ISO 14067",
@@ -16,11 +16,11 @@
       "QuantityOfMeasureForCalculation" : 5.0,
       "LifeCyclePhases" : "C4 - landfill",
       "PerformanceClass" : "B+",
-      "WebLinkToPublicCarbonFootprintStudy" : [ "sdBZj6" ]
+      "WebLinkToPublicCarbonFootprintStudy" : [ "kNiC" ]
     } ]
   },
   "https://admin-shell.io/idta/cds/circularity/1" : {
-    "DismantlingAndRemovalInformation" : [ "EwPiZe2" ],
+    "DismantlingAndRemovalInformation" : [ "2SWf" ],
     "SparePartSources" : [ {
       "NameOfSupplier" : {
         "en" : "ABC Company"
@@ -49,24 +49,24 @@
       "SupplierWebAddress" : "https://example.com/information/product/1224/contact",
       "Components" : [ {
         "PartName" : "Cell",
-        "PartNumber" : "UG"
+        "PartNumber" : "LsO"
       } ]
     } ],
     "RecycledContentInformation" : [ {
-      "PreConsumerShare" : 72.46,
+      "PreConsumerShare" : 8.95,
       "RecycledMaterial" : "Cobalt",
-      "PostConsumerShare" : 15.91
+      "PostConsumerShare" : 45.79
     } ],
     "SafetyMeasures" : {
-      "SafetyInstructions" : [ "ig" ],
-      "ExtinguishingAgents" : [ "HnmmUNu8e" ]
+      "SafetyInstructions" : [ "bEcx" ],
+      "ExtinguishingAgents" : [ "JfEQ" ]
     },
     "EndOfLifeInformation" : {
-      "WastePrevention" : [ "IiQAsfYXiD" ],
-      "SeparateCollection" : [ "uo8Uf8t" ],
-      "InformationOnCollection" : [ "J" ]
+      "WastePrevention" : [ "HK2GEj" ],
+      "SeparateCollection" : [ "P3wZjun3PM" ],
+      "InformationOnCollection" : [ "uJDYLT" ]
     },
-    "RenewableContent" : -8786.2
+    "RenewableContent" : -79859.0
   },
   "https://admin-shell.io/idta/cds/digitalNameplate/1" : {
     "URIOfTheProduct" : "https://dc-qr.com/?m=R123456789",
@@ -108,7 +108,7 @@
         "EmailAddress" : "email@muster-ag.de"
       },
       "IPCommunicationChannels" : [ {
-        "AddressOfAdditionalLink" : "8",
+        "AddressOfAdditionalLink" : "U3",
         "TypeOfCommunication" : "Chat",
         "availableTime" : {
           "de" : "Montag – Freitag 08:00 bis 16:00"
@@ -154,8 +154,8 @@
     "DateOfPuttingIntoService" : "2022-06-01",
     "UniqueFacilityIdentifier" : "987654321",
     "LifeCycleStage" : "original",
-    "OperatorIdentifier" : "f6OrQM1sU",
-    "ManufacturerIdentifier" : "Y",
+    "OperatorIdentifier" : "KBIlBjiW",
+    "ManufacturerIdentifier" : "kQvghL",
     "Markings" : [ {
       "MarkingName" : "0173-1%2307-DAA603%23004",
       "DesignationOfCertificateOrApproval" : "KEMA99IECE X1105/128",
@@ -167,8 +167,8 @@
       },
       "MarkingAdditionalText" : "0044"
     } ],
-    "EUDeclarationOfConformity" : [ "I" ],
-    "ResultsOfTestReportsProvingCompliance" : [ "tQaAzoOd" ]
+    "EUDeclarationOfConformity" : [ "RYnPVyxXI" ],
+    "ResultsOfTestReportsProvingCompliance" : [ "ReADzGV0c" ]
   },
   "https://admin-shell.io/idta/cds/handoverDocumentation/1" : {
     "Documents" : [ {
@@ -180,7 +180,7 @@
       "DocumentClassifications" : [ {
         "ClassId" : "03-02",
         "ClassName" : [ {
-          "de" : "czUk"
+          "de" : "VbWZg"
         } ],
         "ClassificationSystem" : "VDI2770 Blatt 1:2020"
       } ],
@@ -188,13 +188,13 @@
         "Language" : "en",
         "Version" : "V1.2",
         "Title" : [ {
-          "de" : "eRpQ"
+          "de" : "6r"
         } ],
         "Subtitle" : [ {
-          "en" : "W"
+          "en" : "CA2ssRbQ"
         } ],
         "Description" : [ {
-          "en" : "Heo"
+          "de" : "ifI"
         } ],
         "DigitalFiles" : [ { } ]
       } ]
@@ -220,7 +220,7 @@
       "HazardousSubstanceName" : "Cobalt (Co)",
       "HazardousSubstanceIdentifier" : "346417-97-8",
       "HazardousSubstanceConcentration" : 20.0,
-      "HazardousSubstanceImpact" : [ "Ym33d7Cf" ],
+      "HazardousSubstanceImpact" : [ "ZGu" ],
       "HazardousSubstanceLocation" : { }
     } ]
   },
@@ -253,7 +253,7 @@
       "NegativeEventValue" : "overcharged",
       "LastUpdate" : "2000-01-01T14:23:00"
     } ],
-    "InformationOnAccidents" : [ "V" ],
+    "InformationOnAccidents" : [ "4A" ],
     "TemperatureInformation" : {
       "MeasuredTemp" : 20.0,
       "TimeExtremeHighTemp" : 0.0,
@@ -289,9 +289,9 @@
   },
   "https://admin-shell.io/idta/cds/technicalData/1" : {
     "GeneralInformation" : {
-      "ManufacturerName" : "GsYyJ",
-      "CompanyLogo" : "https://example.com/iZOcudL2",
-      "ManufacturerIdentifier" : "M",
+      "ManufacturerName" : "AN",
+      "CompanyLogo" : "https://example.com/KSqv43",
+      "ManufacturerIdentifier" : "e7gJzFSsA",
       "WarrantyInformation" : {
         "WarrantyPeriod" : "P96M"
       },
@@ -300,7 +300,7 @@
       "ProductImages" : [ {
         "ImageFile" : { },
         "ImageNote" : [ {
-          "de" : "S"
+          "en" : "0aka"
         } ]
       } ]
     },
@@ -344,8 +344,8 @@
         "ExpectedLifetimeInCalendarYears" : 15,
         "ExpectedNumberOfCycles" : 1000,
         "CapacityThresholdExhaustion" : 23.0,
-        "CycleLifeReferenceTest" : [ "9" ],
-        "CrateOfRelevantCycleLifeTest" : -39722.0
+        "CycleLifeReferenceTest" : [ "SaD95J6XTo" ],
+        "CrateOfRelevantCycleLifeTest" : -47393.8
       }
     }
   }
