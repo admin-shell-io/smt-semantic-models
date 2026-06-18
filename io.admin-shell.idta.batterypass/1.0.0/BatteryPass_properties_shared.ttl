@@ -1,0 +1,94 @@
+######################################################################
+# for namespace: urn:samm:io.admin-shell.idta.
+# Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
+# Copyright (c) 2025 Industrial Digital Twin Association
+#
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#
+# for namespace: urn:samm:io.catenax.pcf:8.0.0
+# Copyright (c) 2022, 2023, 2024 ZF Friedrichshafen AG
+# Copyright (c) 2022, 2023, 2024 T-Systems International GmbH
+# Copyright (c) 2022, 2023, 2024 Robert Bosch Manufacturing Solutions GmbH
+# Copyright (c) 2022, 2023, 2024 Siemens AG
+# Copyright (c) 2022, 2023, 2024 SAP AG
+# Copyright (c) 2022, 2023, 2024 BASF SE
+# Copyright (c) 2022, 2023, 2024 Contributors to the Eclipse Foundation
+#
+# This work is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC-BY-4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/legalcode.
+#
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.2.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.2.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.2.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass:1.0.0#> .
+@prefix dpp-meta: <urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#> .
+@prefix dbp-pcf: <urn:samm:io.admin-shell.idta.batterypass.carbon_footprint:1.0.0#> .
+@prefix dbp-cir: <urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.0#> .
+@prefix dbp-nameplate: <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
+@prefix dbp-docu: <urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#> .
+@prefix dbp-material: <urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.1#> .
+@prefix dbp-dyn: <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.1#> .
+@prefix dbp-tech: <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.1#> .
+
+
+
+:carbonFootprint a samm:Property ;
+   samm:characteristic :CarbonFootprintCharacteristic .
+
+:CarbonFootprintCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :CarbonFootprint .
+
+:circularity a samm:Property ;
+   samm:characteristic :CircularityCharacteristic .
+
+:CircularityCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :Circularity .
+   
+:digitalNameplate a samm:Property ;
+   samm:characteristic :DigitalNameplateCharacteristic .
+
+:DigitalNameplateCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :DigitalNameplate .  
+
+
+:handoverDocumentation a samm:Property ;
+   samm:characteristic :HandoverDocumentationCharacteristic .
+
+:HandoverDocumentationCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :HandoverDocumentation . 
+
+
+:materialComposition a samm:Property ;
+   samm:characteristic :MaterialCompositionCharacteristic .
+
+:MaterialCompositionCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :MaterialComposition . 
+
+:productCondition a samm:Property ;
+   samm:characteristic :ProductConditionCharacteristic .
+
+:ProductConditionCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :ProductCondition .
+
+:technicalData a samm:Property ;
+   samm:characteristic :TechnicalDataCharacteristic .
+
+:TechnicalDataCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :TechnicalData . 
+
+

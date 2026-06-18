@@ -1,0 +1,120 @@
+######################################################################
+# for namespace: urn:samm:io.admin-shell.idta.
+# Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
+# Copyright (c) 2025 Industrial Digital Twin Association
+#
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#
+# for namespace: urn:samm:io.catenax.pcf:8.0.0
+# Copyright (c) 2022, 2023, 2024 ZF Friedrichshafen AG
+# Copyright (c) 2022, 2023, 2024 T-Systems International GmbH
+# Copyright (c) 2022, 2023, 2024 Robert Bosch Manufacturing Solutions GmbH
+# Copyright (c) 2022, 2023, 2024 Siemens AG
+# Copyright (c) 2022, 2023, 2024 SAP AG
+# Copyright (c) 2022, 2023, 2024 BASF SE
+# Copyright (c) 2022, 2023, 2024 Contributors to the Eclipse Foundation
+#
+# This work is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC-BY-4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/legalcode.
+#
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.2.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.2.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.2.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass:1.0.0#> .
+@prefix dpp-meta: <urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#> .
+@prefix dbp-pcf: <urn:samm:io.admin-shell.idta.batterypass.carbon_footprint:1.0.0#> .
+@prefix dbp-cir: <urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.0#> .
+@prefix dbp-nameplate: <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
+@prefix dbp-docu: <urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#> .
+@prefix dbp-material: <urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.1#> .
+@prefix dbp-dyn: <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.1#> .
+@prefix dbp-tech: <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.1#> .
+
+
+
+
+## Entities per Aspect Model
+
+:CarbonFootprint a samm:Entity ;
+   samm:properties ( 
+		[ samm:property dbp-pcf:productCarbonFootprints; samm:payloadName "ProductCarbonFootprints" ] 
+	 ) .
+
+
+:Circularity a samm:Entity ;
+   samm:properties ( 
+   	[ samm:property dbp-cir:dismantlingAndRemovalInformation; samm:payloadName "DismantlingAndRemovalInformation" ] 
+   	[ samm:property dbp-cir:sparePartSources; samm:payloadName "SparePartSources" ] 	 
+	[ samm:property dbp-cir:recycledContent; samm:payloadName "RecycledContentInformation" ]  
+	[ samm:property dbp-cir:safetyMeasures; samm:payloadName "SafetyMeasures" ] 
+	[ samm:property dbp-cir:endOfLifeInformation; samm:payloadName "EndOfLifeInformation" ]  
+	[ samm:property dbp-cir:renewableContent; samm:payloadName "RenewableContent" ] 
+	 ) .
+
+:DigitalNameplate a samm:Entity ;
+   samm:properties ( 
+   [ samm:property dbp-nameplate:uriOfTheProduct; samm:payloadName "URIOfTheProduct" ] 
+   [ samm:property dbp-nameplate:manufacturerName; samm:payloadName "ManufacturerName" ] 
+   [ samm:property dbp-nameplate:addressInformation; samm:payloadName "AddressInformation" ] 
+   [ samm:property dbp-nameplate:serialNumber; samm:payloadName "SerialNumber" ] 
+   [ samm:property dbp-nameplate:dateOfManufacture; samm:payloadName "DateOfManufacture" ] 
+   [ samm:property dbp-nameplate:dateOfPuttingIntoService; samm:optional true; samm:payloadName "DateOfPuttingIntoService" ] 
+   [ samm:property dbp-nameplate:uniqueFacilityIdentifier; samm:payloadName "UniqueFacilityIdentifier" ]
+   [ samm:property dbp-nameplate:batteryStatus; samm:payloadName "LifeCycleStage" ]
+   [ samm:property dbp-nameplate:operatorIdentifier; samm:optional true; samm:payloadName "OperatorIdentifier" ] 
+   [ samm:property dbp-tech:manufacturerIdentifier; samm:payloadName "ManufacturerIdentifier" ] 
+   [ samm:property dbp-nameplate:markings; samm:payloadName "Markings" ] 
+   [ samm:property dbp-nameplate:euDeclarationOfConformity; samm:payloadName "EUDeclarationOfConformity" ] 
+   [ samm:property dbp-nameplate:resultsOfTestReportsProvingCompliance; samm:payloadName "ResultsOfTestReportsProvingCompliance" ] 	
+	 ) .
+	 
+:HandoverDocumentation a samm:Entity ;
+   samm:properties ( 
+   [ samm:property dbp-docu:documents; samm:payloadName "Documents" ] 	 
+	 ) .
+
+:MaterialComposition a samm:Entity ;
+   samm:properties ( 
+   	[ samm:property dbp-material:batteryChemistry;  samm:payloadName "BatteryChemistry" ] 
+    [ samm:property dbp-material:batteryMaterials;  samm:payloadName "BatteryMaterials" ] 
+   	[ samm:property dbp-material:hazardousSubstances;  samm:payloadName "HazardousSubstances" ]   
+		 	 ) .
+			
+:ProductCondition a samm:Entity ;
+   samm:properties ( 
+	    [ samm:property dbp-dyn:energyThroughput; samm:optional true; samm:payloadName "EnergyThroughput" ]
+        [ samm:property dbp-dyn:capacityThroughput; samm:optional true; samm:payloadName "CapacityThroughput" ]
+		[ samm:property dbp-dyn:numberOfFullCycles; samm:payloadName "NumberOfFullCycles" ]
+        [ samm:property dbp-dyn:stateOfCertifiedEnergy; samm:optional true; samm:payloadName "StateOfCertifiedEnergy" ]
+        [ samm:property dbp-dyn:remainingEnergy; samm:optional true; samm:payloadName "RemainingEnergy" ]
+        [ samm:property dbp-dyn:remainingCapacity; samm:optional true; samm:payloadName "RemainingCapacity" ]
+        [ samm:property dbp-dyn:negativeEvents; samm:optional true; samm:payloadName "NegativeEvents" ]
+        [ samm:property dbp-dyn:informationOnAccidents; samm:payloadName "InformationOnAccidents" ]
+		[ samm:property dbp-dyn:temperatureInformation; samm:payloadName "TemperatureInformation" ]
+        [ samm:property dbp-dyn:remainingPowerCapability; samm:optional true; samm:payloadName "RemainingPowerCapability" ]
+        [ samm:property dbp-dyn:evolutionOfSelfDischarge; samm:optional true; samm:payloadName "EvolutionOfSelfDischarge" ]
+        [ samm:property dbp-dyn:currentSelfDischargingRate; samm:optional true;  samm:payloadName "CurrentSelfDischargingRate" ]
+        [ samm:property dbp-dyn:remainingRoundTripEnergyEfficiency; samm:optional true; samm:payloadName "RemainingRoundTripEnergyEfficiency" ]
+        [ samm:property dbp-dyn:stateOfCharge; samm:payloadName "StateOfCharge" ]
+		 	 ) .
+			 
+:TechnicalData a samm:Entity ;
+   samm:properties ( 
+     [ samm:property dbp-tech:generalInformation; samm:payloadName "GeneralInformation" ] 
+	 [ samm:property dbp-tech:technicalPropertyAreas; samm:payloadName "TechnicalPropertyAreas" ]  
+		 	 ) .

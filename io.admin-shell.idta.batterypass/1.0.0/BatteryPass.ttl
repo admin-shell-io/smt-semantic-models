@@ -1,0 +1,78 @@
+######################################################################
+# for namespace: urn:samm:io.admin-shell.idta.
+# Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
+# Copyright (c) 2025 Industrial Digital Twin Association
+#
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#
+# for namespace: urn:samm:io.catenax.pcf:8.0.0
+# Copyright (c) 2022, 2023, 2024 ZF Friedrichshafen AG
+# Copyright (c) 2022, 2023, 2024 T-Systems International GmbH
+# Copyright (c) 2022, 2023, 2024 Robert Bosch Manufacturing Solutions GmbH
+# Copyright (c) 2022, 2023, 2024 Siemens AG
+# Copyright (c) 2022, 2023, 2024 SAP AG
+# Copyright (c) 2022, 2023, 2024 BASF SE
+# Copyright (c) 2022, 2023, 2024 Contributors to the Eclipse Foundation
+#
+# This work is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC-BY-4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/legalcode.
+#
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.2.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.2.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.2.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass:1.0.0#> .
+@prefix dpp-meta: <urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#> .
+@prefix dbp-pcf: <urn:samm:io.admin-shell.idta.batterypass.carbon_footprint:1.0.0#> .
+@prefix dbp-cir: <urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.0#> .
+@prefix dbp-nameplate: <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
+@prefix dbp-docu: <urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#> .
+@prefix dbp-material: <urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.1#> .
+@prefix dbp-dyn: <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.1#> .
+@prefix dbp-tech: <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.1#> .
+
+
+:BatteryPass a samm:Aspect ;
+   samm:preferredName "Battery Passport"@en ;
+   samm:preferredName "Batteriepass"@de ;
+   samm:description "Provides Battery Passport conformant to DIN DKE Spec 99100 and CEN CENELEC EN 18223."@en ;
+   samm:properties ( 
+	   [ samm:property dpp-meta:digitalProductPassportId; samm:payloadName "digitalProductPassportId" ] 
+	   [ samm:property dpp-meta:uniqueProductIdentifier; samm:payloadName "uniqueProductIdentifier" ] 
+	   [ samm:property dpp-meta:granularity; samm:payloadName "granularity" ] 
+	   [ samm:property dpp-meta:dppSchemaVersion; samm:payloadName "dppSchemaVersion" ] 
+	   [ samm:property dpp-meta:dppStatus; samm:payloadName "dppStatus" ]
+	   [ samm:property dpp-meta:lastUpdate;  samm:payloadName "lastUpdate" ] 
+	   [ samm:property dpp-meta:economicOperatorId;  samm:payloadName "economicOperatorId" ] 
+	   [ samm:property dpp-meta:facilityId; samm:optional true; samm:payloadName "facilityId" ] 
+	   [ samm:property dpp-meta:contentSpecificationIds; samm:optional true; samm:payloadName "contentSpecificationIds" ] 
+	   
+	   [ samm:property :carbonFootprint; samm:payloadName "https://admin-shell.io/idta/cds/carbonFootprint/1" ] 
+	   [ samm:property :circularity; samm:payloadName "https://admin-shell.io/idta/cds/circularity/1" ] 
+	   [ samm:property :digitalNameplate; samm:payloadName "https://admin-shell.io/idta/cds/digitalNameplate/1" ] 
+	   [ samm:property :handoverDocumentation; samm:payloadName "https://admin-shell.io/idta/cds/handoverDocumentation/1" ] 
+	   [ samm:property :materialComposition; samm:payloadName "https://admin-shell.io/idta/cds/materialComposition/1" ] 
+	   [ samm:property :productCondition; samm:payloadName "https://admin-shell.io/idta/cds/productCondition/1" ] 
+	   [ samm:property :technicalData; samm:payloadName "https://admin-shell.io/idta/cds/technicalData/1" ]
+
+   ) ;
+   samm:operations ( ) ;
+   samm:events ( ) .
+
+
+
+   
