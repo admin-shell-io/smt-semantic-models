@@ -1,0 +1,42 @@
+######################################################################
+# Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
+# Copyright (c) 2025 Industrial Digital Twin Association
+#
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#
+#######################################################################
+
+
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.2.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.2.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.2.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass:1.0.0#> .
+@prefix dpp-meta: <urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#> .
+@prefix dbp-pcf: <urn:samm:io.admin-shell.idta.batterypass.carbon_footprint:1.0.0#> .
+@prefix dbp-cir: <urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.0#> .
+@prefix dbp-nameplate: <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
+@prefix dbp-docu: <urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#> .
+@prefix dbp-material: <urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.1#> .
+@prefix dbp-dyn: <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.1#> .
+@prefix dbp-tech: <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.1#> .
+
+: a samm:Namespace ;
+   samm:preferredName "namespace for battery passport"@en ;
+   samm:description """
+   This namespace is reserved for the Aspect Model for the Battery Passport conformant to IDTA-02035 series of specifications for the BatteryPassport. 
+   Additionally IDTA-02099 for the DPP Metadata conformant to CEN CENELEC 18223 is added.
+   
+   This Aspect Model is for illustration purposes only and the generated JSON payload not yet fully compliant to CEN CENELEC 18223 payload.
+   For details see IDTA-01001 and IDTA-01002.
+   
+   """@en .
+
