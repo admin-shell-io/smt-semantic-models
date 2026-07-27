@@ -24,6 +24,7 @@ based on IDTA-02008 Version 1.1.1 for V3.1
 
 Deviations from aasx:
 
+* Operations are not yet included
 * add SML Records as parts of Metadata with cardinality 0..1, Record within with cardinality 0..*
 * add SML ExternalSegments, InternalSegments and LinkedSegments with cardinality 0..1, Segment within with cardinality 0..*
 * Change InternalSegments/Records from SMC to SML
@@ -32,12 +33,11 @@ Deviations from aasx:
 * Change xs:long to xs:dateTime for LinkedSegment/StartTime, /EndTime, /LastUpdate (to be consistent with Specification)
 * Change xs:long to xs:dateTime forInternalSegment/StartTime, /EndTime, /LastUpdate (to be consistent with Specification)
 * Record/Time has cardinality 1 instead of 1..*
-* remove semanticId from Record/Time
+* remove semanticId from Record/Time since it can have different semanticId
 * add administration/templateId
 
-* question: Metadata/Records Record/Time has a qualifier AllowedIdShort with Time[\d{2,3}]
-* question: cardinality Record/Time really 1..* or just 1 ?
-* question: why has lastUpdate Type xs:string and not xs:time? ExternalSEgment/endTime startTime usw. Properyt Record/time has type xs:long...
+* question: Metadata/Records Record/Time has a cardinality 1..*, a qualifier AllowedIdShort with Time[\d{2,3}] and no semanticId assigned to it.
+ is Record/Time also of xsd:dateTime?  
 
 * not possible to define two different types String or long as done for duration, in .aasx it is xs:string
 * Record/Time can be UTc or Tai or relative: it is expected that the correct semanticId is provided by the data provider. Cannot be used like this in Value-Only serialization. 
