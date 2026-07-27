@@ -1,34 +1,34 @@
 {
   "Metadata" : {
     "Name" : [ {
-      "de" : "IYdW"
+      "en" : "m"
     } ],
     "Description" : [ {
-      "de" : "XSZT"
+      "de" : "n4kjsdl"
     } ],
     "Records" : [ {
-      "Time" : 4362938001007214032,
-      "SampleAccelerationX" : -1853505598997550137,
-      "SampleAccelerationY" : -6689189545280180684,
-      "SampleAccelerationZ" : 3049666591698310412
+      "Time" : 7738105668034983682,
+      "SampleAccelerationX" : -7794963926670972099,
+      "SampleAccelerationY" : -7593070081043137691,
+      "SampleAccelerationZ" : 1234648556379261142
     } ]
   },
   "Segments" : {
     "ExternalSegments" : [ {
       "Name" : [ {
-        "de" : "g"
+        "de" : "TNR"
       } ],
       "Description" : [ {
-        "de" : "GMKOfL"
+        "en" : "Oibt9"
       } ],
-      "RecordCount" : -499448963169028468,
-      "StartTime" : "wHdf",
-      "EndTime" : "EJ3WGTUlG",
-      "Duration" : "eCHt7",
-      "SamplingInterval" : -4833075434880514184,
-      "SamplingRate" : -8285097380050809555,
-      "State" : "CEu",
-      "LastUpdate" : "epgyVEpI",
+      "RecordCount" : 1817996590557931102,
+      "StartTime" : "2020-09-19T14:40:38.318",
+      "EndTime" : "2020-09-19T14:40:38.318",
+      "Duration" : "5zf8",
+      "SamplingInterval" : -7927759086199205070,
+      "SamplingRate" : -8255542546973213023,
+      "State" : "3fh",
+      "LastUpdate" : "2020-09-19T14:40:38.318",
       "File" : {
         "value" : "https://example.com/SafetyInstructions.pdf",
         "contentType" : "application/pdf"
@@ -40,42 +40,42 @@
     } ],
     "LinkedSegments" : [ {
       "Name" : [ {
-        "de" : "EPg"
+        "en" : "C"
       } ],
       "Description" : [ {
-        "de" : "cfG5AAzZ"
+        "en" : "aUme7W"
       } ],
-      "RecordCount" : 1483214124747286762,
-      "StartTime" : "Ys",
-      "EndTime" : "MCOfqD",
-      "Duration" : "Fxu9H92B9C",
-      "SamplingInterval" : 3150308852588269102,
-      "SamplingRate" : -2271672199455550481,
-      "State" : "hw",
-      "LastUpdate" : "R3A94sOh2R",
-      "Endpoint" : "4JWDQvxC0S",
-      "Query" : "e"
+      "RecordCount" : 1542602367688225432,
+      "StartTime" : "2020-09-19T14:40:38.318",
+      "EndTime" : "2020-09-19T14:40:38.318",
+      "Duration" : "zCnuLci",
+      "SamplingInterval" : 6447122259381163762,
+      "SamplingRate" : -3399776537201411280,
+      "State" : "DZ1FlF",
+      "LastUpdate" : "2020-09-19T14:40:38.318",
+      "Endpoint" : "aUJYNCm",
+      "Query" : "rd0Q8"
     } ],
     "InternalSegments" : [ {
       "Name" : [ {
-        "de" : "HrKgk8dsTO"
+        "de" : "M5"
       } ],
       "Description" : [ {
-        "de" : "S0u"
+        "en" : "kKgbn"
       } ],
-      "RecordCount" : -5818627589328916458,
-      "StartTime" : "E7GnlI",
-      "EndTime" : "QbN",
-      "Duration" : "kmAwVC",
-      "SamplingInterval" : -2465340321841807997,
-      "SamplingRate" : 28982812693864601,
-      "State" : "cPZO5",
-      "LastUpdate" : "LV9P",
+      "RecordCount" : -2721724681055442757,
+      "StartTime" : "2020-09-19T14:40:38.318",
+      "EndTime" : "2020-09-19T14:40:38.318",
+      "Duration" : "XRz",
+      "SamplingInterval" : -5455661014174467084,
+      "SamplingRate" : 796859851985144702,
+      "State" : "1NKBvAFfs1",
+      "LastUpdate" : "2020-09-19T14:40:38.318",
       "Records" : [ {
-        "Time" : 4362938001007214032,
-        "SampleAccelerationX" : -1853505598997550137,
-        "SampleAccelerationY" : -6689189545280180684,
-        "SampleAccelerationZ" : 3049666591698310412
+        "Time" : 7738105668034983682,
+        "SampleAccelerationX" : -7794963926670972099,
+        "SampleAccelerationY" : -7593070081043137691,
+        "SampleAccelerationZ" : 1234648556379261142
       } ]
     } ]
   }

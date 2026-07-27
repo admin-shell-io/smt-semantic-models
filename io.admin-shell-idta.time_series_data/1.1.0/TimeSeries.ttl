@@ -199,7 +199,8 @@
    samm:characteristic [
       a samm:Characteristic ;
       samm:dataType xsd:dateTime ;
-   ] .
+   ] ;
+   samm:exampleValue "2020-09-19T14:40:38.318"^^xsd:dateTime .
 
 :duration a samm:Property ;
    samm:see <https://admin-shell.io/idta/TimeSeries/Segment/Duration/1/1> ;
@@ -227,7 +228,8 @@
    samm:characteristic [
       a samm:Characteristic ;
       samm:dataType xsd:dateTime ;
-   ] .
+   ] ;
+   samm:exampleValue "2020-09-19T14:40:38.318"^^xsd:dateTime .
 
 # --- Prefixed Properties (External Segment) ---
 
@@ -251,14 +253,16 @@
    samm:characteristic [
       a samm:Characteristic ;
       samm:dataType xsd:dateTime ;
-   ] .
+   ];
+   samm:exampleValue "2020-09-19T14:40:38.318"^^xsd:dateTime .
 
 :externalSegmentEndTime a samm:Property ;
    samm:see <https://admin-shell.io/idta/TimeSeries/Segment/EndTime/1/1> ;
    samm:characteristic [
       a samm:Characteristic ;
       samm:dataType xsd:dateTime ;
-   ] .
+   ] ;
+   samm:exampleValue "2020-09-19T14:40:38.318"^^xsd:dateTime .
 
 :externalSegmentDuration a samm:Property ;
    samm:see <https://admin-shell.io/idta/TimeSeries/Segment/Duration/1/1> ;
@@ -293,7 +297,8 @@
    samm:characteristic [
       a samm:Characteristic ;
       samm:dataType xsd:dateTime ;
-   ] .
+   ] ;
+   samm:exampleValue "2020-09-19T14:40:38.318"^^xsd:dateTime .
 
 :externalSegmentFile a samm:Property ;
    samm:see <https://admin-shell.io/idta/TimeSeries/File/1/1> ;
@@ -325,15 +330,18 @@
    samm:see <https://admin-shell.io/idta/TimeSeries/Segment/StartTime/1/1> ;
    samm:characteristic [
       a samm:Characteristic ;
-      samm:dataType xsd:string ;
-   ] .
-
+      samm:dataType xsd:dateTime ;
+   ]  ;
+   samm:exampleValue "2020-09-19T14:40:38.318"^^xsd:dateTime .
+   
+   
 :linkedSegmentEndTime a samm:Property ;
    samm:see <https://admin-shell.io/idta/TimeSeries/Segment/EndTime/1/1> ;
    samm:characteristic [
       a samm:Characteristic ;
-      samm:dataType xsd:string ;
-   ] .
+      samm:dataType xsd:dateTime ;
+   ]  ;
+   samm:exampleValue "2020-09-19T14:40:38.318"^^xsd:dateTime .
 
 :linkedSegmentDuration a samm:Property ;
    samm:see <https://admin-shell.io/idta/TimeSeries/Segment/Duration/1/1> ;
@@ -361,15 +369,16 @@
    samm:characteristic [
       a samm:Characteristic ;
       samm:dataType xsd:string ;
-   ] .
+   ]  .
 
 :linkedSegmentLastUpdate a samm:Property ;
    samm:see <https://admin-shell.io/idta/TimeSeries/Segment/LastUpdate/1/1> ;
    samm:characteristic [
       a samm:Characteristic ;
-      samm:dataType xsd:dateIme ;
-   ] .
-
+      samm:dataType xsd:dateTime ;
+   ] ;
+   samm:exampleValue "2020-09-19T14:40:38.318"^^xsd:dateTime .
+   
 :linkedSegmentEndpoint a samm:Property ;
    samm:see <https://admin-shell.io/idta/TimeSeries/Endpoint/1/1> ;
    samm:characteristic [
@@ -407,14 +416,16 @@
    samm:characteristic [
       a samm:Characteristic ;
       samm:dataType xsd:dateTime ;
-   ] .
+   ] ;
+   samm:exampleValue "2020-09-19T14:40:38.318"^^xsd:dateTime .
 
 :internalSegmentEndTime a samm:Property ;
    samm:see <https://admin-shell.io/idta/TimeSeries/Segment/EndTime/1/1> ;
    samm:characteristic [
       a samm:Characteristic ;
       samm:dataType xsd:dateTime ;
-   ] .
+   ] ;
+   samm:exampleValue "2020-09-19T14:40:38.318"^^xsd:dateTime .
 
 :internalSegmentDuration a samm:Property ;
    samm:see <https://admin-shell.io/idta/TimeSeries/Segment/Duration/1/1> ;
@@ -449,7 +460,8 @@
    samm:characteristic [
       a samm:Characteristic ;
       samm:dataType xsd:dateTime ;
-   ] .
+   ] ;
+   samm:exampleValue "2020-09-19T14:40:38.318"^^xsd:dateTime .
 
 :internalSegmentRecords a samm:Property ;
    samm:see <https://admin-shell.io/idta/TimeSeries/Record/1/1> ;
