@@ -1,0 +1,82 @@
+{
+  "Metadata" : {
+    "Name" : [ {
+      "de" : "IYdW"
+    } ],
+    "Description" : [ {
+      "de" : "XSZT"
+    } ],
+    "Records" : [ {
+      "Time" : 4362938001007214032,
+      "SampleAccelerationX" : -1853505598997550137,
+      "SampleAccelerationY" : -6689189545280180684,
+      "SampleAccelerationZ" : 3049666591698310412
+    } ]
+  },
+  "Segments" : {
+    "ExternalSegments" : [ {
+      "Name" : [ {
+        "de" : "g"
+      } ],
+      "Description" : [ {
+        "de" : "GMKOfL"
+      } ],
+      "RecordCount" : -499448963169028468,
+      "StartTime" : "wHdf",
+      "EndTime" : "EJ3WGTUlG",
+      "Duration" : "eCHt7",
+      "SamplingInterval" : -4833075434880514184,
+      "SamplingRate" : -8285097380050809555,
+      "State" : "CEu",
+      "LastUpdate" : "epgyVEpI",
+      "File" : {
+        "value" : "https://example.com/SafetyInstructions.pdf",
+        "contentType" : "application/pdf"
+      },
+      "Blob" : {
+        "value" : "SGVsbG8sIFdvcmxkIQ==",
+        "contentType" : "application/pdf"
+      }
+    } ],
+    "LinkedSegments" : [ {
+      "Name" : [ {
+        "de" : "EPg"
+      } ],
+      "Description" : [ {
+        "de" : "cfG5AAzZ"
+      } ],
+      "RecordCount" : 1483214124747286762,
+      "StartTime" : "Ys",
+      "EndTime" : "MCOfqD",
+      "Duration" : "Fxu9H92B9C",
+      "SamplingInterval" : 3150308852588269102,
+      "SamplingRate" : -2271672199455550481,
+      "State" : "hw",
+      "LastUpdate" : "R3A94sOh2R",
+      "Endpoint" : "4JWDQvxC0S",
+      "Query" : "e"
+    } ],
+    "InternalSegments" : [ {
+      "Name" : [ {
+        "de" : "HrKgk8dsTO"
+      } ],
+      "Description" : [ {
+        "de" : "S0u"
+      } ],
+      "RecordCount" : -5818627589328916458,
+      "StartTime" : "E7GnlI",
+      "EndTime" : "QbN",
+      "Duration" : "kmAwVC",
+      "SamplingInterval" : -2465340321841807997,
+      "SamplingRate" : 28982812693864601,
+      "State" : "cPZO5",
+      "LastUpdate" : "LV9P",
+      "Records" : [ {
+        "Time" : 4362938001007214032,
+        "SampleAccelerationX" : -1853505598997550137,
+        "SampleAccelerationY" : -6689189545280180684,
+        "SampleAccelerationZ" : 3049666591698310412
+      } ]
+    } ]
+  }
+}
