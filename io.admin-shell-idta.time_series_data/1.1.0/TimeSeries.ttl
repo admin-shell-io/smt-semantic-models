@@ -6,7 +6,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:4.0.0#> .
-@prefix : <urn:samm:io.admin-shell.idta.time_series_data:1.0.0#> .
+@prefix : <urn:samm:io.admin-shell.idta.time_series_data:1.1.0#> .
 
 :TimeSeries a samm:Aspect ;
    samm:description "Contains time series data and references to time series data to discover and semantically describe them along the asset lifecycle."@en ;

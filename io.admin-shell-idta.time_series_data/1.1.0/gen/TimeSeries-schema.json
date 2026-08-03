@@ -1,6 +1,6 @@
 {
   "$schema" : "http://json-schema.org/draft-04/schema",
-  "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#TimeSeries",
+  "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.0#TimeSeries",
   "description" : "Contains time series data and references to time series data to discover and semantically describe them along the asset lifecycle.",
   "type" : "object",
   "components" : {

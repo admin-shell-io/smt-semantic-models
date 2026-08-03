@@ -14,7 +14,6 @@ The folder "gen" for each version contains sammple JSON files, the JSON schema a
 This model is using the models of the BatteryPass Consortium: https://github.com/batterypass/BatteryPassDataModel
 with license CC BY 4.0. (urn:samm:io.BatteryPass.Circularity:1.2.0#)
 
-
 # Changelog
 All notable changes to this model will be documented in this section.
 
