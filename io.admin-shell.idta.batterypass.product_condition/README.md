@@ -23,10 +23,14 @@ Source GitHub IDTA for .aasx file and Submodel Template Specification etc.: http
 
 
 
-
-
 # Changelog
 All notable changes to this model will be documented in this section.
+
+## [1.0.2] - August 2026
+	
+Major changes:
+	
+* fix measurement unit of property "remainingCapacityValue" from kilowattHour to AmpereHour (Ah) (https://github.com/admin-shell-io/smt-semantic-models/issues/114)
 
 ## [1.0.1] - April 2026
 

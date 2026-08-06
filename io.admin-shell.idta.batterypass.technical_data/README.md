@@ -45,6 +45,13 @@ Deviations from IDTA-02003-2-0
 # Changelog
 All notable changes to this model will be documented in this section.
 
+## [1.0.2] - August 2026
+
+Major Changes:
+
+* fix payload name of property :cRateLifeCycleTest from CrateOfRelevantCycleLifeTest to CRateOfRelevantCycleLifeTest (https://github.com/admin-shell-io/smt-semantic-models/issues/118)
+
+	 
 ## [1.0.1] - April 2026
 
 Major Changes:
