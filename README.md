@@ -67,15 +67,6 @@ For creation of an .aasx file as preparation for the creation of a Submodel Temp
 
 The following version of the **samm-cli - Semantic Aspect Meta Model Command Line Tool** was used for validation and generation:
 
-
- > Version: 2.13.1
->   
- > Build date: 2026-01-19 14:02:48
-> 
- > Git commit: 047a17acdf0c1ecd945b671c0da45657bea87678
- 
-and
-
  > Version: 2.15.2
 >   
  >   Build date: 2026-07-14 05:50:37
