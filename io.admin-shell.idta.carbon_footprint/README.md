@@ -21,6 +21,12 @@ Source Content Hub of the IDTA: [IDTA-02023 V1.0](https://industrialdigitaltwin.
 # Changelog
 All notable changes to this model will be documented in this section.
 
+## [1.0.0] - September 2026
+
+Bugfix:
+
+*remove example value for :PcfCalculationMethods because it lead to buggy .json payload example
+
 ## [1.0.0] - February 2026
 
 for changelog see  [IDTA-02023 V1.0, section "Version history"](https://industrialdigitaltwin.org/en/wp-content/uploads/sites/2/2025/03/IDTA-02023_Submodel_CarbonFootprint.pdf)
