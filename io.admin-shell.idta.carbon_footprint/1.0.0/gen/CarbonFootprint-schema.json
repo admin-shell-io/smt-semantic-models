@@ -57,15 +57,18 @@
           "value" : {
             "description" : "Path and name of the file (with file extension).\n\nThe path can be absolute or relative.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#resourceValue",
-            "$ref" : "#/components/schemas/ResourcePath"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ResourcePath"
+            } ]
           },
           "contentType" : {
             "description" : "Content type of the content of the file or blob.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#contentType",
-            "$ref" : "#/components/schemas/MimeType"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MimeType"
+            } ]
           }
-        },
-        "required" : [ "value", "contentType" ]
+        }
       },
       "RoleOfContactPersonCharacteristic" : {
         "type" : "string"
@@ -105,17 +108,23 @@
           "TelephoneNumber" : {
             "description" : "Complete telephone number to be called to reach a business partner.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#telephoneNumber",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           },
           "TypeOfTelephone" : {
             "description" : "Characterization of a telephone according to its location or usage.\nenumeration: 0173-1#07-AAS754#001 (office), 0173-1#07-AAS755#001 (office mobile), 0173-1#07-AAS756#001 (secretary), 0173-1#07-AAS757#001 (substitute), 0173-1#07-AAS758#001 (home), 0173-1#07-AAS759#001 (private mobile).",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#typeOfTelephone",
-            "$ref" : "#/components/schemas/Text"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
           },
           "AvailableTime" : {
             "description" : "Specification of the available time window.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#availableTime",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           }
         },
         "required" : [ "TelephoneNumber" ]
@@ -134,12 +143,16 @@
           "FaxNumber" : {
             "description" : "Complete telephone number to be called to reach a business partner's fax machine.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#faxNumber",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           },
           "TypeOfFaxNumber" : {
             "description" : "Characterization of the fax according its location or usage\nenumeration: 0173-1#07-AAS754#001 (office), 0173-1#07-AAS756#001 (secretary), 0173-1#07-AAS758#001 (home).",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#typeOfFaxNumber",
-            "$ref" : "#/components/schemas/Text"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
           }
         },
         "required" : [ "FaxNumber" ]
@@ -159,22 +172,30 @@
           "EmailAddress" : {
             "description" : "Electronic mail address of a business partner.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#emailAddress",
-            "$ref" : "#/components/schemas/Text"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
           },
           "PublicKey" : {
             "description" : "Public part of an unsymmetrical key pair to sign or encrypt text or messages.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#publicKey",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           },
           "TypeOfEmailAddress" : {
             "description" : "Characterization of an e-mail address according to its location or usage\nenumeration: 0173-1#07-AAS754#001 (office), 0173-1#07-AAS756#001 (secretary), 0173-1#07-AAS757#001 (substitute), 0173-1#07-AAS758#001 (home).",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#typeOfEmailAddress",
-            "$ref" : "#/components/schemas/Text"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
           },
           "TypeOfPublicKey" : {
             "description" : "Characterization of a public key according to its encryption process.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#typeOfPublicKey",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           }
         },
         "required" : [ "EmailAddress" ]
@@ -194,17 +215,23 @@
           "AddressOfAdditionalLink" : {
             "description" : "Web site address where information about the product or contact is given.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#addressOfAdditionalLinkOfIpCommunicationChannel",
-            "$ref" : "#/components/schemas/Text"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
           },
           "TypeOfCommunication" : {
             "description" : "Characterization of an IP-based communication channel.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#typeOfCommunication",
-            "$ref" : "#/components/schemas/Text"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
           },
           "availableTime" : {
             "description" : "Specification of the available time windows.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#availableTimeIpCommunicationChannel",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           }
         },
         "required" : [ "AddressOfAdditionalLink" ]
@@ -225,114 +252,160 @@
           "RoleOfContactPerson" : {
             "description" : "Function of a contact person in a process\nenumeration: 0173-1#07-AAS927#001 (administrativ contact), 0173-1#07-AAS928#001 (commercial contact), 0173-1#07-AAS929#001 (other contact), 0173-1#07-AAS930#001 (hazardous goods contact), 0173-1#07-AAS931#001 (technical contact)\nNote: the above mentioned ECLASS enumeration should be declared as 'open' for further addition.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#roleOfContactPerson",
-            "$ref" : "#/components/schemas/RoleOfContactPersonCharacteristic"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/RoleOfContactPersonCharacteristic"
+            } ]
           },
           "NationalCode" : {
             "description" : "Code of a country (Country codes defined accord. to DIN EN ISO 3166-1).",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#nationalCode",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           },
           "Languages" : {
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#languages",
-            "$ref" : "#/components/schemas/LanguageSetTrait"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/LanguageSetTrait"
+            } ]
           },
           "TimeZone" : {
             "description" : "Offsets from Coordinated Universal Time (UTC)\nNote: notation accord. to ISO 8601\nNote: for time in UTC the zone designator 'Z' is to be used.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#timeZone",
-            "$ref" : "#/components/schemas/Text"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
           },
           "CityTown" : {
             "description" : "Town or city.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#cityTown",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           },
           "Company" : {
             "description" : "Name of the company.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#company",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           },
           "Department" : {
             "description" : "Administrative section within an organisation where a business partner is located.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#department",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           },
           "Phone" : {
             "description" : "Phone number including type.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#phone",
-            "$ref" : "#/components/schemas/PhoneCharacteristic"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/PhoneCharacteristic"
+            } ]
           },
           "Fax" : {
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#fax",
-            "$ref" : "#/components/schemas/FaxCharacteristic"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/FaxCharacteristic"
+            } ]
           },
           "Email" : {
             "description" : "E-mail address and encryption method.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#email",
-            "$ref" : "#/components/schemas/EmailCharacteristic"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/EmailCharacteristic"
+            } ]
           },
           "IPCommunicationChannels" : {
             "description" : "IP-based communication channels, e.g. chat or video call.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#ipCommunicationChannels",
-            "$ref" : "#/components/schemas/IpCommunicationChannelSet"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/IpCommunicationChannelSet"
+            } ]
           },
           "Street" : {
             "description" : "Street name and house number.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#street",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           },
           "ZipCode" : {
             "description" : "ZIP code of address.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#zipCode",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           },
           "POBox" : {
             "description" : "P.O. box number.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#poBox",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           },
           "ZipCodeOfPOBox" : {
             "description" : "ZIP code of address.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#zipCodeOfPoBox",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           },
           "StateCounty" : {
             "description" : "Federal state, a part of a state.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#stateCounty",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           },
           "NameOfContact" : {
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#nameOfContact",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           },
           "FirstName" : {
             "description" : "First name of a contact person.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#firstName",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           },
           "MiddleNames" : {
             "description" : "Middle names of contact person.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#middleNames",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           },
           "Title" : {
             "description" : "Common, formal, religious, or other title preceding a contact person's name.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#title",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           },
           "AcademicTitle" : {
             "description" : "Academic title preceding a contact person's name.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#academicTitle",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           },
           "FurtherDetailsOfContact" : {
             "description" : "Additional information of the contact person.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#furtherDetailsOfContact",
-            "$ref" : "#/components/schemas/MultiLanguageTexts"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
           },
           "AddressOfAdditionalLink" : {
             "description" : "Web site address where information about the product or contact is given.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#addressOfAdditionalLink",
-            "$ref" : "#/components/schemas/Text"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
           }
         }
       },
@@ -357,47 +430,65 @@
           "PcfCalculationMethods" : {
             "description" : "Standards, methods for determining the greenhouse gas emissions of a product.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#pcfCalculationMethods",
-            "$ref" : "#/components/schemas/PcfCalculationMethodSet"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/PcfCalculationMethodSet"
+            } ]
           },
           "PcfCo2eq" : {
             "description" : "Sum of all greenhouse gas emissions of a product according to the quantification requirements of the standard.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#pcfCo2eq",
-            "$ref" : "#/components/schemas/PcfCo2eqCharacteristic"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/PcfCo2eqCharacteristic"
+            } ]
           },
           "ReferenceImpactUnitForCalculation" : {
             "description" : "Quantity unit of the product to which the PCF information on the CO2 footprint refers.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#referenceImpactUnitForCalculation",
-            "$ref" : "#/components/schemas/ReferenceImpactUnitForCalculationEnum"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ReferenceImpactUnitForCalculationEnum"
+            } ]
           },
           "QuantityOfMeasureForCalculation" : {
             "description" : "Provides the quantity number of pieces or mass or volume to compute the impact of climate change or product carbon footprint.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#quantityOfMeasureForCalculation",
-            "$ref" : "#/components/schemas/QuantityOfMeasureForCalculationCharacteristic"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/QuantityOfMeasureForCalculationCharacteristic"
+            } ]
           },
           "LifeCyclePhases" : {
             "description" : "Life cycle stages of the product according to the quantification requirements of the standard to which the PCF carbon footprint statement refers.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#lifeCyclePhases",
-            "$ref" : "#/components/schemas/LifeCyclePhaseSet"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/LifeCyclePhaseSet"
+            } ]
           },
           "ExplanatoryStatement" : {
             "description" : "Explanation required or provided to ensure that a footprint communication can be properly understood by a purchaser, potential purchaser, or user of the product.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#explanatoryStatement",
-            "$ref" : "#/components/schemas/FileWithContentType"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/FileWithContentType"
+            } ]
           },
           "GoodsHandoverAddress" : {
             "description" : "Indicates the hand-over address of the goods transport.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#goodsHandoverAddress",
-            "$ref" : "#/components/schemas/ContactAddressCharacteristic"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ContactAddressCharacteristic"
+            } ]
           },
           "PublicationDate" : {
             "description" : "Time at which something was first published or made available.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#publicationDate",
-            "$ref" : "#/components/schemas/Timestamp"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Timestamp"
+            } ]
           },
           "ExpirationDate" : {
             "description" : "End date up to which a study or data collection for calculating an ecological footprint is considered current and valid before an update or new calculation is required.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#expirationDate",
-            "$ref" : "#/components/schemas/Timestamp"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Timestamp"
+            } ]
           }
         },
         "required" : [ "PcfCalculationMethods", "PcfCo2eq", "ReferenceImpactUnitForCalculation", "QuantityOfMeasureForCalculation", "LifeCyclePhases", "PublicationDate" ]
@@ -417,22 +508,30 @@
           "PcfRuleOperator" : {
             "description" : "Organization that defines and implements specific instructions and methods for calculating and monitoring the carbon footprint of a product or sector.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#pcfRuleOperator",
-            "$ref" : "#/components/schemas/Text"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
           },
           "PcfRuleName" : {
             "description" : "Standard, method for determining the greenhouse gas emissions of a product.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#pcfRuleName",
-            "$ref" : "#/components/schemas/Text"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
           },
           "PcfRuleVersion" : {
             "description" : "Specific version or revision of the rule used to calculate the carbon footprint of a product.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#pcfRuleVersion",
-            "$ref" : "#/components/schemas/Text"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
           },
           "PcfRuleOnlineReference" : {
             "description" : "Online PCF calculation methodology reference that provides detailed instructions and guidelines for calculating a product's carbon footprint.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#pcfRuleOnlineReference",
-            "$ref" : "#/components/schemas/FileWithContentType"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/FileWithContentType"
+            } ]
           }
         },
         "required" : [ "PcfRuleOperator", "PcfRuleName" ]
@@ -445,12 +544,16 @@
           "PcfApiEndpoint" : {
             "description" : "Specific URL or address that can be used to retrieve data from external sources to calculate the carbon footprint of a product.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#pcfApiEndpoint",
-            "$ref" : "#/components/schemas/Text"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
           },
           "PcfApiQuery" : {
             "description" : "Specific query that can be used to retrieve data from external sources to calculate the carbon footprint of a product.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#pcfApiQuery",
-            "$ref" : "#/components/schemas/Text"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
           }
         },
         "required" : [ "PcfApiEndpoint", "PcfApiQuery" ]
@@ -482,22 +585,30 @@
           "PcfCalculationMethods" : {
             "description" : "Standard, method for determining the greenhouse gas emissions of a product. Multiple standards can be listed in case these standards are all applied to the respective PCF calculation.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#productOrSectorSpecificPcfCalculationMethods",
-            "$ref" : "#/components/schemas/PcfCalculationMethodSet"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/PcfCalculationMethodSet"
+            } ]
           },
           "ProductOrSectorSpecificRule" : {
             "description" : "Contains further information on the product-specific or sector-specific rules used to calculate the carbon footprint.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#productOrSectorSpecificRule",
-            "$ref" : "#/components/schemas/ProductOrSectorSpecificRuleCharacteristic"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ProductOrSectorSpecificRuleCharacteristic"
+            } ]
           },
           "ExternalPcfApi" : {
             "description" : "An external service that provides carbon footprint information via an interface, allowing on-demand retrieval of this data when required.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#externalPcfApi",
-            "$ref" : "#/components/schemas/ExternalPcfApiCharacteristic"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ExternalPcfApiCharacteristic"
+            } ]
           },
           "PcfInformation" : {
             "description" : "A section in which further content is listed according to the calculation method for the Product Carbon Footprint.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#productOrSectorSpecificPcfInformation",
-            "$ref" : "#/components/schemas/ProductOrSectorSpecificPcfInformationCharacteristic"
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ProductOrSectorSpecificPcfInformationCharacteristic"
+            } ]
           }
         },
         "required" : [ "PcfCalculationMethods", "ProductOrSectorSpecificRule", "PcfInformation" ]
@@ -516,12 +627,16 @@
     "ProductCarbonFootprints" : {
       "description" : "(Set) Balance of greenhouse gas emissions along the entire life cycle of a product in a defined application and in relation to a defined unit of use.",
       "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#productCarbonFootprints",
-      "$ref" : "#/components/schemas/ProductCarbonFootprintSet"
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/ProductCarbonFootprintSet"
+      } ]
     },
     "ProductOrSectorSpecificCarbonFootprints" : {
       "description" : "Product carbon footprints, which are determined in accordance with sector or product group-specific rules or guidelines and cover the life cycle or parts of a product life cycle.",
       "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.0#productOrSectorSpecificCarbonFootprints",
-      "$ref" : "#/components/schemas/ProductOrSectorSpecificCarbonFootprintSet"
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/ProductOrSectorSpecificCarbonFootprintSet"
+      } ]
     }
   },
   "required" : [ "ProductCarbonFootprints" ]
