@@ -153,8 +153,8 @@
    samm:description "Standards, methods for determining the greenhouse gas emissions of a product."@en ;
    samm:description "Normen, Standards, Verfahren zur Ermittlung der Treibhausgas-Emissionen eines Produkts."@de ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/PcfCalculationMethods/1/0> ;
-   samm:characteristic :PcfCalculationMethodSet ;
-   samm:exampleValue "ISO 14067" .
+   samm:characteristic :PcfCalculationMethodSet .
+
    
 :PcfCo2eqCharacteristic a samm-c:Measurement ;
    samm:dataType xsd:decimal ;
