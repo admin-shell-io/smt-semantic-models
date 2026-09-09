@@ -24,7 +24,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.1#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#> .
 
 
 :batteryChemistry a samm:Property ;
@@ -106,10 +106,15 @@
    samm:characteristic :BatteryMaterialLocation .
 
 :batteryMaterialIdentifier a samm:Property ;
-   samm:preferredName "material name or identifier"@en ;
-   samm:description "The materials should be named using a public standard or agreed nomenclature, which refers e.g. to the nomenclature of IUPAC or related identifiers such as the CAS (Chemical Abstracts Service) number. \n\nDIN DKE Spec 99100 chapter reference: 6.5.4 k)"@en ;
+   samm:preferredName "material identifier"@en ;
+   samm:description """Identifier of material. 
+
+   The materials should be named using a public standard or agreed nomenclature, 
+   which refers e.g. to the nomenclature of IUPAC or related identifiers such as the CAS (Chemical Abstracts Service) number. 
+   
+   DIN DKE Spec 99100 chapter reference: 6.5.4 k)
+   """@en ;
    samm:characteristic samm-c:Text ;
-   samm:see <https://www.cas.org/cas-data/cas-registry> ;
    samm:see <urn:irdi:0173-1#02-ABH034#003> ;
    samm:exampleValue "346417-97-8" .
 
@@ -165,16 +170,14 @@
    samm:characteristic :HazardousSubstanceLocation .
 
 :hazardousSubstanceIdentifier a samm:Property ;
-   samm:preferredName "material name or identifier of hazardous substance"@en ;
-   samm:description "Material name or identifier of hazardous substance."@en ;
-   samm:see <https://www.cas.org/cas-data/cas-registry> ;
+   samm:preferredName "material identifier  of hazardous substance"@en ;
+   samm:description "Material identifier of hazardous substance."@en ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "346417-97-8" .
 
 :BatteryMaterialLocation a samm-c:SingleEntity ;
    samm:preferredName "location"@en ;
    samm:dataType :BatteryComponentEntity .
-
 
 :WeightInKilogram a samm-c:Measurement ;
    samm:dataType xsd:float ;
@@ -200,7 +203,7 @@
    samm:dataType :BatteryComponentEntity .
 
 :BatteryComponentEntity a samm:Entity ;
-   samm:preferredName "battery location "@en ;
+   samm:preferredName "battery location"@en ;
    samm:description "Battery component that includes the material."@en ;
    samm:properties ( 
     [ samm:property :componentName; samm:optional true; samm:payloadName "ComponentName"  ] 
@@ -209,6 +212,7 @@
 
 
 :CASNumberConstraint a samm-c:RegularExpressionConstraint ;
+   samm:see <https://www.cas.org/cas-data/cas-registry> ;
    samm:value "^\\d{2,7}-\\d{2}-\\d{1}$" .
 
 :componentName a samm:Property ;
