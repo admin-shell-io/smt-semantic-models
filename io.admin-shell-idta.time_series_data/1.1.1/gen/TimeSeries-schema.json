@@ -1,6 +1,6 @@
 {
   "$schema" : "http://json-schema.org/draft-04/schema",
-  "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.0#TimeSeries",
+  "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#TimeSeries",
   "description" : "Contains time series data and references to time series data to discover and semantically describe them along the asset lifecycle.",
   "type" : "object",
   "components" : {
@@ -18,48 +18,48 @@
       },
       "TimeCharacteristic" : {
         "type" : "number",
-        "minimum" : -9223372036854775808,
-        "maximum" : 9223372036854775807
+        "maximum" : 9223372036854775807,
+        "minimum" : -9223372036854775808
       },
       "SampleAccelerationXCharacteristic" : {
         "type" : "number",
-        "minimum" : -9223372036854775808,
-        "maximum" : 9223372036854775807
+        "maximum" : 9223372036854775807,
+        "minimum" : -9223372036854775808
       },
       "SampleAccelerationYCharacteristic" : {
         "type" : "number",
-        "minimum" : -9223372036854775808,
-        "maximum" : 9223372036854775807
+        "maximum" : 9223372036854775807,
+        "minimum" : -9223372036854775808
       },
       "SampleAccelerationZCharacteristic" : {
         "type" : "number",
-        "minimum" : -9223372036854775808,
-        "maximum" : 9223372036854775807
+        "maximum" : 9223372036854775807,
+        "minimum" : -9223372036854775808
       },
       "Record" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#Record",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#Record",
         "type" : "object",
         "properties" : {
           "Time" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#time",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#time",
             "allOf" : [ {
               "$ref" : "#/components/schemas/TimeCharacteristic"
             } ]
           },
           "SampleAccelerationX" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#sampleAccelerationX",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#sampleAccelerationX",
             "allOf" : [ {
               "$ref" : "#/components/schemas/SampleAccelerationXCharacteristic"
             } ]
           },
           "SampleAccelerationY" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#sampleAccelerationY",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#sampleAccelerationY",
             "allOf" : [ {
               "$ref" : "#/components/schemas/SampleAccelerationYCharacteristic"
             } ]
           },
           "SampleAccelerationZ" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#sampleAccelerationZ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#sampleAccelerationZ",
             "allOf" : [ {
               "$ref" : "#/components/schemas/SampleAccelerationZCharacteristic"
             } ]
@@ -68,30 +68,30 @@
         "required" : [ "Time" ]
       },
       "Records" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#Records",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#Records",
         "type" : "array",
         "items" : {
           "$ref" : "#/components/schemas/Record"
         }
       },
       "Metadata" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#Metadata",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#Metadata",
         "type" : "object",
         "properties" : {
           "Name" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#metadataName",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#metadataName",
             "allOf" : [ {
               "$ref" : "#/components/schemas/MultiLanguageTexts"
             } ]
           },
           "Description" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#metadataDescription",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#metadataDescription",
             "allOf" : [ {
               "$ref" : "#/components/schemas/MultiLanguageTexts"
             } ]
           },
           "Records" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#metadataRecords",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#metadataRecords",
             "allOf" : [ {
               "$ref" : "#/components/schemas/Records"
             } ]
@@ -100,7 +100,7 @@
         "required" : [ "Name" ]
       },
       "MetadataCharacteristic" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#MetadataCharacteristic",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#MetadataCharacteristic",
         "type" : "object",
         "allOf" : [ {
           "$ref" : "#/components/schemas/Metadata"
@@ -108,8 +108,8 @@
       },
       "ExternalSegmentRecordCountCharacteristic" : {
         "type" : "number",
-        "minimum" : -9223372036854775808,
-        "maximum" : 9223372036854775807
+        "maximum" : 9223372036854775807,
+        "minimum" : -9223372036854775808
       },
       "ExternalSegmentStartTimeCharacteristic" : {
         "type" : "string",
@@ -124,13 +124,13 @@
       },
       "ExternalSegmentSamplingIntervalCharacteristic" : {
         "type" : "number",
-        "minimum" : -9223372036854775808,
-        "maximum" : 9223372036854775807
+        "maximum" : 9223372036854775807,
+        "minimum" : -9223372036854775808
       },
       "ExternalSegmentSamplingRateCharacteristic" : {
         "type" : "number",
-        "minimum" : -9223372036854775808,
-        "maximum" : 9223372036854775807
+        "maximum" : 9223372036854775807,
+        "minimum" : -9223372036854775808
       },
       "ExternalSegmentStateCharacteristic" : {
         "type" : "string"
@@ -198,77 +198,77 @@
         "required" : [ "value" ]
       },
       "ExternalSegment" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#ExternalSegment",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#ExternalSegment",
         "type" : "object",
         "properties" : {
           "Name" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#externalSegmentName",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#externalSegmentName",
             "allOf" : [ {
               "$ref" : "#/components/schemas/MultiLanguageTexts"
             } ]
           },
           "Description" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#externalSegmentDescription",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#externalSegmentDescription",
             "allOf" : [ {
               "$ref" : "#/components/schemas/MultiLanguageTexts"
             } ]
           },
           "RecordCount" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#externalSegmentRecordCount",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#externalSegmentRecordCount",
             "allOf" : [ {
               "$ref" : "#/components/schemas/ExternalSegmentRecordCountCharacteristic"
             } ]
           },
           "StartTime" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#externalSegmentStartTime",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#externalSegmentStartTime",
             "allOf" : [ {
               "$ref" : "#/components/schemas/ExternalSegmentStartTimeCharacteristic"
             } ]
           },
           "EndTime" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#externalSegmentEndTime",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#externalSegmentEndTime",
             "allOf" : [ {
               "$ref" : "#/components/schemas/ExternalSegmentEndTimeCharacteristic"
             } ]
           },
           "Duration" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#externalSegmentDuration",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#externalSegmentDuration",
             "allOf" : [ {
               "$ref" : "#/components/schemas/ExternalSegmentDurationCharacteristic"
             } ]
           },
           "SamplingInterval" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#externalSegmentSamplingInterval",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#externalSegmentSamplingInterval",
             "allOf" : [ {
               "$ref" : "#/components/schemas/ExternalSegmentSamplingIntervalCharacteristic"
             } ]
           },
           "SamplingRate" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#externalSegmentSamplingRate",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#externalSegmentSamplingRate",
             "allOf" : [ {
               "$ref" : "#/components/schemas/ExternalSegmentSamplingRateCharacteristic"
             } ]
           },
           "State" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#externalSegmentState",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#externalSegmentState",
             "allOf" : [ {
               "$ref" : "#/components/schemas/ExternalSegmentStateCharacteristic"
             } ]
           },
           "LastUpdate" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#externalSegmentLastUpdate",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#externalSegmentLastUpdate",
             "allOf" : [ {
               "$ref" : "#/components/schemas/ExternalSegmentLastUpdateCharacteristic"
             } ]
           },
           "File" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#externalSegmentFile",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#externalSegmentFile",
             "allOf" : [ {
               "$ref" : "#/components/schemas/FileWithContentType"
             } ]
           },
           "Blob" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#externalSegmentBlob",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#externalSegmentBlob",
             "allOf" : [ {
               "$ref" : "#/components/schemas/BlobWithContentType"
             } ]
@@ -276,7 +276,7 @@
         }
       },
       "ExternalSegments" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#ExternalSegments",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#ExternalSegments",
         "type" : "array",
         "items" : {
           "$ref" : "#/components/schemas/ExternalSegment"
@@ -284,8 +284,8 @@
       },
       "LinkedSegmentRecordCountCharacteristic" : {
         "type" : "number",
-        "minimum" : -9223372036854775808,
-        "maximum" : 9223372036854775807
+        "maximum" : 9223372036854775807,
+        "minimum" : -9223372036854775808
       },
       "LinkedSegmentStartTimeCharacteristic" : {
         "type" : "string",
@@ -300,13 +300,13 @@
       },
       "LinkedSegmentSamplingIntervalCharacteristic" : {
         "type" : "number",
-        "minimum" : -9223372036854775808,
-        "maximum" : 9223372036854775807
+        "maximum" : 9223372036854775807,
+        "minimum" : -9223372036854775808
       },
       "LinkedSegmentSamplingRateCharacteristic" : {
         "type" : "number",
-        "minimum" : -9223372036854775808,
-        "maximum" : 9223372036854775807
+        "maximum" : 9223372036854775807,
+        "minimum" : -9223372036854775808
       },
       "LinkedSegmentStateCharacteristic" : {
         "type" : "string"
@@ -322,77 +322,77 @@
         "type" : "string"
       },
       "LinkedSegment" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#LinkedSegment",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#LinkedSegment",
         "type" : "object",
         "properties" : {
           "Name" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#linkedSegmentName",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#linkedSegmentName",
             "allOf" : [ {
               "$ref" : "#/components/schemas/MultiLanguageTexts"
             } ]
           },
           "Description" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#linkedSegmentDescription",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#linkedSegmentDescription",
             "allOf" : [ {
               "$ref" : "#/components/schemas/MultiLanguageTexts"
             } ]
           },
           "RecordCount" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#linkedSegmentRecordCount",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#linkedSegmentRecordCount",
             "allOf" : [ {
               "$ref" : "#/components/schemas/LinkedSegmentRecordCountCharacteristic"
             } ]
           },
           "StartTime" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#linkedSegmentStartTime",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#linkedSegmentStartTime",
             "allOf" : [ {
               "$ref" : "#/components/schemas/LinkedSegmentStartTimeCharacteristic"
             } ]
           },
           "EndTime" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#linkedSegmentEndTime",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#linkedSegmentEndTime",
             "allOf" : [ {
               "$ref" : "#/components/schemas/LinkedSegmentEndTimeCharacteristic"
             } ]
           },
           "Duration" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#linkedSegmentDuration",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#linkedSegmentDuration",
             "allOf" : [ {
               "$ref" : "#/components/schemas/LinkedSegmentDurationCharacteristic"
             } ]
           },
           "SamplingInterval" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#linkedSegmentSamplingInterval",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#linkedSegmentSamplingInterval",
             "allOf" : [ {
               "$ref" : "#/components/schemas/LinkedSegmentSamplingIntervalCharacteristic"
             } ]
           },
           "SamplingRate" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#linkedSegmentSamplingRate",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#linkedSegmentSamplingRate",
             "allOf" : [ {
               "$ref" : "#/components/schemas/LinkedSegmentSamplingRateCharacteristic"
             } ]
           },
           "State" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#linkedSegmentState",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#linkedSegmentState",
             "allOf" : [ {
               "$ref" : "#/components/schemas/LinkedSegmentStateCharacteristic"
             } ]
           },
           "LastUpdate" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#linkedSegmentLastUpdate",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#linkedSegmentLastUpdate",
             "allOf" : [ {
               "$ref" : "#/components/schemas/LinkedSegmentLastUpdateCharacteristic"
             } ]
           },
           "Endpoint" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#linkedSegmentEndpoint",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#linkedSegmentEndpoint",
             "allOf" : [ {
               "$ref" : "#/components/schemas/LinkedSegmentEndpointCharacteristic"
             } ]
           },
           "Query" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#linkedSegmentQuery",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#linkedSegmentQuery",
             "allOf" : [ {
               "$ref" : "#/components/schemas/LinkedSegmentQueryCharacteristic"
             } ]
@@ -401,7 +401,7 @@
         "required" : [ "Endpoint", "Query" ]
       },
       "LinkedSegments" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#LinkedSegments",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#LinkedSegments",
         "type" : "array",
         "items" : {
           "$ref" : "#/components/schemas/LinkedSegment"
@@ -409,8 +409,8 @@
       },
       "InternalSegmentRecordCountCharacteristic" : {
         "type" : "number",
-        "minimum" : -9223372036854775808,
-        "maximum" : 9223372036854775807
+        "maximum" : 9223372036854775807,
+        "minimum" : -9223372036854775808
       },
       "InternalSegmentStartTimeCharacteristic" : {
         "type" : "string",
@@ -425,13 +425,13 @@
       },
       "InternalSegmentSamplingIntervalCharacteristic" : {
         "type" : "number",
-        "minimum" : -9223372036854775808,
-        "maximum" : 9223372036854775807
+        "maximum" : 9223372036854775807,
+        "minimum" : -9223372036854775808
       },
       "InternalSegmentSamplingRateCharacteristic" : {
         "type" : "number",
-        "minimum" : -9223372036854775808,
-        "maximum" : 9223372036854775807
+        "maximum" : 9223372036854775807,
+        "minimum" : -9223372036854775808
       },
       "InternalSegmentStateCharacteristic" : {
         "type" : "string"
@@ -441,71 +441,71 @@
         "pattern" : "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?"
       },
       "InternalSegment" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#InternalSegment",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#InternalSegment",
         "type" : "object",
         "properties" : {
           "Name" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#internalSegmentName",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#internalSegmentName",
             "allOf" : [ {
               "$ref" : "#/components/schemas/MultiLanguageTexts"
             } ]
           },
           "Description" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#internalSegmentDescription",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#internalSegmentDescription",
             "allOf" : [ {
               "$ref" : "#/components/schemas/MultiLanguageTexts"
             } ]
           },
           "RecordCount" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#internalSegmentRecordCount",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#internalSegmentRecordCount",
             "allOf" : [ {
               "$ref" : "#/components/schemas/InternalSegmentRecordCountCharacteristic"
             } ]
           },
           "StartTime" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#internalSegmentStartTime",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#internalSegmentStartTime",
             "allOf" : [ {
               "$ref" : "#/components/schemas/InternalSegmentStartTimeCharacteristic"
             } ]
           },
           "EndTime" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#internalSegmentEndTime",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#internalSegmentEndTime",
             "allOf" : [ {
               "$ref" : "#/components/schemas/InternalSegmentEndTimeCharacteristic"
             } ]
           },
           "Duration" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#internalSegmentDuration",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#internalSegmentDuration",
             "allOf" : [ {
               "$ref" : "#/components/schemas/InternalSegmentDurationCharacteristic"
             } ]
           },
           "SamplingInterval" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#internalSegmentSamplingInterval",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#internalSegmentSamplingInterval",
             "allOf" : [ {
               "$ref" : "#/components/schemas/InternalSegmentSamplingIntervalCharacteristic"
             } ]
           },
           "SamplingRate" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#internalSegmentSamplingRate",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#internalSegmentSamplingRate",
             "allOf" : [ {
               "$ref" : "#/components/schemas/InternalSegmentSamplingRateCharacteristic"
             } ]
           },
           "State" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#internalSegmentState",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#internalSegmentState",
             "allOf" : [ {
               "$ref" : "#/components/schemas/InternalSegmentStateCharacteristic"
             } ]
           },
           "LastUpdate" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#internalSegmentLastUpdate",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#internalSegmentLastUpdate",
             "allOf" : [ {
               "$ref" : "#/components/schemas/InternalSegmentLastUpdateCharacteristic"
             } ]
           },
           "Records" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#internalSegmentRecords",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#internalSegmentRecords",
             "allOf" : [ {
               "$ref" : "#/components/schemas/Records"
             } ]
@@ -513,30 +513,30 @@
         }
       },
       "InternalSegments" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#InternalSegments",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#InternalSegments",
         "type" : "array",
         "items" : {
           "$ref" : "#/components/schemas/InternalSegment"
         }
       },
       "Segments" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#Segments",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#Segments",
         "type" : "object",
         "properties" : {
           "ExternalSegments" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#externalSegments",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#externalSegments",
             "allOf" : [ {
               "$ref" : "#/components/schemas/ExternalSegments"
             } ]
           },
           "LinkedSegments" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#linkedSegments",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#linkedSegments",
             "allOf" : [ {
               "$ref" : "#/components/schemas/LinkedSegments"
             } ]
           },
           "InternalSegments" : {
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#internalSegments",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#internalSegments",
             "allOf" : [ {
               "$ref" : "#/components/schemas/InternalSegments"
             } ]
@@ -544,7 +544,7 @@
         }
       },
       "SegmentsCharacteristic" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#SegmentsCharacteristic",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#SegmentsCharacteristic",
         "type" : "object",
         "allOf" : [ {
           "$ref" : "#/components/schemas/Segments"
@@ -554,13 +554,13 @@
   },
   "properties" : {
     "Metadata" : {
-      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#metadata",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#metadata",
       "allOf" : [ {
         "$ref" : "#/components/schemas/MetadataCharacteristic"
       } ]
     },
     "Segments" : {
-      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.0.0#segments",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.time_series_data:1.1.1#segments",
       "allOf" : [ {
         "$ref" : "#/components/schemas/SegmentsCharacteristic"
       } ]
