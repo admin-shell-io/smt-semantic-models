@@ -1,0 +1,10 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
+
+# Battery Supplier profile:
+# The four use-case-dependent attributes stay optional.
+# Common mandatory constraints are inherited from BatteryNameplateBaseShape.
+:BatteryNameplateBatterySupplierShape
+    a sh:NodeShape ;
+    sh:targetSubjectsOf :uriOfTheProduct ;
+    sh:node :BatteryNameplateBaseShape .

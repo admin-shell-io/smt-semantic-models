@@ -25,7 +25,7 @@
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
 @prefix contactInformation: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
-@prefix tech: <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> 
+@prefix tech: <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
 
 
@@ -37,14 +37,14 @@
    samm:properties ( 
    [ samm:property :uriOfTheProduct; samm:payloadName "URIOfTheProduct" ] 
    [ samm:property :manufacturerName; samm:payloadName "ManufacturerName" ] 
-   [ samm:property :addressInformation; samm:payloadName "AddressInformation" ] 
+   [ samm:property :addressInformation; samm:optional true; samm:payloadName "AddressInformation" ]
    [ samm:property :serialNumber; samm:payloadName "SerialNumber" ] 
    [ samm:property :dateOfManufacture; samm:payloadName "DateOfManufacture" ] 
    [ samm:property :dateOfPuttingIntoService; samm:optional true; samm:payloadName "DateOfPuttingIntoService" ] 
    [ samm:property :uniqueFacilityIdentifier; samm:payloadName "UniqueFacilityIdentifier" ]
    [ samm:property :batteryStatus; samm:payloadName "LifeCycleStage" ]
    [ samm:property :operatorIdentifier; samm:optional true; samm:payloadName "OperatorIdentifier" ] 
-   [ samm:property tech:manufacturerIdentifier; samm:payloadName "ManufacturerIdentifier" ] 
+   [ samm:property tech:manufacturerIdentifier; samm:optional true; samm:payloadName "ManufacturerIdentifier" ]
    [ samm:property :markings; samm:payloadName "Markings" ] 
    [ samm:property :euDeclarationOfConformity; samm:payloadName "EUDeclarationOfConformity" ] 
    [ samm:property :resultsOfTestReportsProvingCompliance; samm:payloadName "ResultsOfTestReportsProvingCompliance" ] 
