@@ -1,0 +1,32 @@
+######################################################################
+# BatteryNameplate - Battery Supplier use case
+# SAMM 2.2.0 Aspect Model
+######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.2.0#> .
+@prefix tech: <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
+
+:BatteryNameplateBatterySupplier a samm:Aspect ;
+   samm:preferredName "Battery nameplate - battery supplier"@en ;
+   samm:preferredName "Batterie-Typenschild - Batterielieferant"@de ;
+   samm:description "BatteryNameplate profile for the battery supplier use case. AddressInformation, DateOfPuttingIntoService, OperatorIdentifier and ManufacturerIdentifier are optional."@en ;
+   samm:properties (
+      [ samm:property :uriOfTheProduct ; samm:payloadName "URIOfTheProduct" ]
+      [ samm:property :manufacturerName ; samm:payloadName "ManufacturerName" ]
+      [ samm:property :addressInformation ; samm:optional true ; samm:payloadName "AddressInformation" ]
+      [ samm:property :serialNumber ; samm:payloadName "SerialNumber" ]
+      [ samm:property :dateOfManufacture ; samm:payloadName "DateOfManufacture" ]
+      [ samm:property :dateOfPuttingIntoService ; samm:optional true ; samm:payloadName "DateOfPuttingIntoService" ]
+      [ samm:property :uniqueFacilityIdentifier ; samm:payloadName "UniqueFacilityIdentifier" ]
+      [ samm:property :batteryStatus ; samm:payloadName "LifeCycleStage" ]
+      [ samm:property :operatorIdentifier ; samm:optional true ; samm:payloadName "OperatorIdentifier" ]
+      [ samm:property tech:manufacturerIdentifier ; samm:optional true ; samm:payloadName "ManufacturerIdentifier" ]
+      [ samm:property :markings ; samm:payloadName "Markings" ]
+      [ samm:property :euDeclarationOfConformity ; samm:payloadName "EUDeclarationOfConformity" ]
+      [ samm:property :resultsOfTestReportsProvingCompliance ; samm:payloadName "ResultsOfTestReportsProvingCompliance" ]
+   ) ;
+   samm:operations ( ) ;
+   samm:events ( ) ;
+   samm:see <https://admin-shell.io/idta/nameplate/3/0/Nameplate> ;
+   samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0> .

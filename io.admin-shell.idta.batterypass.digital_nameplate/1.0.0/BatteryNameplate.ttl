@@ -1,4 +1,9 @@
 ######################################################################
+# BatteryNameplate - shared SAMM 2.2.0 model elements
+# Derived from the provided BatteryNameplate model.
+# Contains reusable Property/Characteristic definitions only.
+#
+#
 # Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
 # Copyright (c) 2025 Industrial Digital Twin Association
 # This work  is made available under the terms of the
@@ -27,32 +32,6 @@
 @prefix contactInformation: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
 @prefix tech: <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
-
-
-:BatteryNameplate a samm:Aspect ;
-   samm:preferredName "nameplate for battery passport"@en ;
-   samm:preferredName "Typenschild für den Batteriepass"@de ;
-   samm:description "Contains the nameplate information attached to the product within the Battery Product Passport."@en ;
-   samm:description "Enthält die Information zum Typenschild des Produkts im Digitalen Batteriepass."@de ;
-   samm:properties ( 
-   [ samm:property :uriOfTheProduct; samm:payloadName "URIOfTheProduct" ] 
-   [ samm:property :manufacturerName; samm:payloadName "ManufacturerName" ] 
-   [ samm:property :addressInformation; samm:optional true; samm:payloadName "AddressInformation" ]
-   [ samm:property :serialNumber; samm:payloadName "SerialNumber" ] 
-   [ samm:property :dateOfManufacture; samm:payloadName "DateOfManufacture" ] 
-   [ samm:property :dateOfPuttingIntoService; samm:optional true; samm:payloadName "DateOfPuttingIntoService" ] 
-   [ samm:property :uniqueFacilityIdentifier; samm:payloadName "UniqueFacilityIdentifier" ]
-   [ samm:property :batteryStatus; samm:payloadName "LifeCycleStage" ]
-   [ samm:property :operatorIdentifier; samm:optional true; samm:payloadName "OperatorIdentifier" ] 
-   [ samm:property tech:manufacturerIdentifier; samm:optional true; samm:payloadName "ManufacturerIdentifier" ]
-   [ samm:property :markings; samm:payloadName "Markings" ] 
-   [ samm:property :euDeclarationOfConformity; samm:payloadName "EUDeclarationOfConformity" ] 
-   [ samm:property :resultsOfTestReportsProvingCompliance; samm:payloadName "ResultsOfTestReportsProvingCompliance" ] 
-   );
-   samm:operations ( ) ;
-   samm:events ( ) ;
-   samm:see <https://admin-shell.io/idta/nameplate/3/0/Nameplate> ;
-   samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0> .
 
 :uriOfTheProduct a samm:Property ;
    samm:preferredName "URI des Produkts"@de ;
