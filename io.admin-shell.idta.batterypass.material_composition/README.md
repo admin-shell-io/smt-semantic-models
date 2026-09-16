@@ -27,6 +27,19 @@ The folder "gen" for each version contains sammple JSON files, the JSON schema a
 # Changelog
 All notable changes to this model will be documented in this section.
 
+## [1.0.2] - September 2026
+
+**Bugfixes:**
+
+* Conformant to DIN SPEC 99100:2025, not only CAS but also IUPAC is allowed for material identification or naming. ([#140](https://github.com/admin-shell-io/smt-semantic-models/issues/140))
+
+| kind of change | old name | new name | Comment |
+|---|---|---|---|
+| changed | BatteryMaterialIdentifier | -- | * preferred name and definition changed: not only CAS allowed as material identifier <br> * see attribute to CAS-registry removed |
+| changed | HazardousSubstanceIdentifier | -- |  * preferred name and definition changed: not only CAS allowed as material identifier <br> * see attribute to CAS-registry removed|
+
+
+
 ## [1.0.1] - April 2026
 
 Major changes:

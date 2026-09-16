@@ -1,7 +1,7 @@
 {
   "$schema" : "http://json-schema.org/draft-04/schema",
   "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#MaterialComposition",
-  "description" : "Mandatory data: Battery chemistry; critical raw materials; materials used in the cathode, anode, and \nelectrolyte; hazardous substances; impact of substances on the environment and on human health or \nsafety.",
+  "description" : "\r\n   Mandatory data: Battery chemistry; critical raw materials; \r\n   materials used in the cathode, anode, and electrolyte; \r\n   hazardous substances; \r\n   impact of substances on the environment and on human health or safety.\r\n   ",
   "type" : "object",
   "components" : {
     "schemas" : {
@@ -10,9 +10,9 @@
         "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Text",
         "description" : "Describes a Property which contains plain text. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
       },
-      "BatteryChemistry" : {
-        "description" : "Chemistry of battery.",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#BatteryChemistry",
+      "BatteryChemistryEntity" : {
+        "description" : "Chemistry entity of battery.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#BatteryChemistryEntity",
         "type" : "object",
         "properties" : {
           "ShortName" : {
@@ -33,12 +33,13 @@
         "required" : [ "ShortName", "ClearName" ]
       },
       "BatteryChemistryEntityList" : {
-        "description" : "Detailed composition, including materials used in the cathode, anode, and electrolyte.\nAll common cells have two electrodes and an electrolyte. The specific combination of materials used to make these components is called \"chemistry.\" A cell's chemistry largely determines its properties, while most variations within it are caused by additives, purification, and design elements.\n\nEUBR: Annex XIII (1b) ? Annex VI Part A (7)",
+        "description" : "\r\n   Detailed composition, including materials used in the cathode, anode, and electrolyte.\r\n   \r\n   All common cells have two electrodes and an electrolyte. \r\n   The specific combination of materials used to make these components is called \"chemistry\". \r\n   A cell's chemistry largely determines its properties, while most variations within it are caused by additives, purification, and design elements.\r\n   \r\n   EUBR: Annex XIII (1b) ? Annex VI Part A (7)\r\n   ",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#BatteryChemistryEntityList",
-        "type" : "object",
-        "allOf" : [ {
-          "$ref" : "#/components/schemas/BatteryChemistry"
-        } ]
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/BatteryChemistryEntity"
+        },
+        "uniqueItems" : true
       },
       "BatteryComponentEntity" : {
         "description" : "Battery component that includes the material.",
@@ -120,7 +121,7 @@
         "required" : [ "BatteryMaterialLocation", "BatteryMaterialIdentifier", "BatteryMaterialName", "IsCriticalRawMaterial" ]
       },
       "BatteryMaterialList" : {
-        "description" : "Detailed composition, including materials used in the cathode, anode, and electrolyte\n\nEUBR: Annex XIII (2a)",
+        "description" : "Detailed composition, including materials used in the cathode, anode, and electrolyte.\r\n   \r\n   EUBR: Annex XIII (2a)\r\n   ",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#BatteryMaterialList",
         "type" : "array",
         "items" : {
@@ -146,7 +147,7 @@
         }
       },
       "HazardousSubstanceLocation" : {
-        "description" : "The impact of substances, in particular, hazardous substances, contained in batteries on the environment and on human health or safety of persons, including impact due to inappropriate discarding of waste batteries such as littering or discarding as unsorted municipal waste.",
+        "description" : "\r\n   The impact of substances, in particular, hazardous substances, contained in batteries on the environment and on human health or safety of persons, \r\n   including impact due to inappropriate discarding of waste batteries such as littering or discarding as unsorted municipal waste.\r\n   ",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#HazardousSubstanceLocation",
         "type" : "object",
         "allOf" : [ {
@@ -154,7 +155,7 @@
         } ]
       },
       "HazardousSubstance" : {
-        "description" : "Hazardous substances (No. 19-23): Name (agreed substance nomenclature, e.g. IUPAC or chemical name) all hazardous substance (as any substance that poses a threat to human health and the environment'). Suggested above 0.1 % weight by weight within each (sub-)component.",
+        "description" : "\r\n   Hazardous substances (No. 19-23): Name (agreed substance nomenclature, e.g. IUPAC or chemical name) all hazardous substance \r\n   (as any substance that poses a threat to human health and the environment'). \r\n   Suggested above 0.1 % weight by weight within each (sub-)component.\r\n   ",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#HazardousSubstance",
         "type" : "object",
         "properties" : {
@@ -204,7 +205,7 @@
         "required" : [ "HazardousSubstanceName", "HazardousSubstanceIdentifier" ]
       },
       "HazardousSubstancesList" : {
-        "description" : "Hazardous substances contained in the battery other than mercury, cadmium or lead. Substance as a chemical element and its compounds in the natural state or the result of a manufacturing process (ECHA). Battery Regulation narrows reporting to substances falling under defined hazard classes and categories of the CLP regulation.\n\nEUBR: Annex XIII (1b) ? Annex VI Part A (8)",
+        "description" : "\r\n   Hazardous substances contained in the battery other than mercury, cadmium or lead. \r\n   Substance as a chemical element and its compounds in the natural state or the result of a manufacturing process (ECHA). \r\n   Battery Regulation narrows reporting to substances falling under defined hazard classes and categories of the CLP regulation.\r\n   \r\n   EUBR: Annex XIII (1b) ? Annex VI Part A (8)\r\n   ",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#HazardousSubstancesList",
         "type" : "array",
         "items" : {
@@ -215,21 +216,21 @@
   },
   "properties" : {
     "BatteryChemistry" : {
-      "description" : "Composition of a product in general terms by specifying the cathode and anode active material as well as electrolyte.\n\nDIN DKE Spec 99100 chapter reference: 6.5.2",
+      "description" : "\r\n   Composition of a product in general terms by specifying the cathode and anode active material as well as electrolyte.\r\n   \r\n   DIN DKE Spec 99100 chapter reference: 6.5.2\r\n   ",
       "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#batteryChemistry",
       "allOf" : [ {
         "$ref" : "#/components/schemas/BatteryChemistryEntityList"
       } ]
     },
     "BatteryMaterials" : {
-      "description" : "\"Component materials used\" (No. 17.a-c): Naming the materials (as a composition of substances) in cathode, anode, electrolyte according to public standards, including specification of the corresponding component (i.e., cathode, anode, or electrolyte). We suggest a reporting threshold of 0.1 % weight by weight.\n\nDIN DKE Spec 99100 chapter reference: 6.5.3-6.5.4",
+      "description" : "\r\n   \"Component materials used\" (No. 17.a-c): Naming the materials (as a composition of substances) in cathode, anode, electrolyte \r\n   according to public standards, including specification of the corresponding component (i.e., cathode, anode, or electrolyte). \r\n   We suggest a reporting threshold of 0.1 % weight by weight.\r\n   \r\n   DIN DKE Spec 99100 chapter reference: 6.5.3-6.5.4\r\n   ",
       "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#batteryMaterials",
       "allOf" : [ {
         "$ref" : "#/components/schemas/BatteryMaterialList"
       } ]
     },
     "HazardousSubstances" : {
-      "description" : "\"Hazardous substances\" (No 20.a-e): Name (agreed substance nomenclature, e.g. IUPAC or chemical name) all hazardous substance (as 'any substance that poses a threat to human health and the environment'). Suggested above 0.1 % weight by weight within each (sub-)component.\n\nDIN DKE Spec 99100 chapter reference: 6.5.4 - 6.5.6",
+      "description" : "\r\n   \"Hazardous substances\" (No 20.a-e): Name (agreed substance nomenclature, e.g. IUPAC or chemical name) \r\n   all hazardous substance (as 'any substance that poses a threat to human health and the environment'). \r\n   Suggested above 0.1 % weight by weight within each (sub-)component.\r\n   \r\n   DIN DKE Spec 99100 chapter reference: 6.5.4 - 6.5.6\r\n   ",
       "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#hazardousSubstances",
       "allOf" : [ {
         "$ref" : "#/components/schemas/HazardousSubstancesList"
