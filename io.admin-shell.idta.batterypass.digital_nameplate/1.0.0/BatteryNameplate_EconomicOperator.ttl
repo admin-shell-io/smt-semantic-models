@@ -1,32 +1,39 @@
 ######################################################################
 # BatteryNameplate - Economic Operator use case
-# SAMM 2.2.0 Aspect Model
+# SAMM 2.2.0 Aspect Model using AbstractEntity + samm:extends
 ######################################################################
 
 @prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.2.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#> .
 @prefix tech: <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
 
 :BatteryNameplateEconomicOperator a samm:Aspect ;
    samm:preferredName "Battery nameplate - economic operator"@en ;
    samm:preferredName "Batterie-Typenschild - Wirtschaftsakteur"@de ;
-   samm:description "BatteryNameplate profile for the economic operator use case. AddressInformation, DateOfPuttingIntoService, OperatorIdentifier and ManufacturerIdentifier are mandatory."@en ;
-   samm:properties (
-      [ samm:property :uriOfTheProduct ; samm:payloadName "URIOfTheProduct" ]
-      [ samm:property :manufacturerName ; samm:payloadName "ManufacturerName" ]
-      [ samm:property :addressInformation ; samm:payloadName "AddressInformation" ]
-      [ samm:property :serialNumber ; samm:payloadName "SerialNumber" ]
-      [ samm:property :dateOfManufacture ; samm:payloadName "DateOfManufacture" ]
-      [ samm:property :dateOfPuttingIntoService ; samm:payloadName "DateOfPuttingIntoService" ]
-      [ samm:property :uniqueFacilityIdentifier ; samm:payloadName "UniqueFacilityIdentifier" ]
-      [ samm:property :batteryStatus ; samm:payloadName "LifeCycleStage" ]
-      [ samm:property :operatorIdentifier ; samm:payloadName "OperatorIdentifier" ]
-      [ samm:property tech:manufacturerIdentifier ; samm:payloadName "ManufacturerIdentifier" ]
-      [ samm:property :markings ; samm:payloadName "Markings" ]
-      [ samm:property :euDeclarationOfConformity ; samm:payloadName "EUDeclarationOfConformity" ]
-      [ samm:property :resultsOfTestReportsProvingCompliance ; samm:payloadName "ResultsOfTestReportsProvingCompliance" ]
-   ) ;
+   samm:description "Battery nameplate information for the economic operator use case."@en ;
+   samm:properties ( :batteryNameplateEconomicOperator ) ;
    samm:operations ( ) ;
    samm:events ( ) ;
    samm:see <https://admin-shell.io/idta/nameplate/3/0/Nameplate> ;
    samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0> .
+
+:batteryNameplateEconomicOperator a samm:Property ;
+   samm:preferredName "battery nameplate"@en ;
+   samm:preferredName "Batterie-Typenschild"@de ;
+   samm:description "Battery nameplate data provided in the economic operator use case."@en ;
+   samm:characteristic :BatteryNameplateEconomicOperatorCharacteristic .
+
+:BatteryNameplateEconomicOperatorCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :BatteryNameplateEconomicOperatorEntity .
+
+:BatteryNameplateEconomicOperatorEntity a samm:Entity ;
+   samm:preferredName "Battery nameplate economic operator data"@en ;
+   samm:description "Battery nameplate data with economic-operator-specific cardinalities."@en ;
+   samm:extends :BatteryNameplateBaseEntity ;
+   samm:properties (
+      [ samm:property :addressInformation ; samm:payloadName "AddressInformation" ]
+      [ samm:property :dateOfPuttingIntoService ; samm:payloadName "DateOfPuttingIntoService" ]
+      [ samm:property :operatorIdentifier ; samm:payloadName "OperatorIdentifier" ]
+      [ samm:property tech:manufacturerIdentifier ; samm:payloadName "ManufacturerIdentifier" ]
+   ) .

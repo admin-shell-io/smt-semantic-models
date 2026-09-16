@@ -1,7 +1,6 @@
 ######################################################################
 # BatteryNameplate - shared SAMM 2.2.0 model elements
-# Derived from the provided BatteryNameplate model.
-# Contains reusable Property/Characteristic definitions only.
+# Common properties + abstract base entity for profile inheritance
 #
 #
 # Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
@@ -32,6 +31,35 @@
 @prefix contactInformation: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
 @prefix tech: <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
+
+######################################################################
+# Shared abstract base entity
+#
+# Only properties whose optionality is identical for all roles are
+# declared here. The four role-dependent properties are intentionally
+# NOT part of this base entity, because samm:optional is inherited and
+# cannot be overridden in a child entity.
+######################################################################
+
+:BatteryNameplateBaseEntity a samm:AbstractEntity ;
+   samm:preferredName "Battery nameplate base"@en ;
+   samm:preferredName "Batterie-Typenschild Basis"@de ;
+   samm:description "Common battery nameplate information shared by all supported use cases."@en ;
+   samm:properties (
+      [ samm:property :uriOfTheProduct ; samm:payloadName "URIOfTheProduct" ]
+      [ samm:property :manufacturerName ; samm:payloadName "ManufacturerName" ]
+      [ samm:property :serialNumber ; samm:payloadName "SerialNumber" ]
+      [ samm:property :dateOfManufacture ; samm:payloadName "DateOfManufacture" ]
+      [ samm:property :uniqueFacilityIdentifier ; samm:payloadName "UniqueFacilityIdentifier" ]
+      [ samm:property :batteryStatus ; samm:payloadName "LifeCycleStage" ]
+      [ samm:property :markings ; samm:payloadName "Markings" ]
+      [ samm:property :euDeclarationOfConformity ; samm:payloadName "EUDeclarationOfConformity" ]
+      [ samm:property :resultsOfTestReportsProvingCompliance ; samm:payloadName "ResultsOfTestReportsProvingCompliance" ]
+   ) .
+
+######################################################################
+# Shared property definitions
+######################################################################
 
 :uriOfTheProduct a samm:Property ;
    samm:preferredName "URI des Produkts"@de ;
