@@ -1,12 +1,12 @@
-# BatteryNameplate SAMM 2.2.0 use-case models
+# BatteryNameplate SAMM 2.2.0 role based models
 
 ## Files
 
 - `BatteryNameplate.ttl`: shared SAMM Property and Characteristic definitions.
-- `BatteryNameplate_BatterySupplier.ttl`: SAMM Aspect for the battery supplier use case.
-- `BatteryNameplate_EconomicOperator.ttl`: SAMM Aspect for the economic operator use case.
+- `BatteryNameplate_BatterySupplier.ttl`: SAMM Aspect for role battery supplier.
+- `BatteryNameplate_EconomicOperator.ttl`: SAMM Aspect for role economic operator.
 
-## Use-case cardinalities
+## Role based cardinalities
 
 | Property | Battery Supplier | Economic Operator |
 |---|---|---|
