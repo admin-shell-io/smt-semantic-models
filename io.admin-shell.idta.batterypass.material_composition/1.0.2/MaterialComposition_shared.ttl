@@ -58,7 +58,7 @@
    """@en ;
    samm:characteristic :HazardousSubstancesList .
 
-:BatteryChemistryEntityList a samm-c:SingleEntity ;
+:BatteryChemistryEntityList a samm-c:Set ;
    samm:preferredName "chemistry entities of battery"@en ;
    samm:description """
    Detailed composition, including materials used in the cathode, anode, and electrolyte.

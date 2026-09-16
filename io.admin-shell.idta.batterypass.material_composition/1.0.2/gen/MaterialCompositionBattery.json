@@ -1,8 +1,8 @@
 {
-  "BatteryChemistry" : {
+  "BatteryChemistry" : [ {
     "ShortName" : "NMC",
     "ClearName" : "Lithium nickel manganese cobalt oxides"
-  },
+  } ],
   "BatteryMaterials" : [ {
     "BatteryMaterialLocation" : {
       "ComponentName" : "Anode",
@@ -18,7 +18,7 @@
     "HazardousSubstanceName" : "Cobalt (Co)",
     "HazardousSubstanceIdentifier" : "346417-97-8",
     "HazardousSubstanceConcentration" : 20.0,
-    "HazardousSubstanceImpact" : [ "Mvy0b3yYw" ],
+    "HazardousSubstanceImpact" : [ "L22" ],
     "HazardousSubstanceLocation" : {
       "ComponentName" : "Anode",
       "ComponentId" : "1234-344"
