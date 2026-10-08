@@ -25,10 +25,10 @@
 
 
 :addressInformation a samm:Property ;
-   samm:preferredName "Addresse des Herstellers"@de ;
-   samm:preferredName "adress of the manufacturer"@en ;
+   samm:preferredName "Adresse des Herstellers"@de ;
+   samm:preferredName "address of the manufacturer"@en ;
    samm:description "Adress-Information des Herstellers."@de ;
-   samm:description "Address information of the manufacturer."@en ;
+   samm:description "address information of the manufacturer."@en ;
    samm:see <https://adminshell.io/zvei/nameplate/1/0/ContactInformations/AddressInformation> ;
    samm:see <https://admin-shell.io/smt-dropin/smt-dropin-use/1/0> ;
    samm:see <urn:irdi:0112/2///61360_7#AAS002#001> ;
