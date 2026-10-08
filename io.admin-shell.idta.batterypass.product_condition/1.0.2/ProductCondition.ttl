@@ -29,7 +29,7 @@
 @prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
 
 :ProductCondition a samm:Aspect ;
-   samm:preferredName "product condition"@en ;
+   samm:preferredName "Product Condition"@en ;
    samm:description "Covers all battery lifetime relevant properties."@en ;
    samm:properties ( 
         [ samm:property bp:energyThroughput; samm:optional true; samm:payloadName "EnergyThroughput" ]

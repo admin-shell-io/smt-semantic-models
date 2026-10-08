@@ -19,7 +19,7 @@
 
 
 :DppMetadata a samm:Aspect ;
-   samm:preferredName "digital product passport (DPP)"@en ;
+   samm:preferredName "Digital Product Passport (DPP)"@en ;
    samm:preferredName "Digitaler Produktpass (DPP)"@de ;
    samm:description """
    Digital record of product characteristics throughout its life cycle.

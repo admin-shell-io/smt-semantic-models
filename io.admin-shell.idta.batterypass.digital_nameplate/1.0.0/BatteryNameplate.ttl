@@ -30,7 +30,7 @@
 
 
 :BatteryNameplate a samm:Aspect ;
-   samm:preferredName "nameplate for battery passport"@en ;
+   samm:preferredName "Nameplate for Battery Passport"@en ;
    samm:preferredName "Typenschild für den Batteriepass"@de ;
    samm:description "Contains the nameplate information attached to the product within the Battery Product Passport."@en ;
    samm:description "Enthält die Information zum Typenschild des Produkts im Digitalen Batteriepass."@de ;
