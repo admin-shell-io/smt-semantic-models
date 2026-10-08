@@ -26,6 +26,19 @@ The folder "gen" for each version contains sammple JSON files, the JSON schema a
 # Changelog
 All notable changes to this model will be documented in this section.
 
+
+## [1.1.0] - April 2026
+
+Major changes:
+
+* add optional property :economicOperatorAddressInformation  (https://github.com/admin-shell-io/smt-semantic-models/issues/90[#90])
+* rename :addressInformation to :manufacturerAddressInformation but payload name still remains "AddressInformation" (https://github.com/admin-shell-io/smt-semantic-models/issues/90[#90])
+* add optional :economicOperatorName (https://github.com/admin-shell-io/smt-semantic-models/issues/90[#90])
+
+Minor changes (no impact on payload)
+
+* no resue to tech: any longer for manufacturerIdentifier
+
 ## [1.0.0] - February 2026
 
 Contained Files:
