@@ -31,7 +31,7 @@
 
 
 :TechnicalData a samm:Aspect ;
-   samm:description "Technical data of the asset and associated product classificatons."@en ;
+   samm:description "Technical data of the asset and associated product classifications."@en ;
    samm:see <urn:irdi:0173-1#01-AHX837#002> ;
    samm:properties ( 
    	 [ samm:property :generalInformation; samm:payloadName "GeneralInformation" ] 

@@ -24,8 +24,8 @@
 
 
 :addressInformation a samm:Property ;
-   samm:preferredName "Addresse des Herstellers"@de ;
-   samm:preferredName "adress of the manufacturer"@en ;
+   samm:preferredName "Adresse des Herstellers"@de ;
+   samm:preferredName "address of the manufacturer"@en ;
    samm:description "The manufacturer information postal address, indicating a single contact point. Web address, if available; and web address, if available.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.3"@en ;
    samm:see <https://adminshell.io/zvei/nameplate/1/0/ContactInformations/AddressInformation> ;
    samm:see <https://admin-shell.io/smt-dropin/smt-dropin-use/1/0> ;

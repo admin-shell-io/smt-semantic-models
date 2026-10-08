@@ -43,7 +43,7 @@
    samm:preferredName "text statement"@en ;
    samm:preferredName "Erläuterung"@de ;
    samm:description "Statement by the manufacturer in text form, e.g. scope of validity of the statements, scopes of application, conditions of operation"@en ;
-   samm:description "Erläuterung des Hersteller in Textform, z.B. Anwendungsbereich"@de ;
+   samm:description "Erläuterung des Herstellers in Textform, z.B. Anwendungsbereich"@de ;
    samm:see <urn:irdi:0173-1#02-ABK134#002> ;
    samm:see <https://api.eclass-cdp.com/0173-1-02-ABK134-002> ;
    samm:characteristic shared:MultiLanguageTexts .

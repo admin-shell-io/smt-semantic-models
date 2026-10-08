@@ -20,7 +20,7 @@
 
 :TestAspect a samm:Aspect ;
    samm:preferredName "Test-Aspect"@de ;
-   samm:preferredName "test Aspect"@en ;
+   samm:preferredName "test aspect"@en ;
    samm:description "Test-Aspect."@de ;
    samm:description "Test Aspect."@en ;
    samm:properties ( 

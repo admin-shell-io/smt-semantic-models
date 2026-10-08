@@ -52,7 +52,7 @@
 
 :classificationSystemVersion a samm:Property ;
    samm:preferredName "classification system version"@en ;
-   samm:description "Common version identifier of the used classification system, in order to distinguish different version of the property dictionary.\nNote: Casing is to be ignored."@en ;
+   samm:description "Common version identifier of the used classification system, in order to distinguish different versions of the property dictionary.\nNote: Casing is to be ignored."@en ;
    samm:see <https://admin-shell.io/ZVEI/TechnicalData/ClassificationSystemVersion/1/1> ;
    samm:see <urn:irdi:0173-1#02-AAR710#003> ;
    samm:see <https://api.eclass-cdp.com/0173-1-02-AAR710-003> ;

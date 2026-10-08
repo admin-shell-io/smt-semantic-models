@@ -24,7 +24,7 @@
 @prefix : <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
 
 :ContactInformations a samm:Aspect ;
-   samm:preferredName "test Aspect for Contact Information"@en ;
+   samm:preferredName "test aspect for contact information"@en ;
    samm:preferredName "Test-Aspect für Kontaktinformation"@de ;
    samm:properties ( :contactInformations ) ;
    samm:operations ( ) ;

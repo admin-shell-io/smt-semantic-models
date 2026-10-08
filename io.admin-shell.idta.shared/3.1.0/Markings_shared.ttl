@@ -62,7 +62,7 @@
 
 :markingAdditionalText a samm:Property ;
    samm:preferredName "additional text"@en ;
-   samm:preferredName "zusätzlicher Text"@de ;
+   samm:preferredName "Zusätzlicher Text"@de ;
    samm:description "Zusätzlicher sprechender Text für die Kennzeichnung."@de ;
    samm:description "Where applicable, additional information on the marking in plain text, e.g. the ID-number of the notified body involved in the conformity process."@en ;
    samm:see <urn:irdi:0173-1%2302-ABI192%23003> ;
@@ -72,7 +72,7 @@
    samm:exampleValue "0044" .
 
 :designationOfCertificateOrApproval a samm:Property ;
-   samm:preferredName "designation of Certificate or Approval."@en ;
+   samm:preferredName "designation of certificate or approval"@en ;
    samm:description "Alphanumeric character sequence identifying a certificate or approval."@en ;
    samm:see <urn:irdi:0112/2///61987%23ABH783%23003> ;
    samm:characteristic samm-c:Text ;

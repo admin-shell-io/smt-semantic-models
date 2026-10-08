@@ -43,7 +43,7 @@
 
 :CarbonFootprintBattery a samm:Aspect ;
    samm:preferredName "Carbon Footprint for Battery Passport"@en ;
-   samm:preferredName "C02 Footprint für den Batteriepass"@de ;
+   samm:preferredName "CO2 Footprint für den Batteriepass"@de ;
    samm:description "Provides the means to access the Carbon Footprint of the asset in the context of a Battery Passport."@en ;
    samm:see <https://admin-shell.io/idta/SubmodelTemplate/CarbonFootprint/1/0> ;
    samm:see <https://admin-shell.io/IDTA-02035-3/1/0> ;

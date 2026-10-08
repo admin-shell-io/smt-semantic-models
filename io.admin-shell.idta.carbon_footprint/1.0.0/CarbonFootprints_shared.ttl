@@ -140,7 +140,7 @@
    samm:exampleValue "piece" .
 
 :pcfCo2eq a samm:Property ;
-   samm:preferredName "CO2 eq Climate Change"@en ;
+   samm:preferredName "CO2 eq climate change"@en ;
    samm:preferredName "CO2 eq Klimawandel"@de ;
    samm:description "Sum of all greenhouse gas emissions of a product according to the quantification requirements of the standard."@en ;
    samm:see <urn:irdi:0173-1%2302-ABG855%23003> ;

@@ -26,7 +26,7 @@
 :HandoverDocumentation a samm:Aspect ;
    samm:preferredName "handover documentation"@en ;
    samm:preferredName "Übergabe-Dokumentation"@de ;
-   samm:description "Handover Documentation defines a set meta data for the handover of documentation from the manufacturer to the operator for industrial equipment."@en ;
+   samm:description "Handover Documentation defines a set of meta data for the handover of documentation from the manufacturer to the operator for industrial equipment."@en ;
    samm:description "Enthält alle wichtigen Dokumente für den Kunden."@de ;
    samm:see <urn:irdi:0173-1%2301-AHF578%23003> ;
    samm:see <https://api.eclass-cdp.com/0173-1-01-AHF578-003> ;
@@ -107,7 +107,7 @@
    samm:characteristic :DocumentVersions .
 
 :DocumentIdSet a samm-c:Set ;
-   samm:preferredName "specification of Document IDs"@en ;
+   samm:preferredName "specification of document IDs"@en ;
    samm:preferredName "Spezifikation von Dokumentennummern"@de ;
    samm:description "Set of the IDs of the documents."@en ;
    samm:description "Menge von Dokumentennummern."@de ;

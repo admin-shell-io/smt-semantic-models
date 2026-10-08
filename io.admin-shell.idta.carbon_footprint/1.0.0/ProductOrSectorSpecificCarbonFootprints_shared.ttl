@@ -47,7 +47,7 @@
 
 :productOrSectorSpecificCarbonFootprints a samm:Property ;
    samm:preferredName "product or sector specific carbon footprints"@en ;
-   samm:preferredName "Produkt- oder Sektor-spezifische C02-Fußabdrücke"@de ;
+   samm:preferredName "Produkt- oder Sektor-spezifische CO2-Fußabdrücke"@de ;
    samm:description "Product carbon footprints, which are determined in accordance with sector or product group-specific rules or guidelines and cover the life cycle or parts of a product life cycle."@en ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/ProductOrSectorSpecificCarbonFootprint/1/0> ;
    samm:characteristic :ProductOrSectorSpecificCarbonFootprintSet .
@@ -69,7 +69,7 @@
    samm:preferredName "product or sector specific rules"@en ;
    samm:preferredName "produktspezifische oder sektorspezifische Regeln"@de ;
    samm:description "Contains further information on the product-specific or sector-specific rules used to calculate the carbon footprint."@en ;
-   samm:description "Beinhaltet weiterführende Informationen zur produktspezifischen oder sektorspezifischen Regeln, welche zur Berechnung des CO2-Fußabdrucks eingesetzt werden. "@de ;
+   samm:description "Beinhaltet weiterführende Informationen zu produktspezifischen oder sektorspezifischen Regeln, welche zur Berechnung des CO2-Fußabdrucks eingesetzt werden. "@de ;
    samm:see <https://admin-shell.io/idta/CarbonFootprint/ProductOrSectorSpecificRule/1/0> ;
    samm:characteristic :ProductOrSectorSpecificRuleCharacteristic .
 

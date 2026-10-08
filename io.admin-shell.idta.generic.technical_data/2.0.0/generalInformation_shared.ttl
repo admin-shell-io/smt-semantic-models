@@ -74,7 +74,7 @@
 :manufacturerOrderCode a samm:Property ;
    samm:preferredName "Bestellcode des Produkts"@de ;
    samm:preferredName "order code for the product"@en ;
-   samm:description "Eindeutige Zahlen- und Buchstabenkombination um das Produkt eindeutig für die Bestellung zu identifizieren."@de ;
+   samm:description "Eindeutige Zahlen- und Buchstabenkombination, um das Produkt eindeutig für die Bestellung zu identifizieren."@de ;
    samm:description "Unique combination of numbers and letters used to identify the device for ordering."@en ;
    samm:see <urn:irdi:0173-1%2302-AAO227%23002> ;
    samm:see <urn:irdi:0173-1%2302-AAO227%23004> ;
