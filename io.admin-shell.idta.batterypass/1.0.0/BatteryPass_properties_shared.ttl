@@ -20,13 +20,13 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass:1.0.0#> .
-@prefix dpp-meta: <urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#> .
+@prefix dpp-meta: <urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.1#> .
 @prefix dbp-pcf: <urn:samm:io.admin-shell.idta.batterypass.carbon_footprint:1.0.0#> .
-@prefix dbp-cir: <urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.0#> .
+@prefix dbp-cir: <urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#> .
 @prefix dbp-nameplate: <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
 @prefix dbp-docu: <urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.0#> .
-@prefix dbp-material: <urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.1#> .
-@prefix dbp-dyn: <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.1#> .
+@prefix dbp-material: <urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#> .
+@prefix dbp-dyn: <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#> .
 @prefix dbp-tech: <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.1#> .
 
 
