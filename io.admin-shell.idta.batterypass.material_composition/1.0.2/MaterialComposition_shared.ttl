@@ -199,12 +199,12 @@
 
 :HazardousSubstanceLocation a samm-c:SingleEntity ;
    samm:preferredName "location"@en ;
-   samm:description "The impact of substances, in particular, hazardous substances, contained in batteries on the environment and on human health or safety of persons, including impact due to inappropriate discarding of waste batteries such as littering or discarding as unsorted municipal waste."@en ;
+   samm:description "Location on a (sub-)component-level of a hazardous substance."@en ;
    samm:dataType :BatteryComponentEntity .
 
 :BatteryComponentEntity a samm:Entity ;
-   samm:preferredName "battery location"@en ;
-   samm:description "Battery component that includes the material."@en ;
+   samm:preferredName "battery component"@en ;
+   samm:description "Battery component."@en ;
    samm:properties ( 
     [ samm:property :componentName; samm:optional true; samm:payloadName "ComponentName"  ] 
     [ samm:property :componentId; samm:optional true; samm:payloadName "ComponentId" ] 
