@@ -1,0 +1,82 @@
+{
+  "Metadata" : {
+    "Name" : [ {
+      "de" : "OjEQX6"
+    } ],
+    "Description" : [ {
+      "de" : "F0JjYRgfc4"
+    } ],
+    "Records" : [ {
+      "Time" : 2089991959649663592,
+      "SampleAccelerationX" : -2230781915693299291,
+      "SampleAccelerationY" : -1197047809617670808,
+      "SampleAccelerationZ" : 7081665087540799652
+    } ]
+  },
+  "Segments" : {
+    "ExternalSegments" : [ {
+      "Name" : [ {
+        "en" : "xYRrp9A"
+      } ],
+      "Description" : [ {
+        "en" : "z"
+      } ],
+      "RecordCount" : 4525549577943888622,
+      "StartTime" : "2020-09-19T14:40:38.318",
+      "EndTime" : "2020-09-19T14:40:38.318",
+      "Duration" : "Nk53P6rO",
+      "SamplingInterval" : 735923124318215877,
+      "SamplingRate" : -4089474249409219788,
+      "State" : "tixMldqP",
+      "LastUpdate" : "2020-09-19T14:40:38.318",
+      "File" : {
+        "value" : "https://example.com/SafetyInstructions.pdf",
+        "contentType" : "application/pdf"
+      },
+      "Blob" : {
+        "value" : "SGVsbG8sIFdvcmxkIQ==",
+        "contentType" : "application/pdf"
+      }
+    } ],
+    "LinkedSegments" : [ {
+      "Name" : [ {
+        "de" : "oYl"
+      } ],
+      "Description" : [ {
+        "en" : "zR"
+      } ],
+      "RecordCount" : -4708349313628293626,
+      "StartTime" : "2020-09-19T14:40:38.318",
+      "EndTime" : "2020-09-19T14:40:38.318",
+      "Duration" : "SB3isS0tg6",
+      "SamplingInterval" : -8820044270472912578,
+      "SamplingRate" : -7166190174138873509,
+      "State" : "wnP",
+      "LastUpdate" : "2020-09-19T14:40:38.318",
+      "Endpoint" : "wisdPYoIE",
+      "Query" : "6U"
+    } ],
+    "InternalSegments" : [ {
+      "Name" : [ {
+        "en" : "rBeEWKH"
+      } ],
+      "Description" : [ {
+        "de" : "NHaQPVnX"
+      } ],
+      "RecordCount" : -5887466436944938738,
+      "StartTime" : "2020-09-19T14:40:38.318",
+      "EndTime" : "2020-09-19T14:40:38.318",
+      "Duration" : "Yn5",
+      "SamplingInterval" : 817887659426568612,
+      "SamplingRate" : -4472309279970370665,
+      "State" : "O7LHXq",
+      "LastUpdate" : "2020-09-19T14:40:38.318",
+      "Records" : [ {
+        "Time" : 2089991959649663592,
+        "SampleAccelerationX" : -2230781915693299291,
+        "SampleAccelerationY" : -1197047809617670808,
+        "SampleAccelerationZ" : 7081665087540799652
+      } ]
+    } ]
+  }
+}
