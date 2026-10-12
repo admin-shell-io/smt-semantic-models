@@ -1,0 +1,81 @@
+######################################################################
+# Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.2.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.2.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.2.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+
+:ValueOnlyOperationExampleAspect a samm:Aspect ;
+   samm:preferredName "Value-Only Beispiel für Operationen"@de ;
+   samm:preferredName "Value-Only Example for Operations"@en ;
+   samm:description "Beispiel-Aspekt, der Charakteristiken für Submodel-Elemente vom Type 'Operation' testet."@de ;
+   samm:description "Example Aspect with characteristics for Value-Only serialization of Submodel Elements of type 'Operation'."@en ;
+   samm:properties ( :inArg :inoutArg :toggleResult ) ;
+   samm:operations ( :toggle ) ;
+   samm:events ( ) .
+
+:toggle a samm:Operation ;
+   samm:input ( :inArg :inoutArg ) ;
+   samm:output :toggleResult .
+   
+  
+:toggleResult a samm:Property ;
+  samm:characteristic :ToggleResultCharacteristic .
+   
+:ToggleResultCharacteristic a samm-c:SingleEntity ;
+  samm:dataType :ToggleResult .  
+  
+ 
+:ToggleResult a samm:Entity ;
+  samm:extends shared:OperationResultValueOnly ;
+  samm:properties ( 
+    [ samm:extends :inoutputArguments;  samm:characteristic :ToggleInoutputArgumentsCharacteristic ] 
+	[ samm:extends :outputArguments;  samm:characteristic :ToggleOutputArgumentsCharacteristic ]
+	) .
+
+
+:ToggleOutputArgumentsCharacteristic a samm-c:SingleEntity ;
+  samm:dataType :ToggleOutputArguments .
+  
+:ToggleInoutputArgumentsCharacteristic a samm-c:SingleEntity ;
+  samm:dataType :ToggleInoutputArguments .
+
+:ToggleOutputArguments a samm:Entity ;
+  samm:properties (
+  :outArg
+  ) .
+
+:ToggleInoutputArguments a samm:Entity ;
+  samm:properties (
+      [ samm:property :resultInoutArg; samm:payloadName "inoutArg" ] 
+  ) .
+  
+:inArg a samm:Property ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "1" .
+   
+  
+:inoutArg a samm:Property ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue"99" .
+ 
+:resultInoutArg a samm:Property ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "100" .
+ 
+:outArg a samm:Property ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "5" .
