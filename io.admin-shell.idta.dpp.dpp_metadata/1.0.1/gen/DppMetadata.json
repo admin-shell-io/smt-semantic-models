@@ -1,0 +1,11 @@
+{
+  "digitalProductPassportId" : "https://www.example.org/dpp/1234545",
+  "uniqueProductIdentifier" : "https://www.example.org/dpp/1234545",
+  "granularity" : "Batch",
+  "dppSchemaVersion" : "ENXXX:v1.0",
+  "dppStatus" : "Active",
+  "lastUpdate" : "2025-08-22T03:12:00Z",
+  "economicOperatorId" : "gxx:ppp456789",
+  "facilityId" : "gxx:xxx987654",
+  "contentSpecificationIds" : [ "e3ObSl" ]
+}

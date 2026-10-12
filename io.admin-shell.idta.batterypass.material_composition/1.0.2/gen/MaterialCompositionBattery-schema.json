@@ -41,7 +41,7 @@
         } ]
       },
       "BatteryComponentEntity" : {
-        "description" : "Battery component that includes the material.",
+        "description" : "Battery component.",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#BatteryComponentEntity",
         "type" : "object",
         "properties" : {
@@ -89,7 +89,7 @@
             } ]
           },
           "BatteryMaterialIdentifier" : {
-            "description" : "Identifier of material. \r\n\r\n   The materials should be named using a public standard or agreed nomenclature, \r\n   which refers e.g. to the nomenclature of IUPAC or related identifiers such as the CAS (Chemical Abstracts Service) number. \r\n   \r\n   DIN DKE Spec 99100 chapter reference: 6.5.4 k)\r\n   ",
+            "description" : "Identifier of material. \r\n\r\n   The materials should be named using a public standard or agreed nomenclature, \r\n   which refers e.g. to the nomenclature of IUPAC or related identifiers such as the CAS (Chemical Abstracts Service) number. \r\n   \r\n   \nDIN DKE Spec 99100:2025-02 chapter reference: 6.5.4 k)\r\n   ",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#batteryMaterialIdentifier",
             "allOf" : [ {
               "$ref" : "#/components/schemas/Text"
@@ -146,7 +146,7 @@
         }
       },
       "HazardousSubstanceLocation" : {
-        "description" : "The impact of substances, in particular, hazardous substances, contained in batteries on the environment and on human health or safety of persons, including impact due to inappropriate discarding of waste batteries such as littering or discarding as unsorted municipal waste.",
+        "description" : "Location on a (sub-)component-level of a hazardous substance.",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#HazardousSubstanceLocation",
         "type" : "object",
         "allOf" : [ {
@@ -215,21 +215,21 @@
   },
   "properties" : {
     "BatteryChemistry" : {
-      "description" : "Composition of a product in general terms by specifying the cathode and anode active material as well as electrolyte.\n\nDIN DKE Spec 99100 chapter reference: 6.5.2",
+      "description" : "\r\n\tComposition of a product in general terms by specifying the cathode and anode active material as well as electrolyte.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.5.2\r\n\t",
       "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#batteryChemistry",
       "allOf" : [ {
         "$ref" : "#/components/schemas/BatteryChemistryEntityList"
       } ]
     },
     "BatteryMaterials" : {
-      "description" : "\"Component materials used\" (No. 17.a-c): Naming the materials (as a composition of substances) in cathode, anode, electrolyte according to public standards, including specification of the corresponding component (i.e., cathode, anode, or electrolyte). We suggest a reporting threshold of 0.1 % weight by weight.\n\nDIN DKE Spec 99100 chapter reference: 6.5.3-6.5.4",
+      "description" : "\r\n\tInformation on the detailed composition of the battery.\r\n\t\r\n\tInformation on the detailed composition must include materials used in the cathode, anode and electrolyte.\r\n\t\r\n\tMaterials in the battery should be reported above a concentration of 1% weight by weight.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.5.3-6.5.4\r\n\t",
       "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#batteryMaterials",
       "allOf" : [ {
         "$ref" : "#/components/schemas/BatteryMaterialList"
       } ]
     },
     "HazardousSubstances" : {
-      "description" : "\"Hazardous substances\" (No 20.a-e): Name (agreed substance nomenclature, e.g. IUPAC or chemical name) all hazardous substance (as 'any substance that poses a threat to human health and the environment'). Suggested above 0.1 % weight by weight within each (sub-)component.\n\nDIN DKE Spec 99100 chapter reference: 6.5.4 - 6.5.6",
+      "description" : "\r\n    Information on hazardous substances other than mercury, cadmium, or lead contained in the battery.\r\n\t\r\n    Hazardous substances also being substances of very high concern, as defined under the RegulationEC No1907/2006 (“REACH Regulation”) should be reported on if exceeding a threshold of 0,1% weight by weight.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.5.4 - 6.5.6\r\n\t",
       "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#hazardousSubstances",
       "allOf" : [ {
         "$ref" : "#/components/schemas/HazardousSubstancesList"

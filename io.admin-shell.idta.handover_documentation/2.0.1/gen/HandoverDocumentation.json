@@ -1,0 +1,87 @@
+{
+  "Documents" : [ {
+    "DocumentIds" : [ {
+      "DocumentDomainId" : "1213455566",
+      "DocumentIdentifier" : "XF90-884",
+      "DocumentIsPrimary" : true
+    } ],
+    "DocumentClassifications" : [ {
+      "ClassId" : "03-02",
+      "ClassName" : [ {
+        "en" : "qEzJ"
+      } ],
+      "ClassificationSystem" : "VDI2770 Blatt 1:2020"
+    } ],
+    "DocumentVersions" : [ {
+      "Language" : "en",
+      "Version" : "V1.2",
+      "Title" : [ {
+        "de" : "019dOdi1xm"
+      } ],
+      "Subtitle" : [ {
+        "de" : "xi4UOQtyH"
+      } ],
+      "Description" : [ {
+        "en" : "Z2eO"
+      } ],
+      "KeyWords" : [ {
+        "de" : "irLfSnDL"
+      } ],
+      "StatusSetDate" : "2020-02-06",
+      "StatusValue" : "Released",
+      "OrganizationShortName" : "Example company",
+      "OrganizationOfficialName" : "Example company Ltd.",
+      "RefersToEntities" : [ {
+        "keys" : [ {
+          "key" : "GlobalReference",
+          "value" : "id1234"
+        } ],
+        "type" : "ExternalReference"
+      } ],
+      "BasedOnReferences" : [ {
+        "keys" : [ {
+          "key" : "GlobalReference",
+          "value" : "id1234"
+        } ],
+        "type" : "ExternalReference"
+      } ],
+      "TranslationOfEntities" : [ {
+        "keys" : [ {
+          "key" : "GlobalReference",
+          "value" : "id1234"
+        } ],
+        "type" : "ExternalReference"
+      } ],
+      "DigitalFiles" : [ {
+        "value" : "https://example.com/SafetyInstructions.pdf",
+        "contentType" : "application/pdf"
+      } ],
+      "PreviewFile" : {
+        "value" : "https://example.com/SafetyInstructions.pdf",
+        "contentType" : "application/pdf"
+      }
+    } ],
+    "DocumentedEntities" : [ {
+      "keys" : [ {
+        "key" : "GlobalReference",
+        "value" : "id1234"
+      } ],
+      "type" : "ExternalReference"
+    } ]
+  } ],
+  "Entities" : [ {
+    "specificAssetIds" : [ {
+      "externalSubjectId" : {
+        "keys" : [ {
+          "key" : "GlobalReference",
+          "value" : "id1234"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "value" : "hc",
+      "name" : "SerialNumber"
+    } ],
+    "globalAssetId" : "Bj62j",
+    "entityType" : "SelfManagedEntity"
+  } ]
+}

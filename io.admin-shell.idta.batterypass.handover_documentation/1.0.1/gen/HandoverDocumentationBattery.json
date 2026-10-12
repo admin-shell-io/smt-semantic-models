@@ -1,0 +1,33 @@
+{
+  "Documents" : [ {
+    "DocumentIds" : [ {
+      "DocumentDomainId" : "1213455566",
+      "DocumentIdentifier" : "XF90-884",
+      "DocumentIsPrimary" : true
+    } ],
+    "DocumentClassifications" : [ {
+      "ClassId" : "03-02",
+      "ClassName" : [ {
+        "en" : "ApmIV2J"
+      } ],
+      "ClassificationSystem" : "VDI2770 Blatt 1:2020"
+    } ],
+    "DocumentVersions" : [ {
+      "Language" : "en",
+      "Version" : "V1.2",
+      "Title" : [ {
+        "de" : "rQQ1"
+      } ],
+      "Subtitle" : [ {
+        "de" : "SKb"
+      } ],
+      "Description" : [ {
+        "de" : "quSWDNC"
+      } ],
+      "DigitalFiles" : [ {
+        "value" : "https://example.com/SafetyInstructions.pdf",
+        "contentType" : "application/pdf"
+      } ]
+    } ]
+  } ]
+}

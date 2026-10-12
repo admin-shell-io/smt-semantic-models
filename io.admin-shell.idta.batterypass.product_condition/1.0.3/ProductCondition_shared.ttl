@@ -275,7 +275,7 @@
    samm:preferredName "temperature conditions"@en ;
    samm:description "Temperature conditions, last update."@en ;
    samm:properties ( 
-   [ samm:property :measuredTemp; samm:optional true; samm:payloadName "MeasuredTemp" ]
+   [ samm:property :measuredTemp;  samm:payloadName "MeasuredTemp" ]
    [ samm:property :timeExtremeHighTemp; samm:optional true; samm:payloadName "TimeExtremeHighTemp" ]
    [ samm:property :timeExtremeLowTemp; samm:optional true; samm:payloadName "TimeExtremeLowTemp" ]
    [ samm:property :timeExtremeHighTempCharging; samm:optional true;samm:payloadName "TimeExtremeHighTempCharging" ]
