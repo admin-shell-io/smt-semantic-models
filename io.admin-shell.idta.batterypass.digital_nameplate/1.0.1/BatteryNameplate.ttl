@@ -112,7 +112,7 @@
 	
 	The date code should comply with DIN ISO 8601-1:2020-12 and ISO 8601-2:2019.
 	
-	\n DIN DKE Spec 99100:2025-02 chapter reference: 6.1.3.
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.1.3.
 	"""@en ;
    samm:description "Datum, zu dem das Produkt hergestellt wurde."@de ;
    samm:see <urn:irdi:0112/2///61987%23ABB757%23007> ;
@@ -123,7 +123,11 @@
 
 :dateOfPuttingIntoService a samm:Property ;
    samm:preferredName "date of putting into service"@en ;
-   samm:description "Where appropriate, the battery passport must include information on the date of putting the battery into service. BR Annex VI Part A (1); Art. 3(33); Art. 38(7); ESPR Art. 2(32)\n\nDIN DKE Spec chapter reference: 6.1.3.3"@en ;
+   samm:description """Where appropriate, the battery passport must include information on the date of putting the battery into service. 
+   BR Annex VI Part A (1); Art. 3(33); Art. 38(7); ESPR Art. 2(32)
+   
+   \nDIN DKE Spec chapter reference: 6.1.3.3
+   """@en ;
    samm:characteristic :PuttingIntoServiceDate ;
    samm:exampleValue "2022-06-01"^^xsd:date .
 
@@ -199,9 +203,10 @@ Note: CE marking is declared as mandatory according to EU Blue Guide
    samm:description """
 	A battery passport must include the test report results that can prove the compliance with the requirements stated in the battery regulation.
 	
-	\n  DIN DKE Spec 99100:2025-02 chapter reference: 6.2.8
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.2.8
 
-	Document identifiers (e.g., depending of different languages) of a document (e.g., PDF) that can be found in the Handover Documentation model. "@en ;
+	Document identifiers (e.g., depending of different languages) of a document (e.g., PDF) that can be found in the Handover Documentation model.
+	"""@en ;
    samm:see <urn:irdi:0173-1#02-ABA705#003> ;
    samm:characteristic shared:DocumentIdentifierSet .
    
