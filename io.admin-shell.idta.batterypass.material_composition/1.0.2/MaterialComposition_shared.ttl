@@ -101,8 +101,8 @@
 	[ samm:property :hazardousSubstanceClass ;  samm:optional true; samm:payloadName "HazardousSubstanceClass" ] 
     [ samm:property :hazardousSubstanceName ;  samm:payloadName "HazardousSubstanceName" ]   
     [ samm:property :hazardousSubstanceIdentifier ;  samm:payloadName "HazardousSubstanceIdentifier" ] 
-    [ samm:property :hazardousSubstanceConcentration ;  samm:optional true; samm:payloadName "HazardousSubstanceConcentration" ]   
- 	[ samm:property :hazardousSubstanceImpact ; samm:optional true; samm:payloadName "HazardousSubstanceImpact" ] 
+    [ samm:property :hazardousSubstanceConcentration ;  samm:payloadName "HazardousSubstanceConcentration" ]   
+ 	[ samm:property :hazardousSubstanceImpact ;  samm:payloadName "HazardousSubstanceImpact" ] 
  	[ samm:property :hazardousSubstanceLocation ;  samm:optional true; samm:payloadName "HazardousSubstanceLocation" ]  	
    ) .
 
