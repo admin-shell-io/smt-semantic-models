@@ -1,0 +1,21 @@
+{
+  "inArg" : "1",
+  "inoutArg" : "99",
+  "toggleResult" : {
+    "inoutputArguments" : {
+      "inoutArg" : "100"
+    },
+    "outputArguments" : {
+      "outArg" : "5"
+    },
+    "executionState" : "Failed",
+    "success" : false,
+    "messages" : [ {
+      "code" : "ERR-RANGE",
+      "correlationId" : "98FA3F00-E733-23F7-2E6B-E0DD294A9F43",
+      "messageType" : "Error",
+      "text" : "not in range",
+      "timestamp" : "2000-01-01T14:23:00"
+    } ]
+  }
+}

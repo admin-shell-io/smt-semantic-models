@@ -63,7 +63,7 @@
 	 [ samm:property :minimumVoltage; samm:payloadName "MinVoltage" ]
      [ samm:property :maximumVoltage; samm:payloadName "MaxVoltage" ] 
 	 [ samm:property :ratedCapacity; samm:payloadName "RatedCapacity" ] 
-	 [ samm:property :capacityFade; samm:optional true; samm:payloadName "CapacityFade" ]
+	 [ samm:property :capacityFade;  samm:payloadName "CapacityFade" ]
 	 [ samm:property :ratedEnergy; samm:optional true; samm:payloadName "CertifiedUsableBatteryEnergy" ] 
 	 ) .
 
