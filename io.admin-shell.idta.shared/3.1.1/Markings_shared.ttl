@@ -17,7 +17,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix : <urn:samm:io.admin-shell.idta.shared:3.1.1#> .
 
 :expiryDate a samm:Property ;
    samm:preferredName "Ablaufdatum"@de ;
@@ -72,7 +72,7 @@
    samm:exampleValue "0044" .
 
 :designationOfCertificateOrApproval a samm:Property ;
-   samm:preferredName "designation of Certificate or Approval."@en ;
+   samm:preferredName "designation of certificate or approval."@en ;
    samm:description "Alphanumeric character sequence identifying a certificate or approval."@en ;
    samm:see <urn:irdi:0112/2///61987%23ABH783%23003> ;
    samm:characteristic samm-c:Text ;
