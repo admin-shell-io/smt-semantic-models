@@ -23,14 +23,14 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
-@prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
+@prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.1#> .
 @prefix contactInformation: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
 @prefix tech: <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> 
-@prefix : <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.1#> .
 
 
 :BatteryNameplate a samm:Aspect ;
-   samm:preferredName "nameplate for battery passport"@en ;
+   samm:preferredName "Nameplate for Battery Passport"@en ;
    samm:preferredName "Typenschild für den Batteriepass"@de ;
    samm:description "Contains the nameplate information attached to the product within the Battery Product Passport."@en ;
    samm:description "Enthält die Information zum Typenschild des Produkts im Digitalen Batteriepass."@de ;
@@ -60,7 +60,7 @@
    samm:description "Unique global identification of the product instance using an universal resource identifier (URI).\n The battery passport identifier is the unique identifier of a battery passport.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.1"@en ;
    samm:see <urn:irdi:0112/2///61987%23ABN590%23002> ;
    samm:see <urn:irdi:0173-1%2302-ABH173%23003> ;
-   samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#uriOfTheProduct> ;
+   samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.1#uriOfTheProduct> ;
    samm:characteristic nameplate:Uri ;
    samm:exampleValue "https://dc-qr.com/?m=R123456789"^^xsd:anyURI .
 
@@ -71,7 +71,7 @@
    samm:description "Name des Herstellers."@de ;
    samm:see <urn:irdi:0112/2///61987%23ABA565%23009> ;
    samm:see <urn:irdi:0173-1%2302-AAO677%23004> ;
-   samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#manufacturerName> ;
+   samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.1#manufacturerName> ;
    samm:exampleValue "Muster AG"@de ;
    samm:characteristic shared:MultiLanguageTexts .
 
@@ -82,7 +82,7 @@
    samm:description "Unique combination of numbers and letters used to identify the device once it has been manufactured.\n\n The battery identifier should be serialised, i.e., identifying each battery via a serial number.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.2"@en ;
    samm:see <urn:irdi:0112/2///61987%23ABA951%23009> ;
    samm:see <urn:irdi:0173-1%2302-AAM556%23004> ;
-   samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#serialNumber> ;
+   samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.1#serialNumber> ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "A12345-X75EN" .
 
@@ -93,7 +93,7 @@
    samm:description "Datum, zu dem das Produkt hergestellt wurde."@de ;
    samm:see <urn:irdi:0112/2///61987%23ABB757%23007> ;
    samm:see <urn:irdi:0173-1%2302-AAR972%23004> ;
-   samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#dateOfManufacture> ;
+   samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.1#dateOfManufacture> ;
    samm:characteristic nameplate:Date ;
    samm:exampleValue "2022-01-01"^^xsd:date .
 
@@ -104,10 +104,10 @@
    samm:exampleValue "2022-06-01"^^xsd:date .
 
 :uniqueFacilityIdentifier a samm:Property ;
-   samm:preferredName "unique Identifier of a facility"@en ;
+   samm:preferredName "unique identifier of a facility"@en ;
    samm:description "Unique string of characters for the identification of locations or buildings involved in a product’s value chain or used by actors involved in a product’s value chain.\n\n The manufacturing place should be uniquely identifiable.\n\n DIN DKE Spec 99100 chapter reference: 6.1.3.1"@en ;
    samm:see <https://adminshell.io/idta/nameplate/3/0/UniqueFacilityIdentifier> ;
-   samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#uniqueFacilityIdentifier> ;
+   samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.1#uniqueFacilityIdentifier> ;
    samm:see <urn:irdi:0173-1#02-AAV646#003> ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "987654321" .
@@ -145,7 +145,7 @@
 
 Note: CE marking is declared as mandatory according to EU Blue Guide 
    """@en ;
-   samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#markings> ;
+   samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.1#markings> ;
    samm:characteristic shared:Markings .
  
 :euDeclarationOfConformity a samm:Property ;
