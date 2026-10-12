@@ -21,7 +21,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.1#> .
-@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.1#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
 
 

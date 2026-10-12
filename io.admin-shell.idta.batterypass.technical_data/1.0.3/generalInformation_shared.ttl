@@ -23,9 +23,9 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.2#> .
-@prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
-@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.3#> .
+@prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.1#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.1#> .
 
 :GeneralInformationEntity a samm:Entity ;
    samm:see <https://admin-shell.io/ZVEI/TechnicalData/GeneralInformation/1/1> ;
@@ -60,7 +60,11 @@
 :manufacturerIdentifier a samm:Property ;
    samm:see <urn:irdi:0173-1#02-AAO677#004> ;
    samm:preferredName "identifier of the manufacturer"@en ;
-   samm:description "A battery passport must include information identifying the manufacturer.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.4"@en ;
+   samm:description """
+	A battery passport must include information identifying the manufacturer.
+	
+	\n DIN DKE Spec 99100:2025-02 chapter reference: 6.1.2.4
+	"""@en ;
    samm:characteristic samm-c:Text .
 
 :warrantyPeriod a samm:Property ;

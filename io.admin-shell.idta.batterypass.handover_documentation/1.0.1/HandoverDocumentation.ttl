@@ -19,7 +19,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.1#> .
 @prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.1#> .
-@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.1#> .
 
 :HandoverDocumentation a samm:Aspect ;
    samm:preferredName "Handover Documentation of Battery Passport"@en ;

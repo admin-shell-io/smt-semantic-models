@@ -25,7 +25,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#> .
 @prefix bp: <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#> .
-@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.1#> .
 @prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
 
 :ProductCondition a samm:Aspect ;
@@ -55,6 +55,10 @@
  
 :informationOnAccidents a samm:Property ;
    samm:preferredName "information on accidents"@en ;
-   samm:description "The battery passport must contain information and data resulting from its use such as accidents. \n\nDIN DKE Spec 99100 chapter reference: 6.7.8.4"@en ;
+   samm:description """
+	The battery passport must contain information and data resulting from its use such as accidents.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.8.4
+	"""@en ;
    samm:see <urn:irdi:0173-1#02-ABL848#001> ;
    samm:characteristic shared:DocumentIdentifierSet .

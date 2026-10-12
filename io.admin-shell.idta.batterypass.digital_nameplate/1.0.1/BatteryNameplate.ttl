@@ -22,9 +22,9 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.1#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.1#> .
-@prefix contactInformation: <urn:samm:io.admin-shell.idta.contact_information:1.0.0#> .
+@prefix contactInformation: <urn:samm:io.admin-shell.idta.contact_information:1.0.1#> .
 @prefix tech: <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#> 
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.1#> .
 
@@ -57,7 +57,13 @@
 :uriOfTheProduct a samm:Property ;
    samm:preferredName "URI des Produkts"@de ;
    samm:preferredName "URI of the product"@en ;
-   samm:description "Unique global identification of the product instance using an universal resource identifier (URI).\n The battery passport identifier is the unique identifier of a battery passport.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.1"@en ;
+   samm:description """
+	Unique global identification of the product instance using an universal resource identifier (URI).
+
+	The battery passport identifier is the unique identifier of a battery passport.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.1.2.1
+	"""@en ;
    samm:see <urn:irdi:0112/2///61987%23ABN590%23002> ;
    samm:see <urn:irdi:0173-1%2302-ABH173%23003> ;
    samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.1#uriOfTheProduct> ;
@@ -67,7 +73,13 @@
 :manufacturerName a samm:Property ;
    samm:preferredName "manufacturer name"@en ;
    samm:preferredName "Herstellername"@de ;
-   samm:description "Legally valid designation of the natural or judicial person which is directly responsible for the design, production, packaging and labeling of a product in respect to its being brought into circulation.\n\n Information identifying the manufacturer with a name.Information identifying the manufacturer with a name.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.1"@en ;
+   samm:description """
+	Legally valid designation of the natural or judicial person which is directly responsible for the design, production, packaging and labeling of a product in respect to its being brought into circulation.
+	
+	Information identifying the manufacturer with a name.Information identifying the manufacturer with a name.
+	
+	\n DIN DKE Spec 99100:2025-02 chapter reference: 6.1.2.1
+	"""@en ;
    samm:description "Name des Herstellers."@de ;
    samm:see <urn:irdi:0112/2///61987%23ABA565%23009> ;
    samm:see <urn:irdi:0173-1%2302-AAO677%23004> ;
@@ -79,7 +91,13 @@
    samm:preferredName "Seriennummer"@de ;
    samm:preferredName "serial number"@en ;
    samm:description "Die Seriennummer des Produkts."@de ;
-   samm:description "Unique combination of numbers and letters used to identify the device once it has been manufactured.\n\n The battery identifier should be serialised, i.e., identifying each battery via a serial number.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.2"@en ;
+   samm:description """
+	Unique combination of numbers and letters used to identify the device once it has been manufactured.
+	
+	The battery identifier should be serialised, i.e., identifying each battery via a serial number.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.1.2.2
+	"""@en ;
    samm:see <urn:irdi:0112/2///61987%23ABA951%23009> ;
    samm:see <urn:irdi:0173-1%2302-AAM556%23004> ;
    samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.1#serialNumber> ;
@@ -89,7 +107,13 @@
 :dateOfManufacture a samm:Property ;
    samm:preferredName "date of manufacture"@en ;
    samm:preferredName "Herstelldatum"@de ;
-   samm:description "Date when an item was manufactured.\n\n The manufacturing date should not only relate to the battery model, but to the battery item. The date code should comply with DINISO8601-1:2020-12 and ISO8601-2:2019.\n\n DIN DKE Spec 99100 chapter reference: 6.1.3.2"@en ;
+   samm:description """
+	Date when an item was manufactured.\n\n The manufacturing date should not only relate to the battery model, but to the battery item. 
+	
+	The date code should comply with DIN ISO 8601-1:2020-12 and ISO 8601-2:2019.
+	
+	\n DIN DKE Spec 99100:2025-02 chapter reference: 6.1.3.
+	"""@en ;
    samm:description "Datum, zu dem das Produkt hergestellt wurde."@de ;
    samm:see <urn:irdi:0112/2///61987%23ABB757%23007> ;
    samm:see <urn:irdi:0173-1%2302-AAR972%23004> ;
@@ -105,7 +129,13 @@
 
 :uniqueFacilityIdentifier a samm:Property ;
    samm:preferredName "unique identifier of a facility"@en ;
-   samm:description "Unique string of characters for the identification of locations or buildings involved in a product’s value chain or used by actors involved in a product’s value chain.\n\n The manufacturing place should be uniquely identifiable.\n\n DIN DKE Spec 99100 chapter reference: 6.1.3.1"@en ;
+   samm:description """
+    Unique string of characters for the identification of locations or buildings involved in a product’s value chain or used by actors involved in a product’s value chain.
+	
+	The manufacturing place should be uniquely identifiable.
+	
+	\n DIN DKE Spec 99100:2025-02 chapter reference: 6.1.3.1
+	"""@en ;
    samm:see <https://adminshell.io/idta/nameplate/3/0/UniqueFacilityIdentifier> ;
    samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.1#uniqueFacilityIdentifier> ;
    samm:see <urn:irdi:0173-1#02-AAV646#003> ;
@@ -121,13 +151,17 @@
    
    A new battery passport must be issued when a battery was subject to remanufacturing, repurpose or one of the treatment operations preparing for re-use and preparing for repurpose and is placed on the market again.
    
-   DIN DKE Spec 99100 chapter reference: 6.1.3.7"""@en ;
+   \nDIN DKE Spec 99100:2025-02 chapter reference: 6.1.3.7"""@en ;
    samm:characteristic :BatteryStatusEnumeration ;
    samm:exampleValue :Original .
  
 :operatorIdentifier a samm:Property ;
    samm:preferredName "identifier of the operator"@en ;
-   samm:description "The unique operator identifier should comply with ISO/IEC 15459 1:2014, ISO/IEC 15459 2:2015, ISO/IEC 15459 3:2014, ISO/IEC 15459 4:2014, ISO/IEC 15459 5:2014, ISO/IEC 15459 6:2014, or their equivalent until referenced harmonised standards are listed in the OJEU.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.3"@en ;
+   samm:description """
+	The unique operator identifier should comply with ISO/IEC 15459 1:2014, ISO/IEC 15459 2:2015, ISO/IEC 15459 3:2014, ISO/IEC 15459 4:2014, ISO/IEC 15459 5:2014, ISO/IEC 15459 6:2014, or their equivalent until referenced harmonised standards are listed in the OJEU.
+	
+	\n DIN DKE Spec 99100:2025-02 chapter reference: 6.1.2.3
+	"""@en ;
    samm:characteristic samm-c:Text .
  
 :markings a samm:Property ;
@@ -150,13 +184,24 @@ Note: CE marking is declared as mandatory according to EU Blue Guide
  
 :euDeclarationOfConformity a samm:Property ;
    samm:preferredName "EU declaration of conformity"@en ;
-   samm:description "A battery passport must include the EU declaration of conformity.\n\n  DIN DKE Spec 99100 chapter reference: 6.2.7 \n\n Document identifiers (e.g., depending of different languages) of a document (e.g., PDF) that can be found in the Handover Documentation model."@en ;
+   samm:description """
+	A battery passport must include the EU declaration of conformity.
+	
+	\n  DIN DKE Spec 99100:2025-02 chapter reference: 6.2.7 
+	
+	Document identifiers (e.g., depending of different languages) of a document (e.g., PDF) that can be found in the Handover Documentation model.
+	"""@en ;
    samm:see <urn:irdi:0173-1#02-ABA889#003> ;
    samm:characteristic shared:DocumentIdentifierSet .
 
 :resultsOfTestReportsProvingCompliance a samm:Property ;
    samm:preferredName "result of test reports proving compliance"@en ;
-   samm:description "A battery passport must include the test report results that can prove the compliance with the requirements stated in the battery regulation.\n\n  DIN DKE Spec 99100 chapter reference: 6.2.8\n\n Document identifiers (e.g., depending of different languages) of a document (e.g., PDF) that can be found in the Handover Documentation model.\n\n "@en ;
+   samm:description """
+	A battery passport must include the test report results that can prove the compliance with the requirements stated in the battery regulation.
+	
+	\n  DIN DKE Spec 99100:2025-02 chapter reference: 6.2.8
+
+	Document identifiers (e.g., depending of different languages) of a document (e.g., PDF) that can be found in the Handover Documentation model. "@en ;
    samm:see <urn:irdi:0173-1#02-ABA705#003> ;
    samm:characteristic shared:DocumentIdentifierSet .
    

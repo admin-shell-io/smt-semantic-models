@@ -26,9 +26,9 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.2#> .
-@prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.0#> .
-@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.0#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.3#> .
+@prefix tech: <urn:samm:io.admin-shell.idta.generic.technical_data:2.0.1#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.1#> .
 @prefix nameplate: <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#> .
 @prefix bp: <urn:samm:io.BatteryPass.Performance:1.2.1#> .
 @prefix bpg: <urn:samm:io.BatteryPass.GeneralProductInformation:1.2.0#> .
@@ -47,7 +47,11 @@
 
 :capacityEnergyVoltage a samm:Property ;
   samm:preferredName "capacity, energy and voltage"@en ;
-  samm:description "Information on battery capacity, energy and voltage.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2"@en ;
+  samm:description """
+	Information on battery capacity, energy and voltage.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.2
+	"""@en ;
   samm:characteristic :CapacityEnergyVoltageCharacteristic .
 
 :CapacityEnergyVoltageCharacteristic a samm-c:SingleEntity ;
@@ -67,7 +71,11 @@
 
 :roundTripEnergyEfficiency a samm:Property ;
    samm:preferredName "round trip energy efficiency and self-discharge"@en ;
-   samm:description "Information regarding round trip energy efficiency.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4"@en ;
+   samm:description """
+	Information regarding round trip energy efficiency.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.4
+	"""@en ;
    samm:characteristic :RoundTripEnergyEfficiencyCharacteristic .
    
 :RoundTripEnergyEfficiencyCharacteristic a samm-c:SingleEntity ;
@@ -84,7 +92,11 @@
  
 :resistance a samm:Property ;
    samm:preferredName "resistance"@en ;
-   samm:description "Data elements regarding internal resistance and electrochemical impedance.\n\nDIN DKE Spec 99100 chapter reference: 6.7.5"@en ;
+   samm:description """
+	Data elements regarding internal resistance and electrochemical impedance.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.5
+	"""@en ;
    samm:characteristic :ResistanceCharacteristic .
    
 :ResistanceCharacteristic a samm-c:SingleEntity ;
@@ -104,7 +116,11 @@
   
 :powerCapability a samm:Property ;
    samm:preferredName "power capability"@en ;
-   samm:description "Information regarding power capability.\n\nDIN DKE Spec 99100 chapter reference: 6.7.3"@en ;
+   samm:description """
+	Information regarding power capability.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.3
+	"""@en ;
    samm:characteristic :PowerCapabilityCharacteristic .
    
 :PowerCapabilityCharacteristic a samm-c:SingleEntity ;
@@ -122,7 +138,11 @@
   
 :temperature a samm:Property ;
    samm:preferredName "temperature conditions"@en ;
-   samm:description "Information regarding temperature conditions.\n\nDIN DKE Spec 99100 chapter reference: 6.7.7"@en ;
+   samm:description """
+	Information regarding temperature conditions.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.7
+	"""@en ;
    samm:characteristic :TemperatureCharacteristic .
    
 :TemperatureCharacteristic a samm-c:SingleEntity ;
@@ -137,7 +157,11 @@
   
 :lifetime a samm:Property ;
    samm:preferredName "battery lifetime"@en ;
-   samm:description "Information regarding battery lifetime.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6"@en ;
+   samm:description """
+	Information regarding battery lifetime.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.6
+	"""@en ;
    samm:characteristic :LifetimeCharacteristic .
    
 :LifetimeCharacteristic a samm-c:SingleEntity ;
@@ -157,7 +181,13 @@
 :originalPowerCapability a samm:Property ;
    samm:see <urn:irdi:0173-1#02-ABL853#002> ;
    samm:preferredName "original power capability"@en ;
-   samm:description "List of pre-use power capabilities (definition of power capability as given in Battery Regulation).\n\n Power capability shall be measured at reference conditions, which must include measurements at 80% and 20% state of charge for EV and industrial batteries. \n\nDIN DKE Spec 99100 chapter reference: 6.7.3.2\n\n"@en ;
+   samm:description """
+	List of pre-use power capabilities (definition of power capability as given in Battery Regulation).
+	
+	Power capability shall be measured at reference conditions, which must include measurements at 80% and 20% state of charge for EV and industrial batteries. 
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.3.2
+	"""@en ;
    samm:characteristic :PowerCapabilityAtSoCTrait .
 
 :PowerCapabilityAtSoCTrait a samm-c:Trait ;
@@ -172,7 +202,11 @@
  
 :PowerCapabilityAt a samm:Entity ;
    samm:preferredName "power capability at reference condition"@en ;
-   samm:description "Power capability measured at a reference condition, for example at 80% or 20% state of charge (SoC).\n\nDIN DKE Spec 99100 chapter reference: 6.7.3.2"@en ;
+   samm:description """
+	Power capability measured at a reference condition, for example at 80% or 20% state of charge (SoC).
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.3.2
+	"""@en ;
    samm:properties ( 
    :atSoC 
    :powerCapabilityAt 
@@ -180,5 +214,9 @@
    
 :cycleLifeReferenceTest a samm:Property ;
    samm:preferredName "reference test for 'Expected lifetime: Number of charge-discharge cycles'"@en ;
-   samm:description "The battery passport must include information about the expected battery lifetime expressed in cycles, and reference test used. \n\nDIN DKE Spec 99100 chapter reference: 6.7.6.5"@en ;
+   samm:description """
+	The battery passport must include information about the expected battery lifetime expressed in cycles, and reference test used. 
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.6.5
+	"""@en ;
    samm:characteristic shared:DocumentIdentifierSet .

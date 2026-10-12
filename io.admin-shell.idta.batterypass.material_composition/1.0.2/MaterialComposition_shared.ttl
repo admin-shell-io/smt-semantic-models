@@ -29,17 +29,35 @@
 
 :batteryChemistry a samm:Property ;
    samm:preferredName "product chemistry"@en ;
-   samm:description "Composition of a product in general terms by specifying the cathode and anode active material as well as electrolyte.\n\nDIN DKE Spec 99100 chapter reference: 6.5.2"@en ;
+   samm:description """
+	Composition of a product in general terms by specifying the cathode and anode active material as well as electrolyte.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.5.2
+	"""@en ;
    samm:characteristic :BatteryChemistryEntityList .
 
 :batteryMaterials a samm:Property ;
    samm:preferredName "battery materials"@en ;
-   samm:description "\"Component materials used\" (No. 17.a-c): Naming the materials (as a composition of substances) in cathode, anode, electrolyte according to public standards, including specification of the corresponding component (i.e., cathode, anode, or electrolyte). We suggest a reporting threshold of 0.1 % weight by weight.\n\nDIN DKE Spec 99100 chapter reference: 6.5.3-6.5.4"@en ;
+   samm:description """
+	Information on the detailed composition of the battery.
+	
+	Information on the detailed composition must include materials used in the cathode, anode and electrolyte.
+	
+	Materials in the battery should be reported above a concentration of 1% weight by weight.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.5.3-6.5.4
+	"""@en ;
    samm:characteristic :BatteryMaterialList .
 
 :hazardousSubstances a samm:Property ;
    samm:preferredName "hazardous substances"@en ;
-   samm:description "\"Hazardous substances\" (No 20.a-e): Name (agreed substance nomenclature, e.g. IUPAC or chemical name) all hazardous substance (as 'any substance that poses a threat to human health and the environment'). Suggested above 0.1 % weight by weight within each (sub-)component.\n\nDIN DKE Spec 99100 chapter reference: 6.5.4 - 6.5.6"@en ;
+   samm:description """
+    Information on hazardous substances other than mercury, cadmium, or lead contained in the battery.
+	
+    Hazardous substances also being substances of very high concern, as defined under the RegulationEC No1907/2006 (“REACH Regulation”) should be reported on if exceeding a threshold of 0,1% weight by weight.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.5.4 - 6.5.6
+	"""@en ;
    samm:characteristic :HazardousSubstancesList .
 
 :BatteryChemistryEntityList a samm-c:SingleEntity ;
@@ -112,7 +130,7 @@
    The materials should be named using a public standard or agreed nomenclature, 
    which refers e.g. to the nomenclature of IUPAC or related identifiers such as the CAS (Chemical Abstracts Service) number. 
    
-   DIN DKE Spec 99100 chapter reference: 6.5.4 k)
+   \nDIN DKE Spec 99100:2025-02 chapter reference: 6.5.4 k)
    """@en ;
    samm:characteristic samm-c:Text ;
    samm:see <urn:irdi:0173-1#02-ABH034#003> ;

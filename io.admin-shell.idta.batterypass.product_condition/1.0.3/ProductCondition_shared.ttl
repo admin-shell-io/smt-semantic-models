@@ -23,7 +23,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#> .
 
 :lastUpdate a samm:Property ;
    samm:preferredName "last update"@en ;
@@ -38,7 +38,12 @@
 
 :energyThroughput a samm:Property ;
    samm:preferredName "energy throughput"@en ;
-   samm:description "The data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.7"@en ;
+   samm:description """
+	The data attribute should be reported as measured for further potential processing. 
+    In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.6.7
+	"""@en ;
    samm:characteristic :EnergyThroughput .
 
 :EnergyThroughput a samm-c:SingleEntity ;
@@ -54,7 +59,10 @@
    
 :energyThroughputValue a samm:Property ;
    samm:preferredName "energy throughput"@en ;
-   samm:description "Overall sum of the energy throughput over the battery lifetime (data attribute should be reported as measured for further potential processing. In addition, the normalisation by usable battery energy could add a further useful value that ensures comparability among battery sizes)."@en ;
+   samm:description """
+	Overall sum of the energy throughput over the battery lifetime (data attribute should be reported as measured for further potential processing. 
+	In addition, the normalisation by usable battery energy could add a further useful value that ensures comparability among battery sizes).
+	"""@en ;
    samm:see <urn:irdi:0173-1#02-ABL850#001> ;
    samm:characteristic :EnergyThroughputValue ;
    samm:exampleValue "100000"^^xsd:float .
@@ -64,7 +72,12 @@
    samm-c:unit unit:kilowattHour .
  
 :capacityThroughput a samm:Property ;
-   samm:description "The data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.8"@en ;
+   samm:description """
+	The data attribute should be reported as measured for further potential processing. 
+	In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.6.8
+	"""@en ;
    samm:characteristic :CapacityThroughput .
 
  :CapacityThroughput a samm-c:SingleEntity ;
@@ -92,12 +105,16 @@
    
 :numberOfFullCycles a samm:Property ;
    samm:preferredName "number of full cycles"@en ;
-   samm:description "Number of (full) charging and discharging cycles.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.4"@en ;
+   samm:description """
+	Number of (full) charging and discharging cycles.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.6.4
+	"""@en ;
    samm:characteristic :NumberOfFullCycles .
 
    
 :NumberOfFullCycles a samm-c:SingleEntity ;
-   samm:description "- Information and data as a result of its use, including the number of charging and discharging cycles."@en ;
+   samm:description "Information and data as a result of its use, including the number of charging and discharging cycles."@en ;
    samm:dataType :NumberOfFullCyclesEntity .
    
 :NumberOfFullCyclesEntity a samm:Entity ;
@@ -121,7 +138,11 @@
    
 :stateOfCertifiedEnergy a samm:Property ;
    samm:preferredName "SOCE"@en ;
-   samm:description "Definition based on UNECE GTR 22: The measured or on-board UBE performance at a specific point in its lifetime, expressed as a percentage of the certified usable battery energy.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.7"@en ;
+   samm:description """
+	Definition based on UNECE GTR 22: The measured or on-board UBE performance at a specific point in its lifetime, expressed as a percentage of the certified usable battery energy.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.2.7
+	"""@en ;
    samm:see <urn:irdi:0173-1#02-ABL847#001> ;
    samm:characteristic :StateOfCertifiedEnergy .
    
@@ -149,7 +170,13 @@
    
 :remainingEnergy a samm:Property ;
    samm:preferredName "remaining energy"@en ;
-   samm:description "Definition from UNECE GTR 22, applicable only to EVs.\nThe energy supplied by the battery from the beginning of the test procedure used for certification until the applicable break-off criterion of the test procedure used for certification is reached.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.6"@en ;
+   samm:description """
+	Definition from UNECE GTR 22, applicable only to EVs.
+	
+	The energy supplied by the battery from the beginning of the test procedure used for certification until the applicable break-off criterion of the test procedure used for certification is reached.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.2.6
+	"""@en ;
    samm:characteristic :RemainingEnergy .
    
 :RemainingEnergy a samm-c:SingleEntity ;
@@ -176,7 +203,11 @@
    
 :remainingCapacity a samm:Property ;
    samm:preferredName "remaining capacity"@en ;
-   samm:description "The in-use data attribute on capacity, corresponding with the definition of rated capacity.\n\nDIN DKE Spec 99100 chapter reference: 6.7.2.3"@en ;
+   samm:description """
+	The in-use data attribute on capacity, corresponding with the definition of rated capacity.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.2.3
+	"""@en ;
    samm:characteristic :RemainingCapacity .
    
 :RemainingCapacity a samm-c:SingleEntity ;
@@ -204,7 +235,11 @@
    
 :negativeEvents a samm:Property ;
    samm:preferredName "negative events"@en ;
-   samm:description "The battery passport must contain information and data resulting from its use such as accidents. \n\nDIN DKE Spec 99100 chapter reference: 6.7.8.4"@en ;
+   samm:description """
+	The battery passport must contain information and data resulting from its use such as accidents. 
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.8.4
+	"""@en ;
    samm:characteristic :NegativeEvents .
    
 :NegativeEvents a samm-c:List ;
@@ -226,7 +261,11 @@
    
 :temperatureInformation a samm:Property ;
    samm:preferredName "temperature information"@en ;
-   samm:description "The battery passport must include periodically recorded information on the operating environmental conditions, including temperature.\n\nDIN DKE Spec 99100 chapter reference: 6.7.7.5 - 8"@en ;
+   samm:description """
+	The battery passport must include periodically recorded information on the operating environmental conditions, including temperature.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.7.5 - 8
+	"""@en ;
    samm:characteristic :TemperatureInformation .
    
 :TemperatureInformation a samm-c:SingleEntity ;
@@ -301,7 +340,15 @@
    
 :remainingPowerCapability a samm:Property ;
    samm:preferredName "remaining power capability"@en ;
-   samm:description "Original power capability (in Watts) and limits, with temperature range when relevant.\n- The amount of energy that a battery is capable to provide over a given period of time under reference conditions.\n- Power capability at 80% and 20% state of charge.\n\nDIN DKE Spec 99100 chapter reference: 6.7.3.3"@en ;
+   samm:description """
+	Original power capability (in Watts) and limits, with temperature range when relevant.
+	
+	- The amount of energy that a battery is capable to provide over a given period of time under reference conditions.
+	
+	- Power capability at 80% and 20% state of charge.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.3.3
+	"""@en ;
    samm:see <urn:irdi:0173-1#02-ABL820#001> ;
    samm:characteristic :RemainingPowerCapability .
    
@@ -371,7 +418,11 @@
    
 :evolutionOfSelfDischarge a samm:Property ;
    samm:preferredName "evolution of self discharge"@en ;
-   samm:description "Evolution of self-discharge rates is the change of self-discharge over time and usage, as percentage calculated from the initial and current self-discharge rate.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.8"@en ;
+   samm:description """
+	Evolution of self-discharge rates is the change of self-discharge over time and usage, as percentage calculated from the initial and current self-discharge rate.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.4.8
+	"""@en ;
    samm:characteristic :EvolutionOfSelfDischarge .
    
 :EvolutionOfSelfDischarge a samm-c:SingleEntity ;
@@ -387,7 +438,9 @@
    
 :evolutionOfSelfDischargeValue a samm:Property ;
    samm:preferredName "evolution of self discharge value"@en ;
-   samm:description "Total count of times a battery has been fully charged from empty to full capacity and then fully discharged, used as an indicator of the battery's usage and lifespan."@en ;
+   samm:description """
+	Total count of times a battery has been fully charged from empty to full capacity and then fully discharged, used as an indicator of the battery's usage and lifespan.
+	"""@en ;
    samm:see <urn:irdi:0173-1#02-ABL834#001> ;
    samm:characteristic :EvolutionOfSelfDischargeEntityValue ;
    samm:exampleValue "1"^^xsd:float .  
@@ -398,7 +451,12 @@
    
 :currentSelfDischargingRate a samm:Property ;
    samm:preferredName "current self discharge rate"@en ;
-   samm:description "The current self-discharge rate is the change of the self-discharge rate in an idle state of the battery in reference conditions (temperature etc.) at aging parameter x, e.g. after a certain amount of storage time or, number of cycles.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.7"@en ;
+   samm:description """
+	The current self-discharge rate is the change of the self-discharge rate in an idle state of the battery in reference conditions (temperature etc.) at aging parameter x, 
+	e.g. after a certain amount of storage time or, number of cycles.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.4.7
+	"""@en ;
    samm:characteristic :CurrentSelfDischargingRate .
    
 :CurrentSelfDischargingRate a samm-c:SingleEntity ;
@@ -427,7 +485,12 @@
    
 :stateOfCharge a samm:Property ;
    samm:preferredName "state of charge (SoC)"@en ;
-   samm:description "Available capacity in a battery expressed as a percentage of remaining capacity.  \n\nDIN DKE Spec 99100 chapter reference: 6.7.2.8 (changed: available energy or charge in a battery expressed as a percentage of rated capacity as declared by the manufacturer, or, when the battery’s state of health is no longer equal to its initial condition, of the maximum energy or charge that can be stored in the battery at the time of charging)"@en ;
+   samm:description """
+	Available capacity in a battery expressed as a percentage of remaining capacity.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.2.8 
+	(changed: available energy or charge in a battery expressed as a percentage of rated capacity as declared by the manufacturer, or, when the battery’s state of health is no longer equal to its initial condition, of the maximum energy or charge that can be stored in the battery at the time of charging)
+	"""@en ;
    samm:characteristic :StateOfCharge .
    
 :StateOfCharge a samm-c:SingleEntity ;
@@ -457,7 +520,13 @@
    
 :remainingRoundTripEnergyEfficiency a samm:Property ;
    samm:preferredName "remaining round trip energy efficiency"@en ;
-   samm:description "The battery passport shall include information, where possible, about the remaining round trip energy efficiency as information on the state of health of the battery \n\nThe update frequency of remaining round trip energy efficiency should be aligned with the update frequency of round trip energy efficiency fade and should be provided upon change of the battery status.\n\nDIN DKE Spec 99100 chapter reference: 6.7.4.4"@en ;
+   samm:description """
+	The battery passport shall include information, where possible, about the remaining round trip energy efficiency as information on the state of health of the battery 
+	
+	\nThe update frequency of remaining round trip energy efficiency should be aligned with the update frequency of round trip energy efficiency fade and should be provided upon change of the battery status.
+	
+	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.4.4
+	"""@en ;
    samm:characteristic :RemainingRoundTripEnergyEfficiency .
    
 
