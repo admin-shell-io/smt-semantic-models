@@ -336,7 +336,7 @@
 
 :nationalCode a samm:Property ;
    samm:preferredName "Länderkürzel"@de ;
-   samm:preferredName "National Code"@en ;
+   samm:preferredName "national code"@en ;
    samm:description "Code of a country (Country codes defined accord. to DIN EN ISO 3166-1)."@en ;
    samm:description "Länderkürzel."@de ;
    samm:see <urn:irdi:0173-1#02-AAO134#002> ;

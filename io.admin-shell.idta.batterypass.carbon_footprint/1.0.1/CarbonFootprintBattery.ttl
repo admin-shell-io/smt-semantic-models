@@ -81,7 +81,7 @@
    ) .
  
 :pcfCo2eq a samm:Property ;
-   samm:preferredName "CO2 eq Climate Change"@en ;
+   samm:preferredName "CO2 eq climate change"@en ;
    samm:preferredName "CO2 eq Klimawandel"@de ;
    samm:description "sum of all greenhouse gas emissions of a product according to the quantification requirements of the standard\n\n DIN DKE Spec 99100 chapter reference: 6.3.2"@en ;
    samm:see <urn:irdi:0173-1#02-ABG855#003> ;

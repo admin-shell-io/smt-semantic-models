@@ -85,7 +85,7 @@
    samm-c:constraint shared:ISO8601Duration .    
   
 :batteryCategory a samm:Property ;
-   samm:preferredName "BatteryCategory"@en ;
+   samm:preferredName "battery category"@en ;
    samm:description "Categories relevant for the battery passport: LMT battery, electric vehicle battery, stationary or other industrial battery >2kWh.\n\nDIN DKE Spec chapter reference: 6.1.3.5"@en ;
    samm:see <urn:irdi:0173-1#02-AAR724#007> ;
    samm:characteristic :BatteryCategoryEnum ;

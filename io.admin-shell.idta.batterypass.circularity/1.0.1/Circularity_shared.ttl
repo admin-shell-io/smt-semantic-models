@@ -257,7 +257,7 @@
 
 :partNumber a samm:Property ;
    samm:preferredName "part number"@en ;
-   samm:description "Part number of Component."@en ;
+   samm:description "Part number of a component."@en ;
    samm:characteristic :PartNumber .
 
 :PartNumber a samm-c:Code ;

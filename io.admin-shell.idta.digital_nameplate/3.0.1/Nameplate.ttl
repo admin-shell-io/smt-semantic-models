@@ -85,7 +85,7 @@
    samm:characteristic shared:MultiLanguageTexts .
 
 :manufacturerProductRoot a samm:Property ;
-   samm:preferredName "manufacturer Product Root"@en ;
+   samm:preferredName "manufacturer product root"@en ;
    samm:description "Top level of a 3 level manufacturer specific product hierarchy."@en ;
    samm:see <urn:irdi:0112/2///61360_7%23AAS011%23001> ;
    samm:see <urn:irdi:0173-1%2302-AAU732%23003> ;
@@ -200,7 +200,7 @@
    samm:characteristic shared:Markings .
 
 :countryOfOrigin a samm:Property ;
-   samm:preferredName "country of Origin"@en ;
+   samm:preferredName "country of origin"@en ;
    samm:description "Country where the product was manufactured. Note: Country codes defined accord. to DIN EN ISO 3166-1 alpha-2 codes."@en ;
    samm:see <urn:irdi:0112/2///61987%23ABP462%23001> ;
    samm:see <urn:irdi:0173-1%2302-AAO259%23007> ;

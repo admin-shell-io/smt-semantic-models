@@ -514,7 +514,7 @@
    samm:exampleValue "70"^^xsd:float .  
    
 :StateOfChargeValue a samm-c:Measurement ;
-   samm:preferredName "Value"@en ;
+   samm:preferredName "state of charge value"@en ;
    samm:dataType xsd:float ;
    samm-c:unit unit:percent .
    

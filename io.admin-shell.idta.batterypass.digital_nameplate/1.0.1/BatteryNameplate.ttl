@@ -148,7 +148,7 @@
 
    
 :batteryStatus a samm:Property ;
-   samm:preferredName "BatteryStatus"@en ;
+   samm:preferredName "battery status"@en ;
    samm:description """A battery passport must include information on the life cycle status of the battery.
    
    The status of the battery must be defined as 'original' (0173-1#07-ACC020#001), 'repurposed'(0173-1#07-ACC021#001), 're-used'(0173-1#07-ACC022#001), 'remanufactured' (0173-1#07-ACC023#001) or 'waste' (0173-1#07-ACC024#001).
