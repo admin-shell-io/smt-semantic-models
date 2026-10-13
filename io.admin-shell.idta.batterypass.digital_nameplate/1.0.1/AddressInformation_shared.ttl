@@ -28,7 +28,7 @@
    samm:preferredName "address of the manufacturer"@en ;
    samm:description """
     The manufacturer information postal address, indicating a single contact point. 
-	Web address, if available; and web address, if available.
+	Web address, if available; and e-mail address, if available.
 	
 	\nDIN DKE Spec 99100:2025-02 chapter reference: 6.1.2.3
    """@en ;
