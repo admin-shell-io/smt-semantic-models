@@ -12,6 +12,15 @@ The folder "input" contains source files like .aasx or the submodel template spe
 # Changelog
 All notable changes to this model will be documented in this section.
 
+## [3.1.1] - October 2026
+
+Other changes:
+
+* editorial changes in preferred names and description for consistency only (usage of capital and small letters etc.)
+* cleanup unused element
+* newly generated files .html .json .schema-json
+* update licence information if missing
+
 ## [3.1.0] - May 2025 based on IDTA-01001-3-1 Specifications of the Asset Administration Shell: Metamodel
 
 for detailled changelog see [IDTA-01001-3-1](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.1)

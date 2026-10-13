@@ -31,6 +31,16 @@ with license CC BY 4.0. (urn:samm:io.BatteryPass.Circularity:1.2.0#)
 # Changelog
 All notable changes to this model will be documented in this section.
 
+## [1.0.1] - October 2026
+
+Other changes:
+
+* add date to DIN DKE references in descriptions: DIN DKE Spec 99100:2025-02 ([#117](https://github.com/admin-shell-io/smt-semantic-models/issues/117))
+* editorial changes in preferred names and description for consistency only (usage of capital and small letters etc.)
+* cleanup unused element
+* newly generated files .html .json .schema-json
+* update licence information if missing
+
 ## [1.0.0] - February 2026
 
 for changelog see  [IDTA-02035-7 V1.0, section "Version history"]()

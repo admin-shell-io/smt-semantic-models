@@ -21,6 +21,15 @@ Source Content Hub of the IDTA: [IDTA-02023 V1.0](https://industrialdigitaltwin.
 # Changelog
 All notable changes to this model will be documented in this section.
 
+## [1.0.1] - October 2026
+
+Other changes:
+
+* editorial changes in preferred names and description for consistency only (usage of capital and small letters etc.)
+* cleanup unused element
+* newly generated files .html .json .schema-json
+* update licence information if missing
+
 ## [1.0.0] - September 2026
 
 Bugfix:
