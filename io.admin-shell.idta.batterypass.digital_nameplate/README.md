@@ -26,6 +26,20 @@ The folder "gen" for each version contains sammple JSON files, the JSON schema a
 # Changelog
 All notable changes to this model will be documented in this section.
 
+## [1.0.1] - October 2026
+
+Major changes:
+
+* fix description of :addressInformation in Battery Digital Nameplate: it is web address or e-mail address
+
+Other changes:
+
+* add date to DIN DKE references in descriptions: DIN DKE Spec 99100:2025-02 ([#117](https://github.com/admin-shell-io/smt-semantic-models/issues/117))
+* editorial changes in preferred names and description for consistency only (usage of capital and small letters etc.)
+* cleanup unused element
+* newly generated files .html .json .schema-json
+* update licence information if missing
+
 ## [1.0.0] - February 2026
 
 Contained Files:

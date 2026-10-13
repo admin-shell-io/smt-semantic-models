@@ -5,6 +5,15 @@ This namespace is reserved for the Submodel Template Specification (SMT) IDTA-02
 # Changelog
 All notable changes to this model will be documented in this section.
 
+## [3.0.1] - October 2026
+
+Other changes:
+
+* editorial changes in preferred names and description for consistency only (usage of capital and small letters etc.)
+* cleanup unused element
+* newly generated files .html .json .schema-json
+* update licence information if missing
+
 ## [3.0.0] - 2005-03-11
 
 for changelog see Annex B in [IDTA-02006-3-0](https://industrialdigitaltwin.org/en/wp-content/uploads/sites/2/2024/11/IDTA-02006-3-0_Submodel_Digital-Nameplate.pdf)

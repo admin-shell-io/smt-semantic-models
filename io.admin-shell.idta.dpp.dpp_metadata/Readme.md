@@ -19,6 +19,15 @@ The folder "gen" for each version contains sammple JSON files, the JSON schema a
 # Changelog
 All notable changes to this model will be documented in this section.
 
+## [1.0.1] - October 2026
+
+Other changes:
+
+* editorial changes in preferred names and description for consistency only (usage of capital and small letters etc.)
+* cleanup unused element
+* newly generated files .html .json .schema-json
+* update licence information if missing
+
 ## [1.0.0] - May 2026
 
 for changelog see  [IDTA-02099-1 V1.0, section "Version history"]()
