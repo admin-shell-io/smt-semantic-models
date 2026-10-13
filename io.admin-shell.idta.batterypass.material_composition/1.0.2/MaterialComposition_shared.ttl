@@ -180,11 +180,9 @@
 
 :hazardousSubstanceLocation a samm:Property ;
    samm:preferredName "location"@en ;
-   samm:description """Hazardous substances (No. 19-23): 
-   Location on a (sub-)component-level of all hazardous substances 
-   (as 'any substance that poses a threat to human health and the environment'). 
-   
-   Suggested via a unique identifier or nomenclature."""@en ;
+   samm:description """
+     Location on a (sub-)component-level of the hazardous substance
+   """@en ;
    samm:characteristic :HazardousSubstanceLocation .
 
 :hazardousSubstanceIdentifier a samm:Property ;
@@ -216,7 +214,7 @@
 
 
 :HazardousSubstanceLocation a samm-c:SingleEntity ;
-   samm:preferredName "location"@en ;
+   samm:preferredName "location of hazardous substance"@en ;
    samm:description "Location on a (sub-)component-level of a hazardous substance."@en ;
    samm:dataType :BatteryComponentEntity .
 
