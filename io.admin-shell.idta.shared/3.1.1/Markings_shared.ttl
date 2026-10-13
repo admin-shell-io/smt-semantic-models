@@ -72,15 +72,18 @@
    samm:exampleValue "0044" .
 
 :designationOfCertificateOrApproval a samm:Property ;
-   samm:preferredName "designation of certificate or approval."@en ;
+   samm:preferredName "designation of certificate or approval"@en ;
    samm:description "Alphanumeric character sequence identifying a certificate or approval."@en ;
    samm:see <urn:irdi:0112/2///61987%23ABH783%23003> ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "KEMA99IECE X1105/128" .
 
 :Marking a samm:Entity ;
-   samm:preferredName "single marking information. Note: CE marking is declared as mandatory according to the Blue Guide of the EU-Commission"@en ;
+   samm:preferredName "single marking information"@en ;
    samm:preferredName "Kennzeichnung"@de ;
+   samm:description """Single marking information. 
+   
+   Note: CE marking is declared as mandatory according to the Blue Guide of the EU-Commission"""@en ;
    samm:see <urn:irdi:0112/2///61360_7%23AAS009%23001> ;
    samm:properties ( 
    [ samm:property :markingName; samm:payloadName "MarkingName" ] 
@@ -169,7 +172,7 @@
    
 :ExplosionProof a samm:Value ;
    samm:value "WAA094" ;
-   samm:preferredName "Explosion-proof"@en ;
+   samm:preferredName "explosion-proof"@en ;
    samm:see <urn:irdi:0173-1#07-WAA094#005> .
    
 :GsMarkOfConformity a samm:Value ;

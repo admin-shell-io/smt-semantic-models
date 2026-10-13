@@ -76,14 +76,14 @@
    samm:characteristic samm-c:Text .
 
 :productClassCodedName a samm:Property ;
-   samm:preferredName "Product classification coded name"@en ;
+   samm:preferredName "product classification coded name"@en ;
    samm:description "Unique class code in a classification hierarchy."@en ;
    samm:preferredName "Produktklassifizierungs-Code"@de ;
    samm:description "Eindeutiger Code einer Klassifizierungs-Hierarchie."@de ;
    samm:characteristic samm-c:Text .
 
 :productClassName a samm:Property ;
-   samm:preferredName "Product classification name"@en ;
+   samm:preferredName "product classification name"@en ;
    samm:description "Name of product class in the used classification system."@en ;
    samm:preferredName "Produktklassifizierungs-Name"@de ;
    samm:description "Name der Produktklasse innerhalb des Klassifizierungssystems."@de ;

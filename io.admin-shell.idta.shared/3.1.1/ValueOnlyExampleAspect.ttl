@@ -113,7 +113,7 @@
    samm:characteristic :BasicEventElementType.
    
 :valueOnly4RelationshipElementWithAnnotations a samm:Property ;
-   samm:preferredName "Example RelationshipElement with annotations"@en ;
+   samm:preferredName "example RelationshipElement with annotations"@en ;
    samm:description "Example RelationshipElement with annotations."@en ;
    samm:characteristic :valueOnly4RelationshipElementWithAnnotationsCharacteristic .
    

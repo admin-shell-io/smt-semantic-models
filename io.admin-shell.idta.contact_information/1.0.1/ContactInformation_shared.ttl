@@ -82,7 +82,7 @@
    samm:characteristic samm-c:Text .
 
 :addressOfAdditionalLinkOfIpCommunicationChannel a samm:Property ;
-   samm:preferredName "address of additional link"@en ;
+   samm:preferredName "address of additional link of IP communication channel"@en ;
    samm:description "Web site address where information about the product or contact is given."@en ;
    samm:see <urn:irdi:0173-1#02-AAQ326#002> ;
    samm:characteristic samm-c:Text .
@@ -221,7 +221,7 @@
    samm:characteristic :PhoneCharacteristic .
 
 :emailAddress a samm:Property ;
-   samm:preferredName "email address"@en ;
+   samm:preferredName "e-mail address"@en ;
    samm:description "Electronic mail address of a business partner."@en ;
    samm:see <urn:irdi:0173-1#02-AAO198#002> ;
    samm:characteristic samm-c:Text ;
@@ -319,7 +319,7 @@
    samm:characteristic shared:MultiLanguageTexts .
 
 :IpCommunicationChannelEntity a samm:Entity ;
-   samm:preferredName "IP Communication Channel"@en ;
+   samm:preferredName "IP communication channel"@en ;
    samm:description "IP-based communication channels, e.g. chat or video call."@en ;
    samm:properties ( 
    [ samm:property :addressOfAdditionalLinkOfIpCommunicationChannel; samm:payloadName "AddressOfAdditionalLink" ]

@@ -25,7 +25,7 @@
    samm:dataType :BlobWithContentTypeEntity .
 
 :blobValue a samm:Property ;
-   samm:preferredName "binary large object (BLOB)"@en ;
+   samm:preferredName "Binary Large Object (BLOB)"@en ;
    samm:description "The data of the BLOB (Binary Large Object)."@en ;
    samm:characteristic :BlobType ;
    samm:see <https://admin-shell.io/aas/3/1/Blob/value> ;
