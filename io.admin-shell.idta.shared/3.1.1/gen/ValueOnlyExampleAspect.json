@@ -1,0 +1,102 @@
+{
+  "valueOnly4MultiLanguageProperty" : [ {
+    "en" : "my88tSapp"
+  } ],
+  "valueOnly4File" : {
+    "value" : "https://example.com/SafetyInstructions.pdf",
+    "contentType" : "application/pdf"
+  },
+  "valueOnly4Reference" : {
+    "keys" : [ {
+      "key" : "GlobalReference",
+      "value" : "id1234"
+    } ],
+    "type" : "ExternalReference"
+  },
+  "valueOnly4ModelReference" : {
+    "keys" : [ {
+      "key" : "Submodel",
+      "value" : "id1234"
+    } ],
+    "type" : "ModelReference"
+  },
+  "valueOnly4ExternalReference" : {
+    "keys" : [ {
+      "key" : "GlobalReference",
+      "value" : "id1234"
+    } ],
+    "type" : "ExternalReference"
+  },
+  "valueOnly4RelationshipElement" : {
+    "first" : {
+      "keys" : [ {
+        "key" : "GlobalReference",
+        "value" : "id1234"
+      } ],
+      "type" : "ExternalReference"
+    },
+    "second" : {
+      "keys" : [ {
+        "key" : "GlobalReference",
+        "value" : "id1234"
+      } ],
+      "type" : "ExternalReference"
+    }
+  },
+  "valueOnly4RelationshipElementWithAnnotations" : {
+    "annotations" : {
+      "valueOnly4MultiLanguageProperty" : [ {
+        "de" : "N4ly"
+      } ]
+    },
+    "first" : {
+      "keys" : [ {
+        "key" : "GlobalReference",
+        "value" : "id1234"
+      } ],
+      "type" : "ExternalReference"
+    },
+    "second" : {
+      "keys" : [ {
+        "key" : "GlobalReference",
+        "value" : "id1234"
+      } ],
+      "type" : "ExternalReference"
+    }
+  },
+  "valueOnly4Entity" : {
+    "specificAssetIds" : [ {
+      "externalSubjectId" : {
+        "keys" : [ {
+          "key" : "GlobalReference",
+          "value" : "id1234"
+        } ],
+        "type" : "ExternalReference"
+      },
+      "value" : "Xq91",
+      "name" : "SerialNumber"
+    } ],
+    "globalAssetId" : "tRJ47YWr4",
+    "entityType" : "SelfManagedEntity"
+  },
+  "valueOnly4EntityWithStatements" : {
+    "statements" : {
+      "valueOnly4MultiLanguageProperty" : [ {
+        "de" : "cdh"
+      } ]
+    }
+  },
+  "valueOnly4Range" : {
+    "min" : -51344.8,
+    "max" : 1978.0
+  },
+  "valueOnly4BasicEventElement" : {
+    "observed" : {
+      "keys" : [ {
+        "key" : "Submodel",
+        "value" : "id1234"
+      } ],
+      "type" : "ModelReference"
+    }
+  }
+}

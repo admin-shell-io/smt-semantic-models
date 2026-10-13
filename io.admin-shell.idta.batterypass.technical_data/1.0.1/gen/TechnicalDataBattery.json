@@ -1,8 +1,8 @@
 {
   "GeneralInformation" : {
-    "ManufacturerName" : "sQoGGV3",
-    "CompanyLogo" : "https://example.com/wRdNTyS",
-    "ManufacturerIdentifier" : "2s0xV8Vmw",
+    "ManufacturerName" : "1zNsWA3wH",
+    "CompanyLogo" : "https://example.com/j00Piov",
+    "ManufacturerIdentifier" : "0qrU",
     "WarrantyInformation" : {
       "WarrantyPeriod" : "P96M"
     },
@@ -14,7 +14,7 @@
         "contentType" : "application/pdf"
       },
       "ImageNote" : [ {
-        "en" : "yPc3Sn5ns"
+        "en" : "Kplogy"
       } ]
     } ]
   },
@@ -58,8 +58,8 @@
       "ExpectedLifetimeInCalendarYears" : 15,
       "ExpectedNumberOfCycles" : 1000,
       "CapacityThresholdExhaustion" : 23.0,
-      "CycleLifeReferenceTest" : [ "hIIjyfZ" ],
-      "CrateOfRelevantCycleLifeTest" : -57931.4
+      "CycleLifeReferenceTest" : [ "RPhb18mkd" ],
+      "CrateOfRelevantCycleLifeTest" : -13683.0
     }
   }
 }

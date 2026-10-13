@@ -1,0 +1,33 @@
+{
+  "example4Markings" : [ {
+    "MarkingName" : "0173-1%2307-DAA603%23004",
+    "DesignationOfCertificateOrApproval" : "KEMA99IECE X1105/128",
+    "IssueDate" : "2022-01-01",
+    "ExpiryDate" : "2022-01-01",
+    "MarkingFile" : {
+      "value" : "https://example.com/SafetyInstructions.pdf",
+      "contentType" : "application/pdf"
+    },
+    "MarkingAdditionalText" : "0044"
+  } ],
+  "languages" : "en",
+  "example4specificAssetId" : {
+    "externalSubjectId" : {
+      "keys" : [ {
+        "key" : "GlobalReference",
+        "value" : "id1234"
+      } ],
+      "type" : "ExternalReference"
+    },
+    "value" : "lfVA",
+    "name" : "SerialNumber"
+  },
+  "example4documentIdentifierSet" : [ "XfQMujiT" ],
+  "externalSubjectId" : {
+    "keys" : [ {
+      "key" : "GlobalReference",
+      "value" : "id1234"
+    } ],
+    "type" : "ExternalReference"
+  }
+}

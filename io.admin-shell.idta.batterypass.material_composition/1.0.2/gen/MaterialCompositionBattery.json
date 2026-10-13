@@ -18,7 +18,7 @@
     "HazardousSubstanceName" : "Cobalt (Co)",
     "HazardousSubstanceIdentifier" : "346417-97-8",
     "HazardousSubstanceConcentration" : 20.0,
-    "HazardousSubstanceImpact" : [ "Mvy0b3yYw" ],
+    "HazardousSubstanceImpact" : [ "z" ],
     "HazardousSubstanceLocation" : {
       "ComponentName" : "Anode",
       "ComponentId" : "1234-344"
