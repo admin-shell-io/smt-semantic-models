@@ -12,8 +12,8 @@ alignment with IDTA-02006 V4.0
 Major changes:
 - new payload name for MarkingName, now TypeOfConformityRegulationCertification
 - new payload name for IssueDate, now DateOfIssue
-- new payload name for ExpirtyData, now EndOfValidity
-- new payload name for MarkingAdditinalText, now AdditionalMarkingText
+- new payload name for ExpiryData, now EndOfValidity
+- new payload name for MarkingAdditionalText, now AdditionalMarkingText
 
 
 Minor changes:
