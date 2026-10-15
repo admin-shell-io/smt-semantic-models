@@ -19,6 +19,10 @@ with license CC BY-NC 4.0.
 
 Source GitHub IDTA for .aasx file and Submodel Template Specification etc.: https://github.com/admin-shell-io/submodel-templates 
 
+HTML documentation of the Submodel Template Specification: https://industrialdigitaltwin.io/idta-submodel-templates/index/home/index.html
+
+NOTE: the version of the semantic models and the version of the Submodel Template Specification do not necessarily map 1:1.
+
 
 # General
 
