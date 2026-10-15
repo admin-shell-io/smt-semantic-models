@@ -226,11 +226,6 @@
     [ samm:property :componentId; samm:optional true; samm:payloadName "ComponentId" ] 
    ) .
 
-
-:CASNumberConstraint a samm-c:RegularExpressionConstraint ;
-   samm:see <https://www.cas.org/cas-data/cas-registry> ;
-   samm:value "^\\d{2,7}-\\d{2}-\\d{1}$" .
-
 :componentName a samm:Property ;
    samm:preferredName "name"@en ;
    samm:Description "Name of a component."@en ;
