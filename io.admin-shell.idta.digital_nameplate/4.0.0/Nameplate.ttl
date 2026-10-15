@@ -25,7 +25,7 @@
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:4.0.0#> .
 
 :Nameplate a samm:Aspect ;
-   samm:preferredName "nameplate"@en ;
+   samm:preferredName "Nameplate"@en ;
    samm:preferredName "Typenschild"@de ;
    samm:description "Contains the nameplate information attached to the product."@en ;
    samm:description "Enthält die Information zum Typenschild des Produkts."@de ;
@@ -43,15 +43,11 @@
    [ samm:property :orderCodeOfManufacturer; samm:optional true; samm:payloadName "OrderCodeOfProduct" ] 
    [ samm:property :productArticleNumberOfManufacturer; samm:optional true; samm:payloadName "ArticleNumber" ] 
    [ samm:property :serialNumber; samm:optional true; samm:payloadName "SerialNumber" ] 
-   [ samm:property :dateOfManufacture; samm:optional true; samm:payloadName "DateOfManufacture" ]
-   [ samm:property :dateOfPuttingIntoService; samm:optional true; samm:payloadName "DateOfPuttingIntoService" ] 
    [ samm:property :hardwareVersion; samm:optional true; samm:payloadName "HardwareVersion" ] 
    [ samm:property :firmwareVersion; samm:optional true; samm:payloadName "FirmwareVersion" ] 
    [ samm:property :softwareVersion; samm:optional true; samm:payloadName "SoftwareVersion" ] 
    [ samm:property :countryOfOrigin; samm:optional true; samm:payloadName "CountryOfOrigin" ] 
    [ samm:property :uniqueFacilityIdentifier; samm:optional true; samm:payloadName "FacilityId" ] 
-   [ samm:property :economicOperatorId; samm:optional true; samm:payloadName "EconomicOperatorId" ] 
-   [ samm:property :economicOperatorAddressInformation; samm:optional true; samm:payloadName "EconomicOperatorAddressInformation" ]   
    [ samm:property :logoCompany; samm:optional true; samm:payloadName "CompanyLogo" ]
    [ samm:property :markings; samm:optional true; samm:payloadName "Markings" ] 
    );
@@ -127,13 +123,6 @@
    samm:characteristic samm-c:ResourcePath .
 
 
-:dateOfPuttingIntoService a samm:Property ;
-   samm:preferredName "date Of putting into service"@en ;
-   samm:description "Where appropriate, the passport must include information on the date of putting the product into service."@en ;
-   samm:see <https://admin-shell.io/idta/cds/dateOfPuttingIntoService/1> ;
-   samm:characteristic :Date ;
-   samm:exampleValue "2022-01-01"^^xsd:date .
-
 :manufacturerId a samm:Property ;
    samm:see <urn:irdi:0173-1#02-AAO677#004> ;
    samm:see <0112/2///61360_7#CBA032#001> ;
@@ -195,10 +184,6 @@
    samm:see <urn:irdi:0173-1#02-AAQ837#008/0173-1#01-ADR448#009> ;
    samm:characteristic :AddressInformationCharacteristic .
 
-:economicOperatorAddressInformation a samm:Property ;
-   samm:preferredName "adress of the economic operator"@en ;
-   samm:description "Address information of the economic operator."@en ;
-   samm:characteristic :AddressInformationCharacteristic .
 
 :manufacturerProductRoot a samm:Property ;
    samm:preferredName "manufacturer Product Root"@en ;
@@ -310,22 +295,6 @@
    samm:exampleValue "SF1" .
 
 
- 
-
-:economicOperatorId a samm:Property ;
-   samm:preferredName "economic operator ID"@en ;
-   samm:see <https://admin-shell.io/idta/cds/economicOperatorId/1> ;
-   samm:see <urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#economicOperatorId> ;
-   samm:description """
-   Unique string of characters for the identification of an actor involved in a product's life cycle.
-   
-   String formatted according to EN 18219:2026.
-
-   SOURCE: EN 18223:2026(en)   
-   """@en ;
-   samm:characteristic samm-c:Text ;
-   samm:exampleValue "BPNL00000000IF61" .
-   
 :Uri a samm:Characteristic ;
    samm:dataType xsd:anyURI .
 
