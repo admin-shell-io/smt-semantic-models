@@ -76,18 +76,13 @@
           "$ref" : "#/components/schemas/AdressInformation"
         } ]
       },
-      "Date" : {
-        "type" : "string",
-        "format" : "date",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#Date"
-      },
       "ResourcePath" : {
         "type" : "string",
         "format" : "uri",
         "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#ResourcePath",
         "description" : "The path of a resource."
       },
-      "Date0" : {
+      "Date" : {
         "type" : "string",
         "format" : "date",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#Date",
@@ -141,14 +136,14 @@
             "description" : "Date, at which the specified certificate is issued. Note: format by lexical representation: CCYY-MM-DD. Note: to be specified to the day.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#issueDate",
             "allOf" : [ {
-              "$ref" : "#/components/schemas/Date0"
+              "$ref" : "#/components/schemas/Date"
             } ]
           },
           "EndOfValidity" : {
             "description" : "Date, at which the specified certificate expires. Note: format by lexical representation: CCYY-MM-DD. Note: to be specified to the day.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#expiryDate",
             "allOf" : [ {
-              "$ref" : "#/components/schemas/Date0"
+              "$ref" : "#/components/schemas/Date"
             } ]
           },
           "MarkingFile" : {
@@ -271,20 +266,6 @@
         "$ref" : "#/components/schemas/Text"
       } ]
     },
-    "DateOfManufacture" : {
-      "description" : "Date when an item was manufactured.",
-      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#dateOfManufacture",
-      "allOf" : [ {
-        "$ref" : "#/components/schemas/Date"
-      } ]
-    },
-    "DateOfPuttingIntoService" : {
-      "description" : "Where appropriate, the passport must include information on the date of putting the product into service.",
-      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#dateOfPuttingIntoService",
-      "allOf" : [ {
-        "$ref" : "#/components/schemas/Date"
-      } ]
-    },
     "HardwareVersion" : {
       "description" : "Version of the hardware supplied with the device.",
       "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#hardwareVersion",
@@ -318,20 +299,6 @@
       "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#uniqueFacilityIdentifier",
       "allOf" : [ {
         "$ref" : "#/components/schemas/Text"
-      } ]
-    },
-    "EconomicOperatorId" : {
-      "description" : "\r\n   Unique string of characters for the identification of an actor involved in a product's life cycle.\r\n   \r\n   String formatted according to EN 18219:2026.\r\n\r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
-      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#economicOperatorId",
-      "allOf" : [ {
-        "$ref" : "#/components/schemas/Text"
-      } ]
-    },
-    "EconomicOperatorAddressInformation" : {
-      "description" : "Address information of the economic operator.",
-      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#economicOperatorAddressInformation",
-      "allOf" : [ {
-        "$ref" : "#/components/schemas/AddressInformationCharacteristic"
       } ]
     },
     "CompanyLogo" : {

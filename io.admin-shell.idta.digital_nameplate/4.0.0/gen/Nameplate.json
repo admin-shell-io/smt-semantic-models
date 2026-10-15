@@ -32,27 +32,11 @@
   "OrderCodeOfProduct" : "FMABC1234",
   "ArticleNumber" : "FM11-ABC22-123456",
   "SerialNumber" : "A12345-X75EN",
-  "DateOfManufacture" : "2022-01-01",
-  "DateOfPuttingIntoService" : "2022-01-01",
   "HardwareVersion" : "AS1",
   "FirmwareVersion" : "FS1",
   "SoftwareVersion" : "SF1",
   "CountryOfOrigin" : "DE",
   "FacilityId" : "987654321",
-  "EconomicOperatorId" : "BPNL00000000IF61",
-  "EconomicOperatorAddressInformation" : {
-    "Street" : [ {
-      "de" : "Musterstrasse"
-    } ],
-    "StreetNo" : "1",
-    "PostalCode" : "DE-10719",
-    "CityName" : [ {
-      "de" : "Musterstadt"
-    } ],
-    "CountryCode" : [ {
-      "en" : "DE"
-    } ]
-  },
   "CompanyLogo" : "https://example.com/logo.png",
   "Markings" : [ {
     "TypeOfConformityRegulationCertification" : "IECEx",
