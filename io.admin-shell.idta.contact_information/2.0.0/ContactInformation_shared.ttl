@@ -45,6 +45,7 @@
    [ samm:property :street; samm:optional true; samm:payloadName "Street" ]
    [ samm:property :streetName; samm:optional true; samm:payloadName "StreetName" ]
    [ samm:property :streetNo; samm:optional true; samm:payloadName "StreetNo" ]
+   [ samm:property :postalCode; samm:optional true; samm:payloadName "PostalCode" ]
    [ samm:property :zipCode; samm:optional true; samm:payloadName "ZipCode" ]
    [ samm:property :poBox; samm:optional true; samm:payloadName "POBox" ]
    [ samm:property :zipCodeOfPoBox; samm:optional true; samm:payloadName "ZipCodeOfPOBox" ] 
@@ -219,11 +220,14 @@
    samm:exampleValue "email@muster-ag.de" .
 
 :cityTown a samm:Property ;
-   samm:preferredName "city"@en ;
-   samm:preferredName "Ort"@de ;
-   samm:description "Town or city."@en ;
+   samm:preferredName "city name"@en ;
+   samm:preferredName "Ortsname"@de ;
+   samm:description "City or town where the company or organization is located."@en ;
    samm:description "Ort."@de ;
-   samm:see <urn:irdi:0173-1#02-AAO132#002> ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA076#001> ;
+   samm:see <https://admin-shell.io/idta/cds/cityName/1> ;
+   samm:see <urn:irdi:0173-1#02-AAO132#004> ;
+   samm:see <urn:irdi:0173-1#07-ABL860#002> ;
    samm:exampleValue "Musterstadt"@de ;
    samm:characteristic shared:MultiLanguageTexts .
 
@@ -327,12 +331,16 @@
 
 :nationalCode a samm:Property ;
    samm:preferredName "Länderkürzel"@de ;
-   samm:preferredName "National Code"@en ;
-   samm:description "Code of a country (Country codes defined accord. to DIN EN ISO 3166-1)."@en ;
+   samm:preferredName "country code"@en ;
+   samm:description """
+	Two-letter country code (ISO 3166-1 alpha-2 code)
+
+	NOTE: a value list with all country codes is available in IEC CDD, IRDI 0112/2///61360_7#CEA008#001
+	"""@en ;
    samm:description "Länderkürzel."@de ;
    samm:see <urn:irdi:0173-1#02-AAO134#002> ;
-   samm:exampleValue "DE"@en ;
-   samm:characteristic shared:MultiLanguageTexts .
+   samm:exampleValue "DE" ;
+   samm:characteristic samm-c:Text .
 
 :typeOfFaxNumber a samm:Property ;
    samm:preferredName "type of fax number"@en ;
@@ -355,30 +363,33 @@
    samm:description "Straßenname und Nummer."@de ;
    samm:see <urn:irdi:0173-1#02-AAO128#002> ;
    samm:see <https://schema.org/streetAddress> ;
-   samm:exampleValue "Musterstrasse 1"@de ;
+   samm:exampleValue "Musterstraße 12"@de ;
    samm:characteristic shared:MultiLanguageTexts .
 
 
 :streetName a samm:Property ;
    samm:preferredName "street name"@en ;
    samm:preferredName "Straßenname"@de ;
-   samm:description "Street name (without house number)."@en ;
+   samm:description "Street name of the building where an organization is located (IEC 61360-7)."@en ;
    samm:description "Straßenname (ohne Nummer)."@de ;
    samm:see <urn:irdi:0112/2///61360_7#CBA072#001> ;
+   samm:see <https://admin-shell.io/idta/cds/street/1> ;
    samm:see <urn:irdi:0173-1#02-AAO128#004> ;
-   samm:see <0173-1#02-AAO128#002> ;
-   samm:see <0173-1#02-AAO128#003> ;
-   samm:see <0173-1#07-ABL858#002> ;
-   samm:exampleValue "Musterstrasse"@de ;
+   samm:exampleValue "Musterstraße"@de ;
    samm:characteristic shared:MultiLanguageTexts .
 
 
 :streetNo a samm:Property ;
    samm:preferredName "street number"@en ;
-   samm:description "Identification number of an entrance to a building related to a domain defined by the street as issued by the local authorities"@en ;
-   samm:see <0112/2///61360_7#CBA093#001> ;
-   samm:see <0173-1#02-ABH957#003> ;
-   samm:exampleValue "1" ;
+   samm:description """
+	Identification number of an entrance to a building related to a domain defined by the street as issued by the local authorities.
+
+    synonym: house number
+	"""@en ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA093#001> ;
+   samm:see <https://admin-shell.io/idta/cds/streetNumber/1> ;
+   samm:see <urn:irdi:0173-1#02-ABH957#003> ;
+   samm:exampleValue "12" ;
    samm:characteristic samm-c:Text .
 
 
