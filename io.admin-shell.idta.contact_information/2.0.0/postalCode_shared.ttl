@@ -20,12 +20,13 @@
 
 
 :postalCode a samm:Property ;
-   samm:preferredName "postal/ZIP Code"@en ;
-   samm:description "Zip/postal code of the area included in an address."@en ;
-   samm:see <https://schema.org/postalCode> ;
-   samm:see <0112/2///61360_7#CBA073#001> ;
+   samm:preferredName "postal code"@en ;
+   samm:description "ZIP/postal code of the area in which an organization is located."@en ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA073#001> ;
+   samm:see <https://admin-shell.io/idta/cds/postalCode/1> ;
    samm:see <urn:irdi:0173-1#02-AAO129#004> ;
-   samm:exampleValue "DE-10719" ;
+   samm:see <https://schema.org/postalCode> ;
+   samm:exampleValue "10719" ;
    samm:characteristic samm-c:Text .
 
 

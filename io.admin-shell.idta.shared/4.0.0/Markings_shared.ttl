@@ -8,8 +8,6 @@
 # SPDX-License-Identifier: CC-BY-4.0
 #######################################################################
 
-
-
 @prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.2.0#> .
 @prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#> .
 @prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.2.0#> .
@@ -19,6 +17,32 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.shared:4.0.0#> .
 
+:Markings a samm-c:Set ;
+   samm:preferredName "markings"@en ;
+   samm:preferredName "Kennzeichnungen"@de ;
+   samm:description "Note: CE marking is declared as mandatory according to EU Blue Guide."@en ;
+   samm:see <urn:irdi:0112/2///61360_7#AAS006#001> ;
+   samm:see <https://admin-shell.io/idta/cds/markings/1> ;
+   samm:see <urn:irdi:0173-1#02-ABI563#004/0173-1#01-AHF849#004> ;
+   samm:dataType :Marking .
+
+:Marking a samm:Entity ;
+   samm:preferredName "single marking information. Note: CE marking is declared as mandatory according to the Blue Guide of the EU-Commission"@en ;
+   samm:preferredName "Kennzeichnung"@de ;
+   samm:see <urn:irdi:0112/2///61360_7#AAS009#001> ;
+   samm:see <https://admin-shell.io/idta/cds/marking/1> ;
+   samm:see <urn:irdi:0173-1#02-ABI564#003/0173-1#01-AHF850#003> ;
+   samm:properties ( 
+   [ samm:property :typeOfConformityRegulation; samm:payloadName "TypeOfConformityRegulation" ] 
+   [ samm:property :identifierOfCertificate; samm:optional true; samm:payloadName "IdentifierOfCertificate" ]
+   [ samm:property :certificateSupplement; samm:optional true; samm:payloadName "CertificateSupplement" ]
+   [ samm:property :issueDate; samm:optional true; samm:payloadName "DateOfIssue" ] 
+   [ samm:property :expiryDate; samm:optional true; samm:payloadName "EndOfValidity" ] 
+   [ samm:property :markingFile; samm:payloadName "MarkingFile" ]
+   [ samm:property :markingAdditionalText; samm:optional true; samm:payloadName "AdditionalMarkingText" ]
+   ) .
+
+
 :expiryDate a samm:Property ;
    samm:preferredName "Ablaufdatum"@de ;
    samm:preferredName "expiry date"@en ;
@@ -26,8 +50,8 @@
    samm:description "Date, at which the specified certificate expires. Note: format by lexical representation: CCYY-MM-DD. Note: to be specified to the day."@en ;
    samm:see <https://admin-shell.io/idta/cds/expiryDate/1> ;
    samm:see <urn:irdi:0112/2///61360_7#CBA286#001> ;
-   samm:see <0173-1#02-ABL775#001> ;
-   samm:see <0112/2///61987#ABH830#002> ;
+   samm:see <urn:irdi:0173-1#02-ABL775#001> ;
+   samm:see <urn:irdi:0112/2///61987#ABH830#002> ;
    samm:characteristic :Date ;
    samm:exampleValue "2022-01-01"^^xsd:date .
 
@@ -35,17 +59,6 @@
    samm:description "Date in format CCYY-MM-DD."@en ;
    samm:dataType xsd:date .
 
-:markingName a samm:Property ;
-   samm:preferredName "marking IRDI"@en ;
-   samm:preferredName "Kennzeichnungsname (IRDI)"@de ;
-   samm:description "Common name of the marking."@en ;
-   samm:description "IRDI der Kennzeichnung."@de ;
-   samm:see <https://admin-shell.io/idta/cds/markingName/1> ;
-   samm:see <urn:irdi:0112/2///61987%23ABA231%23009> ;
-   samm:see <urn:irdi:0173-1%2302-ABI190%23003> ;
-   samm:see <urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/MarkingName> ;
-   samm:characteristic samm-c:Text ;
-   samm:exampleValue "IECEx" .
 
 :markingFile a samm:Property ;
    samm:preferredName "marking file"@en ;
@@ -75,38 +88,47 @@
    samm:see <urn:irdi:0173-1%2302-ABI192%23003> ;
    samm:see <urn:irdi:0112/2///61987%23ABB146%23007> ;
    samm:see <urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/MarkingAdditionalText> ;
+   samm:characteristic :MultiLanguageTexts  .
+
+:typeOfConformityRegulation a samm:Property ;
+   samm:preferredName "type of conformity regulation or certification"@en ;
+   samm:description """
+    Classification of a certificate or approval document according to the regulations against which the conformity of an entity is tested (IEC 61360-7).
+	
+	synonym: MarkingName
+   """@en ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA276#001> ;
+   samm:see <https://admin-shell.io/idta/cds/typeOfConformityRegulationCertification/1> ;
+   samm:see <urn:irdi:0173-1#02-ABI190#004> ;
+   samm:see <urn:irdi:0112/2///61987#ABA231#009> ;
    samm:characteristic samm-c:Text ;
-   samm:exampleValue "0044" .
+   samm:exampleValue "IECEx" .
 
-:designationOfCertificateOrApproval a samm:Property ;
-   samm:preferredName "designation of Certificate or Approval."@en ;
-   samm:description "Alphanumeric character sequence identifying a certificate or approval."@en ;
-   samm:see <https://admin-shell.io/idta/cds/designationOfCertificateOrApproval/1> ;
-   samm:see <urn:irdi:0112/2///61987%23ABH783%23003> ;
+:identifierOfCertificate a samm:Property ;
+   samm:preferredName "identifier of certificate, approval, declaration or license"@en ;
+   samm:description """
+    Alphanumeric character sequence identifying a certificate, approval, declaration or license (EC 61360-7).
+
+    NOTE: to be entered without spaces 
+
+    synonym: DesignationOfCertificateOrApproval
+   """@en ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA279#001> ;
+   samm:see <https://admin-shell.io/idta/cds/identifierOfCertificateApprovalDeclarationOrLicense/1> ;
+   samm:see <urn:irdi:0173-1#02-ABI975#002> ;
+   samm:see <urn:irdi:0112/2///61987#ABH783#003> ;
    samm:characteristic samm-c:Text ;
-   samm:exampleValue "KEMA99IECE X1105/128" .
+   samm:exampleValue "KEMA99IECEX1105/128" .
 
-:Marking a samm:Entity ;
-   samm:preferredName "single marking information. Note: CE marking is declared as mandatory according to the Blue Guide of the EU-Commission"@en ;
-   samm:preferredName "Kennzeichnung"@de ;
-   samm:see <https://admin-shell.io/idta/cds/marking/1> ;
-   samm:see <urn:irdi:0112/2///61360_7%23AAS009%23001> ;
-   samm:properties ( 
-   [ samm:property :markingName; samm:payloadName "TypeOfConformityRegulationCertification" ] 
-   [ samm:property :designationOfCertificateOrApproval; samm:optional true; samm:payloadName "IdentifierOfCertificateApprovalDeclarationOrLicense" ] 
-   [ samm:property :issueDate; samm:optional true; samm:payloadName "DateOfIssue" ] 
-   [ samm:property :expiryDate; samm:optional true; samm:payloadName "EndOfValidity" ] 
-   [ samm:property :markingFile; samm:payloadName "MarkingFile" ]
-   [ samm:property :markingAdditionalText; samm:optional true; samm:payloadName "AdditionalMarkingText" ]
-   ) .
+:certificateSupplement a samm:Property ;
+   samm:preferredName "supplement to certificate, approval, declaration or license"@en ;
+   samm:description """
+    Running number or designation of a supplement/amendment issued to an existing certificate, approval, declaration or license.
+   """@en ;
+   samm:see <https://admin-shell.io/idta/cds/CertificateSupplement/1> ;
+   samm:characteristic samm-c:Text ;
+   samm:exampleValue "S1" .
 
-:Markings a samm-c:Set ;
-   samm:preferredName "markings"@en ;
-   samm:preferredName "Kennzeichnungen"@de ;
-   samm:description "Note: CE marking is declared as mandatory according to EU Blue Guide."@en ;
-   samm:see <https://admin-shell.io/idta/cds/markings/1> ;
-   samm:see <urn:irdi:0112/2///61360_7%23AAS006%23001> ;
-   samm:dataType :Marking .
 
 :ProductMarkingEnum a samm-c:Enumeration ;
    samm:preferredName "product marking types"@en ;

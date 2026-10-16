@@ -33,9 +33,9 @@
    [ samm:property :productId; samm:optional true; samm:payloadName "UniqueProductIdentifier" ] 
    [ samm:property :productBatchOrLotId; samm:optional true; samm:payloadName "ProductBatchOrLotId" ] 
    [ samm:property :productTypeId; samm:optional true; samm:payloadName "ProductTypeId" ] 
-   [ samm:property :manufacturerId; samm:optional true; samm:payloadName "ManufacturerId" ]
    [ samm:property :manufacturerName; samm:payloadName "ManufacturerName" ] 
-   [ samm:property :manufacturerAddressInformation; samm:payloadName "AddressInformation" ] 
+   [ samm:property :manufacturerId; samm:optional true; samm:payloadName "ManufacturerId" ]
+   [ samm:property :manufacturerAddressInformation; samm:payloadName "AddressInformation" ]  
    [ samm:property :manufacturerProductRoot; samm:optional true; samm:payloadName "TypeNameOfProduct" ]
    [ samm:property :manufacturerProductFamily; samm:optional true; samm:payloadName "FamilyNameOfProduct" ] 
    [ samm:property :manufacturerProductDesignation; samm:optional true; samm:payloadName "ModelNameOfProduct" ] 
@@ -43,6 +43,7 @@
    [ samm:property :orderCodeOfManufacturer; samm:optional true; samm:payloadName "OrderCodeOfProduct" ] 
    [ samm:property :productArticleNumberOfManufacturer; samm:optional true; samm:payloadName "ArticleNumber" ] 
    [ samm:property :serialNumber; samm:optional true; samm:payloadName "SerialNumber" ] 
+   [ samm:property :dateOfManufacture; samm:optional true; samm:payloadName "DateOfManufacture" ] 
    [ samm:property :hardwareVersion; samm:optional true; samm:payloadName "HardwareVersion" ] 
    [ samm:property :firmwareVersion; samm:optional true; samm:payloadName "FirmwareVersion" ] 
    [ samm:property :softwareVersion; samm:optional true; samm:payloadName "SoftwareVersion" ] 
@@ -60,12 +61,12 @@
 
 :productId a samm:Property ;
    samm:preferredName "unique product identifier"@en ;
-   samm:see <urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#uniqueProductIdentifier> ;
-   samm:see <https://admin-shell.io/idta/cds/uniqueProductIdentifier/1> ;
+   samm:see <urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.1#uniqueProductIdentifier> ;
    samm:see <urn:irdi:0112/2///61360_7#CBA055#001> ;
+   samm:see <https://admin-shell.io/idta/cds/uniqueProductIdentifier/1> ;
    samm:see <urn:irdi:0112/2///61987#ABN590#002> ;
    samm:see <urn:irdi:0173-1#02-ABH173#003> ;
-   samm:see <urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#uniqueProductIdentifier> ;
+   samm:see <urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.1#uniqueProductIdentifier> ;
    samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#uriOfTheProduct> ;
    samm:description """
    Unique global identification of the product (physical instance) using a uniform resource identifier (URI).
@@ -82,6 +83,9 @@
 :markings a samm:Property ;
    samm:preferredName "markings"@en ;
    samm:preferredName "Kennzeichnungen"@de ;
+   samm:see <urn:irdi:0112/2///61360_7#AAS006#001> ;
+   samm:see <https://admin-shell.io/idta/cds/markings/1> ;
+   samm:see <urn:irdi:0173-1#02-ABI563#004/0173-1#01-AHF849#004> ;
    samm:description "Produktkennzeichnungen"@de ;
    samm:description "Markings of the product. Note: CE marking is declared as mandatory according to EU Blue Guide."@en ;
    samm:characteristic shared:Markings .
@@ -89,9 +93,10 @@
 :countryOfOrigin a samm:Property ;
    samm:preferredName "country of Origin"@en ;
    samm:description "Country where the product was manufactured. Note: Country codes defined accord. to DIN EN ISO 3166-1 alpha-2 codes."@en ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA034#001> ;
    samm:see <https://admin-shell.io/idta/cds/countryOfOrigin/1> ;
-   samm:see <urn:irdi:0112/2///61987%23ABP462%23001> ;
-   samm:see <urn:irdi:0173-1%2302-AAO259%23007> ;
+   samm:see <urn:irdi:0173-1#02-AAO259#007> ;
+   samm:see <urn:irdi:0112/2///61987#ABP462#001> ;
    samm:exampleValue "DE" ;
    samm:characteristic samm-c:Text .
 
@@ -105,12 +110,11 @@
    SOURCE: EN 18223:2026(en)   
    """@en ;
    samm:see <https://admin-shell.io/idta/cds/facilityId/1> ;
+   samm:see <urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.1#facilityId> ;
+   samm:see <urn:irdi:0173-1#02-AAV646#003> ;
    samm:see <https://adminshell.io/idta/nameplate/3/0/UniqueFacilityIdentifier> ;
-   samm:see <urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.0#facilityId> ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "987654321" .
-
-
 
 
 :logoCompany a samm:Property ;
@@ -118,14 +122,17 @@
    samm:preferredName "company logo"@en ;
    samm:description "Das Firmenlogo des Produkts."@de ;
    samm:description "A graphic mark used to represent a company, an organisation or a product."@en ;
-   samm:exampleValue "https://example.com/logo.png"^^xsd:anyURI ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA033#001> ;
    samm:see <https://admin-shell.io/idta/cds/companyLogo/1> ;
-   samm:characteristic samm-c:ResourcePath .
+   samm:see <urn:irdi:0173-1#02-ABI776#002> ;
+   samm:see <urn:irdi:0112/2///61987#ABP463#001> ;
+   samm:characteristic shared:FileWithContentType .
 
 
 :manufacturerId a samm:Property ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA032#001> ;
    samm:see <urn:irdi:0173-1#02-AAO677#004> ;
-   samm:see <0112/2///61360_7#CBA032#001> ;
+   samm:see <https://admin-shell.io/idta/cds/manufacturerId/1> ;
    samm:preferredName "Manufacturer ID"@en ;
    samm:description "Fully qualified domain name of the manufacturer of a product using a uniform resource identifier (URI)."@en ;
    samm:characteristic samm-c:Text ;
@@ -136,8 +143,8 @@
 :productTypeId a samm:Property ;
    samm:preferredName "product type ID"@en ;
    samm:description "Unique global identification of a product type using an uniform resource identifier (URI)."@en ;
-   samm:see <https://admin-shell.io/idta/cds/productTypeId/1> ;
    samm:see <urn:irdi:0112/2///61360_7#CBA057#001> ;
+   samm:see <https://admin-shell.io/idta/cds/productTypeId/1> ;
    samm:exampleValue "https://www.domain-abc.com/Type-1234XYZ"^^xsd:anyURI ;
    samm:characteristic :Uri .
 
@@ -145,8 +152,8 @@
 :productBatchOrLotId a samm:Property ;
    samm:preferredName "product, batch or lot ID"@en ;
    samm:description "Unique global identification of a product batch or lot using an uniform resource identifier (URI)."@en ;
-   samm:see <https://admin-shell.io/idta/cds/productBatchOrLotId/1> ;
    samm:see <urn:irdi:0112/2///61360_7#CBA056#001> ;
+   samm:see <https://admin-shell.io/idta/cds/productBatchOrLotId/1> ;
    samm:exampleValue "https://www.domain-abc.com/Lot-ABC789"^^xsd:anyURI ;
    samm:characteristic :Uri .
    
@@ -157,9 +164,10 @@
    samm:preferredName "Herstellername"@de ;
    samm:description "Legally valid designation of the natural or judicial person which is directly responsible for the design, production, packaging and labeling of a product in respect to its being brought into circulation."@en ;
    samm:description "Name des Herstellers."@de ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA031#001> ;
    samm:see <https://admin-shell.io/idta/cds/manufacturerName/1> ;
-   samm:see <urn:irdi:0112/2///61987%23ABA565%23009> ;
-   samm:see <urn:irdi:0173-1%2302-AAO677%23004> ;
+   samm:see <urn:irdi:0173-1#02-AAO677#004> ;
+   samm:see <urn:irdi:0112/2///61987#ABA565#009> ;
    samm:exampleValue "Muster AG"@de ;
    samm:characteristic shared:MultiLanguageTexts .
 
@@ -168,9 +176,10 @@
    samm:preferredName "manufacturer product designation"@en ;
    samm:description "Short description of the product (short text), third or lowest level of a 3 level manufacturer specific product hierarchy."@en ;
    samm:description "Kurze Beschreibung des Produktes (Kurztext)."@de ;
-   samm:see <https://admin-shell.io/idta/cds/manufacturerProductDesignation/1> ;
-   samm:see <urn:irdi:0112/2///61987%23ABA567%23009> ;
-   samm:see <urn:irdi:0173-1%2302-AAW338%23003> ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA039#001> ;
+   samm:see <https://admin-shell.io/idta/cds/modelNameOfProduct/1> ;
+   samm:see <urn:irdi:0173-1#02-AAW338#003> ;
+   samm:see <urn:irdi:0112/2///61987#ABA567#009> ;
    samm:exampleValue "ABC-123"@en ;
    samm:characteristic shared:MultiLanguageTexts .
 
@@ -179,8 +188,8 @@
    samm:preferredName "adress of the manufacturer"@en ;
    samm:description "Adress-Information des Herstellers."@de ;
    samm:description "Address information of the manufacturer."@en ;
-   samm:see <https://admin-shell.io/idta/cds/addressInformation/1> ;
    samm:see <urn:irdi:0112/2///61360_7#AAS002#002> ;
+   samm:see <https://admin-shell.io/idta/cds/addressInformation/1> ;
    samm:see <urn:irdi:0173-1#02-AAQ837#008/0173-1#01-ADR448#009> ;
    samm:characteristic :AddressInformationCharacteristic .
 
@@ -188,9 +197,10 @@
 :manufacturerProductRoot a samm:Property ;
    samm:preferredName "manufacturer Product Root"@en ;
    samm:description "Top level of a 3 level manufacturer specific product hierarchy."@en ;
-   samm:see <https://admin-shell.io/idta/cds/manufacturerProductRoot/1> ;
-   samm:see <urn:irdi:0112/2///61360_7%23AAS011%23001> ;
-   samm:see <urn:irdi:0173-1%2302-AAU732%23003> ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA037#001> ;
+   samm:see <https://admin-shell.io/idta/cds/typeNameOfProduct/1> ;
+   samm:see <urn:irdi:0173-1#02-AAU732#003> ;
+   samm:see <urn:irdi:0112/2///61360_7#AAS011#001> ;
    samm:exampleValue "flow meter"@en ;
    samm:characteristic shared:MultiLanguageTexts .
 
@@ -199,9 +209,10 @@
    samm:preferredName "Produktfamilie"@de ;
    samm:description "Produktfamilie des Produkts."@de ;
    samm:description "2nd level of a 3 level manufacturer specific product hierarchy."@en ;
-   samm:see <https://admin-shell.io/idta/cds/manufacturerProductFamily/1> ;
-   samm:see <urn:irdi:0112/2///61987%23ABP464%23002> ;
-   samm:see <urn:irdi:0173-1%2302-AAU731%23003> ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA038#001> ;
+   samm:see <https://admin-shell.io/idta/cds/familyNameOfProduct/1/> ;
+   samm:see <urn:irdi:0173-1#02-AAU731#003> ;
+   samm:see <urn:irdi:0112/2///61987#ABP464#002> ;
    samm:exampleValue "Type ABC"@en ;
    samm:characteristic shared:MultiLanguageTexts .
 
@@ -210,9 +221,10 @@
    samm:preferredName "manufacturer product type"@en ;
    samm:description "Ausprägung für das Produkt, um unterschiedliche Einzelprodukte einer Produktfamilie zu unterscheiden."@de ;
    samm:description "Characteristic to differentiate between different products of a product family or special variants."@en ;
-   samm:see <https://admin-shell.io/idta/cds/manufacturerProductType/1> ;
-   samm:see <urn:irdi:0112/2///61987%23ABA300%23008> ;
-   samm:see <urn:irdi:0173-1%2302-AAO057%23004> ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA040#001> ;
+   samm:see <https://admin-shell.io/idta/cds/codeOfProduct/1> ;
+   samm:see <urn:irdi:0173-1#02-AAO057#004> ;
+   samm:see <urn:irdi:0112/2///61987#ABA300#008> ;
    samm:exampleValue "FM-ABC-1234" ;
    samm:characteristic samm-c:Text .
 
@@ -221,9 +233,11 @@
    samm:preferredName "order code for the product"@en ;
    samm:description "Eindeutige Zahlen- und Buchstabenkombination um das Produkt eindeutig für die Bestellung zu identifizieren."@de ;
    samm:description "Unique combination of numbers and letters used to identify the device for ordering."@en ;
-   samm:see <https://admin-shell.io/idta/cds/orderCodeOfManufacturer/1> ;
-   samm:see <urn:irdi:0112/2///61987%23ABA950%23008> ;
-   samm:see <urn:irdi:0173-1%2302-AAO227%23004> ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA041#001> ;
+   samm:see <https://admin-shell.io/idta/cds/orderCodeOfProduct/1> ;
+   samm:see <urn:irdi:0173-1#02-AAO227#005> ;
+   samm:see <urn:irdi:0112/2///61987#ABA950#008> ;
+   samm:see <urn:irdi:0173-1#02-AAO227#004> ;
    samm:exampleValue "FMABC1234" ;
    samm:characteristic samm-c:Text .
 
@@ -232,9 +246,11 @@
    samm:preferredName "product article number"@en ;
    samm:description "Eindeutige Artikelnummer des Herstellers."@de ;
    samm:description "Unique product identifier of the manufacturer."@en ;
-   samm:see <https://admin-shell.io/idta/cds/productArticleNumberOfManufacturer/1> ;
-   samm:see <urn:irdi:0112/2///61987%23ABA581%23007> ;
-   samm:see <urn:irdi:0173-1%2302-AAO676%23005> ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA042#001> ;
+   samm:see <https://admin-shell.io/idta/cds/articleNumber/1> ;
+   samm:see <urn:irdi:0173-1#02-AAO676#006> ;
+   samm:see <urn:irdi:0173-1#02-AAO054#005> ;
+   samm:see <urn:irdi:0112/2///61987#ABA581#007> ;
    samm:exampleValue "FM11-ABC22-123456" ;
    samm:characteristic samm-c:Text .
 
@@ -243,9 +259,10 @@
    samm:preferredName "serial number"@en ;
    samm:description "Die Seriennummer des Produkts."@de ;
    samm:description "Unique combination of numbers and letters used to identify the device once it has been manufactured."@en ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA050#001> ;
    samm:see <https://admin-shell.io/idta/cds/serialNumber/1> ;
-   samm:see <urn:irdi:0112/2///61987%23ABA951%23009> ;
-   samm:see <urn:irdi:0173-1%2302-AAM556%23004> ;
+   samm:see <urn:irdi:0173-1#02-AAM556#004> ;
+   samm:see <urn:irdi:0112/2///61987#ABA951#009> ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "A12345-X75EN" .
 
@@ -266,9 +283,10 @@
    samm:preferredName "Hardwareversion"@de ;
    samm:description "Version of the hardware supplied with the device."@en ;
    samm:description "Version der Hardware."@de ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA047#001> ;
    samm:see <https://admin-shell.io/idta/cds/hardwareVersion/1> ;
-   samm:see <urn:irdi:0112/2///61987%23ABA926%23008> ;
-   samm:see <urn:irdi:0173-1%2302-AAN270%23004> ;
+   samm:see <urn:irdi:0173-1#02-AAN270#004> ;
+   samm:see <urn:irdi:0112/2///61987#ABA926#008> ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "AS1" .
 
@@ -277,9 +295,10 @@
    samm:preferredName "Firmwareversion"@de ;
    samm:description "Version of the firmware supplied with the device."@en ;
    samm:description "Version der Firmware."@de ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA048#001> ;
    samm:see <https://admin-shell.io/idta/cds/firmwareVersion/1> ;
-   samm:see <urn:irdi:0112/2///61987%23ABA302%23006> ;
-   samm:see <urn:irdi:0173-1%2302-AAM985%23004> ;
+   samm:see <urn:irdi:0173-1#02-AAM985#004> ;
+   samm:see <urn:irdi:0112/2///61987#ABA302#006> ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "FS1" .
 
@@ -288,9 +307,10 @@
    samm:preferredName "Softwareversion"@de ;
    samm:description "Version of the software used by the device."@en ;
    samm:description "Version der Software."@de ;
+   samm:see <urn:irdi:0112/2///61360_7#CBA046#001> ;
    samm:see <https://admin-shell.io/idta/cds/softwareVersion/1> ;
-   samm:see <urn:irdi:0112/2///61987%23ABA601%23008> ;
-   samm:see <urn:irdi:0173-1%2302-AAM737%23004> ;
+   samm:see <urn:irdi:0173-1#02-AAM737#004> ;
+   samm:see <urn:irdi:0112/2///61987#ABA601#008> ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "SF1" .
 

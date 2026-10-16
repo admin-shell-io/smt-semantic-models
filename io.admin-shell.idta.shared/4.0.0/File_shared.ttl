@@ -20,7 +20,7 @@
 :resourceValue a samm:Property ;
    samm:description "Path and name of the file (with file extension).\n\nThe path can be absolute or relative."@en ;
    samm:characteristic samm-c:ResourcePath ;
-   samm:exampleValue "https://example.com/SafetyInstructions.pdf"^^xsd:anyURI .
+   samm:exampleValue "https://example.com/resource.pdf"^^xsd:anyURI .
 
 :FileWithContentType a samm:Characteristic ;
    samm:dataType :ResourceWithContentType .
