@@ -12,6 +12,16 @@ The folder "input" contains source files like .aasx or the submodel template spe
 # Changelog
 All notable changes to this model will be documented in this section.
 
+## [4.0.0] - October 2026 
+
+Changes conformant to Digital Nameplate 4.0
+
+* :markings - added samm:see information 
+* :Marking - new payload names for :markingName, :designationOfCertificateOrApproval, :issueDate, :expiryDate, :markingAdditionalText
+* :expiryDate - fix samm:see "urn:iri" prefix not needed for https, change to <https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/ExpiryDate> ;
+
+
+
 ## [3.1.1] - October 2026
 
 Other changes:

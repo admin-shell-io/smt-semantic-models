@@ -1,0 +1,57 @@
+{
+  "UniqueProductIdentifier" : "https://www.domain-abc.com/Model-Nr-1234/Serial-Nr-5678",
+  "ProductBatchOrLotId" : "https://www.domain-abc.com/Lot-ABC789",
+  "ProductTypeId" : "https://www.domain-abc.com/Type-1234XYZ",
+  "ManufacturerName" : [ {
+    "de" : "Muster AG"
+  } ],
+  "ManufacturerId" : "urn:duns:123456789",
+  "AddressInformation" : {
+    "StreetName" : [ {
+      "de" : "Musterstraße"
+    } ],
+    "StreetNo" : "12",
+    "PostalCode" : "10719",
+    "CityName" : [ {
+      "de" : "Musterstadt"
+    } ],
+    "CountryCode" : "DE"
+  },
+  "TypeNameOfProduct" : [ {
+    "en" : "flow meter"
+  } ],
+  "FamilyNameOfProduct" : [ {
+    "en" : "Type ABC"
+  } ],
+  "ModelNameOfProduct" : [ {
+    "en" : "ABC-123"
+  } ],
+  "CodeOfProduct" : "FM-ABC-1234",
+  "OrderCodeOfProduct" : "FMABC1234",
+  "ArticleNumber" : "FM11-ABC22-123456",
+  "SerialNumber" : "A12345-X75EN",
+  "DateOfManufacture" : "2022-01-01",
+  "HardwareVersion" : "AS1",
+  "FirmwareVersion" : "FS1",
+  "SoftwareVersion" : "SF1",
+  "CountryOfOrigin" : "DE",
+  "FacilityId" : "987654321",
+  "CompanyLogo" : {
+    "value" : "https://example.com/resource.pdf",
+    "contentType" : "application/pdf"
+  },
+  "Markings" : [ {
+    "TypeOfConformityRegulation" : "IECEx",
+    "IdentifierOfCertificate" : "KEMA99IECEX1105/128",
+    "CertificateSupplement" : "S1",
+    "DateOfIssue" : "2022-01-01",
+    "EndOfValidity" : "2022-01-01",
+    "MarkingFile" : {
+      "value" : "https://example.com/resource.pdf",
+      "contentType" : "application/pdf"
+    },
+    "AdditionalMarkingText" : [ {
+      "de" : "fBDttnK"
+    } ]
+  } ]
+}
