@@ -10,11 +10,6 @@
         "format" : "uri",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#Uri"
       },
-      "Text" : {
-        "type" : "string",
-        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Text",
-        "description" : "Describes a Property which contains plain text. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
-      },
       "MultiLanguageTexts" : {
         "description" : "A set of language-text items.",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#MultiLanguageTexts",
@@ -26,48 +21,53 @@
         },
         "uniqueItems" : true
       },
+      "Text" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Text",
+        "description" : "Describes a Property which contains plain text. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+      },
       "AdressInformation" : {
         "description" : "Contains information on how to contact the manufacturer or an authorised service provider, e.g. when a maintenance service is required.",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#AdressInformation",
         "type" : "object",
         "properties" : {
-          "Street" : {
-            "description" : "Street name (without house number).",
+          "StreetName" : {
+            "description" : "Street name of the building where an organization is located (IEC 61360-7).",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:2.0.0#streetName",
             "allOf" : [ {
               "$ref" : "#/components/schemas/MultiLanguageTexts"
             } ]
           },
           "StreetNo" : {
-            "description" : "Identification number of an entrance to a building related to a domain defined by the street as issued by the local authorities",
+            "description" : "\r\n\tIdentification number of an entrance to a building related to a domain defined by the street as issued by the local authorities.\r\n\r\n    synonym: house number\r\n\t",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:2.0.0#streetNo",
             "allOf" : [ {
               "$ref" : "#/components/schemas/Text"
             } ]
           },
           "PostalCode" : {
-            "description" : "Zip/postal code of the area included in an address.",
+            "description" : "ZIP/postal code of the area in which an organization is located.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:2.0.0#postalCode",
             "allOf" : [ {
               "$ref" : "#/components/schemas/Text"
             } ]
           },
           "CityName" : {
-            "description" : "Town or city.",
+            "description" : "City or town where the company or organization is located.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:2.0.0#cityTown",
             "allOf" : [ {
               "$ref" : "#/components/schemas/MultiLanguageTexts"
             } ]
           },
           "CountryCode" : {
-            "description" : "Code of a country (Country codes defined accord. to DIN EN ISO 3166-1).",
+            "description" : "\r\n\tTwo-letter country code (ISO 3166-1 alpha-2 code)\r\n\r\n\tNOTE: a value list with all country codes is available in IEC CDD, IRDI 0112/2///61360_7#CEA008#001\r\n\t",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:2.0.0#nationalCode",
             "allOf" : [ {
-              "$ref" : "#/components/schemas/MultiLanguageTexts"
+              "$ref" : "#/components/schemas/Text"
             } ]
           }
         },
-        "required" : [ "Street", "PostalCode", "CityName", "CountryCode" ]
+        "required" : [ "PostalCode", "CityName", "CountryCode" ]
       },
       "AddressInformationCharacteristic" : {
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#AddressInformationCharacteristic",
@@ -76,17 +76,16 @@
           "$ref" : "#/components/schemas/AdressInformation"
         } ]
       },
+      "Date" : {
+        "type" : "string",
+        "format" : "date",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#Date"
+      },
       "ResourcePath" : {
         "type" : "string",
         "format" : "uri",
         "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#ResourcePath",
         "description" : "The path of a resource."
-      },
-      "Date" : {
-        "type" : "string",
-        "format" : "date",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#Date",
-        "description" : "Date in format CCYY-MM-DD."
       },
       "MimeType" : {
         "type" : "string",
@@ -114,20 +113,33 @@
           }
         }
       },
+      "Date0" : {
+        "type" : "string",
+        "format" : "date",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#Date",
+        "description" : "Date in format CCYY-MM-DD."
+      },
       "Marking" : {
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#Marking",
         "type" : "object",
         "properties" : {
-          "TypeOfConformityRegulationCertification" : {
-            "description" : "Common name of the marking.",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#markingName",
+          "TypeOfConformityRegulation" : {
+            "description" : "\r\n    Classification of a certificate or approval document according to the regulations against which the conformity of an entity is tested (IEC 61360-7).\r\n\t\r\n\tsynonym: MarkingName\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#typeOfConformityRegulation",
             "allOf" : [ {
               "$ref" : "#/components/schemas/Text"
             } ]
           },
-          "IdentifierOfCertificateApprovalDeclarationOrLicense" : {
-            "description" : "Alphanumeric character sequence identifying a certificate or approval.",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#designationOfCertificateOrApproval",
+          "IdentifierOfCertificate" : {
+            "description" : "\r\n    Alphanumeric character sequence identifying a certificate, approval, declaration or license (EC 61360-7).\r\n\r\n    NOTE: to be entered without spaces \r\n\r\n    synonym: DesignationOfCertificateOrApproval\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#identifierOfCertificate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "CertificateSupplement" : {
+            "description" : "\r\n    Running number or designation of a supplement/amendment issued to an existing certificate, approval, declaration or license.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#certificateSupplement",
             "allOf" : [ {
               "$ref" : "#/components/schemas/Text"
             } ]
@@ -136,14 +148,14 @@
             "description" : "Date, at which the specified certificate is issued. Note: format by lexical representation: CCYY-MM-DD. Note: to be specified to the day.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#issueDate",
             "allOf" : [ {
-              "$ref" : "#/components/schemas/Date"
+              "$ref" : "#/components/schemas/Date0"
             } ]
           },
           "EndOfValidity" : {
             "description" : "Date, at which the specified certificate expires. Note: format by lexical representation: CCYY-MM-DD. Note: to be specified to the day.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#expiryDate",
             "allOf" : [ {
-              "$ref" : "#/components/schemas/Date"
+              "$ref" : "#/components/schemas/Date0"
             } ]
           },
           "MarkingFile" : {
@@ -157,11 +169,11 @@
             "description" : "Where applicable, additional information on the marking in plain text, e.g. the ID-number of the notified body involved in the conformity process.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#markingAdditionalText",
             "allOf" : [ {
-              "$ref" : "#/components/schemas/Text"
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
             } ]
           }
         },
-        "required" : [ "TypeOfConformityRegulationCertification", "MarkingFile" ]
+        "required" : [ "TypeOfConformityRegulation", "MarkingFile" ]
       },
       "Markings" : {
         "description" : "Note: CE marking is declared as mandatory according to EU Blue Guide.",
@@ -196,18 +208,18 @@
         "$ref" : "#/components/schemas/Uri"
       } ]
     },
-    "ManufacturerId" : {
-      "description" : "Fully qualified domain name of the manufacturer of a product using a uniform resource identifier (URI).",
-      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#manufacturerId",
-      "allOf" : [ {
-        "$ref" : "#/components/schemas/Text"
-      } ]
-    },
     "ManufacturerName" : {
       "description" : "Legally valid designation of the natural or judicial person which is directly responsible for the design, production, packaging and labeling of a product in respect to its being brought into circulation.",
       "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#manufacturerName",
       "allOf" : [ {
         "$ref" : "#/components/schemas/MultiLanguageTexts"
+      } ]
+    },
+    "ManufacturerId" : {
+      "description" : "Fully qualified domain name of the manufacturer of a product using a uniform resource identifier (URI).",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#manufacturerId",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
       } ]
     },
     "AddressInformation" : {
@@ -266,6 +278,13 @@
         "$ref" : "#/components/schemas/Text"
       } ]
     },
+    "DateOfManufacture" : {
+      "description" : "Date when an item was manufactured.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#dateOfManufacture",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Date"
+      } ]
+    },
     "HardwareVersion" : {
       "description" : "Version of the hardware supplied with the device.",
       "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#hardwareVersion",
@@ -305,7 +324,7 @@
       "description" : "A graphic mark used to represent a company, an organisation or a product.",
       "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#logoCompany",
       "allOf" : [ {
-        "$ref" : "#/components/schemas/ResourcePath"
+        "$ref" : "#/components/schemas/FileWithContentType"
       } ]
     },
     "Markings" : {

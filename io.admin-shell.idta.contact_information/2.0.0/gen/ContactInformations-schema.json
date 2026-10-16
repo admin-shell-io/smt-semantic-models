@@ -7,16 +7,10 @@
       "RoleOfContactPersonCharacteristic" : {
         "type" : "string"
       },
-      "MultiLanguageTexts" : {
-        "description" : "A set of language-text items.",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#MultiLanguageTexts",
-        "type" : "array",
-        "items" : {
-          "type" : "object",
-          "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#MultiLanguageText",
-          "description" : "Describes a Property which contains plain text in multiple languages. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
-        },
-        "uniqueItems" : true
+      "Text" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Text",
+        "description" : "Describes a Property which contains plain text. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
       },
       "LanguageSetTrait" : {
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#LanguageSetTrait",
@@ -29,10 +23,16 @@
         "uniqueItems" : true,
         "minItems" : 1
       },
-      "Text" : {
-        "type" : "string",
-        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Text",
-        "description" : "Describes a Property which contains plain text. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+      "MultiLanguageTexts" : {
+        "description" : "A set of language-text items.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#MultiLanguageTexts",
+        "type" : "array",
+        "items" : {
+          "type" : "object",
+          "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#MultiLanguageText",
+          "description" : "Describes a Property which contains plain text in multiple languages. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+        },
+        "uniqueItems" : true
       },
       "PhoneEntity" : {
         "description" : "Phone number including type.",
@@ -191,10 +191,10 @@
             } ]
           },
           "NationalCode" : {
-            "description" : "Code of a country (Country codes defined accord. to DIN EN ISO 3166-1).",
+            "description" : "\r\n\tTwo-letter country code (ISO 3166-1 alpha-2 code)\r\n\r\n\tNOTE: a value list with all country codes is available in IEC CDD, IRDI 0112/2///61360_7#CEA008#001\r\n\t",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:2.0.0#nationalCode",
             "allOf" : [ {
-              "$ref" : "#/components/schemas/MultiLanguageTexts"
+              "$ref" : "#/components/schemas/Text"
             } ]
           },
           "Languages" : {
@@ -211,7 +211,7 @@
             } ]
           },
           "CityTown" : {
-            "description" : "Town or city.",
+            "description" : "City or town where the company or organization is located.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:2.0.0#cityTown",
             "allOf" : [ {
               "$ref" : "#/components/schemas/MultiLanguageTexts"
@@ -266,15 +266,22 @@
             } ]
           },
           "StreetName" : {
-            "description" : "Street name (without house number).",
+            "description" : "Street name of the building where an organization is located (IEC 61360-7).",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:2.0.0#streetName",
             "allOf" : [ {
               "$ref" : "#/components/schemas/MultiLanguageTexts"
             } ]
           },
           "StreetNo" : {
-            "description" : "Identification number of an entrance to a building related to a domain defined by the street as issued by the local authorities",
+            "description" : "\r\n\tIdentification number of an entrance to a building related to a domain defined by the street as issued by the local authorities.\r\n\r\n    synonym: house number\r\n\t",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:2.0.0#streetNo",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "PostalCode" : {
+            "description" : "ZIP/postal code of the area in which an organization is located.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:2.0.0#postalCode",
             "allOf" : [ {
               "$ref" : "#/components/schemas/Text"
             } ]

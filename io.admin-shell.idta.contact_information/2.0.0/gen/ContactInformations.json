@@ -1,9 +1,7 @@
 {
   "contactInformations" : [ {
     "RoleOfContactPerson" : "technical contact",
-    "NationalCode" : [ {
-      "en" : "DE"
-    } ],
+    "NationalCode" : "DE",
     "Languages" : [ "en" ],
     "TimeZone" : "-12:00",
     "CityTown" : [ {
@@ -41,19 +39,20 @@
       } ]
     },
     "IPCommunicationChannels" : [ {
-      "AddressOfAdditionalLink" : "xC2QXCC5",
+      "AddressOfAdditionalLink" : "kwHAtdzVj",
       "TypeOfCommunication" : "Chat",
       "availableTime" : [ {
         "de" : "Montag – Freitag 08:00 bis 16:00"
       } ]
     } ],
     "Street" : [ {
-      "de" : "Musterstrasse 1"
+      "de" : "Musterstraße 12"
     } ],
     "StreetName" : [ {
-      "de" : "Musterstrasse"
+      "de" : "Musterstraße"
     } ],
-    "StreetNo" : "1",
+    "StreetNo" : "12",
+    "PostalCode" : "10719",
     "ZipCode" : [ {
       "de" : "12345"
     } ],
