@@ -3,30 +3,30 @@
   "ProductBatchOrLotId" : "https://www.domain-abc.com/Lot-ABC789",
   "ProductTypeId" : "https://www.domain-abc.com/Type-1234XYZ",
   "ManufacturerName" : [ {
-    "de" : "Muster AG"
+    "en" : "P"
   } ],
   "ManufacturerId" : "urn:duns:123456789",
   "AddressInformation" : {
     "StreetName" : [ {
-      "de" : "Musterstraße"
+      "en" : "hWLln"
     } ],
     "StreetNo" : "12",
     "PostalCode" : "10719",
     "CityName" : [ {
-      "de" : "Musterstadt"
+      "de" : "gi"
     } ],
     "CountryCode" : "DE"
   },
   "TypeNameOfProduct" : [ {
-    "en" : "flow meter"
+    "de" : "WSXufEtT"
   } ],
   "FamilyNameOfProduct" : [ {
-    "en" : "Type ABC"
+    "de" : "t8XwmQ1"
   } ],
   "ModelNameOfProduct" : [ {
-    "en" : "ABC-123"
+    "de" : "oY3GT"
   } ],
-  "CodeOfProduct" : "FM-ABC-1234",
+  "CodeOfProduct" : "FLM90X-12345",
   "OrderCodeOfProduct" : "FMABC1234",
   "ArticleNumber" : "FM11-ABC22-123456",
   "SerialNumber" : "A12345-X75EN",
@@ -51,7 +51,7 @@
       "contentType" : "application/pdf"
     },
     "AdditionalMarkingText" : [ {
-      "de" : "fBDttnK"
+      "en" : "L46gI"
     } ]
   } ]
 }

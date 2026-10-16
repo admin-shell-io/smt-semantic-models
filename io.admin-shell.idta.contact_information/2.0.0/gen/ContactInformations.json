@@ -5,83 +5,83 @@
     "Languages" : [ "en" ],
     "TimeZone" : "-12:00",
     "CityTown" : [ {
-      "de" : "Musterstadt"
+      "de" : "ljNVgi8w"
     } ],
     "Company" : [ {
-      "en" : "ABC Company"
+      "en" : "zm"
     } ],
     "Department" : [ {
-      "de" : "Vertrieb"
+      "en" : "g7A"
     } ],
     "Phone" : {
       "TelephoneNumber" : [ {
-        "de" : "+491234567890"
+        "de" : "2R"
       } ],
       "TypeOfTelephone" : "office",
       "AvailableTime" : [ {
-        "de" : "Montag – Freitag 08:00 bis 16:00"
+        "en" : "D"
       } ]
     },
     "Fax" : {
       "FaxNumber" : [ {
-        "de" : "+491234567890"
+        "en" : "B6o4"
       } ],
       "TypeOfFaxNumber" : "office"
     },
     "Email" : {
       "EmailAddress" : "email@muster-ag.de",
       "PublicKey" : [ {
-        "en" : "0x07"
+        "en" : "1v"
       } ],
       "TypeOfEmailAddress" : "office",
       "TypeOfPublicKey" : [ {
-        "en" : "RSA"
+        "en" : "M11SZq"
       } ]
     },
     "IPCommunicationChannels" : [ {
-      "AddressOfAdditionalLink" : "kwHAtdzVj",
+      "AddressOfAdditionalLink" : "x",
       "TypeOfCommunication" : "Chat",
       "availableTime" : [ {
-        "de" : "Montag – Freitag 08:00 bis 16:00"
+        "en" : "UTjQpY"
       } ]
     } ],
     "Street" : [ {
-      "de" : "Musterstraße 12"
+      "en" : "Pzcj94rHRw"
     } ],
     "StreetName" : [ {
-      "de" : "Musterstraße"
+      "en" : "J0ghzph"
     } ],
     "StreetNo" : "12",
     "PostalCode" : "10719",
     "ZipCode" : [ {
-      "de" : "12345"
+      "en" : "fMKDRWh"
     } ],
     "POBox" : [ {
-      "de" : "PF 1234"
+      "en" : "uLHMTMAIO"
     } ],
     "ZipCodeOfPOBox" : [ {
-      "de" : "12345"
+      "en" : "j"
     } ],
     "StateCounty" : [ {
-      "de" : "Muster-Bundesland"
+      "de" : "qgICIL"
     } ],
     "NameOfContact" : [ {
-      "en" : "Doe"
+      "en" : "bTVOS"
     } ],
     "FirstName" : [ {
-      "en" : "Jane"
+      "de" : "a"
     } ],
     "MiddleNames" : [ {
-      "en" : "M."
+      "en" : "YoHk9wk3f"
     } ],
     "Title" : [ {
-      "en" : "Mrs."
+      "en" : "2yVUivCJ5t"
     } ],
     "AcademicTitle" : [ {
-      "en" : "PhD"
+      "en" : "5272a"
     } ],
     "FurtherDetailsOfContact" : [ {
-      "de" : "-"
+      "de" : "4yDajFv2v"
     } ],
     "AddressOfAdditionalLink" : "https://example.com/information/product/1224/contact"
   } ]

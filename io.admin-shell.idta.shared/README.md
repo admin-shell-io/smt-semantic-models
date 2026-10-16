@@ -19,6 +19,7 @@ Changes conformant to Digital Nameplate 4.0
 * :markings - added samm:see information 
 * :Marking - new payload names for :markingName, :designationOfCertificateOrApproval, :issueDate, :expiryDate, :markingAdditionalText
 * :expiryDate - fix samm:see "urn:iri" prefix not needed for https, change to <https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/ExpiryDate> ;
+* .expiryDate - not to be specified to the day any longer
 
 
 
