@@ -46,8 +46,13 @@
 :expiryDate a samm:Property ;
    samm:preferredName "Ablaufdatum"@de ;
    samm:preferredName "expiry date"@en ;
-   samm:description "Datum zu welchem die Kennzeichnung abläuft."@de ;
-   samm:description "Date, at which the specified certificate expires. Note: format by lexical representation: CCYY-MM-DD. Note: to be specified to the day."@en ;
+   samm:description """
+	Date when a document becomes invalid.
+	
+	NOTE: The format for date is the lexical representation allowed by ISO 8601, i. e. "YYYY-MM-DD" with optional time zone.
+	
+	synonym: ExpiryDate
+	"""@en ;
    samm:see <https://admin-shell.io/idta/cds/expiryDate/1> ;
    samm:see <urn:irdi:0112/2///61360_7#CBA286#001> ;
    samm:see <urn:irdi:0173-1#02-ABL775#001> ;
@@ -63,8 +68,7 @@
 :markingFile a samm:Property ;
    samm:preferredName "marking file"@en ;
    samm:preferredName "Kennzeichnungsbild"@de ;
-   samm:description "Conformity symbol of the marking."@en ;
-   samm:description "Das Symbol für Konformität der Kennzeichnung."@de ;
+   samm:description "Graphical symbol defined by and indicating conformance to a particular directive, standard or specification."@en ;
    samm:see <https://admin-shell.io/idta/cds/markingFile/1> ;
    samm:see <urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/MarkingFile> ;
    samm:characteristic :FileWithContentType .
@@ -72,8 +76,15 @@
 :issueDate a samm:Property ;
    samm:preferredName "Ausstelldatum"@de ;
    samm:preferredName "issue date"@en ;
-   samm:description "Datum zu welchem die Kennzeichnung ausgestellt wurde."@de ;
-   samm:description "Date, at which the specified certificate is issued. Note: format by lexical representation: CCYY-MM-DD. Note: to be specified to the day."@en ;
+   samm:description """
+	Date when a document was issued. 
+	
+	NOTE 1: The format for date is the lexical representation allowed by ISO 8601, i. e. "YYYY-MM-DD" with optional time zone.
+	
+	NOTE 2: The date of issue is normally the date, when the document becomes valid.
+
+	synonym: IssueDate
+	"""@en ;
    samm:see <https://admin-shell.io/idta/cds/expiryDate/1> ;
    samm:see <urn:iri:https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/IssueDate> ;
    samm:characteristic :Date ;
@@ -82,8 +93,11 @@
 :markingAdditionalText a samm:Property ;
    samm:preferredName "additional text"@en ;
    samm:preferredName "zusätzlicher Text"@de ;
-   samm:description "Zusätzlicher sprechender Text für die Kennzeichnung."@de ;
-   samm:description "Where applicable, additional information on the marking in plain text, e.g. the ID-number of the notified body involved in the conformity process."@en ;
+   samm:description """
+   Additional plain text on a name plate indicating conformance to a particular directive, standard or specification.
+
+	synonym: MarkingAdditionalText
+   """@en ;
    samm:see <https://admin-shell.io/idta/cds/markingAdditionalText/1> ;
    samm:see <urn:irdi:0173-1%2302-ABI192%23003> ;
    samm:see <urn:irdi:0112/2///61987%23ABB146%23007> ;
