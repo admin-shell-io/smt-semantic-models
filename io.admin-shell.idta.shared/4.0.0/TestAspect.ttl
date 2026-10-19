@@ -28,6 +28,7 @@
    :languages 
    :example4specificAssetId
    :externalSubjectId
+   :exampleTypeOfConformityRegulation
    ) ;
    samm:operations ( ) ;
    samm:events ( ) .
@@ -40,3 +41,13 @@
    samm:characteristic [ 
      a samm-c:SingleEntity ;
      samm:dataType :SpecificAssetId] .
+	 
+:exampleTypeOfConformityRegulation a samm:Property ;
+   samm:preferredName "type of conformity regulation or certification"@en ;
+   samm:description """
+    Classification of a certificate or approval document according to the regulations against which the conformity of an entity is tested (IEC 61360-7).
+	
+	synonym: MarkingName
+   """@en ;
+   samm:characteristic :ProductMarkingEnum ;
+   samm:exampleValue :CCC .
