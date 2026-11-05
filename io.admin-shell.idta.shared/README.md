@@ -12,17 +12,6 @@ The folder "input" contains source files like .aasx or the submodel template spe
 # Changelog
 All notable changes to this model will be documented in this section.
 
-
-## [4.0.0] - July 2026 based on IDTA-01001-3-2 Specifications of the Asset Administration Shell: Metamodel
-
-for detailled changelog see [IDTA-01001-3-1](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.2)
-
-changes:
-
-- update samm:see information to /3/2
-- to avoid name clashed in json-example generation make :contentType property of :BlobWithContentType and :fileWithContentType unique (first conflict for Time Series V1.1)
-
-
 ## [3.1.1] - October 2026
 
 Other changes:
