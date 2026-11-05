@@ -1,0 +1,352 @@
+{
+  "digitalProductPassportId" : "https://www.example.org/dpp/1234545",
+  "uniqueProductIdentifier" : "https://www.example.org/dpp/1234545",
+  "granularity" : "Batch",
+  "dppSchemaVersion" : "ENXXX:v1.0",
+  "dppStatus" : "Active",
+  "lastUpdate" : "2025-08-22T03:12:00Z",
+  "economicOperatorId" : "gxx:ppp456789",
+  "facilityId" : "gxx:xxx987654",
+  "contentSpecificationIds" : [ "td4o0n2ng" ],
+  "https://admin-shell.io/idta/cds/carbonFootprint/1" : {
+    "ProductCarbonFootprints" : [ {
+      "PcfCalculationMethods" : "ISO 14067",
+      "PcfCo2eq" : 17.2,
+      "ReferenceImpactUnitForCalculation" : "piece",
+      "QuantityOfMeasureForCalculation" : 5.0,
+      "LifeCyclePhases" : "C4 - landfill",
+      "PerformanceClass" : "B+",
+      "WebLinkToPublicCarbonFootprintStudy" : [ "kNiC" ]
+    } ]
+  },
+  "https://admin-shell.io/idta/cds/circularity/1" : {
+    "DismantlingAndRemovalInformation" : [ "2SWf" ],
+    "SparePartSources" : [ {
+      "NameOfSupplier" : {
+        "en" : "ABC Company"
+      },
+      "AddressOfSupplier" : {
+        "NationalCode" : {
+          "en" : "DE"
+        },
+        "PostalCode" : {
+          "de" : "DE-10719"
+        },
+        "Street" : {
+          "de" : "Musterstrasse 1"
+        }
+      },
+      "EmailAddressOfSupplier" : {
+        "EmailAddress" : "email@muster-ag.de",
+        "PublicKey" : {
+          "en" : "0x07"
+        },
+        "TypeOfEmailAddress" : "office",
+        "TypeOfPublicKey" : {
+          "en" : "RSA"
+        }
+      },
+      "SupplierWebAddress" : "https://example.com/information/product/1224/contact",
+      "Components" : [ {
+        "PartName" : "Cell",
+        "PartNumber" : "LsO"
+      } ]
+    } ],
+    "RecycledContentInformation" : [ {
+      "PreConsumerShare" : 8.95,
+      "RecycledMaterial" : "Cobalt",
+      "PostConsumerShare" : 45.79
+    } ],
+    "SafetyMeasures" : {
+      "SafetyInstructions" : [ "bEcx" ],
+      "ExtinguishingAgents" : [ "JfEQ" ]
+    },
+    "EndOfLifeInformation" : {
+      "WastePrevention" : [ "HK2GEj" ],
+      "SeparateCollection" : [ "P3wZjun3PM" ],
+      "InformationOnCollection" : [ "uJDYLT" ]
+    },
+    "RenewableContent" : -79859.0
+  },
+  "https://admin-shell.io/idta/cds/digitalNameplate/1" : {
+    "URIOfTheProduct" : "https://dc-qr.com/?m=R123456789",
+    "ManufacturerName" : {
+      "de" : "Muster AG"
+    },
+    "AddressInformation" : {
+      "RoleOfContactPerson" : "technical contact",
+      "NationalCode" : {
+        "en" : "DE"
+      },
+      "Languages" : "en",
+      "TimeZone" : "-12:00",
+      "CityTown" : {
+        "de" : "Musterstadt"
+      },
+      "Company" : {
+        "en" : "ABC Company"
+      },
+      "Department" : {
+        "de" : "Vertrieb"
+      },
+      "Phone" : {
+        "TelephoneNumber" : {
+          "de" : "+491234567890"
+        },
+        "TypeOfTelephone" : "office",
+        "AvailableTime" : {
+          "de" : "Montag – Freitag 08:00 bis 16:00"
+        }
+      },
+      "Fax" : {
+        "FaxNumber" : {
+          "de" : "+491234567890"
+        },
+        "TypeOfFaxNumber" : "office"
+      },
+      "Email" : {
+        "EmailAddress" : "email@muster-ag.de"
+      },
+      "IPCommunicationChannels" : [ {
+        "AddressOfAdditionalLink" : "U3",
+        "TypeOfCommunication" : "Chat",
+        "availableTime" : {
+          "de" : "Montag – Freitag 08:00 bis 16:00"
+        }
+      } ],
+      "Street" : {
+        "de" : "Musterstrasse 1"
+      },
+      "ZipCode" : {
+        "de" : "12345"
+      },
+      "POBox" : {
+        "de" : "PF 1234"
+      },
+      "ZipCodeOfPOBox" : {
+        "de" : "12345"
+      },
+      "StateCounty" : {
+        "de" : "Muster-Bundesland"
+      },
+      "NameOfContact" : {
+        "en" : "Doe"
+      },
+      "FirstName" : {
+        "en" : "Jane"
+      },
+      "MiddleNames" : {
+        "en" : "M."
+      },
+      "Title" : {
+        "en" : "Mrs."
+      },
+      "AcademicTitle" : {
+        "en" : "PhD"
+      },
+      "FurtherDetailsOfContact" : {
+        "de" : "-"
+      },
+      "AddressOfAdditionalLink" : "https://example.com/information/product/1224/contact"
+    },
+    "SerialNumber" : "A12345-X75EN",
+    "DateOfManufacture" : "2022-01-01",
+    "DateOfPuttingIntoService" : "2022-06-01",
+    "UniqueFacilityIdentifier" : "987654321",
+    "LifeCycleStage" : "original",
+    "OperatorIdentifier" : "KBIlBjiW",
+    "ManufacturerIdentifier" : "kQvghL",
+    "Markings" : [ {
+      "MarkingName" : "0173-1%2307-DAA603%23004",
+      "DesignationOfCertificateOrApproval" : "KEMA99IECE X1105/128",
+      "IssueDate" : "2022-01-01",
+      "ExpiryDate" : "2022-01-01",
+      "MarkingFile" : {
+        "value" : "https://example.com/SafetyInstructions.pdf",
+        "contentType" : "application/pdf"
+      },
+      "MarkingAdditionalText" : "0044"
+    } ],
+    "EUDeclarationOfConformity" : [ "RYnPVyxXI" ],
+    "ResultsOfTestReportsProvingCompliance" : [ "ReADzGV0c" ]
+  },
+  "https://admin-shell.io/idta/cds/handoverDocumentation/1" : {
+    "Documents" : [ {
+      "DocumentIds" : [ {
+        "DocumentDomainId" : "1213455566",
+        "DocumentIdentifier" : "XF90-884",
+        "DocumentIsPrimary" : true
+      } ],
+      "DocumentClassifications" : [ {
+        "ClassId" : "03-02",
+        "ClassName" : [ {
+          "de" : "VbWZg"
+        } ],
+        "ClassificationSystem" : "VDI2770 Blatt 1:2020"
+      } ],
+      "DocumentVersions" : [ {
+        "Language" : "en",
+        "Version" : "V1.2",
+        "Title" : [ {
+          "de" : "6r"
+        } ],
+        "Subtitle" : [ {
+          "en" : "CA2ssRbQ"
+        } ],
+        "Description" : [ {
+          "de" : "ifI"
+        } ],
+        "DigitalFiles" : [ { } ]
+      } ]
+    } ]
+  },
+  "https://admin-shell.io/idta/cds/materialComposition/1" : {
+    "BatteryChemistry" : {
+      "ShortName" : "NMC",
+      "ClearName" : "Lithium nickel manganese cobalt oxides"
+    },
+    "BatteryMaterials" : [ {
+      "BatteryMaterialLocation" : {
+        "ComponentName" : "Anode",
+        "ComponentId" : "1234-344"
+      },
+      "BatteryMaterialIdentifier" : "346417-97-8",
+      "BatteryMaterialName" : "Lithium",
+      "BatteryMaterialMass" : 52.0,
+      "IsCriticalRawMaterial" : true
+    } ],
+    "HazardousSubstances" : [ {
+      "HazardousSubstanceClass" : "SkinCorrosionOrIrritation",
+      "HazardousSubstanceName" : "Cobalt (Co)",
+      "HazardousSubstanceIdentifier" : "346417-97-8",
+      "HazardousSubstanceConcentration" : 20.0,
+      "HazardousSubstanceImpact" : [ "ZGu" ],
+      "HazardousSubstanceLocation" : { }
+    } ]
+  },
+  "https://admin-shell.io/idta/cds/productCondition/1" : {
+    "EnergyThroughput" : {
+      "EnergyThroughputValue" : 100000.0,
+      "LastUpdate" : "2000-01-01T14:23:00"
+    },
+    "CapacityThroughput" : {
+      "CapacityThroughputValue" : 214.0,
+      "LastUpdate" : "2000-01-01T14:23:00"
+    },
+    "NumberOfFullCycles" : {
+      "NumberOfFullCyclesValue" : 600,
+      "LastUpdate" : "2000-01-01T14:23:00"
+    },
+    "StateOfCertifiedEnergy" : {
+      "StateOfCertifiedEnergyValue" : 70.0,
+      "LastUpdate" : "2000-01-01T14:23:00"
+    },
+    "RemainingEnergy" : {
+      "RemainingEnergyValue" : 30.0,
+      "LastUpdate" : "2000-01-01T14:23:00"
+    },
+    "RemainingCapacity" : {
+      "RemainingCapacityValue" : 56.0,
+      "LastUpdate" : "2000-01-01T14:23:00"
+    },
+    "NegativeEvents" : [ {
+      "NegativeEventValue" : "overcharged",
+      "LastUpdate" : "2000-01-01T14:23:00"
+    } ],
+    "InformationOnAccidents" : [ "4A" ],
+    "TemperatureInformation" : {
+      "MeasuredTemp" : 20.0,
+      "TimeExtremeHighTemp" : 0.0,
+      "TimeExtremeLowTemp" : 0.0,
+      "TimeExtremeHighTempCharging" : 0.0,
+      "TimeExtremeLowTempCharging" : 0.0,
+      "LastUpdate" : "2000-01-01T14:23:00"
+    },
+    "RemainingPowerCapability" : {
+      "RemainingPowerCapabilityValue" : {
+        "RPCLastUpdated" : "2000-01-01T14:23:00",
+        "AtSoC" : 80.0,
+        "PowerCapabilityAt" : 95.0
+      },
+      "LastUpdate" : "2000-01-01T14:23:00"
+    },
+    "EvolutionOfSelfDischarge" : {
+      "EvolutionOfSelfDischargeValue" : 1.0,
+      "LastUpdate" : "2000-01-01T14:23:00"
+    },
+    "CurrentSelfDischargingRate" : {
+      "CurrentSelfDischargingRateValue" : 2.0,
+      "LastUpdate" : "2000-01-01T14:23:00"
+    },
+    "RemainingRoundTripEnergyEfficiency" : {
+      "RemainingRoundTripEnergyEfficiencyValue" : 80.0,
+      "LastUpdate" : "2000-01-01T14:23:00"
+    },
+    "StateOfCharge" : {
+      "StateOfChargeValue" : 70.0,
+      "LastUpdate" : "2000-01-01T14:23:00"
+    }
+  },
+  "https://admin-shell.io/idta/cds/technicalData/1" : {
+    "GeneralInformation" : {
+      "ManufacturerName" : "AN",
+      "CompanyLogo" : "https://example.com/KSqv43",
+      "ManufacturerIdentifier" : "e7gJzFSsA",
+      "WarrantyInformation" : {
+        "WarrantyPeriod" : "P96M"
+      },
+      "BatteryCategory" : "ev",
+      "BatteryMass" : 1007.0,
+      "ProductImages" : [ {
+        "ImageFile" : { },
+        "ImageNote" : [ {
+          "en" : "0aka"
+        } ]
+      } ]
+    },
+    "TechnicalPropertyAreas" : {
+      "CapacityEnergyVoltage" : {
+        "NominalVoltage" : 4.3,
+        "MinVoltage" : 2.04,
+        "MaxVoltage" : 6.0,
+        "RatedCapacity" : 210.0,
+        "CapacityFade" : 10.0,
+        "CertifiedUsableBatteryEnergy" : 100.0
+      },
+      "RoundTripEnergyEfficiency" : {
+        "InitialRoundTripEnergyEfficiency" : 100,
+        "RoundTripEnergyEfficiencyAt50PercentOfCycleLife" : 100,
+        "EnergyRoundTripEfficiencyFade" : 10.0,
+        "InitialSelfDischargingRate" : 2
+      },
+      "Resistance" : {
+        "InitialInternalResistanceAtBatteryCellLevel" : 67.0,
+        "InitialInternalResistanceAtBatteryPackLevel" : 23.0,
+        "InitialInternalResistanceAtBatteryModuleLevel" : 10.0,
+        "InternalResistanceIncreaseAtBatteryCellLevel" : 10,
+        "InternalResistanceIncreaseAtBatteryPackLevel" : 10,
+        "InternalResistanceIncreaseAtBatteryModuleLevel" : 10
+      },
+      "PowerCapability" : {
+        "MaximumPermittedBatteryPower" : 1.797693E38,
+        "PowerFade" : 23.0,
+        "RatioNominalBatteryPowerAndBatteryEnergy" : 0.611,
+        "OriginalPowerCapability" : [ {
+          "atSoC" : 80.0,
+          "powerCapabilityAt" : 500.0
+        } ]
+      },
+      "Temperature" : {
+        "TemperatureRangeIdleState_LowerBoundary" : 49.0,
+        "TemperatureRangeIdleState_UpperBoundary" : -19.0
+      },
+      "Lifetime" : {
+        "ExpectedLifetimeInCalendarYears" : 15,
+        "ExpectedNumberOfCycles" : 1000,
+        "CapacityThresholdExhaustion" : 23.0,
+        "CycleLifeReferenceTest" : [ "SaD95J6XTo" ],
+        "CrateOfRelevantCycleLifeTest" : -47393.8
+      }
+    }
+  }
+}
