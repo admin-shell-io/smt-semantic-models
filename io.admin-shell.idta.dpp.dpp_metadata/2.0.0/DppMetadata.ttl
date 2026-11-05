@@ -97,7 +97,7 @@
    REFERENCES: EN 18223:2026(en) 
    """@en ;
    samm:see <https://repository.product-passport.ec.europa.eu/core/vocabs/core-vocabulary#granularity> ;
-   samm:see <https://admin-shell.io/idta/cds/granularity/1> ;
+   samm:see <https://admin-shell.io/idta/cds/granularity/2> ;
    samm:see <https://admin-shell.io/aas/3/1/AssetKind> ;
    samm:characteristic :GranularityEnum ;
    samm:exampleValue "https://repository.product-passport.ec.europa.eu/core/vocabs/granularity-level#model" .
@@ -123,7 +123,7 @@
    REFERENCES: EN 18223:2026(en) 
    """@en ;
    samm:see <https://repository.product-passport.ec.europa.eu/core/vocabs/core-vocabulary#dppStatus> ;
-   samm:see <https://admin-shell.io/idta/cds/dppSchemaVersion/1> ;
+   samm:see <https://admin-shell.io/idta/cds/dppSchemaVersion/2> ;
    samm:characteristic :DPPStatusEnum ;
    samm:exampleValue "https://repository.product-passport.ec.europa.eu/core/vocabs/instance-status#validStatus" .
    
