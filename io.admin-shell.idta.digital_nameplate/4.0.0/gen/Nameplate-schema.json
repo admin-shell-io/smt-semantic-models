@@ -1,0 +1,339 @@
+{
+  "$schema" : "http://json-schema.org/draft-04/schema",
+  "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#Nameplate",
+  "description" : "Contains the nameplate information attached to the product.",
+  "type" : "object",
+  "components" : {
+    "schemas" : {
+      "Uri" : {
+        "type" : "string",
+        "format" : "uri",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#Uri"
+      },
+      "MultiLanguageTexts" : {
+        "description" : "A set of language-text items.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#MultiLanguageTexts",
+        "type" : "array",
+        "items" : {
+          "type" : "object",
+          "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#MultiLanguageText",
+          "description" : "Describes a Property which contains plain text in multiple languages. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+        },
+        "uniqueItems" : true
+      },
+      "Text" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Text",
+        "description" : "Describes a Property which contains plain text. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+      },
+      "AdressInformation" : {
+        "description" : "Contains information on how to contact the manufacturer or an authorised service provider, e.g. when a maintenance service is required.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#AdressInformation",
+        "type" : "object",
+        "properties" : {
+          "StreetName" : {
+            "description" : "Street name of the building where an organization is located (IEC 61360-7).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:2.0.0#streetName",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
+          },
+          "StreetNo" : {
+            "description" : "\r\n\tIdentification number of an entrance to a building related to a domain defined by the street as issued by the local authorities.\r\n\r\n    synonym: house number\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:2.0.0#streetNo",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "PostalCode" : {
+            "description" : "ZIP/postal code of the area in which an organization is located.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:2.0.0#postalCode",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "CityName" : {
+            "description" : "City or town where the company or organization is located.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:2.0.0#cityTown",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
+          },
+          "CountryCode" : {
+            "description" : "\r\n\tTwo-letter country code (ISO 3166-1 alpha-2 code)\r\n\r\n\tNOTE: a value list with all country codes is available in IEC CDD, IRDI 0112/2///61360_7#CEA008#001\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:2.0.0#nationalCode",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          }
+        },
+        "required" : [ "PostalCode", "CityName", "CountryCode" ]
+      },
+      "AddressInformationCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#AddressInformationCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/AdressInformation"
+        } ]
+      },
+      "Date" : {
+        "type" : "string",
+        "format" : "date",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#Date"
+      },
+      "ResourcePath" : {
+        "type" : "string",
+        "format" : "uri",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#ResourcePath",
+        "description" : "The path of a resource."
+      },
+      "MimeType" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#MimeType",
+        "description" : "A MIME type as defined in RFC 2046, for example \"application/pdf\"."
+      },
+      "FileWithContentType" : {
+        "description" : "A file is a data element that represents an address to a file (a locator). The value is a URI that can represent an absolute or relative path.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#FileWithContentType",
+        "type" : "object",
+        "properties" : {
+          "value" : {
+            "description" : "Path and name of the file (with file extension).\n\nThe path can be absolute or relative.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#resourceValue",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ResourcePath"
+            } ]
+          },
+          "contentType" : {
+            "description" : "Content type of the content of the file or blob.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#contentType",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MimeType"
+            } ]
+          }
+        }
+      },
+      "Date0" : {
+        "type" : "string",
+        "format" : "date",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#Date",
+        "description" : "Date in format CCYY-MM-DD."
+      },
+      "Marking" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#Marking",
+        "type" : "object",
+        "properties" : {
+          "TypeOfConformityRegulation" : {
+            "description" : "\r\n    Classification of a certificate or approval document according to the regulations against which the conformity of an entity is tested (IEC 61360-7).\r\n\t\r\n\tsynonym: MarkingName\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#typeOfConformityRegulation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "IdentifierOfCertificate" : {
+            "description" : "\r\n    Alphanumeric character sequence identifying a certificate, approval, declaration or license (EC 61360-7).\r\n\r\n    NOTE: to be entered without spaces \r\n\r\n    synonym: DesignationOfCertificateOrApproval\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#identifierOfCertificate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "CertificateSupplement" : {
+            "description" : "\r\n    Running number or designation of a supplement/amendment issued to an existing certificate, approval, declaration or license.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#certificateSupplement",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "DateOfIssue" : {
+            "description" : "\r\n\tDate when a document was issued. \r\n\t\r\n\tNOTE 1: The format for date is the lexical representation allowed by ISO 8601, i. e. \"YYYY-MM-DD\" with optional time zone.\r\n\t\r\n\tNOTE 2: The date of issue is normally the date, when the document becomes valid.\r\n\r\n\tsynonym: IssueDate\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#issueDate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Date0"
+            } ]
+          },
+          "EndOfValidity" : {
+            "description" : "\r\n\tDate when a document becomes invalid.\r\n\t\r\n\tNOTE: The format for date is the lexical representation allowed by ISO 8601, i. e. \"YYYY-MM-DD\" with optional time zone.\r\n\t\r\n\tsynonym: ExpiryDate\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#expiryDate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Date0"
+            } ]
+          },
+          "MarkingFile" : {
+            "description" : "Graphical symbol defined by and indicating conformance to a particular directive, standard or specification.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#markingFile",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/FileWithContentType"
+            } ]
+          },
+          "AdditionalMarkingText" : {
+            "description" : "\r\n   Additional plain text on a name plate indicating conformance to a particular directive, standard or specification.\r\n\r\n\tsynonym: MarkingAdditionalText\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#markingAdditionalText",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
+          }
+        },
+        "required" : [ "TypeOfConformityRegulation", "MarkingFile" ]
+      },
+      "Markings" : {
+        "description" : "Note: CE marking is declared as mandatory according to EU Blue Guide.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:4.0.0#Markings",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Marking"
+        },
+        "uniqueItems" : true
+      }
+    }
+  },
+  "properties" : {
+    "UniqueProductIdentifier" : {
+      "description" : "\r\n\tUnique string of characters for the identification of a\r\n\tproduct, that also enables a web link to the digital product passport.   \r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#productId",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Uri"
+      } ]
+    },
+    "ProductBatchOrLotId" : {
+      "description" : "Unique global identification of a product batch or lot using an uniform resource identifier (URI).",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#productBatchOrLotId",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Uri"
+      } ]
+    },
+    "ProductTypeId" : {
+      "description" : "Unique global identification of a product type using an uniform resource identifier (URI).",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#productTypeId",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Uri"
+      } ]
+    },
+    "ManufacturerName" : {
+      "description" : "Designation of the entity, company or organization responsible for the manufacturing of the product.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#manufacturerName",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/MultiLanguageTexts"
+      } ]
+    },
+    "ManufacturerId" : {
+      "description" : "\r\n\tFully qualified domain name of the manufacturer of a product using a uniform resource identifier (URI).\r\n\t\r\n\tNOTE: The URI comprises the URL and the URN\r\n\t",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#manufacturerId",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "AddressInformation" : {
+      "description" : "\r\n\tProperties providing the manufacturer contact information.\r\n   \r\n\tNOTE: The manufacturer contact information of the typeplate, if defined by regulations.\r\n\t",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#manufacturerAddressInformation",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/AddressInformationCharacteristic"
+      } ]
+    },
+    "TypeNameOfProduct" : {
+      "description" : "\r\n\tFirst level of a product description hierarchy as defined by\r\n\tthe manufacturer, characterizing the article or product\r\n\tbased on its usage, operation principle and its fabricated form.\r\n\t\r\n\tsynonym: ManufacturerProductRoot\r\n\t",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#manufacturerProductRoot",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/MultiLanguageTexts"
+      } ]
+    },
+    "FamilyNameOfProduct" : {
+      "description" : "\r\n\tSecond level of a product description hierarchy as defined\r\n\tby the manufacturer, classifying the article or product\r\n\tbased on a manufacturer-specific nomenclature.\r\n\t",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#manufacturerProductFamily",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/MultiLanguageTexts"
+      } ]
+    },
+    "ModelNameOfProduct" : {
+      "description" : "\r\n\tThird level of a product description hierarchy as defined by\r\n\tthe manufacturer, being the article or product designation\r\n\tunder which the article or product is marketed.\r\n\t\r\n\tNOTE: If there are more or fewer levels in the product\r\n\tdescription hierarchy, this property is used for the lowest\r\n\tlevel.\r\n\t\r\n\tsynonym: ManufacturerProductDesignation\r\n\t",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#manufacturerProductDesignation",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/MultiLanguageTexts"
+      } ]
+    },
+    "CodeOfProduct" : {
+      "description" : "\r\n\tCombination of numbers and letters used to identify the\r\n\ttype of product (product type).\r\n\t\r\n\tNOTE: CodeOfProduct may complement the property ModelNameOfProduct\r\n\t\r\n\tExample: Descriptive type code containing the exact specifications of the product\r\n\t",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#manufacturerProductType",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "OrderCodeOfProduct" : {
+      "description" : "\r\n\tUnique combination of numbers and letters used to\r\n\tconfigure and order the product instance.\r\n\t\r\n\tsynonym: OrderCodeOfManufacturer, config ID\r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#orderCodeOfManufacturer",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "ArticleNumber" : {
+      "description" : "\r\n    Alphanumeric character sequence identifying a manufactured, non-configurable product.\r\n\r\n\tsynonym: ProductArticleNumberOfManufacturer\r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#productArticleNumberOfManufacturer",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "SerialNumber" : {
+      "description" : "\r\n\tUnique combination of numbers and letters used to identify the instance of a device or entity once it has been manufactured.\r\n\t",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#serialNumber",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "DateOfManufacture" : {
+      "description" : "\r\n\tDate when an item was manufactured.\r\n\t\r\n\tNOTE: The format for date is the lexical representation according to ISO 8601, i.e. \"YYYY-MM-DD\" with optional time zone\r\n\t",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#dateOfManufacture",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Date"
+      } ]
+    },
+    "HardwareVersion" : {
+      "description" : "Current version of the hardware of the product.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#hardwareVersion",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "FirmwareVersion" : {
+      "description" : "Current version of the firmware of the product.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#firmwareVersion",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "SoftwareVersion" : {
+      "description" : "Current version of the software used by the product.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#softwareVersion",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "CountryOfOrigin" : {
+      "description" : "\r\n\tCountry where the product was manufactured. \r\n\t\r\n\tNOTE: two-letter country code in accordance with ISO 3166-1 (alpha-2 code) to be used; \r\n\ta value list with all country codes is available in IEC CDD, IRDI 0112/2///61360_7#CEA008#001\r\n\t",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#countryOfOrigin",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "FacilityId" : {
+      "description" : "\r\n   Unique string of characters for the identification of locations or buildings involved in a product's value chain or used by actors  involved in a product's life cycle.\r\n\r\n\tNOTE: Typically, this should be the same identifier as used in the DPP metadata submodel template.  \r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#uniqueFacilityIdentifier",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "CompanyLogo" : {
+      "description" : "\r\n\tGraphical symbol used to represent a manufacturer, a company, an organisation or a product \r\n\t\r\n\tNOTE: The use of common image file formats (e.g. JPG, PNG) is recommended.\r\n\t",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#logoCompany",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/FileWithContentType"
+      } ]
+    },
+    "Markings" : {
+      "description" : "\r\n   Collection of several markings relevant to the product \r\n   \r\n   NOTE: CE marking is declared as mandatory according to EU Blue Guide\r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#markings",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Markings"
+      } ]
+    }
+  },
+  "required" : [ "ManufacturerName", "AddressInformation" ]
+}

@@ -1,0 +1,41 @@
+######################################################################
+# Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+# This work is derived from Submodel Template Specification (SMT) IDTA-02006 Digital Nameplate
+# with licence CC-BY-4.0
+# changes are documented in Readme of namespace urn:samm:io.admin-shell.idta.digital_nameplate
+#
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.2.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.2.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.2.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <urn:samm:io.admin-shell.idta.digital_nameplate:4.0.0#> .
+@prefix contactInformation: <urn:samm:io.admin-shell.idta.contact_information:2.0.0#> .
+@prefix shared: <urn:samm:io.admin-shell.idta.shared:4.0.0#> .
+
+
+
+:AddressInformationCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :AdressInformation .
+
+:AdressInformation a samm:Entity ;
+   samm:description "Contains information on how to contact the manufacturer or an authorised service provider, e.g. when a maintenance service is required."@en ;
+   samm:see <urn:irdi:0173-1#02-AAQ837#005> ;
+   samm:properties (  
+   [ samm:property contactInformation:streetName; samm:optional true; samm:payloadName "StreetName" ]
+   [ samm:property contactInformation:streetNo; samm:optional true; samm:payloadName "StreetNo" ]
+   [ samm:property contactInformation:postalCode; samm:payloadName "PostalCode" ]
+   [ samm:property contactInformation:cityTown; samm:payloadName "CityName" ]
+   [ samm:property contactInformation:nationalCode; samm:payloadName "CountryCode" ]
+   ) .
+

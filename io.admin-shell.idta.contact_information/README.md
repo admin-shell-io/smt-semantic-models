@@ -5,6 +5,25 @@ This namespace is reserved for the Submodel Template Specification (SMT) IDTA-02
 # Changelog
 All notable changes to this model will be documented in this section.
 
+## [2.0.0] - July 2026 IDTA-02006-3-0 
+
+### Major Changes
+
+alignment with IDTA-02006 V4.0
+
+* :postalCode now with Characteristic samm-C:Text and not shared:MultiLanguageTexts (as in IDTA-02006 V4.0)
+* :nationalCode now with Characteristic samm-C:Text and not shared:MultiLanguageTexts (as in  IDTA-02006 V4.0)
+* new: :streetName and :streetNo to split name and number that is combined in :street
+* add samm:see information with semantic Id/isCaseOf as defined in  IDTA-02006 V4.0
+* add source as defined in  IDTA-02006 V4.0
+* align preferred names and description with IDTA-02006 V4.0 
+
+Dependencies:
+
+* urn:samm:io.admin-shell.idta.shared:4.0.0
+
+For Deviations and contained files see version [1.0.0]
+
 ## [1.0.1] - October 2026
 
 Other changes:
