@@ -1,8 +1,8 @@
 {
   "GeneralInformation" : {
-    "ManufacturerName" : "5233cG5C8",
-    "CompanyLogo" : "https://example.com/uNlUN",
-    "ManufacturerIdentifier" : "rThM",
+    "ManufacturerName" : "Yr",
+    "CompanyLogo" : "https://example.com/67Tnsyat8",
+    "ManufacturerIdentifier" : "gFhYv4a",
     "WarrantyInformation" : {
       "WarrantyPeriod" : "P96M"
     },
@@ -14,7 +14,7 @@
         "contentType" : "application/pdf"
       },
       "ImageNote" : [ {
-        "en" : "JaymLvn"
+        "en" : "Y"
       } ]
     } ]
   },
@@ -58,8 +58,8 @@
       "ExpectedLifetimeInCalendarYears" : 15,
       "ExpectedNumberOfCycles" : 1000,
       "CapacityThresholdExhaustion" : 23.0,
-      "CycleLifeReferenceTest" : [ "atuqiWqye1" ],
-      "CRateOfRelevantCycleLifeTest" : -3014.6
+      "CycleLifeReferenceTest" : [ "5HozQc" ],
+      "CRateOfRelevantCycleLifeTest" : -8994.0
     }
   }
 }

@@ -1,8 +1,8 @@
 {
   "GeneralInformation" : {
-    "ManufacturerName" : "EV",
-    "CompanyLogo" : "https://example.com/ZhpdrZNWD",
-    "ManufacturerIdentifier" : "bpz8nrZd",
+    "ManufacturerName" : "CC8",
+    "CompanyLogo" : "https://example.com/tN3l0iZ",
+    "ManufacturerIdentifier" : "g9tu",
     "WarrantyInformation" : {
       "WarrantyPeriod" : "P96M"
     },
@@ -14,7 +14,7 @@
         "contentType" : "application/pdf"
       },
       "ImageNote" : [ {
-        "de" : "OmT"
+        "en" : "gJFsvoES"
       } ]
     } ]
   },
@@ -58,8 +58,8 @@
       "ExpectedLifetimeInCalendarYears" : 15,
       "ExpectedNumberOfCycles" : 1000,
       "CapacityThresholdExhaustion" : 23.0,
-      "CycleLifeReferenceTest" : [ "bmNQB8rZf4" ],
-      "CRateOfRelevantCycleLifeTest" : 521.0
+      "CycleLifeReferenceTest" : [ "hXlfHmOU" ],
+      "CRateOfRelevantCycleLifeTest" : -20608.8
     }
   }
 }

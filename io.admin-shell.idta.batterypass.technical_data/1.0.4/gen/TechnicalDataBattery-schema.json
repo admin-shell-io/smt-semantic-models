@@ -497,14 +497,14 @@
       },
       "ExpectedLifeTime" : {
         "type" : "integer",
-        "minimum" : 0,
         "maximum" : 4294967295,
+        "minimum" : 0,
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#ExpectedLifeTime"
       },
       "ExpectedNumberOfCycles" : {
         "type" : "integer",
-        "minimum" : 0,
         "maximum" : 4294967295,
+        "minimum" : 0,
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#ExpectedNumberOfCycles"
       },
       "CapacityThresholdForExhaustion" : {
