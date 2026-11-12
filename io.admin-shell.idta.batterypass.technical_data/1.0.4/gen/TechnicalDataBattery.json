@@ -1,8 +1,8 @@
 {
   "GeneralInformation" : {
-    "ManufacturerName" : "LBtIZIIEK",
-    "CompanyLogo" : "https://example.com/ODcN6F4xAm",
-    "ManufacturerIdentifier" : "J5QgaNGJHx",
+    "ManufacturerName" : "EV",
+    "CompanyLogo" : "https://example.com/ZhpdrZNWD",
+    "ManufacturerIdentifier" : "bpz8nrZd",
     "WarrantyInformation" : {
       "WarrantyPeriod" : "P96M"
     },
@@ -14,7 +14,7 @@
         "contentType" : "application/pdf"
       },
       "ImageNote" : [ {
-        "en" : "p7pkC"
+        "de" : "OmT"
       } ]
     } ]
   },
@@ -58,8 +58,8 @@
       "ExpectedLifetimeInCalendarYears" : 15,
       "ExpectedNumberOfCycles" : 1000,
       "CapacityThresholdExhaustion" : 23.0,
-      "CycleLifeReferenceTest" : [ "2P4mM" ],
-      "CRateOfRelevantCycleLifeTest" : -13204.2
+      "CycleLifeReferenceTest" : [ "bmNQB8rZf4" ],
+      "CRateOfRelevantCycleLifeTest" : 521.0
     }
   }
 }
