@@ -1,0 +1,45 @@
+{
+  "GeneralInformation" : {
+    "ManufacturerName" : "jB9E",
+    "CompanyLogo" : "https://example.com/ONiBo",
+    "ManufacturerProductDesignation" : [ {
+      "en" : "CdHlSEcTac"
+    } ],
+    "ManufacturerArticleNumber" : "9pEwNhycWY",
+    "ManufacturerOrderCode" : "u4NKqd",
+    "ProductImages" : [ {
+      "ImageFile" : {
+        "value" : "https://example.com/SafetyInstructions.pdf",
+        "contentType" : "application/pdf"
+      },
+      "ImageNote" : [ {
+        "de" : "XZpnHi5M"
+      } ]
+    } ]
+  },
+  "ProductClassifications" : [ {
+    "ProductClassificationSystem" : "ECLASS",
+    "ClassificationSystemVersion" : "9.0 (BASIC)",
+    "ClassificationSystemUrl" : "C",
+    "ProductClassId" : "27-01-88-77",
+    "ProductClassCodedName" : "Ij",
+    "ProductClassName" : [ {
+      "de" : "AdVf1SzPIH"
+    } ],
+    "ReferenceToTechnicalPropertyArea" : {
+      "keys" : [ {
+        "key" : "GlobalReference",
+        "value" : "id1234"
+      } ],
+      "type" : "ExternalReference"
+    }
+  } ],
+  "TechnicalPropertyAreas" : { },
+  "FurtherInformation" : {
+    "TextStatement" : [ {
+      "en" : "k"
+    } ],
+    "ValidDate" : "2026-11-12T18:05:40.000Z"
+  },
+  "SpecificDescriptions" : [ { } ]
+}
