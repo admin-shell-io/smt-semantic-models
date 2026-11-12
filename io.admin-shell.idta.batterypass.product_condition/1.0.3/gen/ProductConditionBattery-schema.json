@@ -1,6 +1,6 @@
 {
   "$schema" : "http://json-schema.org/draft-04/schema",
-  "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#ProductCondition",
+  "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#ProductCondition",
   "description" : "Covers all battery lifetime relevant properties.",
   "type" : "object",
   "components" : {
@@ -79,26 +79,26 @@
         } ]
       },
       "NumberOfFullCyclesValue" : {
-        "type" : "number",
-        "minimum" : 0,
+        "type" : "integer",
         "maximum" : 4294967295,
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#NumberOfFullCyclesValue"
+        "minimum" : 0,
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#NumberOfFullCyclesValue"
       },
       "NumberOfFullCyclesEntity" : {
         "description" : "Number of full cycles, last update.",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#NumberOfFullCyclesEntity",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#NumberOfFullCyclesEntity",
         "type" : "object",
         "properties" : {
           "NumberOfFullCyclesValue" : {
             "description" : "Total count of times a battery has been fully charged from empty to full capacity and then fully discharged, used as an indicator of the battery's usage and lifespan.",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#numberOfFullCyclesValue",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#numberOfFullCyclesValue",
             "allOf" : [ {
               "$ref" : "#/components/schemas/NumberOfFullCyclesValue"
             } ]
           },
           "LastUpdate" : {
             "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#lastUpdate",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#lastUpdate",
             "allOf" : [ {
               "$ref" : "#/components/schemas/Timestamp"
             } ]
@@ -107,8 +107,8 @@
         "required" : [ "NumberOfFullCyclesValue", "LastUpdate" ]
       },
       "NumberOfFullCycles" : {
-        "description" : "- Information and data as a result of its use, including the number of charging and discharging cycles.",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#NumberOfFullCycles",
+        "description" : "Information and data as a result of its use, including the number of charging and discharging cycles.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#NumberOfFullCycles",
         "type" : "object",
         "allOf" : [ {
           "$ref" : "#/components/schemas/NumberOfFullCyclesEntity"
@@ -249,11 +249,11 @@
       },
       "DocumentIdentifierSet" : {
         "description" : "Each document is uniquely discoverable via its identifier. If more information is needed, please refer to the 'Handover Documentation'.",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#DocumentIdentifierSet",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#DocumentIdentifierSet",
         "type" : "array",
         "items" : {
           "type" : "string",
-          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#DocumentIdentifierSetTrait",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#DocumentIdentifierSetTrait",
           "description" : "Alphanumeric character sequence uniquely identifying a document.",
           "minLength" : 1
         },
@@ -261,76 +261,76 @@
       },
       "Temperature" : {
         "type" : "number",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#Temperature"
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#Temperature"
       },
       "TimeExtremeHighTemp" : {
         "type" : "number",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#TimeExtremeHighTemp"
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#TimeExtremeHighTemp"
       },
       "TimeExtremeLowTemp" : {
         "type" : "number",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#TimeExtremeLowTemp"
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#TimeExtremeLowTemp"
       },
       "TimeExtremeHighTempCharging" : {
         "type" : "number",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#TimeExtremeHighTempCharging"
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#TimeExtremeHighTempCharging"
       },
       "TimeExtremeLowTempCharging" : {
         "type" : "number",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#TimeExtremeLowTempCharging"
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#TimeExtremeLowTempCharging"
       },
       "TemperatureConditionsEntity" : {
         "description" : "Temperature conditions, last update.",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#TemperatureConditionsEntity",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#TemperatureConditionsEntity",
         "type" : "object",
         "properties" : {
           "MeasuredTemp" : {
             "description" : "Temperature measured in degree Celsius.",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#measuredTemp",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#measuredTemp",
             "allOf" : [ {
               "$ref" : "#/components/schemas/Temperature"
             } ]
           },
           "TimeExtremeHighTemp" : {
             "description" : "Cumulated time spent above the given upper boundary of temperature.",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#timeExtremeHighTemp",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#timeExtremeHighTemp",
             "allOf" : [ {
               "$ref" : "#/components/schemas/TimeExtremeHighTemp"
             } ]
           },
           "TimeExtremeLowTemp" : {
             "description" : "Cumulated time spent below the given lower boundary of temperature.",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#timeExtremeLowTemp",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#timeExtremeLowTemp",
             "allOf" : [ {
               "$ref" : "#/components/schemas/TimeExtremeLowTemp"
             } ]
           },
           "TimeExtremeHighTempCharging" : {
             "description" : "Cumulated time spent above the given upper boundary of temperature during Charging.",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#timeExtremeHighTempCharging",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#timeExtremeHighTempCharging",
             "allOf" : [ {
               "$ref" : "#/components/schemas/TimeExtremeHighTempCharging"
             } ]
           },
           "TimeExtremeLowTempCharging" : {
             "description" : "Cumulated time spent below the given lower boundary of temperature during charging.",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#timeExtremeLowTempCharging",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#timeExtremeLowTempCharging",
             "allOf" : [ {
               "$ref" : "#/components/schemas/TimeExtremeLowTempCharging"
             } ]
           },
           "LastUpdate" : {
             "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#lastUpdate",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#lastUpdate",
             "allOf" : [ {
               "$ref" : "#/components/schemas/Timestamp"
             } ]
           }
         },
-        "required" : [ "LastUpdate" ]
+        "required" : [ "MeasuredTemp", "LastUpdate" ]
       },
       "TemperatureInformation" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#TemperatureInformation",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#TemperatureInformation",
         "type" : "object",
         "allOf" : [ {
           "$ref" : "#/components/schemas/TemperatureConditionsEntity"
@@ -570,8 +570,8 @@
       } ]
     },
     "NumberOfFullCycles" : {
-      "description" : "Number of (full) charging and discharging cycles.\n\nDIN DKE Spec 99100 chapter reference: 6.7.6.4",
-      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#numberOfFullCycles",
+      "description" : "\r\n\tNumber of (full) charging and discharging cycles.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.6.4\r\n\t",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#numberOfFullCycles",
       "allOf" : [ {
         "$ref" : "#/components/schemas/NumberOfFullCycles"
       } ]
@@ -605,15 +605,15 @@
       } ]
     },
     "InformationOnAccidents" : {
-      "description" : "The battery passport must contain information and data resulting from its use such as accidents. \n\nDIN DKE Spec 99100 chapter reference: 6.7.8.4",
-      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#informationOnAccidents",
+      "description" : "\r\n\tThe battery passport must contain information and data resulting from its use such as accidents.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.8.4\r\n\t",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#informationOnAccidents",
       "allOf" : [ {
         "$ref" : "#/components/schemas/DocumentIdentifierSet"
       } ]
     },
     "TemperatureInformation" : {
-      "description" : "The battery passport must include periodically recorded information on the operating environmental conditions, including temperature.\n\nDIN DKE Spec 99100 chapter reference: 6.7.7.5 - 8",
-      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.2#temperatureInformation",
+      "description" : "\r\n\tThe battery passport must include periodically recorded information on the operating environmental conditions, including temperature.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.7.5 - 8\r\n\t",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#temperatureInformation",
       "allOf" : [ {
         "$ref" : "#/components/schemas/TemperatureInformation"
       } ]
