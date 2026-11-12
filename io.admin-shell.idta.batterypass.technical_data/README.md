@@ -45,6 +45,12 @@ Deviations from IDTA-02003-2-0
 # Changelog
 All notable changes to this model will be documented in this section.
 
+## [1.0.4] - November 2026
+
+Major changes:
+
+* make RatioNominalBatteryPowerAndBatteryEnergy optional  ([#165](https://github.com/admin-shell-io/smt-semantic-models/issues/165))
+
 ## [1.0.3] - October 2026
 
 Major changes:
