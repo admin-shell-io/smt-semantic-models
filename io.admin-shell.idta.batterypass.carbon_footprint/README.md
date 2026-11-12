@@ -23,6 +23,14 @@ The folder "gen" for each version contains sammple JSON files, the JSON schema a
 # Changelog
 All notable changes to this model will be documented in this section.
 
+## [1.0.2] - November 2026
+
+Major changes:
+
+* use bugfixes from included namespaces
+
+* update 
+
 ## [1.0.1] - October 2026
 
 Other changes:
