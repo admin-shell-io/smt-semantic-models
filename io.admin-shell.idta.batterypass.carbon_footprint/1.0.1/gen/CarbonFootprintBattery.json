@@ -1,11 +1,11 @@
 {
   "ProductCarbonFootprints" : [ {
-    "PcfCalculationMethods" : [ "IShbXLd" ],
+    "PcfCalculationMethods" : [ "bl9" ],
     "PcfCo2eq" : 17.2,
     "ReferenceImpactUnitForCalculation" : "piece",
     "QuantityOfMeasureForCalculation" : 5.0,
-    "LifeCyclePhases" : "C4 - landfill",
+    "LifeCyclePhases" : [ "C4 - landfill" ],
     "PerformanceClass" : "B+",
-    "WebLinkToPublicCarbonFootprintStudy" : [ "XeO6JEPPbo" ]
+    "WebLinkToPublicCarbonFootprintStudy" : [ "B" ]
   } ]
 }

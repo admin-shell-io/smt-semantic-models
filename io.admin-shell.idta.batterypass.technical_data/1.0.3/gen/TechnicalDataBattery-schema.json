@@ -246,7 +246,7 @@
             } ]
           }
         },
-        "required" : [ "NominalVoltage", "MinVoltage", "MaxVoltage", "RatedCapacity" ]
+        "required" : [ "NominalVoltage", "MinVoltage", "MaxVoltage", "RatedCapacity", "CapacityFade" ]
       },
       "CapacityEnergyVoltageCharacteristic" : {
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.3#CapacityEnergyVoltageCharacteristic",
@@ -256,11 +256,11 @@
         } ]
       },
       "EnergyEfficiency" : {
-        "type" : "number",
+        "type" : "integer",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.3#EnergyEfficiency"
       },
       "RoundTripEfficiencyAt50PercentCycleLife" : {
-        "type" : "number",
+        "type" : "integer",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.3#RoundTripEfficiencyAt50PercentCycleLife"
       },
       "energyRoundTripEfficiencyFadeValue" : {
@@ -268,7 +268,7 @@
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.3#energyRoundTripEfficiencyFadeValue"
       },
       "BatteryDischargingRate" : {
-        "type" : "number",
+        "type" : "integer",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.3#BatteryDischargingRate"
       },
       "RoundTripEnergyEfficiency" : {
@@ -318,7 +318,7 @@
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.3#InternalResistance"
       },
       "ResistanceIncrease" : {
-        "type" : "number",
+        "type" : "integer",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.3#ResistanceIncrease"
       },
       "Resistance" : {
@@ -496,13 +496,13 @@
         } ]
       },
       "ExpectedLifeTime" : {
-        "type" : "number",
+        "type" : "integer",
         "maximum" : 4294967295,
         "minimum" : 0,
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.3#ExpectedLifeTime"
       },
       "ExpectedNumberOfCycles" : {
-        "type" : "number",
+        "type" : "integer",
         "maximum" : 4294967295,
         "minimum" : 0,
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.3#ExpectedNumberOfCycles"

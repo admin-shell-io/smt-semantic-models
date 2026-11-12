@@ -128,7 +128,7 @@
             } ]
           },
           "PartNumber" : {
-            "description" : "Part number of Component.",
+            "description" : "Part number of a component.",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#partNumber",
             "allOf" : [ {
               "$ref" : "#/components/schemas/PartNumber"

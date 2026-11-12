@@ -27,7 +27,7 @@
     "NegativeEventValue" : "overcharged",
     "LastUpdate" : "2000-01-01T14:23:00"
   } ],
-  "InformationOnAccidents" : [ "7EdDV" ],
+  "InformationOnAccidents" : [ "oC" ],
   "TemperatureInformation" : {
     "MeasuredTemp" : 20.0,
     "TimeExtremeHighTemp" : 0.0,

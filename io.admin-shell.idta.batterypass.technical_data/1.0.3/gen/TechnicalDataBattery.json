@@ -1,8 +1,8 @@
 {
   "GeneralInformation" : {
-    "ManufacturerName" : "4PROfn0U",
-    "CompanyLogo" : "https://example.com/AWjeV",
-    "ManufacturerIdentifier" : "FeCZB0Qrb",
+    "ManufacturerName" : "5233cG5C8",
+    "CompanyLogo" : "https://example.com/uNlUN",
+    "ManufacturerIdentifier" : "rThM",
     "WarrantyInformation" : {
       "WarrantyPeriod" : "P96M"
     },
@@ -14,7 +14,7 @@
         "contentType" : "application/pdf"
       },
       "ImageNote" : [ {
-        "de" : "JL"
+        "en" : "JaymLvn"
       } ]
     } ]
   },
@@ -58,8 +58,8 @@
       "ExpectedLifetimeInCalendarYears" : 15,
       "ExpectedNumberOfCycles" : 1000,
       "CapacityThresholdExhaustion" : 23.0,
-      "CycleLifeReferenceTest" : [ "11iwM7RY" ],
-      "CRateOfRelevantCycleLifeTest" : -79034.4
+      "CycleLifeReferenceTest" : [ "atuqiWqye1" ],
+      "CRateOfRelevantCycleLifeTest" : -3014.6
     }
   }
 }

@@ -24,28 +24,27 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix : <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#> .
-@prefix bp: <urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.0#> .
 @prefix shared: <urn:samm:io.admin-shell.idta.shared:3.1.1#> .
-@prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.0#> .
+@prefix docu: <urn:samm:io.admin-shell.idta.handover_documentation:2.0.1#> .
 
 :ProductCondition a samm:Aspect ;
    samm:preferredName "Product Condition"@en ;
    samm:description "Covers all battery lifetime relevant properties."@en ;
    samm:properties ( 
-        [ samm:property bp:energyThroughput; samm:optional true; samm:payloadName "EnergyThroughput" ]
-        [ samm:property bp:capacityThroughput; samm:optional true; samm:payloadName "CapacityThroughput" ]
+        [ samm:property :energyThroughput; samm:optional true; samm:payloadName "EnergyThroughput" ]
+        [ samm:property :capacityThroughput; samm:optional true; samm:payloadName "CapacityThroughput" ]
 		[ samm:property :numberOfFullCycles; samm:payloadName "NumberOfFullCycles" ]
-        [ samm:property bp:stateOfCertifiedEnergy; samm:optional true; samm:payloadName "StateOfCertifiedEnergy" ]
-        [ samm:property bp:remainingEnergy; samm:optional true; samm:payloadName "RemainingEnergy" ]
-        [ samm:property bp:remainingCapacity; samm:optional true; samm:payloadName "RemainingCapacity" ]
-        [ samm:property bp:negativeEvents; samm:optional true; samm:payloadName "NegativeEvents" ]
+        [ samm:property :stateOfCertifiedEnergy; samm:optional true; samm:payloadName "StateOfCertifiedEnergy" ]
+        [ samm:property :remainingEnergy; samm:optional true; samm:payloadName "RemainingEnergy" ]
+        [ samm:property :remainingCapacity; samm:optional true; samm:payloadName "RemainingCapacity" ]
+        [ samm:property :negativeEvents; samm:optional true; samm:payloadName "NegativeEvents" ]
         [ samm:property :informationOnAccidents; samm:payloadName "InformationOnAccidents" ]
 		[ samm:property :temperatureInformation; samm:payloadName "TemperatureInformation" ]
-        [ samm:property bp:remainingPowerCapability; samm:optional true; samm:payloadName "RemainingPowerCapability" ]
-        [ samm:property bp:evolutionOfSelfDischarge; samm:optional true; samm:payloadName "EvolutionOfSelfDischarge" ]
-        [ samm:property bp:currentSelfDischargingRate; samm:optional true;  samm:payloadName "CurrentSelfDischargingRate" ]
-        [ samm:property bp:remainingRoundTripEnergyEfficiency; samm:optional true; samm:payloadName "RemainingRoundTripEnergyEfficiency" ]
-        [ samm:property bp:stateOfCharge; samm:payloadName "StateOfCharge" ]
+        [ samm:property :remainingPowerCapability; samm:optional true; samm:payloadName "RemainingPowerCapability" ]
+        [ samm:property :evolutionOfSelfDischarge; samm:optional true; samm:payloadName "EvolutionOfSelfDischarge" ]
+        [ samm:property :currentSelfDischargingRate; samm:optional true;  samm:payloadName "CurrentSelfDischargingRate" ]
+        [ samm:property :remainingRoundTripEnergyEfficiency; samm:optional true; samm:payloadName "RemainingRoundTripEnergyEfficiency" ]
+        [ samm:property :stateOfCharge; samm:payloadName "StateOfCharge" ]
 		) ;
    samm:operations ( ) ;
    samm:events ( ) .

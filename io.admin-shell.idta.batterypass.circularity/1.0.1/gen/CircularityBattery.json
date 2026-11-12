@@ -1,49 +1,49 @@
 {
-  "DismantlingAndRemovalInformation" : [ "61" ],
+  "DismantlingAndRemovalInformation" : [ "7hU" ],
   "SparePartSources" : [ {
-    "NameOfSupplier" : {
+    "NameOfSupplier" : [ {
       "en" : "ABC Company"
-    },
+    } ],
     "AddressOfSupplier" : {
-      "NationalCode" : {
+      "NationalCode" : [ {
         "en" : "DE"
-      },
-      "PostalCode" : {
+      } ],
+      "PostalCode" : [ {
         "de" : "DE-10719"
-      },
-      "Street" : {
+      } ],
+      "Street" : [ {
         "de" : "Musterstrasse 1"
-      }
+      } ]
     },
     "EmailAddressOfSupplier" : {
       "EmailAddress" : "email@muster-ag.de",
-      "PublicKey" : {
+      "PublicKey" : [ {
         "en" : "0x07"
-      },
+      } ],
       "TypeOfEmailAddress" : "office",
-      "TypeOfPublicKey" : {
+      "TypeOfPublicKey" : [ {
         "en" : "RSA"
-      }
+      } ]
     },
     "SupplierWebAddress" : "https://example.com/information/product/1224/contact",
     "Components" : [ {
       "PartName" : "Cell",
-      "PartNumber" : "YYwBdwnorH"
+      "PartNumber" : "mXZeCGmi5"
     } ]
   } ],
   "RecycledContentInformation" : [ {
-    "PreConsumerShare" : 25.55,
+    "PreConsumerShare" : 45.58,
     "RecycledMaterial" : "Cobalt",
-    "PostConsumerShare" : 27.24
+    "PostConsumerShare" : 73.67
   } ],
   "SafetyMeasures" : {
-    "SafetyInstructions" : [ "Scku" ],
-    "ExtinguishingAgents" : [ "hwm0kLO" ]
+    "SafetyInstructions" : [ "EM0N9sSuXP" ],
+    "ExtinguishingAgents" : [ "z" ]
   },
   "EndOfLifeInformation" : {
-    "WastePrevention" : [ "2KnMB" ],
-    "SeparateCollection" : [ "Tc1n5E8EuQ" ],
-    "InformationOnCollection" : [ "MEI" ]
+    "WastePrevention" : [ "yagEvF" ],
+    "SeparateCollection" : [ "rqww" ],
+    "InformationOnCollection" : [ "4j" ]
   },
-  "RenewableContent" : -20291.6
+  "RenewableContent" : -55429.6
 }

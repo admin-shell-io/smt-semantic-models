@@ -8,21 +8,21 @@
     "DocumentClassifications" : [ {
       "ClassId" : "03-02",
       "ClassName" : [ {
-        "en" : "ApmIV2J"
+        "de" : "TXfwsvAUk"
       } ],
       "ClassificationSystem" : "VDI2770 Blatt 1:2020"
     } ],
     "DocumentVersions" : [ {
-      "Language" : "en",
+      "Language" : [ "en" ],
       "Version" : "V1.2",
       "Title" : [ {
-        "de" : "rQQ1"
+        "en" : "wjLOVtNAU"
       } ],
       "Subtitle" : [ {
-        "de" : "SKb"
+        "de" : "5"
       } ],
       "Description" : [ {
-        "de" : "quSWDNC"
+        "de" : "UR31z3Qr"
       } ],
       "DigitalFiles" : [ {
         "value" : "https://example.com/SafetyInstructions.pdf",

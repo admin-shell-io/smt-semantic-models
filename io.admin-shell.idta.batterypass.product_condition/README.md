@@ -26,7 +26,7 @@ Source GitHub IDTA for .aasx file and Submodel Template Specification etc.: http
 # Changelog
 All notable changes to this model will be documented in this section.
 
-## [1.0.3] - October 2026
+## [1.0.3] - October 2026 (fix November 2026)
 
 Major changes:
 

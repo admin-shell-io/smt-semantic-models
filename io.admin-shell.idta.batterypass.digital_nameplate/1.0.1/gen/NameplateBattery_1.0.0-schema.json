@@ -412,6 +412,7 @@
         }
       },
       "Marking" : {
+        "description" : "Single marking information. \r\n   \r\n   Note: CE marking is declared as mandatory according to the Blue Guide of the EU-Commission",
         "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#Marking",
         "type" : "object",
         "properties" : {
@@ -499,7 +500,7 @@
       } ]
     },
     "AddressInformation" : {
-      "description" : "\r\n    The manufacturer information postal address, indicating a single contact point. \r\n\tWeb address, if available; and web address, if available.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.1.2.3\r\n   ",
+      "description" : "\r\n    The manufacturer information postal address, indicating a single contact point. \r\n\tWeb address, if available; and e-mail address, if available.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.1.2.3\r\n   ",
       "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.1#addressInformation",
       "allOf" : [ {
         "$ref" : "#/components/schemas/AddressInformationCharacteristic"
