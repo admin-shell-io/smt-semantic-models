@@ -25,7 +25,7 @@ All notable changes to this model will be documented in this section.
 
 Bugfixes:
 
-* correct :value of samm:Value :kWH from kwH to kWh
+* correct :value of samm:Value :kWH from kwH to kWh (https://github.com/admin-shell-io/smt-semantic-models/issues/174)
 
 ## [1.0.1] - October 2026
 

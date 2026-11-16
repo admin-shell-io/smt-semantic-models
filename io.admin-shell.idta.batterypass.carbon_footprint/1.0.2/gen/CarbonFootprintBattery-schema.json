@@ -6,34 +6,34 @@
   "components" : {
     "schemas" : {
       "PcfCalculationMethodSet" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.1#PcfCalculationMethodSet",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.2#PcfCalculationMethodSet",
         "type" : "array",
         "items" : {
           "type" : "string",
-          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.1#PcfCalculationMethodCharacteristic",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.2#PcfCalculationMethodCharacteristic",
           "description" : "Standard, method for determining the greenhouse gas emissions of a product. Multiple standards can be listed in case these standards are all applied to the respective PCF calculation."
         },
         "uniqueItems" : true
       },
       "PcfCo2eqCharacteristic" : {
         "type" : "number",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.1#PcfCo2eqCharacteristic"
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.2#PcfCo2eqCharacteristic"
       },
       "ReferenceImpactUnitForCalculationEnum" : {
         "type" : "string",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.1#ReferenceImpactUnitForCalculationEnum",
-        "enum" : [ "g", "kg", "t", "ml", "l", "cbm", "qm", "piece", "kwH" ]
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.2#ReferenceImpactUnitForCalculationEnum",
+        "enum" : [ "g", "kg", "t", "ml", "l", "cbm", "qm", "piece", "kWh" ]
       },
       "QuantityOfMeasureForCalculationCharacteristic" : {
         "type" : "number",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.1#QuantityOfMeasureForCalculationCharacteristic"
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.2#QuantityOfMeasureForCalculationCharacteristic"
       },
       "LifeCyclePhaseSet" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.1#LifeCyclePhaseSet",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.2#LifeCyclePhaseSet",
         "type" : "array",
         "items" : {
           "type" : "string",
-          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.1#LifeCyclePhaseEnum",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.2#LifeCyclePhaseEnum",
           "enum" : [ "A1 - raw material supply (and upstream production)", "A1-A3", "A3 - production", "A4 - transport to final destination", "A4-A5", "A5 - Installation", "B1 - usage phase", "B1-B7", "B2 - maintenance", "B3 - repair", "B4 - Replacement", "B5 - update/upgrade, refurbishing", "B6 - usage energy consumption", "B7 - usage water consumption", "C1 - reassembly", "C1-C4", "C2 - transport to recycler", "C2-C4", "C3 - recycling, waste treatment", "C4 - landfill", "D - reuse" ]
         },
         "uniqueItems" : true
@@ -60,7 +60,7 @@
         "properties" : {
           "PcfCalculationMethods" : {
             "description" : "Standards, methods for determining the greenhouse gas emissions of a product.",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.1#pcfCalculationMethods",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.2#pcfCalculationMethods",
             "allOf" : [ {
               "$ref" : "#/components/schemas/PcfCalculationMethodSet"
             } ]

@@ -27,9 +27,11 @@ All notable changes to this model will be documented in this section.
 
 Major changes:
 
-* use bugfixes from included namespaces
+* use bugfixes from included namespaces (for details see there):
+  * Carbon Footprint 1.0.2
+  * IDTA shared 3.1.1
+  * Contact Information 1.0.1
 
-* update 
 
 ## [1.0.1] - October 2026
 
