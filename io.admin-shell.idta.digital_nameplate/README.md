@@ -5,16 +5,13 @@ This namespace is reserved for the Submodel Template Specification (SMT) IDTA-02
 # Changelog
 All notable changes to this model will be documented in this section.
 
-## [4.0.0] - October 2026
+## [4.0.0] - November  2026
 
-alignment with IDTA-02006 V4.0
+alignment with IDTA-02006 V4.0: for detailled changes see changelog in IDTA-02006
 
 Major changes:
-- new payload name for MarkingName, now TypeOfConformityRegulationCertification
-- new payload name for IssueDate, now DateOfIssue
-- new payload name for ExpiryData, now EndOfValidity
-- new payload name for MarkingAdditionalText, now AdditionalMarkingText
-
+- payload names changed
+- new namespace idta.shared 4.0.0 for changes w.r.t. Markings
 
 Minor changes:
 
