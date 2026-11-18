@@ -20,7 +20,7 @@
 :SpecificAssetId a samm:Entity ;
    samm:preferredName "specific asset ID"@en ;
    samm:description "A specific asset ID describes a generic supplementary identifying attribute of the asset. The specific asset ID is not necessarily globally unique."@en ;
-   samm:see <https://admin-shell.io/aas/3/1/SpecificAssetId> ;
+   samm:see <https://admin-shell.io/aas/3/2/SpecificAssetId> ;
    samm:properties ( 
    [ samm:property :externalSubjectId; samm:optional true ]
    [ samm:property :specificAssetIdValue; samm:payloadName "value" ] 
@@ -30,7 +30,7 @@
 :specificAssetIdName a samm:Property ;
    samm:preferredName "name"@en ;
    samm:description "Name of the asset identifier."@en ;
-   samm:see <https://admin-shell.io/aas/3/1/SpecificAssetId/name> ;
+   samm:see <https://admin-shell.io/aas/3/2/SpecificAssetId/name> ;
    samm:characteristic samm-c:Text ;
    samm:exampleValue "SerialNumber" .
 
@@ -39,6 +39,6 @@
 :specificAssetIdValue a samm:Property ;
    samm:preferredName "value"@en ;
    samm:description "The value of the specific asset identifier with the corresponding name."@en ;
-   samm:see <https://admin-shell.io/aas/3/1/SpecificAssetId/value> ;
+   samm:see <https://admin-shell.io/aas/3/2/SpecificAssetId/value> ;
    samm:characteristic samm-c:Text .
 

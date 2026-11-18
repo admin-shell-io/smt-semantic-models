@@ -21,7 +21,7 @@
    samm:dataType :BasicEventElementEntity .
 
 :BasicEventElementEntity a samm:Entity ;
-   samm:see <https://admin-shell.io/aas/3/1/BasicEventElementElement> ;
+   samm:see <https://admin-shell.io/aas/3/2/BasicEventElementElement> ;
    samm:description "A basic event element."@en ;
    samm:properties ( :observed ) .
    

@@ -32,6 +32,6 @@
    samm:preferredName "Wertebereich"@de ;
    samm:preferredName "range"@en ;
    samm:description "A range data element is a data element that defines a range with min and max.\n\n If the min value is missing, the value is assumed to be negative infinite.\n If the max value is missing, the value is assumed to be positive infinite."@en ;
-   samm:see <https://admin-shell.io/aas/3/1/Range> .
+   samm:see <https://admin-shell.io/aas/3/2/Range> .
 
 

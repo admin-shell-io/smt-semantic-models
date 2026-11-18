@@ -20,8 +20,8 @@
 :contentType a samm:Property ;
    samm:preferredName "content type"@en ;
    samm:description "Content type of the content of the file or blob."@en ;
-   samm:see <https://admin-shell.io/aas/3/1/File/contentType> ;
-   samm:see <https://admin-shell.io/aas/3/1/Blob/contentType> ;
+   samm:see <https://admin-shell.io/aas/3/2/File/contentType> ;
+   samm:see <https://admin-shell.io/aas/3/2/Blob/contentType> ;
    samm:characteristic samm-c:MimeType ;
    samm:exampleValue "application/pdf" .
    

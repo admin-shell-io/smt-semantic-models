@@ -19,7 +19,7 @@
 
 
 :ReferenceType a samm:Characteristic ;
-   samm:see <https://admin-shell.io/aas/3/1/Reference> ;
+   samm:see <https://admin-shell.io/aas/3/2/Reference> ;
    samm:dataType :ReferenceEntity .
 
 :ReferenceEntity a samm:Entity ;
@@ -81,7 +81,7 @@
 ### Model Reference ###
 
 :ModelReferenceType a samm:Characteristic ;
-   samm:see <https://admin-shell.io/aas/3/1/Reference> ;
+   samm:see <https://admin-shell.io/aas/3/2/Reference> ;
    samm:dataType :ModelReferenceEntity .
 
 :ModelReferenceEntity a samm:Entity ;
@@ -150,7 +150,7 @@
 ### External Reference ###
 
 :ExternalReferenceType a samm:Characteristic ;
-   samm:see <https://admin-shell.io/aas/3/1/Reference> ;
+   samm:see <https://admin-shell.io/aas/3/2/Reference> ;
    samm:dataType :ExternalReferenceEntity .
 
 :ExternalReferenceEntity a samm:Entity ;

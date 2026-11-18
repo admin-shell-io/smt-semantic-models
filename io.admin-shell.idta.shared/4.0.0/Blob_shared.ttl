@@ -32,7 +32,7 @@
    samm:exampleValue "SGVsbG8sIFdvcmxkIQ=="^^xsd:base64Binary .
 
 :BlobType a samm:Characteristic ;
-   samm:see <https://admin-shell.io/aas/3/1/BlobType> ;
+   samm:see <https://admin-shell.io/aas/3/2/BlobType> ;
    samm:dataType xsd:base64Binary .
 
 :BlobWithContentTypeEntity a samm:Entity ;
