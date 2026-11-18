@@ -5,7 +5,7 @@ This namespace is reserved for the Submodel Template Specification (SMT) IDTA-02
 # Changelog
 All notable changes to this model will be documented in this section.
 
-## [2.0.0] - July 2026 IDTA-02006-3-0 
+## [2.0.0] - November 2026 IDTA-02006-3-0 
 
 ### Major Changes
 
