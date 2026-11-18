@@ -20,7 +20,7 @@ Changes conformant to IDTA-01001 V3.2, for detailled changelog see [IDTA-01001-3
 * update samm:see information to /3/2
 * to avoid name clashed in json-example generation make :contentType property of :BlobWithContentType and :fileWithContentType unique (first conflict for Time Series V1.1)
 
-Changes conformant to Digital Nameplate IDTA-02006 V4.0
+Changes conformant to Digital Nameplate IDTA-02006 V4.0, for detailled changelog see IDTA-02006 Version 3.0
 
 * :markings - added samm:see information 
 * :Marking - new payload names for :markingName, :designationOfCertificateOrApproval, :issueDate, :expiryDate, :markingAdditionalText
