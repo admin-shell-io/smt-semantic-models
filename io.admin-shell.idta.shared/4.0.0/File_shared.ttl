@@ -29,9 +29,16 @@
    samm:preferredName "Datei mit Content Type"@de ;
    samm:preferredName "file with content type"@en ;
    samm:description "A file is a data element that represents an address to a file (a locator). The value is a URI that can represent an absolute or relative path."@en ;
-   samm:see <https://admin-shell.io/aas/3/1/File> ;
+   samm:see <https://admin-shell.io/aas/3/2/File> ;
    samm:properties ( 
       [ samm:property :resourceValue; samm:optional true; samm:payloadName "value" ] 
-	  [ samm:property :contentType; samm:optional true; samm:payloadName "contentType" ] 
+	  [ samm:property :resourceContentType; samm:optional true; samm:payloadName "contentType" ] 
     ) .
 
+:resourceContentType a samm:Property ;
+   samm:preferredName "content type"@en ;
+   samm:description "Content type of the content of the file."@en ;
+   samm:see <https://admin-shell.io/aas/3/2/File/contentType> ;
+   samm:characteristic samm-c:MimeType ;
+   samm:exampleValue "application/pdf" .
+   

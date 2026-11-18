@@ -21,14 +21,14 @@
    samm:preferredName "Large Binary Object (BLOB) mit Content-Type"@de ;
    samm:preferredName "Large Binary Object (BLOB) with content type"@en ;
    samm:description "A Blob is a data element representing a file that is contained in the value attribute with its source code. The code syntax is characterized by its content type (MIME type)."@en ;
-   samm:see <https://admin-shell.io/aas/3/1/Blob> ;
+   samm:see <https://admin-shell.io/aas/3/2/Blob> ;
    samm:dataType :BlobWithContentTypeEntity .
 
 :blobValue a samm:Property ;
-   samm:preferredName "Binary Large Object (BLOB)"@en ;
+   samm:preferredName "binary large object (BLOB)"@en ;
    samm:description "The data of the BLOB (Binary Large Object)."@en ;
    samm:characteristic :BlobType ;
-   samm:see <https://admin-shell.io/aas/3/1/Blob/value> ;
+   samm:see <https://admin-shell.io/aas/3/2/Blob/value> ;
    samm:exampleValue "SGVsbG8sIFdvcmxkIQ=="^^xsd:base64Binary .
 
 :BlobType a samm:Characteristic ;
@@ -39,8 +39,15 @@
    samm:preferredName "Large Binary Object (BLOB) mit Content-Type"@de ;
    samm:preferredName "Large Binary Object (BLOB) with content type"@en ;
    samm:description "A Blob is a data element representing a file that is contained in the value attribute with its source code. The code syntax is characterized by its content type (MIME type)."@en ;
-   samm:see <https://admin-shell.io/aas/3/1/Blob> ;
+   samm:see <https://admin-shell.io/aas/3/2/Blob> ;
    samm:properties ( 
       [ samm:property :blobValue; samm:payloadName "value" ] 
-	  [ samm:property :contentType; samm:optional true; samm:payloadName "contentType" ] 
+	  [ samm:property :blobContentType; samm:optional true; samm:payloadName "contentType" ] 
 	  ) .
+
+:blobContentType a samm:Property ;
+   samm:preferredName "content type"@en ;
+   samm:description "Content type of the content of the BLOB."@en ;
+   samm:see <https://admin-shell.io/aas/3/2/Blob/contentType> ;
+   samm:characteristic samm-c:MimeType ;
+   samm:exampleValue "application/pdf" .
