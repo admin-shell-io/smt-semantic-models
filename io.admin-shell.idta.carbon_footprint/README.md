@@ -21,6 +21,12 @@ Source Content Hub of the IDTA: [IDTA-02023 V1.0](https://industrialdigitaltwin.
 # Changelog
 All notable changes to this model will be documented in this section.
 
+## [1.0.2] - November 2026
+
+Bugfixes:
+
+* correct :value of samm:Value :kWH from kwH to kWh (https://github.com/admin-shell-io/smt-semantic-models/issues/174)
+
 ## [1.0.1] - October 2026
 
 Other changes:
