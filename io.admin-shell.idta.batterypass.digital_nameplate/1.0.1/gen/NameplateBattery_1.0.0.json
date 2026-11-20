@@ -1,89 +1,89 @@
 {
   "URIOfTheProduct" : "https://dc-qr.com/?m=R123456789",
-  "ManufacturerName" : {
+  "ManufacturerName" : [ {
     "de" : "Muster AG"
-  },
+  } ],
   "AddressInformation" : {
     "RoleOfContactPerson" : "technical contact",
-    "NationalCode" : {
+    "NationalCode" : [ {
       "en" : "DE"
-    },
-    "Languages" : "en",
+    } ],
+    "Languages" : [ "en" ],
     "TimeZone" : "-12:00",
-    "CityTown" : {
+    "CityTown" : [ {
       "de" : "Musterstadt"
-    },
-    "Company" : {
+    } ],
+    "Company" : [ {
       "en" : "ABC Company"
-    },
-    "Department" : {
+    } ],
+    "Department" : [ {
       "de" : "Vertrieb"
-    },
+    } ],
     "Phone" : {
-      "TelephoneNumber" : {
+      "TelephoneNumber" : [ {
         "de" : "+491234567890"
-      },
+      } ],
       "TypeOfTelephone" : "office",
-      "AvailableTime" : {
+      "AvailableTime" : [ {
         "de" : "Montag – Freitag 08:00 bis 16:00"
-      }
+      } ]
     },
     "Fax" : {
-      "FaxNumber" : {
+      "FaxNumber" : [ {
         "de" : "+491234567890"
-      },
+      } ],
       "TypeOfFaxNumber" : "office"
     },
     "Email" : {
       "EmailAddress" : "email@muster-ag.de",
-      "PublicKey" : {
+      "PublicKey" : [ {
         "en" : "0x07"
-      },
+      } ],
       "TypeOfEmailAddress" : "office",
-      "TypeOfPublicKey" : {
+      "TypeOfPublicKey" : [ {
         "en" : "RSA"
-      }
+      } ]
     },
     "IPCommunicationChannels" : [ {
-      "AddressOfAdditionalLink" : "dIbZf15NZA",
+      "AddressOfAdditionalLink" : "v3ODz2kq",
       "TypeOfCommunication" : "Chat",
-      "availableTime" : {
+      "availableTime" : [ {
         "de" : "Montag – Freitag 08:00 bis 16:00"
-      }
+      } ]
     } ],
-    "Street" : {
+    "Street" : [ {
       "de" : "Musterstrasse 1"
-    },
-    "ZipCode" : {
+    } ],
+    "ZipCode" : [ {
       "de" : "12345"
-    },
-    "POBox" : {
+    } ],
+    "POBox" : [ {
       "de" : "PF 1234"
-    },
-    "ZipCodeOfPOBox" : {
+    } ],
+    "ZipCodeOfPOBox" : [ {
       "de" : "12345"
-    },
-    "StateCounty" : {
+    } ],
+    "StateCounty" : [ {
       "de" : "Muster-Bundesland"
-    },
-    "NameOfContact" : {
+    } ],
+    "NameOfContact" : [ {
       "en" : "Doe"
-    },
-    "FirstName" : {
+    } ],
+    "FirstName" : [ {
       "en" : "Jane"
-    },
-    "MiddleNames" : {
+    } ],
+    "MiddleNames" : [ {
       "en" : "M."
-    },
-    "Title" : {
+    } ],
+    "Title" : [ {
       "en" : "Mrs."
-    },
-    "AcademicTitle" : {
+    } ],
+    "AcademicTitle" : [ {
       "en" : "PhD"
-    },
-    "FurtherDetailsOfContact" : {
+    } ],
+    "FurtherDetailsOfContact" : [ {
       "de" : "-"
-    },
+    } ],
     "AddressOfAdditionalLink" : "https://example.com/information/product/1224/contact"
   },
   "SerialNumber" : "A12345-X75EN",
@@ -91,8 +91,8 @@
   "DateOfPuttingIntoService" : "2022-06-01",
   "UniqueFacilityIdentifier" : "987654321",
   "LifeCycleStage" : "original",
-  "OperatorIdentifier" : "3L",
-  "ManufacturerIdentifier" : "9eXXLBh",
+  "OperatorIdentifier" : "PpwJfLnj",
+  "ManufacturerIdentifier" : "Tbo",
   "Markings" : [ {
     "MarkingName" : "0173-1%2307-DAA603%23004",
     "DesignationOfCertificateOrApproval" : "KEMA99IECE X1105/128",
@@ -104,6 +104,6 @@
     },
     "MarkingAdditionalText" : "0044"
   } ],
-  "EUDeclarationOfConformity" : [ "0HCD" ],
-  "ResultsOfTestReportsProvingCompliance" : [ "q0GdZ8flY7" ]
+  "EUDeclarationOfConformity" : [ "MQ" ],
+  "ResultsOfTestReportsProvingCompliance" : [ "Qx" ]
 }

@@ -194,14 +194,14 @@
             } ]
           },
           "HazardousSubstanceLocation" : {
-            "description" : "Hazardous substances (No. 19-23): \r\n   Location on a (sub-)component-level of all hazardous substances \r\n   (as 'any substance that poses a threat to human health and the environment'). \r\n   \r\n   Suggested via a unique identifier or nomenclature.",
+            "description" : "\r\n     Location on a (sub-)component-level of the hazardous substance\r\n   ",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.2#hazardousSubstanceLocation",
             "allOf" : [ {
               "$ref" : "#/components/schemas/HazardousSubstanceLocation"
             } ]
           }
         },
-        "required" : [ "HazardousSubstanceName", "HazardousSubstanceIdentifier" ]
+        "required" : [ "HazardousSubstanceName", "HazardousSubstanceIdentifier", "HazardousSubstanceConcentration", "HazardousSubstanceImpact" ]
       },
       "HazardousSubstancesList" : {
         "description" : "Hazardous substances contained in the battery other than mercury, cadmium or lead. Substance as a chemical element and its compounds in the natural state or the result of a manufacturing process (ECHA). Battery Regulation narrows reporting to substances falling under defined hazard classes and categories of the CLP regulation.\n\nEUBR: Annex XIII (1b) ? Annex VI Part A (8)",
