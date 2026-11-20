@@ -37,7 +37,7 @@ Major changes:
 
 Minor changes (no impact on payload)
 
-* no resue to tech: any longer for manufacturerIdentifier
+* no reuse to tech: any longer for manufacturerIdentifier
 
 
 ## [1.0.1] - October 2026
