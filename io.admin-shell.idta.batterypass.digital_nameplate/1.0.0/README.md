@@ -4,7 +4,7 @@ This PoC models role based differences via `samm:AbstractEntity` and `samm:exten
 
 ## Structure
 
-- `BatteryNameplate_common.ttl`
+- `BatteryNameplate.ttl`
   - shared Property/Characteristic definitions
   - `BatteryNameplateBaseEntity` (`samm:AbstractEntity`)
   - contains only properties whose cardinality is identical for all roles
