@@ -1,10 +1,26 @@
 {
   "$schema" : "http://json-schema.org/draft-04/schema",
-  "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryNameplateEconomicOperator",
-  "description" : "Battery nameplate information for the economic operator use case.",
+  "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryNameplateBatteryManufacturer",
+  "description" : "Battery nameplate information provided by a battery manufacturer.",
   "type" : "object",
   "components" : {
     "schemas" : {
+      "Text" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Text",
+        "description" : "Describes a Property which contains plain text. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+      },
+      "Date" : {
+        "type" : "string",
+        "format" : "date",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#Date"
+      },
+      "BatteryStatusEnumeration" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryStatusEnumeration",
+        "description" : "Lifecycle status of the battery. Status defined from a list, with the options suggested as follows: 'original', 'repurposed', 'reused', 'remanufactured', 'waste'\n\nEUBR: Annex XIII (4c)",
+        "enum" : [ "original", "repurposed", "re-used", "remanufactured", "waste" ]
+      },
       "RoleOfContactPersonCharacteristic" : {
         "type" : "string"
       },
@@ -29,11 +45,6 @@
         },
         "uniqueItems" : true,
         "minItems" : 1
-      },
-      "Text" : {
-        "type" : "string",
-        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Text",
-        "description" : "Describes a Property which contains plain text. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
       },
       "PhoneEntity" : {
         "description" : "Phone number including type.",
@@ -352,27 +363,6 @@
           "$ref" : "#/components/schemas/AdressInformation"
         } ]
       },
-      "PuttingIntoServiceDate" : {
-        "type" : "string",
-        "format" : "date",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#PuttingIntoServiceDate"
-      },
-      "Uri" : {
-        "type" : "string",
-        "format" : "uri",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#Uri"
-      },
-      "Date" : {
-        "type" : "string",
-        "format" : "date",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#Date"
-      },
-      "BatteryStatusEnumeration" : {
-        "type" : "string",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryStatusEnumeration",
-        "description" : "Lifecycle status of the battery. Status defined from a list, with the options suggested as follows: 'original', 'repurposed', 'reused', 'remanufactured', 'waste'\n\nEUBR: Annex XIII (4c)",
-        "enum" : [ "original", "repurposed", "re-used", "remanufactured", "waste" ]
-      },
       "Date0" : {
         "type" : "string",
         "format" : "date",
@@ -481,64 +471,21 @@
         },
         "uniqueItems" : true
       },
-      "BatteryNameplateEconomicOperatorEntity" : {
-        "description" : "Battery nameplate data with economic-operator-specific cardinalities.",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryNameplateEconomicOperatorEntity",
-        "type" : "object",
-        "properties" : {
-          "AddressInformation" : {
-            "description" : "The manufacturer information postal address, indicating a single contact point. Web address, if available; and web address, if available.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.3",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#addressInformation",
-            "allOf" : [ {
-              "$ref" : "#/components/schemas/AddressInformationCharacteristic"
-            } ]
-          },
-          "DateOfPuttingIntoService" : {
-            "description" : "Where appropriate, the battery passport must include information on the date of putting the battery into service. BR Annex VI Part A (1); Art. 3(33); Art. 38(7); ESPR Art. 2(32)\n\nDIN DKE Spec chapter reference: 6.1.3.3",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#dateOfPuttingIntoService",
-            "allOf" : [ {
-              "$ref" : "#/components/schemas/PuttingIntoServiceDate"
-            } ]
-          },
-          "OperatorIdentifier" : {
-            "description" : "The unique operator identifier should comply with ISO/IEC 15459 1:2014, ISO/IEC 15459 2:2015, ISO/IEC 15459 3:2014, ISO/IEC 15459 4:2014, ISO/IEC 15459 5:2014, ISO/IEC 15459 6:2014, or their equivalent until referenced harmonised standards are listed in the OJEU.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.3",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#operatorIdentifier",
-            "allOf" : [ {
-              "$ref" : "#/components/schemas/Text"
-            } ]
-          },
-          "ManufacturerIdentifier" : {
-            "description" : "A battery passport must include information identifying the manufacturer.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.4",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#manufacturerIdentifier",
-            "allOf" : [ {
-              "$ref" : "#/components/schemas/Text"
-            } ]
-          }
-        },
-        "required" : [ "AddressInformation", "DateOfPuttingIntoService", "OperatorIdentifier", "ManufacturerIdentifier" ],
-        "allOf" : [ {
-          "$ref" : "#/components/schemas/BatteryNameplateBaseEntity"
-        } ]
+      "Uri" : {
+        "type" : "string",
+        "format" : "uri",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0#Uri"
       },
-      "BatteryNameplateBaseEntity" : {
-        "description" : "Common battery nameplate information shared by all supported use cases.",
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryNameplateBaseEntity",
+      "PuttingIntoServiceDate" : {
+        "type" : "string",
+        "format" : "date",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#PuttingIntoServiceDate"
+      },
+      "BatteryNameplateBatteryManufacturerEntity" : {
+        "description" : "Battery nameplate data with battery manufacturer specific obligations.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryNameplateBatteryManufacturerEntity",
         "type" : "object",
         "properties" : {
-          "URIOfTheProduct" : {
-            "description" : "Unique global identification of the product instance using an universal resource identifier (URI).\n The battery passport identifier is the unique identifier of a battery passport.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.1",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#uriOfTheProduct",
-            "allOf" : [ {
-              "$ref" : "#/components/schemas/Uri"
-            } ]
-          },
-          "ManufacturerName" : {
-            "description" : "Legally valid designation of the natural or judicial person which is directly responsible for the design, production, packaging and labeling of a product in respect to its being brought into circulation.\n\n Information identifying the manufacturer with a name.Information identifying the manufacturer with a name.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.1",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#manufacturerName",
-            "allOf" : [ {
-              "$ref" : "#/components/schemas/MultiLanguageTexts"
-            } ]
-          },
           "SerialNumber" : {
             "description" : "Unique combination of numbers and letters used to identify the device once it has been manufactured.\n\n The battery identifier should be serialised, i.e., identifying each battery via a serial number.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.2",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#serialNumber",
@@ -561,53 +508,106 @@
             } ]
           },
           "LifeCycleStage" : {
-            "description" : "A battery passport must include information on the life cycle status of the battery.\n\nThe status of the battery must be defined as 'original', 'repurposed', 're-used', 'remanufactured' or 'waste'.\n\nDIN DKE Spec 99100 chapter reference: 6.1.3.7",
+            "description" : "A battery passport must include information on the life cycle status of the battery.\n   \n   The status of the battery must be defined as 'original' (0173-1#07-ACC020#001), 'repurposed'(0173-1#07-ACC021#001), 're-used'(0173-1#07-ACC022#001), 'remanufactured' (0173-1#07-ACC023#001) or 'waste' (0173-1#07-ACC024#001).\n   \n   A new battery passport must be issued when a battery was subject to remanufacturing, repurpose or one of the treatment operations preparing for re-use and preparing for repurpose and is placed on the market again.\n   \n   DIN DKE Spec 99100 chapter reference: 6.1.3.7",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#batteryStatus",
             "allOf" : [ {
               "$ref" : "#/components/schemas/BatteryStatusEnumeration"
             } ]
           },
+          "AddressInformation" : {
+            "description" : "The manufacturer information postal address, indicating a single contact point. Web address, if available; and web address, if available.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.3",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#addressInformation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/AddressInformationCharacteristic"
+            } ]
+          },
           "Markings" : {
-            "description" : "Relevant marking information of the battery passport based on DIN DKE SPEC 99100.",
+            "description" : "Should be used to provide all relevant marking information of the battery passport based on DIN DKE SPEC 99100 such as:\n\n* Separate collection symbol (6.2.2)\n* Symbols for cadmium and lead (6.2.3)\n* Carbon footprint label (6.2.4)\n* Extinguishing agent (6.2.5)\n* Meaning of labels and symbols (6.2.6)\n* EU declaration of conformity (6.2.7)\n* Results of test reports proving compliance (6.2.8)\n\nNote: CE marking is declared as mandatory according to EU Blue Guide \n   ",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#markings",
             "allOf" : [ {
               "$ref" : "#/components/schemas/Markings"
             } ]
           },
-          "EUDeclarationOfConformity" : {
-            "description" : "A battery passport must include the EU declaration of conformity. DIN DKE Spec 99100 chapter reference: 6.2.7.",
-            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#euDeclarationOfConformity",
-            "allOf" : [ {
-              "$ref" : "#/components/schemas/DocumentIdentifierSet"
-            } ]
-          },
           "ResultsOfTestReportsProvingCompliance" : {
-            "description" : "A battery passport must include test report results that can prove compliance with the requirements stated in the battery regulation. DIN DKE Spec 99100 chapter reference: 6.2.8.",
+            "description" : "A battery passport must include the test report results that can prove the compliance with the requirements stated in the battery regulation.\n\n  DIN DKE Spec 99100 chapter reference: 6.2.8\n\n Document identifiers (e.g., depending of different languages) of a document (e.g., PDF) that can be found in the Handover Documentation model.\n\n ",
             "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#resultsOfTestReportsProvingCompliance",
             "allOf" : [ {
               "$ref" : "#/components/schemas/DocumentIdentifierSet"
             } ]
           }
         },
-        "required" : [ "URIOfTheProduct", "ManufacturerName", "SerialNumber", "DateOfManufacture", "UniqueFacilityIdentifier", "LifeCycleStage", "Markings", "EUDeclarationOfConformity", "ResultsOfTestReportsProvingCompliance" ]
+        "required" : [ "SerialNumber", "DateOfManufacture", "UniqueFacilityIdentifier", "LifeCycleStage", "AddressInformation", "Markings", "ResultsOfTestReportsProvingCompliance" ],
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/BatteryNameplateBaseEntity"
+        } ]
       },
-      "BatteryNameplateEconomicOperatorCharacteristic" : {
-        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryNameplateEconomicOperatorCharacteristic",
+      "BatteryNameplateBaseEntity" : {
+        "description" : "Common battery nameplate information shared by all supported roles.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryNameplateBaseEntity",
+        "type" : "object",
+        "properties" : {
+          "URIOfTheProduct" : {
+            "description" : "Unique global identification of the product instance using an universal resource identifier (URI).\n The battery passport identifier is the unique identifier of a battery passport.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.1",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#uriOfTheProduct",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Uri"
+            } ]
+          },
+          "ManufacturerName" : {
+            "description" : "Legally valid designation of the natural or judicial person which is directly responsible for the design, production, packaging and labeling of a product in respect to its being brought into circulation.\n\n Information identifying the manufacturer with a name.Information identifying the manufacturer with a name.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.1",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#manufacturerName",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
+          },
+          "DateOfPuttingIntoService" : {
+            "description" : "Where appropriate, the battery passport must include information on the date of putting the battery into service. BR Annex VI Part A (1); Art. 3(33); Art. 38(7); ESPR Art. 2(32)\n\nDIN DKE Spec chapter reference: 6.1.3.3",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#dateOfPuttingIntoService",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/PuttingIntoServiceDate"
+            } ]
+          },
+          "OperatorIdentifier" : {
+            "description" : "The unique operator identifier should comply with ISO/IEC 15459 1:2014, ISO/IEC 15459 2:2015, ISO/IEC 15459 3:2014, ISO/IEC 15459 4:2014, ISO/IEC 15459 5:2014, ISO/IEC 15459 6:2014, or their equivalent until referenced harmonised standards are listed in the OJEU.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.3",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#operatorIdentifier",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "ManufacturerIdentifier" : {
+            "description" : "A battery passport must include information identifying the manufacturer.\n\n DIN DKE Spec 99100 chapter reference: 6.1.2.4",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.0#manufacturerIdentifier",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "EUDeclarationOfConformity" : {
+            "description" : "A battery passport must include the EU declaration of conformity.\n\n  DIN DKE Spec 99100 chapter reference: 6.2.7 \n\n Document identifiers (e.g., depending of different languages) of a document (e.g., PDF) that can be found in the Handover Documentation model.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#euDeclarationOfConformity",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/DocumentIdentifierSet"
+            } ]
+          }
+        },
+        "required" : [ "URIOfTheProduct", "ManufacturerName", "ManufacturerIdentifier", "EUDeclarationOfConformity" ]
+      },
+      "BatteryNameplateBatteryManufacturerCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#BatteryNameplateBatteryManufacturerCharacteristic",
         "type" : "object",
         "allOf" : [ {
-          "$ref" : "#/components/schemas/BatteryNameplateEconomicOperatorEntity"
+          "$ref" : "#/components/schemas/BatteryNameplateBatteryManufacturerEntity"
         } ]
       }
     }
   },
   "properties" : {
-    "batteryNameplateEconomicOperator" : {
-      "description" : "Battery nameplate data provided in the economic operator use case.",
-      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#batteryNameplateEconomicOperator",
+    "batteryNameplateBatteryManufacturer" : {
+      "description" : "Battery nameplate data provided by a battery manufacturer.",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#batteryNameplateBatteryManufacturer",
       "allOf" : [ {
-        "$ref" : "#/components/schemas/BatteryNameplateEconomicOperatorCharacteristic"
+        "$ref" : "#/components/schemas/BatteryNameplateBatteryManufacturerCharacteristic"
       } ]
     }
   },
-  "required" : [ "batteryNameplateEconomicOperator" ]
+  "required" : [ "batteryNameplateBatteryManufacturer" ]
 }

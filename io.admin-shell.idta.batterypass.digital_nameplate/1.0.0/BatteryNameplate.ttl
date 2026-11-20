@@ -35,26 +35,23 @@
 ######################################################################
 # Shared abstract base entity
 #
-# Only properties whose optionality is identical for all roles are
-# declared here. The four role-dependent properties are intentionally
-# NOT part of this base entity, because samm:optional is inherited and
-# cannot be overridden in a child entity.
+# Only properties whose obligation is identical for all roles
+# (CX-0160-2, Appendix A) are declared here. The seven role-dependent
+# properties are intentionally NOT part of this base entity, because
+# samm:optional is inherited and cannot be overridden in a child entity.
 ######################################################################
 
 :BatteryNameplateBaseEntity a samm:AbstractEntity ;
    samm:preferredName "Battery nameplate base"@en ;
    samm:preferredName "Batterie-Typenschild Basis"@de ;
-   samm:description "Common battery nameplate information shared by all supported use cases."@en ;
+   samm:description "Common battery nameplate information shared by all supported roles."@en ;
    samm:properties (
       [ samm:property :uriOfTheProduct ; samm:payloadName "URIOfTheProduct" ]
       [ samm:property :manufacturerName ; samm:payloadName "ManufacturerName" ]
-      [ samm:property :serialNumber ; samm:payloadName "SerialNumber" ]
-      [ samm:property :dateOfManufacture ; samm:payloadName "DateOfManufacture" ]
-      [ samm:property :uniqueFacilityIdentifier ; samm:payloadName "UniqueFacilityIdentifier" ]
-      [ samm:property :batteryStatus ; samm:payloadName "LifeCycleStage" ]
-      [ samm:property :markings ; samm:payloadName "Markings" ]
+      [ samm:property :dateOfPuttingIntoService ; samm:optional true ; samm:payloadName "DateOfPuttingIntoService" ]
+      [ samm:property :operatorIdentifier ; samm:optional true ; samm:payloadName "OperatorIdentifier" ]
+      [ samm:property tech:manufacturerIdentifier ; samm:payloadName "ManufacturerIdentifier" ]
       [ samm:property :euDeclarationOfConformity ; samm:payloadName "EUDeclarationOfConformity" ]
-      [ samm:property :resultsOfTestReportsProvingCompliance ; samm:payloadName "ResultsOfTestReportsProvingCompliance" ]
    ) .
 
 ######################################################################

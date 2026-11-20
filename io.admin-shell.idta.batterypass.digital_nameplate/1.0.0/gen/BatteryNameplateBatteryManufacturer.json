@@ -1,5 +1,9 @@
 {
-  "batteryNameplateSupplier" : {
+  "batteryNameplateBatteryManufacturer" : {
+    "SerialNumber" : "A12345-X75EN",
+    "DateOfManufacture" : "2022-01-01",
+    "UniqueFacilityIdentifier" : "987654321",
+    "LifeCycleStage" : "original",
     "AddressInformation" : {
       "RoleOfContactPerson" : "technical contact",
       "NationalCode" : [ {
@@ -42,7 +46,7 @@
         } ]
       },
       "IPCommunicationChannels" : [ {
-        "AddressOfAdditionalLink" : "sQwy",
+        "AddressOfAdditionalLink" : "SPXnUJnB",
         "TypeOfCommunication" : "Chat",
         "availableTime" : [ {
           "de" : "Montag – Freitag 08:00 bis 16:00"
@@ -83,17 +87,6 @@
       } ],
       "AddressOfAdditionalLink" : "https://example.com/information/product/1224/contact"
     },
-    "DateOfPuttingIntoService" : "2022-06-01",
-    "OperatorIdentifier" : "wGwb",
-    "ManufacturerIdentifier" : "dhk",
-    "URIOfTheProduct" : "https://dc-qr.com/?m=R123456789",
-    "ManufacturerName" : [ {
-      "de" : "Muster AG"
-    } ],
-    "SerialNumber" : "A12345-X75EN",
-    "DateOfManufacture" : "2022-01-01",
-    "UniqueFacilityIdentifier" : "987654321",
-    "LifeCycleStage" : "original",
     "Markings" : [ {
       "MarkingName" : "0173-1%2307-DAA603%23004",
       "DesignationOfCertificateOrApproval" : "KEMA99IECE X1105/128",
@@ -105,7 +98,14 @@
       },
       "MarkingAdditionalText" : "0044"
     } ],
-    "EUDeclarationOfConformity" : [ "wzk2" ],
-    "ResultsOfTestReportsProvingCompliance" : [ "s3RjtE" ]
+    "ResultsOfTestReportsProvingCompliance" : [ "aF4xGpZ" ],
+    "URIOfTheProduct" : "https://dc-qr.com/?m=R123456789",
+    "ManufacturerName" : [ {
+      "de" : "Muster AG"
+    } ],
+    "DateOfPuttingIntoService" : "2022-06-01",
+    "OperatorIdentifier" : "u7eFkOklI",
+    "ManufacturerIdentifier" : "0XqZ",
+    "EUDeclarationOfConformity" : [ "4nhd" ]
   }
 }
