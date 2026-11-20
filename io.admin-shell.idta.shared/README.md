@@ -12,6 +12,24 @@ The folder "input" contains source files like .aasx or the submodel template spe
 # Changelog
 All notable changes to this model will be documented in this section.
 
+
+## [4.0.0] - November 2026
+
+Changes conformant to IDTA-01001 V3.2, for detailled changelog see [IDTA-01001-3-2](https://industrialdigitaltwin.io/aas-specifications/IDTA-01001/v3.2)
+
+* update samm:see information to /3/2
+* to avoid name clashed in json-example generation make :contentType property of :BlobWithContentType and :fileWithContentType unique (first conflict for Time Series V1.1)
+
+Changes conformant to Digital Nameplate IDTA-02006 V4.0, for detailled changelog see IDTA-02006 Version 3.0
+
+* :markings - added samm:see information 
+* :Marking - new payload names for :markingName, :designationOfCertificateOrApproval, :issueDate, :expiryDate, :markingAdditionalText
+* :Marking - new property :cerrtificateSupplement
+* :expiryDate - fix samm:see "urn:iri" prefix not needed for https, change to <https://admin-shell.io/zvei/nameplate/2/0/Nameplate/Markings/Marking/ExpiryDate> ;
+* :expiryDate - not to be specified to the day any longer
+
+
+
 ## [3.1.1] - October 2026
 
 Other changes:

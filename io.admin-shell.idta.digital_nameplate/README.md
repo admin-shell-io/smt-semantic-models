@@ -5,6 +5,18 @@ This namespace is reserved for the Submodel Template Specification (SMT) IDTA-02
 # Changelog
 All notable changes to this model will be documented in this section.
 
+## [4.0.0] - November  2026
+
+alignment with IDTA-02006 V4.0: for detailled changes see changelog in IDTA-02006
+
+Major changes:
+- payload names changed
+- new namespace idta.shared 4.0.0 for changes w.r.t. Markings
+
+Minor changes:
+
+* add new samm:see attributes from IDTA-02006 V4.0
+
 ## [3.0.1] - October 2026
 
 Other changes:
