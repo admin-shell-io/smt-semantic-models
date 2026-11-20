@@ -7,20 +7,20 @@
   "lastUpdate" : "2025-08-22T03:12:00Z",
   "economicOperatorId" : "gxx:ppp456789",
   "facilityId" : "gxx:xxx987654",
-  "contentSpecificationIds" : [ "yKrLfw2" ],
+  "contentSpecificationIds" : [ "8oXfCDtFTo" ],
   "https://admin-shell.io/idta/cds/carbonFootprint/1" : {
     "ProductCarbonFootprints" : [ {
-      "PcfCalculationMethods" : [ "B" ],
+      "PcfCalculationMethods" : [ "BVM0EXt" ],
       "PcfCo2eq" : 17.2,
       "ReferenceImpactUnitForCalculation" : "piece",
       "QuantityOfMeasureForCalculation" : 5.0,
       "LifeCyclePhases" : [ "C4 - landfill" ],
       "PerformanceClass" : "B+",
-      "WebLinkToPublicCarbonFootprintStudy" : [ "DMxw" ]
+      "WebLinkToPublicCarbonFootprintStudy" : [ "FtN9Hh" ]
     } ]
   },
   "https://admin-shell.io/idta/cds/circularity/1" : {
-    "DismantlingAndRemovalInformation" : [ "Sc1tOPv" ],
+    "DismantlingAndRemovalInformation" : [ "ALryC" ],
     "SparePartSources" : [ {
       "NameOfSupplier" : [ {
         "en" : "ABC Company"
@@ -49,24 +49,24 @@
       "SupplierWebAddress" : "https://example.com/information/product/1224/contact",
       "Components" : [ {
         "PartName" : "Cell",
-        "PartNumber" : "0VxI8O4I"
+        "PartNumber" : "JK"
       } ]
     } ],
     "RecycledContentInformation" : [ {
-      "PreConsumerShare" : 1.69,
+      "PreConsumerShare" : 43.38,
       "RecycledMaterial" : "Cobalt",
-      "PostConsumerShare" : 67.04
+      "PostConsumerShare" : 68.9
     } ],
     "SafetyMeasures" : {
-      "SafetyInstructions" : [ "0VrLdf9ZR" ],
-      "ExtinguishingAgents" : [ "KBz9JfVYO" ]
+      "SafetyInstructions" : [ "Hc8L347N" ],
+      "ExtinguishingAgents" : [ "HNmo" ]
     },
     "EndOfLifeInformation" : {
-      "WastePrevention" : [ "zh" ],
-      "SeparateCollection" : [ "BCZtE9BHN" ],
-      "InformationOnCollection" : [ "lx" ]
+      "WastePrevention" : [ "a2Ispu" ],
+      "SeparateCollection" : [ "zlZgDxR8o6" ],
+      "InformationOnCollection" : [ "H37w2h" ]
     },
-    "RenewableContent" : -21630.8
+    "RenewableContent" : -28563.6
   },
   "https://admin-shell.io/idta/cds/digitalNameplate/1" : {
     "URIOfTheProduct" : "https://dc-qr.com/?m=R123456789",
@@ -115,7 +115,7 @@
         } ]
       },
       "IPCommunicationChannels" : [ {
-        "AddressOfAdditionalLink" : "8qVu",
+        "AddressOfAdditionalLink" : "UroCIQ5dDz",
         "TypeOfCommunication" : "Chat",
         "availableTime" : [ {
           "de" : "Montag – Freitag 08:00 bis 16:00"
@@ -161,8 +161,8 @@
     "DateOfPuttingIntoService" : "2022-06-01",
     "UniqueFacilityIdentifier" : "987654321",
     "LifeCycleStage" : "original",
-    "OperatorIdentifier" : "r",
-    "ManufacturerIdentifier" : "I",
+    "OperatorIdentifier" : "dL",
+    "ManufacturerIdentifier" : "qv1W900jtN",
     "Markings" : [ {
       "MarkingName" : "0173-1%2307-DAA603%23004",
       "DesignationOfCertificateOrApproval" : "KEMA99IECE X1105/128",
@@ -174,8 +174,8 @@
       },
       "MarkingAdditionalText" : "0044"
     } ],
-    "EUDeclarationOfConformity" : [ "v" ],
-    "ResultsOfTestReportsProvingCompliance" : [ "DdfZQ" ]
+    "EUDeclarationOfConformity" : [ "LPwTawcdU3" ],
+    "ResultsOfTestReportsProvingCompliance" : [ "WDaI" ]
   },
   "https://admin-shell.io/idta/cds/handoverDocumentation/1" : {
     "Documents" : [ {
@@ -187,7 +187,7 @@
       "DocumentClassifications" : [ {
         "ClassId" : "03-02",
         "ClassName" : [ {
-          "en" : "nS"
+          "en" : "A"
         } ],
         "ClassificationSystem" : "VDI2770 Blatt 1:2020"
       } ],
@@ -195,13 +195,13 @@
         "Language" : [ "en" ],
         "Version" : "V1.2",
         "Title" : [ {
-          "de" : "RP0tu"
+          "de" : "iu2qRo"
         } ],
         "Subtitle" : [ {
-          "en" : "Grhf"
+          "en" : "rJ135EAiO"
         } ],
         "Description" : [ {
-          "en" : "Upb"
+          "de" : "IV73f"
         } ],
         "DigitalFiles" : [ {
           "value" : "https://example.com/SafetyInstructions.pdf",
@@ -230,7 +230,7 @@
       "HazardousSubstanceName" : "Cobalt (Co)",
       "HazardousSubstanceIdentifier" : "346417-97-8",
       "HazardousSubstanceConcentration" : 20.0,
-      "HazardousSubstanceImpact" : [ "jDNsbN" ],
+      "HazardousSubstanceImpact" : [ "9T2UZ" ],
       "HazardousSubstanceLocation" : {
         "ComponentName" : "Anode",
         "ComponentId" : "1234-344"
@@ -266,7 +266,7 @@
       "NegativeEventValue" : "overcharged",
       "LastUpdate" : "2000-01-01T14:23:00"
     } ],
-    "InformationOnAccidents" : [ "VtRj8q" ],
+    "InformationOnAccidents" : [ "3N7rH" ],
     "TemperatureInformation" : {
       "MeasuredTemp" : 20.0,
       "TimeExtremeHighTemp" : 0.0,
@@ -302,9 +302,9 @@
   },
   "https://admin-shell.io/idta/cds/technicalData/1" : {
     "GeneralInformation" : {
-      "ManufacturerName" : "UM",
-      "CompanyLogo" : "https://example.com/tXoS5Wpvpo",
-      "ManufacturerIdentifier" : "l0Lv7URY2a",
+      "ManufacturerName" : "eL",
+      "CompanyLogo" : "https://example.com/TMJfQTCe",
+      "ManufacturerIdentifier" : "RXka3O",
       "WarrantyInformation" : {
         "WarrantyPeriod" : "P96M"
       },
@@ -316,7 +316,7 @@
           "contentType" : "application/pdf"
         },
         "ImageNote" : [ {
-          "de" : "WHyPbr"
+          "de" : "i388"
         } ]
       } ]
     },
@@ -360,8 +360,8 @@
         "ExpectedLifetimeInCalendarYears" : 15,
         "ExpectedNumberOfCycles" : 1000,
         "CapacityThresholdExhaustion" : 23.0,
-        "CycleLifeReferenceTest" : [ "995K0dbrk" ],
-        "CrateOfRelevantCycleLifeTest" : -57936.2
+        "CycleLifeReferenceTest" : [ "nT4TIa" ],
+        "CRateOfRelevantCycleLifeTest" : -80362.6
       }
     }
   }
