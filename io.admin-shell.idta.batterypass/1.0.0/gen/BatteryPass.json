@@ -7,146 +7,153 @@
   "lastUpdate" : "2025-08-22T03:12:00Z",
   "economicOperatorId" : "gxx:ppp456789",
   "facilityId" : "gxx:xxx987654",
-  "contentSpecificationIds" : [ "td4o0n2ng" ],
+  "contentSpecificationIds" : [ "yKrLfw2" ],
   "https://admin-shell.io/idta/cds/carbonFootprint/1" : {
     "ProductCarbonFootprints" : [ {
-      "PcfCalculationMethods" : "ISO 14067",
+      "PcfCalculationMethods" : [ "B" ],
       "PcfCo2eq" : 17.2,
       "ReferenceImpactUnitForCalculation" : "piece",
       "QuantityOfMeasureForCalculation" : 5.0,
-      "LifeCyclePhases" : "C4 - landfill",
+      "LifeCyclePhases" : [ "C4 - landfill" ],
       "PerformanceClass" : "B+",
-      "WebLinkToPublicCarbonFootprintStudy" : [ "kNiC" ]
+      "WebLinkToPublicCarbonFootprintStudy" : [ "DMxw" ]
     } ]
   },
   "https://admin-shell.io/idta/cds/circularity/1" : {
-    "DismantlingAndRemovalInformation" : [ "2SWf" ],
+    "DismantlingAndRemovalInformation" : [ "Sc1tOPv" ],
     "SparePartSources" : [ {
-      "NameOfSupplier" : {
+      "NameOfSupplier" : [ {
         "en" : "ABC Company"
-      },
+      } ],
       "AddressOfSupplier" : {
-        "NationalCode" : {
+        "NationalCode" : [ {
           "en" : "DE"
-        },
-        "PostalCode" : {
+        } ],
+        "PostalCode" : [ {
           "de" : "DE-10719"
-        },
-        "Street" : {
+        } ],
+        "Street" : [ {
           "de" : "Musterstrasse 1"
-        }
+        } ]
       },
       "EmailAddressOfSupplier" : {
         "EmailAddress" : "email@muster-ag.de",
-        "PublicKey" : {
+        "PublicKey" : [ {
           "en" : "0x07"
-        },
+        } ],
         "TypeOfEmailAddress" : "office",
-        "TypeOfPublicKey" : {
+        "TypeOfPublicKey" : [ {
           "en" : "RSA"
-        }
+        } ]
       },
       "SupplierWebAddress" : "https://example.com/information/product/1224/contact",
       "Components" : [ {
         "PartName" : "Cell",
-        "PartNumber" : "LsO"
+        "PartNumber" : "0VxI8O4I"
       } ]
     } ],
     "RecycledContentInformation" : [ {
-      "PreConsumerShare" : 8.95,
+      "PreConsumerShare" : 1.69,
       "RecycledMaterial" : "Cobalt",
-      "PostConsumerShare" : 45.79
+      "PostConsumerShare" : 67.04
     } ],
     "SafetyMeasures" : {
-      "SafetyInstructions" : [ "bEcx" ],
-      "ExtinguishingAgents" : [ "JfEQ" ]
+      "SafetyInstructions" : [ "0VrLdf9ZR" ],
+      "ExtinguishingAgents" : [ "KBz9JfVYO" ]
     },
     "EndOfLifeInformation" : {
-      "WastePrevention" : [ "HK2GEj" ],
-      "SeparateCollection" : [ "P3wZjun3PM" ],
-      "InformationOnCollection" : [ "uJDYLT" ]
+      "WastePrevention" : [ "zh" ],
+      "SeparateCollection" : [ "BCZtE9BHN" ],
+      "InformationOnCollection" : [ "lx" ]
     },
-    "RenewableContent" : -79859.0
+    "RenewableContent" : -21630.8
   },
   "https://admin-shell.io/idta/cds/digitalNameplate/1" : {
     "URIOfTheProduct" : "https://dc-qr.com/?m=R123456789",
-    "ManufacturerName" : {
+    "ManufacturerName" : [ {
       "de" : "Muster AG"
-    },
+    } ],
     "AddressInformation" : {
       "RoleOfContactPerson" : "technical contact",
-      "NationalCode" : {
+      "NationalCode" : [ {
         "en" : "DE"
-      },
-      "Languages" : "en",
+      } ],
+      "Languages" : [ "en" ],
       "TimeZone" : "-12:00",
-      "CityTown" : {
+      "CityTown" : [ {
         "de" : "Musterstadt"
-      },
-      "Company" : {
+      } ],
+      "Company" : [ {
         "en" : "ABC Company"
-      },
-      "Department" : {
+      } ],
+      "Department" : [ {
         "de" : "Vertrieb"
-      },
+      } ],
       "Phone" : {
-        "TelephoneNumber" : {
+        "TelephoneNumber" : [ {
           "de" : "+491234567890"
-        },
+        } ],
         "TypeOfTelephone" : "office",
-        "AvailableTime" : {
+        "AvailableTime" : [ {
           "de" : "Montag – Freitag 08:00 bis 16:00"
-        }
+        } ]
       },
       "Fax" : {
-        "FaxNumber" : {
+        "FaxNumber" : [ {
           "de" : "+491234567890"
-        },
+        } ],
         "TypeOfFaxNumber" : "office"
       },
       "Email" : {
-        "EmailAddress" : "email@muster-ag.de"
+        "EmailAddress" : "email@muster-ag.de",
+        "PublicKey" : [ {
+          "en" : "0x07"
+        } ],
+        "TypeOfEmailAddress" : "office",
+        "TypeOfPublicKey" : [ {
+          "en" : "RSA"
+        } ]
       },
       "IPCommunicationChannels" : [ {
-        "AddressOfAdditionalLink" : "U3",
+        "AddressOfAdditionalLink" : "8qVu",
         "TypeOfCommunication" : "Chat",
-        "availableTime" : {
+        "availableTime" : [ {
           "de" : "Montag – Freitag 08:00 bis 16:00"
-        }
+        } ]
       } ],
-      "Street" : {
+      "Street" : [ {
         "de" : "Musterstrasse 1"
-      },
-      "ZipCode" : {
+      } ],
+      "ZipCode" : [ {
         "de" : "12345"
-      },
-      "POBox" : {
+      } ],
+      "POBox" : [ {
         "de" : "PF 1234"
-      },
-      "ZipCodeOfPOBox" : {
+      } ],
+      "ZipCodeOfPOBox" : [ {
         "de" : "12345"
-      },
-      "StateCounty" : {
+      } ],
+      "StateCounty" : [ {
         "de" : "Muster-Bundesland"
-      },
-      "NameOfContact" : {
+      } ],
+      "NameOfContact" : [ {
         "en" : "Doe"
-      },
-      "FirstName" : {
+      } ],
+      "FirstName" : [ {
         "en" : "Jane"
-      },
-      "MiddleNames" : {
+      } ],
+      "MiddleNames" : [ {
         "en" : "M."
-      },
-      "Title" : {
+      } ],
+      "Title" : [ {
         "en" : "Mrs."
-      },
-      "AcademicTitle" : {
+      } ],
+      "AcademicTitle" : [ {
         "en" : "PhD"
-      },
-      "FurtherDetailsOfContact" : {
+      } ],
+      "FurtherDetailsOfContact" : [ {
         "de" : "-"
-      },
+      } ],
       "AddressOfAdditionalLink" : "https://example.com/information/product/1224/contact"
     },
     "SerialNumber" : "A12345-X75EN",
@@ -154,8 +161,8 @@
     "DateOfPuttingIntoService" : "2022-06-01",
     "UniqueFacilityIdentifier" : "987654321",
     "LifeCycleStage" : "original",
-    "OperatorIdentifier" : "KBIlBjiW",
-    "ManufacturerIdentifier" : "kQvghL",
+    "OperatorIdentifier" : "r",
+    "ManufacturerIdentifier" : "I",
     "Markings" : [ {
       "MarkingName" : "0173-1%2307-DAA603%23004",
       "DesignationOfCertificateOrApproval" : "KEMA99IECE X1105/128",
@@ -167,8 +174,8 @@
       },
       "MarkingAdditionalText" : "0044"
     } ],
-    "EUDeclarationOfConformity" : [ "RYnPVyxXI" ],
-    "ResultsOfTestReportsProvingCompliance" : [ "ReADzGV0c" ]
+    "EUDeclarationOfConformity" : [ "v" ],
+    "ResultsOfTestReportsProvingCompliance" : [ "DdfZQ" ]
   },
   "https://admin-shell.io/idta/cds/handoverDocumentation/1" : {
     "Documents" : [ {
@@ -180,23 +187,26 @@
       "DocumentClassifications" : [ {
         "ClassId" : "03-02",
         "ClassName" : [ {
-          "de" : "VbWZg"
+          "en" : "nS"
         } ],
         "ClassificationSystem" : "VDI2770 Blatt 1:2020"
       } ],
       "DocumentVersions" : [ {
-        "Language" : "en",
+        "Language" : [ "en" ],
         "Version" : "V1.2",
         "Title" : [ {
-          "de" : "6r"
+          "de" : "RP0tu"
         } ],
         "Subtitle" : [ {
-          "en" : "CA2ssRbQ"
+          "en" : "Grhf"
         } ],
         "Description" : [ {
-          "de" : "ifI"
+          "en" : "Upb"
         } ],
-        "DigitalFiles" : [ { } ]
+        "DigitalFiles" : [ {
+          "value" : "https://example.com/SafetyInstructions.pdf",
+          "contentType" : "application/pdf"
+        } ]
       } ]
     } ]
   },
@@ -220,8 +230,11 @@
       "HazardousSubstanceName" : "Cobalt (Co)",
       "HazardousSubstanceIdentifier" : "346417-97-8",
       "HazardousSubstanceConcentration" : 20.0,
-      "HazardousSubstanceImpact" : [ "ZGu" ],
-      "HazardousSubstanceLocation" : { }
+      "HazardousSubstanceImpact" : [ "jDNsbN" ],
+      "HazardousSubstanceLocation" : {
+        "ComponentName" : "Anode",
+        "ComponentId" : "1234-344"
+      }
     } ]
   },
   "https://admin-shell.io/idta/cds/productCondition/1" : {
@@ -253,7 +266,7 @@
       "NegativeEventValue" : "overcharged",
       "LastUpdate" : "2000-01-01T14:23:00"
     } ],
-    "InformationOnAccidents" : [ "4A" ],
+    "InformationOnAccidents" : [ "VtRj8q" ],
     "TemperatureInformation" : {
       "MeasuredTemp" : 20.0,
       "TimeExtremeHighTemp" : 0.0,
@@ -289,18 +302,21 @@
   },
   "https://admin-shell.io/idta/cds/technicalData/1" : {
     "GeneralInformation" : {
-      "ManufacturerName" : "AN",
-      "CompanyLogo" : "https://example.com/KSqv43",
-      "ManufacturerIdentifier" : "e7gJzFSsA",
+      "ManufacturerName" : "UM",
+      "CompanyLogo" : "https://example.com/tXoS5Wpvpo",
+      "ManufacturerIdentifier" : "l0Lv7URY2a",
       "WarrantyInformation" : {
         "WarrantyPeriod" : "P96M"
       },
       "BatteryCategory" : "ev",
       "BatteryMass" : 1007.0,
       "ProductImages" : [ {
-        "ImageFile" : { },
+        "ImageFile" : {
+          "value" : "https://example.com/SafetyInstructions.pdf",
+          "contentType" : "application/pdf"
+        },
         "ImageNote" : [ {
-          "en" : "0aka"
+          "de" : "WHyPbr"
         } ]
       } ]
     },
@@ -344,8 +360,8 @@
         "ExpectedLifetimeInCalendarYears" : 15,
         "ExpectedNumberOfCycles" : 1000,
         "CapacityThresholdExhaustion" : 23.0,
-        "CycleLifeReferenceTest" : [ "SaD95J6XTo" ],
-        "CrateOfRelevantCycleLifeTest" : -47393.8
+        "CycleLifeReferenceTest" : [ "995K0dbrk" ],
+        "CrateOfRelevantCycleLifeTest" : -57936.2
       }
     }
   }
