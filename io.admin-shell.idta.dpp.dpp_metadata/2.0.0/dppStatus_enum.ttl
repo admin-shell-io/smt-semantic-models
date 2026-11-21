@@ -1,0 +1,60 @@
+######################################################################
+# Copyright (c) 2025 Robert Bosch Manufacturing Solutions GmbH
+# Copyright (c) 2025 Industrial Digital Twin Association
+# This work  is made available under the terms of the
+# Creative Commons Attribution 4.0 International (CC BY 4.0) license,
+# which is available at
+# https://creativecommons.org/licenses/by/4.0/.
+# SPDX-License-Identifier: CC-BY-4.0
+#
+# Based on DPP Registry Semantic Guide, 30 October 2026, V1.0. DG GROW G2/B3
+#######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.2.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#> .
+@prefix samm-e: <urn:samm:org.eclipse.esmf.samm:entity:2.2.0#> .
+@prefix unit: <urn:samm:org.eclipse.esmf.samm:unit:2.2.0#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dppins: <https://repository.product-passport.ec.europa.eu/core/vocabs/instance-status#> .
+@prefix : <urn:samm:io.admin-shell.idta.dpp.dpp_metadata:2.0.0#> .
+
+
+  
+:DPPStatusEnum a samm-c:Enumeration ;
+   samm:preferredName "Instance Status Vocabulary"@en ;
+   samm:description """
+   Vocabulary of digital product passport instance status concepts.
+   
+   SOURCE: http://data.europa.eu/eli/reg_impl/2026/1778/oj
+   REFERENCES: EN 18223:2026(en)  
+   """@en ;
+   samm:see <https://repository.product-passport.ec.europa.eu/core/vocabs/instance-status> ;
+   samm:dataType xsd:string ;
+   samm-c:values (
+     :ValidStatus
+	 :InvalidStatus
+   ) .
+ 
+
+:DPPStatusTrait a samm-c:Trait ;
+   samm-c:baseCharacteristic samm-c:Text ;
+   samm-c:constraint :DPPStatusPattern .
+   
+:DPPStatusPattern a samm-c:RegularExpressionConstraint ;
+  samm:preferredName "DPP status pattern"@en ;
+  samm:description "Pattern for DPP status."@en ;
+  samm:value "^https://repository.product-passport.ec.europa.eu/core/vocabs/instance-status#[a-zA-Z]+$" .
+ 
+
+:ValidStatus a samm:Value ;
+   samm:see <https://repository.product-passport.ec.europa.eu/core/vocabs/instance-status#validStatus> ;
+   samm:value "https://repository.product-passport.ec.europa.eu/core/vocabs/instance-status#validStatus" ;
+   samm:preferredName "valid status"@en .
+   
+:InvalidStatus a samm:Value ;
+   samm:see <https://repository.product-passport.ec.europa.eu/core/vocabs/instance-status#invalidStatus> ;
+   samm:value "https://repository.product-passport.ec.europa.eu/core/vocabs/instance-status#invalidStatus" ;
+   samm:preferredName "invalid status"@en .
+ 
