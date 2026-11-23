@@ -31,7 +31,8 @@ All notable changes to this model will be documented in this section.
 
 Major changes:
 
-* make hazardousSubstanceConcentration optional again ([#171](https://github.com/admin-shell-io/smt-semantic-models/issues/171))
+* CHANGE: make hazardousSubstanceConcentration optional again ([#171](https://github.com/admin-shell-io/smt-semantic-models/issues/171))
+* CHANGE: extend description of :batteryMaterials: include that critical raw material must be reported if present in the battery in a concentration of more than 0,1% weight by weight.
 
 ## [1.0.2] - October 2026
 
