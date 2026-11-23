@@ -1,0 +1,2895 @@
+{
+  "$schema" : "http://json-schema.org/draft-04/schema",
+  "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#BatteryPass",
+  "description" : "Provides Battery Passport conformant to DIN DKE Spec 99100 and CEN CENELEC EN 18223.",
+  "type" : "object",
+  "components" : {
+    "schemas" : {
+      "Text" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Text",
+        "description" : "Describes a Property which contains plain text. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+      },
+      "GranularityEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.1#GranularityEnum",
+        "description" : "\r\n   Enumeration for granularity.\r\n   \r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
+        "enum" : [ "Model", "Batch", "Item" ]
+      },
+      "Timestamp" : {
+        "type" : "string",
+        "pattern" : "-?([1-9][0-9]{3,}|0[0-9]{3})-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])T(([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?|(24:00:00(\\.0+)?))(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))?",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Timestamp",
+        "description" : "Describes a Property which contains the date and time with an optional timezone."
+      },
+      "ContentSpecificationIdSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.1#ContentSpecificationIdSet",
+        "type" : "array",
+        "items" : {
+          "type" : "string",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.1#ContentSpecificationId",
+          "description" : "\r\n   Reference to horizontal or product-type related content specification for the DPP.\r\n   \r\n   SOURCE: EN 18223:2026(en)  \r\n   "
+        },
+        "uniqueItems" : true
+      },
+      "PcfCalculationMethodSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.2#PcfCalculationMethodSet",
+        "type" : "array",
+        "items" : {
+          "type" : "string",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.2#PcfCalculationMethodCharacteristic",
+          "description" : "Standard, method for determining the greenhouse gas emissions of a product. Multiple standards can be listed in case these standards are all applied to the respective PCF calculation."
+        },
+        "uniqueItems" : true
+      },
+      "PcfCo2eqCharacteristic" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.2#PcfCo2eqCharacteristic"
+      },
+      "ReferenceImpactUnitForCalculationEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.2#ReferenceImpactUnitForCalculationEnum",
+        "enum" : [ "g", "kg", "t", "ml", "l", "cbm", "qm", "piece", "kWh" ]
+      },
+      "QuantityOfMeasureForCalculationCharacteristic" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.2#QuantityOfMeasureForCalculationCharacteristic"
+      },
+      "LifeCyclePhaseSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.2#LifeCyclePhaseSet",
+        "type" : "array",
+        "items" : {
+          "type" : "string",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.2#LifeCyclePhaseEnum",
+          "enum" : [ "A1 - raw material supply (and upstream production)", "A1-A3", "A3 - production", "A4 - transport to final destination", "A4-A5", "A5 - Installation", "B1 - usage phase", "B1-B7", "B2 - maintenance", "B3 - repair", "B4 - Replacement", "B5 - update/upgrade, refurbishing", "B6 - usage energy consumption", "B7 - usage water consumption", "C1 - reassembly", "C1-C4", "C2 - transport to recycler", "C2-C4", "C3 - recycling, waste treatment", "C4 - landfill", "D - reuse" ]
+        },
+        "uniqueItems" : true
+      },
+      "PerformanceClassCharacteristic" : {
+        "type" : "string"
+      },
+      "DocumentIdentifierSet" : {
+        "description" : "Each document is uniquely discoverable via its identifier. If more information is needed, please refer to the 'Handover Documentation'.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#DocumentIdentifierSet",
+        "type" : "array",
+        "items" : {
+          "type" : "string",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#DocumentIdentifierSetTrait",
+          "description" : "Alphanumeric character sequence uniquely identifying a document.",
+          "minLength" : 1
+        },
+        "uniqueItems" : true
+      },
+      "ProductCarbonFootprint" : {
+        "description" : "Balance of greenhouse gas emissions along the entire life cycle of a product in a defined application and in relation to a defined unit of use.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.carbon_footprint:1.0.2#ProductCarbonFootprint",
+        "type" : "object",
+        "properties" : {
+          "PcfCalculationMethods" : {
+            "description" : "Standards, methods for determining the greenhouse gas emissions of a product.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.carbon_footprint:1.0.2#pcfCalculationMethods",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/PcfCalculationMethodSet"
+            } ]
+          },
+          "PcfCo2eq" : {
+            "description" : "sum of all greenhouse gas emissions of a product according to the quantification requirements of the standard\n\n DIN DKE Spec 99100 chapter reference: 6.3.2",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.carbon_footprint:1.0.2#pcfCo2eq",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/PcfCo2eqCharacteristic"
+            } ]
+          },
+          "ReferenceImpactUnitForCalculation" : {
+            "description" : "Quantity unit of the product to which the PCF information on the CO2 footprint refers.\n\n If a normalized product carbon footprint (PCF) value is provided, the reference value for calculation should be a specific unit such as 'kWh'. If the total PCF value is provided the reference value for calculation should be 'piece'.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.carbon_footprint:1.0.2#referenceImpactUnitForCalculation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ReferenceImpactUnitForCalculationEnum"
+            } ]
+          },
+          "QuantityOfMeasureForCalculation" : {
+            "description" : "Provides the quantity number of pieces or mass or volume to compute the impact of climate change or product carbon footprint.\n\n If a normalized product carbon footprint (PCF) value is provided, the quantity of measure for calculation should be 1.\n If the total PCF value is provided the quantity of measure for calculation should be 1.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.carbon_footprint:1.0.2#quantityOfMeasureForCalculation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/QuantityOfMeasureForCalculationCharacteristic"
+            } ]
+          },
+          "LifeCyclePhases" : {
+            "description" : "Life cycle stages of the product according to the quantification requirements of the standard to which the PCF carbon footprint statement refers.\n\nThe string value in the value list is based on DIN DKE SPEC 99100: 'A1 - raw material supply (and upstream production)' (6.3.5 required lify cycle mapping), 'A3 - production' (6.3.4 Contribution of main product production/manufacturing lifecycle stage), 'A4 - transport to final destination' (6.3.5 Contribution of distribution lifecycle stage), 'C3 - recycling, waste treatment' (6.3.6 Contribution of end of life and recycling lifecycle stage)\n\nPlease note that the model should always contain at least one Product Carbon Footprint entry that reflects the total PCF value (including all life cycle phases) of the battery.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.carbon_footprint:1.0.2#lifeCyclePhases",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/LifeCyclePhaseSet"
+            } ]
+          },
+          "PerformanceClass" : {
+            "description" : "The battery passport must include the carbon footprint performance class in accordance with the entry into force of the delegated and implementing acts on the carbon footprint performance classes per Article7 of the Battery Regulation.\n\n DIN DKE Spec 99100 chapter reference: 6.3.7 ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.carbon_footprint:1.0.2#performanceClass",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/PerformanceClassCharacteristic"
+            } ]
+          },
+          "WebLinkToPublicCarbonFootprintStudy" : {
+            "description" : "One or more document identifiers (depending, for example, on the translation) of a specific document, which can be found in the 'HandoverDocumentation' model.\n\n DIN DKE Spec 99100 chapter reference: 6.3.8",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.carbon_footprint:1.0.2#webLinkToPublicCarbonFootprintStudy",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/DocumentIdentifierSet"
+            } ]
+          }
+        },
+        "required" : [ "PcfCalculationMethods", "PcfCo2eq", "ReferenceImpactUnitForCalculation", "QuantityOfMeasureForCalculation", "LifeCyclePhases", "PerformanceClass", "WebLinkToPublicCarbonFootprintStudy" ]
+      },
+      "ProductCarbonFootprintSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.carbon_footprint:1.0.2#ProductCarbonFootprintSet",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/ProductCarbonFootprint"
+        },
+        "uniqueItems" : true
+      },
+      "CarbonFootprint" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#CarbonFootprint",
+        "type" : "object",
+        "properties" : {
+          "ProductCarbonFootprints" : {
+            "description" : "(Set) Balance of greenhouse gas emissions along the entire life cycle of a product in a defined application and in relation to a defined unit of use.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.carbon_footprint:1.0.2#productCarbonFootprints",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ProductCarbonFootprintSet"
+            } ]
+          }
+        },
+        "required" : [ "ProductCarbonFootprints" ]
+      },
+      "CarbonFootprintCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#CarbonFootprintCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/CarbonFootprint"
+        } ]
+      },
+      "MultiLanguageTexts" : {
+        "description" : "A set of language-text items.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.0#MultiLanguageTexts",
+        "type" : "array",
+        "items" : {
+          "type" : "object",
+          "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#MultiLanguageText",
+          "description" : "Describes a Property which contains plain text in multiple languages. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+        },
+        "uniqueItems" : true
+      },
+      "PostalAddress" : {
+        "description" : "Postal address.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#PostalAddress",
+        "type" : "object",
+        "properties" : {
+          "NationalCode" : {
+            "description" : "Code of a country (Country codes defined accord. to DIN EN ISO 3166-1).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#nationalCode",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
+          },
+          "PostalCode" : {
+            "description" : "postal code of address.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#postalCode",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
+          },
+          "Street" : {
+            "description" : "Street name and house number.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#street",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
+          }
+        },
+        "required" : [ "NationalCode", "PostalCode", "Street" ]
+      },
+      "AddressOfSupplier" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#AddressOfSupplier",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/PostalAddress"
+        } ]
+      },
+      "EmailEntity" : {
+        "description" : "E-mail address and encryption method.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#EmailEntity",
+        "type" : "object",
+        "properties" : {
+          "EmailAddress" : {
+            "description" : "Electronic mail address of a business partner.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#emailAddress",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "PublicKey" : {
+            "description" : "Public part of an unsymmetrical key pair to sign or encrypt text or messages.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#publicKey",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
+          },
+          "TypeOfEmailAddress" : {
+            "description" : "Characterization of an e-mail address according to its location or usage\nenumeration: 0173-1#07-AAS754#001 (office), 0173-1#07-AAS756#001 (secretary), 0173-1#07-AAS757#001 (substitute), 0173-1#07-AAS758#001 (home).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#typeOfEmailAddress",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "TypeOfPublicKey" : {
+            "description" : "Characterization of a public key according to its encryption process.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#typeOfPublicKey",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
+          }
+        },
+        "required" : [ "EmailAddress" ]
+      },
+      "EmailCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#EmailCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/EmailEntity"
+        } ]
+      },
+      "PartNumber" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#PartNumber"
+      },
+      "Component" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#Component",
+        "type" : "object",
+        "properties" : {
+          "PartName" : {
+            "description" : "Name of the part.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#partName",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "PartNumber" : {
+            "description" : "Part number of a component.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#partNumber",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/PartNumber"
+            } ]
+          }
+        },
+        "required" : [ "PartName", "PartNumber" ]
+      },
+      "ComponentList" : {
+        "description" : "List of components available at supplier",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#ComponentList",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Component"
+        }
+      },
+      "SparePartSupplier" : {
+        "description" : "The part numbers for components should be provided together with the postal address, e-mail address and web address of the sources for spare parts. \n\nDIN DKE Spec 99100 chapter reference: 6.6.1.3",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#SparePartSupplier",
+        "type" : "object",
+        "properties" : {
+          "NameOfSupplier" : {
+            "description" : "Name of the company.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#company",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts"
+            } ]
+          },
+          "AddressOfSupplier" : {
+            "description" : "Postal address of supplier for spare parts.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#addressOfSupplier",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/AddressOfSupplier"
+            } ]
+          },
+          "EmailAddressOfSupplier" : {
+            "description" : "E-mail address and encryption method.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#email",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/EmailCharacteristic"
+            } ]
+          },
+          "SupplierWebAddress" : {
+            "description" : "Web site address where information about the product or contact is given.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.0#addressOfAdditionalLink",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "Components" : {
+            "description" : "Components available at supplier",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#components",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ComponentList"
+            } ]
+          }
+        },
+        "required" : [ "NameOfSupplier", "AddressOfSupplier", "EmailAddressOfSupplier", "SupplierWebAddress", "Components" ]
+      },
+      "SparePartSourcesList" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#SparePartSourcesList",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/SparePartSupplier"
+        }
+      },
+      "PreConsumerShareTrait" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#PreConsumerShareTrait",
+        "maximum" : 100.0,
+        "exclusiveMaximum" : false,
+        "minimum" : 0.0,
+        "exclusiveMinimum" : false
+      },
+      "RecycledMaterial" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#RecycledMaterial",
+        "enum" : [ "Cobalt", "Nickel", "Lithium", "Lead", "Cobalt", "Nickel", "Lithium", "Lead" ]
+      },
+      "PostConsumerShareTrait" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#PostConsumerShareTrait",
+        "maximum" : 100.0,
+        "exclusiveMaximum" : false,
+        "minimum" : 0.0,
+        "exclusiveMinimum" : false
+      },
+      "RecycledContent" : {
+        "description" : "A battery passport must include recycled content information.\n\nThe content information must include the percentage share of nickel that is present in active materials and that has been recovered from battery manufacturing waste, for each battery model per year and per manufacturing plant.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#RecycledContent",
+        "type" : "object",
+        "properties" : {
+          "PreConsumerShare" : {
+            "description" : "Recycled material share from pre-consumer waste (manufacturing waste, excluding run-around scrap) of the active material.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#preConsumerShare",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/PreConsumerShareTrait"
+            } ]
+          },
+          "RecycledMaterial" : {
+            "description" : "Name of recycled material",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#recycledMaterial",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/RecycledMaterial"
+            } ]
+          },
+          "PostConsumerShare" : {
+            "description" : "Recycled material share from post-consumer waste (end-of-life scrap) of the active material.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#postConsumerShare",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/PostConsumerShareTrait"
+            } ]
+          }
+        },
+        "required" : [ "PreConsumerShare", "RecycledMaterial", "PostConsumerShare" ]
+      },
+      "RecycledContentList" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#RecycledContentList",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/RecycledContent"
+        }
+      },
+      "ExtinguishingAgentsList" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#ExtinguishingAgentsList",
+        "type" : "array",
+        "items" : {
+          "type" : "string",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#ExtinguishingAgent",
+          "description" : "Extinguishing agent."
+        }
+      },
+      "SafetyMeasuresEntity" : {
+        "description" : "The safety measures should be provided via the instruction manual as URL linking to PDF.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#SafetyMeasuresEntity",
+        "type" : "object",
+        "properties" : {
+          "SafetyInstructions" : {
+            "description" : "Necessary safety instructions to handle waste batteries, including in relation to the risks associated with, and the handling of, batteries containing lithium.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#safetyInstructions",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/DocumentIdentifierSet"
+            } ]
+          },
+          "ExtinguishingAgents" : {
+            "description" : "Usable extinguishing agents refering to classes of extinguishers (A, B, C, D, K). EUBR: Annex XIII (1a), Annex VI Part A (9)",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#extinguishingAgents",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ExtinguishingAgentsList"
+            } ]
+          }
+        },
+        "required" : [ "SafetyInstructions", "ExtinguishingAgents" ]
+      },
+      "SafetyMeasures" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#SafetyMeasures",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/SafetyMeasuresEntity"
+        } ]
+      },
+      "EndOfLifeInformationEntity" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#EndOfLifeInformationEntity",
+        "type" : "object",
+        "properties" : {
+          "WastePrevention" : {
+            "description" : "Prevention and management of waste batteries: Point (a) of Article 60(1): Information on the role of end-users in contributing to waste prevention, including by information on good practices and recommendations concerning the use of batteries aiming at extending their use phase and the possibilities of re-use, preparing for re-use, preparing for repurpose, repurposing and remanufacturing",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#wastePrevention",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/DocumentIdentifierSet"
+            } ]
+          },
+          "SeparateCollection" : {
+            "description" : "Prevention and management of waste batteries: Point (b) of Article 60(1): Information on the role of end-users in contributing to the separate collection of waste batteries in accordance with their obligations under Article 51 so as to allow their treatment",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#separateCollection",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/DocumentIdentifierSet"
+            } ]
+          },
+          "InformationOnCollection" : {
+            "description" : "Prevention and management of waste batteries: Point (c) of Article 60(1): information on the separate collection, the take back, the collection points and preparing for re-use, preparing for repurposing, and recycling operations available for waste batteries",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#informationOnCollection",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/DocumentIdentifierSet"
+            } ]
+          }
+        },
+        "required" : [ "WastePrevention", "SeparateCollection", "InformationOnCollection" ]
+      },
+      "EndOfLifeInformation" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#EndOfLifeInformation",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/EndOfLifeInformationEntity"
+        } ]
+      },
+      "RenewableContent" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#RenewableContent"
+      },
+      "Circularity" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#Circularity",
+        "type" : "object",
+        "properties" : {
+          "DismantlingAndRemovalInformation" : {
+            "description" : "\r\n   Dismantling and Removal information, including at least:\r\n   * Exploded diagrams of the battery system/pack showing the location of battery cells\r\n   * Disassembly sequences\r\n   * Type and number of fastening techniques to be unlocked\r\n   * Tools required for disassembly\r\n   * Warnings if risk of damaging parts exists\r\n   * Amount of cells used and layout. \r\n   \r\n   BR Annex XIII (2c)\n\nDIN DKE Spec 99100 chapter reference: 6.6.1.2\r\n   \r\n    > NOTE: For more information on the document identified by its document ID please refer to the Handover Documentation of the battery.\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#dismantlingAndRemovalInformation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/DocumentIdentifierSet"
+            } ]
+          },
+          "SparePartSources" : {
+            "description" : "Contact details of sources for replacement spares. Postal address, including name and brand names, postal code and place, street and number, country, telephone, if any. BR Annex XIII (2b)\n\nDIN DKE Spec 99100 chapter reference: 6.6.1.3",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#sparePartSources",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/SparePartSourcesList"
+            } ]
+          },
+          "RecycledContentInformation" : {
+            "description" : "Share of material recovered from waste present in active materials for each battery model per year and per manufacturing plant.\n\nDIN DKE Spec 99100 chapter reference:  6.6.2.3 - 6.6.2.10",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#recycledContent",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/RecycledContentList"
+            } ]
+          },
+          "SafetyMeasures" : {
+            "description" : "Safety measures and instructions should also take past negative and extreme events as well as the separate data attributes 'battery status' and 'battery composition/chemistry' into account.\n\nDIN DKE Spec 99100 chapter reference: 6.6.1.5",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#safetyMeasures",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/SafetyMeasures"
+            } ]
+          },
+          "EndOfLifeInformation" : {
+            "description" : "Producer or producer responsibility organisations shall make information available to distributors and end-users on: the role of end-users in contributing to waste prevention, including by information on good practices and recommendations concerning the use of batteries aiming at extending their use phase and the possibilities of re-use, preparing for re-use, preparing for repurpose, repurposing and remanufacturing.\n\nDIN DKE Spec 99100 chapter reference: 6.6.3.2 - 6.6.3.4",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#endOfLifeInformation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/EndOfLifeInformation"
+            } ]
+          },
+          "RenewableContent" : {
+            "description" : "Share of renewable material content. A renewable material is a material made of natural resources that can be replenished. \n\nDIN DKE Spec 99100 chapter reference: 6.6.2.11",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.circularity:1.0.1#renewableContent",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/RenewableContent"
+            } ]
+          }
+        },
+        "required" : [ "DismantlingAndRemovalInformation", "SparePartSources", "RecycledContentInformation", "SafetyMeasures", "EndOfLifeInformation", "RenewableContent" ]
+      },
+      "CircularityCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#CircularityCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/Circularity"
+        } ]
+      },
+      "Uri" : {
+        "type" : "string",
+        "format" : "uri",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.1#Uri"
+      },
+      "MultiLanguageTexts0" : {
+        "description" : "A set of language-text items.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#MultiLanguageTexts",
+        "type" : "array",
+        "items" : {
+          "type" : "object",
+          "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#MultiLanguageText",
+          "description" : "Describes a Property which contains plain text in multiple languages. This is intended exclusively for human readable strings, not for identifiers, measurement values, etc."
+        },
+        "uniqueItems" : true
+      },
+      "RoleOfContactPersonCharacteristic" : {
+        "type" : "string"
+      },
+      "LanguageSetTrait" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#LanguageSetTrait",
+        "type" : "array",
+        "items" : {
+          "type" : "string",
+          "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Locale",
+          "description" : "Describes a Property containing a locale according to IETF BCP 47, for example \"de-DE\"."
+        },
+        "uniqueItems" : true,
+        "minItems" : 1
+      },
+      "PhoneEntity" : {
+        "description" : "Phone number including type.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#PhoneEntity",
+        "type" : "object",
+        "properties" : {
+          "TelephoneNumber" : {
+            "description" : "Complete telephone number to be called to reach a business partner.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#telephoneNumber",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "TypeOfTelephone" : {
+            "description" : "Characterization of a telephone according to its location or usage.\nenumeration: 0173-1#07-AAS754#001 (office), 0173-1#07-AAS755#001 (office mobile), 0173-1#07-AAS756#001 (secretary), 0173-1#07-AAS757#001 (substitute), 0173-1#07-AAS758#001 (home), 0173-1#07-AAS759#001 (private mobile).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#typeOfTelephone",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "AvailableTime" : {
+            "description" : "Specification of the available time window.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#availableTime",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          }
+        },
+        "required" : [ "TelephoneNumber" ]
+      },
+      "PhoneCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#PhoneCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/PhoneEntity"
+        } ]
+      },
+      "FaxEntity" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#FaxEntity",
+        "type" : "object",
+        "properties" : {
+          "FaxNumber" : {
+            "description" : "Complete telephone number to be called to reach a business partner's fax machine.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#faxNumber",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "TypeOfFaxNumber" : {
+            "description" : "Characterization of the fax according its location or usage\nenumeration: 0173-1#07-AAS754#001 (office), 0173-1#07-AAS756#001 (secretary), 0173-1#07-AAS758#001 (home).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#typeOfFaxNumber",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          }
+        },
+        "required" : [ "FaxNumber" ]
+      },
+      "FaxCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#FaxCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/FaxEntity"
+        } ]
+      },
+      "EmailEntity0" : {
+        "description" : "E-mail address and encryption method.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#EmailEntity",
+        "type" : "object",
+        "properties" : {
+          "EmailAddress" : {
+            "description" : "Electronic mail address of a business partner.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#emailAddress",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "PublicKey" : {
+            "description" : "Public part of an unsymmetrical key pair to sign or encrypt text or messages.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#publicKey",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "TypeOfEmailAddress" : {
+            "description" : "Characterization of an e-mail address according to its location or usage\nenumeration: 0173-1#07-AAS754#001 (office), 0173-1#07-AAS756#001 (secretary), 0173-1#07-AAS757#001 (substitute), 0173-1#07-AAS758#001 (home).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#typeOfEmailAddress",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "TypeOfPublicKey" : {
+            "description" : "Characterization of a public key according to its encryption process.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#typeOfPublicKey",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          }
+        },
+        "required" : [ "EmailAddress" ]
+      },
+      "EmailCharacteristic0" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#EmailCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/EmailEntity0"
+        } ]
+      },
+      "IpCommunicationChannelEntity" : {
+        "description" : "IP-based communication channels, e.g. chat or video call.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#IpCommunicationChannelEntity",
+        "type" : "object",
+        "properties" : {
+          "AddressOfAdditionalLink" : {
+            "description" : "Web site address where information about the product or contact is given.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#addressOfAdditionalLinkOfIpCommunicationChannel",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "TypeOfCommunication" : {
+            "description" : "Characterization of an IP-based communication channel.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#typeOfCommunication",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "availableTime" : {
+            "description" : "Specification of the available time windows.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#availableTimeIpCommunicationChannel",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          }
+        },
+        "required" : [ "AddressOfAdditionalLink" ]
+      },
+      "IpCommunicationChannelSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#IpCommunicationChannelSet",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/IpCommunicationChannelEntity"
+        },
+        "uniqueItems" : true
+      },
+      "AdressInformation" : {
+        "description" : "Contains information on how to contact the manufacturer or an authorised service provider, e.g. when a maintenance service is required.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.1#AdressInformation",
+        "type" : "object",
+        "properties" : {
+          "RoleOfContactPerson" : {
+            "description" : "\r\n\tFunction of a contact person in a process.\r\n\t\r\n\tPossible values: \r\n\t\t0173-1#07-AAS927#001 (administrative contact), \r\n\t\t0173-1#07-AAS928#001 (commercial contact), \r\n\t\t0173-1#07-AAS929#001 (other contact), \r\n\t\t0173-1#07-AAS930#001 (hazardous goods contact), \r\n\t\t0173-1#07-AAS931#001 (technical contact)\r\n\t\t\r\n\t\tNote: the above-mentioned list of values is open to future additions.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#roleOfContactPerson",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/RoleOfContactPersonCharacteristic"
+            } ]
+          },
+          "NationalCode" : {
+            "description" : "Code of a country (Country codes defined accord. to DIN EN ISO 3166-1).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#nationalCode",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "Languages" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#languages",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/LanguageSetTrait"
+            } ]
+          },
+          "TimeZone" : {
+            "description" : "Offsets from Coordinated Universal Time (UTC)\nNote: notation accord. to ISO 8601\nNote: for time in UTC the zone designator 'Z' is to be used.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#timeZone",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "CityTown" : {
+            "description" : "Town or city.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#cityTown",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "Company" : {
+            "description" : "Name of the company.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#company",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "Department" : {
+            "description" : "Administrative section within an organisation where a business partner is located.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#department",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "Phone" : {
+            "description" : "Phone number including type.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#phone",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/PhoneCharacteristic"
+            } ]
+          },
+          "Fax" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#fax",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/FaxCharacteristic"
+            } ]
+          },
+          "Email" : {
+            "description" : "E-mail address and encryption method.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#email",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/EmailCharacteristic0"
+            } ]
+          },
+          "IPCommunicationChannels" : {
+            "description" : "IP-based communication channels, e.g. chat or video call.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#ipCommunicationChannels",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/IpCommunicationChannelSet"
+            } ]
+          },
+          "Street" : {
+            "description" : "Street name and house number.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#street",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "ZipCode" : {
+            "description" : "ZIP code of address.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#zipCode",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "POBox" : {
+            "description" : "P.O. box number.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#poBox",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "ZipCodeOfPOBox" : {
+            "description" : "ZIP code of address.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#zipCodeOfPoBox",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "StateCounty" : {
+            "description" : "Federal state, a part of a state.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#stateCounty",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "NameOfContact" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#nameOfContact",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "FirstName" : {
+            "description" : "First name of a contact person.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#firstName",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "MiddleNames" : {
+            "description" : "Middle names of contact person.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#middleNames",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "Title" : {
+            "description" : "Common, formal, religious, or other title preceding a contact person's name.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#title",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "AcademicTitle" : {
+            "description" : "Academic title preceding a contact person's name.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#academicTitle",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "FurtherDetailsOfContact" : {
+            "description" : "Additional information of the contact person.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#furtherDetailsOfContact",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "AddressOfAdditionalLink" : {
+            "description" : "Web site address where information about the product or contact is given.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.contact_information:1.0.1#addressOfAdditionalLink",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          }
+        },
+        "required" : [ "NationalCode", "CityTown", "Street", "ZipCode" ]
+      },
+      "AddressInformationCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.1#AddressInformationCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/AdressInformation"
+        } ]
+      },
+      "Date" : {
+        "type" : "string",
+        "format" : "date",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.digital_nameplate:3.0.1#Date"
+      },
+      "PuttingIntoServiceDate" : {
+        "type" : "string",
+        "format" : "date",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.1#PuttingIntoServiceDate"
+      },
+      "BatteryStatusEnumeration" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.1#BatteryStatusEnumeration",
+        "description" : "Lifecycle status of the battery. Status defined from a list, with the options suggested as follows: 'original', 'repurposed', 'reused', 'remanufactured', 'waste'\n\nEUBR: Annex XIII (4c)",
+        "enum" : [ "original", "repurposed", "re-used", "remanufactured", "waste" ]
+      },
+      "Date0" : {
+        "type" : "string",
+        "format" : "date",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#Date",
+        "description" : "Date in format CCYY-MM-DD."
+      },
+      "ResourcePath" : {
+        "type" : "string",
+        "format" : "uri",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#ResourcePath",
+        "description" : "The path of a resource."
+      },
+      "MimeType" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#MimeType",
+        "description" : "A MIME type as defined in RFC 2046, for example \"application/pdf\"."
+      },
+      "FileWithContentType" : {
+        "description" : "A file is a data element that represents an address to a file (a locator). The value is a URI that can represent an absolute or relative path.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#FileWithContentType",
+        "type" : "object",
+        "properties" : {
+          "value" : {
+            "description" : "Path and name of the file (with file extension).\n\nThe path can be absolute or relative.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#resourceValue",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ResourcePath"
+            } ]
+          },
+          "contentType" : {
+            "description" : "Content type of the content of the file or blob.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#contentType",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MimeType"
+            } ]
+          }
+        }
+      },
+      "Marking" : {
+        "description" : "Single marking information. \r\n   \r\n   Note: CE marking is declared as mandatory according to the Blue Guide of the EU-Commission",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#Marking",
+        "type" : "object",
+        "properties" : {
+          "MarkingName" : {
+            "description" : "Common name of the marking.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#markingName",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "DesignationOfCertificateOrApproval" : {
+            "description" : "Alphanumeric character sequence identifying a certificate or approval.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#designationOfCertificateOrApproval",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "IssueDate" : {
+            "description" : "Date, at which the specified certificate is issued. Note: format by lexical representation: CCYY-MM-DD. Note: to be specified to the day.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#issueDate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Date0"
+            } ]
+          },
+          "ExpiryDate" : {
+            "description" : "Date, at which the specified certificate expires. Note: format by lexical representation: CCYY-MM-DD. Note: to be specified to the day.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#expiryDate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Date0"
+            } ]
+          },
+          "MarkingFile" : {
+            "description" : "Conformity symbol of the marking.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#markingFile",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/FileWithContentType"
+            } ]
+          },
+          "MarkingAdditionalText" : {
+            "description" : "Where applicable, additional information on the marking in plain text, e.g. the ID-number of the notified body involved in the conformity process.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#markingAdditionalText",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          }
+        },
+        "required" : [ "MarkingName", "MarkingFile" ]
+      },
+      "Markings" : {
+        "description" : "Note: CE marking is declared as mandatory according to EU Blue Guide.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#Markings",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Marking"
+        },
+        "uniqueItems" : true
+      },
+      "DigitalNameplate" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#DigitalNameplate",
+        "type" : "object",
+        "properties" : {
+          "URIOfTheProduct" : {
+            "description" : "\r\n\tUnique global identification of the product instance using an universal resource identifier (URI).\r\n\r\n\tThe battery passport identifier is the unique identifier of a battery passport.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.1.2.1\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.1#uriOfTheProduct",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Uri"
+            } ]
+          },
+          "ManufacturerName" : {
+            "description" : "\r\n\tLegally valid designation of the natural or judicial person which is directly responsible for the design, production, packaging and labeling of a product in respect to its being brought into circulation.\r\n\t\r\n\tInformation identifying the manufacturer with a name.Information identifying the manufacturer with a name.\r\n\t\r\n\t\n DIN DKE Spec 99100:2025-02 chapter reference: 6.1.2.1\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.1#manufacturerName",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "AddressInformation" : {
+            "description" : "\r\n    The manufacturer information postal address, indicating a single contact point. \r\n\tWeb address, if available; and e-mail address, if available.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.1.2.3\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.1#addressInformation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/AddressInformationCharacteristic"
+            } ]
+          },
+          "SerialNumber" : {
+            "description" : "\r\n\tUnique combination of numbers and letters used to identify the device once it has been manufactured.\r\n\t\r\n\tThe battery identifier should be serialised, i.e., identifying each battery via a serial number.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.1.2.2\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.1#serialNumber",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "DateOfManufacture" : {
+            "description" : "\r\n\tDate when an item was manufactured.\n\n The manufacturing date should not only relate to the battery model, but to the battery item. \r\n\t\r\n\tThe date code should comply with DIN ISO 8601-1:2020-12 and ISO 8601-2:2019.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.1.3.\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.1#dateOfManufacture",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Date"
+            } ]
+          },
+          "DateOfPuttingIntoService" : {
+            "description" : "Where appropriate, the battery passport must include information on the date of putting the battery into service. \r\n   BR Annex VI Part A (1); Art. 3(33); Art. 38(7); ESPR Art. 2(32)\r\n   \r\n   \nDIN DKE Spec chapter reference: 6.1.3.3\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.1#dateOfPuttingIntoService",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/PuttingIntoServiceDate"
+            } ]
+          },
+          "UniqueFacilityIdentifier" : {
+            "description" : "\r\n    Unique string of characters for the identification of locations or buildings involved in a product’s value chain or used by actors involved in a product’s value chain.\r\n\t\r\n\tThe manufacturing place should be uniquely identifiable.\r\n\t\r\n\t\n DIN DKE Spec 99100:2025-02 chapter reference: 6.1.3.1\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.1#uniqueFacilityIdentifier",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "LifeCycleStage" : {
+            "description" : "A battery passport must include information on the life cycle status of the battery.\r\n   \r\n   The status of the battery must be defined as 'original' (0173-1#07-ACC020#001), 'repurposed'(0173-1#07-ACC021#001), 're-used'(0173-1#07-ACC022#001), 'remanufactured' (0173-1#07-ACC023#001) or 'waste' (0173-1#07-ACC024#001).\r\n   \r\n   A new battery passport must be issued when a battery was subject to remanufacturing, repurpose or one of the treatment operations preparing for re-use and preparing for repurpose and is placed on the market again.\r\n   \r\n   \nDIN DKE Spec 99100:2025-02 chapter reference: 6.1.3.7",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.1#batteryStatus",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/BatteryStatusEnumeration"
+            } ]
+          },
+          "OperatorIdentifier" : {
+            "description" : "\r\n\tThe unique operator identifier should comply with ISO/IEC 15459 1:2014, ISO/IEC 15459 2:2015, ISO/IEC 15459 3:2014, ISO/IEC 15459 4:2014, ISO/IEC 15459 5:2014, ISO/IEC 15459 6:2014, or their equivalent until referenced harmonised standards are listed in the OJEU.\r\n\t\r\n\t\n DIN DKE Spec 99100:2025-02 chapter reference: 6.1.2.3\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.1#operatorIdentifier",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "ManufacturerIdentifier" : {
+            "description" : "\r\n\tA battery passport must include information identifying the manufacturer.\r\n\t\r\n\t\n DIN DKE Spec 99100:2025-02 chapter reference: 6.1.2.4\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#manufacturerIdentifier",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "Markings" : {
+            "description" : "Should be used to provide all relevant marking information of the battery passport based on DIN DKE SPEC 99100 such as:\r\n\r\n* Separate collection symbol (6.2.2)\r\n* Symbols for cadmium and lead (6.2.3)\r\n* Carbon footprint label (6.2.4)\r\n* Extinguishing agent (6.2.5)\r\n* Meaning of labels and symbols (6.2.6)\r\n* EU declaration of conformity (6.2.7)\r\n* Results of test reports proving compliance (6.2.8)\r\n\r\nNote: CE marking is declared as mandatory according to EU Blue Guide \r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.1#markings",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Markings"
+            } ]
+          },
+          "EUDeclarationOfConformity" : {
+            "description" : "\r\n\tA battery passport must include the EU declaration of conformity.\r\n\t\r\n\t\n  DIN DKE Spec 99100:2025-02 chapter reference: 6.2.7 \r\n\t\r\n\tDocument identifiers (e.g., depending of different languages) of a document (e.g., PDF) that can be found in the Handover Documentation model.\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.1#euDeclarationOfConformity",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/DocumentIdentifierSet"
+            } ]
+          },
+          "ResultsOfTestReportsProvingCompliance" : {
+            "description" : "\r\n\tA battery passport must include the test report results that can prove the compliance with the requirements stated in the battery regulation.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.2.8\r\n\r\n\tDocument identifiers (e.g., depending of different languages) of a document (e.g., PDF) that can be found in the Handover Documentation model.\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.1#resultsOfTestReportsProvingCompliance",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/DocumentIdentifierSet"
+            } ]
+          }
+        },
+        "required" : [ "URIOfTheProduct", "ManufacturerName", "AddressInformation", "SerialNumber", "DateOfManufacture", "UniqueFacilityIdentifier", "LifeCycleStage", "ManufacturerIdentifier", "Markings", "EUDeclarationOfConformity", "ResultsOfTestReportsProvingCompliance" ]
+      },
+      "DigitalNameplateCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#DigitalNameplateCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/DigitalNameplate"
+        } ]
+      },
+      "DocumentIdentifier" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#DocumentIdentifier",
+        "description" : "Alphanumeric character sequence uniquely identifying a document."
+      },
+      "Boolean" : {
+        "type" : "boolean",
+        "x-samm-aspect-model-urn" : "urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#Boolean",
+        "description" : "Represents a boolean value (i.e. a \"flag\")."
+      },
+      "DocumentId" : {
+        "description" : "Specification of a document ID.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.1#DocumentId",
+        "type" : "object",
+        "properties" : {
+          "DocumentDomainId" : {
+            "description" : "Identification of the domain in which the given DocumentId is unique. The domain ID can e.g., be the name or acronym of the providing organisation.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.1#documentDomainId",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "DocumentIdentifier" : {
+            "description" : "Alphanumeric character sequence uniquely identifying a document.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#documentIdentifier",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/DocumentIdentifier"
+            } ]
+          },
+          "DocumentIsPrimary" : {
+            "description" : "Flag indicating that a DocumentId within a collection of at least two DocumentId`s is the 'primary' identifier for the document. This is the preferred ID of the document (commonly from the point of view of the owner of the asset).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.1#documentIsPrimary",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Boolean"
+            } ]
+          }
+        },
+        "required" : [ "DocumentDomainId", "DocumentIdentifier" ]
+      },
+      "DocumentIdSet" : {
+        "description" : "Set of the IDs of the documents.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.1#DocumentIdSet",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/DocumentId"
+        },
+        "uniqueItems" : true
+      },
+      "DocumentClassification" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.1#DocumentClassification",
+        "type" : "object",
+        "properties" : {
+          "ClassId" : {
+            "description" : "Unique ID of the document class within a classficationsystem.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.1#classId",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "ClassName" : {
+            "description" : "Type of document.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.1#className",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "ClassificationSystem" : {
+            "description" : "Classification of a document according to its purpose or the information it contains.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.1#classificationSystem",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          }
+        },
+        "required" : [ "ClassId", "ClassName", "ClassificationSystem" ]
+      },
+      "DocumentClassificationSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.1#DocumentClassificationSet",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/DocumentClassification"
+        },
+        "uniqueItems" : true
+      },
+      "FileSetTrait" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.1#FileSetTrait",
+        "type" : "array",
+        "items" : {
+          "description" : "A file is a data element that represents an address to a file (a locator). The value is a URI that can represent an absolute or relative path.",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#FileWithContentType",
+          "type" : "object",
+          "properties" : {
+            "value" : {
+              "description" : "Path and name of the file (with file extension).\n\nThe path can be absolute or relative.",
+              "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#resourceValue",
+              "allOf" : [ {
+                "$ref" : "#/components/schemas/ResourcePath"
+              } ]
+            },
+            "contentType" : {
+              "description" : "Content type of the content of the file or blob.",
+              "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#contentType",
+              "allOf" : [ {
+                "$ref" : "#/components/schemas/MimeType"
+              } ]
+            }
+          }
+        },
+        "uniqueItems" : true,
+        "minItems" : 1
+      },
+      "DocumentVersion" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.1#DocumentVersion",
+        "type" : "object",
+        "properties" : {
+          "Language" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.shared:3.1.1#languages",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/LanguageSetTrait"
+            } ]
+          },
+          "Version" : {
+            "description" : "Identifier of the version of this document.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.1#version",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "Title" : {
+            "description" : "Title of this document.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.1#title",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "Subtitle" : {
+            "description" : "Denotes the focus of the document and has a referential or communicative function, which is to refer to the content, subject matter or theme of the document\nConstraint: for each language-dependent Title, a Summary and at least one KeyWord shall exist for the given language.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.1#subtitle",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "Description" : {
+            "description" : "Plain text characterizing the content of the document.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.1#description",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          },
+          "DigitalFiles" : {
+            "description" : "MIME-Type, file name and file contents\n\nConstraint: at least one PDF/A file type shall be provided.\nNote: each DigitalFile represents the same content or Document version, but can be provided in different technical formats (PDF, PDFA, html, etc.) or by a link.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.1#digitalFiles",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/FileSetTrait"
+            } ]
+          }
+        },
+        "required" : [ "Language", "Title", "DigitalFiles" ]
+      },
+      "DocumentVersionsTrait" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.1#DocumentVersionsTrait",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/DocumentVersion"
+        },
+        "uniqueItems" : true,
+        "minItems" : 1
+      },
+      "Document" : {
+        "description" : "A single handover document.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.1#Document",
+        "type" : "object",
+        "properties" : {
+          "DocumentIds" : {
+            "description" : "Set of document identifiers for the Document. One ID in this collection should be used as a preferred ID (see isPrimary).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.1#documentIds",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/DocumentIdSet"
+            } ]
+          },
+          "DocumentClassifications" : {
+            "description" : "Set of information for describing the classification of the Document according to ClassificationSystems.\nConstraint: at least one classification according to VDI 2770 shall be provided.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.handover_documentation:2.0.1#documentClassifications",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/DocumentClassificationSet"
+            } ]
+          },
+          "DocumentVersions" : {
+            "description" : "Information elements of individual VDI 2770 DocumentVersion entities.\nNote: at the time of handover, this collection shall include at least one DocumentVersion.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.1#documentVersions",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/DocumentVersionsTrait"
+            } ]
+          }
+        },
+        "required" : [ "DocumentIds", "DocumentClassifications", "DocumentVersions" ]
+      },
+      "DocumentSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.1#DocumentSet",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/Document"
+        },
+        "uniqueItems" : true
+      },
+      "HandoverDocumentation" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#HandoverDocumentation",
+        "type" : "object",
+        "properties" : {
+          "Documents" : {
+            "description" : "A set of relevant documents to hand over to customers for documentation purposes.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.handover_documentation:1.0.1#documents",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/DocumentSet"
+            } ]
+          }
+        },
+        "required" : [ "Documents" ]
+      },
+      "HandoverDocumentationCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#HandoverDocumentationCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/HandoverDocumentation"
+        } ]
+      },
+      "BatteryChemistry" : {
+        "description" : "Chemistry of battery.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#BatteryChemistry",
+        "type" : "object",
+        "properties" : {
+          "ShortName" : {
+            "description" : "Short name.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#shortName",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "ClearName" : {
+            "description" : "Clear name.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#clearName",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          }
+        },
+        "required" : [ "ShortName", "ClearName" ]
+      },
+      "BatteryChemistryEntityList" : {
+        "description" : "Detailed composition, including materials used in the cathode, anode, and electrolyte.\nAll common cells have two electrodes and an electrolyte. The specific combination of materials used to make these components is called \"chemistry.\" A cell's chemistry largely determines its properties, while most variations within it are caused by additives, purification, and design elements.\n\nEUBR: Annex XIII (1b) ? Annex VI Part A (7)",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#BatteryChemistryEntityList",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/BatteryChemistry"
+        } ]
+      },
+      "BatteryComponentEntity" : {
+        "description" : "Battery component.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#BatteryComponentEntity",
+        "type" : "object",
+        "properties" : {
+          "ComponentName" : {
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#componentName",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "ComponentId" : {
+            "description" : "Identifier of the component.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#componentId",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          }
+        }
+      },
+      "BatteryMaterialLocation" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#BatteryMaterialLocation",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/BatteryComponentEntity"
+        } ]
+      },
+      "WeightInKilogram" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#WeightInKilogram"
+      },
+      "BatteryMaterial" : {
+        "description" : "Material of battery.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#BatteryMaterial",
+        "type" : "object",
+        "properties" : {
+          "BatteryMaterialLocation" : {
+            "description" : "Battery component that relates to the material.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#batteryMaterialLocation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/BatteryMaterialLocation"
+            } ]
+          },
+          "BatteryMaterialIdentifier" : {
+            "description" : "Identifier of material. \r\n\r\n   The materials should be named using a public standard or agreed nomenclature, \r\n   which refers e.g. to the nomenclature of IUPAC or related identifiers such as the CAS (Chemical Abstracts Service) number. \r\n   \r\n   \nDIN DKE Spec 99100:2025-02 chapter reference: 6.5.4 k)\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#batteryMaterialIdentifier",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "BatteryMaterialName" : {
+            "description" : "Clear name of Material.\n\n Alphanumeric character string which describes the object.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#batteryMaterialName",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "BatteryMaterialMass" : {
+            "description" : "Weight of component material in Kilogram.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#batteryMaterialMass",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/WeightInKilogram"
+            } ]
+          },
+          "IsCriticalRawMaterial" : {
+            "description" : "The battery passport must contain information on the critical raw materials present in the battery.\n\nThe information on the critical raw materials must also be provided on the battery label.\nPer Annex VI, Part A(10), critical raw materials must be reported if present in the battery in a concentration of more than 0,1 % weight by weight. ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#isCriticalRawMaterial",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Boolean"
+            } ]
+          }
+        },
+        "required" : [ "BatteryMaterialLocation", "BatteryMaterialIdentifier", "BatteryMaterialName", "IsCriticalRawMaterial" ]
+      },
+      "BatteryMaterialList" : {
+        "description" : "Detailed composition, including materials used in the cathode, anode, and electrolyte\n\nEUBR: Annex XIII (2a)",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#BatteryMaterialList",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/BatteryMaterial"
+        }
+      },
+      "HazardousSubstanceClassEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#HazardousSubstanceClassEnum",
+        "enum" : [ "AcuteToxicity", "SkinCorrosionOrIrritation", "EyeDamageOrIrritation" ]
+      },
+      "HazardousSubstanceConcentrationCharacteristic" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#HazardousSubstanceConcentrationCharacteristic"
+      },
+      "ImpactList" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#ImpactList",
+        "type" : "array",
+        "items" : {
+          "type" : "string",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#Impact",
+          "description" : "Impact."
+        }
+      },
+      "HazardousSubstanceLocation" : {
+        "description" : "Location on a (sub-)component-level of a hazardous substance.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#HazardousSubstanceLocation",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/BatteryComponentEntity"
+        } ]
+      },
+      "HazardousSubstance" : {
+        "description" : "Hazardous substances (No. 19-23): Name (agreed substance nomenclature, e.g. IUPAC or chemical name) all hazardous substance (as any substance that poses a threat to human health and the environment'). Suggested above 0.1 % weight by weight within each (sub-)component.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#HazardousSubstance",
+        "type" : "object",
+        "properties" : {
+          "HazardousSubstanceClass" : {
+            "description" : "Battery Regulation narrows reporting to substances falling under defined hazard classes and categories of the CLP regulation.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#hazardousSubstanceClass",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/HazardousSubstanceClassEnum"
+            } ]
+          },
+          "HazardousSubstanceName" : {
+            "description" : "Clear name of hazardous substance.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#hazardousSubstanceName",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "HazardousSubstanceIdentifier" : {
+            "description" : "Material identifier of hazardous substance.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#hazardousSubstanceIdentifier",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "HazardousSubstanceConcentration" : {
+            "description" : "Concentration of hazardous substance.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#hazardousSubstanceConcentration",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/HazardousSubstanceConcentrationCharacteristic"
+            } ]
+          },
+          "HazardousSubstanceImpact" : {
+            "description" : "Impact statements based on, e.g., REACH or GHS for all hazard classes applicable to substances in the battery.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#hazardousSubstanceImpact",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ImpactList"
+            } ]
+          },
+          "HazardousSubstanceLocation" : {
+            "description" : "\r\n     Location on a (sub-)component-level of the hazardous substance\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#hazardousSubstanceLocation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/HazardousSubstanceLocation"
+            } ]
+          }
+        },
+        "required" : [ "HazardousSubstanceName", "HazardousSubstanceIdentifier", "HazardousSubstanceImpact" ]
+      },
+      "HazardousSubstancesList" : {
+        "description" : "Hazardous substances contained in the battery other than mercury, cadmium or lead. Substance as a chemical element and its compounds in the natural state or the result of a manufacturing process (ECHA). Battery Regulation narrows reporting to substances falling under defined hazard classes and categories of the CLP regulation.\n\nEUBR: Annex XIII (1b) ? Annex VI Part A (8)",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#HazardousSubstancesList",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/HazardousSubstance"
+        }
+      },
+      "MaterialComposition" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#MaterialComposition",
+        "type" : "object",
+        "properties" : {
+          "BatteryChemistry" : {
+            "description" : "\r\n\tComposition of a product in general terms by specifying the cathode and anode active material as well as electrolyte.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.5.2\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#batteryChemistry",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/BatteryChemistryEntityList"
+            } ]
+          },
+          "BatteryMaterials" : {
+            "description" : "\r\n\tInformation on the detailed composition of the battery.\r\n\t\r\n\tInformation on the detailed composition must include materials used in the cathode, anode and electrolyte.\r\n\t\r\n\tMaterials in the battery should be reported above a concentration of 1% weight by weight.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.5.3-6.5.4\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#batteryMaterials",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/BatteryMaterialList"
+            } ]
+          },
+          "HazardousSubstances" : {
+            "description" : "\r\n    Information on hazardous substances other than mercury, cadmium, or lead contained in the battery.\r\n\t\r\n    Hazardous substances also being substances of very high concern, as defined under the RegulationEC No1907/2006 (“REACH Regulation”) should be reported on if exceeding a threshold of 0,1% weight by weight.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.5.4 - 6.5.6\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.material_composition:1.0.3#hazardousSubstances",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/HazardousSubstancesList"
+            } ]
+          }
+        },
+        "required" : [ "BatteryChemistry", "BatteryMaterials", "HazardousSubstances" ]
+      },
+      "MaterialCompositionCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#MaterialCompositionCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/MaterialComposition"
+        } ]
+      },
+      "EnergyThroughputValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#EnergyThroughputValue"
+      },
+      "EnergyThroughputEntity" : {
+        "description" : "Energy throughput, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#EnergyThroughputEntity",
+        "type" : "object",
+        "properties" : {
+          "EnergyThroughputValue" : {
+            "description" : "\r\n\tOverall sum of the energy throughput over the battery lifetime (data attribute should be reported as measured for further potential processing. \r\n\tIn addition, the normalisation by usable battery energy could add a further useful value that ensures comparability among battery sizes).\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#energyThroughputValue",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/EnergyThroughputValue"
+            } ]
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#lastUpdate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Timestamp"
+            } ]
+          }
+        },
+        "required" : [ "EnergyThroughputValue", "LastUpdate" ]
+      },
+      "EnergyThroughput" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#EnergyThroughput",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/EnergyThroughputEntity"
+        } ]
+      },
+      "CapacityThroughputValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#CapacityThroughputValue"
+      },
+      "CapacityThroughputEntity" : {
+        "description" : "Capacity throughput, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#CapacityThroughputEntity",
+        "type" : "object",
+        "properties" : {
+          "CapacityThroughputValue" : {
+            "description" : "Overall sum of the capacity throughput over the battery lifetime (data attribute should be reported as measured for further potential processing. In addition, the normalisation by capacity could add a further useful value that ensures comparability among battery sizes).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#capacityThroughputValue",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/CapacityThroughputValue"
+            } ]
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#lastUpdate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Timestamp"
+            } ]
+          }
+        },
+        "required" : [ "CapacityThroughputValue", "LastUpdate" ]
+      },
+      "CapacityThroughput" : {
+        "description" : "Capacity throughput.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#CapacityThroughput",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/CapacityThroughputEntity"
+        } ]
+      },
+      "NumberOfFullCyclesValue" : {
+        "type" : "integer",
+        "maximum" : 4294967295,
+        "minimum" : 0,
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#NumberOfFullCyclesValue"
+      },
+      "NumberOfFullCyclesEntity" : {
+        "description" : "Number of full cycles, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#NumberOfFullCyclesEntity",
+        "type" : "object",
+        "properties" : {
+          "NumberOfFullCyclesValue" : {
+            "description" : "Total count of times a battery has been fully charged from empty to full capacity and then fully discharged, used as an indicator of the battery's usage and lifespan.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#numberOfFullCyclesValue",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/NumberOfFullCyclesValue"
+            } ]
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#lastUpdate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Timestamp"
+            } ]
+          }
+        },
+        "required" : [ "NumberOfFullCyclesValue", "LastUpdate" ]
+      },
+      "NumberOfFullCycles" : {
+        "description" : "Information and data as a result of its use, including the number of charging and discharging cycles.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#NumberOfFullCycles",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/NumberOfFullCyclesEntity"
+        } ]
+      },
+      "StateOfCertifiedEnergyValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#StateOfCertifiedEnergyValue"
+      },
+      "StateOfCertifiedEnergyEntity" : {
+        "description" : "State of certified energy, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#StateOfCertifiedEnergyEntity",
+        "type" : "object",
+        "properties" : {
+          "StateOfCertifiedEnergyValue" : {
+            "description" : "Measured or on-board UBE performance at a specific point in its lifetime, expressed as a percentage of the certified usable battery energy.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#stateOfCertifiedEnergyValue",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/StateOfCertifiedEnergyValue"
+            } ]
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#lastUpdate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Timestamp"
+            } ]
+          }
+        },
+        "required" : [ "StateOfCertifiedEnergyValue", "LastUpdate" ]
+      },
+      "StateOfCertifiedEnergy" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#StateOfCertifiedEnergy",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/StateOfCertifiedEnergyEntity"
+        } ]
+      },
+      "UBERemainingValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#UBERemainingValue"
+      },
+      "RemainingEnergyEntity" : {
+        "description" : "Remaining energy, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#RemainingEnergyEntity",
+        "type" : "object",
+        "properties" : {
+          "RemainingEnergyValue" : {
+            "description" : "UBE determined at the present point in the lifetime of the vehicle by the test procedure used for certification.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#remainingEnergyValue",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/UBERemainingValue"
+            } ]
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#lastUpdate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Timestamp"
+            } ]
+          }
+        },
+        "required" : [ "RemainingEnergyValue", "LastUpdate" ]
+      },
+      "RemainingEnergy" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#RemainingEnergy",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/RemainingEnergyEntity"
+        } ]
+      },
+      "RemainingCapacityValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#RemainingCapacityValue"
+      },
+      "RemainingCapacityEntity" : {
+        "description" : "Remaining capacity, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#RemainingCapacityEntity",
+        "type" : "object",
+        "properties" : {
+          "RemainingCapacityValue" : {
+            "description" : "In-use data attribute on capacity, corresponding with the definition of rated capacity.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#remainingCapacityValue",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/RemainingCapacityValue"
+            } ]
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#lastUpdate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Timestamp"
+            } ]
+          }
+        },
+        "required" : [ "RemainingCapacityValue", "LastUpdate" ]
+      },
+      "RemainingCapacity" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#RemainingCapacity",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/RemainingCapacityEntity"
+        } ]
+      },
+      "NegativeEvent" : {
+        "description" : "Negative event, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#NegativeEvent",
+        "type" : "object",
+        "properties" : {
+          "NegativeEventValue" : {
+            "description" : "Negative event, such as an accident. No further definition provided by regulation.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#negativeEventValue",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#lastUpdate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Timestamp"
+            } ]
+          }
+        },
+        "required" : [ "NegativeEventValue", "LastUpdate" ]
+      },
+      "NegativeEvents" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#NegativeEvents",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/NegativeEvent"
+        }
+      },
+      "Temperature" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#Temperature"
+      },
+      "TimeExtremeHighTemp" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#TimeExtremeHighTemp"
+      },
+      "TimeExtremeLowTemp" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#TimeExtremeLowTemp"
+      },
+      "TimeExtremeHighTempCharging" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#TimeExtremeHighTempCharging"
+      },
+      "TimeExtremeLowTempCharging" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#TimeExtremeLowTempCharging"
+      },
+      "TemperatureConditionsEntity" : {
+        "description" : "Temperature conditions, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#TemperatureConditionsEntity",
+        "type" : "object",
+        "properties" : {
+          "MeasuredTemp" : {
+            "description" : "Temperature measured in degree Celsius.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#measuredTemp",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Temperature"
+            } ]
+          },
+          "TimeExtremeHighTemp" : {
+            "description" : "Cumulated time spent above the given upper boundary of temperature.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#timeExtremeHighTemp",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/TimeExtremeHighTemp"
+            } ]
+          },
+          "TimeExtremeLowTemp" : {
+            "description" : "Cumulated time spent below the given lower boundary of temperature.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#timeExtremeLowTemp",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/TimeExtremeLowTemp"
+            } ]
+          },
+          "TimeExtremeHighTempCharging" : {
+            "description" : "Cumulated time spent above the given upper boundary of temperature during Charging.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#timeExtremeHighTempCharging",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/TimeExtremeHighTempCharging"
+            } ]
+          },
+          "TimeExtremeLowTempCharging" : {
+            "description" : "Cumulated time spent below the given lower boundary of temperature during charging.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#timeExtremeLowTempCharging",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/TimeExtremeLowTempCharging"
+            } ]
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#lastUpdate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Timestamp"
+            } ]
+          }
+        },
+        "required" : [ "MeasuredTemp", "LastUpdate" ]
+      },
+      "TemperatureInformation" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#TemperatureInformation",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/TemperatureConditionsEntity"
+        } ]
+      },
+      "AtSoC" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#AtSoC"
+      },
+      "PowerCapabilityAtSoc" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#PowerCapabilityAtSoc"
+      },
+      "PowerCapabilityAtEntity" : {
+        "description" : "Power capability at.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#PowerCapabilityAtEntity",
+        "type" : "object",
+        "properties" : {
+          "AtSoC" : {
+            "description" : "Available capacity in a battery expressed as a percentage of remaining capacity.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#atSoC",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/AtSoC"
+            } ]
+          },
+          "PowerCapabilityAt" : {
+            "description" : "Defined by 'pre-use power capability (definition of power capability as given in Battery Regulation.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#powerCapabilityAt",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/PowerCapabilityAtSoc"
+            } ]
+          }
+        },
+        "required" : [ "AtSoC", "PowerCapabilityAt" ]
+      },
+      "RemainingPowerCapabilityDynamicAt" : {
+        "description" : "Remaining power capability dynamic at.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#RemainingPowerCapabilityDynamicAt",
+        "type" : "object",
+        "properties" : {
+          "RPCLastUpdated" : {
+            "description" : "RPC last updated.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#rPCLastUpdated",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Timestamp"
+            } ]
+          }
+        },
+        "required" : [ "RPCLastUpdated" ],
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/PowerCapabilityAtEntity"
+        } ]
+      },
+      "RemainingPowerCapabilityValue" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#RemainingPowerCapabilityValue",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/RemainingPowerCapabilityDynamicAt"
+        } ]
+      },
+      "RemainingPowerCapabilityEntity" : {
+        "description" : "Remaining power capability, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#RemainingPowerCapabilityEntity",
+        "type" : "object",
+        "properties" : {
+          "RemainingPowerCapabilityValue" : {
+            "description" : "Remaining power capability value.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#remainingPowerCapabilityValue",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/RemainingPowerCapabilityValue"
+            } ]
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#lastUpdate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Timestamp"
+            } ]
+          }
+        },
+        "required" : [ "RemainingPowerCapabilityValue", "LastUpdate" ]
+      },
+      "RemainingPowerCapability" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#RemainingPowerCapability",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/RemainingPowerCapabilityEntity"
+        } ]
+      },
+      "EvolutionOfSelfDischargeEntityValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#EvolutionOfSelfDischargeEntityValue"
+      },
+      "EvolutionOfSelfDischargeEntity" : {
+        "description" : "Evolution of self discharge, last update.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#EvolutionOfSelfDischargeEntity",
+        "type" : "object",
+        "properties" : {
+          "EvolutionOfSelfDischargeValue" : {
+            "description" : "\r\n\tTotal count of times a battery has been fully charged from empty to full capacity and then fully discharged, used as an indicator of the battery's usage and lifespan.\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#evolutionOfSelfDischargeValue",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/EvolutionOfSelfDischargeEntityValue"
+            } ]
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#lastUpdate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Timestamp"
+            } ]
+          }
+        },
+        "required" : [ "EvolutionOfSelfDischargeValue", "LastUpdate" ]
+      },
+      "EvolutionOfSelfDischarge" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#EvolutionOfSelfDischarge",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/EvolutionOfSelfDischargeEntity"
+        } ]
+      },
+      "CurrentSelfDischargingRateValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#CurrentSelfDischargingRateValue"
+      },
+      "CurrentSelfDischargingRateEntity" : {
+        "description" : "Current self discharging rate.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#CurrentSelfDischargingRateEntity",
+        "type" : "object",
+        "properties" : {
+          "CurrentSelfDischargingRateValue" : {
+            "description" : "Current self-discharge in % of capacity per unit of time in defined conditions (temperature range) during the use phase.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#currentSelfDischargingRateValue",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/CurrentSelfDischargingRateValue"
+            } ]
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#lastUpdate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Timestamp"
+            } ]
+          }
+        },
+        "required" : [ "CurrentSelfDischargingRateValue", "LastUpdate" ]
+      },
+      "CurrentSelfDischargingRate" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#CurrentSelfDischargingRate",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/CurrentSelfDischargingRateEntity"
+        } ]
+      },
+      "RemainingRoundTripEnergyEfficiencyValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#RemainingRoundTripEnergyEfficiencyValue"
+      },
+      "RemainingRoundTripEnergyEfficiencyEntity" : {
+        "description" : "Remaining round trip energy efficiency.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#RemainingRoundTripEnergyEfficiencyEntity",
+        "type" : "object",
+        "properties" : {
+          "RemainingRoundTripEnergyEfficiencyValue" : {
+            "description" : "Percentage of energy that can be recovered and used after a full charge and discharge cycle, reflecting the battery's ability to retain and return energy efficiently over time.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#remainingRoundTripEnergyEfficiencyValue",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/RemainingRoundTripEnergyEfficiencyValue"
+            } ]
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#lastUpdate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Timestamp"
+            } ]
+          }
+        },
+        "required" : [ "RemainingRoundTripEnergyEfficiencyValue", "LastUpdate" ]
+      },
+      "RemainingRoundTripEnergyEfficiency" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#RemainingRoundTripEnergyEfficiency",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/RemainingRoundTripEnergyEfficiencyEntity"
+        } ]
+      },
+      "StateOfChargeValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#StateOfChargeValue"
+      },
+      "StateOfChargeEntity" : {
+        "description" : "State of charge.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#StateOfChargeEntity",
+        "type" : "object",
+        "properties" : {
+          "StateOfChargeValue" : {
+            "description" : "Available capacity in a battery expressed as a percentage of remaining capacity.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#stateOfChargeValue",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/StateOfChargeValue"
+            } ]
+          },
+          "LastUpdate" : {
+            "description" : "Timestamp for dynamic data attributes show the last update time.\r\n\r\n   Defined time within a time range, measured from the start time of the time range.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#lastUpdate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Timestamp"
+            } ]
+          }
+        },
+        "required" : [ "StateOfChargeValue", "LastUpdate" ]
+      },
+      "StateOfCharge" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#StateOfCharge",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/StateOfChargeEntity"
+        } ]
+      },
+      "ProductCondition" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#ProductCondition",
+        "type" : "object",
+        "properties" : {
+          "EnergyThroughput" : {
+            "description" : "\r\n\tThe data attribute should be reported as measured for further potential processing. \r\n    In addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.6.7\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#energyThroughput",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/EnergyThroughput"
+            } ]
+          },
+          "CapacityThroughput" : {
+            "description" : "\r\n\tThe data attribute should be reported as measured for further potential processing. \r\n\tIn addition, the normalisation by capacity may add a further useful value that ensures comparability among battery sizes.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.6.8\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#capacityThroughput",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/CapacityThroughput"
+            } ]
+          },
+          "NumberOfFullCycles" : {
+            "description" : "\r\n\tNumber of (full) charging and discharging cycles.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.6.4\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#numberOfFullCycles",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/NumberOfFullCycles"
+            } ]
+          },
+          "StateOfCertifiedEnergy" : {
+            "description" : "\r\n\tDefinition based on UNECE GTR 22: The measured or on-board UBE performance at a specific point in its lifetime, expressed as a percentage of the certified usable battery energy.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.2.7\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#stateOfCertifiedEnergy",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/StateOfCertifiedEnergy"
+            } ]
+          },
+          "RemainingEnergy" : {
+            "description" : "\r\n\tDefinition from UNECE GTR 22, applicable only to EVs.\r\n\t\r\n\tThe energy supplied by the battery from the beginning of the test procedure used for certification until the applicable break-off criterion of the test procedure used for certification is reached.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.2.6\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#remainingEnergy",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/RemainingEnergy"
+            } ]
+          },
+          "RemainingCapacity" : {
+            "description" : "\r\n\tThe in-use data attribute on capacity, corresponding with the definition of rated capacity.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.2.3\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#remainingCapacity",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/RemainingCapacity"
+            } ]
+          },
+          "NegativeEvents" : {
+            "description" : "\r\n\tThe battery passport must contain information and data resulting from its use such as accidents. \r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.8.4\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#negativeEvents",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/NegativeEvents"
+            } ]
+          },
+          "InformationOnAccidents" : {
+            "description" : "\r\n\tThe battery passport must contain information and data resulting from its use such as accidents.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.8.4\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#informationOnAccidents",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/DocumentIdentifierSet"
+            } ]
+          },
+          "TemperatureInformation" : {
+            "description" : "\r\n\tThe battery passport must include periodically recorded information on the operating environmental conditions, including temperature.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.7.5 - 8\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#temperatureInformation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/TemperatureInformation"
+            } ]
+          },
+          "RemainingPowerCapability" : {
+            "description" : "\r\n\tOriginal power capability (in Watts) and limits, with temperature range when relevant.\r\n\t\r\n\t- The amount of energy that a battery is capable to provide over a given period of time under reference conditions.\r\n\t\r\n\t- Power capability at 80% and 20% state of charge.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.3.3\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#remainingPowerCapability",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/RemainingPowerCapability"
+            } ]
+          },
+          "EvolutionOfSelfDischarge" : {
+            "description" : "\r\n\tEvolution of self-discharge rates is the change of self-discharge over time and usage, as percentage calculated from the initial and current self-discharge rate.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.4.8\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#evolutionOfSelfDischarge",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/EvolutionOfSelfDischarge"
+            } ]
+          },
+          "CurrentSelfDischargingRate" : {
+            "description" : "\r\n\tThe current self-discharge rate is the change of the self-discharge rate in an idle state of the battery in reference conditions (temperature etc.) at aging parameter x, \r\n\te.g. after a certain amount of storage time or, number of cycles.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.4.7\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#currentSelfDischargingRate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/CurrentSelfDischargingRate"
+            } ]
+          },
+          "RemainingRoundTripEnergyEfficiency" : {
+            "description" : "\r\n\tThe battery passport shall include information, where possible, about the remaining round trip energy efficiency as information on the state of health of the battery \r\n\t\r\n\t\nThe update frequency of remaining round trip energy efficiency should be aligned with the update frequency of round trip energy efficiency fade and should be provided upon change of the battery status.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.4.4\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#remainingRoundTripEnergyEfficiency",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/RemainingRoundTripEnergyEfficiency"
+            } ]
+          },
+          "StateOfCharge" : {
+            "description" : "\r\n\tAvailable capacity in a battery expressed as a percentage of remaining capacity.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.2.8 \r\n\t(changed: available energy or charge in a battery expressed as a percentage of rated capacity as declared by the manufacturer, or, when the battery’s state of health is no longer equal to its initial condition, of the maximum energy or charge that can be stored in the battery at the time of charging)\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.product_condition:1.0.3#stateOfCharge",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/StateOfCharge"
+            } ]
+          }
+        },
+        "required" : [ "NumberOfFullCycles", "InformationOnAccidents", "TemperatureInformation", "StateOfCharge" ]
+      },
+      "ProductConditionCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#ProductConditionCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/ProductCondition"
+        } ]
+      },
+      "WarrantyPeriodTrait" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#WarrantyPeriodTrait",
+        "description" : "ISO 8601 duration format.",
+        "pattern" : "^P(?!$)((\\d+Y)?(\\d+M)?(\\d+D)?(T(?=\\d)(\\d+H)?(\\d+M)?(\\d+S)?)?|T(?=\\d)(\\d+H)?(\\d+M)?(\\d+S)?)$"
+      },
+      "WarrantyInformationEntity" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#WarrantyInformationEntity",
+        "type" : "object",
+        "properties" : {
+          "WarrantyPeriod" : {
+            "description" : "\r\n   The battery passport must include information about the period for which the commercial warranty applies.\r\n   \r\n   DIN DKE Spec chapter reference: 6.1.3.4\r\n   \r\n   The format shall be provided in ISO 8601 Notation for duration.\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#warrantyPeriod",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/WarrantyPeriodTrait"
+            } ]
+          }
+        },
+        "required" : [ "WarrantyPeriod" ]
+      },
+      "WarrantyInformationCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#WarrantyInformationCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/WarrantyInformationEntity"
+        } ]
+      },
+      "BatteryCategoryEnum" : {
+        "type" : "string",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#BatteryCategoryEnum",
+        "enum" : [ "lmt", "ev", "industrial", "stationary" ]
+      },
+      "BatteryMassMeasurable" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#BatteryMassMeasurable",
+        "description" : "Weight of the battery\nEUBR: Annex XIII (1a) - Annex VI Part A (5)"
+      },
+      "ProductImage" : {
+        "description" : "Pictorial representation of the product related to an application.",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.1#ProductImage",
+        "type" : "object",
+        "properties" : {
+          "ImageFile" : {
+            "description" : "Picture of the product (low resolution) 72 dpi / rgb (GIF or JPG).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.1#imageFile",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/FileWithContentType"
+            } ]
+          },
+          "ImageNote" : {
+            "description" : "Notes or explanations about the image provided.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.1#imageNote",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/MultiLanguageTexts0"
+            } ]
+          }
+        },
+        "required" : [ "ImageFile" ]
+      },
+      "ProductImageSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.1#ProductImageSet",
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/ProductImage"
+        },
+        "uniqueItems" : true
+      },
+      "GeneralInformationEntity" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#GeneralInformationEntity",
+        "type" : "object",
+        "properties" : {
+          "ManufacturerName" : {
+            "description" : "Legally valid designation of the natural or judicial person which is directly responsible for the design, production, packaging and labeling of a product in respect to its being brought into circulation.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.1#manufacturerName",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "CompanyLogo" : {
+            "description" : "Imagefile for logo of the company provided in common format (.png, .jpg)",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.1#companyLogo",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ResourcePath"
+            } ]
+          },
+          "ManufacturerIdentifier" : {
+            "description" : "\r\n\tA battery passport must include information identifying the manufacturer.\r\n\t\r\n\t\n DIN DKE Spec 99100:2025-02 chapter reference: 6.1.2.4\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#manufacturerIdentifier",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Text"
+            } ]
+          },
+          "WarrantyInformation" : {
+            "description" : "\r\n   The battery passport must include information about the period for which the commercial warranty applies.\r\n   \r\n   DIN DKE Spec chapter reference: 6.1.3.4\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#warrantyInformation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/WarrantyInformationCharacteristic"
+            } ]
+          },
+          "BatteryCategory" : {
+            "description" : "Categories relevant for the battery passport: LMT battery, electric vehicle battery, stationary or other industrial battery >2kWh.\n\nDIN DKE Spec chapter reference: 6.1.3.5",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#batteryCategory",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/BatteryCategoryEnum"
+            } ]
+          },
+          "BatteryMass" : {
+            "description" : "Mass of the entire battery in kilograms. Voluntary: if the battery is defined on pack or module level: also weight of the modules and/or cells.\n\nDIN DKE Spec chapter reference: 6.1.3.6",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#batteryMass",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/BatteryMassMeasurable"
+            } ]
+          },
+          "ProductImages" : {
+            "description" : "Image files for associated product provided in common format (.png, .jpg).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.generic.technical_data:2.0.1#productImages",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ProductImageSet"
+            } ]
+          }
+        },
+        "required" : [ "ManufacturerName", "ManufacturerIdentifier", "WarrantyInformation", "BatteryCategory", "BatteryMass" ]
+      },
+      "GeneralInformationCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#GeneralInformationCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/GeneralInformationEntity"
+        } ]
+      },
+      "Voltage" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#Voltage"
+      },
+      "RatedCapacity" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#RatedCapacity"
+      },
+      "CapacityFadeValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#CapacityFadeValue"
+      },
+      "RatedEnergy" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#RatedEnergy"
+      },
+      "CapacityEnergyVoltage" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#CapacityEnergyVoltage",
+        "type" : "object",
+        "properties" : {
+          "NominalVoltage" : {
+            "description" : "\r\n\tNominal voltage the battery is rated for.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.2.11\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#nominalVoltage",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Voltage"
+            } ]
+          },
+          "MinVoltage" : {
+            "description" : "\r\n\tMinimum voltage the battery is rated for.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.2.9\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#minimumVoltage",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Voltage"
+            } ]
+          },
+          "MaxVoltage" : {
+            "description" : "\r\n\tMaximum voltage the battery is rated for.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.2.10\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#maximumVoltage",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/Voltage"
+            } ]
+          },
+          "RatedCapacity" : {
+            "description" : "\r\n\tRated capacity is the total number of ampere-hours (Ah) that can be withdrawn from a fully charged battery under reference conditions (see BattReg Annex IV (1)).\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.2.2\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#ratedCapacity",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/RatedCapacity"
+            } ]
+          },
+          "CapacityFade" : {
+            "description" : "\r\n\tThe capacity fade is the Decrease over time and upon usage in the amount of charge that a battery can deliver at the rated voltage, with respect to the original rated capacity \r\n\t(see BattReg Annex IV (2)) as declared by the manufacturer.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.2.4\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#capacityFade",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/CapacityFadeValue"
+            } ]
+          },
+          "CertifiedUsableBatteryEnergy" : {
+            "description" : "\r\n\tThe certified usable battery energy is the usable battery energy according to the procedure in the UN GTR No 22 as determined during the certification of the vehicle.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.2.5\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#ratedEnergy",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/RatedEnergy"
+            } ]
+          }
+        },
+        "required" : [ "NominalVoltage", "MinVoltage", "MaxVoltage", "RatedCapacity", "CapacityFade" ]
+      },
+      "CapacityEnergyVoltageCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#CapacityEnergyVoltageCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/CapacityEnergyVoltage"
+        } ]
+      },
+      "EnergyEfficiency" : {
+        "type" : "integer",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#EnergyEfficiency"
+      },
+      "RoundTripEfficiencyAt50PercentCycleLife" : {
+        "type" : "integer",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#RoundTripEfficiencyAt50PercentCycleLife"
+      },
+      "energyRoundTripEfficiencyFadeValue" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#energyRoundTripEfficiencyFadeValue"
+      },
+      "BatteryDischargingRate" : {
+        "type" : "integer",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#BatteryDischargingRate"
+      },
+      "RoundTripEnergyEfficiency" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#RoundTripEnergyEfficiency",
+        "type" : "object",
+        "properties" : {
+          "InitialRoundTripEnergyEfficiency" : {
+            "description" : "Initial round trip energy efficiency means the ratio of the net energy delivered by a battery during a discharge test to the total energy required to restore the initial State of Charge by a standard charge.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#initialRoundTripEnergyEfficiency",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/EnergyEfficiency"
+            } ]
+          },
+          "RoundTripEnergyEfficiencyAt50PercentOfCycleLife" : {
+            "description" : "\r\n\tInitial round trip energy efficiency shall be measured at reference conditions that include the specification of 50 % of cycle-life.\r\n\t\r\n\t\nTest methods and reference conditions should separately consider non-cycle applications and batteries with very long cycle-life.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.4.3\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#roundTripEfficiencyAt50PercentCycleLife",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/RoundTripEfficiencyAt50PercentCycleLife"
+            } ]
+          },
+          "EnergyRoundTripEfficiencyFade" : {
+            "description" : "\r\n\tEnergy round trip efficiency fade is the decrease of round trip energy efficiency as percentage.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.4.5\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#energyRoundTripEfficiencyFade",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/energyRoundTripEfficiencyFadeValue"
+            } ]
+          },
+          "InitialSelfDischargingRate" : {
+            "description" : "Initial self-discharge in % of capacity per unit of time in defined conditions (temperature range etc) as pre-use metric.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#initialSelfDischargingRate",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/BatteryDischargingRate"
+            } ]
+          }
+        },
+        "required" : [ "InitialRoundTripEnergyEfficiency", "RoundTripEnergyEfficiencyAt50PercentOfCycleLife" ]
+      },
+      "RoundTripEnergyEfficiencyCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#RoundTripEnergyEfficiencyCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/RoundTripEnergyEfficiency"
+        } ]
+      },
+      "InternalResistance" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#InternalResistance"
+      },
+      "ResistanceIncrease" : {
+        "type" : "integer",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#ResistanceIncrease"
+      },
+      "Resistance" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#Resistance",
+        "type" : "object",
+        "properties" : {
+          "InitialInternalResistanceAtBatteryCellLevel" : {
+            "description" : "\r\n  Internal battery cell and pack resistance / Internal resistance (in Ohm).\r\n  \r\n  Measure of a battery cell’s opposition to current flow at the beginning of its operational life, affecting its performance, efficiency, and heat generation (internal resistance means the absolute value of the quotient of the voltage drop between the terminals by the electric current increase in the battery circuit during a current pulse).\r\n  ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#initialInternalResistanceAtBatteryCellLevel",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/InternalResistance"
+            } ]
+          },
+          "InitialInternalResistanceAtBatteryPackLevel" : {
+            "description" : "\r\n  Initial (Pre-Use) internal resistance at battery pack level.\r\n  \r\n  Measure of opposition to current flow in an entire battery pack at the start of its operational life, affecting overall performance, efficiency, and heat generation (internal resistance means the absolute value of the quotient of the voltage drop between the terminals by the electric current increase in the battery circuit during a current pulse).\r\n  ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#initialInternalResistanceAtBatteryPackLevel",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/InternalResistance"
+            } ]
+          },
+          "InitialInternalResistanceAtBatteryModuleLevel" : {
+            "description" : "\r\n  Initial internal resistance at battery module level.\r\n  \r\n  Initial internal resistance means the absolute beginning value of the quotient of the voltage drop between the terminals by the electric current increase in the battery circuit during a current pulse.\r\n  ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#initialInternalResistanceAtBatteryModuleLevel",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/InternalResistance"
+            } ]
+          },
+          "InternalResistanceIncreaseAtBatteryCellLevel" : {
+            "description" : "Internal resistance increase at battery cell level.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#internalResistanceIncreaseAtBatteryCellLevel",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ResistanceIncrease"
+            } ]
+          },
+          "InternalResistanceIncreaseAtBatteryPackLevel" : {
+            "description" : "'Internal resistance increase at battery pack level' defined by 'increase of internal resistance in % as calculated from current and initial values (calculated from initial and current internal resistance on battery pack level).",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#internalResistanceIncreaseAtBatteryPackLevel",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ResistanceIncrease"
+            } ]
+          },
+          "InternalResistanceIncreaseAtBatteryModuleLevel" : {
+            "description" : "Internal resistance increase at battery module level level' defined by 'internal resistance increase on battery module level, calculated from initial and current internal resistance on battery module level.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#internalResistanceIncreaseAtBatteryModuleLevel",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ResistanceIncrease"
+            } ]
+          }
+        },
+        "required" : [ "InitialInternalResistanceAtBatteryCellLevel", "InitialInternalResistanceAtBatteryPackLevel", "InternalResistanceIncreaseAtBatteryPackLevel" ]
+      },
+      "ResistanceCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#ResistanceCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/Resistance"
+        } ]
+      },
+      "PowerCapabilityAtSoc0" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#PowerCapabilityAtSoc"
+      },
+      "PowerFade" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#PowerFade"
+      },
+      "PowerCapabilityRatio" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#PowerCapabilityRatio",
+        "description" : "Ratio between nominal allowed battery power (W) and battery energy (Wh)."
+      },
+      "AtSoC0" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#AtSoC"
+      },
+      "PowerCapabilityAtSoCTrait" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#PowerCapabilityAtSoCTrait",
+        "type" : "array",
+        "items" : {
+          "description" : "\r\n\tPower capability measured at a reference condition, for example at 80% or 20% state of charge (SoC).\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.3.2\r\n\t",
+          "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#PowerCapabilityAtCharacteristic",
+          "type" : "object",
+          "properties" : {
+            "atSoC" : {
+              "description" : "\r\n\tAvailable capacity in a battery expressed as a percentage of remaining capacity.\r\n\t\r\n\tPower capability shall be measured at reference conditions, which must include measurements at 80% and 20% state of charge for EV and industrial batteries.\r\n\t",
+              "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#atSoC",
+              "allOf" : [ {
+                "$ref" : "#/components/schemas/AtSoC0"
+              } ]
+            },
+            "powerCapabilityAt" : {
+              "description" : "Power capability.",
+              "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#powerCapabilityAt",
+              "allOf" : [ {
+                "$ref" : "#/components/schemas/PowerCapabilityAtSoc0"
+              } ]
+            }
+          },
+          "required" : [ "atSoC", "powerCapabilityAt" ]
+        },
+        "minItems" : 1
+      },
+      "PowerCapability" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#PowerCapability",
+        "type" : "object",
+        "properties" : {
+          "MaximumPermittedBatteryPower" : {
+            "description" : "Maximum permitted power the battery is rated for, includes the data relevant for power limits.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#maximumPermittedBatteryPower",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/PowerCapabilityAtSoc0"
+            } ]
+          },
+          "PowerFade" : {
+            "description" : "\r\n\tPower fade (in %) means the decrease over time and upon usage in the amount of power that a battery can deliver at the rated voltage (see BattReg Annex IV (4)).\r\n\t\r\n\t\nPower fade should be calculated using original and remaining power capability following the formula below:\nPfade(x) = (1-P(x)) / PBOL\" 100\" %\" \nwhere\nx \tis the aging parameter (e.g. storage time, number of cycles, etc.);\r\n\t\r\n\tP(x) \tis the power capability at aging parameter x;\nPBOL \tis the power capability at begin of life.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.3.4\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#powerFade",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/PowerFade"
+            } ]
+          },
+          "RatioNominalBatteryPowerAndBatteryEnergy" : {
+            "description" : "\r\n\tThe nominal battery power is the suitable approximate value of the power capability used to designate or identify the battery, while the battery energy is determined in reference conditions to be defined.\r\n   \r\n   \nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.3.6\r\n   ",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#powerCapabilityRatio",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/PowerCapabilityRatio"
+            } ]
+          },
+          "OriginalPowerCapability" : {
+            "description" : "\r\n\tList of pre-use power capabilities (definition of power capability as given in Battery Regulation).\r\n\t\r\n\tPower capability shall be measured at reference conditions, which must include measurements at 80% and 20% state of charge for EV and industrial batteries. \r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.3.2\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#originalPowerCapability",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/PowerCapabilityAtSoCTrait"
+            } ]
+          }
+        },
+        "required" : [ "MaximumPermittedBatteryPower", "PowerFade", "OriginalPowerCapability" ]
+      },
+      "PowerCapabilityCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#PowerCapabilityCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/PowerCapability"
+        } ]
+      },
+      "TemperatureRangeBoundary" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#TemperatureRangeBoundary"
+      },
+      "Temperature0" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#Temperature",
+        "type" : "object",
+        "properties" : {
+          "TemperatureRangeIdleState_LowerBoundary" : {
+            "description" : "Lower boundary of the surrounding temperature range, which the battery can safely withstand.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#temperatureRangeIdleStateLowerBoundary",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/TemperatureRangeBoundary"
+            } ]
+          },
+          "TemperatureRangeIdleState_UpperBoundary" : {
+            "description" : "Upper boundary of the surrounding temperature range, which the battery can safely withstand.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#temperatureRangeIdleStateUpperBoundary",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/TemperatureRangeBoundary"
+            } ]
+          }
+        },
+        "required" : [ "TemperatureRangeIdleState_LowerBoundary", "TemperatureRangeIdleState_UpperBoundary" ]
+      },
+      "TemperatureCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#TemperatureCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/Temperature0"
+        } ]
+      },
+      "ExpectedLifeTime" : {
+        "type" : "integer",
+        "maximum" : 4294967295,
+        "minimum" : 0,
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#ExpectedLifeTime"
+      },
+      "ExpectedNumberOfCycles" : {
+        "type" : "integer",
+        "maximum" : 4294967295,
+        "minimum" : 0,
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#ExpectedNumberOfCycles"
+      },
+      "CapacityThresholdForExhaustion" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#CapacityThresholdForExhaustion"
+      },
+      "CRateLifeCycleTest" : {
+        "type" : "number",
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#CRateLifeCycleTest"
+      },
+      "Lifetime" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#Lifetime",
+        "type" : "object",
+        "properties" : {
+          "ExpectedLifetimeInCalendarYears" : {
+            "description" : "\r\n\tThe battery passport must include information about the expected battery lifetime in calendar years.\r\n\t\r\n\tThe update interval must be upon placement on the market and upon change of the battery status.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.6.2\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#expectedLifetime",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ExpectedLifeTime"
+            } ]
+          },
+          "ExpectedNumberOfCycles" : {
+            "description" : "\r\n\tExpected battery lifetime expressed in cycles.\nThe exception for non-cycle applications in Article 10 appears sensible, but is not included in the Annex XIII provision.\r\n\t\r\n\tThe data attribute is defined by measurement conditions of the cycle-life test such as the C-Rate (see below) and the depth of discharge in the cycle-life test\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.6.3\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#expectedNumberOfCycles",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ExpectedNumberOfCycles"
+            } ]
+          },
+          "CapacityThresholdExhaustion" : {
+            "description" : "\r\n\tThe percentage of SOCE, above which the battery is still considered operational as EV battery in its current life, as provided by the economic operator.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.6.9\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#capacityThresholdForExhaustion",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/CapacityThresholdForExhaustion"
+            } ]
+          },
+          "CycleLifeReferenceTest" : {
+            "description" : "\r\n\tThe battery passport must include information about the expected battery lifetime expressed in cycles, and reference test used. \r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.6.5\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#cycleLifeReferenceTest",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/DocumentIdentifierSet"
+            } ]
+          },
+          "CRateOfRelevantCycleLifeTest" : {
+            "description" : "\r\n\tThe C-rate should be provided separately for both the charge and discharge of the battery, if applicable.\r\n\t\r\n\tThe exception for non-cycle applications as mentioned in \"Expected lifetime: Number of charge-discharge cycles\" should apply to this data attribute as well.\r\n\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.6.6\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#cRateLifeCycleTest",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/CRateLifeCycleTest"
+            } ]
+          }
+        },
+        "required" : [ "ExpectedLifetimeInCalendarYears", "ExpectedNumberOfCycles", "CapacityThresholdExhaustion", "CycleLifeReferenceTest", "CRateOfRelevantCycleLifeTest" ]
+      },
+      "LifetimeCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#LifetimeCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/Lifetime"
+        } ]
+      },
+      "TechnicalAttributes" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#TechnicalAttributes",
+        "type" : "object",
+        "properties" : {
+          "CapacityEnergyVoltage" : {
+            "description" : "\r\n\tInformation on battery capacity, energy and voltage.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.2\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#capacityEnergyVoltage",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/CapacityEnergyVoltageCharacteristic"
+            } ]
+          },
+          "RoundTripEnergyEfficiency" : {
+            "description" : "\r\n\tInformation regarding round trip energy efficiency.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.4\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#roundTripEnergyEfficiency",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/RoundTripEnergyEfficiencyCharacteristic"
+            } ]
+          },
+          "Resistance" : {
+            "description" : "\r\n\tData elements regarding internal resistance and electrochemical impedance.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.5\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#resistance",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/ResistanceCharacteristic"
+            } ]
+          },
+          "PowerCapability" : {
+            "description" : "\r\n\tInformation regarding power capability.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.3\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#powerCapability",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/PowerCapabilityCharacteristic"
+            } ]
+          },
+          "Temperature" : {
+            "description" : "\r\n\tInformation regarding temperature conditions.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.7\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#temperature",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/TemperatureCharacteristic"
+            } ]
+          },
+          "Lifetime" : {
+            "description" : "\r\n\tInformation regarding battery lifetime.\r\n\t\r\n\t\nDIN DKE Spec 99100:2025-02 chapter reference: 6.7.6\r\n\t",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#lifetime",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/LifetimeCharacteristic"
+            } ]
+          }
+        },
+        "required" : [ "CapacityEnergyVoltage", "RoundTripEnergyEfficiency", "Resistance", "PowerCapability", "Temperature", "Lifetime" ]
+      },
+      "TechnicalPropertyAreaSet" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#TechnicalPropertyAreaSet",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/TechnicalAttributes"
+        } ]
+      },
+      "TechnicalData" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#TechnicalData",
+        "type" : "object",
+        "properties" : {
+          "GeneralInformation" : {
+            "description" : "General information, for example ordering and manufacturer information.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#generalInformation",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/GeneralInformationCharacteristic"
+            } ]
+          },
+          "TechnicalPropertyAreas" : {
+            "description" : "Individual battery characteristics based on DIN DKE SPEC 99100.",
+            "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass.technical_data:1.0.4#technicalPropertyAreas",
+            "allOf" : [ {
+              "$ref" : "#/components/schemas/TechnicalPropertyAreaSet"
+            } ]
+          }
+        },
+        "required" : [ "GeneralInformation", "TechnicalPropertyAreas" ]
+      },
+      "TechnicalDataCharacteristic" : {
+        "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#TechnicalDataCharacteristic",
+        "type" : "object",
+        "allOf" : [ {
+          "$ref" : "#/components/schemas/TechnicalData"
+        } ]
+      }
+    }
+  },
+  "properties" : {
+    "digitalProductPassportId" : {
+      "description" : "\r\n   Unique identifier of an instance of the digital product passport.\r\n   \r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.1#digitalProductPassportId",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "uniqueProductIdentifier" : {
+      "description" : "\r\n   Unique string of characters for the identification of a product, that also enables a web link to the digital product passport.\r\n   \r\n   String formatted according to EN 18219:2026.\r\n\r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.1#uniqueProductIdentifier",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "granularity" : {
+      "description" : " \r\n   The granularity of the Product. \r\n   \r\n   There are three values: ‘Model‘, ‘Item‘ and ‘Batch‘.\r\n   \r\n   The term 'model' usually refers to a version of a product of which all units share the same technical characteristics relevant for the ecodesign requirements \r\n   and the same model identifier, the term ‘batch’ usually refers to a subset \r\n   of a specific model composed of all products produced in a specific manufacturing plant at a specific moment \r\n   in time and the term ‘item’ usually refers to a single unit of a model. \r\n   \r\n  SOURCE: ESPR p2024/1781, REGULATION (EU) 2024/1781 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL of 13 June 2024 \r\n  establishing a framework for the setting of ecodesign requirements for sustainable products, \r\n  amending Directive (EU) 2020/1828 and Regulation (EU) 2023/1542 and repealing Directive 2009/125/EC. URI: OJ:L_202401781\r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.1#granularity",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/GranularityEnum"
+      } ]
+    },
+    "dppSchemaVersion" : {
+      "description" : "\r\n   Reference standard the DPP instance schema refers to.\r\n   \r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.1#dppSchemaVersion",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "dppStatus" : {
+      "description" : "\r\n   Status of the DPP instance as digital resource.\r\n   \r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.1#dppStatus",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "lastUpdate" : {
+      "description" : "\r\n   Date and time of the latest update to the DPP instance.\r\n   \r\n   String formatted as Timestamp UTC-based according to ISO 8601-1:2019/Amd1:2022.\r\n   \r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.1#lastUpdate",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Timestamp"
+      } ]
+    },
+    "economicOperatorId" : {
+      "description" : "\r\n   Unique string of characters for the identification of an actor involved in a product's life cycle.\r\n   \r\n   String formatted according to EN 18219:2026.\r\n\r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.1#economicOperatorId",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "facilityId" : {
+      "description" : "\r\n   Unique string of characters for the identification of locations or buildings involved in a product's value chain or used by actors  involved in a product's life cycle.\r\n   \r\n   String formatted according to EN 18219:2026.\r\n\r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.1#facilityId",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/Text"
+      } ]
+    },
+    "contentSpecificationIds" : {
+      "description" : "\r\n   Reference to horizontal or product-type related content specifications for the DPP.\r\n   \r\n   SOURCE: EN 18223:2026(en)   \r\n   ",
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.dpp.dpp_metadata:1.0.1#contentSpecificationIds",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/ContentSpecificationIdSet"
+      } ]
+    },
+    "https://admin-shell.io/idta/cds/carbonFootprint/1" : {
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#carbonFootprint",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/CarbonFootprintCharacteristic"
+      } ]
+    },
+    "https://admin-shell.io/idta/cds/circularity/1" : {
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#circularity",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/CircularityCharacteristic"
+      } ]
+    },
+    "https://admin-shell.io/idta/cds/digitalNameplate/1" : {
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#digitalNameplate",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/DigitalNameplateCharacteristic"
+      } ]
+    },
+    "https://admin-shell.io/idta/cds/handoverDocumentation/1" : {
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#handoverDocumentation",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/HandoverDocumentationCharacteristic"
+      } ]
+    },
+    "https://admin-shell.io/idta/cds/materialComposition/1" : {
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#materialComposition",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/MaterialCompositionCharacteristic"
+      } ]
+    },
+    "https://admin-shell.io/idta/cds/productCondition/1" : {
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#productCondition",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/ProductConditionCharacteristic"
+      } ]
+    },
+    "https://admin-shell.io/idta/cds/technicalData/1" : {
+      "x-samm-aspect-model-urn" : "urn:samm:io.admin-shell.idta.batterypass:1.0.0#technicalData",
+      "allOf" : [ {
+        "$ref" : "#/components/schemas/TechnicalDataCharacteristic"
+      } ]
+    }
+  },
+  "required" : [ "digitalProductPassportId", "uniqueProductIdentifier", "granularity", "dppSchemaVersion", "dppStatus", "lastUpdate", "economicOperatorId", "https://admin-shell.io/idta/cds/carbonFootprint/1", "https://admin-shell.io/idta/cds/circularity/1", "https://admin-shell.io/idta/cds/digitalNameplate/1", "https://admin-shell.io/idta/cds/handoverDocumentation/1", "https://admin-shell.io/idta/cds/materialComposition/1", "https://admin-shell.io/idta/cds/productCondition/1", "https://admin-shell.io/idta/cds/technicalData/1" ]
+}
