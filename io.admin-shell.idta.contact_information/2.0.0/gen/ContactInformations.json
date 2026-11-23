@@ -1,0 +1,88 @@
+{
+  "contactInformations" : [ {
+    "RoleOfContactPerson" : "technical contact",
+    "NationalCode" : "DE",
+    "Languages" : [ "en" ],
+    "TimeZone" : "-12:00",
+    "CityTown" : [ {
+      "de" : "ljNVgi8w"
+    } ],
+    "Company" : [ {
+      "en" : "zm"
+    } ],
+    "Department" : [ {
+      "en" : "g7A"
+    } ],
+    "Phone" : {
+      "TelephoneNumber" : [ {
+        "de" : "2R"
+      } ],
+      "TypeOfTelephone" : "office",
+      "AvailableTime" : [ {
+        "en" : "D"
+      } ]
+    },
+    "Fax" : {
+      "FaxNumber" : [ {
+        "en" : "B6o4"
+      } ],
+      "TypeOfFaxNumber" : "office"
+    },
+    "Email" : {
+      "EmailAddress" : "email@muster-ag.de",
+      "PublicKey" : [ {
+        "en" : "1v"
+      } ],
+      "TypeOfEmailAddress" : "office",
+      "TypeOfPublicKey" : [ {
+        "en" : "M11SZq"
+      } ]
+    },
+    "IPCommunicationChannels" : [ {
+      "AddressOfAdditionalLink" : "x",
+      "TypeOfCommunication" : "Chat",
+      "availableTime" : [ {
+        "en" : "UTjQpY"
+      } ]
+    } ],
+    "Street" : [ {
+      "en" : "Pzcj94rHRw"
+    } ],
+    "StreetName" : [ {
+      "en" : "J0ghzph"
+    } ],
+    "StreetNo" : "12",
+    "PostalCode" : "10719",
+    "ZipCode" : [ {
+      "en" : "fMKDRWh"
+    } ],
+    "POBox" : [ {
+      "en" : "uLHMTMAIO"
+    } ],
+    "ZipCodeOfPOBox" : [ {
+      "en" : "j"
+    } ],
+    "StateCounty" : [ {
+      "de" : "qgICIL"
+    } ],
+    "NameOfContact" : [ {
+      "en" : "bTVOS"
+    } ],
+    "FirstName" : [ {
+      "de" : "a"
+    } ],
+    "MiddleNames" : [ {
+      "en" : "YoHk9wk3f"
+    } ],
+    "Title" : [ {
+      "en" : "2yVUivCJ5t"
+    } ],
+    "AcademicTitle" : [ {
+      "en" : "5272a"
+    } ],
+    "FurtherDetailsOfContact" : [ {
+      "de" : "4yDajFv2v"
+    } ],
+    "AddressOfAdditionalLink" : "https://example.com/information/product/1224/contact"
+  } ]
+}
