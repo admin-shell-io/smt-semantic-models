@@ -1,0 +1,43 @@
+######################################################################
+# BatteryNameplate - Cell Producer role
+# SAMM 2.2.0 Aspect Model using AbstractEntity + samm:extends
+#
+# Obligations according to CX-0160-2, Appendix A (Cell Producer to Batteries Obligation)
+######################################################################
+
+@prefix samm: <urn:samm:org.eclipse.esmf.samm:meta-model:2.2.0#> .
+@prefix samm-c: <urn:samm:org.eclipse.esmf.samm:characteristic:2.2.0#> .
+@prefix : <urn:samm:io.admin-shell.idta.batterypass.digital_nameplate:1.0.0#> .
+
+:BatteryNameplateCellProducer a samm:Aspect ;
+   samm:preferredName "Battery nameplate - cell producer"@en ;
+   samm:preferredName "Batterie-Typenschild - Zellhersteller"@de ;
+   samm:description "Battery nameplate information provided by a cell producer."@en ;
+   samm:properties ( :batteryNameplateCellProducer ) ;
+   samm:operations ( ) ;
+   samm:events ( ) ;
+   samm:see <https://admin-shell.io/idta/nameplate/3/0/Nameplate> ;
+   samm:see <urn:samm:io.admin-shell.idta.digital_nameplate:3.0.0> .
+
+:batteryNameplateCellProducer a samm:Property ;
+   samm:preferredName "battery nameplate"@en ;
+   samm:preferredName "Batterie-Typenschild"@de ;
+   samm:description "Battery nameplate data provided by a cell producer."@en ;
+   samm:characteristic :BatteryNameplateCellProducerCharacteristic .
+
+:BatteryNameplateCellProducerCharacteristic a samm-c:SingleEntity ;
+   samm:dataType :BatteryNameplateCellProducerEntity .
+
+:BatteryNameplateCellProducerEntity a samm:Entity ;
+   samm:preferredName "Battery nameplate cell producer data"@en ;
+   samm:description "Battery nameplate data with cell producer specific obligations."@en ;
+   samm:extends :BatteryNameplateBaseEntity ;
+   samm:properties (
+      [ samm:property :serialNumber ; samm:optional true ; samm:payloadName "SerialNumber" ]
+      [ samm:property :dateOfManufacture ; samm:optional true ; samm:payloadName "DateOfManufacture" ]
+      [ samm:property :uniqueFacilityIdentifier ; samm:optional true ; samm:payloadName "UniqueFacilityIdentifier" ]
+      [ samm:property :batteryStatus ; samm:optional true ; samm:payloadName "LifeCycleStage" ]
+      [ samm:property :addressInformation ; samm:optional true ; samm:payloadName "AddressInformation" ]
+      [ samm:property :markings ; samm:optional true ; samm:payloadName "Markings" ]
+      [ samm:property :resultsOfTestReportsProvingCompliance ; samm:optional true ; samm:payloadName "ResultsOfTestReportsProvingCompliance" ]
+   ) .
