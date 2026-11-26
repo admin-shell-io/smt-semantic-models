@@ -27,6 +27,12 @@ The folder "gen" for each version contains sammple JSON files, the JSON schema a
 # Changelog
 All notable changes to this model will be documented in this section.
 
+## [1.0.4] - November 2026
+
+Major changes:
+
+* CHANGE: make hazardousSubstanceImpact optional ([#182](https://github.com/admin-shell-io/smt-semantic-models/issues/182))
+
 ## [1.0.3] - November 2026
 
 Major changes:
